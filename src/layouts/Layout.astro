@@ -1,0 +1,262 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "The complete Dairy Queen menu with prices and calories for 2026." } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+  <!-- Google Fonts: Bebas Neue for impactful display, Plus Jakarta Sans for premium modern readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FAF7F2] text-[#1E293B] font-sans antialiased flex flex-col min-h-screen selection:bg-[#0E7490] selection:text-white">
+  
+  <!-- 1. Top Strip: Light Yellow Disclaimer Notice -->
+  <div class="bg-[#FAF2DB] border-b border-[#EEDBBA] text-[11px] sm:text-xs text-[#5C450A] py-1.5 px-4 text-center font-normal">
+    <div class="max-w-7xl mx-auto flex justify-center items-center gap-1.5 flex-wrap">
+      <span>Independent fan-run reference site — not affiliated with, endorsed by, or sponsored by Dairy Queen®. Prices are estimates; verify at your local DQ.</span>
+      <a href="/disclaimer" class="text-[#0E7490] hover:text-[#09566B] font-semibold underline underline-offset-2 transition-colors">Learn more</a>
+    </div>
+  </div>
+
+  <!-- 2. Dark Utility Sub-Navigation Bar -->
+  <div class="bg-[#050B14] text-slate-400 text-[11px] font-bold tracking-widest uppercase border-b border-slate-900 py-2.5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-start">
+      <nav class="flex items-center space-x-6 sm:space-x-8 overflow-x-auto scrollbar-none">
+        <a href="/about" class:list={["hover:text-white transition-colors", currentPath.startsWith('/about') && "text-white"]}>About</a>
+        <a href="/privacy" class:list={["hover:text-white transition-colors", currentPath.startsWith('/privacy') && "text-white"]}>Privacy Policy</a>
+        <a href="/terms" class:list={["hover:text-white transition-colors", currentPath.startsWith('/terms') && "text-white"]}>Terms of Use</a>
+        <a href="/disclaimer" class:list={["hover:text-white transition-colors", currentPath.startsWith('/disclaimer') && "text-white"]}>Disclaimer</a>
+        <a href="/contact" class:list={["hover:text-white transition-colors", currentPath.startsWith('/contact') && "text-white"]}>Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 3. Main Navigation Header with Teal Accent -->
+  <header class="bg-[#FAF7F2] sticky top-0 z-50 border-b-4 border-[#0E7490] shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3.5 group flex-shrink-0">
+          <div class="w-10 h-10 rounded-full bg-[#0E7490] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
+            <div class="w-4 h-4 bg-white rounded-[3px]"></div>
+          </div>
+          <span class="text-2xl font-black tracking-tight text-[#0F172A] leading-none" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            TDQM <span class="text-[#0E7490]">GUIDE</span>
+          </span>
+        </a>
+
+        <!-- Desktop Menus Structure Exactly Matching Reference -->
+        <nav class="hidden lg:flex items-center gap-6 sm:gap-7 text-[13px] font-bold tracking-wider uppercase text-slate-800 h-20">
+          <a href="/" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            (currentPath === '/' || currentPath === '') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Home</a>
+
+          <a href="/#full-menu" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('#full-menu') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Menu</a>
+
+          <a href="/categories/blizzard-treats" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('blizzard') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Blizzards</a>
+
+          <a href="/categories/burgers-sandwiches" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('burger') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Burgers</a>
+
+          <a href="/categories/breakfast" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('breakfast') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Breakfast</a>
+
+          <a href="/locations" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('locations') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Locations</a>
+
+          <a href="/blog" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('blog') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Blog</a>
+
+          <a href="/price-history" class:list={[
+            "h-full flex items-center transition-colors relative hover:text-[#0E7490]",
+            currentPath.includes('price-history') ? "text-[#0E7490] border-b-2 border-[#0E7490] -mb-[4px]" : ""
+          ]}>Price History</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-200/70 text-slate-800 hover:bg-slate-300 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Nav -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FAF7F2] border-t border-[#EDE4D6] px-4 py-4 space-y-1.5 shadow-md">
+      <a href="/" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Home</a>
+      <a href="/#full-menu" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Menu</a>
+      <a href="/categories/blizzard-treats" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Blizzards</a>
+      <a href="/categories/burgers-sandwiches" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Burgers</a>
+      <a href="/categories/breakfast" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Breakfast</a>
+      <a href="/locations" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Locations</a>
+      <a href="/blog" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Blog</a>
+      <a href="/price-history" class="block py-2.5 px-3 font-bold text-sm uppercase text-slate-800 hover:text-[#0E7490] hover:bg-white/60 rounded-lg">Price History</a>
+    </div>
+  </header>
+
+  <!-- Main Content Area: Unconstrained to allow full-bleed Hero and custom sections -->
+  <main class="flex-grow w-full">
+    <slot />
+  </main>
+
+  <!-- Premium Footer -->
+  <footer class="bg-[#0B1528] text-slate-400 pt-16 pb-12 border-t border-slate-800 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <!-- Col 1: About -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-8 h-8 rounded-xl bg-[#E4002B] flex items-center justify-center text-white font-bold text-lg" style="font-family: 'Bebas Neue', sans-serif;">DQ</div>
+            <span class="text-2xl font-bold tracking-tight text-white" style="font-family: 'Bebas Neue', sans-serif;">
+              TDQM <span class="text-[#E4002B]">GUIDE</span>
+            </span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed pr-6 max-w-md">
+            The most complete, independently verified Dairy Queen menu directory online. Covering Blizzard Treats, Signature Stackburgers, Chicken Strip Baskets, breakfast menus, calories, and national 2026 pricing estimates.
+          </p>
+          <div class="mt-6 flex gap-3 text-xs font-semibold text-slate-300">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Updated for 2026
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
+              🍦 100+ Menu Items
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Categories -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Treats & Dessert</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/categories/blizzard-treats" class="hover:text-amber-400 transition-colors">Blizzard® Treats</a></li>
+            <li><a href="/categories/classic-treats" class="hover:text-amber-400 transition-colors">Cones & Sundaes</a></li>
+            <li><a href="/categories/dq-cakes" class="hover:text-amber-400 transition-colors">DQ® Cakes</a></li>
+            <li><a href="/categories/drinks" class="hover:text-amber-400 transition-colors">Shakes & MooLatté</a></li>
+            <li><a href="/items/peanut-buster-parfait" class="hover:text-amber-400 transition-colors">Peanut Buster Parfait</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Food & Grill -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Food & Grill</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/categories/burgers-sandwiches" class="hover:text-amber-400 transition-colors">Signature Stackburgers</a></li>
+            <li><a href="/categories/chicken-strip-baskets" class="hover:text-amber-400 transition-colors">Chicken Strip Baskets</a></li>
+            <li><a href="/categories/breakfast" class="hover:text-amber-400 transition-colors">Breakfast Platters</a></li>
+            <li><a href="/categories/snacks-sides" class="hover:text-amber-400 transition-colors">Cheese Curds & Fries</a></li>
+            <li><a href="/categories/kids-meals" class="hover:text-amber-400 transition-colors">Kids Meals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Resources</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="/combos" class="hover:text-amber-400 transition-colors">$7 Meal Deal Guide</a></li>
+            <li><a href="/locations" class="hover:text-amber-400 transition-colors">Store Finder</a></li>
+            <li><a href="/blog" class="hover:text-amber-400 transition-colors">DQ Guides & Rankings</a></li>
+            <li><a href="/price-history" class="hover:text-amber-400 transition-colors">Price Tracker</a></li>
+            <li><a href="/contact" class="hover:text-amber-400 transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 The Dairy Queen Menu Guide. An independent consumer reference guide. Dairy Queen®, Blizzard®, and other trademarks belong to American Dairy Queen Corporation.</p>
+        <div class="flex space-x-5 text-slate-400">
+          <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+          <a href="/disclaimer" class="hover:text-white transition-colors">Disclaimer</a>
+          <a href="/about" class="hover:text-white transition-colors">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client Scripts for Scroll Reveal and Interactive FAQ Accordion -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll-Triggered Reveal Animations
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('is-visible'));
+      }
+
+      // 2. Interactive FAQ Accordions with Smooth Animation
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-q');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          // Close all other items in the same list
+          const parentList = item.closest('.faq-list');
+          if (parentList) {
+            parentList.querySelectorAll('.faq-item.open').forEach(openItem => {
+              if (openItem !== item) {
+                openItem.classList.remove('open');
+                const otherBtn = openItem.querySelector('.faq-q');
+                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+              }
+            });
+          }
+          // Toggle current
+          item.classList.toggle('open', !isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+
+      // 3. Mobile Navigation Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

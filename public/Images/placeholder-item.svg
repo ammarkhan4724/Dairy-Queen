@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" role="img" aria-label="Photo coming soon">
+  <rect width="600" height="450" fill="#FFF8ED"/>
+  <rect x="1" y="1" width="598" height="448" fill="none" stroke="#E8E0D0" stroke-width="2"/>
+  <g transform="translate(300 195)" fill="none" stroke="#D32000" stroke-width="10" stroke-linjoin="round" stroke-linecap="round">
+    <path d="M-52 -70 C-52 -104 -22 -128 0 -128 C22 -128 52 -104 52 -70 C52 -44 38 -24 20 -14 L34 40 L-34 40 L-20 -14 C-38 -24 -52 -44 -52 -70 Z" fill="#FFE9C7"/>
+    <path d="M-34 40 L0 108 L34 40 Z" fill="#FFD08A"/>
+    <line x1="-40" y1="-72" x2="40" y2="-72"/>
+    <line x1="-34" y1="-52" x2="34" y2="-52"/>
+  </g>
+  <text x="300" y="352" font-family="'Bebas Neue', Impact, sans-serif" font-size="34" letter-spacing="1" fill="#6B5E4A" text-anchor="middle">PHOTO COMING SOON</text>
+  <text x="300" y="384" font-family="'Nunito', 'Segoe UI', system-ui, sans-serif" font-size="17" fill="#9A8B72" text-anchor="middle">The Dairy Queen Menu · independent reference</text>
+</svg>
