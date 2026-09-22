@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Side Salad",
+      "image": "https://www.thequeendairymenu.us/Images/side-salad.webp",
+      "description": "Fresh mixed greens, cherry tomatoes, and croutons served with your choice of dressing. At 90 calories, the lightest item on the DQ menu — the right side when you want something fresh.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.29",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/side-salad"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "90 cal (without dressing)"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Side Salad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$3.29 with 90 calories before dressing. Adding Ranch dressing adds approximately 140 calories; lighter vinaigrette options add approximately 40–60 calories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What comes in the DQ Side Salad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mixed greens, cherry tomatoes, and croutons. Dressing is served on the side."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the DQ Side Salad available everywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Side Salad is available at DQ Grill &amp; Chill locations. DQ Treat-only locations do not serve salads."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Side Salad — Price, Calories & Details 2026" description="DQ Side Salad price: $3.29, 90 calories. Mixed greens, tomatoes, and croutons with dressing. The lightest item on the DQ menu — available at Grill & Chill locations.">
+<Layout title="Dairy Queen Side Salad — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Side Salad price: $3.29, 90 calories. Mixed greens, tomatoes, and croutons with dressing. The lightest item on the DQ menu — available at Grill & Chill locations.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li aria-current="page">Side Salad</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li aria-current="page">Side Salad</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$3.29</div>
       <p>Fresh mixed greens, cherry tomatoes, and croutons served with your choice of dressing. At 90 calories, the lightest item on the DQ menu — the right side when you want something fresh.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -46,7 +99,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Side Salad — The Lightest Option on the Menu</h2>
-  <p>The DQ Side Salad is the lightest food item on <a href="/">The Dairy Queen Menu</a> at 90 calories before dressing. For guests who want a complete, balanced meal with a DQ entrée but do not want the calorie addition of fries or other fried sides, the Side Salad is the clear answer. It is available at DQ Grill &amp; Chill locations.</p>
+  <p>The DQ Side Salad is the lightest food item on <a href="/">The Queen Dairy Menu</a> at 90 calories before dressing. For guests who want a complete, balanced meal with a DQ entrée but do not want the calorie addition of fries or other fried sides, the Side Salad is the clear answer. It is available at DQ Grill &amp; Chill locations.</p>
 
   <h2>Side Salad vs. Regular Fries — The Calorie Case</h2>
   <div class="table-wrap"><table class="size-table"><thead><tr><th>Side</th><th>Price</th><th>Calories</th><th>Notes</th></tr></thead><tbody><tr><td>Side Salad</td><td class="price-cell">$3.29</td><td>90 cal (+ dressing)</td><td>Lightest possible side, fresh vegetables</td></tr><tr><td>Regular Fries (small)</td><td class="price-cell">$2.49</td><td>260 cal</td><td>Crispy, satisfying, lower price</td></tr><tr><td>Regular Fries (large)</td><td class="price-cell">$3.49</td><td>480 cal</td><td>Highest calorie standard side</td></tr><tr><td>Onion Rings</td><td class="price-cell">$3.29+</td><td>400+ cal</td><td>More indulgent, same price range</td></tr></tbody></table></div>
@@ -80,7 +133,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">The Side Salad is available at DQ Grill &amp; Chill locations. DQ Treat-only locations do not serve salads.</div></div>
     </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For every DQ price, flavor, and category, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For every DQ price, flavor, and category, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
     </p>
   </div>
 </section>
@@ -96,7 +149,7 @@ import Layout from '../../layouts/Layout.astro';
 </tbody>
 </table></div>
 <h2>Crispy Chicken Strips Salad Bowl — The Full Salad Meal</h2>
-<p>If you want a salad as your main meal rather than a side, DQ offers a <strong>Crispy Chicken Strips Salad Bowl</strong> at $9.49 (~470 cal). It includes mixed greens, crispy chicken strips, tomatoes, cheese, and dressing — a complete meal in a bowl. The Side Salad at $3.29 is strictly a side; the Salad Bowl is the full-meal option on <a href="/">The Dairy Queen Menu</a>.</p>
+<p>If you want a salad as your main meal rather than a side, DQ offers a <strong>Crispy Chicken Strips Salad Bowl</strong> at $9.49 (~470 cal). It includes mixed greens, crispy chicken strips, tomatoes, cheese, and dressing — a complete meal in a bowl. The Side Salad at $3.29 is strictly a side; the Salad Bowl is the full-meal option on <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Related Items</h2>
 <ul>
 <li><a href="/items/grilled-chicken-sandwich">Grilled Chicken Sandwich — $7.99, 390 cal (lightest sandwich)</a></li>

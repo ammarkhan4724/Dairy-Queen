@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Butterfinger Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/butterfinger-blizzard.webp",
+      "description": "Butterfinger® pieces — the distinctive crispy, flaky peanut-butter wafer candy — blended throughout DQ vanilla soft serve. One of the lighter-calorie candy-bar Blizzards at 470 cal (Small). From $3.49.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/butterfinger-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "470 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Butterfinger Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini $3.49, Small $4.49, Medium $5.29, Large $5.99."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories in the Butterfinger Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small 470 cal, Medium approximately 650 cal, Large approximately 990 cal. One of the lighter candy-bar Blizzards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Butterfinger Blizzard compare to Reese's?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Butterfinger is lighter in calories (470 vs 600 at Small) with a crispier, less intense peanut butter flavor. Reese's is richer with more pronounced peanut butter."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Butterfinger® Blizzard® Treat — Price, Calories & Review 2026" description="DQ Butterfinger® Blizzard® Treat price 2026: Mini $3.49, Small $4.49, Medium $5.29, Large $5.99. 470 cal (Small). Full nutrition guide and ordering tips.">
+<Layout title="Dairy Queen Butterfinger® Blizzard® Treat — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Butterfinger® Blizzard® Treat price 2026: Mini $3.49, Small $4.49, Medium $5.29, Large $5.99. 470 cal (Small). Full nutrition guide and ordering tips.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Butterfinger® Blizzard® Treat</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.49</div>
       <p>Butterfinger® pieces — the distinctive crispy, flaky peanut-butter wafer candy — blended throughout DQ vanilla soft serve. One of the lighter-calorie candy-bar Blizzards at 470 cal (Small). From $3.49.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -50,7 +103,7 @@ import Layout from '../../layouts/Layout.astro';
     
     <h2>What Is the Butterfinger® Blizzard® Treat?</h2>
     <p>The Butterfinger® Blizzard is driven by one specific texture: the crispy, crumbly, flaky peanut-butter wafer that defines the Butterfinger candy. When blended into DQ soft serve, the wafer pieces partially dissolve into the cream while retaining enough structure to deliver crunch. The peanut butter flavor is present but lighter than the <a href="/items/reeses-blizzard">Reese's Blizzard</a> — a good option for guests who want a hint of peanut butter without the intensity.</p>
-  <p>Browse all Blizzard flavors and 2026 prices on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>Browse all Blizzard flavors and 2026 prices on <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>Butterfinger vs. Reese's — Which PB Blizzard Should You Order?</h2>
   <ul>
@@ -85,7 +138,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Butterfinger is lighter in calories (470 vs 600 at Small) with a crispier, less intense peanut butter flavor. Reese's is richer with more pronounced peanut butter.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Frosted Sugar Cookie Blizzard",
+      "image": "https://www.thequeendairymenu.us/Images/frosted-sugar-cookie-blizzard.webp",
+      "description": "Sugar cookie pieces and pink frosting blended into DQ soft serve. Sweet, nostalgic, and festive — the Blizzard that tastes like holiday baking season. Available November through January.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/frosted-sugar-cookie-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "~510 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Frosted Sugar Cookie Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini $3.99, Small $4.79, Medium $5.79, Large $6.49."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the Frosted Sugar Cookie Blizzard taste like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sweet, buttery sugar cookie with frosting — similar to holiday sugar cookies blended into creamy soft serve. Lighter and sweeter than chocolate Blizzards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Frosted Sugar Cookie Blizzard available year-round?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a winter/holiday seasonal Blizzard available approximately November through January at participating locations."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Frosted Sugar Cookie Blizzard — Price, Calories & Details 2026" description="DQ Frosted Sugar Cookie Blizzard: sugar cookie pieces and pink frosting blended into DQ soft serve. Mini from $3.99. Winter/holiday seasonal — full 2026 guide.">
+<Layout title="Dairy Queen Frosted Sugar Cookie Blizzard — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Frosted Sugar Cookie Blizzard: sugar cookie pieces and pink frosting blended into DQ soft serve. Mini from $3.99. Winter/holiday seasonal — full 2026 guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li aria-current="page">Frosted Sugar Cookie Blizzard</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li aria-current="page">Frosted Sugar Cookie Blizzard</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.99</div>
       <p>Sugar cookie pieces and pink frosting blended into DQ soft serve. Sweet, nostalgic, and festive — the Blizzard that tastes like holiday baking season. Available November through January.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -46,7 +99,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>The Frosted Sugar Cookie Blizzard — Holiday Baking in a Cup</h2>
-  <p>The Frosted Sugar Cookie Blizzard captures the essence of holiday sugar cookies — the buttery, vanilla-sweet cookie itself plus the characteristic pink or white frosting. In DQ soft serve, it becomes a rich, sweet, cake-adjacent Blizzard that is distinct from the chocolate-heavy options that dominate the year-round lineup. Find all current Blizzard flavors on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The Frosted Sugar Cookie Blizzard captures the essence of holiday sugar cookies — the buttery, vanilla-sweet cookie itself plus the characteristic pink or white frosting. In DQ soft serve, it becomes a rich, sweet, cake-adjacent Blizzard that is distinct from the chocolate-heavy options that dominate the year-round lineup. Find all current Blizzard flavors on <a href="/">The Queen Dairy Menu</a>.</p>
 
   <h2>Frosted Sugar Cookie vs. Confetti Cake Blizzard</h2>
   <p>Both Blizzards are in the "baked goods" flavor category. The key differences:</p>
@@ -84,7 +137,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">No. It is a winter/holiday seasonal Blizzard available approximately November through January at participating locations.</div></div>
     </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For every DQ price, flavor, and category, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For every DQ price, flavor, and category, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
     </p>
   </div>
 </section>

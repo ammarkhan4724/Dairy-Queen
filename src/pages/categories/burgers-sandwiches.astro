@@ -1,7 +1,39 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is the DQ FlameThrower Stackburger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The FlameThrower® Signature Stackburger is $10.87 (single) or approximately $13.49 (double). It has 780 calories and features Pepper Jack cheese, FlameThrower sauce, fresh jalapeños, lettuce, tomato, and mayo on a toasted bun."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DQ serve real beef?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DQ Signature Stackburgers and all DQ burgers are made with 100% real seasoned beef, never frozen, and cooked to order at DQ Grill &amp; Chill locations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which DQ burger is the best value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Original Cheeseburger at $6.39 is the best standalone value. Even better: order it as part of the $7 Meal Deal, which adds Regular Fries, a Soft Drink, and a Small Sundae for just $0.61 more."
+      }
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Burgers & Sandwiches Menu With Prices 2026 — Stackburgers & Chicken" description="Complete DQ burgers and sandwiches menu with 2026 prices. FlameThrower Stackburger $10.87, Original Cheeseburger $6.39, chicken sandwiches, hot dogs and calorie counts.">
+<Layout title="Dairy Queen Burgers & Sandwiches Menu With Prices 2026 — Stackburgers & Chicken | The Queen Dairy Menu" description="Complete DQ burgers and sandwiches menu with 2026 prices. FlameThrower Stackburger $10.87, Original Cheeseburger $6.39, chicken sandwiches, hot dogs and calorie counts.">
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb">
 <div class="container"><ol>
@@ -22,9 +54,9 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -33,11 +65,11 @@ import Layout from '../../layouts/Layout.astro';
   <div class="container article-body" style="max-width:920px;">
 
     <h2>Dairy Queen Burgers &amp; Sandwiches — Complete 2026 Menu</h2>
-    <p>Dairy Queen's food menu centers on the <strong>Signature Stackburger</strong> lineup — 100% real seasoned beef patties, never frozen, cooked to order at DQ Grill &amp; Chill locations. The flagship is the <a href="/items/flamethrower-stackburger">FlameThrower® Stackburger</a> at $10.87, with Pepper Jack cheese, fresh jalapeños, FlameThrower sauce, lettuce, tomato, and mayo. For a complete look at everything on the DQ menu, visit <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>Dairy Queen's food menu centers on the <strong>Signature Stackburger</strong> lineup — 100% real seasoned beef patties, never frozen, cooked to order at DQ Grill &amp; Chill locations. The flagship is the <a href="/items/flamethrower-stackburger">FlameThrower® Stackburger</a> at $10.87, with Pepper Jack cheese, fresh jalapeños, FlameThrower sauce, lettuce, tomato, and mayo. For a complete look at everything on the DQ menu, visit <a href="/">The Queen Dairy Menu</a>.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -116,7 +148,7 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <p style="margin-top:32px;">See the complete food and treats menu including Blizzards, Chicken Baskets, DQ Cakes, and more on <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+    <p style="margin-top:32px;">See the complete food and treats menu including Blizzards, Chicken Baskets, DQ Cakes, and more on <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
   </div>
 </section>
 

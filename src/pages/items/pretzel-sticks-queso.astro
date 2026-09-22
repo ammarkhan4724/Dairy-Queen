@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Pretzel Sticks with Zesty Queso",
+      "image": "https://www.thequeendairymenu.us/Images/pretzel-sticks-queso.webp",
+      "description": "Warm, soft pretzel sticks with a bold zesty queso cheese dipping sauce. One of the most popular snack sides on the DQ menu at $3.99 — eligible for the 2-for-$5 Mix &amp; Match.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/pretzel-sticks-queso"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "440 cal (with queso sauce)"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much are DQ Pretzel Sticks with Queso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$3.99 with 440 calories including the queso dipping sauce."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are DQ Pretzel Sticks in the 2-for-$5 deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Pretzel Sticks with Zesty Queso are eligible for the 2-for-$5 Mix &amp; Match at participating DQ Grill &amp; Chill locations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the DQ Pretzel Sticks hard or soft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soft pretzels — warm and chewy, not hard or crunchy."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Pretzel Sticks with Queso — Price, Calories & Details 2026" description="DQ Pretzel Sticks with Zesty Queso Dipping Sauce price: $3.99, 440 calories. Warm soft pretzels with bold queso cheese sauce — a top DQ snack side.">
+<Layout title="Dairy Queen Pretzel Sticks with Queso — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Pretzel Sticks with Zesty Queso Dipping Sauce price: $3.99, 440 calories. Warm soft pretzels with bold queso cheese sauce — a top DQ snack side.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li><span aria-current="page">Pretzel Sticks with Queso</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$3.99</div>
       <p>Warm, soft pretzel sticks with a bold zesty queso cheese dipping sauce. One of the most popular snack sides on the DQ menu at $3.99 — eligible for the 2-for-$5 Mix &amp; Match.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Pretzel Sticks — A Premium Snack</h2>
-  <p>The DQ Pretzel Sticks with Zesty Queso is a warm soft pretzel experience in a fast-food context. The pretzels are served warm with a bold, slightly spicy queso dipping sauce. The queso adds a savory, cheesy depth that elevates the standard pretzel into something more satisfying as a snack or a side. At $3.99, they are also eligible for the <a href="/items/2-for-5-mix-match">2-for-$5 Mix &amp; Match</a>. Find the full snacks lineup on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The DQ Pretzel Sticks with Zesty Queso is a warm soft pretzel experience in a fast-food context. The pretzels are served warm with a bold, slightly spicy queso dipping sauce. The queso adds a savory, cheesy depth that elevates the standard pretzel into something more satisfying as a snack or a side. At $3.99, they are also eligible for the <a href="/items/2-for-5-mix-match">2-for-$5 Mix &amp; Match</a>. Find the full snacks lineup on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>Pretzel Sticks vs. Cheese Curds — Which to Order?</h2>
   <p>The choice between Pretzel Sticks and <a href="/items/cheese-curds">Cheese Curds</a> (both $3.99, both ~440–470 cal) comes down to preference:</p>
   <ul>
@@ -80,7 +133,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Soft pretzels — warm and chewy, not hard or crunchy.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

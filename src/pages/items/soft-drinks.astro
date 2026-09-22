@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Soft Drinks",
+      "image": "https://www.thequeendairymenu.us/Images/soft-drinks.webp",
+      "description": "DQ serves Coca-Cola fountain products — Coke, Diet Coke, Coke Zero, Sprite, Dr Pepper, and more — starting at $2.11. Sizes run from small to large, with zero-calorie diet options alongside the regular sodas.",
+      "offers": {
+        "@type": "Offer",
+        "price": "2.11",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/soft-drinks"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "0–310 depending on choice &amp; size"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is a soft drink at Dairy Queen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soft drinks start at $2.11 for a small and increase with size. Prices vary by franchise location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sodas does DQ serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DQ serves Coca-Cola fountain products — Coke, Diet Coke, Coke Zero, Sprite, Dr Pepper, and more, depending on location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there zero-calorie drink options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Diet Coke, Coke Zero, and Sprite Zero are effectively 0 calories at every size, versus up to about 310 calories for a large regular soda."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="DQ Soft Drinks — Prices, Sizes & Calories (2026)" description="DQ soft drinks start at $2.11. Coca-Cola fountain products including Coke, Diet Coke, Sprite, and Dr Pepper. Sizes, prices, and 0–310 calorie range for 2026.">
+<Layout title="DQ Soft Drinks — Prices, Sizes & Calories (2026) | The Queen Dairy Menu" description="DQ soft drinks start at $2.11. Coca-Cola fountain products including Coke, Diet Coke, Sprite, and Dr Pepper. Sizes, prices, and 0–310 calorie range for 2026.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/drinks">Drinks</a></li><li aria-current="page">Soft Drinks</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $2.11</div>
       <p>DQ serves Coca-Cola fountain products — Coke, Diet Coke, Coke Zero, Sprite, Dr Pepper, and more — starting at $2.11. Sizes run from small to large, with zero-calorie diet options alongside the regular sodas.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -53,7 +106,7 @@ import Layout from '../../layouts/Layout.astro';
     <h2>Frequently Asked Questions</h2>
     <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is a soft drink at Dairy Queen?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Soft drinks start at $2.11 for a small and increase with size. Prices vary by franchise location.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">What sodas does DQ serve?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">DQ serves Coca-Cola fountain products — Coke, Diet Coke, Coke Zero, Sprite, Dr Pepper, and more, depending on location.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Are there zero-calorie drink options?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Diet Coke, Coke Zero, and Sprite Zero are effectively 0 calories at every size, versus up to about 310 calories for a large regular soda.</div></div></div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);font-size:.9rem;color:var(--color-text-muted);">
-      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>. This site is not affiliated with Dairy Queen®.
+      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>. This site is not affiliated with Dairy Queen®.
     </p>
   </div>
 </section>

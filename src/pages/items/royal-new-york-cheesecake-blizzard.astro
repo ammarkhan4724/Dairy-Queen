@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Royal New York Cheesecake Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/royal-new-york-cheesecake-blizzard.webp",
+      "description": "Cheesecake pieces and graham cracker crumble blended into DQ's soft serve, with a warm strawberry-filled center that bursts mid-cup. One of the lighter Royal Blizzards at 460 cal (Small) — creamy, fruity, and more elegant than candy-bar options.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/royal-new-york-cheesecake-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "460 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Royal New York Cheesecake Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini $3.99, Small $4.99, Medium $5.99, Large $6.49."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is in the Royal New York Cheesecake Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cheesecake pieces and graham cracker crumble blended into DQ vanilla soft serve, with a warm strawberry-filled center."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Royal NY Cheesecake lighter than other Royal Blizzards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. At 460 cal (Small), it is the lightest Royal Blizzard. The Royal Reese's is 620 cal (Small)."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Royal New York Cheesecake Blizzard — Price, Calories & Sizes 2026" description="DQ Royal New York Cheesecake Blizzard price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 460 cal (Small). Full nutrition guide.">
+<Layout title="Dairy Queen Royal New York Cheesecake Blizzard — Price, Calories & Sizes 2026 | The Queen Dairy Menu" description="DQ Royal New York Cheesecake Blizzard price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 460 cal (Small). Full nutrition guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li aria-current="page">Royal New York Cheesecake Blizzard Treat</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.99</div>
       <p>Cheesecake pieces and graham cracker crumble blended into DQ's soft serve, with a warm strawberry-filled center that bursts mid-cup. One of the lighter Royal Blizzards at 460 cal (Small) — creamy, fruity, and more elegant than candy-bar options.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -45,7 +98,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body">
     <h2>Royal New York Cheesecake Blizzard — Flavor Profile</h2>
-    <p>The Royal New York Cheesecake Blizzard replicates a classic New York cheesecake experience: tangy cheesecake pieces with a graham cracker crust element, cold vanilla soft serve, and a warm strawberry filling at the center. The strawberry center adds a fruity burst that references the strawberry-topped cheesecake served in New York-style restaurants. It is one of the lighter Royal Blizzards at 460 cal (Small). Compare all Royal Blizzards on <a href="/categories/blizzard-treats">the Blizzard Treats menu</a>, or see the full DQ lineup on <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>The Royal New York Cheesecake Blizzard replicates a classic New York cheesecake experience: tangy cheesecake pieces with a graham cracker crust element, cold vanilla soft serve, and a warm strawberry filling at the center. The strawberry center adds a fruity burst that references the strawberry-topped cheesecake served in New York-style restaurants. It is one of the lighter Royal Blizzards at 460 cal (Small). Compare all Royal Blizzards on <a href="/categories/blizzard-treats">the Blizzard Treats menu</a>, or see the full DQ lineup on <a href="/">The Queen Dairy Menu</a>.</p>
     <h2>Royal Blizzard Lineup — Where NY Cheesecake Fits</h2>
     <ul>
       <li><strong>Royal Oreo®</strong> — Hot fudge center, most popular. From $3.99.</li>
@@ -83,7 +136,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>Royal New York Cheesecake Blizzard — Premium Tier</h2>
-    <p>The Royal New York Cheesecake Blizzard combines graham cracker pieces and cheesecake chunks blended into DQ soft serve, with a strawberry-filled center injected before serving. It is part of the Royal Blizzard lineup — DQ's premium tier that adds a warm or cold filled center to elevate the standard Blizzard experience. From $3.99 Mini. Find all Royal Blizzards on <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>The Royal New York Cheesecake Blizzard combines graham cracker pieces and cheesecake chunks blended into DQ soft serve, with a strawberry-filled center injected before serving. It is part of the Royal Blizzard lineup — DQ's premium tier that adds a warm or cold filled center to elevate the standard Blizzard experience. From $3.99 Mini. Find all Royal Blizzards on <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>Royal Blizzard Lineup Comparison</h2>
     <div class="table-wrap"><table class="size-table">

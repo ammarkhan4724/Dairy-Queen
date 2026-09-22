@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "DQ Regular Fries",
+      "image": "https://www.thequeendairymenu.us/Images/regular-fries.webp",
+      "description": "Crispy golden seasoned fries in small, medium, and large. Included with every Chicken Strip Basket and the $7 Meal Deal. The most ordered side on the DQ menu.",
+      "offers": {
+        "@type": "Offer",
+        "price": "2.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/regular-fries"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "260 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much are DQ Regular Fries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small $2.49 (260 cal), Medium $2.99 (370 cal), Large $3.49 (480 cal). 2026 national average prices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are DQ fries included with the Chicken Strip Basket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Regular Fries are included with all Chicken Strip Basket options — 4-piece, 6-piece, and all sauced versions — at no extra charge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I substitute fries in the $7 Meal Deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The $7 Meal Deal includes Regular Fries as a standard component. Substitution options vary by location."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Regular Fries — Price, Calories & Details 2026" description="DQ Regular Fries price: from $2.49, 260+ calories. Crispy seasoned fries in small, medium, and large. Included with Chicken Strip Baskets and $7 Meal Deal.">
+<Layout title="Dairy Queen Regular Fries — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Regular Fries price: from $2.49, 260+ calories. Crispy seasoned fries in small, medium, and large. Included with Chicken Strip Baskets and $7 Meal Deal.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li><span aria-current="page">Regular Fries</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $2.49</div>
       <p>Crispy golden seasoned fries in small, medium, and large. Included with every Chicken Strip Basket and the $7 Meal Deal. The most ordered side on the DQ menu.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Fries — The Most Ordered Side</h2>
-  <p>Regular Fries are included in every <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a> and the <a href="/items/7-meal-deal">$7 Meal Deal</a> — making them the most eaten side at DQ by sheer volume. When ordered separately, a Small at $2.49 (260 cal) is the right size to accompany a burger or sandwich. Find the full DQ sides menu on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>Regular Fries are included in every <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a> and the <a href="/items/7-meal-deal">$7 Meal Deal</a> — making them the most eaten side at DQ by sheer volume. When ordered separately, a Small at $2.49 (260 cal) is the right size to accompany a burger or sandwich. Find the full DQ sides menu on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>DQ Fries vs. Other Sides</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th>Side</th><th>Price</th><th>Calories</th><th>Notes</th></tr></thead>
@@ -78,7 +131,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">The $7 Meal Deal includes Regular Fries as a standard component. Substitution options vary by location.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>
@@ -87,7 +140,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>Regular Fries — Value Across All Three DQ Deals</h2>
-    <p>DQ Regular Fries are included in three different ways on <a href="/">The Dairy Queen Menu</a>:</p>
+    <p>DQ Regular Fries are included in three different ways on <a href="/">The Queen Dairy Menu</a>:</p>
     <ul>
       <li><strong>Included with every Chicken Strip Basket</strong> — 4-piece ($9.99), 6-piece ($13.49), and all sauced baskets ($10.49)</li>
       <li><strong>Included in the <a href="/items/7-meal-deal">$7 Meal Deal</a></strong> as one of four components</li>

@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "MooLatté Frozen Blended Coffee",
+      "image": "https://www.thequeendairymenu.us/Images/moolatte.webp",
+      "description": "DQ soft serve blended with real coffee into a rich, creamy frozen drink. Available in Mocha, Caramel, and Vanilla — the DQ answer to a frozen coffee shop drink at a better price point.",
+      "offers": {
+        "@type": "Offer",
+        "price": "4.29",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/moolatte"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "~490 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ MooLatté?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small $4.29, Medium $4.99, Large $5.49. 2026 national average prices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the MooLatté taste like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A frozen, creamy coffee drink — similar to a Frappuccino. The Mocha has chocolate-coffee flavor, Caramel is sweeter, and Vanilla is the most subtle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the MooLatté available at all DQ locations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The MooLatté is available at DQ Grill &amp; Chill locations. Some DQ Treat-only locations may not carry it. Check your local DQ."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen MooLatté — Price, Calories & Flavors 2026" description="DQ MooLatté price: from $4.29. Frozen blended coffee with DQ soft serve in Mocha, Caramel, and Vanilla flavors. Full 2026 price, calorie, and flavor guide.">
+<Layout title="Dairy Queen MooLatté — Price, Calories & Flavors 2026 | The Queen Dairy Menu" description="DQ MooLatté price: from $4.29. Frozen blended coffee with DQ soft serve in Mocha, Caramel, and Vanilla flavors. Full 2026 price, calorie, and flavor guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/drinks">Drinks</a></li><li><span aria-current="page">MooLatté®</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $4.29</div>
       <p>DQ soft serve blended with real coffee into a rich, creamy frozen drink. Available in Mocha, Caramel, and Vanilla — the DQ answer to a frozen coffee shop drink at a better price point.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>What Is the DQ MooLatté?</h2>
-  <p>The MooLatté® is DQ's frozen blended coffee drink — real coffee blended with DQ soft serve into a smooth, creamy frozen beverage. It sits between a Frappuccino and a milkshake in texture. Unlike the <a href="/items/chocolate-shake">standard DQ shake</a>, the MooLatté has a distinct coffee flavor that comes through the soft serve. It is available at DQ Grill &amp; Chill locations. Find the full drinks lineup on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The MooLatté® is DQ's frozen blended coffee drink — real coffee blended with DQ soft serve into a smooth, creamy frozen beverage. It sits between a Frappuccino and a milkshake in texture. Unlike the <a href="/items/chocolate-shake">standard DQ shake</a>, the MooLatté has a distinct coffee flavor that comes through the soft serve. It is available at DQ Grill &amp; Chill locations. Find the full drinks lineup on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>MooLatté Flavors Compared</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th>MooLatté Flavor</th><th>Small Price</th><th>Approx. Cal</th><th>Profile</th></tr></thead>
@@ -77,7 +130,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">The MooLatté is available at DQ Grill &amp; Chill locations. Some DQ Treat-only locations may not carry it. Check your local DQ.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

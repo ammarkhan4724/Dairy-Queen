@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "DQ Cheese Curds",
+      "image": "https://www.thequeendairymenu.us/Images/cheese-curds.webp",
+      "description": "Wisconsin-style white cheddar cheese curds battered and deep-fried until golden on the outside, gooey and melted on the inside. The best shareable snack on the DQ menu at $3.99.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/cheese-curds"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "470 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much are DQ Cheese Curds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$3.99 with 470 calories. One standard size — a shareable portion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of cheese is in DQ Cheese Curds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wisconsin-style white cheddar cheese curds — the same fresh cheese used in traditional Wisconsin-style fried curds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are DQ Cheese Curds good for sharing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The $3.99 portion is generous enough for two people as a shared appetizer alongside an entrée."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Cheese Curds — Price, Calories & Details 2026" description="DQ Cheese Curds price: $3.99, 470 calories. Wisconsin-style white cheddar cheese curds battered and fried. One of the most popular DQ snack sides.">
+<Layout title="Dairy Queen Cheese Curds — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Cheese Curds price: $3.99, 470 calories. Wisconsin-style white cheddar cheese curds battered and fried. One of the most popular DQ snack sides.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li><span aria-current="page">Cheese Curds</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$3.99</div>
       <p>Wisconsin-style white cheddar cheese curds battered and deep-fried until golden on the outside, gooey and melted on the inside. The best shareable snack on the DQ menu at $3.99.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>What Are DQ Cheese Curds?</h2>
-  <p>DQ Cheese Curds are Wisconsin-style white cheddar cheese curds — fresh, squeaky cheese in nugget form — dipped in batter and deep-fried. The result is a golden, crispy exterior with a gooey, molten cheese interior. They are served immediately after frying, so the cheese inside is at peak melt. Find the full snacks lineup on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>DQ Cheese Curds are Wisconsin-style white cheddar cheese curds — fresh, squeaky cheese in nugget form — dipped in batter and deep-fried. The result is a golden, crispy exterior with a gooey, molten cheese interior. They are served immediately after frying, so the cheese inside is at peak melt. Find the full snacks lineup on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>Best DQ Snack for Sharing</h2>
   <p>At $3.99 for a generous portion, Cheese Curds are the best value shareable snack on the DQ menu. They pair well with any dipping sauce — ranch is the most popular pairing, but they also work with the Country Gravy sauce available alongside <a href="/items/chicken-strip-basket-4pc">Chicken Strip Baskets</a>.</p>
   <h2>Cheese Curds vs. Pretzel Sticks — Which to Order?</h2>
@@ -79,7 +132,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Yes. The $3.99 portion is generous enough for two people as a shared appetizer alongside an entrée.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

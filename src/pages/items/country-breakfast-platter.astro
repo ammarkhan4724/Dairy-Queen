@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Country Breakfast Platter",
+      "image": "https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp",
+      "description": "Scrambled eggs, breakfast sausage, crispy hash browns, and a warm biscuit smothered in country gravy. The most complete breakfast on the DQ menu at $6.99. Select locations only.",
+      "offers": {
+        "@type": "Offer",
+        "price": "6.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/country-breakfast-platter"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "860 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Country Breakfast Platter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$6.99 with 860 calories. The highest-calorie breakfast option on the DQ menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does every DQ serve the Country Breakfast Platter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. DQ breakfast including the Country Breakfast Platter is only available at select locations, primarily in the U.S. South and Midwest. Always verify before visiting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What time does DQ stop serving breakfast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically 10:30 AM, though exact times vary by location. Some weekend locations serve until 11:00 AM."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Country Breakfast Platter — Price, Calories & Details 2026" description="DQ Country Breakfast Platter price: $6.99, 860 calories. Scrambled eggs, sausage, hash browns, biscuit and gravy. The complete DQ breakfast — select locations only.">
+<Layout title="Dairy Queen Country Breakfast Platter — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Country Breakfast Platter price: $6.99, 860 calories. Scrambled eggs, sausage, hash browns, biscuit and gravy. The complete DQ breakfast — select locations only.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/breakfast">Breakfast</a></li><li><span aria-current="page">Country Breakfast Platter</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$6.99</div>
       <p>Scrambled eggs, breakfast sausage, crispy hash browns, and a warm biscuit smothered in country gravy. The most complete breakfast on the DQ menu at $6.99. Select locations only.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -55,7 +108,7 @@ import Layout from '../../layouts/Layout.astro';
     <li><strong>Biscuit</strong> — Warm, flaky, served halved</li>
     <li><strong>Country gravy</strong> — DQ's signature white gravy, poured generously over the biscuit</li>
   </ul>
-  <p>Browse the full DQ breakfast lineup and availability on <a href="/">The Dairy Queen Menu</a> or the <a href="/categories/breakfast">Breakfast category page</a>.</p>
+  <p>Browse the full DQ breakfast lineup and availability on <a href="/">The Queen Dairy Menu</a> or the <a href="/categories/breakfast">Breakfast category page</a>.</p>
   <h2>DQ Breakfast Availability — Important Note</h2>
   <p>Dairy Queen breakfast is available at <strong>select locations only</strong> — primarily in the U.S. South and Midwest. Many DQ locations in northern states or urban areas do not serve breakfast at all. Always call ahead or check the DQ app before making a special trip for breakfast.</p>
   <h2>Country Breakfast Platter vs. Other DQ Breakfast Options</h2>
@@ -78,7 +131,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Typically 10:30 AM, though exact times vary by location. Some weekend locations serve until 11:00 AM.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

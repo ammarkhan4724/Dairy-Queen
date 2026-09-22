@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Royal Rocky Road Trip Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/royal-choco-brownie-blizzard.webp",
+      "description": "Brownie pieces, almond pieces, and marshmallow topping blended into DQ soft serve, with a warm hot fudge-filled center. The Rocky Road experience — in Royal Blizzard form. From $3.99.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/royal-rocky-road-trip-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "530 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Royal Rocky Road Trip Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini $3.99, Small $4.99, Medium $5.99, Large $6.49."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is in the Royal Rocky Road Trip Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brownie pieces, almond pieces, and marshmallow topping blended into DQ soft serve with a warm hot fudge-filled center."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it contain nuts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It contains tree nuts (almonds). Not suitable for guests with nut allergies."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Royal Rocky Road Trip Blizzard® Treat — Price, Calories & Details 2026" description="DQ Royal Rocky Road Trip Blizzard® Treat price: Mini $3.99, Small $4.99. 530 cal (Small). Year-Round. Full review, nutrition and ordering guide.">
+<Layout title="Dairy Queen Royal Rocky Road Trip Blizzard® Treat — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Royal Rocky Road Trip Blizzard® Treat price: Mini $3.99, Small $4.99. 530 cal (Small). Year-Round. Full review, nutrition and ordering guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Royal Rocky Road Trip Blizzard® Treat</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.99</div>
       <p>Brownie pieces, almond pieces, and marshmallow topping blended into DQ soft serve, with a warm hot fudge-filled center. The Rocky Road experience — in Royal Blizzard form. From $3.99.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -46,7 +99,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>What's in the Royal Rocky Road Trip Blizzard</h2>
-  <p>Classic Rocky Road combines chocolate, nuts, and marshmallow — and DQ's Royal Rocky Road Trip Blizzard delivers all three plus the signature Royal filled center. Brownie pieces provide dense chocolate chew. Almond pieces add a crunchy nut element. Marshmallow topping distributes throughout the soft serve. And the hot fudge-filled center delivers a warm burst of chocolate at the midpoint of every cup. See all Royal Blizzards on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>Classic Rocky Road combines chocolate, nuts, and marshmallow — and DQ's Royal Rocky Road Trip Blizzard delivers all three plus the signature Royal filled center. Brownie pieces provide dense chocolate chew. Almond pieces add a crunchy nut element. Marshmallow topping distributes throughout the soft serve. And the hot fudge-filled center delivers a warm burst of chocolate at the midpoint of every cup. See all Royal Blizzards on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>The Four Royal Blizzards Compared</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th>Royal Blizzard</th><th>Mini Price</th><th>Small Cal</th><th>Filled Center</th></tr></thead>
@@ -85,13 +138,13 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">Yes. It contains tree nuts (almonds). Not suitable for guests with nut allergies.</div></div>
     </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
     </p>
   </div>
 </section>
 <section class="section section-alt"><div class="container article-body" style="max-width:920px;">
 <h2>Royal Rocky Road Trip — The Most Complex Royal Blizzard</h2>
-<p>The Royal Rocky Road Trip Blizzard has the most components of any Royal Blizzard — brownie pieces, almond pieces, marshmallow topping, and a hot fudge-filled center. This complexity makes it the most texturally interesting Royal Blizzard, with something different in every spoonful. Find all Royal Blizzards and their prices on <a href="/">The Dairy Queen Menu</a>.</p>
+<p>The Royal Rocky Road Trip Blizzard has the most components of any Royal Blizzard — brownie pieces, almond pieces, marshmallow topping, and a hot fudge-filled center. This complexity makes it the most texturally interesting Royal Blizzard, with something different in every spoonful. Find all Royal Blizzards and their prices on <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Nutrition Note</h2>
 <p>At 530 cal (Small), the Royal Rocky Road Trip is mid-range in the Royal Blizzard calorie hierarchy. The <a href="/items/royal-reeses-blizzard">Royal Reese's</a> is higher at 620 cal. The <a href="/items/royal-oreo-blizzard">Royal Oreo</a> is lower at 490 cal. The Rocky Road is the right middle ground for guests who want complexity without maximum calorie density.</p>
 <h2>Related Blizzards</h2>

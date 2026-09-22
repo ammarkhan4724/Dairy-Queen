@@ -1,7 +1,52 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Chocolate Chip Cookie Dough Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/cookie-dough-blizzard.webp",
+      "description": "DQ soft serve blended with chocolate chip cookie dough pieces — the same unbaked, sweet, slightly chewy dough that makes raw cookie batter irresistible. Richer and more calorie-dense than the Oreo Blizzard, and for very good reason.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/cookie-dough-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "590 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the cookie dough in the DQ Blizzard raw?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cookie dough pieces used in the DQ Cookie Dough Blizzard are safe to eat — they are made without raw eggs and use heat-treated flour. They are designed specifically for frozen dessert use and do not carry the food safety concerns of homemade raw dough."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the Cookie Dough Blizzard more expensive than Oreo at Large?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Cookie Dough Blizzard Large is $6.49 vs. the Oreo Large at $5.99 — a $0.50 difference. This reflects the higher cost of cookie dough pieces as a mix-in ingredient compared to standard Oreo crumbles."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Cookie Dough Blizzard — Price, Calories & Sizes 2026" description="DQ Chocolate Chip Cookie Dough Blizzard price 2026: Mini $3.49 to Large $6.49. 590 cal Small. The #2 Blizzard at DQ — full nutrition and ordering guide.">
+<Layout title="Dairy Queen Cookie Dough Blizzard — Price, Calories & Sizes 2026 | The Queen Dairy Menu" description="DQ Chocolate Chip Cookie Dough Blizzard price 2026: Mini $3.49 to Large $6.49. 590 cal Small. The #2 Blizzard at DQ — full nutrition and ordering guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
 <li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
@@ -10,9 +55,9 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +69,9 @@ import Layout from '../../layouts/Layout.astro';
     <div class="item-price-lg">From $3.49</div>
     <p>DQ soft serve blended with chocolate chip cookie dough pieces — the same unbaked, sweet, slightly chewy dough that makes raw cookie batter irresistible. Richer and more calorie-dense than the Oreo Blizzard, and for very good reason.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -56,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 </div></section>
 <section class="section"><div class="container article-body">
   <h2>Why the Cookie Dough Blizzard Is #2</h2>
-  <p>The Cookie Dough Blizzard consistently ranks as DQ's second best-selling Blizzard, right behind the Oreo. The appeal mirrors what makes raw cookie dough universally tempting — that sweet, buttery, slightly chewy texture. In cold, creamy soft serve, it works exceptionally well. The cookie dough pieces are larger and chunkier than Oreo crumbles, giving the Blizzard more texture variation per bite. You can find this and every other Blizzard flavor on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The Cookie Dough Blizzard consistently ranks as DQ's second best-selling Blizzard, right behind the Oreo. The appeal mirrors what makes raw cookie dough universally tempting — that sweet, buttery, slightly chewy texture. In cold, creamy soft serve, it works exceptionally well. The cookie dough pieces are larger and chunkier than Oreo crumbles, giving the Blizzard more texture variation per bite. You can find this and every other Blizzard flavor on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>Cookie Dough Blizzard vs. Oreo Blizzard</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th>Comparison</th><th>Cookie Dough Blizzard</th><th>Oreo Cookie Blizzard</th></tr></thead>
@@ -88,7 +133,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>Cookie Dough Blizzard — Ordering Tips and Variations</h2>
-    <p>The Cookie Dough Blizzard is one of the most customizable on the menu. Popular fan variations at <a href="/">The Dairy Queen Menu</a> locations:</p>
+    <p>The Cookie Dough Blizzard is one of the most customizable on the menu. Popular fan variations at <a href="/">The Queen Dairy Menu</a> locations:</p>
     <ul>
       <li><strong>Cookie Dough + Oreo combo</strong> — The most ordered custom Blizzard combination. Request both mix-ins for ~$0.50 extra. Cookie crunch plus dough chunks in every spoonful.</li>
       <li><strong>Cookie Dough + Hot Fudge swirl</strong> — Adds a chocolate sauce swirl throughout. Deepens the chocolate chip flavor.</li>

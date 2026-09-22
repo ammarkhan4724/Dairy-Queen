@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Strawberry Sundae",
+      "image": "https://www.thequeendairymenu.us/Images/strawberry-sundae.webp",
+      "description": "Fresh strawberry topping poured generously over DQ's creamy vanilla soft serve. At 280 calories, the Strawberry Sundae is the lightest of DQ's three sundae options — and still a genuinely satisfying dessert.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.79",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/strawberry-sundae"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "280 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Strawberry Sundae?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$3.79 with 280 calories. Same price as Hot Fudge and Caramel Sundaes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it the lightest sundae at DQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. At 280 cal it is the lightest of the three DQ sundae options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a Strawberry Sundae in the $7 Meal Deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Small Sundae in the $7 Meal Deal can be a Strawberry Sundae — or Hot Fudge or Caramel — at your preference."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Strawberry Sundae — Price, Calories & Review 2026" description="DQ Strawberry Sundae price: $3.79, 280 calories. Fresh strawberry topping over DQ soft serve. Lightest DQ sundae. Full review and comparison with hot fudge and caramel.">
+<Layout title="Dairy Queen Strawberry Sundae — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Strawberry Sundae price: $3.79, 280 calories. Fresh strawberry topping over DQ soft serve. Lightest DQ sundae. Full review and comparison with hot fudge and caramel.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="https://www.thedairyqueenmenu.us/categories/classic-treats">Classic Treats</a></li><li aria-current="page">Strawberry Sundae</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li aria-current="page">Strawberry Sundae</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -21,9 +74,9 @@ import Layout from '../../layouts/Layout.astro';
     <div class="item-price-lg">$3.79</div>
     <p>Fresh strawberry topping poured generously over DQ's creamy vanilla soft serve. At 280 calories, the Strawberry Sundae is the lightest of DQ's three sundae options — and still a genuinely satisfying dessert.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -36,19 +89,19 @@ import Layout from '../../layouts/Layout.astro';
 </div></section>
 <section class="section"><div class="container article-body">
 <h2>DQ Strawberry Sundae — The Lightest Classic Treat</h2>
-<p>The DQ Strawberry Sundae delivers fruit-forward sweetness at 280 calories — 20 fewer than the Hot Fudge Sundae and 30 fewer than the Caramel Sundae. All three sundaes are priced identically at $3.79. The Strawberry Sundae is the right choice for guests who want a lighter, fruitier experience rather than the rich chocolate or caramel options. Browse all classic treats on <a href="/">The Dairy Queen Menu</a>.</p>
+<p>The DQ Strawberry Sundae delivers fruit-forward sweetness at 280 calories — 20 fewer than the Hot Fudge Sundae and 30 fewer than the Caramel Sundae. All three sundaes are priced identically at $3.79. The Strawberry Sundae is the right choice for guests who want a lighter, fruitier experience rather than the rich chocolate or caramel options. Browse all classic treats on <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Three DQ Sundaes Compared</h2>
 <div class="table-wrap"><table class="size-table"><thead><tr><th>Sundae</th><th>Price</th><th>Calories</th><th>Profile</th></tr></thead><tbody><tr><td>Strawberry Sundae</td><td class="price-cell">$3.79</td><td>280 cal</td><td>Fresh strawberry — fruity, lightest</td></tr><tr><td>Hot Fudge Sundae</td><td class="price-cell">$3.79</td><td>300 cal</td><td>Warm fudge — classic, warm-cold contrast</td></tr><tr><td>Caramel Sundae</td><td class="price-cell">$3.79</td><td>310 cal</td><td>Rich caramel — sweetest, most calories</td></tr></tbody></table></div>
 <h2>Strawberry Sundae as a $7 Meal Deal Component</h2>
 <p>The Small Sundae included in the <a href="/items/7-meal-deal">$7 Meal Deal</a> can be a Strawberry Sundae — and at 280 calories it is the lightest sundae option to include in the combo. If you want a complete meal without the extra calories from fudge or caramel, requesting a Strawberry Sundae is a smart choice within the Meal Deal.</p>
 <h2>Frequently Asked Questions</h2>
 <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is the DQ Strawberry Sundae?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">$3.79 with 280 calories. Same price as Hot Fudge and Caramel Sundaes.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Is it the lightest sundae at DQ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. At 280 cal it is the lightest of the three DQ sundae options.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Can I get a Strawberry Sundae in the $7 Meal Deal?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. The Small Sundae in the $7 Meal Deal can be a Strawberry Sundae — or Hot Fudge or Caramel — at your preference.</div></div></div></div>
-<p style="margin-top:32px;">For the complete DQ menu with all categories and deals, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+<p style="margin-top:32px;">For the complete DQ menu with all categories and deals, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
 </div></section>
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>When to Choose the Strawberry Sundae</h2>
-    <p>The Strawberry Sundae is the best pick when you want a fruit-forward dessert that feels lighter than chocolate or caramel. The fresh strawberry topping is sweet, slightly tart, and cooling — a natural fit after a heavier meal like a <a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a> or a <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a>. The 280 calories make it one of the more balanced dessert choices on <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>The Strawberry Sundae is the best pick when you want a fruit-forward dessert that feels lighter than chocolate or caramel. The fresh strawberry topping is sweet, slightly tart, and cooling — a natural fit after a heavier meal like a <a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a> or a <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a>. The 280 calories make it one of the more balanced dessert choices on <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>Sundae vs. Blizzard — What's the Right Dessert?</h2>
     <p>If you want a simple, lighter dessert, the Strawberry Sundae at $3.79 wins. If you want something more substantial and complex, a <a href="/items/oreo-blizzard">Mini Oreo Blizzard</a> at $3.49 is actually slightly cheaper while delivering the full Blizzard experience. The Sundae is better as a complement to a full meal. The Blizzard is better as a standalone dessert.</p>

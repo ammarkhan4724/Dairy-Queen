@@ -1,15 +1,64 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "DQ Cake — 10-Inch Round",
+      "image": "https://www.thequeendairymenu.us/Images/dq-cake-round-10inch.webp",
+      "description": "The 10-inch round DQ Cake — the most popular round cake size — layered with DQ soft serve, hot fudge, a crunchy center, and whipped topping. Serves 12–16 people. Available in Classic or Blizzard Cake formats.",
+      "offers": {
+        "@type": "Offer",
+        "price": "32.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/dq-cake-round-10inch"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ 10-inch round cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$32.99+ for the Classic. $35.99–$38.74+ for Blizzard Cake versions (Oreo, Cookie Dough, Reese's, Choco Brownie Extreme)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many people does the 10-inch DQ Cake serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12–16 people at standard serving sizes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the 8-inch and 10-inch DQ Cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 8-inch ($22.99+) serves 8–10 people. The 10-inch ($32.99+) serves 12–16. Both have the same layer structure. Blizzard Cake formats are typically only available in 10-inch."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen DQ Cake 10-Inch Round — Price & Ordering Guide 2026" description="DQ Cake 10-inch round price: $32.99+. Classic DQ ice cream cake serving 12–16 people. Soft serve, fudge, crunch center, whipped topping. Order 48 hours ahead.">
+<Layout title="Dairy Queen DQ Cake 10-Inch Round — Price & Ordering Guide 2026 | The Queen Dairy Menu" description="DQ Cake 10-inch round price: $32.99+. Classic DQ ice cream cake serving 12–16 people. Soft serve, fudge, crunch center, whipped topping. Order 48 hours ahead.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="https://www.thedairyqueenmenu.us/categories/dq-cakes">DQ Cakes</a></li><li aria-current="page">DQ Cake — 10-Inch Round</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/dq-cakes">DQ Cakes</a></li><li aria-current="page">DQ Cake — 10-Inch Round</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -25,9 +74,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$32.99+</div>
       <p>The 10-inch round DQ Cake — the most popular round cake size — layered with DQ soft serve, hot fudge, a crunchy center, and whipped topping. Serves 12–16 people. Available in Classic or Blizzard Cake formats.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -47,7 +96,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body">
     <h2>10-Inch Round — The Most Versatile DQ Cake Size</h2>
-  <p>The 10-inch round DQ Cake is the most popular cake size at DQ. It is large enough for a proper birthday celebration (12–16 guests) but small enough to not require the advance logistics of a sheet cake. It is also the size used for all Blizzard Cake variants — Oreo, Cookie Dough, Reese's, and Choco Brownie Extreme. Find all DQ Cake options on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The 10-inch round DQ Cake is the most popular cake size at DQ. It is large enough for a proper birthday celebration (12–16 guests) but small enough to not require the advance logistics of a sheet cake. It is also the size used for all Blizzard Cake variants — Oreo, Cookie Dough, Reese's, and Choco Brownie Extreme. Find all DQ Cake options on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>10-Inch Classic vs. 10-Inch Blizzard Cake</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th></th><th>Classic 10-Inch ($32.99+)</th><th>Blizzard Cake 10-Inch ($35.99–$38.74+)</th></tr></thead>
@@ -77,14 +126,14 @@ import Layout from '../../layouts/Layout.astro';
       <button class="faq-q" aria-expanded="false">What is the difference between the 8-inch and 10-inch DQ Cake?<span class="faq-icon">+</span></button>
       <div class="faq-a"><div class="faq-a-inner">The 8-inch ($22.99+) serves 8–10 people. The 10-inch ($32.99+) serves 12–16. Both have the same layer structure. Blizzard Cake formats are typically only available in 10-inch.</div></div>
     </div></div>
-    <p style="margin-top:32px;">For the complete DQ menu including all Blizzard flavors and food items, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+    <p style="margin-top:32px;">For the complete DQ menu including all Blizzard flavors and food items, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
   </div>
 </section>
 
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Cake 10-Inch Round — The Full Celebration Cake</h2>
-    <p>The 10-inch Round DQ Cake is the most frequently ordered celebration cake at Dairy Queen. It serves 12–16 people, making it ideal for birthdays, graduations, office parties, and any event where the 8-inch is not quite large enough. At $32.99+, it is the mid-range option between the <a href="/items/dq-cake-round-8inch">8-inch ($22.99+)</a> and the <a href="/items/dq-sheet-cake">Sheet Cake ($44.99+)</a>. For the complete cake lineup, visit <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>The 10-inch Round DQ Cake is the most frequently ordered celebration cake at Dairy Queen. It serves 12–16 people, making it ideal for birthdays, graduations, office parties, and any event where the 8-inch is not quite large enough. At $32.99+, it is the mid-range option between the <a href="/items/dq-cake-round-8inch">8-inch ($22.99+)</a> and the <a href="/items/dq-sheet-cake">Sheet Cake ($44.99+)</a>. For the complete cake lineup, visit <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>DQ Cake Size Guide</h2>
     <div class="table-wrap"><table class="size-table">

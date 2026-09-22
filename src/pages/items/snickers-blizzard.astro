@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Snickers Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/snickers-blizzard.webp",
+      "description": "Snickers® pieces blended throughout DQ soft serve — you get peanuts, caramel, nougat, and chocolate all in one Blizzard. The most complex flavor profile in the candy-bar Blizzard tier. From $3.49.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/snickers-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "500 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Snickers Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini $3.49, Small $4.49, Medium $5.49, Large $6.49."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is in the Snickers Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Snickers® candy pieces — peanuts, caramel, nougat, and chocolate — blended throughout DQ vanilla soft serve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Snickers Blizzard contain peanuts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Snickers Blizzard contains peanuts and tree nuts. Not suitable for guests with nut allergies."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Snickers® Blizzard® Treat — Price, Calories & Review 2026" description="DQ Snickers® Blizzard® Treat price 2026: Mini $3.49, Small $4.49, Medium $5.49, Large $6.49. 500 cal (Small). Full nutrition guide and ordering tips.">
+<Layout title="Dairy Queen Snickers® Blizzard® Treat — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Snickers® Blizzard® Treat price 2026: Mini $3.49, Small $4.49, Medium $5.49, Large $6.49. 500 cal (Small). Full nutrition guide and ordering tips.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Snickers® Blizzard® Treat</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.49</div>
       <p>Snickers® pieces blended throughout DQ soft serve — you get peanuts, caramel, nougat, and chocolate all in one Blizzard. The most complex flavor profile in the candy-bar Blizzard tier. From $3.49.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -50,7 +103,7 @@ import Layout from '../../layouts/Layout.astro';
     
     <h2>What Is the Snickers® Blizzard® Treat?</h2>
     <p>The Snickers® Blizzard is the most texturally complex of the candy-bar Blizzards. A Snickers bar contains four distinct elements — chocolate coating, caramel, nougat, and peanuts — and all four make their presence known when blended into soft serve. You get crunch from peanuts, chew from nougat and caramel, and chocolate throughout. It is more satisfying per spoonful than the simpler <a href="/items/mm-blizzard">M&amp;M's</a> or <a href="/items/butterfinger-blizzard">Butterfinger</a> Blizzards.</p>
-  <p>See the full DQ menu at <a href="/">The Dairy Queen Menu</a> or browse all flavors on the <a href="/categories/blizzard-treats">Blizzard Treats page</a>.</p>
+  <p>See the full DQ menu at <a href="/">The Queen Dairy Menu</a> or browse all flavors on the <a href="/categories/blizzard-treats">Blizzard Treats page</a>.</p>
 
     <h2>Why Snickers Works Well in a Blizzard</h2>
   <p>Snickers is one of the better candy bars to blend into soft serve because its layered structure means different elements break apart and distribute differently during blending. Peanuts hold their shape for crunch. Nougat dissolves partially and adds chew. Caramel creates pockets of sweetness throughout. Chocolate coating disperses into the soft serve for depth. No single candy-bar Blizzard gives you more variety in each spoonful.</p>
@@ -82,7 +135,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Yes. The Snickers Blizzard contains peanuts and tree nuts. Not suitable for guests with nut allergies.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

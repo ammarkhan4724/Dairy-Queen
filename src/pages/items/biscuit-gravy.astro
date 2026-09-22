@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Biscuit &amp; Gravy",
+      "image": "https://www.thequeendairymenu.us/Images/biscuit-gravy.webp",
+      "description": "A warm, flaky buttermilk biscuit halved and smothered in DQ's creamy white country gravy. $3.99, 400 calories — the most affordable breakfast on the DQ menu and a Southern comfort classic.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/biscuit-gravy"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "400 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Biscuit &amp; Gravy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$3.99 with 400 calories. Available at select DQ locations during breakfast hours only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is DQ country gravy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A creamy white gravy seasoned with black pepper and herbs — DQ's signature breakfast sauce used across several menu items."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Biscuit &amp; Gravy available all day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is only available during DQ breakfast hours, typically until 10:30 AM at select locations."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Biscuit & Gravy — Price, Calories & Details 2026" description="DQ Biscuit & Gravy price: $3.99, 400 calories. Flaky buttermilk biscuit smothered in creamy country gravy. Available at select DQ locations — breakfast hours only.">
+<Layout title="Dairy Queen Biscuit & Gravy — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Biscuit & Gravy price: $3.99, 400 calories. Flaky buttermilk biscuit smothered in creamy country gravy. Available at select DQ locations — breakfast hours only.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/breakfast">Breakfast</a></li><li><span aria-current="page">Biscuit &amp; Gravy</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$3.99</div>
       <p>A warm, flaky buttermilk biscuit halved and smothered in DQ's creamy white country gravy. $3.99, 400 calories — the most affordable breakfast on the DQ menu and a Southern comfort classic.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -46,7 +99,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Biscuit &amp; Gravy — The Most Affordable DQ Breakfast</h2>
-  <p>At $3.99, the DQ Biscuit &amp; Gravy is the most affordable sit-down-style breakfast item on the <a href="/categories/breakfast">DQ breakfast menu</a>, narrowly edging out the <a href="/items/breakfast-burrito">Breakfast Burrito</a> at $3.49 in price but delivering more volume and a more satisfying, comfort-food eating experience. Find the full DQ menu on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>At $3.99, the DQ Biscuit &amp; Gravy is the most affordable sit-down-style breakfast item on the <a href="/categories/breakfast">DQ breakfast menu</a>, narrowly edging out the <a href="/items/breakfast-burrito">Breakfast Burrito</a> at $3.49 in price but delivering more volume and a more satisfying, comfort-food eating experience. Find the full DQ menu on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>What Makes DQ Country Gravy Special</h2>
   <p>DQ's country gravy is a white, cream-based gravy seasoned with black pepper and savory herbs. It appears across multiple DQ menu items — the Biscuit &amp; Gravy, the <a href="/items/country-breakfast-platter">Country Breakfast Platter</a>, and as the most popular dipping sauce with the <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a>. The gravy's consistency and flavor is one of the most distinctive elements of DQ's food menu identity.</p>
   <h2>DQ Breakfast Menu Comparison</h2>
@@ -79,13 +132,13 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">No. It is only available during DQ breakfast hours, typically until 10:30 AM at select locations.</div></div>
     </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
     </p>
   </div>
 </section>
 <section class="section section-alt"><div class="container article-body" style="max-width:920px;">
 <h2>Biscuit &amp; Gravy — DQ's Southern Heritage</h2>
-<p>The DQ Biscuit &amp; Gravy reflects the Southern U.S. comfort food tradition that defines DQ's breakfast menu at select locations. The country gravy recipe — a white, pepper-seasoned cream sauce — is one of the most distinctive flavors in DQ's food portfolio, appearing across the <a href="/items/country-breakfast-platter">Country Breakfast Platter</a> and as the most popular dipping sauce for the <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a>. Find the full DQ menu on <a href="/">The Dairy Queen Menu</a>.</p>
+<p>The DQ Biscuit &amp; Gravy reflects the Southern U.S. comfort food tradition that defines DQ's breakfast menu at select locations. The country gravy recipe — a white, pepper-seasoned cream sauce — is one of the most distinctive flavors in DQ's food portfolio, appearing across the <a href="/items/country-breakfast-platter">Country Breakfast Platter</a> and as the most popular dipping sauce for the <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a>. Find the full DQ menu on <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Biscuit &amp; Gravy Nutrition</h2>
 <div class="table-wrap"><table class="size-table"><thead><tr><th>Nutrient</th><th>Biscuit &amp; Gravy</th></tr></thead>
 <tbody><tr><td>Calories</td><td>400</td></tr><tr><td>Total Fat</td><td>22g</td></tr>

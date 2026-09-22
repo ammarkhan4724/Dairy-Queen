@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Hot Fudge Sundae",
+      "image": "https://www.thequeendairymenu.us/Images/hot-fudge-sundae.webp",
+      "description": "Warm hot fudge poured generously over DQ vanilla soft serve. Simple, reliable, and included as the dessert component in the $7 Meal Deal. From $3.49.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.79",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/hot-fudge-sundae"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "Regular 300 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Hot Fudge Sundae?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small $3.49, Regular $3.79. The Small is included in the $7 Meal Deal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What flavors does the DQ sundae come in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hot Fudge, Strawberry, and Caramel — all priced at $3.79 regular. The Small size is $3.49."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Hot Fudge Sundae included in any DQ deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A Small Hot Fudge, Strawberry, or Caramel Sundae is included as the dessert in the $7 Meal Deal."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Hot Fudge Sundae — Price, Calories & Details 2026" description="DQ Hot Fudge Sundae price: $3.79, 300 calories. Warm fudge poured over DQ soft serve. Included in the $7 Meal Deal. Simple, classic, satisfying.">
+<Layout title="Dairy Queen Hot Fudge Sundae — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Hot Fudge Sundae price: $3.79, 300 calories. Warm fudge poured over DQ soft serve. Included in the $7 Meal Deal. Simple, classic, satisfying.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li><span aria-current="page">Hot Fudge Sundae</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$3.79</div>
       <p>Warm hot fudge poured generously over DQ vanilla soft serve. Simple, reliable, and included as the dessert component in the $7 Meal Deal. From $3.49.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>The DQ Sundae — Simple and Reliable</h2>
-  <p>The Hot Fudge Sundae is the most straightforward treat on <a href="/">The Dairy Queen Menu</a>: warm fudge over cold soft serve. The temperature contrast between the warm sauce and cold cream is the entire appeal. It is 300 calories, $3.79, and delivers exactly what it promises every time. No Blizzard complexity, no parfait layering — just a clean, classic sundae.</p>
+  <p>The Hot Fudge Sundae is the most straightforward treat on <a href="/">The Queen Dairy Menu</a>: warm fudge over cold soft serve. The temperature contrast between the warm sauce and cold cream is the entire appeal. It is 300 calories, $3.79, and delivers exactly what it promises every time. No Blizzard complexity, no parfait layering — just a clean, classic sundae.</p>
   <h2>The $7 Meal Deal Sundae Connection</h2>
   <p>The Hot Fudge Sundae (Small) is one of the dessert choices included in the <a href="/items/7-meal-deal">$7 Meal Deal</a>. The deal includes a cheeseburger or 3-piece chicken strips, Regular Fries, a Soft Drink, and a Small Sundae — all for $7.00. If you are ordering the $7 Meal Deal and want a dessert, the Hot Fudge Sundae is the most popular choice.</p>
   <h2>Sundae Flavor Comparison</h2>
@@ -80,7 +133,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Yes. A Small Hot Fudge, Strawberry, or Caramel Sundae is included as the dessert in the $7 Meal Deal.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

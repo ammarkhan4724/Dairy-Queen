@@ -1,15 +1,64 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "DQ 2-for-$5 Mix &amp; Match Deal",
+      "image": "https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp",
+      "description": "Choose any two eligible DQ items for $5.00 total. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks with Queso, Regular Fries, Small Sundae, or Soft Drink. Mix and match freely.",
+      "offers": {
+        "@type": "Offer",
+        "price": "5.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/2-for-5-mix-match"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What comes in the DQ 2-for-$5?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any two: Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks with Queso, Regular Fries, Small Sundae, or Medium Soft Drink."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does the 2-for-$5 save vs. ordering individually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Savings of approximately $2.48 to $3.88 depending on the combination chosen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the 2-for-$5 available all day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Available all day at participating DQ Grill &amp; Chill locations. Verify availability at your local DQ."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen 2-for-$5 Mix & Match — What's Included & Details 2026" description="DQ 2-for-$5 Mix & Match lets you pick any two eligible items for $5.00. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks, Fries, Sundae, or Drink.">
+<Layout title="Dairy Queen 2-for-$5 Mix & Match — What's Included & Details 2026 | The Queen Dairy Menu" description="DQ 2-for-$5 Mix & Match lets you pick any two eligible items for $5.00. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks, Fries, Sundae, or Drink.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><span aria-current="page">2-for-$5 Mix &amp; Match</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +73,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$5.00</div>
       <p>Choose any two eligible DQ items for $5.00 total. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks with Queso, Regular Fries, Small Sundae, or Soft Drink. Mix and match freely.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +97,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>2-for-$5 Mix &amp; Match — Every Eligible Item</h2>
-  <p>The DQ 2-for-$5 Mix &amp; Match is one of the best everyday value deals on <a href="/">The Dairy Queen Menu</a>. Pick any two of the following:</p>
+  <p>The DQ 2-for-$5 Mix &amp; Match is one of the best everyday value deals on <a href="/">The Queen Dairy Menu</a>. Pick any two of the following:</p>
   <ul>
     <li><a href="/items/original-cheeseburger"><strong>Original Cheeseburger</strong></a> (normally $6.39)</li>
     <li><strong>2-Piece Chicken Strips</strong> (normally $3.49)</li>
@@ -94,7 +143,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Yes. Available all day at participating DQ Grill &amp; Chill locations. Verify availability at your local DQ.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

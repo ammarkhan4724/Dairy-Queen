@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Backyard Bacon Ranch Stackburger",
+      "image": "https://www.thequeendairymenu.us/Images/backyard-bacon-ranch-stackburger.webp",
+      "description": "Crispy bacon, cheddar cheese, ranch sauce, lettuce, and tomato on a 100% real beef patty. The most popular Stackburger after the FlameThrower — bold flavors without the heat. $9.99.",
+      "offers": {
+        "@type": "Offer",
+        "price": "9.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/backyard-bacon-ranch-stackburger"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "730 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Backyard Bacon Ranch Stackburger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$9.99 with 730 calories. Single patty only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Backyard Bacon Ranch compare to the FlameThrower?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Backyard Bacon Ranch ($9.99, 730 cal) uses bacon, cheddar, and ranch — no spice. The FlameThrower ($10.87, 780 cal) uses Pepper Jack, jalapeños, and FlameThrower sauce for moderate-to-bold heat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What cheese is on the Backyard Bacon Ranch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sharp cheddar cheese, melted directly onto the beef patty."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Backyard Bacon Ranch Stackburger — Price, Calories & Review 2026" description="DQ Backyard Bacon Ranch Stackburger price: $9.99, 730 calories. Bacon, cheddar, ranch, lettuce, tomato on 100% beef. Full review and comparison guide.">
+<Layout title="Dairy Queen Backyard Bacon Ranch Stackburger — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Backyard Bacon Ranch Stackburger price: $9.99, 730 calories. Bacon, cheddar, ranch, lettuce, tomato on 100% beef. Full review and comparison guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li><span aria-current="page">Backyard Bacon Ranch Stackburger</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$9.99</div>
       <p>Crispy bacon, cheddar cheese, ranch sauce, lettuce, and tomato on a 100% real beef patty. The most popular Stackburger after the FlameThrower — bold flavors without the heat. $9.99.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -57,7 +110,7 @@ import Layout from '../../layouts/Layout.astro';
     <li><strong>Tomato</strong> — Sliced, balances the richness</li>
     <li><strong>Toasted bun</strong> — Holds up to the toppings</li>
   </ul>
-  <p>Find this and all DQ burgers on <a href="/">The Dairy Queen Menu</a> or browse the <a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches category</a>.</p>
+  <p>Find this and all DQ burgers on <a href="/">The Queen Dairy Menu</a> or browse the <a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches category</a>.</p>
   <h2>Backyard Bacon Ranch vs. FlameThrower Stackburger</h2>
   <p>These are DQ's two most popular Stackburgers. The choice between them is simple:</p>
   <ul>
@@ -85,7 +138,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Sharp cheddar cheese, melted directly onto the beef patty.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

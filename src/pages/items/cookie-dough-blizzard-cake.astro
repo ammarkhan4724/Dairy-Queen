@@ -1,15 +1,64 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Cookie Dough Blizzard Cake",
+      "image": "https://www.thequeendairymenu.us/Images/cookie-dough-blizzard-cake.webp",
+      "description": "Chocolate chip cookie dough pieces distributed throughout the soft serve layers of a full 10-inch DQ celebration cake. The Blizzard Cake version of DQ's #2 Blizzard flavor. Order 48 hours ahead.",
+      "offers": {
+        "@type": "Offer",
+        "price": "35.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/cookie-dough-blizzard-cake"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Cookie Dough Blizzard Cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$35.99+ for the 10-inch round. Prices vary by location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the Cookie Dough Blizzard Cake different from the classic DQ Cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Cookie Dough Blizzard Cake has actual chocolate chip cookie dough pieces distributed throughout the soft serve layer. The classic DQ Cake uses standard soft serve without mix-ins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many people does the Cookie Dough Blizzard Cake serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 10-inch serves 12–16 people. For larger groups, order a Sheet Cake ($44.99+, serves 24–32)."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Cookie Dough Blizzard Cake — Price & Ordering Guide 2026" description="DQ Cookie Dough Blizzard Cake price: $35.99+ (10-inch). Cookie dough pieces layered throughout a full DQ ice cream cake. Order 48 hours in advance.">
+<Layout title="Dairy Queen Cookie Dough Blizzard Cake — Price & Ordering Guide 2026 | The Queen Dairy Menu" description="DQ Cookie Dough Blizzard Cake price: $35.99+ (10-inch). Cookie dough pieces layered throughout a full DQ ice cream cake. Order 48 hours in advance.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="/categories/dq-cakes">DQ Cakes</a></li><li aria-current="page">Cookie Dough Blizzard Cake</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/dq-cakes">DQ Cakes</a></li><li aria-current="page">Cookie Dough Blizzard Cake</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +73,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$35.99+</div>
       <p>Chocolate chip cookie dough pieces distributed throughout the soft serve layers of a full 10-inch DQ celebration cake. The Blizzard Cake version of DQ's #2 Blizzard flavor. Order 48 hours ahead.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -46,7 +95,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>Cookie Dough Blizzard Cake — The Second Most Popular DQ Blizzard Cake</h2>
-  <p>After the <a href="/items/oreo-blizzard-cake">Oreo® Blizzard® Cake</a>, the Cookie Dough Blizzard Cake is the second most ordered Blizzard Cake at DQ. It uses the same Cookie Dough Blizzard mix-in — actual chocolate chip cookie dough pieces — distributed throughout the soft serve layers of a full celebration cake. The result is the chunky, chewy texture of the Cookie Dough Blizzard in a shareable format. Find the full cake lineup on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>After the <a href="/items/oreo-blizzard-cake">Oreo® Blizzard® Cake</a>, the Cookie Dough Blizzard Cake is the second most ordered Blizzard Cake at DQ. It uses the same Cookie Dough Blizzard mix-in — actual chocolate chip cookie dough pieces — distributed throughout the soft serve layers of a full celebration cake. The result is the chunky, chewy texture of the Cookie Dough Blizzard in a shareable format. Find the full cake lineup on <a href="/">The Queen Dairy Menu</a>.</p>
 
   <h2>Cookie Dough Blizzard Cake vs. Oreo Blizzard Cake</h2>
   <div class="table-wrap"><table class="size-table"><thead><tr><th>Cake</th><th>Price</th><th>Serves</th><th>Key Difference</th></tr></thead><tbody><tr><td>Cookie Dough Blizzard Cake</td><td class="price-cell">$35.99+</td><td>12–16 people</td><td>Cookie dough pieces throughout — $2.75 less than Oreo Cake</td></tr><tr><td>Oreo® Blizzard® Cake</td><td class="price-cell">$38.74+</td><td>12–16 people</td><td>Oreo crumbles throughout — most popular</td></tr><tr><td>Classic DQ Cake (10-inch)</td><td class="price-cell">$32.99+</td><td>12–16 people</td><td>No Blizzard mix-ins — lowest price</td></tr></tbody></table></div>
@@ -79,7 +128,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">The 10-inch serves 12–16 people. For larger groups, order a Sheet Cake ($44.99+, serves 24–32).</div></div>
     </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For every DQ price, flavor, and category, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For every DQ price, flavor, and category, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
     </p>
   </div>
 </section>

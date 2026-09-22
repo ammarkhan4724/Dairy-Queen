@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Grilled Chicken Sandwich",
+      "image": "https://www.thequeendairymenu.us/Images/grilled-chicken-sandwich.webp",
+      "description": "Flame-grilled chicken breast with crisp lettuce, fresh tomato, and honey mustard on a toasted bun. At 390 calories, the Grilled Chicken Sandwich is the lowest-calorie full sandwich on the DQ menu.",
+      "offers": {
+        "@type": "Offer",
+        "price": "7.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/grilled-chicken-sandwich"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "390 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Grilled Chicken Sandwich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$7.99 with 390 calories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the grilled chicken sandwich healthy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the lowest-calorie full sandwich at DQ — 390 cal, 9g fat, 36g protein. A reasonable choice within a fast-food context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I substitute the honey mustard on the Grilled Chicken Sandwich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Ask for ranch, mayo, or no sauce. Most DQ locations accommodate simple condiment substitutions."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Grilled Chicken Sandwich — Price, Calories & Review 2026" description="DQ Grilled Chicken Sandwich price: $7.99, 390 calories. Flame-grilled chicken breast with lettuce, tomato and honey mustard. Lightest DQ sandwich. Full review.">
+<Layout title="Dairy Queen Grilled Chicken Sandwich — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Grilled Chicken Sandwich price: $7.99, 390 calories. Flame-grilled chicken breast with lettuce, tomato and honey mustard. Lightest DQ sandwich. Full review.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="https://www.thedairyqueenmenu.us/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li aria-current="page">Grilled Chicken Sandwich</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li aria-current="page">Grilled Chicken Sandwich</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -21,9 +74,9 @@ import Layout from '../../layouts/Layout.astro';
     <div class="item-price-lg">$7.99</div>
     <p>Flame-grilled chicken breast with crisp lettuce, fresh tomato, and honey mustard on a toasted bun. At 390 calories, the Grilled Chicken Sandwich is the lowest-calorie full sandwich on the DQ menu.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -36,7 +89,7 @@ import Layout from '../../layouts/Layout.astro';
 </div></section>
 <section class="section"><div class="container article-body">
 <h2>Why the Grilled Chicken Sandwich Is the Healthiest DQ Sandwich</h2>
-<p>The Grilled Chicken Sandwich wins on nutrition across the board. Flame-grilling rather than frying means significantly less fat — 9g of total fat vs. 22g in the Crispy Chicken Sandwich. At 390 calories, it is lighter than even the Original Cheeseburger (400 cal), which makes it the best choice for guests who want a full sandwich while managing calorie intake. Browse all DQ sandwich options on <a href="/">The Dairy Queen Menu</a>.</p>
+<p>The Grilled Chicken Sandwich wins on nutrition across the board. Flame-grilling rather than frying means significantly less fat — 9g of total fat vs. 22g in the Crispy Chicken Sandwich. At 390 calories, it is lighter than even the Original Cheeseburger (400 cal), which makes it the best choice for guests who want a full sandwich while managing calorie intake. Browse all DQ sandwich options on <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Grilled vs. Crispy Chicken Sandwich — Side by Side</h2>
 <div class="table-wrap"><table class="size-table"><thead><tr><th>Sandwich</th><th>Price</th><th>Calories</th><th>Notes</th></tr></thead><tbody><tr><td>Grilled Chicken Sandwich</td><td class="price-cell">$7.99</td><td>390 cal</td><td>9g fat — flame-grilled, lightest option</td></tr><tr><td>Crispy Chicken Sandwich</td><td class="price-cell">$7.99</td><td>470 cal</td><td>22g fat — breaded and fried</td></tr><tr><td>FlameThrower® Chicken</td><td class="price-cell">$9.29</td><td>530 cal</td><td>27g fat — crispy + spicy sauce</td></tr><tr><td>Spicy Chicken Strip Sandwich</td><td class="price-cell">$8.49</td><td>510 cal</td><td>24g fat — crispy, spiced</td></tr></tbody></table></div>
 <h2>What's on the Grilled Chicken Sandwich</h2>
@@ -50,12 +103,12 @@ import Layout from '../../layouts/Layout.astro';
 <p>The Grilled Chicken Sandwich can be customized: request mayo instead of honey mustard, add cheese for ~$0.50, or request no tomato. The sandwich is simple enough that customizations work well without disrupting the balance.</p>
 <h2>Frequently Asked Questions</h2>
 <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is the DQ Grilled Chicken Sandwich?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">$7.99 with 390 calories.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Is the grilled chicken sandwich healthy?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">It is the lowest-calorie full sandwich at DQ — 390 cal, 9g fat, 36g protein. A reasonable choice within a fast-food context.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Can I substitute the honey mustard on the Grilled Chicken Sandwich?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Ask for ranch, mayo, or no sauce. Most DQ locations accommodate simple condiment substitutions.</div></div></div></div>
-<p style="margin-top:32px;">For the complete DQ menu with all categories and deals, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+<p style="margin-top:32px;">For the complete DQ menu with all categories and deals, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
 </div></section>
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Grilled Chicken Sandwich — The Lighter Option</h2>
-    <p>At 390 calories, the Grilled Chicken Sandwich is the lowest-calorie sandwich on the DQ food menu — 80 fewer calories than the Crispy Chicken Sandwich and roughly the same price at $7.99. If you want a satisfying, protein-forward chicken sandwich without fried breading, the Grilled version is the clear choice. Browse all sandwich options on <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>At 390 calories, the Grilled Chicken Sandwich is the lowest-calorie sandwich on the DQ food menu — 80 fewer calories than the Crispy Chicken Sandwich and roughly the same price at $7.99. If you want a satisfying, protein-forward chicken sandwich without fried breading, the Grilled version is the clear choice. Browse all sandwich options on <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>Grilled vs. Crispy — Full Comparison</h2>
     <div class="table-wrap"><table class="size-table">

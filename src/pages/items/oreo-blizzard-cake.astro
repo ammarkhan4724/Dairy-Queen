@@ -1,15 +1,64 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Oreo Blizzard Cake (10-Inch)",
+      "image": "https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp",
+      "description": "DQ's most-ordered celebration cake — Oreo cookie pieces distributed throughout the soft serve layers of a full 10-inch round ice cream cake. Customizable with a personal message. Order 48 hours ahead.",
+      "offers": {
+        "@type": "Offer",
+        "price": "38.74",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/oreo-blizzard-cake"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Oreo Blizzard Cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$38.74+ for the 10-inch round. Prices may vary by location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many people does the Oreo Blizzard Cake serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 10-inch serves 12–16 people. For larger groups, order a Sheet Cake ($44.99+, serves 24–32)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a custom message on the Oreo Blizzard Cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Personalized messages are standard. Call or visit your DQ at least 48 hours in advance."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Oreo Blizzard Cake — Price, Sizes & Ordering Guide 2026" description="DQ Oreo® Blizzard® Cake price: $38.74+ (10-inch). DQ's most popular celebration cake — Oreo pieces layered through soft serve. Order 48 hours in advance.">
+<Layout title="Dairy Queen Oreo Blizzard Cake — Price, Sizes & Ordering Guide 2026 | The Queen Dairy Menu" description="DQ Oreo® Blizzard® Cake price: $38.74+ (10-inch). DQ's most popular celebration cake — Oreo pieces layered through soft serve. Order 48 hours in advance.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/dq-cakes">DQ Cakes</a></li><li><span aria-current="page">Oreo® Blizzard® Cake</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +73,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$38.74+</div>
       <p>DQ's most-ordered celebration cake — Oreo cookie pieces distributed throughout the soft serve layers of a full 10-inch round ice cream cake. Customizable with a personal message. Order 48 hours ahead.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +97,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>Why the Oreo Blizzard Cake Is DQ's #1</h2>
-  <p>The Oreo® Blizzard® Cake is DQ's most-ordered celebration cake by a significant margin — mirroring the Oreo Cookie Blizzard's position as the #1 Blizzard. When guests want to bring a DQ dessert to a birthday, graduation, or celebration, the Oreo Blizzard Cake is the default choice. Find the full DQ cake lineup and pricing on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The Oreo® Blizzard® Cake is DQ's most-ordered celebration cake by a significant margin — mirroring the Oreo Cookie Blizzard's position as the #1 Blizzard. When guests want to bring a DQ dessert to a birthday, graduation, or celebration, the Oreo Blizzard Cake is the default choice. Find the full DQ cake lineup and pricing on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>How It Differs from the Classic DQ Cake</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th></th><th>Oreo® Blizzard® Cake</th><th>Classic DQ Cake</th></tr></thead>
@@ -86,7 +135,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">Yes. Personalized messages are standard. Call or visit your DQ at least 48 hours in advance.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

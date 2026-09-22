@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Orange Julius Original",
+      "image": "https://www.thequeendairymenu.us/Images/orange-julius.webp",
+      "description": "Fresh orange juice blended with the original Julius creamy base into a smooth, frothy drink. Part OJ, part creamy smoothie — a DQ and Orange Julius brand original since 1926.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/orange-julius"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "~210 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is an Orange Julius at DQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small $3.99, Medium $4.49, Large $4.99. Prices may vary by location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Orange Julius available at all Dairy Queen locations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Orange Julius is only available at DQ/Orange Julius combination locations and standalone Orange Julius stores. Use the DQ app to find a location near you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an Orange Julius taste like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A smooth, frothy drink that combines fresh orange juice flavor with a light, creamy texture. It is not purely OJ — the Julius base creates an airy, almost milkshake-like consistency without dairy."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Orange Julius — Price, Calories & Details 2026" description="DQ Orange Julius price: from $3.99, 210+ cal. Fresh orange juice blended with the original Julius base into a creamy, frothy drink. Available at select DQ locations.">
+<Layout title="Dairy Queen Orange Julius — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Orange Julius price: from $3.99, 210+ cal. Fresh orange juice blended with the original Julius base into a creamy, frothy drink. Available at select DQ locations.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="https://www.thedairyqueenmenu.us/">Home</a></li><li><a href="https://www.thedairyqueenmenu.us/#full-menu">Menu</a></li><li><a href="/categories/drinks">Drinks</a></li><li aria-current="page">Orange Julius</li></ol></div></nav>
+
+<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/drinks">Drinks</a></li><li aria-current="page">Orange Julius</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.99</div>
       <p>Fresh orange juice blended with the original Julius creamy base into a smooth, frothy drink. Part OJ, part creamy smoothie — a DQ and Orange Julius brand original since 1926.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -46,7 +99,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>What Is an Orange Julius?</h2>
-  <p>The Orange Julius predates Dairy Queen by 14 years — it was first created in 1926 in Los Angeles, California. The original recipe blended orange juice with a proprietary creamy powder base that created a smooth, frothy, almost milkshake-like texture without dairy. International Dairy Queen, Inc. acquired the Orange Julius brand, which is why you find it at select DQ and combined DQ/Orange Julius locations. Find all DQ drink options on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The Orange Julius predates Dairy Queen by 14 years — it was first created in 1926 in Los Angeles, California. The original recipe blended orange juice with a proprietary creamy powder base that created a smooth, frothy, almost milkshake-like texture without dairy. International Dairy Queen, Inc. acquired the Orange Julius brand, which is why you find it at select DQ and combined DQ/Orange Julius locations. Find all DQ drink options on <a href="/">The Queen Dairy Menu</a>.</p>
 
   <h2>Orange Julius vs. Fresh Orange Juice</h2>
   <p>An Orange Julius is not just orange juice. The "Julius" base is what makes it different — a proprietary blend that creates a light, frothy, creamy foam throughout the drink. The result is significantly smoother and lighter-tasting than straight OJ, with a subtle sweetness and an almost airy texture. Think of it as the frozen dessert world's version of an orange creamsicle in beverage form.</p>
@@ -76,7 +129,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">A smooth, frothy drink that combines fresh orange juice flavor with a light, creamy texture. It is not purely OJ — the Julius base creates an airy, almost milkshake-like consistency without dairy.</div></div>
     </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For every DQ price, flavor, and category, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For every DQ price, flavor, and category, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
     </p>
   </div>
 </section>

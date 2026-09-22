@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Dilly Bar",
+      "image": "https://www.thequeendairymenu.us/Images/dilly-bar.webp",
+      "description": "Round DQ soft serve on a stick coated in a crispy chocolate shell. The original DQ novelty bar since 1955 — and at $1.99, the best-value frozen treat on the entire menu.",
+      "offers": {
+        "@type": "Offer",
+        "price": "1.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/dilly-bar"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "Chocolate 210 cal · Non-Dairy 220 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is a DQ Dilly Bar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The chocolate Dilly Bar is $1.99 with 210 calories. The Non-Dairy Dilly Bar is $2.49 with 220 calories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Dilly Bar made of?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A round disc of DQ vanilla soft serve on a stick, coated in a crispy chocolate shell that hardens on contact with the cold ice cream."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the DQ Non-Dairy Dilly Bar vegan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Non-Dairy Dilly Bar is made without dairy ingredients. Check with your local DQ or the DQ allergen guide for complete vegan verification, as manufacturing processes vary."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Dilly Bar — Price, Calories & Details 2026" description="DQ Dilly Bar price: $1.99, 210 calories. Round DQ soft serve on a stick coated in crispy chocolate shell. The original DQ novelty bar since 1955.">
+<Layout title="Dairy Queen Dilly Bar — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Dilly Bar price: $1.99, 210 calories. Round DQ soft serve on a stick coated in crispy chocolate shell. The original DQ novelty bar since 1955.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li><span aria-current="page">Dilly® Bar</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$1.99</div>
       <p>Round DQ soft serve on a stick coated in a crispy chocolate shell. The original DQ novelty bar since 1955 — and at $1.99, the best-value frozen treat on the entire menu.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>The DQ Dilly Bar — 70 Years of Excellence</h2>
-  <p>The Dilly® Bar has been on the DQ menu since 1955 — one of the oldest continuously sold fast-food novelty items in the country. The concept is elegantly simple: a round disc of DQ soft serve on a stick, dipped in chocolate that hardens on contact with the cold ice cream to form a crispy shell. When you bite through the shell, it shatters, releasing the creamy soft serve below. At $1.99, it is the best-value frozen treat on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>The Dilly® Bar has been on the DQ menu since 1955 — one of the oldest continuously sold fast-food novelty items in the country. The concept is elegantly simple: a round disc of DQ soft serve on a stick, dipped in chocolate that hardens on contact with the cold ice cream to form a crispy shell. When you bite through the shell, it shatters, releasing the creamy soft serve below. At $1.99, it is the best-value frozen treat on <a href="/">The Queen Dairy Menu</a>.</p>
   <h2>Chocolate Dilly Bar vs. Non-Dairy Dilly Bar</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th></th><th>Chocolate Dilly® Bar</th><th>Non-Dairy Dilly® Bar</th></tr></thead>
@@ -84,7 +137,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">The Non-Dairy Dilly Bar is made without dairy ingredients. Check with your local DQ or the DQ allergen guide for complete vegan verification, as manufacturing processes vary.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

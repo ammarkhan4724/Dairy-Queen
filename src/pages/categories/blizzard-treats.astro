@@ -1,7 +1,47 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much is a Dairy Queen Blizzard in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mini $3.49–$3.99 | Small $4.49–$4.79 | Medium $5.29–$5.79 | Large $5.99–$6.49. Royal Blizzards cost approximately $1 more per size. Prices are national averages and may vary by franchise location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most popular DQ Blizzard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Oreo® Cookie Blizzard is DQ's #1 best-selling Blizzard year-round, followed by Chocolate Chip Cookie Dough and Reese's® Peanut Butter Cup. All three are available in all four sizes at every DQ location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you customize a DQ Blizzard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can request extra mix-ins (typically $0.50 each), lighter blending, an extra swirl of sauce, or combine two different flavors. Ask your DQ crew what customizations are possible at your location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the seasonal Blizzard flavors for 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Summer 2026 seasonal Blizzards include Dipped Strawberry Cheesecake, S'mores, Confetti Cake, Cotton Candy, Mixing Bowl Mashup, and Swicy Pineapple with Tajín®. Fall 2026 will bring Pumpkin Pie and additional seasonal flavors."
+      }
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Blizzard Menu With Prices 2026 — All Flavors, Sizes & Calories" description="Complete Dairy Queen Blizzard menu with 2026 prices and calories. Every flavor from Oreo to Cookie Dough, Mini to Large, Royal Blizzards, and summer seasonal specials.">
+<Layout title="Dairy Queen Blizzard Menu With Prices 2026 — All Flavors, Sizes & Calories | The Queen Dairy Menu" description="Complete Dairy Queen Blizzard menu with 2026 prices and calories. Every flavor from Oreo to Cookie Dough, Mini to Large, Royal Blizzards, and summer seasonal specials.">
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb">
 <div class="container"><ol>
@@ -22,9 +62,9 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -35,13 +75,13 @@ import Layout from '../../layouts/Layout.astro';
     <h2>Dairy Queen Blizzard Treat — Complete 2026 Guide</h2>
     <p>The <strong>Dairy Queen Blizzard Treat</strong> is the most iconic fast-food dessert in America. First introduced in 1985, the Blizzard is made by hand-blending DQ's signature soft serve with your choice of mix-ins — real cookie pieces, candy bars, brownies, or fruit — until the dessert is thick enough to hold upside down. If the crew forgets to flip it before handing it over, it's free. That's not a marketing slogan. That's a genuine guarantee built into every DQ transaction.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
-    <p>For a full overview of all DQ categories from burgers to classic treats, visit <a href="/">The Dairy Queen Menu</a>. This page covers Blizzard Treats specifically — every flavor, every size, every price, and everything you need to order the right one.</p>
+    <p>For a full overview of all DQ categories from burgers to classic treats, visit <a href="/">The Queen Dairy Menu</a>. This page covers Blizzard Treats specifically — every flavor, every size, every price, and everything you need to order the right one.</p>
 
     <h2>Blizzard Treat Prices by Size — 2026</h2>
     <p>All core Blizzard flavors are available in four sizes. The Mini is the smallest option, added in recent years for guests who want a quick taste without committing to a full cup. The Large is approximately 21 oz and is best for sharing or the truly devoted.</p>
@@ -131,7 +171,7 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <p style="margin-top:32px;">For the complete DQ menu including burgers, chicken baskets, breakfast, DQ Cakes, and all classic treats, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+    <p style="margin-top:32px;">For the complete DQ menu including burgers, chicken baskets, breakfast, DQ Cakes, and all classic treats, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
   </div>
 </section>
 

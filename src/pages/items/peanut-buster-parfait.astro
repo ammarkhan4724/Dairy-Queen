@@ -1,7 +1,60 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Peanut Buster Parfait",
+      "image": "https://www.thequeendairymenu.us/Images/peanut-buster-parfait.webp",
+      "description": "Alternating layers of DQ soft serve, salted roasted peanuts, and hot fudge in a parfait cup. 710 calories of salty-sweet indulgence. On the DQ menu since 1968.",
+      "offers": {
+        "@type": "Offer",
+        "price": "4.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/peanut-buster-parfait"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "710 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Peanut Buster Parfait?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Peanut Buster Parfait is $4.99 with 710 calories. It comes in one size only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is in the Peanut Buster Parfait?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DQ soft serve, salted roasted peanuts, and hot fudge sauce layered in a parfait cup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Peanut Buster Parfait gluten-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Peanut Buster Parfait does not contain wheat as a primary ingredient, but DQ kitchens handle gluten-containing products. If you have celiac disease, consult the DQ allergen guide."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Peanut Buster Parfait — Price, Calories & Review 2026" description="DQ Peanut Buster Parfait price: $4.99, 710 calories. Layers of soft serve, salted peanuts, and hot fudge since 1968. Full review and nutrition guide.">
+<Layout title="Dairy Queen Peanut Buster Parfait — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Peanut Buster Parfait price: $4.99, 710 calories. Layers of soft serve, salted peanuts, and hot fudge since 1968. Full review and nutrition guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
 <li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
@@ -10,9 +63,9 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
     <div class="item-price-lg">$4.99</div>
     <p>Alternating layers of DQ soft serve, salted roasted peanuts, and hot fudge in a parfait cup. 710 calories of salty-sweet indulgence. On the DQ menu since 1968.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -45,7 +98,7 @@ import Layout from '../../layouts/Layout.astro';
 </div></section>
 <section class="section"><div class="container article-body">
 <h2>The DQ Peanut Buster Parfait — A Classic Since 1968</h2>
-  <p>Few items on <a href="/">The Dairy Queen Menu</a> have the longevity of the Peanut Buster® Parfait. Introduced in 1968, it has remained virtually unchanged for over 55 years: alternating layers of DQ soft serve, salted roasted peanuts, and hot fudge sauce in a parfait cup. The formula works because it hits the salty-sweet contrast perfectly — the cold, smooth soft serve against warm fudge and crunchy salted peanuts creates a textural experience that is more interesting than most frozen desserts twice its price.</p>
+  <p>Few items on <a href="/">The Queen Dairy Menu</a> have the longevity of the Peanut Buster® Parfait. Introduced in 1968, it has remained virtually unchanged for over 55 years: alternating layers of DQ soft serve, salted roasted peanuts, and hot fudge sauce in a parfait cup. The formula works because it hits the salty-sweet contrast perfectly — the cold, smooth soft serve against warm fudge and crunchy salted peanuts creates a textural experience that is more interesting than most frozen desserts twice its price.</p>
   <h2>What's in the Peanut Buster Parfait?</h2>
   <ul>
     <li><strong>DQ soft serve</strong> — The same smooth vanilla soft serve base used across all DQ treats</li>
@@ -70,7 +123,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">The Peanut Buster Parfait is $4.99 with 710 calories. It comes in one size only.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">What is in the Peanut Buster Parfait?<span class="faq-icon">+</span></button>
       <div class="faq-a"><div class="faq-a-inner">DQ soft serve, salted roasted peanuts, and hot fudge sauce layered in a parfait cup.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Is the Peanut Buster Parfait gluten-free?<span class="faq-icon">+</span></button>
       <div class="faq-a"><div class="faq-a-inner">The Peanut Buster Parfait does not contain wheat as a primary ingredient, but DQ kitchens handle gluten-containing products. If you have celiac disease, consult the DQ allergen guide.</div></div></div></div>
-  <p style="margin-top:32px;">For the complete DQ menu including all categories and deals, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+  <p style="margin-top:32px;">For the complete DQ menu including all categories and deals, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
 </div></section>
 
 <section class="section section-alt">

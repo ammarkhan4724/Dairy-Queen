@@ -1,7 +1,60 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Oreo Cookie Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/oreo-blizzard.webp",
+      "description": "DQ's signature vanilla soft serve hand-blended completely through with real Oreo cookie pieces. Smooth, creamy, with chocolate-and-cream crunch in every spoonful from first to last. Thick enough to hold upside down — guaranteed or it's free.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/oreo-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "420 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the Oreo Blizzard available all year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Oreo Cookie Blizzard is a core year-round menu item at all Dairy Queen locations. Unlike seasonal Blizzard flavors, it is always available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Oreo Blizzard contain gluten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Oreo Blizzard contains wheat from the Oreo cookie pieces. It also contains milk and soy. DQ kitchens handle multiple allergens — consult the DQ allergen guide if you have a serious allergy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What size Oreo Blizzard should I order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Mini ($3.49, ~300 cal) is right for a quick taste or a light dessert after a meal. The Small ($4.49, 420 cal) is the everyday order for one person. The Medium ($5.49, 590 cal) is for when you know exactly what you want and want more of it. The Large ($5.99, 920 cal) is best for sharing or the truly devoted."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Oreo Blizzard — Price, Calories & Sizes 2026" description="DQ Oreo Blizzard price 2026: Mini $3.49, Small $4.49, Medium $5.49, Large $5.99. 420 cal Small. The #1 Blizzard at DQ — full nutrition and ordering guide.">
+<Layout title="Dairy Queen Oreo Blizzard — Price, Calories & Sizes 2026 | The Queen Dairy Menu" description="DQ Oreo Blizzard price 2026: Mini $3.49, Small $4.49, Medium $5.49, Large $5.99. 420 cal Small. The #1 Blizzard at DQ — full nutrition and ordering guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb">
 <div class="container"><ol>
@@ -14,9 +67,9 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -31,9 +84,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.49</div>
       <p>DQ's signature vanilla soft serve hand-blended completely through with real Oreo cookie pieces. Smooth, creamy, with chocolate-and-cream crunch in every spoonful from first to last. Thick enough to hold upside down — guaranteed or it's free.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -71,7 +124,7 @@ import Layout from '../../layouts/Layout.astro';
   <div class="container article-body">
     <h2>Why the Oreo Blizzard Is DQ's #1</h2>
     <p>The Oreo Blizzard has been Dairy Queen's best-selling Blizzard since the product launched in 1985. The reason is straightforward: Oreo is one of the most universally recognized flavor profiles in the country, and its combination with DQ's creamy soft serve is reliable every single time. You know exactly what you're getting, and what you're getting is excellent.</p>
-    <p>What separates the DQ execution from a simple Oreo-and-ice-cream combination is the blending technique. The crew uses a specialized mixer to distribute the Oreo pieces evenly throughout the entire cup — not just on top or in the middle. You get the same cookie-to-soft-serve ratio from the first spoonful to the last. That consistency is what makes the Blizzard a benchmark for blended frozen desserts. You can explore all Blizzard flavors and other DQ treats on <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>What separates the DQ execution from a simple Oreo-and-ice-cream combination is the blending technique. The crew uses a specialized mixer to distribute the Oreo pieces evenly throughout the entire cup — not just on top or in the middle. You get the same cookie-to-soft-serve ratio from the first spoonful to the last. That consistency is what makes the Blizzard a benchmark for blended frozen desserts. You can explore all Blizzard flavors and other DQ treats on <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>Standard Oreo Blizzard vs. Royal Oreo® Blizzard</h2>
     <p>The Royal Oreo® Blizzard takes the standard recipe and adds a hot fudge-filled center. When you eat your way to the middle of the cup, you hit a pocket of warm fudge sauce — it changes the dessert mid-experience in a way that genuinely earns the ~$1 premium.</p>

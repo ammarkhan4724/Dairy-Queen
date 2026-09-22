@@ -4,10 +4,20 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
+  article?: boolean;
 }
 
-const { title, description = "The complete Dairy Queen menu with prices and calories for 2026." } = Astro.props;
+const { 
+  title, 
+  description = "The complete independent Dairy Queen menu reference with updated 2026 prices, calorie counts, sizes, and insider ordering tips at thequeendairymenu.us.",
+  ogImage = "/Images/dq-og-homepage.webp",
+  article = false
+} = Astro.props;
+
 const currentPath = Astro.url.pathname;
+const canonicalURL = 'https://www.thequeendairymenu.us' + (currentPath === '/' ? '/' : currentPath.replace(/\/$/, ''));
+const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeendairymenu.us${ogImage}`;
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -16,18 +26,57 @@ const currentPath = Astro.url.pathname;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="The Queen Dairy Menu" />
+  <meta property="og:type" content={article ? "article" : "website"} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageURL} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={canonicalURL} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
+
   <!-- Google Fonts: Bebas Neue for impactful display, Plus Jakarta Sans for premium modern readability -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Base Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.thequeendairymenu.us/#website",
+        "url": "https://www.thequeendairymenu.us/",
+        "name": "The Queen Dairy Menu",
+        "description": "Comprehensive independent 2026 Dairy Queen menu with up-to-date prices, calories, and ordering guides.",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://www.thequeendairymenu.us/#organization",
+          "name": "The Queen Dairy Menu",
+          "url": "https://www.thequeendairymenu.us/",
+          "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
+        }
+      }
+    ]
+  })} />
 </head>
 <body class="bg-[#FAF7F2] text-[#1E293B] font-sans antialiased flex flex-col min-h-screen selection:bg-[#0E7490] selection:text-white">
   
   <!-- 1. Top Strip: Light Yellow Disclaimer Notice -->
   <div class="bg-[#FAF2DB] border-b border-[#EEDBBA] text-[11px] sm:text-xs text-[#5C450A] py-1.5 px-4 text-center font-normal">
     <div class="max-w-7xl mx-auto flex justify-center items-center gap-1.5 flex-wrap">
-      <span>Independent fan-run reference site — not affiliated with, endorsed by, or sponsored by Dairy Queen®. Prices are estimates; verify at your local DQ.</span>
+      <span>Independent fan-run reference guide — not affiliated with, endorsed by, or sponsored by Dairy Queen®. Prices are estimates; verify at your local DQ.</span>
       <a href="/disclaimer" class="text-[#0E7490] hover:text-[#09566B] font-semibold underline underline-offset-2 transition-colors">Learn more</a>
     </div>
   </div>
@@ -50,12 +99,12 @@ const currentPath = Astro.url.pathname;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <a href="/" class="flex items-center gap-3.5 group flex-shrink-0">
+        <a href="/" class="flex items-center gap-3 group flex-shrink-0" aria-label="The Queen Dairy Menu — Home">
           <div class="w-10 h-10 rounded-full bg-[#0E7490] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
             <div class="w-4 h-4 bg-white rounded-[3px]"></div>
           </div>
-          <span class="text-2xl font-black tracking-tight text-[#0F172A] leading-none" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-            TDQM <span class="text-[#0E7490]">GUIDE</span>
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-[#0F172A] leading-none" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+            QUEEN DAIRY <span class="text-[#0E7490]">MENU</span>
           </span>
         </a>
 
@@ -136,33 +185,32 @@ const currentPath = Astro.url.pathname;
         <!-- Col 1: About -->
         <div class="lg:col-span-2">
           <div class="flex items-center gap-2.5 mb-4">
-            <div class="w-8 h-8 rounded-xl bg-[#E4002B] flex items-center justify-center text-white font-bold text-lg" style="font-family: 'Bebas Neue', sans-serif;">DQ</div>
+            <div class="w-8 h-8 rounded-xl bg-[#0E7490] flex items-center justify-center text-white font-bold text-lg" style="font-family: 'Bebas Neue', sans-serif;">QD</div>
             <span class="text-2xl font-bold tracking-tight text-white" style="font-family: 'Bebas Neue', sans-serif;">
-              TDQM <span class="text-[#E4002B]">GUIDE</span>
+              QUEEN DAIRY <span class="text-[#0E7490]">MENU</span>
             </span>
           </div>
           <p class="text-sm text-slate-400 leading-relaxed pr-6 max-w-md">
-            The most complete, independently verified Dairy Queen menu directory online. Covering Blizzard Treats, Signature Stackburgers, Chicken Strip Baskets, breakfast menus, calories, and national 2026 pricing estimates.
+            The most complete, independently verified Dairy Queen menu directory online at thequeendairymenu.us. Covering Blizzard Treats, Signature Stackburgers, Chicken Strip Baskets, breakfast menus, calories, and national 2026 pricing estimates.
           </p>
           <div class="mt-6 flex gap-3 text-xs font-semibold text-slate-300">
             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Updated for 2026
             </span>
             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
-              🍦 100+ Menu Items
+              Fan Resource
             </span>
           </div>
         </div>
 
-        <!-- Col 2: Categories -->
+        <!-- Col 2: Sweet Treats -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Treats & Dessert</h4>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Sweet Treats</h4>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/categories/blizzard-treats" class="hover:text-amber-400 transition-colors">Blizzard® Treats</a></li>
             <li><a href="/categories/classic-treats" class="hover:text-amber-400 transition-colors">Cones & Sundaes</a></li>
             <li><a href="/categories/dq-cakes" class="hover:text-amber-400 transition-colors">DQ® Cakes</a></li>
             <li><a href="/categories/drinks" class="hover:text-amber-400 transition-colors">Shakes & MooLatté</a></li>
-            <li><a href="/items/peanut-buster-parfait" class="hover:text-amber-400 transition-colors">Peanut Buster Parfait</a></li>
           </ul>
         </div>
 
@@ -193,7 +241,7 @@ const currentPath = Astro.url.pathname;
 
       <!-- Bottom Bar -->
       <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p>&copy; 2026 The Dairy Queen Menu Guide. An independent consumer reference guide. Dairy Queen®, Blizzard®, and other trademarks belong to American Dairy Queen Corporation.</p>
+        <p>&copy; 2026 The Queen Dairy Menu (thequeendairymenu.us). An independent consumer reference guide. Dairy Queen®, Blizzard®, and other trademarks belong to American Dairy Queen Corporation.</p>
         <div class="flex space-x-5 text-slate-400">
           <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
           <a href="/terms" class="hover:text-white transition-colors">Terms of Use</a>

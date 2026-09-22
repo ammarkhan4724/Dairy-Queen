@@ -1,7 +1,31 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a DQ shake and malt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A DQ shake is soft serve blended with milk. A malt adds malted milk powder to the mix, giving it a slightly tangy, nutty flavor depth. Malts have approximately the same price as shakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cheapest DQ drink?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Misty Slush starts at $2.39 for a small. Soft Drinks start at $2.11. Milk is $1.49."
+      }
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Drinks Menu & Prices 2026 — Shakes, MooLatté, Orange Julius & More" description="Complete DQ drinks menu with 2026 prices. Shakes from $3.49, MooLatté $4.29, Orange Julius, Misty Slush $2.39, Soft Drinks from $2.11. All calories included.">
+<Layout title="Dairy Queen Drinks Menu & Prices 2026 — Shakes, MooLatté, Orange Julius & More | The Queen Dairy Menu" description="Complete DQ drinks menu with 2026 prices. Shakes from $3.49, MooLatté $4.29, Orange Julius, Misty Slush $2.39, Soft Drinks from $2.11. All calories included.">
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb">
 <div class="container"><ol>
@@ -22,18 +46,18 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
 <section class="section"><div class="container article-body" style="max-width:920px;"><h2>Dairy Queen Drinks Menu — Complete 2026 Guide</h2>
-    <p>The DQ drinks menu covers everything from thick hand-blended shakes to frozen coffee, the legendary Orange Julius, fruit slushes, and Coca-Cola fountain drinks. For the full DQ food and treats overview, visit <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>The DQ drinks menu covers everything from thick hand-blended shakes to frozen coffee, the legendary Orange Julius, fruit slushes, and Coca-Cola fountain drinks. For the full DQ food and treats overview, visit <a href="/">The Queen Dairy Menu</a>.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -69,10 +93,10 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-item"><button class="faq-q" aria-expanded="false">What is the cheapest DQ drink?<span class="faq-icon">+</span></button>
       <div class="faq-a"><div class="faq-a-inner">The Misty Slush starts at $2.39 for a small. Soft Drinks start at $2.11. Milk is $1.49.</div></div></div>
     </div>
-    <p style="margin-top:32px;">See everything on <a href="/"><strong>The Dairy Queen Menu</strong></a> — Blizzards, burgers, chicken baskets, DQ Cakes, and more.</p></div></section>
+    <p style="margin-top:32px;">See everything on <a href="/"><strong>The Queen Dairy Menu</strong></a> — Blizzards, burgers, chicken baskets, DQ Cakes, and more.</p></div></section>
 <section class="section section-alt"><div class="container article-body" style="max-width:920px;">
 <h2>Complete DQ Drinks Reference</h2>
-<p>The full DQ drinks menu spans frozen coffee, thick shakes, fruit slushes, Orange Julius, smoothies, and standard fountain drinks. For all prices and categories, visit <a href="/">The Dairy Queen Menu</a>.</p>
+<p>The full DQ drinks menu spans frozen coffee, thick shakes, fruit slushes, Orange Julius, smoothies, and standard fountain drinks. For all prices and categories, visit <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Every DQ Drink — Quick Reference</h2>
 <ul><li><a href="/items/chocolate-shake">Chocolate Shake / Malt</a> — from $3.49 / 6 flavors</li>
 <li><a href="/items/moolatte">MooLatté® Frozen Coffee</a> — from $4.29 / Mocha, Caramel, Vanilla</li>
@@ -89,7 +113,7 @@ import Layout from '../../layouts/Layout.astro';
 </div></section>
 <section class="section"><div class="container article-body" style="max-width:920px;">
 <h2>DQ Drinks — Ordering Strategy</h2>
-<p>Choose your DQ drink based on what you want the drink to do alongside your meal. A <a href="/items/misty-slush">Misty Slush</a> is purely refreshing and the cheapest option. A <a href="/items/chocolate-shake">shake</a> is a thick, substantial drink that functions almost as a dessert alongside your food. A <a href="/items/moolatte">MooLatté</a> is for coffee lovers who want their caffeine in frozen dessert form. A <a href="/items/fruit-smoothies">smoothie</a> or <a href="/items/orange-julius">Orange Julius</a> is the freshest, most wholesome drink option. Browse the complete DQ menu on <a href="/">The Dairy Queen Menu</a>.</p>
+<p>Choose your DQ drink based on what you want the drink to do alongside your meal. A <a href="/items/misty-slush">Misty Slush</a> is purely refreshing and the cheapest option. A <a href="/items/chocolate-shake">shake</a> is a thick, substantial drink that functions almost as a dessert alongside your food. A <a href="/items/moolatte">MooLatté</a> is for coffee lovers who want their caffeine in frozen dessert form. A <a href="/items/fruit-smoothies">smoothie</a> or <a href="/items/orange-julius">Orange Julius</a> is the freshest, most wholesome drink option. Browse the complete DQ menu on <a href="/">The Queen Dairy Menu</a>.</p>
 <h2>Drinks That Pair Best With DQ Food</h2>
 <ul><li>With a <a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a> — <a href="/items/chocolate-shake">Chocolate Shake</a> or Misty Slush cools the spice</li>
 <li>With a <a href="/items/chicken-strip-basket-4pc">Chicken Strip Basket</a> — classic fountain soft drink pairs cleanly</li>

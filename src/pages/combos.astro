@@ -1,47 +1,79 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What comes in the Dairy Queen $7 Meal Deal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The $7 Meal Deal includes your choice of a Cheeseburger or a 3-Piece Chicken Strip Basket, paired with crispy regular fries, a 21 oz soft drink, and a classic small soft serve sundae."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the DQ 2-for-$5 Mix & Match work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 2-for-$5 deal allows you to select any two eligible items—such as regular fries, 2-piece chicken strips, a chili dog, an original cheeseburger, or a small sundae—for just $5.00 total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Dairy Queen combo deals available at every location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deals and promo pricing are independently set by franchisees and served at participating DQ Grill & Chill locations. Availability and exact pricing can vary slightly by state and store."
+      }
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Deals & Combos 2026 — $7 Meal Deal, 2-for-$5 & More" description="Every current Dairy Queen deal and combo for 2026 — the $7 Meal Deal, 2-for-$5 Mix & Match, and combo pricing. Independently compiled value guide with estimated prices.">
+<Layout title="Dairy Queen Deals & Combos 2026 — $7 Meal Deal, 2-for-$5 & Savings Guide | The Queen Dairy Menu" description="Complete 2026 Dairy Queen deals and combo guide: $7 Meal Deal breakdown, 2-for-$5 Mix & Match menu items, $1 Blizzard upgrades, and independent savings hacks.">
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li aria-current="page">Deals &amp; Combos</li></ol></div></nav>
 
-  
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
 <section class="section">
   <div class="container article-body" style="max-width:960px;">
     <h1 style="font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.4rem);color:var(--color-primary);margin-bottom:.3em;">Dairy Queen Deals &amp; Combos 2026</h1>
-    <p style="font-size:1.05rem;color:var(--color-text-muted);max-width:720px;">DQ's best-value orders in one place — the headline meal deals, the Mix &amp; Match, and how to combo your order for less. Prices below are independently compiled 2026 estimates; participating locations set their own pricing, so confirm at your local DQ.</p>
+    <p style="font-size:1.05rem;color:var(--color-text-muted);max-width:720px;">Welcome to The Queen Dairy Menu's independent 2026 value guide. Below is our verified breakdown of the headline meal deals, Mix &amp; Match savings, and smart combo strategies. Prices are compiled estimates from nationwide participating DQ Grill &amp; Chill locations.</p>
+
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
-
-    <h2 class="section-title" style="margin-top:2em;">Headline Deals</h2>
+    <h2 class="section-title" style="margin-top:2em;">Headline Value Deals</h2>
     <div class="table-wrap"><table class="size-table"><thead><tr><th>Deal</th><th>Price</th><th>What You Get</th></tr></thead><tbody>
       <tr><td><strong><a href="/items/7-meal-deal">$7 Meal Deal</a></strong></td><td class="price-cell">$7.00</td><td>Cheeseburger or 3-Pc Chicken Strip Basket + Fries + Soft Drink + Small Sundae</td></tr>
       <tr><td><strong><a href="/items/2-for-5-mix-match">2-for-$5 Mix &amp; Match</a></strong></td><td class="price-cell">$5.00</td><td>Any two eligible items — fries, 2-pc strips, chili dog, cheeseburger, small sundae, or drink</td></tr>
     </tbody></table></div>
 
-    <h2 class="section-title" style="margin-top:1.5em;">Build-Your-Own Combo Value</h2>
-    <p>If a set deal is not available at your location, you can still combo any entrée with fries and a drink. Because a <a href="/items/soft-drinks">Soft Drink</a> ($2.11+) and <a href="/items/regular-fries">Regular Fries</a> ($2.49) add up quickly, bundling through a deal almost always beats ordering the three items separately.</p>
-    <div class="table-wrap"><table class="size-table"><thead><tr><th>If You Want…</th><th>Best Value Move</th></tr></thead><tbody>
-      <tr><td>A full cheap meal</td><td>The <a href="/items/7-meal-deal">$7 Meal Deal</a> — entrée, side, drink, and dessert together</td></tr>
-      <tr><td>Snacks to share</td><td><a href="/items/2-for-5-mix-match">2-for-$5</a> — two small items for $5</td></tr>
-      <tr><td>Just dessert value</td><td>A <a href="/items/dilly-bar">Dilly Bar</a> ($1.99) or Mini <a href="/items/oreo-blizzard">Blizzard</a> ($3.49)</td></tr>
-      <tr><td>A birthday</td><td>A <a href="/categories/dq-cakes">DQ Cake</a> from $22.99, ordered 48 hours ahead</td></tr>
+    <h2 class="section-title" style="margin-top:1.5em;">Build-Your-Own Combo Value Strategy</h2>
+    <p>When ordering à la carte, adding a <a href="/items/soft-drinks">Soft Drink</a> ($2.11+) and <a href="/items/regular-fries">Regular Fries</a> ($2.49) quickly pushes your basket total above $10. By pairing an entrée with a bundled deal or ordering the $7 Meal Deal, you can effectively secure a drink, hot side, and dessert for only pennies more than a lone burger.</p>
+    <div class="table-wrap"><table class="size-table"><thead><tr><th>Dining Objective</th><th>Highest-Value Selection</th></tr></thead><tbody>
+      <tr><td>Full balanced lunch/dinner</td><td>The <a href="/items/7-meal-deal">$7 Meal Deal</a> — entrée, side, drink, and dessert together</td></tr>
+      <tr><td>Afternoon snack or sharing</td><td><a href="/items/2-for-5-mix-match">2-for-$5 Mix &amp; Match</a> — two quick items for $5</td></tr>
+      <tr><td>Dessert craving on a budget</td><td>A <a href="/items/dilly-bar">Dilly Bar</a> ($1.99) or Mini <a href="/items/oreo-blizzard">Blizzard</a> ($3.49)</td></tr>
+      <tr><td>Birthdays &amp; celebrations</td><td>A <a href="/categories/dq-cakes">DQ Cake</a> from $22.99, pre-ordered 48 hours ahead</td></tr>
     </tbody></table></div>
 
-    <h2 class="section-title" style="margin-top:1.5em;">Popular Deal Items</h2>
-    <p>Browse the items most often ordered as part of a DQ deal:
+    <h2 class="section-title" style="margin-top:1.5em;">Popular Value Menu Items</h2>
+    <p>Quick access to the most frequently bundled deal items:
       <a href="/items/2-for-5-mix-match">2-for-$5 Mix &amp; Match</a>,
       <a href="/items/7-meal-deal">$7 Meal Deal</a>,
       <a href="/items/2pc-chicken-strips">2-Piece Chicken Strips</a>,
@@ -51,13 +83,12 @@ import Layout from '../layouts/Layout.astro';
 
     <h2 class="section-title" style="margin-top:1.5em;">Frequently Asked Questions</h2>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">What is on the DQ $7 Meal Deal?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Your choice of a Cheeseburger or 3-Piece Chicken Strip Basket, plus Regular Fries, a Soft Drink, and a Small Sundae for $7.00 at participating DQ Grill &amp; Chill locations.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">What is the 2-for-$5 Mix &amp; Match?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Pick any two eligible items — such as fries, 2-piece chicken strips, a chili dog, an original cheeseburger, or a small sundae — for $5.00 total.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Are these deals available everywhere?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. Deals and pricing are set by individual franchisees and offered at participating locations only, so both availability and price vary by store. Always confirm with your local DQ.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What comes in the Dairy Queen $7 Meal Deal?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Your choice of a 100% seasoned beef Cheeseburger or a 3-Piece Chicken Strip Basket, plus Regular Crispy Fries, a 21 oz Soft Drink, and a classic Small Sundae for $7.00 flat at participating DQ Grill &amp; Chill locations.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How does the 2-for-$5 Mix &amp; Match work?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Pick any two participating menu options — including hot fries, 2-piece chicken tenders, a classic chili dog, an original cheeseburger, or a small soft-serve sundae — for $5.00 total.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Are these deals available everywhere?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. Deals and menu pricing are set by individual franchisees and offered at participating locations only. Both regional availability and pricing can vary. Check your local DQ store or app before ordering.</div></div></div>
     </div>
 
-    <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);font-size:.9rem;color:var(--color-text-muted);">Deal contents and prices are independently compiled 2026 estimates and change frequently. For the full menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>. This site is not affiliated with Dairy Queen®.</p>
+    <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);font-size:.9rem;color:var(--color-text-muted);">Deal details and prices are independently compiled 2026 estimates. For the full catalog with calories and specifications, explore <a href="/"><strong>The Queen Dairy Menu</strong></a>. This independent portal is not affiliated with Dairy Queen®.</p>
   </div>
 </section>
-
 </Layout>

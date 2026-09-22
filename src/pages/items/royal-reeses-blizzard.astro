@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Royal Reese's Peanut Butter Cup Blizzard Treat",
+      "image": "https://www.thequeendairymenu.us/Images/reeses-blizzard.webp",
+      "description": "All the rich peanut butter-and-chocolate of the standard Reese's Blizzard, upgraded with a warm peanut butter-filled center. The Royal Reese's is the boldest peanut butter experience on the DQ menu. From $3.99.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/royal-reeses-blizzard"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "620 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Royal Reese's Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mini $3.99, Small $4.99, Medium $5.99, Large $6.49."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories in the Royal Reese's Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small 620 cal, Medium approximately 860 cal, Large approximately 1,280 cal — the highest-calorie Blizzard on the menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Royal Reese's and standard Reese's Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Royal version adds a warm peanut butter-filled center for approximately $0.50 more per size. The standard has only Reese's PB cup pieces blended throughout."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Royal Reese's® Peanut Butter Cup Blizzard® Treat — Price, Calories & Review 2026" description="DQ Royal Reese's® Peanut Butter Cup Blizzard® Treat price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 620 cal (Small). Full nutrition guide and ordering tips.">
+<Layout title="Dairy Queen Royal Reese's® Peanut Butter Cup Blizzard® Treat — Price, Calories & Review 2026 | The Queen Dairy Menu" description="DQ Royal Reese's® Peanut Butter Cup Blizzard® Treat price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 620 cal (Small). Full nutrition guide and ordering tips.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Royal Reese's® Peanut Butter Cup Blizzard® Treat</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.99</div>
       <p>All the rich peanut butter-and-chocolate of the standard Reese's Blizzard, upgraded with a warm peanut butter-filled center. The Royal Reese's is the boldest peanut butter experience on the DQ menu. From $3.99.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -50,7 +103,7 @@ import Layout from '../../layouts/Layout.astro';
     
     <h2>What Is the Royal Reese's® Peanut Butter Cup Blizzard® Treat?</h2>
     <p>The Royal Reese's® Blizzard takes the standard <a href="/items/reeses-blizzard">Reese's PB Cup Blizzard</a> — already one of the highest-calorie Blizzards — and injects a warm peanut butter-filled center into the cup. When you reach the middle, you hit a pocket of warm, rich peanut butter that amplifies the flavor intensity significantly. This is the richest Blizzard on the entire year-round menu.</p>
-  <p>Browse all Blizzards and 2026 prices on <a href="/">The Dairy Queen Menu</a>.</p>
+  <p>Browse all Blizzards and 2026 prices on <a href="/">The Queen Dairy Menu</a>.</p>
 
     <h2>Standard Reese's vs. Royal Reese's</h2>
   <p>The standard <a href="/items/reeses-blizzard">Reese's® Blizzard</a> costs $3.49 Mini (Mini). The Royal Reese's is $3.99 Mini — a $0.50 upgrade. The Royal version adds a warm peanut butter-filled center that creates a temperature and flavor burst at the core of the cup. For peanut butter fans, this upgrade is well worth it. For first-timers to the Reese's Blizzard, start with the standard version to establish the baseline before deciding on the Royal upgrade.</p>
@@ -82,7 +135,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">The Royal version adds a warm peanut butter-filled center for approximately $0.50 more per size. The standard has only Reese's PB cup pieces blended throughout.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

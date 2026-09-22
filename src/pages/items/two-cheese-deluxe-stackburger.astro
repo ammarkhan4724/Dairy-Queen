@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Two Cheese Deluxe Stackburger",
+      "image": "https://www.thequeendairymenu.us/Images/two-cheese-deluxe-stackburger.webp",
+      "description": "Two 100% seasoned beef Stackburger patties with two slices of melted American cheese, ketchup, onion, pickles, and mustard. The Two Cheese Deluxe is DQ's classic no-frills double cheeseburger in the Signature Stackburger lineup, priced at $8.29.",
+      "offers": {
+        "@type": "Offer",
+        "price": "8.29",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/two-cheese-deluxe-stackburger"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "630 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Two Cheese Deluxe Stackburger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$8.29 at most locations, though franchise pricing varies by region."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories are in it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 630 calories for the burger — two seasoned patties with two slices of American cheese and classic toppings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is it different from the Double Cheeseburger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Two Cheese Deluxe is part of the Signature Stackburger line with two cheese slices and a fuller topping build; the standard Double Cheeseburger is a simpler, slightly cheaper build."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="DQ Two Cheese Deluxe Stackburger — Price, Calories & Details (2026)" description="DQ Two Cheese Deluxe Stackburger price: $8.29, 630 calories. Two seasoned beef patties, two slices of American cheese, ketchup, onion, pickle, and mustard on a bun.">
+<Layout title="DQ Two Cheese Deluxe Stackburger — Price, Calories & Details (2026) | The Queen Dairy Menu" description="DQ Two Cheese Deluxe Stackburger price: $8.29, 630 calories. Two seasoned beef patties, two slices of American cheese, ketchup, onion, pickle, and mustard on a bun.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li aria-current="page">Two Cheese Deluxe Stackburger</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$8.29</div>
       <p>Two 100% seasoned beef Stackburger patties with two slices of melted American cheese, ketchup, onion, pickles, and mustard. The Two Cheese Deluxe is DQ's classic no-frills double cheeseburger in the Signature Stackburger lineup, priced at $8.29.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -53,7 +106,7 @@ import Layout from '../../layouts/Layout.astro';
     <h2>Frequently Asked Questions</h2>
     <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is the Two Cheese Deluxe Stackburger?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">$8.29 at most locations, though franchise pricing varies by region.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">How many calories are in it?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">About 630 calories for the burger — two seasoned patties with two slices of American cheese and classic toppings.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">How is it different from the Double Cheeseburger?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">The Two Cheese Deluxe is part of the Signature Stackburger line with two cheese slices and a fuller topping build; the standard Double Cheeseburger is a simpler, slightly cheaper build.</div></div></div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);font-size:.9rem;color:var(--color-text-muted);">
-      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>. This site is not affiliated with Dairy Queen®.
+      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>. This site is not affiliated with Dairy Queen®.
     </p>
   </div>
 </section>

@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "DQ Chocolate Shake",
+      "image": "https://www.thequeendairymenu.us/Images/chocolate-shake.webp",
+      "description": "Thick DQ soft serve hand-blended with chocolate syrup into a rich, creamy shake. Available in small, medium, and large. All DQ shakes also available as malts.",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/chocolate-shake"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "~710 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is a DQ chocolate shake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small $3.49, Medium $4.29, Large $4.99. 2026 national averages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories are in a DQ chocolate shake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small approximately 710 cal, Medium approximately 950 cal, Large approximately 1,270 cal. Peanut Butter is the highest-calorie flavor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a DQ shake and malt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A malt adds malted milk powder, creating a slightly tangy, nutty flavor depth. Price is typically the same as the shake."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Chocolate Shake — Price, Calories & Flavors 2026" description="DQ Chocolate Shake price: from $3.49. Thick hand-blended chocolate shake in small, medium, and large. All 6 shake flavors, malt option, and full calorie guide.">
+<Layout title="Dairy Queen Chocolate Shake — Price, Calories & Flavors 2026 | The Queen Dairy Menu" description="DQ Chocolate Shake price: from $3.49. Thick hand-blended chocolate shake in small, medium, and large. All 6 shake flavors, malt option, and full calorie guide.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/drinks">Drinks</a></li><li><span aria-current="page">Chocolate Shake</span></li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">From $3.49</div>
       <p>Thick DQ soft serve hand-blended with chocolate syrup into a rich, creamy shake. Available in small, medium, and large. All DQ shakes also available as malts.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -48,7 +101,7 @@ import Layout from '../../layouts/Layout.astro';
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <h2>DQ Shake vs. Fast Food Shake — What Makes DQ Different</h2>
-  <p>DQ shakes use the same soft serve that goes into Blizzards and cones — a higher-quality base than most fast food chains use for shakes. The result is a notably thicker, richer shake that requires a straw with a wider diameter to drink. DQ shakes are genuinely thick by design. You can explore all DQ drinks on <a href="/">The Dairy Queen Menu</a> or the <a href="/categories/drinks">Drinks category page</a>.</p>
+  <p>DQ shakes use the same soft serve that goes into Blizzards and cones — a higher-quality base than most fast food chains use for shakes. The result is a notably thicker, richer shake that requires a straw with a wider diameter to drink. DQ shakes are genuinely thick by design. You can explore all DQ drinks on <a href="/">The Queen Dairy Menu</a> or the <a href="/categories/drinks">Drinks category page</a>.</p>
   <h2>All DQ Shake Flavors</h2>
   <div class="table-wrap"><table class="size-table">
     <thead><tr><th>Flavor</th><th>Small Price</th><th>Small Cal</th><th>Profile</th></tr></thead>
@@ -81,7 +134,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="faq-a"><div class="faq-a-inner">A malt adds malted milk powder, creating a slightly tangy, nutty flavor depth. Price is typically the same as the shake.</div></div>
       </div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.
+      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
       See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
     </p>
   </div>

@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Brownie &amp; Oreo Cupfection",
+      "image": "https://www.thequeendairymenu.us/Images/brownie-oreo-cupfection.webp",
+      "description": "DQ soft serve layered in a cup with brownie pieces, Oreo cookie crumble, and fudge. The Cupfection is DQ's take on a build-your-own sundae in cup form — richer and more filling than a standard sundae, and one of the most indulgent single-serve treats on the menu at 820 calories.",
+      "offers": {
+        "@type": "Offer",
+        "price": "6.29",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/brownie-oreo-cupfection"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "820 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the Brownie &amp;amp; Oreo Cupfection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$6.29 at most locations, though franchise pricing varies. It is one of the higher-priced single treats on the DQ menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories are in the Cupfection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 820 calories, making it richer than a Peanut Buster Parfait (710) or a medium Oreo Blizzard (590)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Cupfection blended like a Blizzard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is layered in a cup rather than blended, so you eat through separate layers of soft serve, brownie, Oreo, and fudge."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="DQ Brownie & Oreo Cupfection — Price, Calories & Review (2026)" description="DQ Brownie & Oreo Cupfection price: $6.29, 820 calories. Warm brownie pieces and Oreo layered with DQ soft serve and fudge in a cup — the most indulgent cup dessert on the menu.">
+<Layout title="DQ Brownie & Oreo Cupfection — Price, Calories & Review (2026) | The Queen Dairy Menu" description="DQ Brownie & Oreo Cupfection price: $6.29, 820 calories. Warm brownie pieces and Oreo layered with DQ soft serve and fudge in a cup — the most indulgent cup dessert on the menu.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li aria-current="page">Brownie &amp; Oreo Cupfection</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$6.29</div>
       <p>DQ soft serve layered in a cup with brownie pieces, Oreo cookie crumble, and fudge. The Cupfection is DQ's take on a build-your-own sundae in cup form — richer and more filling than a standard sundae, and one of the most indulgent single-serve treats on the menu at 820 calories.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -53,7 +106,7 @@ import Layout from '../../layouts/Layout.astro';
     <h2>Frequently Asked Questions</h2>
     <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is the Brownie &amp;amp; Oreo Cupfection?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">$6.29 at most locations, though franchise pricing varies. It is one of the higher-priced single treats on the DQ menu.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">How many calories are in the Cupfection?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">About 820 calories, making it richer than a Peanut Buster Parfait (710) or a medium Oreo Blizzard (590).</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Is the Cupfection blended like a Blizzard?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. It is layered in a cup rather than blended, so you eat through separate layers of soft serve, brownie, Oreo, and fudge.</div></div></div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);font-size:.9rem;color:var(--color-text-muted);">
-      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>. This site is not affiliated with Dairy Queen®.
+      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>. This site is not affiliated with Dairy Queen®.
     </p>
   </div>
 </section>

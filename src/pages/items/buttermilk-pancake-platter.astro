@@ -1,15 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Buttermilk Pancake Platter",
+      "image": "https://www.thequeendairymenu.us/Images/buttermilk-pancake-platter.webp",
+      "description": "A stack of fluffy buttermilk pancakes served with butter, syrup, and sausage. Part of the DQ breakfast menu offered at select locations — a straightforward, sweet-leaning breakfast platter at $5.49.",
+      "offers": {
+        "@type": "Offer",
+        "price": "5.49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/buttermilk-pancake-platter"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "680 cal"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Buttermilk Pancake Platter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$5.49 at participating breakfast locations. Prices vary by franchise and region."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories are in the Pancake Platter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 680 calories including butter, syrup, and the sausage side."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does every Dairy Queen serve the Pancake Platter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. DQ breakfast is available only at select locations, mainly in the South and Midwest, and usually only in the morning."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="DQ Buttermilk Pancake Platter — Price, Calories & Details (2026)" description="DQ Buttermilk Pancake Platter price: $5.49, 680 calories. Fluffy buttermilk pancakes with butter, syrup, and sausage. Available at select DQ breakfast locations.">
+<Layout title="DQ Buttermilk Pancake Platter — Price, Calories & Details (2026) | The Queen Dairy Menu" description="DQ Buttermilk Pancake Platter price: $5.49, 680 calories. Fluffy buttermilk pancakes with butter, syrup, and sausage. Available at select DQ breakfast locations.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/breakfast">Breakfast</a></li><li aria-current="page">Buttermilk Pancake Platter</li></ol></div></nav>
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="item-price-lg">$5.49</div>
       <p>A stack of fluffy buttermilk pancakes served with butter, syrup, and sausage. Part of the DQ breakfast menu offered at select locations — a straightforward, sweet-leaning breakfast platter at $5.49.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -53,7 +106,7 @@ import Layout from '../../layouts/Layout.astro';
     <h2>Frequently Asked Questions</h2>
     <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is the DQ Buttermilk Pancake Platter?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">$5.49 at participating breakfast locations. Prices vary by franchise and region.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">How many calories are in the Pancake Platter?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">About 680 calories including butter, syrup, and the sausage side.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Does every Dairy Queen serve the Pancake Platter?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. DQ breakfast is available only at select locations, mainly in the South and Midwest, and usually only in the morning.</div></div></div></div>
     <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);font-size:.9rem;color:var(--color-text-muted);">
-      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>. This site is not affiliated with Dairy Queen®.
+      Prices and calories are independently compiled 2026 estimates and may vary by location. For every DQ price and item, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>. This site is not affiliated with Dairy Queen®.
     </p>
   </div>
 </section>

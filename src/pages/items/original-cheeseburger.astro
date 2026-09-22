@@ -1,7 +1,60 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const itemSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Original Cheeseburger",
+      "image": "https://www.thequeendairymenu.us/Images/original-cheeseburger.webp",
+      "description": "100% real seasoned beef with American cheese, ketchup, mustard, dill pickles, and onion on a toasted bun. Simple, classic, reliable. $6.39.",
+      "offers": {
+        "@type": "Offer",
+        "price": "6.39",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.thequeendairymenu.us/items/original-cheeseburger"
+      },
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "400 cal (single)"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the DQ Original Cheeseburger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$6.39 (single, 400 cal). The Double is $7.99 (560 cal)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is on the DQ Original Cheeseburger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beef patty, American cheese, ketchup, mustard, dill pickles, and chopped onion on a toasted bun."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Original Cheeseburger in the $7 Meal Deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Original Cheeseburger is one of two entree options in the $7 Meal Deal, which adds Regular Fries, a Soft Drink, and a Small Sundae for $7.00 total."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
-<Layout title="Dairy Queen Original Cheeseburger — Price, Calories & Details 2026" description="DQ Original Cheeseburger price: $6.39, 400 calories. 100% beef, American cheese, ketchup, mustard, pickles, onion. Best value DQ burger and $7 Meal Deal entree.">
+<Layout title="Dairy Queen Original Cheeseburger — Price, Calories & Details 2026 | The Queen Dairy Menu" description="DQ Original Cheeseburger price: $6.39, 400 calories. 100% beef, American cheese, ketchup, mustard, pickles, onion. Best value DQ burger and $7 Meal Deal entree.">
+<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+
 
 <nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
 <li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
@@ -10,9 +63,9 @@ import Layout from '../../layouts/Layout.astro';
 
   
 <!-- AdX: before content -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-before_content">
+<div id="div-gpt-ad-thequeendairymenu_us-before_content">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-before_content'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-before_content'); });
   </script>
 </div>
 
@@ -24,9 +77,9 @@ import Layout from '../../layouts/Layout.astro';
     <div class="item-price-lg">$6.39</div>
     <p>100% real seasoned beef with American cheese, ketchup, mustard, dill pickles, and onion on a toasted bun. Simple, classic, reliable. $6.39.</p>
 <!-- AdX: after paragraph 1 -->
-<div id="div-gpt-ad-thedairyqueenmenu_us-paragraph">
+<div id="div-gpt-ad-thequeendairymenu_us-paragraph">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thedairyqueenmenu_us-paragraph'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-thequeendairymenu_us-paragraph'); });
   </script>
 </div>
 
@@ -45,7 +98,7 @@ import Layout from '../../layouts/Layout.astro';
 </div></section>
 <section class="section"><div class="container article-body">
 <h2>The DQ Original Cheeseburger — Reliable Simplicity</h2>
-  <p>The Original Cheeseburger proves a straightforward truth: a well-made burger does not need complexity. A quality beef patty, American cheese, the right ratio of ketchup to mustard, crisp pickles, and sharp onion on a toasted bun — nothing missing, nothing extraneous. It is the most affordable burger on <a href="/">The Dairy Queen Menu</a> and also the most versatile.</p>
+  <p>The Original Cheeseburger proves a straightforward truth: a well-made burger does not need complexity. A quality beef patty, American cheese, the right ratio of ketchup to mustard, crisp pickles, and sharp onion on a toasted bun — nothing missing, nothing extraneous. It is the most affordable burger on <a href="/">The Queen Dairy Menu</a> and also the most versatile.</p>
   <h2>Why the Original Cheeseburger Is the Best Value</h2>
   <p>At $6.39 (400 cal), the Original Cheeseburger is the cheapest entry point into DQ's burger lineup. But the real value unlocks when you combine it with the <strong>$7 Meal Deal</strong>:</p>
   <ul>
@@ -79,13 +132,13 @@ import Layout from '../../layouts/Layout.astro';
       <div class="faq-a"><div class="faq-a-inner">$6.39 (single, 400 cal). The Double is $7.99 (560 cal).</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">What is on the DQ Original Cheeseburger?<span class="faq-icon">+</span></button>
       <div class="faq-a"><div class="faq-a-inner">Beef patty, American cheese, ketchup, mustard, dill pickles, and chopped onion on a toasted bun.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Is the Original Cheeseburger in the $7 Meal Deal?<span class="faq-icon">+</span></button>
       <div class="faq-a"><div class="faq-a-inner">Yes. The Original Cheeseburger is one of two entree options in the $7 Meal Deal, which adds Regular Fries, a Soft Drink, and a Small Sundae for $7.00 total.</div></div></div></div>
-  <p style="margin-top:32px;">For the complete DQ menu including all categories and deals, visit <a href="/"><strong>The Dairy Queen Menu</strong></a>.</p>
+  <p style="margin-top:32px;">For the complete DQ menu including all categories and deals, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
 </div></section>
 
 <section class="section section-alt">
   <div class="container article-body" style="max-width:920px;">
     <h2>Original Cheeseburger — The Best Value on the DQ Burger Menu</h2>
-    <p>The Original Cheeseburger at $6.39 is the entry point to the DQ burger lineup. It is also the key to the <a href="/items/7-meal-deal">$7 Meal Deal</a> — where the same cheeseburger becomes one of four meal components for just $0.61 more than the burger alone. For everyone else at the table, see the complete lineup on <a href="/">The Dairy Queen Menu</a>.</p>
+    <p>The Original Cheeseburger at $6.39 is the entry point to the DQ burger lineup. It is also the key to the <a href="/items/7-meal-deal">$7 Meal Deal</a> — where the same cheeseburger becomes one of four meal components for just $0.61 more than the burger alone. For everyone else at the table, see the complete lineup on <a href="/">The Queen Dairy Menu</a>.</p>
     <h2>Original Cheeseburger vs. Full Stackburger Lineup</h2>
     <div class="table-wrap"><table class="size-table">
       <thead><tr><th>Burger</th><th>Price</th><th>Cal</th><th>Key Difference</th></tr></thead>
