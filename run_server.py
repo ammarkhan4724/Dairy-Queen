@@ -4,7 +4,7 @@ import os
 from urllib.parse import urlparse, unquote
 
 PORT = 4325
-DIST_DIR = os.path.abspath(r'C:\Users\AMMAR\.gemini\antigravity-ide\scratch\dairy-queen-astro\dist')
+DIST_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'dist'))
 
 class CleanUrlHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
