@@ -1,7 +1,7 @@
 import os, glob, re
 from urllib.parse import urlparse
 
-SRC_DIR = r'C:\Users\AMMAR\.gemini\antigravity-ide\scratch\dairy-queen-astro\src\pages'
+SRC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'src', 'pages'))
 
 # Discover all valid page paths in src/pages
 valid_pages = set()
