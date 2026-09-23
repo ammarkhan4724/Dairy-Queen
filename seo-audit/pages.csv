@@ -1,0 +1,2 @@
+﻿url,final_url,status,error,title,representation,initial_title,initial_word_count,missing_content_candidate,meta_description,h1,canonical,word_count,schema_types,indexability_candidate,in_sitemap,inlinks_observed,outlinks,click_depth_observed,elapsed_ms,body_bytes,fetched_at,html_path
+http://localhost:4321/,http://localhost:4321/,0,robots_unavailable,,http,,,False,,[],[],,[],False,False,0,0,0,0.0,0,2026-09-22T16:39:59.604857+00:00,

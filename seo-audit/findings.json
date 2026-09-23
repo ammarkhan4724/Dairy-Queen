@@ -1,0 +1,39 @@
+[
+  {
+    "url": "http://localhost:4321/",
+    "code": "fetch_failed",
+    "severity": "high",
+    "evidence": "robots_unavailable",
+    "action": "Inspect the recorded failure and retry after resolving the cause.",
+    "confidence": "observed",
+    "representation": "http",
+    "affected_urls": [
+      "http://localhost:4321/"
+    ],
+    "observation": "robots_unavailable",
+    "captured_at": "2026-09-22T16:39:59.604857+00:00",
+    "claim_type": "verified_fact",
+    "why_it_matters": "This run could not inspect the page; its content and visibility remain unknown.",
+    "business_relevance": null,
+    "recommended_action": "Inspect the recorded failure and retry after resolving the cause.",
+    "priority": "P1",
+    "priority_rationale": "Based on observed access/content impact; review business importance before scheduling. Informational signals are not automatically defects.",
+    "acceptance_check": "Repeat this exact URL after addressing the recorded failure and confirm a usable response in access.json.",
+    "uncertainty": [
+      "No successful usable page capture.",
+      "Observation applies to captured representations; rankings, indexing and AI citations were not measured.",
+      "The crawl did not establish complete website coverage.",
+      "Business profile not yet reviewed; business-specific impact needs interpretation."
+    ],
+    "evidence_refs": [
+      {
+        "url": "http://localhost:4321/",
+        "captured_at": "2026-09-22T16:39:59.604857+00:00",
+        "representation": "http",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "html_path": null,
+        "rendered_html_path": null
+      }
+    ]
+  }
+]

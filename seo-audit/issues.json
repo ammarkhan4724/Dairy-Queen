@@ -1,0 +1,11 @@
+[
+  {
+    "url": "http://localhost:4321/",
+    "code": "fetch_failed",
+    "severity": "high",
+    "evidence": "robots_unavailable",
+    "action": "Inspect the recorded failure and retry after resolving the cause.",
+    "confidence": "observed",
+    "representation": "http"
+  }
+]

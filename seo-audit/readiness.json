@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-22T16:39:59.624880+00:00",
+  "seed": "http://localhost:4321/",
+  "coverage_limited": true,
+  "sitemap_urls_observed": 0,
+  "sitemap_fetch_failures": 3,
+  "pages": [
+    {
+      "url": "http://localhost:4321/",
+      "final_url": "http://localhost:4321/",
+      "representation": "http",
+      "status": 0,
+      "main_words": 0,
+      "body_words": 0,
+      "in_observed_sitemap": false,
+      "schema_types": [],
+      "microdata_types": [],
+      "schema_errors": [],
+      "robots_path_permissions": {
+        "Googlebot": null,
+        "Bingbot": null
+      },
+      "snippet_controls_to_review": [],
+      "index_signals_http": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": false,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "index_signals_selected": {
+        "googlebot_noindex_observed": false,
+        "generic_meta": [],
+        "googlebot_meta": [],
+        "x_robots_tag": "",
+        "canonical_elsewhere": false,
+        "indexability_candidate": false,
+        "indexing_status": "not_verified",
+        "note": "Candidate only: search-engine robots policy, rendering and actual indexing require separate evidence."
+      },
+      "observations": [
+        {
+          "code": "access_incomplete",
+          "observation": "We did not capture usable page content.",
+          "why_it_matters": "We cannot assess an unread page's answers or trust signals.",
+          "next_step": "Check access.json and the response, then repeat this page when access is available."
+        }
+      ]
+    }
+  ],
+  "not_measured": [
+    "actual indexing",
+    "AI answer inclusion",
+    "competitor rankings",
+    "independent reputation",
+    "schema semantic validity"
+  ],
+  "interpretation": "These are access, text and markup observations. They do not measure an engine's trust, indexing or citations."
+}

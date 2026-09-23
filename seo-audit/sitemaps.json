@@ -1,0 +1,50 @@
+{
+  "fetches": [
+    {
+      "url": "http://localhost:4321/sitemap.xml",
+      "status": 0,
+      "error": "robots_unavailable",
+      "fetched_at": "2026-09-22T16:39:59.604857+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redirects": [],
+      "entries": 0,
+      "http_events": [],
+      "access": {
+        "code": "robots_unavailable",
+        "confidence": "observed",
+        "evidence": "The request was withheld because robots policy could not be retrieved. Inspect its status/error; no disallow rule is established."
+      }
+    },
+    {
+      "url": "http://localhost:4321/sitemap_index.xml",
+      "status": 0,
+      "error": "robots_unavailable",
+      "fetched_at": "2026-09-22T16:39:59.604857+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redirects": [],
+      "entries": 0,
+      "http_events": [],
+      "access": {
+        "code": "robots_unavailable",
+        "confidence": "observed",
+        "evidence": "The request was withheld because robots policy could not be retrieved. Inspect its status/error; no disallow rule is established."
+      }
+    },
+    {
+      "url": "http://localhost:4321/wp-sitemap.xml",
+      "status": 0,
+      "error": "robots_unavailable",
+      "fetched_at": "2026-09-22T16:39:59.604857+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redirects": [],
+      "entries": 0,
+      "http_events": [],
+      "access": {
+        "code": "robots_unavailable",
+        "confidence": "observed",
+        "evidence": "The request was withheld because robots policy could not be retrieved. Inspect its status/error; no disallow rule is established."
+      }
+    }
+  ],
+  "urls": []
+}

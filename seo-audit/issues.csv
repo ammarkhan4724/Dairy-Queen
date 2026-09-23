@@ -1,0 +1,2 @@
+﻿url,code,severity,confidence,evidence,action
+http://localhost:4321/,fetch_failed,high,observed,robots_unavailable,Inspect the recorded failure and retry after resolving the cause.

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "assessment": "Some requests were withheld by robots policy. Inspect policy evidence before calling this a server block.",
+    "page_access_counts": {
+      "robots_unavailable": 1
+    },
+    "remote_denial_or_challenge_pages": 0,
+    "remote_denial_or_challenge_discovery_responses": 0,
+    "http_access_denied_attempts_recorded": 0,
+    "challenge_attempts_recorded": 0,
+    "http_429_attempts_recorded": 0,
+    "http_attempts_recorded": 1,
+    "stop_reasons": [
+      "discovered_frontier_exhausted"
+    ],
+    "browser_restriction_counts": {},
+    "history_note": "Only instrumented HTTP attempts are counted, including recorded browser requests; legacy runs may lack attempt history."
+  },
+  "pages": [
+    {
+      "url": "http://localhost:4321/",
+      "status": 0,
+      "access": {
+        "code": "robots_unavailable",
+        "confidence": "observed",
+        "evidence": "The request was withheld because robots policy could not be retrieved. Inspect its status/error; no disallow rule is established."
+      },
+      "robots_decision": {
+        "url": "http://localhost:4321/",
+        "allowed": false,
+        "reason": "robots_unavailable",
+        "policy_url": "http://localhost:4321/robots.txt",
+        "policy_status": 0,
+        "policy_error": "ValueError: private_or_nonpublic_address",
+        "policy_availability": "unreachable"
+      },
+      "withheld_url": "http://localhost:4321/",
+      "http_events": []
+    }
+  ]
+}
