@@ -74,7 +74,10 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
     ]
   })} />
 </head>
-<body class="bg-[#FAF7F2] text-[#1E293B] font-sans antialiased flex flex-col min-h-screen selection:bg-[#0E7490] selection:text-white">
+<body class="bg-[#FAF7F2] text-[#1E293B] font-sans antialiased flex flex-col min-h-screen selection:bg-[#0E7490] selection:text-white relative">
+  
+  <!-- 🚀 Smooth Top Progress Page Loading Bar -->
+  <div id="page-loader" class="page-loader" aria-hidden="true"></div>
   
   <!-- 1. Top Strip: Light Yellow Disclaimer Notice -->
   <div class="bg-[#FAF2DB] border-b border-[#EEDBBA] text-[11px] sm:text-xs text-[#5C450A] py-1.5 px-4 text-center font-normal">
@@ -103,12 +106,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
         <a href="/" class="flex items-center gap-3 group flex-shrink-0" aria-label="The Queen Dairy Menu — Home">
-          <div class="w-10 h-10 rounded-full bg-[#0E7490] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
-            <div class="w-4 h-4 bg-white rounded-[3px]"></div>
-          </div>
-          <span class="text-xl sm:text-2xl font-black tracking-tight text-[#0F172A] leading-none" style="font-family: var(--font-sans);">
-            QUEEN DAIRY <span class="text-[#0E7490]">MENU</span>
-          </span>
+          <img src="/logo.svg" alt="The Queen Dairy Menu — 2026 Price & Flavor Guide" width="260" height="56" class="h-11 sm:h-12 w-auto group-hover:scale-102 transition-transform duration-200" />
         </a>
 
         <!-- Desktop Menus Structure Exactly Matching Reference -->
@@ -187,8 +185,8 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
         <!-- Col 1: About -->
         <div class="lg:col-span-2">
-          <div class="flex items-center gap-2.5 mb-4">
-            <div class="w-8 h-8 rounded-xl bg-[#0E7490] flex items-center justify-center text-white font-bold text-lg" style="font-family: 'Bebas Neue', sans-serif;">QD</div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="/Images/favicon.svg" alt="The Queen Dairy Menu Emblem" width="38" height="38" class="w-9 h-9 rounded-xl shadow-xs" />
             <span class="text-2xl font-bold tracking-tight text-white" style="font-family: 'Bebas Neue', sans-serif;">
               QUEEN DAIRY <span class="text-[#0E7490]">MENU</span>
             </span>
@@ -255,9 +253,30 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
     </div>
   </footer>
 
-  <!-- Client Scripts for Scroll Reveal and Interactive FAQ Accordion -->
+  <!-- ⬆️ Floating Back-To-Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top" title="Scroll back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- Client Scripts for Scroll Reveal, Page Loading Bar, and Interactive Elements -->
   <script is:inline>
+    // 0. Instant Top Progress Loading Bar Animation
+    (function() {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.classList.add('is-loading');
+        loader.style.width = '25%';
+      }
+    })();
+
     document.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.style.width = '80%';
+      }
+
       // 1. Scroll-Triggered Reveal Animations
       const revealElements = document.querySelectorAll('.reveal');
       if ('IntersectionObserver' in window) {
@@ -306,6 +325,57 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
         mobileBtn.addEventListener('click', () => {
           mobileMenu.classList.toggle('hidden');
         });
+      }
+
+      // 4. Floating Back-To-Top Button Controller
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 380) {
+            backToTopBtn.classList.add('is-visible');
+          } else {
+            backToTopBtn.classList.remove('is-visible');
+          }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 5. Page Navigation Loading Bar Trigger on Internal Link Clicks
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        // Only trigger for internal non-anchor navigation
+        if (href && (href.startsWith('/') || href.startsWith('https://www.thequeendairymenu.us')) && !href.startsWith('#') && !link.hasAttribute('download') && link.getAttribute('target') !== '_blank') {
+          link.addEventListener('click', (e) => {
+            // Ignore modified clicks (Ctrl/Cmd/Shift/Alt click)
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            const targetUrl = new URL(link.href, window.location.origin);
+            if (targetUrl.pathname !== window.location.pathname) {
+              const loader = document.getElementById('page-loader');
+              if (loader) {
+                loader.classList.remove('is-complete');
+                loader.classList.add('is-loading');
+                loader.style.width = '0%';
+                setTimeout(() => { loader.style.width = '70%'; }, 20);
+              }
+            }
+          });
+        }
+      });
+    });
+
+    // Complete top loading bar when window finishes load
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.style.width = '100%';
+        loader.classList.add('is-complete');
+        setTimeout(() => {
+          loader.classList.remove('is-loading', 'is-complete');
+          loader.style.width = '0%';
+        }, 500);
       }
     });
   </script>

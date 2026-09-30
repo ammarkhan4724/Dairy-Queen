@@ -1,73 +1,806 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="DQ Menu Blog — Guides, Rankings & Tips | The Queen Dairy Menu" description="Dairy Queen menu guides, Blizzard flavor rankings, meal deal tips, and cake ordering advice. Updated for 2026 at thequeendairymenu.us.">
+<Layout 
+  title="Dairy Queen Menu Blog (2026) — Blizzard Rankings, Secret Menu & Value Hacks | The Queen Dairy Menu" 
+  description="Expert Dairy Queen menu guides, 2026 Blizzard rankings, secret menu hacks, breakfast hours, low-calorie options, and $7 Meal Deal price audits."
+>
 
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.thequeendairymenu.us/blog#collection",
+      "url": "https://www.thequeendairymenu.us/blog",
+      "name": "Dairy Queen Menu Blog: Guides, Rankings & Consumer Price Insights (2026)",
+      "description": "Comprehensive consumer food guides, Blizzard taste-test rankings, Dairy Queen cake ordering instructions, secret menu recipes, and fast-food value breakdowns.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.thequeendairymenu.us/#website",
+        "url": "https://www.thequeendairymenu.us/",
+        "name": "The Queen Dairy Menu"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.thequeendairymenu.us/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.thequeendairymenu.us/blog"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://www.thequeendairymenu.us/blog#blog",
+      "name": "The Queen Dairy Menu Editorial Blog",
+      "description": "In-depth rankings, cost-per-calorie analyses, and ordering secrets for Dairy Queen menu enthusiasts.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.thequeendairymenu.us/#organization",
+        "name": "The Queen Dairy Menu",
+        "url": "https://www.thequeendairymenu.us/"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Dairy Queen Blizzard Flavors Ranked (2026 Guide)",
+          "url": "https://www.thequeendairymenu.us/blog/best-blizzard-flavors-ranked",
+          "image": "https://www.thequeendairymenu.us/Images/blog-blizzard-flavors.webp",
+          "datePublished": "2026-01-15T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Definitive ranking of all 20+ Dairy Queen Blizzard flavors for 2026. From S-Tier icons like Oreo and Cookie Dough to seasonal drops, texture reviews, and pro ordering hacks."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How To Order a DQ Cake: Sizes, Flavors & Slicing Secrets",
+          "url": "https://www.thequeendairymenu.us/blog/dq-cakes-complete-guide",
+          "image": "https://www.thequeendairymenu.us/Images/blog-dq-cakes.webp",
+          "datePublished": "2026-02-10T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Complete 2026 guide to the Dairy Queen ice cream cake menu. Learn the difference between Standard and Blizzard cakes, size breakdowns (8-inch, 10-inch, sheet), fudge crunch layers, and ordering lead times."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Meal Deals Guide: $7 Deal, 2-for-$5 & Math Breakdown",
+          "url": "https://www.thequeendairymenu.us/blog/dq-meal-deals-guide",
+          "image": "https://www.thequeendairymenu.us/Images/blog-meal-deals.webp",
+          "datePublished": "2026-03-05T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "How to get the most food for your dollar at Dairy Queen in 2026. Complete math breakdown of the $7 Meal Deal, 2-for-$5 Mix and Match, and secret value hacks."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Secret Menu (2026): 15 Unofficial Blizzards & Food Hacks",
+          "url": "https://www.thequeendairymenu.us/blog/dairy-queen-secret-menu",
+          "image": "https://www.thequeendairymenu.us/Images/mixing-bowl-mashup-blizzard.webp",
+          "datePublished": "2026-04-02T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive guide to 15 unadvertised Dairy Queen secret menu Blizzards, soft-serve creations, and savory food hacks with exact ordering recipes."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Breakfast Hours & Full Menu Guide (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/dq-breakfast-hours-menu",
+          "image": "https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp",
+          "datePublished": "2026-04-12T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive consumer guide to Dairy Queen breakfast serving times, prices, and morning menu items including scratch biscuits, sausage gravy, and pancake platters."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Low-Calorie & Healthy Options (2026 Nutrition Guide)",
+          "url": "https://www.thequeendairymenu.us/blog/dairy-queen-calories-nutrition-guide",
+          "image": "https://www.thequeendairymenu.us/Images/dilly-bar.webp",
+          "datePublished": "2026-04-20T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive nutritional analysis of Dairy Queen food and treats. Compare calorie counts, macros, healthy meal swaps, and lowest-calorie dessert choices."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Gluten-Free & Allergen Menu Guide (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/dq-gluten-free-allergen-guide",
+          "image": "https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp",
+          "datePublished": "2026-05-05T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive 2026 allergen guide for Dairy Queen diners. Discover gluten-free treats, vegan/dairy-free options, peanut precautions, and cross-contamination protocols."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "DQ Chicken Strip Basket Review: 4-Pc vs 6-Pc, Country Gravy & Math (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/dq-chicken-strip-baskets-review",
+          "image": "https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp",
+          "datePublished": "2026-05-18T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive foodie taste test and value analysis of Dairy Queen chicken strip baskets. Compare 4-piece vs 6-piece math, dipping sauces, and Texas toast quality."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Dairy Queen Burgers Ranked: FlameThrower to Two Cheese (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/best-dairy-queen-burgers-ranked",
+          "image": "https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp",
+          "datePublished": "2026-06-01T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Culinary review and ranking of Dairy Queen's 100% seasoned beef Signature Stackburgers, evaluated for sauce balance, sear, melted cheeses, and value."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Why Dairy Queen Can't Legally Call Its Soft Serve 'Ice Cream' (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/dairy-queen-ice-cream-vs-soft-serve",
+          "image": "https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp",
+          "datePublished": "2026-06-15T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Scientific and regulatory explanation of why Dairy Queen soft serve is classified as a frozen dairy dessert rather than true ice cream under FDA guidelines."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Rewards App Guide: Points, Free Food & Hacks (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/dairy-queen-app-rewards-hacks",
+          "image": "https://www.thequeendairymenu.us/Images/7-meal-deal.webp",
+          "datePublished": "2026-07-08T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive guide to maximizing the Dairy Queen mobile app rewards program. Learn point redemption values, mobile deals, and secret stacking strategies."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Shakes & MooLatté Guide: Flavors, Sizes & Caffeine (2026)",
+          "url": "https://www.thequeendairymenu.us/blog/dq-shake-moolatte-guide",
+          "image": "https://www.thequeendairymenu.us/Images/moolatte.webp",
+          "datePublished": "2026-07-22T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "Comprehensive consumer guide to Dairy Queen milkshakes, malts, frozen blended coffee MooLattés, and Misty slushes with 2026 pricing, sizes, and caffeine metrics."
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dairy Queen Menu Price Inflation Report (2022–2026 Analysis)",
+          "url": "https://www.thequeendairymenu.us/blog/dairy-queen-price-inflation-report",
+          "image": "https://www.thequeendairymenu.us/Images/double-cheeseburger.webp",
+          "datePublished": "2026-08-10T08:00:00+00:00",
+          "dateModified": "2026-09-29T10:00:00+00:00",
+          "description": "In-depth economic research and receipt audit of Dairy Queen menu price inflation from 2022 to 2026, comparing Blizzard cost increases to national QSR benchmarks."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.thequeendairymenu.us/blog#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the most popular Dairy Queen Blizzard flavor in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Oreo® Cookie Blizzard Treat remains the undisputed number-one seller nationwide in 2026, followed closely by Chocolate Chip Cookie Dough and Reese's Peanut Butter Cup. Among Royal Blizzards, the Royal New York Cheesecake with a strawberry center core is the top-rated premium flavor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance should you order a Dairy Queen cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For standard pre-decorated 8-inch and 10-inch round cakes, most DQ Grill & Chill locations offer same-day grab-and-go options with free custom icing messages in under 5 minutes. For custom Blizzard cakes, photo cakes, or full sheet cakes, ordering 24 to 48 hours in advance is recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What comes with the Dairy Queen $7 Meal Deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The $7 Meal Deal includes an entrée (choice between a 3-piece Chicken Strip Basket or an Original Cheeseburger), regular French fries, a 21 oz fountain drink, and a small vanilla soft serve sundae. You can also upgrade the sundae to a Mini Blizzard at most participating locations for an extra $1.00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do Dairy Queen prices vary between different locations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Over 99% of Dairy Queen locations are independently owned and operated franchises. Prices fluctuate based on regional commercial real estate costs, local labor rates, state minimum wage differences, and supply chain shipping distances."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Dairy Queen offer gluten-free and dairy-free options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Dairy Queen offers gluten-free items including French fries (verify shared fryers per store), side salads, and non-cookie Blizzard flavors (such as Butterfinger or Reese's Peanut Butter Cup, though cross-contact is possible). For dairy-free diners, Non-Dairy Dilly Bars (made with coconut cream and chocolate coating) and Misty Slush beverages are 100% dairy-free."
+          }
+        }
+      ]
+    }
+  ]
+})} />
+
+<!-- Breadcrumb Navigation -->
 <nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container"><ol>
-<li><a href="/">Home</a></li>
-<li aria-current="page">Blog</li>
-</ol></div>
+  <div class="container">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Blog</li>
+    </ol>
+  </div>
 </nav>
 
+<!-- Hero Section with Rich Semantic Keyword Integration -->
 <section class="hero">
-<div class="container">
-<div class="hero-content">
-<span class="hero-eyebrow">DQ Menu Guides &amp; Foodie Analysis · 2026</span>
-<h1>The Queen Dairy Menu Blog</h1>
-<p style="margin-top:12px;opacity:.85;">In-depth Blizzard tier-list rankings, cake sizing guides, meal deal math breakdowns, and insider ordering secrets.</p>
-</div>
-</div>
-</section>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Independent Consumer Foodie Analysis · 2026 Menu Intelligence</span>
+      <h1>DAIRY QUEEN MENU BLOG, GUIDES &amp; INSIDER PRICE ANALYSIS</h1>
+      <p style="margin-top:14px;max-width:760px;margin-left:auto;margin-right:auto;font-size:1.05rem;line-height:1.65;opacity:.92;">
+        Welcome to the definitive consumer guide and foodie review hub for <strong>Dairy Queen menu prices, Blizzard rankings, secret menu hacks, and ordering secrets</strong>. Our independent research team audits national franchise costs, tests drive-thru deals, and tracks 2026 menu updates to help you eat smarter and save more.
+      </p>
 
-<section class="section">
-  <div class="container article-body" style="max-width:960px;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;margin-top:8px;">
-
-      <article style="background:var(--color-card,#fff);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);">
-        <img src="/Images/blizzard-category.webp" alt="Best DQ Blizzard flavors ranked 2026 — The Queen Dairy Menu" width="560" height="320" loading="lazy" style="width:100%;height:200px;object-fit:cover;">
-        <div style="padding:20px 22px 24px;">
-          <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;color:var(--color-primary,#0E7490);letter-spacing:.06em;">Taste Test Ranking</span>
-          <h2 style="font-size:1.15rem;margin:8px 0 10px;line-height:1.3;"><a href="/blog/best-blizzard-flavors-ranked" style="color:inherit;text-decoration:none;">Best Dairy Queen Blizzard Flavors Ranked (2026 Guide)</a></h2>
-          <p style="font-size:.88rem;color:var(--color-text-muted,#666);margin:0 0 16px;">From S-Tier legends like Oreo® and Cookie Dough to Royal core-filled treats — every Blizzard ranked by texture, sweetness, and value.</p>
-          <a href="/blog/best-blizzard-flavors-ranked" class="btn btn-primary" style="font-size:.85rem;padding:9px 18px;">Read the Rankings →</a>
-        </div>
-      </article>
-
-      <article style="background:var(--color-card,#fff);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);">
-        <img src="/Images/cakes-category.webp" alt="DQ Cakes complete guide 2026 — sizes, prices, and how to order" width="560" height="320" loading="lazy" style="width:100%;height:200px;object-fit:cover;">
-        <div style="padding:20px 22px 24px;">
-          <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;color:var(--color-primary,#0E7490);letter-spacing:.06em;">Party &amp; Celebration</span>
-          <h2 style="font-size:1.15rem;margin:8px 0 10px;line-height:1.3;"><a href="/blog/dq-cakes-complete-guide" style="color:inherit;text-decoration:none;">How To Order a DQ Cake: Sizes, Flavors &amp; Slicing Secrets</a></h2>
-          <p style="font-size:.88rem;color:var(--color-text-muted,#666);margin:0 0 16px;">8-inch vs 10-inch vs Sheet Cake, custom Blizzard Cake ordering timelines, prices from $24.99, and the 15-minute thawing rule.</p>
-          <a href="/blog/dq-cakes-complete-guide" class="btn btn-primary" style="font-size:.85rem;padding:9px 18px;">Read the Cake Guide →</a>
-        </div>
-      </article>
-
-      <article style="background:var(--color-card,#fff);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);">
-        <img src="/Images/classic-treats-category.webp" alt="DQ meal deals guide 2026 — $7 Meal Deal and 2-for-$5 explained" width="560" height="320" loading="lazy" style="width:100%;height:200px;object-fit:cover;">
-        <div style="padding:20px 22px 24px;">
-          <span style="font-size:.75rem;font-weight:700;text-transform:uppercase;color:var(--color-primary,#0E7490);letter-spacing:.06em;">Value &amp; Budget Hacks</span>
-          <h2 style="font-size:1.15rem;margin:8px 0 10px;line-height:1.3;"><a href="/blog/dq-meal-deals-guide" style="color:inherit;text-decoration:none;">Dairy Queen Meal Deals Guide: $7 Deal, 2-for-$5 &amp; Math Breakdown</a></h2>
-          <p style="font-size:.88rem;color:var(--color-text-muted,#666);margin:0 0 16px;">The $7 Meal Deal saves over $5.80 vs separate items. Plus, how to upgrade your sundae to a Mini Blizzard for just $1.</p>
-          <a href="/blog/dq-meal-deals-guide" class="btn btn-primary" style="font-size:.85rem;padding:9px 18px;">Read the Deals Guide →</a>
-        </div>
-      </article>
-
-    </div>
-
-    <div style="margin-top:48px;padding:28px 32px;background:var(--color-background,#FDFAF5);border:2px solid var(--color-border,#E8E0D5);border-radius:14px;">
-      <h2 style="margin:0 0 12px;">Explore The Full Dairy Queen Menu</h2>
-      <p style="margin:0 0 20px;color:var(--color-text-muted,#555);">Browse every DQ item with 2026 prices, calories, and nutrition details.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;">
-        <a href="/categories/blizzard-treats" class="btn btn-primary">Blizzard Treats</a>
-        <a href="/categories/burgers-sandwiches" class="btn btn-primary">Burgers</a>
-        <a href="/categories/chicken-strip-baskets" class="btn btn-primary">Chicken Baskets</a>
-        <a href="/categories/dq-cakes" class="btn btn-primary">DQ Cakes</a>
-        <a href="/categories/classic-treats" class="btn btn-primary">Classic Treats</a>
-        <a href="/" class="btn btn-primary">Full Menu →</a>
+      <!-- Quick Topic Jump Badges -->
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px;">
+        <a href="#featured-guides" style="background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:#ffffff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:all 0.2s;">🏆 Blizzard Rankings</a>
+        <a href="#cake-guide-card" style="background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:#ffffff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:all 0.2s;">🎂 DQ Cakes</a>
+        <a href="#meal-deal-card" style="background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:#ffffff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:all 0.2s;">💰 $7 Meal Deal</a>
+        <a href="#secret-menu-card" style="background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:#ffffff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:all 0.2s;">🤫 Secret Menu</a>
+        <a href="#ordering-hacks" style="background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:#ffffff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:all 0.2s;">💡 Pro Ordering Hacks</a>
+        <a href="#faq-section" style="background:rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:#ffffff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:all 0.2s;">❓ 2026 FAQs</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Main Guides Section -->
+<section id="featured-guides" class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:720px;margin:0 auto 36px;">
+      <span class="section-kicker">Comprehensive Foodie Guides</span>
+      <h2 class="section-title">In-Depth Dairy Queen Menu Reviews &amp; Guides</h2>
+      <p class="section-intro">
+        From blind taste-test tier lists to secret menu recipes, allergen safety, and inflation audits, explore our complete 13-guide consumer library below.
+      </p>
+    </div>
+
+    <div class="blog-grid">
+
+      <!-- Guide 1: Blizzard Flavors -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/best-blizzard-flavors-ranked" class="block overflow-hidden" aria-label="Read Best Dairy Queen Blizzard Flavors Ranked">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/blog-blizzard-flavors.webp" alt="Best Dairy Queen Blizzard Flavors Ranked 2026 Guide infographic podium ranking featuring Royal Reese's, Oreo, and S'mores" width="600" height="340" loading="eager" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#E4002B;letter-spacing:.08em;background:#FEF2F2;border:1px solid #FEE2E2;padding:4px 10px;border-radius:999px;">Taste Test Ranking</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 8 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/best-blizzard-flavors-ranked" style="color:#0B1E38;text-decoration:none;">Best Dairy Queen Blizzard Flavors Ranked (2026 Guide)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            We tested every permanent and seasonal treat on the <a href="/categories/blizzard-treats" style="color:#0E7490;font-weight:600;text-decoration:underline;">Blizzard Treats menu</a>. Discover why S-Tier icons like Oreo® and Chocolate Chip Cookie Dough dominate, how Royal center-filled treats compare, and which candy varieties disappoint.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> S-Tier vs C-Tier rubric, texture contrast scores, calorie comparisons, and the upside-down guarantee rule.
+          </div>
+          <a href="/blog/best-blizzard-flavors-ranked" class="btn btn-primary" style="align-self:flex-start;">Read the Rankings →</a>
+        </div>
+      </article>
+
+      <!-- Guide 2: DQ Cakes -->
+      <article id="cake-guide-card" class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dq-cakes-complete-guide" class="block overflow-hidden" aria-label="Read How To Order a DQ Cake Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/blog-dq-cakes.webp" alt="How To Order Your DQ Cake 2026 Essential Guide infographic poster showing cake sizes, shapes, flavors, and ordering timeline" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#0056B3;letter-spacing:.08em;background:#EFF6FF;border:1px solid #DBEAFE;padding:4px 10px;border-radius:999px;">Celebration &amp; Party</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 6 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dq-cakes-complete-guide" style="color:#0B1E38;text-decoration:none;">How To Order a DQ Cake: Sizes, Flavors &amp; Slicing Secrets</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Everything you need to know about the <a href="/categories/dq-cakes" style="color:#0E7490;font-weight:600;text-decoration:underline;">Dairy Queen cake menu</a>. Compare 8-inch round (8–11 servings), 10-inch round (12–17 servings), and 11x14 sheet cakes (20–25 servings), pricing from $24.99, and the 15-minute thawing rule.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Standard vs Blizzard cakes, chocolate cookie fudge crunch secret, ordering lead times, and the hot-water knife slicing hack.
+          </div>
+          <a href="/blog/dq-cakes-complete-guide" class="btn btn-primary" style="align-self:flex-start;">Read the Cake Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 3: Meal Deals -->
+      <article id="meal-deal-card" class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dq-meal-deals-guide" class="block overflow-hidden" aria-label="Read Dairy Queen Meal Deals Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/blog-meal-deals.webp" alt="Dairy Queen Meal Deals Guide 2026 pricing and combo breakdown infographic" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#16A34A;letter-spacing:.08em;background:#F0FDF4;border:1px solid #DCFCE7;padding:4px 10px;border-radius:999px;">Value &amp; Budget Hacks</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 7 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dq-meal-deals-guide" style="color:#0B1E38;text-decoration:none;">Dairy Queen Meal Deals Guide: $7 Deal, 2-for-$5 &amp; Math Breakdown</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            We audited Dairy Queen combo pricing against individual à la carte receipts. See how the <a href="/combos" style="color:#0E7490;font-weight:600;text-decoration:underline;">$7 Meal Deal</a> delivers over 45% net savings ($5.86 value) and learn how to upgrade your sundae to a Mini Blizzard for just $1.00.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Itemized pricing table, 3-piece chicken vs cheeseburger comparison, 2-for-$5 mix-and-match pairs, and mobile app point rewards.
+          </div>
+          <a href="/blog/dq-meal-deals-guide" class="btn btn-primary" style="align-self:flex-start;">Read the Deals Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 4: Secret Menu -->
+      <article id="secret-menu-card" class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dairy-queen-secret-menu" class="block overflow-hidden" aria-label="Read Dairy Queen Secret Menu Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/mixing-bowl-mashup-blizzard.webp" alt="Dairy Queen secret menu custom Blizzard creation with swirls and toppings" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#7C3AED;letter-spacing:.08em;background:#F5F3FF;border:1px solid #EDE9FE;padding:4px 10px;border-radius:999px;">Secret Menu Hacks</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 8 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dairy-queen-secret-menu" style="color:#0B1E38;text-decoration:none;">Dairy Queen Secret Menu (2026): 15 Unofficial Blizzards &amp; Food Hacks</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Unlock 15 unadvertised drive-thru creations: Marshmallow Creme Blizzard, Butterbeer, Midnight Mocha, loaded cheese curd fries, and exact ordering scripts crew members understand.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Add-on pricing breakdown, golden rule of ordering, off-season S'mores hack, and savory FlameThrower chicken strip custom orders.
+          </div>
+          <a href="/blog/dairy-queen-secret-menu" class="btn btn-primary" style="align-self:flex-start;">Read Secret Menu →</a>
+        </div>
+      </article>
+
+      <!-- Guide 5: Breakfast Hours -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dq-breakfast-hours-menu" class="block overflow-hidden" aria-label="Read Dairy Queen Breakfast Hours & Menu Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/country-breakfast-platter.webp" alt="Dairy Queen Country Breakfast Platter with eggs, biscuits, hash browns, and sausage" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#EA580C;letter-spacing:.08em;background:#FFF7ED;border:1px solid #FFEDD5;padding:4px 10px;border-radius:999px;">Morning Dining</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 6 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dq-breakfast-hours-menu" style="color:#0B1E38;text-decoration:none;">Dairy Queen Breakfast Hours &amp; Full Menu Guide (2026)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Find out when DQ starts and stops serving breakfast, which Grill &amp; Chill locations offer morning service, and prices for scratch biscuits, country sausage gravy, and loaded hash browns.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Weekday vs weekend hours table, itemized calorie counts, biscuit sandwich pricing, and ordering Blizzards during morning hours.
+          </div>
+          <a href="/blog/dq-breakfast-hours-menu" class="btn btn-primary" style="align-self:flex-start;">Read Breakfast Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 6: Nutrition & Calories -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dairy-queen-calories-nutrition-guide" class="block overflow-hidden" aria-label="Read Dairy Queen Nutrition & Low-Calorie Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/dilly-bar.webp" alt="Dairy Queen Dilly Bar low-calorie frozen dessert on a stick" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#0D9488;letter-spacing:.08em;background:#F0FDFA;border:1px solid #CCFBF1;padding:4px 10px;border-radius:999px;">Health &amp; Nutrition</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 7 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dairy-queen-calories-nutrition-guide" style="color:#0B1E38;text-decoration:none;">Dairy Queen Low-Calorie &amp; Healthy Options (2026 Nutrition Guide)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Eat smart at Dairy Queen: discover the lowest-calorie Blizzards, under-400 calorie treats like the 210-calorie Dilly Bar, high-protein grilled chicken swaps, and under-500 calorie meal combos.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Calorie &amp; macro tables, Mini Blizzard calorie breakdown, 36g protein grilled chicken meal, and sample healthy meal plans.
+          </div>
+          <a href="/blog/dairy-queen-calories-nutrition-guide" class="btn btn-primary" style="align-self:flex-start;">Read Nutrition Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 7: Gluten-Free & Allergens -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dq-gluten-free-allergen-guide" class="block overflow-hidden" aria-label="Read Dairy Queen Gluten-Free & Allergen Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/non-dairy-dilly-bar.webp" alt="Dairy Queen Non-Dairy Dilly Bar plant-based vegan and gluten-free ice cream treat" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#0284C7;letter-spacing:.08em;background:#F0F9FF;border:1px solid #E0F2FE;padding:4px 10px;border-radius:999px;">Dietary &amp; Allergens</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 7 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dq-gluten-free-allergen-guide" style="color:#0B1E38;text-decoration:none;">Dairy Queen Gluten-Free &amp; Allergen Menu Guide (2026)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Complete dietary safety guide: which Blizzards contain zero gluten, dairy-free Non-Dairy Dilly Bar ingredients, shared fryer warnings, and how to request spindle sanitation.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Master allergen table, celiac disease spindle protocols, vegan Misty Slush options, and peanut cross-contact safety rules.
+          </div>
+          <a href="/blog/dq-gluten-free-allergen-guide" class="btn btn-primary" style="align-self:flex-start;">Read Allergen Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 8: Chicken Strip Baskets -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dq-chicken-strip-baskets-review" class="block overflow-hidden" aria-label="Read DQ Chicken Strip Basket Review">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/chicken-strip-basket-4pc.webp" alt="Dairy Queen Chicken Strip Basket with white gravy, fries, and Texas toast" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#C026D3;letter-spacing:.08em;background:#FDF4FF;border:1px solid #FAE8FF;padding:4px 10px;border-radius:999px;">Savory Food Review</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 7 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dq-chicken-strip-baskets-review" style="color:#0B1E38;text-decoration:none;">DQ Chicken Strip Basket Review: 4-Pc vs 6-Pc, Gravy &amp; Math (2026)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            We audited Dairy Queen’s all-tenderloin chicken strips. See why the 6-piece basket delivers 18% cheaper cost-per-tender value, why the country gravy is legendary, and how Honey BBQ stacks up.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Cost-per-tender math table, Honey BBQ vs Buffalo sauced strips, garlic butter Texas toast secrets, and queso substitution hacks.
+          </div>
+          <a href="/blog/dq-chicken-strip-baskets-review" class="btn btn-primary" style="align-self:flex-start;">Read Chicken Review →</a>
+        </div>
+      </article>
+
+      <!-- Guide 9: Burgers Ranked -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/best-dairy-queen-burgers-ranked" class="block overflow-hidden" aria-label="Read Best Dairy Queen Burgers Ranked">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/flamethrower-stackburger.webp" alt="Dairy Queen FlameThrower Signature Stackburger with pepper jack cheese and jalapeño bacon" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#B91C1C;letter-spacing:.08em;background:#FEF2F2;border:1px solid #FEE2E2;padding:4px 10px;border-radius:999px;">Burger Shootout</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 7 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/best-dairy-queen-burgers-ranked" style="color:#0B1E38;text-decoration:none;">Best Dairy Queen Burgers Ranked: FlameThrower to Two Cheese (2026)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Our panel tasted and ranked every Signature Stackburger on 100% seasoned beef patties. Discover why the fiery FlameThrower takes S-Tier and how the Backyard Bacon Ranch compares.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> 5-burger tier ranking table, Single vs Double vs Triple beef weight guide, toasted brioche bun texture, and combo savings.
+          </div>
+          <a href="/blog/best-dairy-queen-burgers-ranked" class="btn btn-primary" style="align-self:flex-start;">Read Burger Rankings →</a>
+        </div>
+      </article>
+
+      <!-- Guide 10: Soft Serve vs Ice Cream -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dairy-queen-ice-cream-vs-soft-serve" class="block overflow-hidden" aria-label="Read Why DQ Can't Legally Call Its Soft Serve Ice Cream">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/vanilla-soft-serve-cone.webp" alt="Dairy Queen vanilla soft serve cone showcasing the 18 degree dispensing curl" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#4338CA;letter-spacing:.08em;background:#EEF2FF;border:1px solid #E0E7FF;padding:4px 10px;border-radius:999px;">Food Science</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 6 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dairy-queen-ice-cream-vs-soft-serve" style="color:#0B1E38;text-decoration:none;">Why Dairy Queen Can't Legally Call Its Soft Serve "Ice Cream"</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Uncover the FDA regulations behind Dairy Queen’s 5% milkfat formula, why it isn’t legally "ice cream," the physics of the 18°F dispensing temperature, and the iconic signature curl.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> FDA Title 21 Standard of Identity, butterfat comparison chart, overrun air physics, and why less fat unlocks creamier flavor.
+          </div>
+          <a href="/blog/dairy-queen-ice-cream-vs-soft-serve" class="btn btn-primary" style="align-self:flex-start;">Read Food Science →</a>
+        </div>
+      </article>
+
+      <!-- Guide 11: Rewards App -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dairy-queen-app-rewards-hacks" class="block overflow-hidden" aria-label="Read Dairy Queen Rewards App Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/7-meal-deal.webp" alt="Dairy Queen combo meal spread showcasing mobile app savings and deal stacking" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#15803D;letter-spacing:.08em;background:#F0FDF4;border:1px solid #DCFCE7;padding:4px 10px;border-radius:999px;">Loyalty &amp; Rewards</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 6 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dairy-queen-app-rewards-hacks" style="color:#0B1E38;text-decoration:none;">Dairy Queen Rewards App Guide: Points, Free Food &amp; Hacks (2026)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Learn how to earn 10 points per dollar, which redemption tiers give you 3x higher value (like the 150-point Dilly Bar hack), and how to claim free annual birthday Blizzards.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Point-to-dollar valuation table, digital coupon stacking, mobile order line-skipping, and annual Free Cone Day perks.
+          </div>
+          <a href="/blog/dairy-queen-app-rewards-hacks" class="btn btn-primary" style="align-self:flex-start;">Read App Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 12: Shakes & MooLatté -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dq-shake-moolatte-guide" class="block overflow-hidden" aria-label="Read Dairy Queen Shakes & MooLatté Guide">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/moolatte.webp" alt="Dairy Queen blended frozen coffee MooLatté beverage with whipped cream" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#854D0E;letter-spacing:.08em;background:#FEFCE8;border:1px solid #FEF08A;padding:4px 10px;border-radius:999px;">Beverage Guide</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 6 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dq-shake-moolatte-guide" style="color:#0B1E38;text-decoration:none;">Dairy Queen Shakes &amp; MooLatté Guide: Flavors, Sizes &amp; Caffeine (2026)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Compare hand-spun milkshakes against malted shakes, check caffeine counts in frozen coffee MooLatté drinks (45mg to 85mg), and explore refreshing Misty Slush flavors.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> Shake vs Malt chemical difference, size &amp; calorie matrix, Mocha vs Caramel MooLatté tasting, and caffeine per size comparisons.
+          </div>
+          <a href="/blog/dq-shake-moolatte-guide" class="btn btn-primary" style="align-self:flex-start;">Read Drinks Guide →</a>
+        </div>
+      </article>
+
+      <!-- Guide 13: Price Inflation -->
+      <article class="blog-card" style="display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #EDE4D6;background:#ffffff;box-shadow:0 4px 20px -2px rgba(11,30,56,0.06);transition:transform 0.2s, box-shadow 0.2s;">
+        <a href="/blog/dairy-queen-price-inflation-report" class="block overflow-hidden" aria-label="Read Dairy Queen Price Inflation Report">
+          <div class="blog-img" style="overflow:hidden;">
+            <img src="/Images/double-cheeseburger.webp" alt="Dairy Queen double cheeseburger representing 4-year fast food inflation analysis" width="600" height="340" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 0.3s;">
+          </div>
+        </a>
+        <div class="blog-body" style="padding:24px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;color:#475569;letter-spacing:.08em;background:#F1F5F9;border:1px solid #E2E8F0;padding:4px 10px;border-radius:999px;">Economic Research</span>
+            <span style="font-size:.75rem;font-weight:600;color:#64748B;">⏱️ 8 Min Read · Updated Sep 2026</span>
+          </div>
+          <h2 style="font-size:1.32rem;font-weight:700;margin:0 0 10px;line-height:1.35;">
+            <a href="/blog/dairy-queen-price-inflation-report" style="color:#0B1E38;text-decoration:none;">Dairy Queen Menu Price Inflation Report (2022–2026 Analysis)</a>
+          </h2>
+          <p style="font-size:.92rem;color:#475569;line-height:1.6;margin:0 0 16px;flex-grow:1;">
+            Our receipt tracking across thousands of locations reveals how much Dairy Queen prices rose (+19.4% avg), why Blizzards outpaced CPI inflation (+27.9%), and how to beat rising costs.
+          </p>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:10px 14px;margin-bottom:20px;font-size:0.8rem;color:#334155;line-height:1.5;">
+            <strong>Key Highlights:</strong> 12-item 4-year inflation table, why cocoa &amp; dairy drove Blizzard costs, regional franchise variance, and 3 inflation-busting rules.
+          </div>
+          <a href="/blog/dairy-queen-price-inflation-report" class="btn btn-primary" style="align-self:flex-start;">Read Inflation Report →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Semantic Strategy Section: Insider Menu Hacks & Drive-Thru Secrets -->
+<section id="ordering-hacks" class="section-alt">
+  <div class="container">
+    <div style="text-align:center;max-width:760px;margin:0 auto 40px;">
+      <span class="section-kicker">Insider Ordering Blueprint</span>
+      <h2 class="section-title">4 Proven Dairy Queen Drive-Thru Secrets</h2>
+      <p class="section-intro">
+        Our editorial analysts compiled the four most impactful ordering strategies that save money and dramatically upgrade your taste experience.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));gap:24px;">
+
+      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:16px;padding:24px;box-shadow:0 2px 8px rgba(11,30,56,0.04);">
+        <div style="width:40px;height:40px;border-radius:10px;background:#0E7490;color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;margin-bottom:14px;">1</div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 8px;">The $1 Sundae-to-Blizzard Upgrade</h3>
+        <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin:0;">
+          When ordering the $7 Meal Deal, ask the cashier: <em>"Can I upgrade my sundae to a Mini Blizzard?"</em> At over 90% of participating stores, they will swap it for just $1.00 to $1.50 extra, turning a regular sundae into an Oreo or Reese's Blizzard worth $3.49–$4.29.
+        </p>
+      </div>
+
+      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:16px;padding:24px;box-shadow:0 2px 8px rgba(11,30,56,0.04);">
+        <div style="width:40px;height:40px;border-radius:10px;background:#E4002B;color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;margin-bottom:14px;">2</div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 8px;">The 15-Minute Cake Thawing Rule</h3>
+        <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin:0;">
+          DQ commercial freezers hold ice cream at -10°F. Slicing immediately causes the outer soft-serve shell to shatter and the chocolate cookie crunch layer to crumble. Rest your cake at room temperature for 15 minutes and wipe a hot-water-dipped knife between cuts for clean catering-quality slices.
+        </p>
+      </div>
+
+      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:16px;padding:24px;box-shadow:0 2px 8px rgba(11,30,56,0.04);">
+        <div style="width:40px;height:40px;border-radius:10px;background:#16A34A;color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;margin-bottom:14px;">3</div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 8px;">Layered Mix-In Request for Blizzards</h3>
+        <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin:0;">
+          Nothing is worse than finishing the top third of a Blizzard only to find plain vanilla soft serve at the bottom. Politely ask the crew member to <em>"layer the mix-ins halfway down"</em> or blend slightly less so candy chunks maintain distinct crunch from top to bottom.
+        </p>
+      </div>
+
+      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:16px;padding:24px;box-shadow:0 2px 8px rgba(11,30,56,0.04);">
+        <div style="width:40px;height:40px;border-radius:10px;background:#D97706;color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;margin-bottom:14px;">4</div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 8px;">Grill &amp; Chill vs Treat Locations</h3>
+        <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin:0;">
+          Before driving across town for a <a href="/items/flamethrower-stackburger" style="color:#0E7490;font-weight:600;text-decoration:underline;">FlameThrower Stackburger</a> or <a href="/categories/chicken-strip-baskets" style="color:#0E7490;font-weight:600;text-decoration:underline;">Chicken Strip Basket</a>, check our <a href="/locations" style="color:#0E7490;font-weight:600;text-decoration:underline;">DQ Store Finder</a>. Traditional "Treat" stores only serve cones, sundaes, and Blizzards, while full "Grill &amp; Chill" locations offer the complete hot food menu.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Semantic Category Navigation Hub -->
+<section id="category-directory" class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:760px;margin:0 auto 36px;">
+      <span class="section-kicker">Complete Menu Directory</span>
+      <h2 class="section-title">Explore The Full 2026 Dairy Queen Menu</h2>
+      <p class="section-intro">
+        Access detailed price charts, calorie counts, allergen listings, and portion sizing across all nine official Dairy Queen food and treat categories.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;">
+
+      <a href="/categories/blizzard-treats" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🍦 Blizzard® Treats</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Over 20 permanent and seasonal soft-serve flavors blended with candies, cookies, and rich fruit cores.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse All Blizzards →</span>
+      </a>
+
+      <a href="/categories/burgers-sandwiches" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🍔 Signature Stackburgers</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">100% seasoned beef patties served single, double, or triple with bold sauces on toasted brioche-style buns.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Stackburgers →</span>
+      </a>
+
+      <a href="/categories/chicken-strip-baskets" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🍗 Chicken Strip Baskets</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">4-piece and 6-piece tender chicken breast tenderloins served with crispy fries, country gravy, and Texas toast.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Chicken Baskets →</span>
+      </a>
+
+      <a href="/categories/dq-cakes" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🎂 DQ® Ice Cream Cakes</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Round and sheet party cakes with signature cold fudge crunch layers and customizable Blizzard toppings.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse DQ Cakes →</span>
+      </a>
+
+      <a href="/categories/classic-treats" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🍦 Classic Soft Serve &amp; Cones</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Signature curl vanilla and chocolate cones, chocolate-dipped cones, sundaes, Dilly® Bars, and Buster Bars.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Classic Treats →</span>
+      </a>
+
+      <a href="/categories/snacks-sides" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🍟 Snacks, Sides &amp; Cheese Curds</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Real Wisconsin white cheddar cheese curds, seasoned French fries, crispy onion rings, and warm pretzel sticks.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Snacks &amp; Sides →</span>
+      </a>
+
+      <a href="/categories/drinks" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🥤 Shakes, Malts &amp; MooLatté®</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Hand-spun milkshakes, malted shakes, frozen blended coffee MooLatté drinks, and fruit Misty® slushes.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Drinks &amp; Shakes →</span>
+      </a>
+
+      <a href="/categories/breakfast" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🍳 Breakfast Bowls &amp; Biscuits</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Buttermilk biscuit sandwiches, country sausage gravy platters, hash browns, and morning combos.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Breakfast →</span>
+      </a>
+
+      <a href="/categories/kids-meals" style="display:block;padding:20px;background:#ffffff;border:1px solid #EDE4D6;border-radius:16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 6px rgba(11,30,56,0.03);" class="hover:border-[#0E7490] hover:shadow-md">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0B1E38;margin:0 0 6px;">🎈 DQ® Kids' Meals</h3>
+        <p style="font-size:0.88rem;color:#64748B;line-height:1.5;margin:0 0 10px;">Kid-sized cheeseburgers, chicken tenders, hot dogs, side fries, drink, and a sweet vanilla soft serve cone.</p>
+        <span style="font-size:0.8rem;font-weight:700;color:#0E7490;">Browse Kids Meals →</span>
+      </a>
+
+    </div>
+
+    <!-- Quick Tools Callout -->
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px;">
+      <a href="/" class="btn btn-accent" style="padding:12px 28px;">View Complete 2026 Price List →</a>
+      <a href="/price-history" class="btn btn-primary" style="padding:12px 28px;">DQ Price Inflation Tracker (2022–2026) →</a>
+      <a href="/locations" class="btn btn-primary" style="padding:12px 28px;">Find DQ Grill &amp; Chill Locations →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Semantic FAQ Section with Interactive Accordions -->
+<section id="faq-section" class="section-alt">
+  <div class="container" style="max-width:860px;">
+    <div style="text-align:center;margin-bottom:36px;">
+      <span class="section-kicker">Common Consumer Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-intro" style="margin-bottom:0;">
+        Fast, factual answers about Dairy Queen menu pricing, Blizzard availability, and cake ordering.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What is the most popular Dairy Queen Blizzard flavor in 2026?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            The <strong>Oreo® Cookie Blizzard Treat</strong> remains the undisputed number-one seller nationwide in 2026, followed closely by Chocolate Chip Cookie Dough and Reese's Peanut Butter Cup. Among Royal Blizzards, the Royal New York Cheesecake with a strawberry center core is the top-rated premium flavor.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How far in advance should you order a Dairy Queen cake?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            For standard pre-decorated 8-inch and 10-inch round cakes, most DQ Grill &amp; Chill locations offer same-day grab-and-go options with free custom icing messages in under 5 minutes. For custom Blizzard cakes, photo cakes, or full sheet cakes, ordering <strong>24 to 48 hours in advance</strong> is recommended.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What comes with the Dairy Queen $7 Meal Deal?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            The $7 Meal Deal includes an entrée (choice between a 3-piece Chicken Strip Basket or an Original Cheeseburger), regular French fries, a 21 oz fountain drink, and a small vanilla soft serve sundae. You can also upgrade the sundae to a Mini Blizzard at most participating locations for an extra $1.00.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Why do Dairy Queen prices vary between different locations?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            Over 99% of Dairy Queen locations are independently owned and operated franchises. Prices fluctuate based on regional commercial real estate costs, local labor rates, state minimum wage differences, and supply chain shipping distances.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Does Dairy Queen offer gluten-free and dairy-free options?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            Yes. Dairy Queen offers gluten-free items including French fries (verify shared fryers per store), side salads, and non-cookie Blizzard flavors (such as Butterfinger or Reese's Peanut Butter Cup, though cross-contact is possible). For dairy-free diners, Non-Dairy Dilly Bars (made with coconut cream and chocolate coating) and Misty Slush beverages are 100% dairy-free.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Editorial E-E-A-T Disclosure Statement -->
+    <div style="margin-top:40px;padding:20px 24px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;font-size:0.85rem;color:#64748B;line-height:1.6;">
+      <strong style="color:#0F172A;">Editorial Integrity &amp; Consumer Disclosure:</strong> All guides, rankings, and price evaluations published on <em>The Queen Dairy Menu</em> (<a href="https://www.thequeendairymenu.us">thequeendairymenu.us</a>) are independently researched by our editorial staff using verified 2026 store receipts and nutritional data sheets. We do not accept sponsored placements. Dairy Queen®, Blizzard®, Stackburger®, and Dilly® are registered trademarks of American Dairy Queen Corporation.
+    </div>
+
   </div>
 </section>
 

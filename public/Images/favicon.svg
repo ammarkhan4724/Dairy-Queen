@@ -1,6 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#0E7490"/>
-  <rect x="8" y="9" width="16" height="2.6" rx="1.3" fill="white"/>
-  <rect x="8" y="14.7" width="16" height="2.6" rx="1.3" fill="white"/>
-  <rect x="8" y="20.4" width="10" height="2.6" rx="1.3" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E7490"/>
+      <stop offset="100%" stop-color="#0B1E38"/>
+    </linearGradient>
+    <linearGradient id="goldCrown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="creamSwirl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="redAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Badge Base -->
+  <rect width="64" height="64" rx="18" fill="url(#bgGrad)"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="url(#goldCrown)" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Iconic Queen Soft Serve & Crown Emblem -->
+  <g filter="url(#shadow)">
+    <!-- Red Crown Base Ribbon -->
+    <path d="M16 46 Q32 49 48 46 L46 41 Q32 43 18 41 Z" fill="url(#redAccent)"/>
+    <circle cx="23" cy="44" r="1.5" fill="#FFE066"/>
+    <circle cx="32" cy="45" r="1.8" fill="#FFE066"/>
+    <circle cx="41" cy="44" r="1.5" fill="#FFE066"/>
+
+    <!-- Regal Crown Arch Base -->
+    <path d="M18 41 L20 28 L27 34 L32 20 L37 34 L44 28 L46 41 Q32 44 18 41 Z" fill="url(#goldCrown)"/>
+    
+    <!-- Soft Serve Swirl with Iconic Top Curl -->
+    <!-- Lower Body of Soft Serve -->
+    <path d="M24 38 Q32 35 40 38 Q37 30 32 26 Q27 30 24 38 Z" fill="url(#creamSwirl)"/>
+    
+    <!-- Mid Swirl Tier -->
+    <path d="M26 31 Q32 27 38 31 Q36 23 32 20 Q28 23 26 31 Z" fill="#FFFFFF"/>
+    
+    <!-- Signature Top DQ-Style Curl -->
+    <path d="M32 21 Q30 15 34 11 Q37 8 36 6 Q34 7 32 10 Q28 14 30 19 Z" fill="url(#creamSwirl)"/>
+    <circle cx="36" cy="6" r="1.5" fill="#FFFBEB"/>
+
+    <!-- Crown Jewel Accents -->
+    <circle cx="20" cy="27" r="2.2" fill="#FFE066" stroke="#B45309" stroke-width="0.8"/>
+    <circle cx="44" cy="27" r="2.2" fill="#FFE066" stroke="#B45309" stroke-width="0.8"/>
+  </g>
 </svg>

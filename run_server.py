@@ -10,6 +10,12 @@ class CleanUrlHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIST_DIR, **kwargs)
 
+    def end_headers(self):
+        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        self.send_header('Pragma', 'no-cache')
+        self.send_header('Expires', '0')
+        super().end_headers()
+
     def translate_path(self, path):
         # Decode and parse path
         parsed = urlparse(path)
@@ -44,7 +50,7 @@ class CleanUrlHandler(http.server.SimpleHTTPRequestHandler):
         return None
 
 if __name__ == '__main__':
-    socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(('', PORT), CleanUrlHandler) as httpd:
+    socketserver.ThreadingTCPServer.allow_reuse_address = True
+    with socketserver.ThreadingTCPServer(('', PORT), CleanUrlHandler) as httpd:
         print(f"Serving {DIST_DIR} on http://localhost:{PORT}")
         httpd.serve_forever()
