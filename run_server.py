@@ -3,7 +3,7 @@ import socketserver
 import os
 from urllib.parse import urlparse, unquote
 
-PORT = 4325
+PORT = 4321
 DIST_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'dist'))
 
 class CleanUrlHandler(http.server.SimpleHTTPRequestHandler):

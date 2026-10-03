@@ -3,8 +3,8 @@
 
 /* ── High-Performance Google Core Web Vitals Typography ── */
 :root {
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-display: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Arial Black", sans-serif;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: 'Playfair Display Variable', serif;
 }
 
 html, body {
@@ -203,7 +203,7 @@ html, body {
   }
   
   .hero h1 {
-    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-wide mb-6 leading-[0.95] text-white;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-normal tracking-normal mb-6 leading-[1.1] text-white;
     font-family: var(--font-display);
   }
   

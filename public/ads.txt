@@ -1,0 +1,3 @@
+# ads.txt for thequeendairymenu.us
+# Add your Google AdSense Publisher ID here once approved.
+# Format: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

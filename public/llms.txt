@@ -1,0 +1,19 @@
+# The Queen Dairy Menu
+
+> An independent, fan-maintained culinary and price guide for the Dairy Queen® menu.
+
+## About This Site
+The Queen Dairy Menu (thequeendairymenu.us) provides an unofficial, comprehensive overview of the Dairy Queen menu, featuring estimated 2026 prices, calorie counts, nutrition insights, and ordering advice. 
+
+This site is not affiliated with, endorsed by, or sponsored by Dairy Queen®, International Dairy Queen, Inc., or Berkshire Hathaway Inc. All prices are estimates based on national averages; local franchise prices may vary.
+
+## Navigation & Core Pages
+- [Full Menu Categories](https://www.thequeendairymenu.us/#full-menu)
+- [Blizzard Treats](https://www.thequeendairymenu.us/categories/blizzard-treats)
+- [Burgers & Sandwiches](https://www.thequeendairymenu.us/categories/burgers-sandwiches)
+- [Combos & Deals](https://www.thequeendairymenu.us/combos)
+- [About Us & Editorial Policy](https://www.thequeendairymenu.us/about)
+- [Disclaimer](https://www.thequeendairymenu.us/disclaimer)
+
+## Site Data
+- [Sitemap](https://www.thequeendairymenu.us/sitemap-index.xml)

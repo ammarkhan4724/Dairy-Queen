@@ -1,9 +1,13 @@
 ---
 import '../styles/global.css';
+import '@fontsource-variable/playfair-display';
+import '@fontsource-variable/inter';
 
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  schema?: any;
   ogImage?: string;
   article?: boolean;
 }
@@ -11,6 +15,8 @@ interface Props {
 const { 
   title, 
   description = "The complete independent Dairy Queen menu reference with updated 2026 prices, calorie counts, sizes, and insider ordering tips at thequeendairymenu.us.",
+  keywords = "Dairy Queen menu, Dairy Queen prices 2026, DQ menu with prices, Dairy Queen calories, DQ Blizzard flavors, fast food menu, DQ cakes",
+  schema,
   ogImage = "/logo.svg",
   article = false
 } = Astro.props;
@@ -22,13 +28,28 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google Search Console Verification Placeholder -->
+  <meta name="google-site-verification" content="ADD_YOUR_GSC_VERIFICATION_CODE_HERE" />
+  
+  <!-- Google Analytics (GA4) Placeholder -->
+  <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {keywords && <meta name="keywords" content={keywords} />}
   <link rel="canonical" href={canonicalURL} />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg?v=2" />
+  <link rel="apple-touch-icon" href="/Images/favicon.svg?v=2" />
+  <meta name="theme-color" content="#FAF7F2" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:site_name" content="The Queen Dairy Menu" />
@@ -45,13 +66,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImageURL} />
 
-  <!-- High-Performance Typography: Ultra-fast System Font Stack + Asynchronous Display Font (0ms Render-Blocking, 100/100 Core Web Vitals) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  </noscript>
+  <!-- High-Performance Typography: Self-Hosted Variable Fonts for 100/100 Core Web Vitals -->
 
   <!-- Base Schema.org JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -68,9 +83,10 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
           "@id": "https://www.thequeendairymenu.us/#organization",
           "name": "The Queen Dairy Menu",
           "url": "https://www.thequeendairymenu.us/",
-          "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
+          "logo": "https://www.thequeendairymenu.us/Images/favicon.svg?v=2"
         }
-      }
+      },
+      ...(schema ? (Array.isArray(schema) ? schema : [schema]) : [])
     ]
   })} />
 </head>
@@ -186,8 +202,8 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
         <!-- Col 1: About -->
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/Images/favicon.svg" alt="The Queen Dairy Menu Emblem" width="38" height="38" class="w-9 h-9 rounded-xl shadow-xs" />
-            <span class="text-2xl font-bold tracking-tight text-white" style="font-family: 'Bebas Neue', sans-serif;">
+            <img src="/Images/favicon.svg?v=2" alt="The Queen Dairy Menu Emblem" width="38" height="38" class="w-9 h-9 rounded-xl shadow-xs" />
+            <span class="text-2xl font-bold tracking-tight text-white" style="font-family: 'Playfair Display', serif;">
               QUEEN DAIRY <span class="text-[#0E7490]">MENU</span>
             </span>
           </div>
@@ -206,7 +222,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
 
         <!-- Col 2: Sweet Treats -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Sweet Treats</h4>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Sweet Treats</h4>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/categories/blizzard-treats" class="hover:text-amber-400 transition-colors">Blizzard® Treats</a></li>
             <li><a href="/categories/classic-treats" class="hover:text-amber-400 transition-colors">Cones & Sundaes</a></li>
@@ -217,7 +233,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
 
         <!-- Col 3: Food & Grill -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Food & Grill</h4>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Food & Grill</h4>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/categories/burgers-sandwiches" class="hover:text-amber-400 transition-colors">Signature Stackburgers</a></li>
             <li><a href="/categories/chicken-strip-baskets" class="hover:text-amber-400 transition-colors">Chicken Strip Baskets</a></li>
@@ -229,7 +245,7 @@ const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeend
 
         <!-- Col 4: Quick Links -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.08em;">Resources</h4>
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Resources</h4>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/combos" class="hover:text-amber-400 transition-colors">$7 Meal Deal Guide</a></li>
             <li><a href="/locations" class="hover:text-amber-400 transition-colors">Store Finder</a></li>
