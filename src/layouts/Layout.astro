@@ -22,12 +22,13 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
-const canonicalURL = 'https://www.thequeendairymenu.us' + (currentPath === '/' ? '/' : currentPath.replace(/\/$/, ''));
-const ogImageURL = ogImage.startsWith('http') ? ogImage : `https://www.thequeendairymenu.us${ogImage}`;
+const canonicalURL = new URL(currentPath === '/' ? '/' : currentPath.replace(/\/$/, ''), Astro.site || 'https://www.thequeendairymenu.us');
+const ogImageURL = new URL(ogImage, Astro.site || 'https://www.thequeendairymenu.us');
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <link rel="sitemap" href="/sitemap-index.xml" />
   <!-- Google Search Console Verification Placeholder -->
   <meta name="google-site-verification" content="ADD_YOUR_GSC_VERIFICATION_CODE_HERE" />
   
