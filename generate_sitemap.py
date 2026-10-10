@@ -1,4 +1,5 @@
 import os, glob
+from datetime import datetime
 
 SRC_DIR = r'src\pages'
 domain = 'https://www.thequeendairymenu.us'
@@ -44,7 +45,7 @@ xml_lines = [
 for url, prio, freq in urls:
     xml_lines.append('  <url>')
     xml_lines.append(f'    <loc>{url}</loc>')
-    xml_lines.append('    <lastmod>2026-09-22</lastmod>')
+    xml_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
     xml_lines.append(f'    <changefreq>{freq}</changefreq>')
     xml_lines.append(f'    <priority>{prio}</priority>')
     xml_lines.append('  </url>')
