@@ -17,7 +17,7 @@ const {
   description = "The complete independent Dairy Queen menu reference with updated 2026 prices, calorie counts, sizes, and insider ordering tips at thequeendairymenu.us.",
   keywords = "Dairy Queen menu, Dairy Queen prices 2026, DQ menu with prices, Dairy Queen calories, DQ Blizzard flavors, fast food menu, DQ cakes",
   schema,
-  ogImage = "/logo.svg",
+  ogImage = "/Images/og-share.png",
   article = false
 } = Astro.props;
 
@@ -74,18 +74,41 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://www.thequeendairymenu
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://www.thequeendairymenu.us/#organization",
+        "name": "The Queen Dairy Menu",
+        "url": "https://www.thequeendairymenu.us/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.thequeendairymenu.us/logo.svg",
+          "width": 260,
+          "height": 56
+        },
+        "description": "Comprehensive independent 2026 Dairy Queen menu with up-to-date prices, calories, and ordering guides."
+      },
+      {
         "@type": "WebSite",
         "@id": "https://www.thequeendairymenu.us/#website",
         "url": "https://www.thequeendairymenu.us/",
         "name": "The Queen Dairy Menu",
         "description": "Comprehensive independent 2026 Dairy Queen menu with up-to-date prices, calories, and ordering guides.",
         "publisher": {
-          "@type": "Organization",
-          "@id": "https://www.thequeendairymenu.us/#organization",
-          "name": "The Queen Dairy Menu",
-          "url": "https://www.thequeendairymenu.us/",
-          "logo": "https://www.thequeendairymenu.us/Images/favicon.svg?v=2"
+          "@id": "https://www.thequeendairymenu.us/#organization"
         }
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "@id": "https://www.thequeendairymenu.us/#navigation",
+        "name": ["Home", "Full Menu", "Blizzard Treats", "Burgers & Sandwiches", "Breakfast Menu", "Store Locations", "Guides & Blog"],
+        "url": [
+          "https://www.thequeendairymenu.us/",
+          "https://www.thequeendairymenu.us/#full-menu",
+          "https://www.thequeendairymenu.us/categories/blizzard-treats",
+          "https://www.thequeendairymenu.us/categories/burgers-sandwiches",
+          "https://www.thequeendairymenu.us/categories/breakfast",
+          "https://www.thequeendairymenu.us/locations",
+          "https://www.thequeendairymenu.us/blog"
+        ]
       },
       ...(schema ? (Array.isArray(schema) ? schema : [schema]) : [])
     ]
@@ -223,7 +246,7 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://www.thequeendairymenu
 
         <!-- Col 2: Sweet Treats -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Sweet Treats</h4>
+          <h3 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Sweet Treats</h3>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/categories/blizzard-treats" class="hover:text-amber-400 transition-colors">Blizzard® Treats</a></li>
             <li><a href="/categories/classic-treats" class="hover:text-amber-400 transition-colors">Cones & Sundaes</a></li>
@@ -234,7 +257,7 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://www.thequeendairymenu
 
         <!-- Col 3: Food & Grill -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Food & Grill</h4>
+          <h3 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Food & Grill</h3>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/categories/burgers-sandwiches" class="hover:text-amber-400 transition-colors">Signature Stackburgers</a></li>
             <li><a href="/categories/chicken-strip-baskets" class="hover:text-amber-400 transition-colors">Chicken Strip Baskets</a></li>
@@ -246,7 +269,7 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://www.thequeendairymenu
 
         <!-- Col 4: Quick Links -->
         <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Resources</h4>
+          <h3 class="text-white font-bold text-sm tracking-wider uppercase mb-4" style="font-family: 'Playfair Display', serif; letter-spacing: 0.08em;">Resources</h3>
           <ul class="space-y-2.5 text-sm">
             <li><a href="/combos" class="hover:text-amber-400 transition-colors">$7 Meal Deal Guide</a></li>
             <li><a href="/locations" class="hover:text-amber-400 transition-colors">Store Finder</a></li>

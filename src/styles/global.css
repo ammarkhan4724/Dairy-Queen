@@ -238,6 +238,7 @@ body {
     @apply lg:col-span-5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-black/40;
   }
 
+  .hero-card h2,
   .hero-card h3 {
     @apply text-xl font-bold text-white mb-6 border-b border-white/15 pb-4 flex items-center gap-2;
     font-family: var(--font-display);
@@ -511,6 +512,7 @@ body {
     @apply scale-110 rotate-3;
   }
 
+  .pillar h3,
   .pillar h4 {
     @apply text-base font-bold text-[#0B1E38] mb-2 uppercase tracking-wider;
   }
@@ -525,7 +527,8 @@ body {
   }
 
   .faq-item {
-    @apply bg-white rounded-2xl border border-[#EDE4D6] shadow-[0_2px_8px_rgba(0, 0, 0, 0.02)] transition-all duration-300 overflow-hidden;
+    @apply bg-white rounded-2xl border border-[#EDE4D6] transition-all duration-300 overflow-hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   }
 
   .faq-item:hover {
