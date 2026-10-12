@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Country Breakfast Platter",
       "image": "https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp",
       "description": "Scrambled eggs, breakfast sausage, crispy hash browns, and a warm biscuit smothered in country gravy. The most complete breakfast on the DQ menu at $6.99. Select locations only.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "183"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "6.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/country-breakfast-platter"
+        "url": "https://www.thequeendairymenu.us/items/country-breakfast-platter",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

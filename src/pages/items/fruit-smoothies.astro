@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Premium Fruit Smoothies",
       "image": "https://www.thequeendairymenu.us/Images/fruit-smoothies.webp",
       "description": "Real fruit blended into thick, smooth drinks — no artificial colors or flavors. Available in Strawberry Banana, Mango Pineapple, and Triple Berry at $3.99 Small.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "151"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/fruit-smoothies"
+        "url": "https://www.thequeendairymenu.us/items/fruit-smoothies",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Chocolate Chip Cookie Dough Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/cookie-dough-blizzard.webp",
       "description": "DQ soft serve blended with chocolate chip cookie dough pieces — the same unbaked, sweet, slightly chewy dough that makes raw cookie batter irresistible. Richer and more calorie-dense than the Oreo Blizzard, and for very good reason.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "142"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/cookie-dough-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/cookie-dough-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

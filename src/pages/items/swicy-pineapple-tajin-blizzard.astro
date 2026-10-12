@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Swicy Pineapple with Tajín Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/swicy-pineapple-tajin-blizzard.webp",
       "description": "Sweet pineapple flavor with Tajín® chili-lime seasoning blended into DQ soft serve. DQ's boldest, most unexpected seasonal Blizzard — and the lowest-calorie Summer 2026 seasonal. From $4.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "193"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/swicy-pineapple-tajin-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/swicy-pineapple-tajin-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

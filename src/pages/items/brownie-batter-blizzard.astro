@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Brownie Batter Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/brownie-batter-blizzard.webp",
       "description": "Brownie batter pieces and chocolate fudge blended throughout DQ soft serve. A deep, rich chocolate experience — not as heavy as Cookie Dough but more intense than M&amp;M's. From $3.99 Mini.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "165"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/brownie-batter-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/brownie-batter-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

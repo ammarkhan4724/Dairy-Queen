@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Peppermint Bark Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/peppermint-bark-blizzard.webp",
       "description": "Peppermint bark pieces — dark chocolate and white chocolate with crushed peppermint — blended into DQ soft serve. DQ's signature winter holiday Blizzard, typically available November through January. From $3.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "204"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/peppermint-bark-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/peppermint-bark-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

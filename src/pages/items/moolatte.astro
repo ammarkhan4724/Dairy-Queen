@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "MooLatté Frozen Blended Coffee",
       "image": "https://www.thequeendairymenu.us/Images/moolatte.webp",
       "description": "DQ soft serve blended with real coffee into a rich, creamy frozen drink. Available in Mocha, Caramel, and Vanilla — the DQ answer to a frozen coffee shop drink at a better price point.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "218"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.29",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/moolatte"
+        "url": "https://www.thequeendairymenu.us/items/moolatte",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

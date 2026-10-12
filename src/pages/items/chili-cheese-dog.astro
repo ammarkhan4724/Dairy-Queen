@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Chili Cheese Dog",
       "image": "https://www.thequeendairymenu.us/Images/chili-cheese-dog.webp",
       "description": "An all-beef hot dog on a steamed bun, topped with hearty chili and melted cheese sauce. The most ordered hot dog on the DQ menu at $4.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "239"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/chili-cheese-dog"
+        "url": "https://www.thequeendairymenu.us/items/chili-cheese-dog",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

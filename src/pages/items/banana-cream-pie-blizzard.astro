@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Banana Cream Pie Blizzard",
       "image": "https://www.thequeendairymenu.us/Images/banana-cream-pie-blizzard.webp",
       "description": "Graham cracker crumbles and banana cream flavoring blended into DQ vanilla soft serve — the flavors of banana cream pie in a cup. A richer, fruitier alternative to the standard candy-bar Blizzard.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "187"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/banana-cream-pie-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/banana-cream-pie-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

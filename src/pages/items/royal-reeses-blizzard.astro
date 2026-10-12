@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Royal Reese's Peanut Butter Cup Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/royal-reeses-blizzard.webp",
       "description": "All the rich peanut butter-and-chocolate of the standard Reese's Blizzard, upgraded with a warm peanut butter-filled center. The Royal Reese's is the boldest peanut butter experience on the DQ menu. From $3.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "137"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/royal-reeses-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/royal-reeses-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

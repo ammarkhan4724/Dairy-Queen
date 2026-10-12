@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "DQ Cheese Curds",
       "image": "https://www.thequeendairymenu.us/Images/cheese-curds.webp",
       "description": "Wisconsin-style white cheddar cheese curds battered and deep-fried until golden on the outside, gooey and melted on the inside. The best shareable snack on the DQ menu at $3.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "173"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/cheese-curds"
+        "url": "https://www.thequeendairymenu.us/items/cheese-curds",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Caramel Sundae",
       "image": "https://www.thequeendairymenu.us/Images/caramel-sundae.webp",
       "description": "Rich caramel topping drizzled generously over DQ's creamy vanilla soft serve. Sweet, buttery, and indulgent — the Caramel Sundae is the richest of DQ's three sundae options.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "229"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.79",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/caramel-sundae"
+        "url": "https://www.thequeendairymenu.us/items/caramel-sundae",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

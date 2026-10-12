@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Royal Rocky Road Trip Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/royal-rocky-road-trip-blizzard.webp",
       "description": "Brownie pieces, almond pieces, and marshmallow topping blended into DQ soft serve, with a warm hot fudge-filled center. The Rocky Road experience — in Royal Blizzard form. From $3.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "197"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/royal-rocky-road-trip-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/royal-rocky-road-trip-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

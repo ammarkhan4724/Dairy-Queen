@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Oreo Cookie Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/oreo-blizzard.webp",
       "description": "DQ's signature vanilla soft serve hand-blended completely through with real Oreo cookie pieces. Smooth, creamy, with chocolate-and-cream crunch in every spoonful from first to last. Thick enough to hold upside down — guaranteed or it's free.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "216"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/oreo-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/oreo-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

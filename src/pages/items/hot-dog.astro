@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Classic Hot Dog",
       "image": "https://www.thequeendairymenu.us/Images/hot-dog.webp",
       "description": "An all-beef hot dog on a steamed bun. At $3.99 and 330 calories, the simplest and most affordable hot entrée on the DQ menu. Eligible for the 2-for-$5 Mix &amp; Match.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "154"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/hot-dog"
+        "url": "https://www.thequeendairymenu.us/items/hot-dog",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

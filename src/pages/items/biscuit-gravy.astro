@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Biscuit &amp; Gravy",
       "image": "https://www.thequeendairymenu.us/Images/biscuit-gravy.webp",
       "description": "A warm, flaky buttermilk biscuit halved and smothered in DQ's creamy white country gravy. $3.99, 400 calories — the most affordable breakfast on the DQ menu and a Southern comfort classic.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "137"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/biscuit-gravy"
+        "url": "https://www.thequeendairymenu.us/items/biscuit-gravy",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Mint Oreo Blizzard",
       "image": "https://www.thequeendairymenu.us/Images/mint-oreo-blizzard.webp",
       "description": "Oreo cookie pieces and cool mint flavoring blended into DQ vanilla soft serve. The mint-chocolate-cookie Blizzard — same Oreo crunch as the classic, plus a refreshing mint layer.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "131"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/mint-oreo-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/mint-oreo-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

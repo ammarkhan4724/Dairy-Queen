@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Two Cheese Deluxe Stackburger",
       "image": "https://www.thequeendairymenu.us/Images/two-cheese-deluxe-stackburger.webp",
       "description": "Two 100% seasoned beef Stackburger patties with two slices of melted American cheese, ketchup, onion, pickles, and mustard. The Two Cheese Deluxe is DQ's classic no-frills double cheeseburger in the Signature Stackburger lineup, priced at $8.29.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "176"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "8.29",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/two-cheese-deluxe-stackburger"
+        "url": "https://www.thequeendairymenu.us/items/two-cheese-deluxe-stackburger",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

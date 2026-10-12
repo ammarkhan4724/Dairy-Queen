@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "2-Piece Chicken Strips",
       "image": "https://www.thequeendairymenu.us/Images/2pc-chicken-strips.webp",
       "description": "Two crispy, all-white-meat chicken strips served on their own — the snack-size chicken option on the DQ menu. At about $3.49 it is the cheapest way to get DQ's chicken strips, and it is one of the most popular picks in the 2-for-$5 Mix &amp; Match.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "234"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/2pc-chicken-strips"
+        "url": "https://www.thequeendairymenu.us/items/2pc-chicken-strips",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

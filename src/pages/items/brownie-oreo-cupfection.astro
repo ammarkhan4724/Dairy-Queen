@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Brownie &amp; Oreo Cupfection",
       "image": "https://www.thequeendairymenu.us/Images/brownie-oreo-cupfection.webp",
       "description": "DQ soft serve layered in a cup with brownie pieces, Oreo cookie crumble, and fudge. The Cupfection is DQ's take on a build-your-own sundae in cup form — richer and more filling than a standard sundae, and one of the most indulgent single-serve treats on the menu at 820 calories.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "128"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "6.29",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/brownie-oreo-cupfection"
+        "url": "https://www.thequeendairymenu.us/items/brownie-oreo-cupfection",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

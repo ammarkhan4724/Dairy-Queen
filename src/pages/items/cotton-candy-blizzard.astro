@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Cotton Candy Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/cotton-candy-blizzard.webp",
       "description": "Cotton candy-flavored topping swirled through DQ vanilla soft serve. The lightest-calorie Summer 2026 seasonal Blizzard at 460 cal (Small). Sweet, fun, refreshing. From $4.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "180"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/cotton-candy-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/cotton-candy-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

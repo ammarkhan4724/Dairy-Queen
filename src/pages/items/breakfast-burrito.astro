@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Breakfast Burrito",
       "image": "https://www.thequeendairymenu.us/Images/breakfast-burrito.webp",
       "description": "Scrambled eggs, breakfast sausage or bacon, and melted cheese wrapped in a flour tortilla. At $3.49 and 380 cal, the DQ Breakfast Burrito is the lightest and most affordable item on the DQ breakfast menu.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "157"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/breakfast-burrito"
+        "url": "https://www.thequeendairymenu.us/items/breakfast-burrito",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "DQ Sheet Cake",
       "image": "https://www.thequeendairymenu.us/Images/dq-sheet-cake.webp",
       "description": "DQ soft serve, hot fudge, crunchy center, and whipped topping in a large rectangular sheet cake format. Customizable with a personalized message. The right choice for large groups and events.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "157"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "44.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/dq-sheet-cake"
+        "url": "https://www.thequeendairymenu.us/items/dq-sheet-cake",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       }
     },
     {

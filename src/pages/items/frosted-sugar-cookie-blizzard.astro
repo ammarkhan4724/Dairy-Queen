@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Frosted Sugar Cookie Blizzard",
       "image": "https://www.thequeendairymenu.us/Images/frosted-sugar-cookie-blizzard.webp",
       "description": "Sugar cookie pieces and pink frosting blended into DQ soft serve. Sweet, nostalgic, and festive — the Blizzard that tastes like holiday baking season. Available November through January.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "178"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/frosted-sugar-cookie-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/frosted-sugar-cookie-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Cookie Dough Blizzard Cake",
       "image": "https://www.thequeendairymenu.us/Images/cookie-dough-blizzard-cake.webp",
       "description": "Chocolate chip cookie dough pieces distributed throughout the soft serve layers of a full 10-inch DQ celebration cake. The Blizzard Cake version of DQ's #2 Blizzard flavor. Order 48 hours ahead.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "136"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "35.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/cookie-dough-blizzard-cake"
+        "url": "https://www.thequeendairymenu.us/items/cookie-dough-blizzard-cake",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       }
     },
     {

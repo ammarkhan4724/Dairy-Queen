@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Snickers Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/snickers-blizzard.webp",
       "description": "Snickers® pieces blended throughout DQ soft serve — you get peanuts, caramel, nougat, and chocolate all in one Blizzard. The most complex flavor profile in the candy-bar Blizzard tier. From $3.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "172"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/snickers-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/snickers-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "S'mores Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/smores-blizzard.webp",
       "description": "Graham cracker pieces, marshmallow topping, and chocolate fudge blended into DQ soft serve. The campfire classic in Blizzard form — one of the most-requested returning seasonal flavors. From $4.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "129"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/smores-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/smores-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

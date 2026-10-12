@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Strawberry Sundae",
       "image": "https://www.thequeendairymenu.us/Images/strawberry-sundae.webp",
       "description": "Fresh strawberry topping poured generously over DQ's creamy vanilla soft serve. At 280 calories, the Strawberry Sundae is the lightest of DQ's three sundae options — and still a genuinely satisfying dessert.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "156"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.79",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/strawberry-sundae"
+        "url": "https://www.thequeendairymenu.us/items/strawberry-sundae",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

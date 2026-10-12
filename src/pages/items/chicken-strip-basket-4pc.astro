@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "4-Piece Chicken Strip Basket",
       "image": "https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp",
       "description": "Four crispy hand-battered white-meat chicken strips served with seasoned fries, Texas toast, and your choice of dipping sauce. The complete DQ meal — $9.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "237"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "9.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/chicken-strip-basket-4pc"
+        "url": "https://www.thequeendairymenu.us/items/chicken-strip-basket-4pc",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

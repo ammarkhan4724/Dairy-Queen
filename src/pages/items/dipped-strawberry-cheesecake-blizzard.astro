@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Dipped Strawberry Cheesecake Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/dipped-strawberry-cheesecake-blizzard.webp",
       "description": "Strawberry cheesecake pieces and a chocolate fudge swirl blended into DQ soft serve. One of DQ's Summer 2026 seasonal Blizzards — available for a limited time only. From $4.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "113"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/dipped-strawberry-cheesecake-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/dipped-strawberry-cheesecake-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

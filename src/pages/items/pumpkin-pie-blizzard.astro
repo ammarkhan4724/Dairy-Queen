@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Pumpkin Pie Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/pumpkin-pie-blizzard.webp",
       "description": "Pumpkin pie pieces, cinnamon spice, and graham cracker crumble blended into DQ's creamy vanilla soft serve. DQ's most anticipated fall seasonal — available for a limited time in autumn 2026.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "129"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/pumpkin-pie-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/pumpkin-pie-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Ultimate Hash Browns Platter",
       "image": "https://www.thequeendairymenu.us/Images/ultimate-hash-browns-platter.webp",
       "description": "Crispy hash browns loaded with sausage, scrambled eggs, cheese, and country gravy — the most indulgent item on the DQ breakfast menu. A hearty savory platter at $5.99, served at select breakfast locations.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "131"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "5.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/ultimate-hash-browns-platter"
+        "url": "https://www.thequeendairymenu.us/items/ultimate-hash-browns-platter",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

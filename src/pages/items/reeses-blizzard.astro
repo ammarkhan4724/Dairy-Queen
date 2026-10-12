@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Reese's Peanut Butter Cup Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/reeses-blizzard.webp",
       "description": "Reese's Peanut Butter Cup pieces blended throughout DQ vanilla soft serve. One of the richest and most calorie-dense Blizzards on the menu — and one of the most consistently loved. Small starts at $4.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "177"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/reeses-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/reeses-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Turtle Pecan Cluster Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/turtle-pecan-blizzard.webp",
       "description": "Pecans, caramel topping, and hot fudge blended into DQ soft serve — the nutty, rich Blizzard for guests who want more complexity than a candy bar. From $3.99 Mini.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "124"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/turtle-pecan-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/turtle-pecan-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Pretzel Sticks with Zesty Queso",
       "image": "https://www.thequeendairymenu.us/Images/pretzel-sticks-queso.webp",
       "description": "Warm, soft pretzel sticks with a bold zesty queso cheese dipping sauce. One of the most popular snack sides on the DQ menu at $3.99 — eligible for the 2-for-$5 Mix &amp; Match.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "118"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/pretzel-sticks-queso"
+        "url": "https://www.thequeendairymenu.us/items/pretzel-sticks-queso",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

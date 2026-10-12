@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Mushroom Swiss Stackburger",
       "image": "https://www.thequeendairymenu.us/Images/mushroom-swiss-stackburger.webp",
       "description": "A 100% real beef patty topped with sautéed mushrooms, melted Swiss cheese, and a creamy mushroom sauce on a toasted bun. The most savory, umami-forward Stackburger on the DQ menu.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "155"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "9.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/mushroom-swiss-stackburger"
+        "url": "https://www.thequeendairymenu.us/items/mushroom-swiss-stackburger",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

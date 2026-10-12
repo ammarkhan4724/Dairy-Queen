@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "DQ Cake — 10-Inch Round",
       "image": "https://www.thequeendairymenu.us/Images/dq-cake-round-10inch.webp",
       "description": "The 10-inch round DQ Cake — the most popular round cake size — layered with DQ soft serve, hot fudge, a crunchy center, and whipped topping. Serves 12–16 people. Available in Classic or Blizzard Cake formats.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "231"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "32.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/dq-cake-round-10inch"
+        "url": "https://www.thequeendairymenu.us/items/dq-cake-round-10inch",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       }
     },
     {

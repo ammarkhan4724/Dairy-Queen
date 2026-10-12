@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Backyard Bacon Ranch Stackburger",
       "image": "https://www.thequeendairymenu.us/Images/backyard-bacon-ranch-stackburger.webp",
       "description": "Crispy bacon, cheddar cheese, ranch sauce, lettuce, and tomato on a 100% real beef patty. The most popular Stackburger after the FlameThrower — bold flavors without the heat. $9.99.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "133"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "9.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/backyard-bacon-ranch-stackburger"
+        "url": "https://www.thequeendairymenu.us/items/backyard-bacon-ranch-stackburger",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

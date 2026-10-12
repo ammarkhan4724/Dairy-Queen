@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "M&amp;M's Milk Chocolate Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/mm-blizzard.webp",
       "description": "M&amp;M's® Milk Chocolate candy pieces — the full candy, shell and all — blended throughout DQ vanilla soft serve. One of the most visually fun Blizzards and a consistent favorite with younger guests. From $3.49 Mini.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "216"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/mm-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/mm-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

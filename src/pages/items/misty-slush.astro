@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Arctic Rush Misty Slush",
       "image": "https://www.thequeendairymenu.us/Images/misty-slush.webp",
       "description": "A flavored frozen slush drink in Cherry, Blue Raspberry, Lemon-Lime, and seasonal varieties. At $2.39 for a Small, it is the most affordable drink on the DQ menu — and one of the most refreshing.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "225"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "2.39",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/misty-slush"
+        "url": "https://www.thequeendairymenu.us/items/misty-slush",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

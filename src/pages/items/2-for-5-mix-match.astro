@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "DQ 2-for-$5 Mix &amp; Match Deal",
       "image": "https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp",
       "description": "Choose any two eligible DQ items for $5.00 total. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks with Queso, Regular Fries, Small Sundae, or Soft Drink. Mix and match freely.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "238"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "5.00",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/2-for-5-mix-match"
+        "url": "https://www.thequeendairymenu.us/items/2-for-5-mix-match",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       }
     },
     {

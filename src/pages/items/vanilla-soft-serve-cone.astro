@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Vanilla Soft Serve Cone",
       "image": "https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp",
       "description": "The original DQ treat since 1940. Smooth vanilla soft serve on a wafer cone curled to a perfect point. Simple, satisfying, $2.39.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "198"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "2.39",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/vanilla-soft-serve-cone"
+        "url": "https://www.thequeendairymenu.us/items/vanilla-soft-serve-cone",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

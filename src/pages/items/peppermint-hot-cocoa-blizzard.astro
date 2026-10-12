@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Peppermint Hot Cocoa Blizzard",
       "image": "https://www.thequeendairymenu.us/Images/peppermint-hot-cocoa-blizzard.webp",
       "description": "Hot cocoa-flavored pieces and candy cane peppermint blended into DQ soft serve. DQ's signature winter holiday Blizzard — the frozen version of a warm holiday drink. Available November through January.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "138"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/peppermint-hot-cocoa-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/peppermint-hot-cocoa-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

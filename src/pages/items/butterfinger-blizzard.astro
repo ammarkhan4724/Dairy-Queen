@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Butterfinger Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/butterfinger-blizzard.webp",
       "description": "Butterfinger® pieces — the distinctive crispy, flaky peanut-butter wafer candy — blended throughout DQ vanilla soft serve. One of the lighter-calorie candy-bar Blizzards at 470 cal (Small). From $3.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "170"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/butterfinger-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/butterfinger-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

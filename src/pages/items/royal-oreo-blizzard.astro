@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Royal Oreo Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/royal-oreo-blizzard.webp",
       "description": "The Royal Oreo® Blizzard upgrades DQ's #1 best-seller with a warm hot fudge-filled center. You get all the Oreo cookie crunch of the original — then hit a pocket of warm fudge in the middle that transforms the experience. Approximately $1 more than the standard Oreo Blizzard per size.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "232"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/royal-oreo-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/royal-oreo-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

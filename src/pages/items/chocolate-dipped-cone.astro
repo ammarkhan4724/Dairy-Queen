@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Chocolate Dipped Cone",
       "image": "https://www.thequeendairymenu.us/Images/chocolate-dipped-cone.webp",
       "description": "DQ vanilla soft serve dipped into warm chocolate that hardens into a crispy shell the moment it contacts the cold soft serve. Shatters on the first bite. Simple perfection at $3.19.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "193"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.19",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/chocolate-dipped-cone"
+        "url": "https://www.thequeendairymenu.us/items/chocolate-dipped-cone",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

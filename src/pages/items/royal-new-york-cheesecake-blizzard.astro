@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Royal New York Cheesecake Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/royal-new-york-cheesecake-blizzard.webp",
       "description": "Cheesecake pieces and graham cracker crumble blended into DQ's soft serve, with a warm strawberry-filled center that bursts mid-cup. One of the lighter Royal Blizzards at 460 cal (Small) — creamy, fruity, and more elegant than candy-bar options.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "170"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/royal-new-york-cheesecake-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/royal-new-york-cheesecake-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

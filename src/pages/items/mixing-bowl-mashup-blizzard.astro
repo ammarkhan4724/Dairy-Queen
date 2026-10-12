@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Mixing Bowl Mashup Blizzard Treat",
       "image": "https://www.thequeendairymenu.us/Images/mixing-bowl-mashup-blizzard.webp",
       "description": "Multiple fan-favorite Blizzard mix-ins combined in one cup. DQ's Summer 2026 mashup Blizzard — several beloved toppings working together in a single, complex dessert. From $4.49.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "212"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.6",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/mixing-bowl-mashup-blizzard"
+        "url": "https://www.thequeendairymenu.us/items/mixing-bowl-mashup-blizzard",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

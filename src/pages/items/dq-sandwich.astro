@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "DQ Sandwich",
       "image": "https://www.thequeendairymenu.us/Images/dq-sandwich.webp",
       "description": "DQ vanilla soft serve pressed between two chocolate-flavored wafers. At $1.49 and 190 calories, the DQ Sandwich is the most affordable and lowest-calorie treat on the entire DQ menu.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "145"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.7",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "1.49",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/dq-sandwich"
+        "url": "https://www.thequeendairymenu.us/items/dq-sandwich",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

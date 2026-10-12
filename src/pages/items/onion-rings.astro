@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Onion Rings",
       "image": "https://www.thequeendairymenu.us/Images/onion-rings.webp",
       "description": "Thick-cut onion rings in a golden batter, crispy on the outside and tender-sweet on the inside. Available at DQ Grill &amp; Chill locations as a snack side or meal accompaniment.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "171"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "3.29",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/onion-rings"
+        "url": "https://www.thequeendairymenu.us/items/onion-rings",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",

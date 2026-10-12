@@ -8,12 +8,38 @@ const itemSchema = {
       "name": "Peanut Buster Parfait",
       "image": "https://www.thequeendairymenu.us/Images/peanut-buster-parfait.webp",
       "description": "Alternating layers of DQ soft serve, salted roasted peanuts, and hot fudge in a parfait cup. 710 calories of salty-sweet indulgence. On the DQ menu since 1968.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dairy Queen"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "170"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "The Queen Dairy Menu"
+        }
+      },
       "offers": {
         "@type": "Offer",
         "price": "4.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/peanut-buster-parfait"
+        "url": "https://www.thequeendairymenu.us/items/peanut-buster-parfait",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       },
       "nutrition": {
         "@type": "NutritionInformation",
