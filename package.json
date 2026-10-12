@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "start": "astro preview"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.8",
