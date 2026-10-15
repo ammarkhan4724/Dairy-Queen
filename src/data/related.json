@@ -1,16 +1,16 @@
 {
  "/items/2-for-5-mix-match": [
   {
-   "title": "Banana Split",
-   "href": "/items/banana-split"
+   "title": "2Pc Chicken Strips",
+   "href": "/items/2pc-chicken-strips"
   },
   {
-   "title": "Brownie Batter Blizzard",
-   "href": "/items/brownie-batter-blizzard"
+   "title": "7 Meal Deal",
+   "href": "/items/7-meal-deal"
   },
   {
-   "title": "Cookie Dough Blizzard Cake",
-   "href": "/items/cookie-dough-blizzard-cake"
+   "title": "Backyard Bacon Ranch Stackburger",
+   "href": "/items/backyard-bacon-ranch-stackburger"
   },
   {
    "title": "DQ meal deals & combos",
@@ -23,24 +23,24 @@
  ],
  "/items/2pc-chicken-strips": [
   {
-   "title": "4-Piece Chicken Strip Basket",
-   "href": "/items/chicken-strip-basket-4pc"
+   "title": "7 Meal Deal",
+   "href": "/items/7-meal-deal"
   },
   {
-   "title": "6-Piece Chicken Strip Basket",
-   "href": "/items/chicken-strip-basket-6pc"
+   "title": "Backyard Bacon Ranch Stackburger",
+   "href": "/items/backyard-bacon-ranch-stackburger"
   },
   {
-   "title": "Honey BBQ Chicken Strip Basket",
-   "href": "/items/honey-bbq-chicken-strip-basket"
+   "title": "Banana Cream Pie Blizzard",
+   "href": "/items/banana-cream-pie-blizzard"
   },
   {
-   "title": "Chicken Strip Baskets menu & prices",
-   "href": "/categories/chicken-strip-baskets"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ Chicken Strip Basket review",
-   "href": "/blog/dq-chicken-strip-baskets-review"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/7-meal-deal": [
@@ -49,78 +49,78 @@
    "href": "/items/backyard-bacon-ranch-stackburger"
   },
   {
-   "title": "Chili Cheese Dog",
-   "href": "/items/chili-cheese-dog"
+   "title": "Banana Cream Pie Blizzard",
+   "href": "/items/banana-cream-pie-blizzard"
   },
   {
-   "title": "Crispy Chicken Sandwich",
-   "href": "/items/crispy-chicken-sandwich"
+   "title": "Banana Split",
+   "href": "/items/banana-split"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/backyard-bacon-ranch-stackburger": [
   {
-   "title": "Chili Cheese Dog",
-   "href": "/items/chili-cheese-dog"
+   "title": "Banana Cream Pie Blizzard",
+   "href": "/items/banana-cream-pie-blizzard"
   },
   {
-   "title": "Crispy Chicken Sandwich",
-   "href": "/items/crispy-chicken-sandwich"
+   "title": "Banana Split",
+   "href": "/items/banana-split"
   },
   {
-   "title": "Double Cheeseburger",
-   "href": "/items/double-cheeseburger"
+   "title": "Biscuit Gravy",
+   "href": "/items/biscuit-gravy"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/banana-cream-pie-blizzard": [
   {
-   "title": "Butterfinger® Blizzard® Treat",
-   "href": "/items/butterfinger-blizzard"
+   "title": "Banana Split",
+   "href": "/items/banana-split"
   },
   {
-   "title": "Choco Brownie Extreme Blizzard",
-   "href": "/items/choco-brownie-blizzard"
+   "title": "Biscuit Gravy",
+   "href": "/items/biscuit-gravy"
   },
   {
-   "title": "Confetti Cake Blizzard® Treat",
-   "href": "/items/confetti-cake-blizzard"
+   "title": "Breakfast Burrito",
+   "href": "/items/breakfast-burrito"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/banana-split": [
   {
+   "title": "Biscuit Gravy",
+   "href": "/items/biscuit-gravy"
+  },
+  {
+   "title": "Breakfast Burrito",
+   "href": "/items/breakfast-burrito"
+  },
+  {
    "title": "Brownie Batter Blizzard",
    "href": "/items/brownie-batter-blizzard"
-  },
-  {
-   "title": "Cookie Dough Blizzard Cake",
-   "href": "/items/cookie-dough-blizzard-cake"
-  },
-  {
-   "title": "Cookie Dough Blizzard",
-   "href": "/items/cookie-dough-blizzard"
   },
   {
    "title": "DQ meal deals & combos",
@@ -137,56 +137,56 @@
    "href": "/items/breakfast-burrito"
   },
   {
-   "title": "Buttermilk Pancake Platter",
-   "href": "/items/buttermilk-pancake-platter"
+   "title": "Brownie Batter Blizzard",
+   "href": "/items/brownie-batter-blizzard"
   },
   {
-   "title": "Country Breakfast Platter",
-   "href": "/items/country-breakfast-platter"
+   "title": "Brownie Oreo Cupfection",
+   "href": "/items/brownie-oreo-cupfection"
   },
   {
-   "title": "Breakfast menu & prices",
-   "href": "/categories/breakfast"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ breakfast hours & menu",
-   "href": "/blog/dq-breakfast-hours-menu"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/breakfast-burrito": [
   {
-   "title": "Buttermilk Pancake Platter",
-   "href": "/items/buttermilk-pancake-platter"
+   "title": "Brownie Batter Blizzard",
+   "href": "/items/brownie-batter-blizzard"
   },
   {
-   "title": "Country Breakfast Platter",
-   "href": "/items/country-breakfast-platter"
+   "title": "Brownie Oreo Cupfection",
+   "href": "/items/brownie-oreo-cupfection"
   },
   {
-   "title": "Ultimate Hash Browns Platter",
-   "href": "/items/ultimate-hash-browns-platter"
+   "title": "Buster Bar",
+   "href": "/items/buster-bar"
   },
   {
-   "title": "Breakfast menu & prices",
-   "href": "/categories/breakfast"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ breakfast hours & menu",
-   "href": "/blog/dq-breakfast-hours-menu"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/brownie-batter-blizzard": [
   {
-   "title": "Cookie Dough Blizzard Cake",
-   "href": "/items/cookie-dough-blizzard-cake"
+   "title": "Brownie Oreo Cupfection",
+   "href": "/items/brownie-oreo-cupfection"
   },
   {
-   "title": "Cookie Dough Blizzard",
-   "href": "/items/cookie-dough-blizzard"
+   "title": "Buster Bar",
+   "href": "/items/buster-bar"
   },
   {
-   "title": "Dq Cake Round 10Inch",
-   "href": "/items/dq-cake-round-10inch"
+   "title": "Butterfinger Blizzard",
+   "href": "/items/butterfinger-blizzard"
   },
   {
    "title": "DQ meal deals & combos",
@@ -199,288 +199,288 @@
  ],
  "/items/brownie-oreo-cupfection": [
   {
-   "title": "Buster Bar® Treat",
+   "title": "Buster Bar",
    "href": "/items/buster-bar"
   },
   {
-   "title": "Caramel Sundae",
-   "href": "/items/caramel-sundae"
+   "title": "Butterfinger Blizzard",
+   "href": "/items/butterfinger-blizzard"
   },
   {
-   "title": "Chocolate Dipped Cone",
-   "href": "/items/chocolate-dipped-cone"
+   "title": "Buttermilk Pancake Platter",
+   "href": "/items/buttermilk-pancake-platter"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/buster-bar": [
   {
+   "title": "Butterfinger Blizzard",
+   "href": "/items/butterfinger-blizzard"
+  },
+  {
+   "title": "Buttermilk Pancake Platter",
+   "href": "/items/buttermilk-pancake-platter"
+  },
+  {
    "title": "Caramel Sundae",
    "href": "/items/caramel-sundae"
   },
   {
-   "title": "Chocolate Dipped Cone",
-   "href": "/items/chocolate-dipped-cone"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Dilly® Bar",
-   "href": "/items/dilly-bar"
-  },
-  {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/butterfinger-blizzard": [
   {
-   "title": "Choco Brownie Extreme Blizzard",
-   "href": "/items/choco-brownie-blizzard"
+   "title": "Buttermilk Pancake Platter",
+   "href": "/items/buttermilk-pancake-platter"
   },
   {
-   "title": "Confetti Cake Blizzard® Treat",
-   "href": "/items/confetti-cake-blizzard"
+   "title": "Caramel Sundae",
+   "href": "/items/caramel-sundae"
   },
   {
-   "title": "Cotton Candy Blizzard® Treat",
-   "href": "/items/cotton-candy-blizzard"
+   "title": "Cheese Curds",
+   "href": "/items/cheese-curds"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/buttermilk-pancake-platter": [
   {
-   "title": "Country Breakfast Platter",
-   "href": "/items/country-breakfast-platter"
+   "title": "Caramel Sundae",
+   "href": "/items/caramel-sundae"
   },
   {
-   "title": "Ultimate Hash Browns Platter",
-   "href": "/items/ultimate-hash-browns-platter"
+   "title": "Cheese Curds",
+   "href": "/items/cheese-curds"
   },
   {
-   "title": "Biscuit & Gravy",
-   "href": "/items/biscuit-gravy"
+   "title": "Chicken Strip Basket 4Pc",
+   "href": "/items/chicken-strip-basket-4pc"
   },
   {
-   "title": "Breakfast menu & prices",
-   "href": "/categories/breakfast"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ breakfast hours & menu",
-   "href": "/blog/dq-breakfast-hours-menu"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/caramel-sundae": [
+  {
+   "title": "Cheese Curds",
+   "href": "/items/cheese-curds"
+  },
+  {
+   "title": "Chicken Strip Basket 4Pc",
+   "href": "/items/chicken-strip-basket-4pc"
+  },
+  {
+   "title": "Chicken Strip Basket 6Pc",
+   "href": "/items/chicken-strip-basket-6pc"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/cheese-curds": [
+  {
+   "title": "Chicken Strip Basket 4Pc",
+   "href": "/items/chicken-strip-basket-4pc"
+  },
+  {
+   "title": "Chicken Strip Basket 6Pc",
+   "href": "/items/chicken-strip-basket-6pc"
+  },
+  {
+   "title": "Chili Cheese Dog",
+   "href": "/items/chili-cheese-dog"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/chicken-strip-basket-4pc": [
+  {
+   "title": "Chicken Strip Basket 6Pc",
+   "href": "/items/chicken-strip-basket-6pc"
+  },
+  {
+   "title": "Chili Cheese Dog",
+   "href": "/items/chili-cheese-dog"
+  },
+  {
+   "title": "Choco Brownie Blizzard",
+   "href": "/items/choco-brownie-blizzard"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/chicken-strip-basket-6pc": [
+  {
+   "title": "Chili Cheese Dog",
+   "href": "/items/chili-cheese-dog"
+  },
+  {
+   "title": "Choco Brownie Blizzard",
+   "href": "/items/choco-brownie-blizzard"
+  },
   {
    "title": "Chocolate Dipped Cone",
    "href": "/items/chocolate-dipped-cone"
   },
   {
-   "title": "Dilly® Bar",
-   "href": "/items/dilly-bar"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ® Sandwich",
-   "href": "/items/dq-sandwich"
-  },
-  {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
-  }
- ],
- "/items/cheese-curds": [
-  {
-   "title": "Onion Rings",
-   "href": "/items/onion-rings"
-  },
-  {
-   "title": "DQ Regular Fries",
-   "href": "/items/regular-fries"
-  },
-  {
-   "title": "Side Salad",
-   "href": "/items/side-salad"
-  },
-  {
-   "title": "Snacks & sides menu & prices",
-   "href": "/categories/snacks-sides"
-  },
-  {
-   "title": "Dairy Queen calories & nutrition guide",
-   "href": "/blog/dairy-queen-calories-nutrition-guide"
-  }
- ],
- "/items/chicken-strip-basket-4pc": [
-  {
-   "title": "6-Piece Chicken Strip Basket",
-   "href": "/items/chicken-strip-basket-6pc"
-  },
-  {
-   "title": "Honey BBQ Chicken Strip Basket",
-   "href": "/items/honey-bbq-chicken-strip-basket"
-  },
-  {
-   "title": "2-Piece Chicken Strips",
-   "href": "/items/2pc-chicken-strips"
-  },
-  {
-   "title": "Chicken Strip Baskets menu & prices",
-   "href": "/categories/chicken-strip-baskets"
-  },
-  {
-   "title": "DQ Chicken Strip Basket review",
-   "href": "/blog/dq-chicken-strip-baskets-review"
-  }
- ],
- "/items/chicken-strip-basket-6pc": [
-  {
-   "title": "Honey BBQ Chicken Strip Basket",
-   "href": "/items/honey-bbq-chicken-strip-basket"
-  },
-  {
-   "title": "2-Piece Chicken Strips",
-   "href": "/items/2pc-chicken-strips"
-  },
-  {
-   "title": "4-Piece Chicken Strip Basket",
-   "href": "/items/chicken-strip-basket-4pc"
-  },
-  {
-   "title": "Chicken Strip Baskets menu & prices",
-   "href": "/categories/chicken-strip-baskets"
-  },
-  {
-   "title": "DQ Chicken Strip Basket review",
-   "href": "/blog/dq-chicken-strip-baskets-review"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/chili-cheese-dog": [
   {
-   "title": "Crispy Chicken Sandwich",
-   "href": "/items/crispy-chicken-sandwich"
+   "title": "Choco Brownie Blizzard",
+   "href": "/items/choco-brownie-blizzard"
   },
   {
-   "title": "Double Cheeseburger",
-   "href": "/items/double-cheeseburger"
+   "title": "Chocolate Dipped Cone",
+   "href": "/items/chocolate-dipped-cone"
   },
   {
-   "title": "FlameThrower® Signature Stackburger",
-   "href": "/items/flamethrower-stackburger"
+   "title": "Chocolate Shake",
+   "href": "/items/chocolate-shake"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/choco-brownie-blizzard": [
   {
-   "title": "Confetti Cake Blizzard® Treat",
+   "title": "Chocolate Dipped Cone",
+   "href": "/items/chocolate-dipped-cone"
+  },
+  {
+   "title": "Chocolate Shake",
+   "href": "/items/chocolate-shake"
+  },
+  {
+   "title": "Confetti Cake Blizzard",
    "href": "/items/confetti-cake-blizzard"
   },
   {
-   "title": "Cotton Candy Blizzard® Treat",
-   "href": "/items/cotton-candy-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Dipped Strawberry Cheesecake Blizzard® Treat",
-   "href": "/items/dipped-strawberry-cheesecake-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/chocolate-dipped-cone": [
   {
-   "title": "Dilly® Bar",
-   "href": "/items/dilly-bar"
+   "title": "Chocolate Shake",
+   "href": "/items/chocolate-shake"
   },
   {
-   "title": "DQ® Sandwich",
-   "href": "/items/dq-sandwich"
+   "title": "Confetti Cake Blizzard",
+   "href": "/items/confetti-cake-blizzard"
   },
   {
-   "title": "Hot Fudge Sundae",
-   "href": "/items/hot-fudge-sundae"
+   "title": "Cookie Dough Blizzard Cake",
+   "href": "/items/cookie-dough-blizzard-cake"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/chocolate-shake": [
   {
-   "title": "Premium Fruit Smoothies",
-   "href": "/items/fruit-smoothies"
+   "title": "Confetti Cake Blizzard",
+   "href": "/items/confetti-cake-blizzard"
   },
   {
-   "title": "Arctic Rush® Misty® Slush",
-   "href": "/items/misty-slush"
+   "title": "Cookie Dough Blizzard Cake",
+   "href": "/items/cookie-dough-blizzard-cake"
   },
   {
-   "title": "MooLatté® Frozen Blended Coffee",
-   "href": "/items/moolatte"
+   "title": "Cookie Dough Blizzard",
+   "href": "/items/cookie-dough-blizzard"
   },
   {
-   "title": "Shakes, drinks & MooLatté menu",
-   "href": "/categories/drinks"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ shakes & MooLatté guide",
-   "href": "/blog/dq-shake-moolatte-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/confetti-cake-blizzard": [
   {
-   "title": "Cotton Candy Blizzard® Treat",
+   "title": "Cookie Dough Blizzard Cake",
+   "href": "/items/cookie-dough-blizzard-cake"
+  },
+  {
+   "title": "Cookie Dough Blizzard",
+   "href": "/items/cookie-dough-blizzard"
+  },
+  {
+   "title": "Cotton Candy Blizzard",
    "href": "/items/cotton-candy-blizzard"
   },
   {
-   "title": "Dipped Strawberry Cheesecake Blizzard® Treat",
-   "href": "/items/dipped-strawberry-cheesecake-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Frosted Sugar Cookie Blizzard®",
-   "href": "/items/frosted-sugar-cookie-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/cookie-dough-blizzard-cake": [
@@ -489,12 +489,12 @@
    "href": "/items/cookie-dough-blizzard"
   },
   {
-   "title": "Dq Cake Round 10Inch",
-   "href": "/items/dq-cake-round-10inch"
+   "title": "Cotton Candy Blizzard",
+   "href": "/items/cotton-candy-blizzard"
   },
   {
-   "title": "Dq Cake Round 8Inch",
-   "href": "/items/dq-cake-round-8inch"
+   "title": "Country Breakfast Platter",
+   "href": "/items/country-breakfast-platter"
   },
   {
    "title": "DQ meal deals & combos",
@@ -507,16 +507,16 @@
  ],
  "/items/cookie-dough-blizzard": [
   {
-   "title": "Dq Cake Round 10Inch",
-   "href": "/items/dq-cake-round-10inch"
+   "title": "Cotton Candy Blizzard",
+   "href": "/items/cotton-candy-blizzard"
   },
   {
-   "title": "Dq Cake Round 8Inch",
-   "href": "/items/dq-cake-round-8inch"
+   "title": "Country Breakfast Platter",
+   "href": "/items/country-breakfast-platter"
   },
   {
-   "title": "Dq Sheet Cake",
-   "href": "/items/dq-sheet-cake"
+   "title": "Crispy Chicken Sandwich",
+   "href": "/items/crispy-chicken-sandwich"
   },
   {
    "title": "DQ meal deals & combos",
@@ -529,134 +529,134 @@
  ],
  "/items/cotton-candy-blizzard": [
   {
-   "title": "Dipped Strawberry Cheesecake Blizzard® Treat",
-   "href": "/items/dipped-strawberry-cheesecake-blizzard"
+   "title": "Country Breakfast Platter",
+   "href": "/items/country-breakfast-platter"
   },
   {
-   "title": "Frosted Sugar Cookie Blizzard®",
-   "href": "/items/frosted-sugar-cookie-blizzard"
+   "title": "Crispy Chicken Sandwich",
+   "href": "/items/crispy-chicken-sandwich"
   },
   {
-   "title": "Heath® Bar Blizzard Treat",
-   "href": "/items/heath-blizzard"
+   "title": "Dilly Bar",
+   "href": "/items/dilly-bar"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/country-breakfast-platter": [
   {
-   "title": "Ultimate Hash Browns Platter",
-   "href": "/items/ultimate-hash-browns-platter"
+   "title": "Crispy Chicken Sandwich",
+   "href": "/items/crispy-chicken-sandwich"
   },
   {
-   "title": "Biscuit & Gravy",
-   "href": "/items/biscuit-gravy"
+   "title": "Dilly Bar",
+   "href": "/items/dilly-bar"
   },
   {
-   "title": "Breakfast Burrito",
-   "href": "/items/breakfast-burrito"
+   "title": "Dipped Strawberry Cheesecake Blizzard",
+   "href": "/items/dipped-strawberry-cheesecake-blizzard"
   },
   {
-   "title": "Breakfast menu & prices",
-   "href": "/categories/breakfast"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ breakfast hours & menu",
-   "href": "/blog/dq-breakfast-hours-menu"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/crispy-chicken-sandwich": [
+  {
+   "title": "Dilly Bar",
+   "href": "/items/dilly-bar"
+  },
+  {
+   "title": "Dipped Strawberry Cheesecake Blizzard",
+   "href": "/items/dipped-strawberry-cheesecake-blizzard"
+  },
   {
    "title": "Double Cheeseburger",
    "href": "/items/double-cheeseburger"
   },
   {
-   "title": "FlameThrower® Signature Stackburger",
-   "href": "/items/flamethrower-stackburger"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Grilled Chicken Sandwich",
-   "href": "/items/grilled-chicken-sandwich"
-  },
-  {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
-  },
-  {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/dilly-bar": [
   {
-   "title": "DQ® Sandwich",
-   "href": "/items/dq-sandwich"
+   "title": "Dipped Strawberry Cheesecake Blizzard",
+   "href": "/items/dipped-strawberry-cheesecake-blizzard"
   },
   {
-   "title": "Hot Fudge Sundae",
-   "href": "/items/hot-fudge-sundae"
+   "title": "Double Cheeseburger",
+   "href": "/items/double-cheeseburger"
   },
   {
-   "title": "Non-Dairy Dilly® Bar",
-   "href": "/items/non-dairy-dilly-bar"
+   "title": "Dq Cake Round 10Inch",
+   "href": "/items/dq-cake-round-10inch"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/dipped-strawberry-cheesecake-blizzard": [
   {
-   "title": "Frosted Sugar Cookie Blizzard®",
-   "href": "/items/frosted-sugar-cookie-blizzard"
+   "title": "Double Cheeseburger",
+   "href": "/items/double-cheeseburger"
   },
   {
-   "title": "Heath® Bar Blizzard Treat",
-   "href": "/items/heath-blizzard"
+   "title": "Dq Cake Round 10Inch",
+   "href": "/items/dq-cake-round-10inch"
   },
   {
-   "title": "Mint Oreo Blizzard®",
-   "href": "/items/mint-oreo-blizzard"
+   "title": "Dq Cake Round 8Inch",
+   "href": "/items/dq-cake-round-8inch"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/double-cheeseburger": [
   {
-   "title": "FlameThrower® Signature Stackburger",
-   "href": "/items/flamethrower-stackburger"
+   "title": "Dq Cake Round 10Inch",
+   "href": "/items/dq-cake-round-10inch"
   },
   {
-   "title": "Grilled Chicken Sandwich",
-   "href": "/items/grilled-chicken-sandwich"
+   "title": "Dq Cake Round 8Inch",
+   "href": "/items/dq-cake-round-8inch"
   },
   {
-   "title": "Classic Hot Dog",
-   "href": "/items/hot-dog"
+   "title": "Dq Sandwich",
+   "href": "/items/dq-sandwich"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/dq-cake-round-10inch": [
@@ -665,12 +665,12 @@
    "href": "/items/dq-cake-round-8inch"
   },
   {
-   "title": "Dq Sheet Cake",
-   "href": "/items/dq-sheet-cake"
+   "title": "Dq Sandwich",
+   "href": "/items/dq-sandwich"
   },
   {
-   "title": "Oreo Blizzard Cake",
-   "href": "/items/oreo-blizzard-cake"
+   "title": "Dq Sheet Cake",
+   "href": "/items/dq-sheet-cake"
   },
   {
    "title": "DQ meal deals & combos",
@@ -683,16 +683,16 @@
  ],
  "/items/dq-cake-round-8inch": [
   {
+   "title": "Dq Sandwich",
+   "href": "/items/dq-sandwich"
+  },
+  {
    "title": "Dq Sheet Cake",
    "href": "/items/dq-sheet-cake"
   },
   {
-   "title": "Oreo Blizzard Cake",
-   "href": "/items/oreo-blizzard-cake"
-  },
-  {
-   "title": "Pretzel Sticks Queso",
-   "href": "/items/pretzel-sticks-queso"
+   "title": "Flamethrower Stackburger",
+   "href": "/items/flamethrower-stackburger"
   },
   {
    "title": "DQ meal deals & combos",
@@ -705,38 +705,38 @@
  ],
  "/items/dq-sandwich": [
   {
-   "title": "Hot Fudge Sundae",
-   "href": "/items/hot-fudge-sundae"
+   "title": "Dq Sheet Cake",
+   "href": "/items/dq-sheet-cake"
   },
   {
-   "title": "Non-Dairy Dilly® Bar",
-   "href": "/items/non-dairy-dilly-bar"
+   "title": "Flamethrower Stackburger",
+   "href": "/items/flamethrower-stackburger"
   },
   {
-   "title": "Peanut Buster® Parfait",
-   "href": "/items/peanut-buster-parfait"
+   "title": "Frosted Sugar Cookie Blizzard",
+   "href": "/items/frosted-sugar-cookie-blizzard"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/dq-sheet-cake": [
   {
-   "title": "Oreo Blizzard Cake",
-   "href": "/items/oreo-blizzard-cake"
+   "title": "Flamethrower Stackburger",
+   "href": "/items/flamethrower-stackburger"
   },
   {
-   "title": "Pretzel Sticks Queso",
-   "href": "/items/pretzel-sticks-queso"
+   "title": "Frosted Sugar Cookie Blizzard",
+   "href": "/items/frosted-sugar-cookie-blizzard"
   },
   {
-   "title": "DQ 2-for-$5 Mix & Match Deal",
-   "href": "/items/2-for-5-mix-match"
+   "title": "Fruit Smoothies",
+   "href": "/items/fruit-smoothies"
   },
   {
    "title": "DQ meal deals & combos",
@@ -749,183 +749,165 @@
  ],
  "/items/flamethrower-stackburger": [
   {
+   "title": "Frosted Sugar Cookie Blizzard",
+   "href": "/items/frosted-sugar-cookie-blizzard"
+  },
+  {
+   "title": "Fruit Smoothies",
+   "href": "/items/fruit-smoothies"
+  },
+  {
    "title": "Grilled Chicken Sandwich",
    "href": "/items/grilled-chicken-sandwich"
   },
   {
-   "title": "Classic Hot Dog",
-   "href": "/items/hot-dog"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Mushroom Swiss Stackburger",
-   "href": "/items/mushroom-swiss-stackburger"
-  },
-  {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
-  },
-  {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/frosted-sugar-cookie-blizzard": [
   {
-   "title": "Heath® Bar Blizzard Treat",
+   "title": "Fruit Smoothies",
+   "href": "/items/fruit-smoothies"
+  },
+  {
+   "title": "Grilled Chicken Sandwich",
+   "href": "/items/grilled-chicken-sandwich"
+  },
+  {
+   "title": "Heath Blizzard",
    "href": "/items/heath-blizzard"
   },
   {
-   "title": "Mint Oreo Blizzard®",
-   "href": "/items/mint-oreo-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Mixing Bowl Mashup Blizzard® Treat",
-   "href": "/items/mixing-bowl-mashup-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/fruit-smoothies": [
   {
-   "title": "Arctic Rush® Misty® Slush",
-   "href": "/items/misty-slush"
+   "title": "Grilled Chicken Sandwich",
+   "href": "/items/grilled-chicken-sandwich"
   },
   {
-   "title": "MooLatté® Frozen Blended Coffee",
-   "href": "/items/moolatte"
+   "title": "Heath Blizzard",
+   "href": "/items/heath-blizzard"
   },
   {
-   "title": "Orange Julius® Original",
-   "href": "/items/orange-julius"
+   "title": "Honey Bbq Chicken Strip Basket",
+   "href": "/items/honey-bbq-chicken-strip-basket"
   },
   {
-   "title": "Shakes, drinks & MooLatté menu",
-   "href": "/categories/drinks"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ shakes & MooLatté guide",
-   "href": "/blog/dq-shake-moolatte-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/grilled-chicken-sandwich": [
   {
-   "title": "Classic Hot Dog",
+   "title": "Heath Blizzard",
+   "href": "/items/heath-blizzard"
+  },
+  {
+   "title": "Honey Bbq Chicken Strip Basket",
+   "href": "/items/honey-bbq-chicken-strip-basket"
+  },
+  {
+   "title": "Hot Dog",
    "href": "/items/hot-dog"
   },
   {
-   "title": "Mushroom Swiss Stackburger",
-   "href": "/items/mushroom-swiss-stackburger"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Original Cheeseburger",
-   "href": "/items/original-cheeseburger"
-  },
-  {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
-  },
-  {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/heath-blizzard": [
   {
-   "title": "Mint Oreo Blizzard®",
-   "href": "/items/mint-oreo-blizzard"
+   "title": "Honey Bbq Chicken Strip Basket",
+   "href": "/items/honey-bbq-chicken-strip-basket"
   },
   {
-   "title": "Mixing Bowl Mashup Blizzard® Treat",
-   "href": "/items/mixing-bowl-mashup-blizzard"
+   "title": "Hot Dog",
+   "href": "/items/hot-dog"
   },
   {
-   "title": "M&M's® Milk Chocolate Blizzard® Treat",
-   "href": "/items/mm-blizzard"
+   "title": "Hot Fudge Sundae",
+   "href": "/items/hot-fudge-sundae"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/honey-bbq-chicken-strip-basket": [
   {
-   "title": "2-Piece Chicken Strips",
-   "href": "/items/2pc-chicken-strips"
+   "title": "Hot Dog",
+   "href": "/items/hot-dog"
   },
   {
-   "title": "4-Piece Chicken Strip Basket",
-   "href": "/items/chicken-strip-basket-4pc"
+   "title": "Hot Fudge Sundae",
+   "href": "/items/hot-fudge-sundae"
   },
   {
-   "title": "6-Piece Chicken Strip Basket",
-   "href": "/items/chicken-strip-basket-6pc"
+   "title": "Kids Cheeseburger Meal",
+   "href": "/items/kids-cheeseburger-meal"
   },
   {
-   "title": "Chicken Strip Baskets menu & prices",
-   "href": "/categories/chicken-strip-baskets"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ Chicken Strip Basket review",
-   "href": "/blog/dq-chicken-strip-baskets-review"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/hot-dog": [
   {
-   "title": "Mushroom Swiss Stackburger",
-   "href": "/items/mushroom-swiss-stackburger"
+   "title": "Hot Fudge Sundae",
+   "href": "/items/hot-fudge-sundae"
   },
   {
-   "title": "Original Cheeseburger",
-   "href": "/items/original-cheeseburger"
+   "title": "Kids Cheeseburger Meal",
+   "href": "/items/kids-cheeseburger-meal"
   },
   {
-   "title": "Two Cheese Deluxe Stackburger",
-   "href": "/items/two-cheese-deluxe-stackburger"
+   "title": "Kids Chicken Strips Meal",
+   "href": "/items/kids-chicken-strips-meal"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/hot-fudge-sundae": [
   {
-   "title": "Non-Dairy Dilly® Bar",
-   "href": "/items/non-dairy-dilly-bar"
+   "title": "Kids Cheeseburger Meal",
+   "href": "/items/kids-cheeseburger-meal"
   },
   {
-   "title": "Peanut Buster® Parfait",
-   "href": "/items/peanut-buster-parfait"
-  },
-  {
-   "title": "Strawberry Sundae",
-   "href": "/items/strawberry-sundae"
-  },
-  {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
-  }
- ],
- "/items/kids-cheeseburger-meal": [
-  {
-   "title": "Kids 2-Piece Chicken Strips Meal",
+   "title": "Kids Chicken Strips Meal",
    "href": "/items/kids-chicken-strips-meal"
   },
   {
@@ -933,8 +915,30 @@
    "href": "/items/kids-hot-dog-meal"
   },
   {
-   "title": "Kids meals menu & prices",
-   "href": "/categories/kids-meals"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/kids-cheeseburger-meal": [
+  {
+   "title": "Kids Chicken Strips Meal",
+   "href": "/items/kids-chicken-strips-meal"
+  },
+  {
+   "title": "Kids Hot Dog Meal",
+   "href": "/items/kids-hot-dog-meal"
+  },
+  {
+   "title": "Mint Oreo Blizzard",
+   "href": "/items/mint-oreo-blizzard"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
    "title": "DQ $7 Meal Deal & 2 for $5 guide",
@@ -947,12 +951,16 @@
    "href": "/items/kids-hot-dog-meal"
   },
   {
-   "title": "Kids Cheeseburger Meal",
-   "href": "/items/kids-cheeseburger-meal"
+   "title": "Mint Oreo Blizzard",
+   "href": "/items/mint-oreo-blizzard"
   },
   {
-   "title": "Kids meals menu & prices",
-   "href": "/categories/kids-meals"
+   "title": "Misty Slush",
+   "href": "/items/misty-slush"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
    "title": "DQ $7 Meal Deal & 2 for $5 guide",
@@ -961,16 +969,20 @@
  ],
  "/items/kids-hot-dog-meal": [
   {
-   "title": "Kids Cheeseburger Meal",
-   "href": "/items/kids-cheeseburger-meal"
+   "title": "Mint Oreo Blizzard",
+   "href": "/items/mint-oreo-blizzard"
   },
   {
-   "title": "Kids 2-Piece Chicken Strips Meal",
-   "href": "/items/kids-chicken-strips-meal"
+   "title": "Misty Slush",
+   "href": "/items/misty-slush"
   },
   {
-   "title": "Kids meals menu & prices",
-   "href": "/categories/kids-meals"
+   "title": "Mixing Bowl Mashup Blizzard",
+   "href": "/items/mixing-bowl-mashup-blizzard"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
    "title": "DQ $7 Meal Deal & 2 for $5 guide",
@@ -979,214 +991,214 @@
  ],
  "/items/mint-oreo-blizzard": [
   {
-   "title": "Mixing Bowl Mashup Blizzard® Treat",
+   "title": "Misty Slush",
+   "href": "/items/misty-slush"
+  },
+  {
+   "title": "Mixing Bowl Mashup Blizzard",
    "href": "/items/mixing-bowl-mashup-blizzard"
   },
   {
-   "title": "M&M's® Milk Chocolate Blizzard® Treat",
+   "title": "Mm Blizzard",
    "href": "/items/mm-blizzard"
   },
   {
-   "title": "Oreo® Cookie Blizzard® Treat",
-   "href": "/items/oreo-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/misty-slush": [
   {
-   "title": "MooLatté® Frozen Blended Coffee",
+   "title": "Mixing Bowl Mashup Blizzard",
+   "href": "/items/mixing-bowl-mashup-blizzard"
+  },
+  {
+   "title": "Mm Blizzard",
+   "href": "/items/mm-blizzard"
+  },
+  {
+   "title": "Moolatte",
    "href": "/items/moolatte"
   },
   {
-   "title": "Orange Julius® Original",
-   "href": "/items/orange-julius"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Soft Drinks",
-   "href": "/items/soft-drinks"
-  },
-  {
-   "title": "Shakes, drinks & MooLatté menu",
-   "href": "/categories/drinks"
-  },
-  {
-   "title": "DQ shakes & MooLatté guide",
-   "href": "/blog/dq-shake-moolatte-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/mixing-bowl-mashup-blizzard": [
   {
-   "title": "M&M's® Milk Chocolate Blizzard® Treat",
+   "title": "Mm Blizzard",
    "href": "/items/mm-blizzard"
   },
   {
-   "title": "Oreo® Cookie Blizzard® Treat",
-   "href": "/items/oreo-blizzard"
+   "title": "Moolatte",
+   "href": "/items/moolatte"
   },
   {
-   "title": "Peppermint Bark Blizzard® Treat",
-   "href": "/items/peppermint-bark-blizzard"
+   "title": "Mushroom Swiss Stackburger",
+   "href": "/items/mushroom-swiss-stackburger"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/mm-blizzard": [
   {
-   "title": "Oreo® Cookie Blizzard® Treat",
-   "href": "/items/oreo-blizzard"
+   "title": "Moolatte",
+   "href": "/items/moolatte"
   },
   {
-   "title": "Peppermint Bark Blizzard® Treat",
-   "href": "/items/peppermint-bark-blizzard"
+   "title": "Mushroom Swiss Stackburger",
+   "href": "/items/mushroom-swiss-stackburger"
   },
   {
-   "title": "Peppermint Hot Cocoa Blizzard®",
-   "href": "/items/peppermint-hot-cocoa-blizzard"
+   "title": "Non Dairy Dilly Bar",
+   "href": "/items/non-dairy-dilly-bar"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/moolatte": [
   {
-   "title": "Orange Julius® Original",
-   "href": "/items/orange-julius"
+   "title": "Mushroom Swiss Stackburger",
+   "href": "/items/mushroom-swiss-stackburger"
   },
   {
-   "title": "Soft Drinks",
-   "href": "/items/soft-drinks"
+   "title": "Non Dairy Dilly Bar",
+   "href": "/items/non-dairy-dilly-bar"
   },
   {
-   "title": "DQ Chocolate Shake",
-   "href": "/items/chocolate-shake"
+   "title": "Onion Rings",
+   "href": "/items/onion-rings"
   },
   {
-   "title": "Shakes, drinks & MooLatté menu",
-   "href": "/categories/drinks"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ shakes & MooLatté guide",
-   "href": "/blog/dq-shake-moolatte-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/mushroom-swiss-stackburger": [
+  {
+   "title": "Non Dairy Dilly Bar",
+   "href": "/items/non-dairy-dilly-bar"
+  },
+  {
+   "title": "Onion Rings",
+   "href": "/items/onion-rings"
+  },
+  {
+   "title": "Orange Julius",
+   "href": "/items/orange-julius"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/non-dairy-dilly-bar": [
+  {
+   "title": "Onion Rings",
+   "href": "/items/onion-rings"
+  },
+  {
+   "title": "Orange Julius",
+   "href": "/items/orange-julius"
+  },
+  {
+   "title": "Oreo Blizzard Cake",
+   "href": "/items/oreo-blizzard-cake"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/onion-rings": [
+  {
+   "title": "Orange Julius",
+   "href": "/items/orange-julius"
+  },
+  {
+   "title": "Oreo Blizzard Cake",
+   "href": "/items/oreo-blizzard-cake"
+  },
+  {
+   "title": "Oreo Blizzard",
+   "href": "/items/oreo-blizzard"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/orange-julius": [
+  {
+   "title": "Oreo Blizzard Cake",
+   "href": "/items/oreo-blizzard-cake"
+  },
+  {
+   "title": "Oreo Blizzard",
+   "href": "/items/oreo-blizzard"
+  },
   {
    "title": "Original Cheeseburger",
    "href": "/items/original-cheeseburger"
   },
   {
-   "title": "Two Cheese Deluxe Stackburger",
-   "href": "/items/two-cheese-deluxe-stackburger"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ $7 Meal Deal",
-   "href": "/items/7-meal-deal"
-  },
-  {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
-  },
-  {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
-  }
- ],
- "/items/non-dairy-dilly-bar": [
-  {
-   "title": "Peanut Buster® Parfait",
-   "href": "/items/peanut-buster-parfait"
-  },
-  {
-   "title": "Strawberry Sundae",
-   "href": "/items/strawberry-sundae"
-  },
-  {
-   "title": "Vanilla Soft Serve Cone",
-   "href": "/items/vanilla-soft-serve-cone"
-  },
-  {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
-  }
- ],
- "/items/onion-rings": [
-  {
-   "title": "DQ Regular Fries",
-   "href": "/items/regular-fries"
-  },
-  {
-   "title": "Side Salad",
-   "href": "/items/side-salad"
-  },
-  {
-   "title": "DQ Cheese Curds",
-   "href": "/items/cheese-curds"
-  },
-  {
-   "title": "Snacks & sides menu & prices",
-   "href": "/categories/snacks-sides"
-  },
-  {
-   "title": "Dairy Queen calories & nutrition guide",
-   "href": "/blog/dairy-queen-calories-nutrition-guide"
-  }
- ],
- "/items/orange-julius": [
-  {
-   "title": "Soft Drinks",
-   "href": "/items/soft-drinks"
-  },
-  {
-   "title": "DQ Chocolate Shake",
-   "href": "/items/chocolate-shake"
-  },
-  {
-   "title": "Premium Fruit Smoothies",
-   "href": "/items/fruit-smoothies"
-  },
-  {
-   "title": "Shakes, drinks & MooLatté menu",
-   "href": "/categories/drinks"
-  },
-  {
-   "title": "DQ shakes & MooLatté guide",
-   "href": "/blog/dq-shake-moolatte-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/oreo-blizzard-cake": [
   {
-   "title": "Pretzel Sticks Queso",
-   "href": "/items/pretzel-sticks-queso"
+   "title": "Oreo Blizzard",
+   "href": "/items/oreo-blizzard"
   },
   {
-   "title": "DQ 2-for-$5 Mix & Match Deal",
-   "href": "/items/2-for-5-mix-match"
+   "title": "Original Cheeseburger",
+   "href": "/items/original-cheeseburger"
   },
   {
-   "title": "Banana Split",
-   "href": "/items/banana-split"
+   "title": "Peanut Buster Parfait",
+   "href": "/items/peanut-buster-parfait"
   },
   {
    "title": "DQ meal deals & combos",
@@ -1199,126 +1211,126 @@
  ],
  "/items/oreo-blizzard": [
   {
-   "title": "Peppermint Bark Blizzard® Treat",
+   "title": "Original Cheeseburger",
+   "href": "/items/original-cheeseburger"
+  },
+  {
+   "title": "Peanut Buster Parfait",
+   "href": "/items/peanut-buster-parfait"
+  },
+  {
+   "title": "Peppermint Bark Blizzard",
    "href": "/items/peppermint-bark-blizzard"
   },
   {
-   "title": "Peppermint Hot Cocoa Blizzard®",
-   "href": "/items/peppermint-hot-cocoa-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Pumpkin Pie Blizzard Treat",
-   "href": "/items/pumpkin-pie-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/original-cheeseburger": [
   {
-   "title": "Two Cheese Deluxe Stackburger",
-   "href": "/items/two-cheese-deluxe-stackburger"
+   "title": "Peanut Buster Parfait",
+   "href": "/items/peanut-buster-parfait"
   },
   {
-   "title": "DQ $7 Meal Deal",
-   "href": "/items/7-meal-deal"
+   "title": "Peppermint Bark Blizzard",
+   "href": "/items/peppermint-bark-blizzard"
   },
   {
-   "title": "Backyard Bacon Ranch Stackburger",
-   "href": "/items/backyard-bacon-ranch-stackburger"
+   "title": "Peppermint Hot Cocoa Blizzard",
+   "href": "/items/peppermint-hot-cocoa-blizzard"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/peanut-buster-parfait": [
   {
-   "title": "Strawberry Sundae",
-   "href": "/items/strawberry-sundae"
+   "title": "Peppermint Bark Blizzard",
+   "href": "/items/peppermint-bark-blizzard"
   },
   {
-   "title": "Vanilla Soft Serve Cone",
-   "href": "/items/vanilla-soft-serve-cone"
+   "title": "Peppermint Hot Cocoa Blizzard",
+   "href": "/items/peppermint-hot-cocoa-blizzard"
   },
   {
-   "title": "Brownie & Oreo® Cupfection",
-   "href": "/items/brownie-oreo-cupfection"
+   "title": "Pretzel Sticks Queso",
+   "href": "/items/pretzel-sticks-queso"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/peppermint-bark-blizzard": [
   {
-   "title": "Peppermint Hot Cocoa Blizzard®",
+   "title": "Peppermint Hot Cocoa Blizzard",
    "href": "/items/peppermint-hot-cocoa-blizzard"
   },
   {
-   "title": "Pumpkin Pie Blizzard Treat",
+   "title": "Pretzel Sticks Queso",
+   "href": "/items/pretzel-sticks-queso"
+  },
+  {
+   "title": "Pumpkin Pie Blizzard",
    "href": "/items/pumpkin-pie-blizzard"
   },
   {
-   "title": "Reese's® Peanut Butter Cup Blizzard® Treat",
-   "href": "/items/reeses-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/peppermint-hot-cocoa-blizzard": [
   {
-   "title": "Pumpkin Pie Blizzard Treat",
+   "title": "Pretzel Sticks Queso",
+   "href": "/items/pretzel-sticks-queso"
+  },
+  {
+   "title": "Pumpkin Pie Blizzard",
    "href": "/items/pumpkin-pie-blizzard"
   },
   {
-   "title": "Reese's® Peanut Butter Cup Blizzard® Treat",
+   "title": "Reeses Blizzard",
    "href": "/items/reeses-blizzard"
   },
   {
-   "title": "Royal New York Cheesecake Blizzard Treat",
-   "href": "/items/royal-new-york-cheesecake-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/pretzel-sticks-queso": [
   {
-   "title": "DQ 2-for-$5 Mix & Match Deal",
-   "href": "/items/2-for-5-mix-match"
+   "title": "Pumpkin Pie Blizzard",
+   "href": "/items/pumpkin-pie-blizzard"
   },
   {
-   "title": "Banana Split",
-   "href": "/items/banana-split"
+   "title": "Reeses Blizzard",
+   "href": "/items/reeses-blizzard"
   },
   {
-   "title": "Brownie Batter Blizzard",
-   "href": "/items/brownie-batter-blizzard"
+   "title": "Regular Fries",
+   "href": "/items/regular-fries"
   },
   {
    "title": "DQ meal deals & combos",
@@ -1331,398 +1343,398 @@
  ],
  "/items/pumpkin-pie-blizzard": [
   {
-   "title": "Reese's® Peanut Butter Cup Blizzard® Treat",
+   "title": "Reeses Blizzard",
    "href": "/items/reeses-blizzard"
   },
   {
-   "title": "Royal New York Cheesecake Blizzard Treat",
+   "title": "Regular Fries",
+   "href": "/items/regular-fries"
+  },
+  {
+   "title": "Royal New York Cheesecake Blizzard",
    "href": "/items/royal-new-york-cheesecake-blizzard"
   },
   {
-   "title": "Royal Oreo® Blizzard® Treat",
-   "href": "/items/royal-oreo-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/reeses-blizzard": [
   {
-   "title": "Royal New York Cheesecake Blizzard Treat",
+   "title": "Regular Fries",
+   "href": "/items/regular-fries"
+  },
+  {
+   "title": "Royal New York Cheesecake Blizzard",
    "href": "/items/royal-new-york-cheesecake-blizzard"
   },
   {
-   "title": "Royal Oreo® Blizzard® Treat",
+   "title": "Royal Oreo Blizzard",
    "href": "/items/royal-oreo-blizzard"
   },
   {
-   "title": "Royal Reese's® Peanut Butter Cup Blizzard® Treat",
-   "href": "/items/royal-reeses-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/regular-fries": [
+  {
+   "title": "Royal New York Cheesecake Blizzard",
+   "href": "/items/royal-new-york-cheesecake-blizzard"
+  },
+  {
+   "title": "Royal Oreo Blizzard",
+   "href": "/items/royal-oreo-blizzard"
+  },
+  {
+   "title": "Royal Reeses Blizzard",
+   "href": "/items/royal-reeses-blizzard"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/royal-new-york-cheesecake-blizzard": [
+  {
+   "title": "Royal Oreo Blizzard",
+   "href": "/items/royal-oreo-blizzard"
+  },
+  {
+   "title": "Royal Reeses Blizzard",
+   "href": "/items/royal-reeses-blizzard"
+  },
+  {
+   "title": "Royal Rocky Road Trip Blizzard",
+   "href": "/items/royal-rocky-road-trip-blizzard"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/royal-oreo-blizzard": [
+  {
+   "title": "Royal Reeses Blizzard",
+   "href": "/items/royal-reeses-blizzard"
+  },
+  {
+   "title": "Royal Rocky Road Trip Blizzard",
+   "href": "/items/royal-rocky-road-trip-blizzard"
+  },
   {
    "title": "Side Salad",
    "href": "/items/side-salad"
   },
   {
-   "title": "DQ Cheese Curds",
-   "href": "/items/cheese-curds"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Onion Rings",
-   "href": "/items/onion-rings"
-  },
-  {
-   "title": "Snacks & sides menu & prices",
-   "href": "/categories/snacks-sides"
-  },
-  {
-   "title": "Dairy Queen calories & nutrition guide",
-   "href": "/blog/dairy-queen-calories-nutrition-guide"
-  }
- ],
- "/items/royal-new-york-cheesecake-blizzard": [
-  {
-   "title": "Royal Oreo® Blizzard® Treat",
-   "href": "/items/royal-oreo-blizzard"
-  },
-  {
-   "title": "Royal Reese's® Peanut Butter Cup Blizzard® Treat",
-   "href": "/items/royal-reeses-blizzard"
-  },
-  {
-   "title": "Royal Rocky Road Trip Blizzard® Treat",
-   "href": "/items/royal-rocky-road-trip-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
-  }
- ],
- "/items/royal-oreo-blizzard": [
-  {
-   "title": "Royal Reese's® Peanut Butter Cup Blizzard® Treat",
-   "href": "/items/royal-reeses-blizzard"
-  },
-  {
-   "title": "Royal Rocky Road Trip Blizzard® Treat",
-   "href": "/items/royal-rocky-road-trip-blizzard"
-  },
-  {
-   "title": "S'mores Blizzard® Treat",
-   "href": "/items/smores-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/royal-reeses-blizzard": [
   {
-   "title": "Royal Rocky Road Trip Blizzard® Treat",
+   "title": "Royal Rocky Road Trip Blizzard",
    "href": "/items/royal-rocky-road-trip-blizzard"
   },
   {
-   "title": "S'mores Blizzard® Treat",
+   "title": "Side Salad",
+   "href": "/items/side-salad"
+  },
+  {
+   "title": "Smores Blizzard",
    "href": "/items/smores-blizzard"
   },
   {
-   "title": "Snickers® Blizzard® Treat",
-   "href": "/items/snickers-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/royal-rocky-road-trip-blizzard": [
   {
-   "title": "S'mores Blizzard® Treat",
+   "title": "Side Salad",
+   "href": "/items/side-salad"
+  },
+  {
+   "title": "Smores Blizzard",
    "href": "/items/smores-blizzard"
   },
   {
-   "title": "Snickers® Blizzard® Treat",
+   "title": "Snickers Blizzard",
    "href": "/items/snickers-blizzard"
   },
   {
-   "title": "Strawberry Cheesequake Blizzard®",
-   "href": "/items/strawberry-cheesequake-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/side-salad": [
   {
-   "title": "DQ Cheese Curds",
-   "href": "/items/cheese-curds"
+   "title": "Smores Blizzard",
+   "href": "/items/smores-blizzard"
   },
   {
-   "title": "Onion Rings",
-   "href": "/items/onion-rings"
+   "title": "Snickers Blizzard",
+   "href": "/items/snickers-blizzard"
   },
   {
-   "title": "DQ Regular Fries",
-   "href": "/items/regular-fries"
+   "title": "Soft Drinks",
+   "href": "/items/soft-drinks"
   },
   {
-   "title": "Snacks & sides menu & prices",
-   "href": "/categories/snacks-sides"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Dairy Queen calories & nutrition guide",
-   "href": "/blog/dairy-queen-calories-nutrition-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/smores-blizzard": [
   {
-   "title": "Snickers® Blizzard® Treat",
+   "title": "Snickers Blizzard",
    "href": "/items/snickers-blizzard"
   },
   {
-   "title": "Strawberry Cheesequake Blizzard®",
+   "title": "Soft Drinks",
+   "href": "/items/soft-drinks"
+  },
+  {
+   "title": "Strawberry Cheesequake Blizzard",
    "href": "/items/strawberry-cheesequake-blizzard"
   },
   {
-   "title": "Swicy Pineapple with Tajín® Blizzard® Treat",
-   "href": "/items/swicy-pineapple-tajin-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/snickers-blizzard": [
   {
-   "title": "Strawberry Cheesequake Blizzard®",
+   "title": "Soft Drinks",
+   "href": "/items/soft-drinks"
+  },
+  {
+   "title": "Strawberry Cheesequake Blizzard",
    "href": "/items/strawberry-cheesequake-blizzard"
   },
   {
-   "title": "Swicy Pineapple with Tajín® Blizzard® Treat",
-   "href": "/items/swicy-pineapple-tajin-blizzard"
+   "title": "Strawberry Sundae",
+   "href": "/items/strawberry-sundae"
   },
   {
-   "title": "Turtle Pecan Cluster Blizzard® Treat",
-   "href": "/items/turtle-pecan-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/soft-drinks": [
   {
-   "title": "DQ Chocolate Shake",
-   "href": "/items/chocolate-shake"
+   "title": "Strawberry Cheesequake Blizzard",
+   "href": "/items/strawberry-cheesequake-blizzard"
   },
   {
-   "title": "Premium Fruit Smoothies",
-   "href": "/items/fruit-smoothies"
+   "title": "Strawberry Sundae",
+   "href": "/items/strawberry-sundae"
   },
   {
-   "title": "Arctic Rush® Misty® Slush",
-   "href": "/items/misty-slush"
+   "title": "Swicy Pineapple Tajin Blizzard",
+   "href": "/items/swicy-pineapple-tajin-blizzard"
   },
   {
-   "title": "Shakes, drinks & MooLatté menu",
-   "href": "/categories/drinks"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ shakes & MooLatté guide",
-   "href": "/blog/dq-shake-moolatte-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/strawberry-cheesequake-blizzard": [
   {
-   "title": "Swicy Pineapple with Tajín® Blizzard® Treat",
+   "title": "Strawberry Sundae",
+   "href": "/items/strawberry-sundae"
+  },
+  {
+   "title": "Swicy Pineapple Tajin Blizzard",
    "href": "/items/swicy-pineapple-tajin-blizzard"
   },
   {
-   "title": "Turtle Pecan Cluster Blizzard® Treat",
+   "title": "Turtle Pecan Blizzard",
    "href": "/items/turtle-pecan-blizzard"
   },
   {
-   "title": "Banana Cream Pie Blizzard®",
-   "href": "/items/banana-cream-pie-blizzard"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/strawberry-sundae": [
+  {
+   "title": "Swicy Pineapple Tajin Blizzard",
+   "href": "/items/swicy-pineapple-tajin-blizzard"
+  },
+  {
+   "title": "Turtle Pecan Blizzard",
+   "href": "/items/turtle-pecan-blizzard"
+  },
+  {
+   "title": "Two Cheese Deluxe Stackburger",
+   "href": "/items/two-cheese-deluxe-stackburger"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/swicy-pineapple-tajin-blizzard": [
+  {
+   "title": "Turtle Pecan Blizzard",
+   "href": "/items/turtle-pecan-blizzard"
+  },
+  {
+   "title": "Two Cheese Deluxe Stackburger",
+   "href": "/items/two-cheese-deluxe-stackburger"
+  },
+  {
+   "title": "Ultimate Hash Browns Platter",
+   "href": "/items/ultimate-hash-browns-platter"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/turtle-pecan-blizzard": [
+  {
+   "title": "Two Cheese Deluxe Stackburger",
+   "href": "/items/two-cheese-deluxe-stackburger"
+  },
+  {
+   "title": "Ultimate Hash Browns Platter",
+   "href": "/items/ultimate-hash-browns-platter"
+  },
   {
    "title": "Vanilla Soft Serve Cone",
    "href": "/items/vanilla-soft-serve-cone"
   },
   {
-   "title": "Brownie & Oreo® Cupfection",
-   "href": "/items/brownie-oreo-cupfection"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Buster Bar® Treat",
-   "href": "/items/buster-bar"
-  },
-  {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
-  }
- ],
- "/items/swicy-pineapple-tajin-blizzard": [
-  {
-   "title": "Turtle Pecan Cluster Blizzard® Treat",
-   "href": "/items/turtle-pecan-blizzard"
-  },
-  {
-   "title": "Banana Cream Pie Blizzard®",
-   "href": "/items/banana-cream-pie-blizzard"
-  },
-  {
-   "title": "Butterfinger® Blizzard® Treat",
-   "href": "/items/butterfinger-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
-  }
- ],
- "/items/turtle-pecan-blizzard": [
-  {
-   "title": "Banana Cream Pie Blizzard®",
-   "href": "/items/banana-cream-pie-blizzard"
-  },
-  {
-   "title": "Butterfinger® Blizzard® Treat",
-   "href": "/items/butterfinger-blizzard"
-  },
-  {
-   "title": "Choco Brownie Extreme Blizzard",
-   "href": "/items/choco-brownie-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/two-cheese-deluxe-stackburger": [
   {
-   "title": "DQ $7 Meal Deal",
-   "href": "/items/7-meal-deal"
+   "title": "Ultimate Hash Browns Platter",
+   "href": "/items/ultimate-hash-browns-platter"
   },
   {
-   "title": "Backyard Bacon Ranch Stackburger",
-   "href": "/items/backyard-bacon-ranch-stackburger"
+   "title": "Vanilla Soft Serve Cone",
+   "href": "/items/vanilla-soft-serve-cone"
   },
   {
-   "title": "Chili Cheese Dog",
-   "href": "/items/chili-cheese-dog"
+   "title": "2 For 5 Mix Match",
+   "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "Burgers & sandwiches menu & prices",
-   "href": "/categories/burgers-sandwiches"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Dairy Queen burgers, ranked",
-   "href": "/blog/best-dairy-queen-burgers-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/ultimate-hash-browns-platter": [
   {
-   "title": "Biscuit & Gravy",
-   "href": "/items/biscuit-gravy"
+   "title": "Vanilla Soft Serve Cone",
+   "href": "/items/vanilla-soft-serve-cone"
   },
   {
-   "title": "Breakfast Burrito",
-   "href": "/items/breakfast-burrito"
+   "title": "2 For 5 Mix Match",
+   "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "Buttermilk Pancake Platter",
-   "href": "/items/buttermilk-pancake-platter"
+   "title": "2Pc Chicken Strips",
+   "href": "/items/2pc-chicken-strips"
   },
   {
-   "title": "Breakfast menu & prices",
-   "href": "/categories/breakfast"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ breakfast hours & menu",
-   "href": "/blog/dq-breakfast-hours-menu"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/vanilla-soft-serve-cone": [
   {
-   "title": "Brownie & Oreo® Cupfection",
-   "href": "/items/brownie-oreo-cupfection"
+   "title": "2 For 5 Mix Match",
+   "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "Buster Bar® Treat",
-   "href": "/items/buster-bar"
+   "title": "2Pc Chicken Strips",
+   "href": "/items/2pc-chicken-strips"
   },
   {
-   "title": "Caramel Sundae",
-   "href": "/items/caramel-sundae"
+   "title": "7 Meal Deal",
+   "href": "/items/7-meal-deal"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/blog/best-blizzard-flavors-ranked": [
@@ -1731,11 +1743,11 @@
    "href": "/categories/blizzard-treats"
   },
   {
-   "title": "Oreo® Cookie Blizzard® Treat",
+   "title": "Oreo Blizzard",
    "href": "/items/oreo-blizzard"
   },
   {
-   "title": "Choco Brownie Extreme Blizzard",
+   "title": "Choco Brownie Blizzard",
    "href": "/items/choco-brownie-blizzard"
   },
   {
@@ -1753,7 +1765,7 @@
    "href": "/categories/burgers-sandwiches"
   },
   {
-   "title": "FlameThrower® Signature Stackburger",
+   "title": "Flamethrower Stackburger",
    "href": "/items/flamethrower-stackburger"
   },
   {
@@ -1779,7 +1791,7 @@
    "href": "/combos"
   },
   {
-   "title": "DQ $7 Meal Deal",
+   "title": "7 Meal Deal",
    "href": "/items/7-meal-deal"
   },
   {
@@ -1917,11 +1929,11 @@
    "href": "/categories/chicken-strip-baskets"
   },
   {
-   "title": "4-Piece Chicken Strip Basket",
+   "title": "Chicken Strip Basket 4Pc",
    "href": "/items/chicken-strip-basket-4pc"
   },
   {
-   "title": "6-Piece Chicken Strip Basket",
+   "title": "Chicken Strip Basket 6Pc",
    "href": "/items/chicken-strip-basket-6pc"
   },
   {
@@ -1935,7 +1947,7 @@
    "href": "/blog/dairy-queen-calories-nutrition-guide"
   },
   {
-   "title": "Non-Dairy Dilly® Bar",
+   "title": "Non Dairy Dilly Bar",
    "href": "/items/non-dairy-dilly-bar"
   },
   {
@@ -1953,11 +1965,11 @@
    "href": "/combos"
   },
   {
-   "title": "DQ $7 Meal Deal",
+   "title": "7 Meal Deal",
    "href": "/items/7-meal-deal"
   },
   {
-   "title": "DQ 2-for-$5 Mix & Match Deal",
+   "title": "2 For 5 Mix Match",
    "href": "/items/2-for-5-mix-match"
   },
   {
@@ -1975,11 +1987,11 @@
    "href": "/categories/drinks"
   },
   {
-   "title": "MooLatté® Frozen Blended Coffee",
+   "title": "Moolatte",
    "href": "/items/moolatte"
   },
   {
-   "title": "DQ Chocolate Shake",
+   "title": "Chocolate Shake",
    "href": "/items/chocolate-shake"
   },
   {

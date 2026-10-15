@@ -29,4 +29,5 @@ Unofficial Dairy Queen menu and price guide. NOT affiliated with Dairy Queen and
 - Never add Product, Offer, AggregateRating, Review or Merchant schema. Use FAQPage, BlogPosting (blog), Organization/WebSite (homepage only, in `Layout.astro`). BreadcrumbList comes from `src/components/Breadcrumbs.astro`; do not hand-write it.
 - Prices are "typical, vary by location" with a last-checked date: update `LAST_CHECKED` in `src/data/site.ts` after re-checking prices.
 - Do not use Dairy Queen logos or copy text from dairyqueen.com.
+- Item pages are generated: edit copy in `item_content/*.py`, then run `python build_item_pages.py` (do not hand-edit generated `src/pages/items/*.astro`; cake pages and a few hand-written ones use `src/layouts/ItemPage.astro` directly).
 - After adding or renaming pages: `python generate_related.py`, `python generate_sitemap.py`, `npm run build`, then `python seo_check.py` (must report 0 problems).
