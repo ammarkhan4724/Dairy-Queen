@@ -1,6 +1,18 @@
 {
  "/items/2-for-5-mix-match": [
   {
+   "title": "Banana Split",
+   "href": "/items/banana-split"
+  },
+  {
+   "title": "Brownie Batter Blizzard",
+   "href": "/items/brownie-batter-blizzard"
+  },
+  {
+   "title": "Cookie Dough Blizzard Cake",
+   "href": "/items/cookie-dough-blizzard-cake"
+  },
+  {
    "title": "DQ meal deals & combos",
    "href": "/combos"
   },
@@ -77,16 +89,16 @@
  ],
  "/items/banana-cream-pie-blizzard": [
   {
-   "title": "Brownie Batter Blizzard® Treat",
-   "href": "/items/brownie-batter-blizzard"
-  },
-  {
    "title": "Butterfinger® Blizzard® Treat",
    "href": "/items/butterfinger-blizzard"
   },
   {
-   "title": "Choco Brownie Extreme Blizzard® Treat",
+   "title": "Choco Brownie Extreme Blizzard",
    "href": "/items/choco-brownie-blizzard"
+  },
+  {
+   "title": "Confetti Cake Blizzard® Treat",
+   "href": "/items/confetti-cake-blizzard"
   },
   {
    "title": "Blizzard Treats menu & prices",
@@ -99,24 +111,24 @@
  ],
  "/items/banana-split": [
   {
-   "title": "Brownie & Oreo® Cupfection",
-   "href": "/items/brownie-oreo-cupfection"
+   "title": "Brownie Batter Blizzard",
+   "href": "/items/brownie-batter-blizzard"
   },
   {
-   "title": "Buster Bar® Treat",
-   "href": "/items/buster-bar"
+   "title": "Cookie Dough Blizzard Cake",
+   "href": "/items/cookie-dough-blizzard-cake"
   },
   {
-   "title": "Caramel Sundae",
-   "href": "/items/caramel-sundae"
+   "title": "Cookie Dough Blizzard",
+   "href": "/items/cookie-dough-blizzard"
   },
   {
-   "title": "Cones, sundaes & classic treats",
-   "href": "/categories/classic-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/biscuit-gravy": [
@@ -165,24 +177,24 @@
  ],
  "/items/brownie-batter-blizzard": [
   {
-   "title": "Butterfinger® Blizzard® Treat",
-   "href": "/items/butterfinger-blizzard"
+   "title": "Cookie Dough Blizzard Cake",
+   "href": "/items/cookie-dough-blizzard-cake"
   },
   {
-   "title": "Choco Brownie Extreme Blizzard® Treat",
-   "href": "/items/choco-brownie-blizzard"
+   "title": "Cookie Dough Blizzard",
+   "href": "/items/cookie-dough-blizzard"
   },
   {
-   "title": "Confetti Cake Blizzard® Treat",
-   "href": "/items/confetti-cake-blizzard"
+   "title": "Dq Cake Round 10Inch",
+   "href": "/items/dq-cake-round-10inch"
   },
   {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/brownie-oreo-cupfection": [
@@ -231,7 +243,7 @@
  ],
  "/items/butterfinger-blizzard": [
   {
-   "title": "Choco Brownie Extreme Blizzard® Treat",
+   "title": "Choco Brownie Extreme Blizzard",
    "href": "/items/choco-brownie-blizzard"
   },
   {
@@ -239,8 +251,8 @@
    "href": "/items/confetti-cake-blizzard"
   },
   {
-   "title": "Chocolate Chip Cookie Dough Blizzard® Treat",
-   "href": "/items/cookie-dough-blizzard"
+   "title": "Cotton Candy Blizzard® Treat",
+   "href": "/items/cotton-candy-blizzard"
   },
   {
    "title": "Blizzard Treats menu & prices",
@@ -301,12 +313,12 @@
    "href": "/items/onion-rings"
   },
   {
-   "title": "Pretzel Sticks with Zesty Queso",
-   "href": "/items/pretzel-sticks-queso"
-  },
-  {
    "title": "DQ Regular Fries",
    "href": "/items/regular-fries"
+  },
+  {
+   "title": "Side Salad",
+   "href": "/items/side-salad"
   },
   {
    "title": "Snacks & sides menu & prices",
@@ -389,12 +401,12 @@
    "href": "/items/confetti-cake-blizzard"
   },
   {
-   "title": "Chocolate Chip Cookie Dough Blizzard® Treat",
-   "href": "/items/cookie-dough-blizzard"
-  },
-  {
    "title": "Cotton Candy Blizzard® Treat",
    "href": "/items/cotton-candy-blizzard"
+  },
+  {
+   "title": "Dipped Strawberry Cheesecake Blizzard® Treat",
+   "href": "/items/dipped-strawberry-cheesecake-blizzard"
   },
   {
    "title": "Blizzard Treats menu & prices",
@@ -451,50 +463,6 @@
  ],
  "/items/confetti-cake-blizzard": [
   {
-   "title": "Chocolate Chip Cookie Dough Blizzard® Treat",
-   "href": "/items/cookie-dough-blizzard"
-  },
-  {
-   "title": "Cotton Candy Blizzard® Treat",
-   "href": "/items/cotton-candy-blizzard"
-  },
-  {
-   "title": "Dipped Strawberry Cheesecake Blizzard® Treat",
-   "href": "/items/dipped-strawberry-cheesecake-blizzard"
-  },
-  {
-   "title": "Blizzard Treats menu & prices",
-   "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
-  }
- ],
- "/items/cookie-dough-blizzard-cake": [
-  {
-   "title": "DQ Cake — 10-Inch Round",
-   "href": "/items/dq-cake-round-10inch"
-  },
-  {
-   "title": "DQ Cake — 8-Inch Round",
-   "href": "/items/dq-cake-round-8inch"
-  },
-  {
-   "title": "DQ Sheet Cake",
-   "href": "/items/dq-sheet-cake"
-  },
-  {
-   "title": "DQ cake sizes, servings & prices",
-   "href": "/categories/dq-cakes"
-  },
-  {
-   "title": "DQ cake flavors & serving guide",
-   "href": "/blog/dq-cakes-complete-guide"
-  }
- ],
- "/items/cookie-dough-blizzard": [
-  {
    "title": "Cotton Candy Blizzard® Treat",
    "href": "/items/cotton-candy-blizzard"
   },
@@ -513,6 +481,50 @@
   {
    "title": "Best Blizzard flavors, ranked",
    "href": "/blog/best-blizzard-flavors-ranked"
+  }
+ ],
+ "/items/cookie-dough-blizzard-cake": [
+  {
+   "title": "Cookie Dough Blizzard",
+   "href": "/items/cookie-dough-blizzard"
+  },
+  {
+   "title": "Dq Cake Round 10Inch",
+   "href": "/items/dq-cake-round-10inch"
+  },
+  {
+   "title": "Dq Cake Round 8Inch",
+   "href": "/items/dq-cake-round-8inch"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  }
+ ],
+ "/items/cookie-dough-blizzard": [
+  {
+   "title": "Dq Cake Round 10Inch",
+   "href": "/items/dq-cake-round-10inch"
+  },
+  {
+   "title": "Dq Cake Round 8Inch",
+   "href": "/items/dq-cake-round-8inch"
+  },
+  {
+   "title": "Dq Sheet Cake",
+   "href": "/items/dq-sheet-cake"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/cotton-candy-blizzard": [
@@ -649,46 +661,46 @@
  ],
  "/items/dq-cake-round-10inch": [
   {
-   "title": "DQ Cake — 8-Inch Round",
+   "title": "Dq Cake Round 8Inch",
    "href": "/items/dq-cake-round-8inch"
   },
   {
-   "title": "DQ Sheet Cake",
+   "title": "Dq Sheet Cake",
    "href": "/items/dq-sheet-cake"
   },
   {
-   "title": "Oreo® Blizzard® Cake (10-Inch)",
+   "title": "Oreo Blizzard Cake",
    "href": "/items/oreo-blizzard-cake"
   },
   {
-   "title": "DQ cake sizes, servings & prices",
-   "href": "/categories/dq-cakes"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ cake flavors & serving guide",
-   "href": "/blog/dq-cakes-complete-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/dq-cake-round-8inch": [
   {
-   "title": "DQ Sheet Cake",
+   "title": "Dq Sheet Cake",
    "href": "/items/dq-sheet-cake"
   },
   {
-   "title": "Oreo® Blizzard® Cake (10-Inch)",
+   "title": "Oreo Blizzard Cake",
    "href": "/items/oreo-blizzard-cake"
   },
   {
-   "title": "Cookie Dough Blizzard® Cake",
-   "href": "/items/cookie-dough-blizzard-cake"
+   "title": "Pretzel Sticks Queso",
+   "href": "/items/pretzel-sticks-queso"
   },
   {
-   "title": "DQ cake sizes, servings & prices",
-   "href": "/categories/dq-cakes"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ cake flavors & serving guide",
-   "href": "/blog/dq-cakes-complete-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/dq-sandwich": [
@@ -715,24 +727,24 @@
  ],
  "/items/dq-sheet-cake": [
   {
-   "title": "Oreo® Blizzard® Cake (10-Inch)",
+   "title": "Oreo Blizzard Cake",
    "href": "/items/oreo-blizzard-cake"
   },
   {
-   "title": "Cookie Dough Blizzard® Cake",
-   "href": "/items/cookie-dough-blizzard-cake"
+   "title": "Pretzel Sticks Queso",
+   "href": "/items/pretzel-sticks-queso"
   },
   {
-   "title": "DQ Cake — 10-Inch Round",
-   "href": "/items/dq-cake-round-10inch"
+   "title": "DQ 2-for-$5 Mix & Match Deal",
+   "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "DQ cake sizes, servings & prices",
-   "href": "/categories/dq-cakes"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ cake flavors & serving guide",
-   "href": "/blog/dq-cakes-complete-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/flamethrower-stackburger": [
@@ -1121,16 +1133,16 @@
  ],
  "/items/onion-rings": [
   {
-   "title": "Pretzel Sticks with Zesty Queso",
-   "href": "/items/pretzel-sticks-queso"
-  },
-  {
    "title": "DQ Regular Fries",
    "href": "/items/regular-fries"
   },
   {
    "title": "Side Salad",
    "href": "/items/side-salad"
+  },
+  {
+   "title": "DQ Cheese Curds",
+   "href": "/items/cheese-curds"
   },
   {
    "title": "Snacks & sides menu & prices",
@@ -1165,24 +1177,24 @@
  ],
  "/items/oreo-blizzard-cake": [
   {
-   "title": "Cookie Dough Blizzard® Cake",
-   "href": "/items/cookie-dough-blizzard-cake"
+   "title": "Pretzel Sticks Queso",
+   "href": "/items/pretzel-sticks-queso"
   },
   {
-   "title": "DQ Cake — 10-Inch Round",
-   "href": "/items/dq-cake-round-10inch"
+   "title": "DQ 2-for-$5 Mix & Match Deal",
+   "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "DQ Cake — 8-Inch Round",
-   "href": "/items/dq-cake-round-8inch"
+   "title": "Banana Split",
+   "href": "/items/banana-split"
   },
   {
-   "title": "DQ cake sizes, servings & prices",
-   "href": "/categories/dq-cakes"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "DQ cake flavors & serving guide",
-   "href": "/blog/dq-cakes-complete-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/oreo-blizzard": [
@@ -1239,8 +1251,8 @@
    "href": "/items/vanilla-soft-serve-cone"
   },
   {
-   "title": "Banana Split",
-   "href": "/items/banana-split"
+   "title": "Brownie & Oreo® Cupfection",
+   "href": "/items/brownie-oreo-cupfection"
   },
   {
    "title": "Cones, sundaes & classic treats",
@@ -1297,24 +1309,24 @@
  ],
  "/items/pretzel-sticks-queso": [
   {
-   "title": "DQ Regular Fries",
-   "href": "/items/regular-fries"
+   "title": "DQ 2-for-$5 Mix & Match Deal",
+   "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "Side Salad",
-   "href": "/items/side-salad"
+   "title": "Banana Split",
+   "href": "/items/banana-split"
   },
   {
-   "title": "DQ Cheese Curds",
-   "href": "/items/cheese-curds"
+   "title": "Brownie Batter Blizzard",
+   "href": "/items/brownie-batter-blizzard"
   },
   {
-   "title": "Snacks & sides menu & prices",
-   "href": "/categories/snacks-sides"
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
   },
   {
-   "title": "Dairy Queen calories & nutrition guide",
-   "href": "/blog/dairy-queen-calories-nutrition-guide"
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
   }
  ],
  "/items/pumpkin-pie-blizzard": [
@@ -1481,8 +1493,8 @@
    "href": "/items/onion-rings"
   },
   {
-   "title": "Pretzel Sticks with Zesty Queso",
-   "href": "/items/pretzel-sticks-queso"
+   "title": "DQ Regular Fries",
+   "href": "/items/regular-fries"
   },
   {
    "title": "Snacks & sides menu & prices",
@@ -1587,12 +1599,12 @@
    "href": "/items/vanilla-soft-serve-cone"
   },
   {
-   "title": "Banana Split",
-   "href": "/items/banana-split"
-  },
-  {
    "title": "Brownie & Oreo® Cupfection",
    "href": "/items/brownie-oreo-cupfection"
+  },
+  {
+   "title": "Buster Bar® Treat",
+   "href": "/items/buster-bar"
   },
   {
    "title": "Cones, sundaes & classic treats",
@@ -1613,8 +1625,8 @@
    "href": "/items/banana-cream-pie-blizzard"
   },
   {
-   "title": "Brownie Batter Blizzard® Treat",
-   "href": "/items/brownie-batter-blizzard"
+   "title": "Butterfinger® Blizzard® Treat",
+   "href": "/items/butterfinger-blizzard"
   },
   {
    "title": "Blizzard Treats menu & prices",
@@ -1631,12 +1643,12 @@
    "href": "/items/banana-cream-pie-blizzard"
   },
   {
-   "title": "Brownie Batter Blizzard® Treat",
-   "href": "/items/brownie-batter-blizzard"
-  },
-  {
    "title": "Butterfinger® Blizzard® Treat",
    "href": "/items/butterfinger-blizzard"
+  },
+  {
+   "title": "Choco Brownie Extreme Blizzard",
+   "href": "/items/choco-brownie-blizzard"
   },
   {
    "title": "Blizzard Treats menu & prices",
@@ -1693,16 +1705,16 @@
  ],
  "/items/vanilla-soft-serve-cone": [
   {
-   "title": "Banana Split",
-   "href": "/items/banana-split"
-  },
-  {
    "title": "Brownie & Oreo® Cupfection",
    "href": "/items/brownie-oreo-cupfection"
   },
   {
    "title": "Buster Bar® Treat",
    "href": "/items/buster-bar"
+  },
+  {
+   "title": "Caramel Sundae",
+   "href": "/items/caramel-sundae"
   },
   {
    "title": "Cones, sundaes & classic treats",
@@ -1723,7 +1735,7 @@
    "href": "/items/oreo-blizzard"
   },
   {
-   "title": "Choco Brownie Extreme Blizzard® Treat",
+   "title": "Choco Brownie Extreme Blizzard",
    "href": "/items/choco-brownie-blizzard"
   },
   {
@@ -1883,15 +1895,15 @@
    "href": "/categories/dq-cakes"
   },
   {
-   "title": "Oreo® Blizzard® Cake (10-Inch)",
+   "title": "Oreo Blizzard Cake",
    "href": "/items/oreo-blizzard-cake"
   },
   {
-   "title": "DQ Cake — 8-Inch Round",
+   "title": "Dq Cake Round 8Inch",
    "href": "/items/dq-cake-round-8inch"
   },
   {
-   "title": "DQ Sheet Cake",
+   "title": "Dq Sheet Cake",
    "href": "/items/dq-sheet-cake"
   },
   {

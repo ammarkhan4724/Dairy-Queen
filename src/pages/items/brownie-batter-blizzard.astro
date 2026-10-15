@@ -1,120 +1,46 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-const itemSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much is the Brownie Batter Blizzard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mini $3.99, Small $4.79, Medium $5.79, Large $6.49."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is in the Brownie Batter Blizzard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Brownie batter pieces and chocolate fudge sauce blended into DQ vanilla soft serve."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Brownie Batter available year-round?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. It is a core year-round Blizzard, not a seasonal flavor."
-          }
-        }
-      ]
-    }
-  ]
-};
+import ItemPage from '../../layouts/ItemPage.astro';
+
+const faqs = [
+  { q: 'How much is a Brownie Batter Blizzard?', a: 'It typically costs about $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium and $6.49 for a Large. Prices vary by location.' },
+  { q: 'What is in the Brownie Batter Blizzard?', a: 'Brownie batter pieces and chocolate fudge blended into DQ vanilla soft serve.' },
+  { q: 'How many calories are in a Brownie Batter Blizzard?', a: 'About 340 calories for a Mini, 530 for a Small, 730 for a Medium and 1,070 for a Large.' },
+  { q: 'Is Brownie Batter the same as Choco Brownie Extreme?', a: 'No. Brownie Batter has soft, sweet batter-style pieces. Choco Brownie Extreme has chewy baked brownie pieces and tastes darker.' },
+];
 ---
-<Layout title="Dairy Queen Brownie Batter Blizzard: Price & Calories (2026)" description="DQ Brownie Batter Blizzard® Treat price 2026: Mini $3.99, Small $4.79, Medium $5.79, Large $6.49. 530 cal (Small). Full nutrition guide and ordering tips.">
-<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+<ItemPage
+  title="DQ Brownie Batter Blizzard: Price & Calories (2026)"
+  description="Brownie Batter Blizzard prices: Mini $3.99, Small $4.79, Medium $5.79, Large $6.49. Calories by size and how it differs from Choco Brownie Extreme."
+  name="Brownie Batter Blizzard"
+  category={{ name: 'Blizzard Treats', href: '/categories/blizzard-treats' }}
+  image="/Images/brownie-batter-blizzard.webp"
+  imageAlt="Dairy Queen Brownie Batter Blizzard"
+  badges={['Year-round']}
+  quick="A Brownie Batter Blizzard at Dairy Queen costs about $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium and $6.49 for a Large. A Small has about 530 calories. It is on the menu year-round. Prices vary by location."
+  from="From $3.99"
+  intro="Soft brownie batter pieces and fudge in vanilla soft serve. It tastes like licking the brownie bowl: sweeter and softer than the Choco Brownie Extreme."
+  spec={[
+    ['Inside', 'Vanilla soft serve, brownie batter pieces, fudge'],
+    ['Sizes', 'Mini · Small · Medium · Large'],
+    ['Calories (Small)', '530'],
+    ['Availability', 'Year-round'],
+  ]}
+  allergens="Milk, Wheat, Soy"
+  table={{
+    title: 'Brownie Batter Blizzard price and calories by size',
+    head: ['Size', 'Price', 'Calories'],
+    rows: [['Mini', '$3.99', '~340'], ['Small', '$4.79', '530'], ['Medium', '$5.79', '~730'], ['Large', '$6.49', '~1,070']],
+  }}
+  faqs={faqs}
+>
+  <h2>Brownie Batter or Choco Brownie Extreme?</h2>
+  <p>Pick Brownie Batter if you like soft, sweet and fudgy. Pick the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> if you want chewy brownie chunks and a darker chocolate taste. Both cost the same.</p>
 
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Brownie Batter Blizzard® Treat"}]} />
-
-<div class="container">
-  <div class="item-hero">
-    <div class="item-media">
-      <img src="/Images/brownie-batter-blizzard.webp" alt="Brownie Batter Blizzard® Treat — Dairy Queen 2026 menu item" width="600" height="450" loading="eager">
-    </div>
-    <div>
-      <div class="badge-row"><span class="badge red">Brownie Batter Blizzard® Treat</span><span class="badge">Year-Round</span><span class="badge blue">Deep Chocolate</span></div>
-      <h1>Brownie Batter Blizzard® Treat</h1>
-      <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> A Brownie Batter Blizzard at Dairy Queen costs about $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium and $6.49 for a Large. A Small has about 530 calories. It is on the menu year-round. Prices vary by location.</p>
-      <div class="item-price-lg">From $3.99</div>
-      <p>Immerse yourself in rich chocolate decadence. The Brownie Batter Blizzard blends chewy brownie batter pieces and smooth cocoa fudge directly into our signature vanilla soft serve. It provides a luscious chocolate profile that feels far richer than traditional candy mixes, starting at just $3.99 for a Mini.</p>
-
-      <table class="spec-table"><tbody><tr><td>Sizes</td><td>Mini · Small · Medium · Large</td></tr><tr><td>Starting Price</td><td>$3.99 (Mini)</td></tr><tr><td>Calories (Small)</td><td>530 cal</td></tr><tr><td>Availability</td><td>Year-Round</td></tr><tr><td>Allergens</td><td>Milk, Wheat, Soy</td></tr></tbody></table>
-    </div>
-  </div>
-</div>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Price &amp; Calories by Size: 2026</h2>
-    <div style="max-width:700px;margin:0 auto;">
-      <div class="table-wrap"><table class="size-table"><thead><tr><th>Size / Option</th><th>Price</th><th>Calories</th><th>Total Fat</th></tr></thead><tbody><tr><td><strong>Mini</strong></td><td>$3.99</td><td class="price-cell">~340 cal</td><td>~</td></tr><tr><td><strong>Small</strong></td><td>$4.79</td><td class="price-cell">530 cal</td><td>19g</td></tr><tr><td><strong>Medium</strong></td><td>$5.79</td><td class="price-cell">~730 cal</td><td>~</td></tr><tr><td><strong>Large</strong></td><td>$6.49</td><td class="price-cell">~1070 cal</td><td>~</td></tr></tbody></table></div>
-    </div>
-    <p style="text-align:center;margin-top:10px;font-size:.82rem;color:var(--color-text-muted);">Prices are 2026 national averages.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container article-body" style="max-width:920px;">
-    
-    <h2>What Is the Brownie Batter Blizzard® Treat?</h2>
-    <p>The secret behind the Brownie Batter Blizzard lies in its unbaked-style brownie dough chunks. Mimicking the experience of licking the mixing spoon, these chewy morsels are folded alongside rich chocolate fudge syrup into cold vanilla soft serve. This combination creates a smooth double-chocolate treat that bridges the gap between lighter candy toppings and the ultra-dense <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme Blizzard</a>.</p>
-  <p>Browse our complete lineup of frozen delights and updated 2026 prices right here on <a href="/">The Queen Dairy Menu</a>, or check out our comprehensive <a href="/categories/blizzard-treats">Blizzard Treats guide</a>.</p>
-
-    <h2>Brownie Batter vs. Choco Brownie Extreme</h2>
-  <p>These two are frequently confused. The key difference:</p>
+  <h2>Other chocolate Blizzards to try</h2>
   <ul>
-    <li><strong>Brownie Batter Blizzard:</strong> Uses brownie batter-flavored pieces (unbaked texture) with fudge sauce. Sweeter, slightly chewy pieces.</li>
-    <li><a href="/items/choco-brownie-blizzard"><strong>Choco Brownie Extreme Blizzard</strong></a>: Uses actual baked brownie pieces that are chewier and more chocolatey, combined with more fudge. Darker, more intense flavor profile overall.</li>
+    <li><a href="/items/oreo-blizzard">Oreo</a>: chocolate cookie crunch, lighter at 420 calories for a Small.</li>
+    <li><a href="/items/cookie-dough-blizzard">Cookie Dough</a>: chewy dough with fudge.</li>
+    <li><a href="/items/royal-oreo-blizzard">Royal Oreo</a>: Oreo with a hot fudge center.</li>
   </ul>
-  <p>If your heart desires a smooth, doughy sweetness reminiscent of home baking, Brownie Batter is your winning pick. If you prefer heavier, dark-cocoa intensity with dense baked pastry bites, head straight for the Choco Brownie Extreme.</p>
-  <h2>Pair With</h2>
-  <p>Looking for the perfect pairing? A Mini or Small Brownie Batter Blizzard is an incredible follow-up to a savory <a href="/items/original-cheeseburger">Original Cheeseburger</a> from our hot food section. If you're celebrating with company, enjoy one alongside a chilled slice of <a href="/items/dq-cake-round-8inch">DQ Cake</a>.</p>
-
-    <h2>How It Compares to Other Blizzards</h2>
-    <div class="table-wrap"><table class="size-table"><thead><tr><th>Blizzard</th><th>Mini Price</th><th>Small Cal</th><th>Flavor Profile</th></tr></thead><tbody><tr><td>Brownie Batter Blizzard</td><td class="price-cell">$3.99</td><td>530</td><td>Medium chocolate intensity</td></tr><tr><td>Choco Brownie Extreme</td><td class="price-cell">$3.99</td><td>510</td><td>Darker, more intense chocolate</td></tr><tr><td>Cookie Dough Blizzard</td><td class="price-cell">$3.49</td><td>590</td><td>Sweet baked-good, lighter chocolate</td></tr><tr><td>Oreo Cookie Blizzard</td><td class="price-cell">$3.49</td><td>420</td><td>Lightest of the chocolate options</td></tr></tbody></table></div>
-
-    <h2>Ordering Tips</h2>
-    <ul>
-      <li><strong>First timer?</strong> Order a Mini ($3.99) to try it before committing to a full cup.</li>
-      <li><strong>Best size for one person:</strong> Small ($4.79) (530 calories) is plenty for one person.</li>
-      <li><strong>Upgrade option:</strong> Ask to blend in a hot fudge swirl for richer chocolate depth, or add extra mix-ins (~$0.50).</li>
-      <li><strong>Check the flip:</strong> Staff traditionally hand every Blizzard over upside down to show it is thick enough to hold.</li>
-    </ul>
-
-    <h2>Related Blizzard Treats &amp; Menu Items</h2><ul><li><a href="/items/choco-brownie-blizzard">Choco Brownie Extreme Blizzard</a></li><li><a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a></li><li><a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster Blizzard</a></li><li><a href="/categories/blizzard-treats">All Blizzard Treats</a></li></ul>
-    
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list"><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How much is the Brownie Batter Blizzard?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">National average pricing starts at $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium, and $6.49 for a Large.</div></div>
-      </div><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What is in the Brownie Batter Blizzard?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">It is handcrafted by mixing chewy brownie batter dough pieces and rich chocolate fudge sauce evenly into classic DQ vanilla soft serve.</div></div>
-      </div><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Is Brownie Batter available year-round?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes! Brownie Batter has earned its spot on the permanent, year-round menu at most DQ restaurants, so you don't have to wait for a special season to order it.</div></div>
-      </div></div>
-    <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
-      See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
-    </p>
-  </div>
-</section>
-
-</Layout>
+  <p>Every flavor and price is on the <a href="/categories/blizzard-treats">Blizzard menu</a>.</p>
+</ItemPage>

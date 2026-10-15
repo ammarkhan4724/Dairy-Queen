@@ -1,118 +1,93 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-const itemSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much is the Choco Brownie Extreme Blizzard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mini $3.99, Small $4.79, Medium $5.79, Large $6.49."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is in the Choco Brownie Extreme Blizzard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Baked brownie pieces and chocolate fudge sauce blended into DQ vanilla soft serve."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is Choco Brownie Extreme different from Brownie Batter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Choco Brownie Extreme uses baked brownie pieces: chewy and intensely chocolatey. Brownie Batter uses unbaked batter-flavored pieces which are sweeter and softer."
-          }
-        }
-      ]
-    }
-  ]
+
+const faqs = [
+  { q: 'How much is a Choco Brownie Extreme Blizzard?', a: 'It typically costs about $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium and $6.49 for a Large. Prices vary by location.' },
+  { q: 'What is in the Choco Brownie Extreme Blizzard?', a: 'Brownie pieces, chocolate chunks and cocoa fudge blended into DQ vanilla soft serve.' },
+  { q: 'How many calories are in a Choco Brownie Extreme Blizzard?', a: 'About 330 calories for a Mini, 510 for a Small, 710 for a Medium and 1,060 for a Large.' },
+  { q: 'What is the difference between Choco Brownie Extreme and Brownie Batter?', a: 'Choco Brownie Extreme has chewy baked brownie pieces and tastes more like dark chocolate. Brownie Batter has soft, sweeter batter-style pieces.' },
+  { q: 'Is the Choco Brownie Extreme Blizzard available all year?', a: 'Yes. It is one of Dairy Queen’s year-round Blizzard flavors.' },
+];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 ---
-<Layout title="Dairy Queen Choco Brownie Extreme Blizzard: Price & Calories" description="DQ Choco Brownie Extreme Blizzard® Treat price 2026: Mini $3.99, Small $4.79, Medium $5.79, Large $6.49. 510 cal (Small).">
-<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+<Layout title="DQ Choco Brownie Extreme Blizzard: Price & Calories" description="Choco Brownie Extreme Blizzard prices: Mini $3.99, Small $4.79, Medium $5.79, Large $6.49. Calories by size, what is in it and how it compares.">
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Choco Brownie Extreme Blizzard® Treat"}]} />
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Choco Brownie Extreme Blizzard"}]} />
 
 <div class="container">
   <div class="item-hero">
     <div class="item-media">
-      <img src="/Images/choco-brownie-blizzard.webp" alt="Choco Brownie Extreme Blizzard® Treat — Dairy Queen 2026 menu item" width="600" height="450" loading="eager">
+      <img src="/Images/choco-brownie-blizzard.webp" alt="Dairy Queen Choco Brownie Extreme Blizzard with brownie pieces and fudge" width="600" height="450" loading="eager">
     </div>
     <div>
-      <div class="badge-row"><span class="badge red">Choco Brownie Extreme Blizzard® Treat</span><span class="badge">Year-Round</span><span class="badge blue">Intense Double Chocolate</span></div>
-      <h1>Choco Brownie Extreme Blizzard® Treat</h1>
+      <div class="badge-row"><span class="badge">Year-round</span><span class="badge blue">Chocolate lovers</span></div>
+      <h1>Choco Brownie Extreme Blizzard</h1>
       <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> A Choco Brownie Extreme Blizzard at Dairy Queen costs about $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium and $6.49 for a Large. A Small has about 510 calories. It is on the menu year-round. Prices vary by location.</p>
       <div class="item-price-lg">From $3.99</div>
-      <p>For purists who demand serious cocoa depth. The Choco Brownie Extreme Blizzard packs dense chunks of real baked fudge brownies, rich cocoa chunks, and ribbons of warm chocolate fudge into smooth DQ vanilla soft serve. Crowned as the richest chocolate Blizzard on the permanent menu, it starts from $3.99 for a Mini.</p>
+      <p>This is the most chocolate you can get in one Blizzard: chewy brownie pieces, chocolate chunks and cocoa fudge blended into vanilla soft serve. It is richer and darker than most flavors, so many people find a Small is plenty.</p>
 
-      <table class="spec-table"><tbody><tr><td>Sizes</td><td>Mini · Small · Medium · Large</td></tr><tr><td>Starting Price</td><td>$3.99 (Mini)</td></tr><tr><td>Calories (Small)</td><td>510 cal</td></tr><tr><td>Availability</td><td>Year-Round</td></tr><tr><td>Allergens</td><td>Milk, Wheat, Soy</td></tr></tbody></table>
+      <table class="spec-table"><tbody><tr><td>Sizes</td><td>Mini · Small · Medium · Large</td></tr><tr><td>Starting price</td><td>$3.99 (Mini)</td></tr><tr><td>Calories (Small)</td><td>510</td></tr><tr><td>Availability</td><td>Year-round</td></tr><tr><td>Allergens</td><td>Milk, Wheat, Soy <span style="display:block;font-size:.8rem;color:#64748B;">Shared equipment; check <a href="/blog/dq-gluten-free-allergen-guide">our allergen guide</a> and DQ’s official list.</span></td></tr></tbody></table>
     </div>
   </div>
 </div>
 
 <section class="section section-alt">
   <div class="container">
-    <h2 class="section-title">Price &amp; Calories by Size: 2026</h2>
+    <h2 class="section-title">Choco Brownie Extreme price and calories by size</h2>
     <div style="max-width:700px;margin:0 auto;">
-      <div class="table-wrap"><table class="size-table"><thead><tr><th>Size / Option</th><th>Price</th><th>Calories</th><th>Total Fat</th></tr></thead><tbody><tr><td><strong>Mini</strong></td><td>$3.99</td><td class="price-cell">~330 cal</td><td>~</td></tr><tr><td><strong>Small</strong></td><td>$4.79</td><td class="price-cell">510 cal</td><td>18g</td></tr><tr><td><strong>Medium</strong></td><td>$5.79</td><td class="price-cell">~710 cal</td><td>~</td></tr><tr><td><strong>Large</strong></td><td>$6.49</td><td class="price-cell">~1060 cal</td><td>~</td></tr></tbody></table></div>
+      <div class="table-wrap"><table class="size-table"><thead><tr><th>Size</th><th>Price</th><th>Calories</th></tr></thead><tbody>
+        <tr><td><strong>Mini</strong></td><td class="price-cell">$3.99</td><td>~330</td></tr>
+        <tr><td><strong>Small</strong></td><td class="price-cell">$4.79</td><td>510</td></tr>
+        <tr><td><strong>Medium</strong></td><td class="price-cell">$5.79</td><td>~710</td></tr>
+        <tr><td><strong>Large</strong></td><td class="price-cell">$6.49</td><td>~1,060</td></tr>
+      </tbody></table></div>
     </div>
-    <p style="text-align:center;margin-top:10px;font-size:.82rem;color:var(--color-text-muted);">Prices are 2026 national averages.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
-    
-    <h2>What Is the Choco Brownie Extreme Blizzard® Treat?</h2>
-    <p>Unlike other treats that rely on unbaked dough chunks, the Choco Brownie Extreme is loaded with real, oven-baked chocolate brownies sliced into bite-sized morsels. These dense bakery pieces deliver a delightfully chewy mouthfeel that contrasts beautifully against silky vanilla soft serve and thick chocolate fudge syrup. It delivers a noticeably darker, more sophisticated chocolate profile than the sweeter, lighter <a href="/items/brownie-batter-blizzard">Brownie Batter Blizzard</a>.</p>
-  <p>View all 2026 DQ prices and categories on <a href="/">The Queen Dairy Menu</a>.</p>
+    <h2>What does it taste like?</h2>
+    <p>Think of a brownie sundae blended into one cup. The brownie pieces are dense and chewy, the chocolate chunks add a little snap, and the fudge makes the whole thing taste like dark chocolate. It is less sweet than the <a href="/items/brownie-batter-blizzard">Brownie Batter Blizzard</a>, which uses softer batter-style pieces.</p>
 
-    <h2>Who Should Order Choco Brownie Extreme</h2>
-  <ul>
-    <li><strong>Order this if:</strong> You want maximum chocolate intensity in a Blizzard. If you are the person who always picks the darkest chocolate option on any dessert menu, this is your Blizzard.</li>
-    <li><strong>Order <a href="/items/brownie-batter-blizzard">Brownie Batter</a> instead if:</strong> You want a sweeter, dessert-adjacent chocolate flavor rather than the intensity of baked brownie pieces.</li>
-    <li><strong>Order <a href="/items/oreo-blizzard">Oreo</a> instead if:</strong> You want a more moderate chocolate hit with cookie crunch rather than brownie depth.</li>
-  </ul>
-  <h2>DQ Cake Connection</h2>
-  <p>Die-hard chocolate fans can take this flavor home for birthdays and parties! Dairy Queen offers this recipe as a pre-ordered <a href="/items/dq-cake-round-8inch">DQ Blizzard Cake</a>, combining layers of real fudge brownie, chocolate crunch, and soft serve into a show-stopping ice cream cake that easily feeds eight to ten guests.</p>
-
-    <h2>How It Compares to Other Blizzards</h2>
-    <div class="table-wrap"><table class="size-table"><thead><tr><th>Blizzard</th><th>Mini Price</th><th>Small Cal</th><th>Flavor Profile</th></tr></thead><tbody><tr><td>Choco Brownie Extreme</td><td class="price-cell">$3.99</td><td>510</td><td>Darkest chocolate, baked pieces</td></tr><tr><td>Brownie Batter Blizzard</td><td class="price-cell">$3.99</td><td>530</td><td>Sweeter batter pieces, lighter</td></tr><tr><td>Cookie Dough Blizzard</td><td class="price-cell">$3.49</td><td>590</td><td>Sweet baked-good, not as dark</td></tr><tr><td>Royal Oreo® Blizzard</td><td class="price-cell">$3.99</td><td>490</td><td>Cookie crunch + fudge center</td></tr></tbody></table></div>
-
-    <h2>Ordering Tips</h2>
+    <h2>Should you order it?</h2>
     <ul>
-      <li><strong>First timer?</strong> Order a Mini ($3.99) to try it before committing to a full cup.</li>
-      <li><strong>Best size for one person:</strong> Small ($4.79, 510 calories) is plenty for one person.</li>
-      <li><strong>Upgrade option:</strong> Ask to blend in a hot fudge swirl for richer chocolate depth, or add extra mix-ins (~$0.50).</li>
-      <li><strong>Check the flip:</strong> Staff traditionally hand every Blizzard over upside down to show it is thick enough to hold.</li>
+      <li><strong>Yes, if</strong> you always pick the most chocolatey dessert on the menu.</li>
+      <li><strong>Try <a href="/items/brownie-batter-blizzard">Brownie Batter</a> instead</strong> if you want something sweeter and softer.</li>
+      <li><strong>Try <a href="/items/oreo-blizzard">Oreo</a> instead</strong> if you want chocolate with crunch and less richness.</li>
     </ul>
 
-    <h2>Related Blizzard Treats &amp; Menu Items</h2><ul><li><a href="/items/brownie-batter-blizzard">Brownie Batter Blizzard</a></li><li><a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a></li><li><a href="/items/dq-cake-round-8inch">DQ Cake — Choco Brownie Extreme</a></li><li><a href="/categories/blizzard-treats">All Blizzard Treats</a></li></ul>
-    
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list"><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How much is the Choco Brownie Extreme Blizzard?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Prices for 2026 average $3.99 for a Mini, $4.79 for a Small, $5.79 for a Medium, and $6.49 for a Large.</div></div>
-      </div><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What is in the Choco Brownie Extreme Blizzard?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">It combines real baked fudge brownie pieces, chocolate chunks, and rich cocoa fudge sauce blended thoroughly with DQ vanilla soft serve.</div></div>
-      </div><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How is Choco Brownie Extreme different from Brownie Batter?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Choco Brownie Extreme features dense, oven-baked brownie chunks for a darker, chewier chocolate experience. In contrast, Brownie Batter uses sweet, doughy batter pieces with a softer texture.</div></div>
-      </div></div>
-    <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
-      See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
-    </p>
+    <h2>How it compares to other chocolate Blizzards</h2>
+    <div class="table-wrap"><table class="size-table"><thead><tr><th>Blizzard</th><th>Mini price</th><th>Small calories</th><th>What it’s like</th></tr></thead><tbody>
+      <tr><td><strong>Choco Brownie Extreme</strong></td><td class="price-cell">$3.99</td><td>510</td><td>Darkest chocolate, chewy brownie</td></tr>
+      <tr><td><a href="/items/brownie-batter-blizzard">Brownie Batter</a></td><td class="price-cell">$3.99</td><td>530</td><td>Sweeter, softer batter pieces</td></tr>
+      <tr><td><a href="/items/cookie-dough-blizzard">Cookie Dough</a></td><td class="price-cell">$3.49</td><td>590</td><td>Soft cookie dough and fudge</td></tr>
+      <tr><td><a href="/items/royal-oreo-blizzard">Royal Oreo</a></td><td class="price-cell">$3.99</td><td>490</td><td>Cookie crunch with a fudge center</td></tr>
+    </tbody></table></div>
+
+    <h2>Ordering tips</h2>
+    <ul>
+      <li><strong>New to it?</strong> Get a Mini first. It is rich.</li>
+      <li><strong>Want even more chocolate?</strong> Ask for extra fudge or extra brownie pieces. There is usually a small charge.</li>
+      <li><strong>Sharing?</strong> A Medium is about 710 calories and splits well between two people.</li>
+      <li><strong>Want it as a cake?</strong> Many stores make Blizzard cakes in this flavor. See <a href="/categories/dq-cakes">DQ cake sizes and prices</a>.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
   </div>
 </section>
 

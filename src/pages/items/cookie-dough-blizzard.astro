@@ -1,131 +1,55 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-const itemSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is the cookie dough in the DQ Blizzard raw?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The cookie dough pieces used in the DQ Cookie Dough Blizzard are safe to eat: they are made without raw eggs and use heat-treated flour. They are designed specifically for frozen dessert use and do not carry the food safety concerns of homemade raw dough."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is the Cookie Dough Blizzard more expensive than Oreo at Large?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Cookie Dough Blizzard Large is $6.49 vs. the Oreo Large at $5.99: a $0.50 difference. This reflects the higher cost of cookie dough pieces as a mix-in ingredient compared to standard Oreo crumbles."
-          }
-        }
-      ]
-    }
-  ]
-};
+import ItemPage from '../../layouts/ItemPage.astro';
+
+const faqs = [
+  { q: 'How much is a Cookie Dough Blizzard at Dairy Queen?', a: 'It typically costs about $3.49 for a Mini, $4.49 for a Small, $5.49 for a Medium and $6.49 for a Large. Prices vary by location.' },
+  { q: 'How many calories are in a Cookie Dough Blizzard?', a: 'About 410 calories for a Mini, 590 for a Small, 800 for a Medium and 1,180 for a Large.' },
+  { q: 'Is the cookie dough in the DQ Blizzard raw?', a: 'No. The cookie dough pieces are made to be eaten as they are, without raw eggs, so they are safe to eat frozen.' },
+  { q: 'Is the Cookie Dough Blizzard available all year?', a: 'Yes. It is one of Dairy Queen’s year-round Blizzard flavors.' },
+];
 ---
-<Layout title="Dairy Queen Cookie Dough Blizzard: Price & Calories (2026)" description="DQ Chocolate Chip Cookie Dough Blizzard price 2026: Mini $3.49 to Large $6.49. 590 cal Small. The #2 Blizzard at DQ — full nutrition and ordering guide.">
-<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
-
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Cookie Dough Blizzard"}]} />
-
-<div class="container"><div class="item-hero">
-  <div class="item-media">
-      <img src="/Images/cookie-dough-blizzard.webp" alt="Cookie Dough Blizzard Dairy Queen" loading="eager" width="600" height="450"></div>
-  <div>
-    <div class="badge-row"><span class="badge red">#2 Best-Selling Blizzard</span><span class="badge">Year-Round</span><span class="badge blue">Rich &amp; Rich</span></div>
-    <h1>Chocolate Chip Cookie Dough Blizzard® Treat</h1>
-      <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> A Chocolate Chip Cookie Dough Blizzard at Dairy Queen costs about $3.49 for a Mini, $4.49 for a Small, $5.49 for a Medium and $6.49 for a Large. A Small has about 590 calories. It is on the menu year-round. Prices vary by location.</p>
-    <div class="item-price-lg">From $3.49</div>
-    <p>Nothing evokes childhood nostalgia quite like snacking on raw cookie batter. The Chocolate Chip Cookie Dough Blizzard blends rich, buttery, and chewy dough morsels packed with mini chocolate chips straight into cold DQ vanilla soft serve. As Dairy Queen's #2 all-time best-selling Blizzard, it starts at $3.49 for a Mini.</p>
-
-    <table class="spec-table"><tbody>
-      <tr><td>Ingredients</td><td>DQ vanilla soft serve, chocolate chip cookie dough pieces</td></tr>
-      <tr><td>Sizes</td><td>Mini · Small · Medium · Large</td></tr>
-      <tr><td>Starting Price</td><td>$3.49 (Mini)</td></tr>
-      <tr><td>Calories (Small)</td><td>590 cal</td></tr>
-      <tr><td>Allergens</td><td>Milk, Wheat, Soy, Eggs</td></tr>
-      <tr><td>Availability</td><td>Year-round at all DQ locations</td></tr>
-    </tbody></table>
-  </div>
-</div></div>
-<section class="section section-alt"><div class="container">
-  <h2 class="section-title">Cookie Dough Blizzard: Price &amp; Calories by Size</h2>
-  <div class="table-wrap" style="max-width:680px;margin:0 auto;">
-    <table class="size-table">
-      <thead><tr><th>Size</th><th>Price</th><th>Calories</th><th>Total Fat</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Mini</strong></td><td class="price-cell">$3.49</td><td>~410 cal</td><td>~15g</td></tr>
-        <tr><td><strong>Small</strong></td><td class="price-cell">$4.49</td><td>590 cal</td><td>22g</td></tr>
-        <tr><td><strong>Medium</strong></td><td class="price-cell">$5.49</td><td>800 cal</td><td>30g</td></tr>
-        <tr><td><strong>Large</strong></td><td class="price-cell">$6.49</td><td>1,180 cal</td><td>45g</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div></section>
-<section class="section"><div class="container article-body">
-  <h2>Why the Cookie Dough Blizzard Is #2</h2>
-  <p>There's a simple reason why the Chocolate Chip Cookie Dough Blizzard permanently holds the silver medal right behind the classic Oreo: texture. The chewy, brown-sugar-and-butter dough pellets maintain their density even when folded into freezing soft serve, delivering dense chunks followed by the snap of real chocolate chips. It provides a richer, more bakery-forward mouthfeel than fine cookie crumbles. Check out our entire frozen dessert roster on <a href="/">The Queen Dairy Menu</a>.</p>
-  <h2>Cookie Dough Blizzard vs. Oreo Blizzard</h2>
+<ItemPage
+  title="DQ Cookie Dough Blizzard: Price & Calories (2026)"
+  description="Cookie Dough Blizzard prices: Mini $3.49, Small $4.49, Medium $5.49, Large $6.49. Calories by size, what is in it and how it compares to Oreo."
+  name="Chocolate Chip Cookie Dough Blizzard"
+  category={{ name: 'Blizzard Treats', href: '/categories/blizzard-treats' }}
+  image="/Images/cookie-dough-blizzard.webp"
+  imageAlt="Dairy Queen Chocolate Chip Cookie Dough Blizzard"
+  badges={['Year-round', 'A top-3 favorite']}
+  quick="A Cookie Dough Blizzard at Dairy Queen costs about $3.49 for a Mini, $4.49 for a Small, $5.49 for a Medium and $6.49 for a Large. A Small has about 590 calories. It is on the menu year-round. Prices vary by location."
+  from="From $3.49"
+  intro="Soft chocolate chip cookie dough pieces and fudge blended into vanilla soft serve. Where the Oreo Blizzard is crunchy, this one is chewy and buttery, and it is one of the most ordered flavors after Oreo."
+  spec={[
+    ['Inside', 'Vanilla soft serve, cookie dough pieces, fudge'],
+    ['Sizes', 'Mini · Small · Medium · Large'],
+    ['Calories (Small)', '590'],
+    ['Availability', 'Year-round'],
+  ]}
+  allergens="Milk, Wheat, Soy, Eggs"
+  table={{
+    title: 'Cookie Dough Blizzard price and calories by size',
+    head: ['Size', 'Price', 'Calories'],
+    rows: [['Mini', '$3.49', '~410'], ['Small', '$4.49', '590'], ['Medium', '$5.49', '800'], ['Large', '$6.49', '1,180']],
+  }}
+  faqs={faqs}
+>
+  <h2>Cookie Dough vs. Oreo Blizzard</h2>
   <div class="table-wrap"><table class="size-table">
-    <thead><tr><th>Comparison</th><th>Cookie Dough Blizzard</th><th>Oreo Cookie Blizzard</th></tr></thead>
+    <thead><tr><th></th><th>Cookie Dough</th><th><a href="/items/oreo-blizzard">Oreo</a></th></tr></thead>
     <tbody>
-      <tr><td>Small Price</td><td class="price-cell">$4.49</td><td class="price-cell">$4.49</td></tr>
-      <tr><td>Large Price</td><td class="price-cell">$6.49</td><td class="price-cell">$5.99</td></tr>
-      <tr><td>Small Calories</td><td>590 cal</td><td>420 cal</td></tr>
-      <tr><td>Mix-in Texture</td><td>Chunky, chewy pieces</td><td>Fine cookie crumbles</td></tr>
-      <tr><td>Flavor Profile</td><td>Rich, buttery, sweet</td><td>Chocolate-and-cream</td></tr>
-      <tr><td>Best For</td><td>Rich dessert lovers</td><td>Crowd-pleasing classic</td></tr>
+      <tr><td><strong>Small price</strong></td><td class="price-cell">$4.49</td><td class="price-cell">$4.49</td></tr>
+      <tr><td><strong>Large price</strong></td><td class="price-cell">$6.49</td><td class="price-cell">$5.99</td></tr>
+      <tr><td><strong>Small calories</strong></td><td>590</td><td>420</td></tr>
+      <tr><td><strong>Texture</strong></td><td>Soft and chewy</td><td>Crunchy</td></tr>
+      <tr><td><strong>Taste</strong></td><td>Buttery and sweet</td><td>Chocolate cookie, less sweet</td></tr>
     </tbody>
   </table></div>
-  <h2>Best Cookie Dough Blizzard Customizations</h2>
+  <p>Can’t decide? Ask for half Oreo and half cookie dough in one Blizzard. It is one of the best-known <a href="/blog/dairy-queen-secret-menu">DQ secret menu</a> combos.</p>
+
+  <h2>Ordering tips</h2>
   <ul>
-    <li><strong>Add Oreo:</strong> The most popular combo. Cookie dough + Oreo in a single cup is one of the top fan requests at DQ.</li>
-    <li><strong>Hot fudge swirl:</strong> Turns the Blizzard toward a chocolate lava experience. Pairs naturally with the chocolate chips in the dough.</li>
-    <li><strong>Extra cookie dough (~$0.50):</strong> More chunks per spoonful. Ideal if the mix-in ratio feels too light.</li>
-    <li><strong>Brownie Batter base:</strong> For a double-baked-good experience, request Brownie Batter blended in alongside Cookie Dough.</li>
+    <li>It is filling. A Mini (about 410 calories) is a good size after a meal.</li>
+    <li>Want it for a party? The <a href="/items/cookie-dough-blizzard-cake">Cookie Dough Blizzard Cake</a> serves 12 to 16.</li>
+    <li>See how it ranks against every other flavor in our <a href="/blog/best-blizzard-flavors-ranked">Blizzard rankings</a>.</li>
   </ul>
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-list">
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Is the cookie dough in the DQ Blizzard raw?<span class="faq-icon">+</span></button>
-    <div class="faq-a"><div class="faq-a-inner">Yes, it is 100% safe! Dairy Queen uses specially prepared dough made with heat-treated flour and no raw eggs, eliminating any raw dough bacteria risks while preserving that authentic chewy bakery taste.</div></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Why is the Cookie Dough Blizzard more expensive than Oreo at Large?<span class="faq-icon">+</span></button>
-    <div class="faq-a"><div class="faq-a-inner">At the Large size, Cookie Dough is priced at $6.49 compared to $5.99 for Oreo. The modest $0.50 premium reflects the higher ingredient cost of crafting dense, chocolate-chip-studded dough morsels.</div></div></div>
-  </div>
-</div></section>
-
-<section class="section section-alt">
-  <div class="container article-body" style="max-width:920px;">
-    <h2>Cookie Dough Blizzard: Ordering Tips and Variations</h2>
-    <p>The Cookie Dough Blizzard is one of the most customizable on the menu. Popular fan variations at <a href="/">The Queen Dairy Menu</a> locations:</p>
-    <ul>
-      <li><strong>Cookie Dough + Oreo combo:</strong> The most ordered custom Blizzard combination. Request both mix-ins for ~$0.50 extra. Cookie crunch plus dough chunks in every spoonful.</li>
-      <li><strong>Cookie Dough + Hot Fudge swirl:</strong> Adds a chocolate sauce swirl throughout. Deepens the chocolate chip flavor.</li>
-      <li><strong>Brownie Batter + Cookie Dough:</strong> For guests who want the maximum baked-goods experience. Rich, sweet, high-calorie.</li>
-      <li><strong>Lighter blend:</strong> Request lighter blending to keep the cookie dough chunks larger and chewier.</li>
-    </ul>
-    <h2>Cookie Dough Blizzard vs. Other Baked-Good Blizzards</h2>
-    <div class="table-wrap"><table class="size-table">
-      <thead><tr><th>Blizzard</th><th>Mini</th><th>Small Cal</th><th>Texture</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Cookie Dough Blizzard</strong></td><td class="price-cell">$3.49</td><td>590</td><td>Chunky, chewy dough pieces</td></tr>
-        <tr><td><strong><a href="/items/brownie-batter-blizzard">Brownie Batter</a></strong></td><td class="price-cell">$3.99</td><td>530</td><td>Softer batter pieces, chocolate-forward</td></tr>
-        <tr><td><strong><a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a></strong></td><td class="price-cell">$3.99</td><td>510</td><td>Baked brownie, darkest chocolate</td></tr>
-      </tbody>
-    </table></div>
-    <h2>Related Blizzard Treats</h2>
-    <ul>
-      <li><a href="/items/oreo-blizzard">Oreo Cookie Blizzard — $3.49 Mini (#1 best-seller)</a></li>
-      <li><a href="/items/brownie-batter-blizzard">Brownie Batter Blizzard — $3.99 Mini</a></li>
-      <li><a href="/items/choco-brownie-blizzard">Choco Brownie Extreme Blizzard</a></li>
-      <li><a href="/categories/blizzard-treats">All DQ Blizzard Treats</a></li>
-    </ul>
-  </div>
-</section>
-
-</Layout>
+</ItemPage>

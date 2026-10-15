@@ -1,128 +1,40 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-const itemSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much is the Cookie Dough Blizzard Cake?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "$35.99+ for the 10-inch round. Prices vary by location."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is the Cookie Dough Blizzard Cake different from the classic DQ Cake?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Cookie Dough Blizzard Cake has actual chocolate chip cookie dough pieces distributed throughout the soft serve layer. The classic DQ Cake uses standard soft serve without mix-ins."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many people does the Cookie Dough Blizzard Cake serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The 10-inch serves 12–16 people. For larger groups, order a Sheet Cake ($44.99+, serves 24–32)."
-          }
-        }
-      ]
-    }
-  ]
-};
+import ItemPage from '../../layouts/ItemPage.astro';
+import { CAKE_SIZES } from '../../data/cakes';
+
+const faqs = [
+  { q: 'How much is a Cookie Dough Blizzard Cake?', a: 'A 10-inch Cookie Dough Blizzard Cake typically costs about $35.99. Prices vary by location.' },
+  { q: 'How many people does a Cookie Dough Blizzard Cake serve?', a: 'About 12 to 16 people.' },
+  { q: 'What is in a Cookie Dough Blizzard Cake?', a: 'Soft serve blended with chocolate chip cookie dough pieces, the fudge and cookie crunch center, and whipped icing.' },
+  { q: 'Is the Cookie Dough Blizzard Cake cheaper than the Oreo cake?', a: 'Yes, by about $2.75 at typical prices.' },
+];
 ---
-<Layout title="Dairy Queen Cookie Dough Blizzard Cake: Price & Servings" description="DQ Cookie Dough Blizzard Cake price: $35.99+ (10-inch). Cookie dough pieces layered throughout a full DQ ice cream cake. Order 48 hours in advance.">
-<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+<ItemPage
+  title="DQ Cookie Dough Blizzard Cake: Price & Servings"
+  description="The Dairy Queen Cookie Dough Blizzard Cake costs about $35.99 for a 10-inch cake serving 12–16. What is in it, how to order and how it compares."
+  name="Cookie Dough Blizzard Cake"
+  category={{ name: 'DQ Cakes', href: '/categories/dq-cakes' }}
+  image="/Images/cookie-dough-blizzard-cake.webp"
+  imageAlt="Dairy Queen Cookie Dough Blizzard ice cream cake"
+  badges={['Serves 12–16']}
+  quick="A 10-inch Cookie Dough Blizzard Cake from Dairy Queen costs about $35.99 and serves 12 to 16 people. Order a day or two ahead if your store does not have one in the freezer. Prices vary by location."
+  from="From $35.99"
+  intro="This cake turns the Chocolate Chip Cookie Dough Blizzard into a party cake: soft cookie dough pieces through the soft serve, with the classic fudge and crunch layer in the middle."
+  spec={[
+    ['Price', '$35.99+ (10-inch)'],
+    ['Serves', '12–16 people'],
+    ['Inside', 'Soft serve with cookie dough pieces, fudge and cookie crunch center'],
+    ['Lead time', '24–48 hours if not in stock'],
+  ]}
+  allergens="Milk, Wheat, Soy, Eggs"
+  table={{ title: 'Compare DQ cake sizes and prices', ...CAKE_SIZES }}
+  faqs={faqs}
+>
+  <h2>Cookie Dough or Oreo?</h2>
+  <p>The Cookie Dough cake is softer and sweeter; the <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake</a> is crunchier and a bit more popular. The cookie dough version usually costs about $2.75 less. If you love the <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a>, you will love this cake.</p>
 
+  <h2>How to order</h2>
+  <p>Check the freezer case first. If your store does not have one, order by phone or in store 24 to 48 hours ahead, and add a message if you want one. Keep it frozen until 10 to 15 minutes before serving.</p>
 
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Cakes", "href": "/categories/dq-cakes"}, {"name": "Cookie Dough Blizzard Cake"}]} />
-
-<div class="container">
-  <div class="item-hero">
-    <div class="item-media">
-      <img src="/Images/cookie-dough-blizzard-cake.webp" alt="Cookie Dough Blizzard® Cake — Dairy Queen 2026 menu item" width="600" height="450" loading="eager">
-    </div>
-    <div>
-      <div class="badge-row"><span class="badge red">10-Inch Round</span><span class="badge">Cookie Dough Throughout</span><span class="badge blue">Serves 12–16</span></div>
-      <h1>Cookie Dough Blizzard® Cake</h1>
-      <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> A 10-inch Cookie Dough Blizzard Cake from Dairy Queen costs about $35.99 and serves 12 to 16 people. Order a day or two ahead if your store does not have one in the freezer. Prices vary by location.</p>
-      <div class="item-price-lg">$35.99+</div>
-      <p>Celebrate your biggest moments with America's favorite bakery flavor. The Cookie Dough Blizzard Cake packs generous chunks of real chocolate chip cookie dough and rich chocolate crunch throughout layers of creamy DQ soft serve. Designed as a 10-inch round centerpiece that serves 12 to 16 guests, it starts at $35.99 (requires 48-hour advance ordering).</p>
-
-      <table class="spec-table"><tbody><tr><td>Starting Price</td><td>$35.99+ (10-inch round)</td></tr><tr><td>Serves</td><td>12–16 people</td></tr><tr><td>Cookie Dough</td><td>Distributed throughout the soft serve layer</td></tr><tr><td>Lead Time</td><td>48 hours minimum</td></tr><tr><td>vs. Oreo Blizzard Cake</td><td>~$2.75 less than the Oreo Blizzard Cake</td></tr></tbody></table>
-    </div>
-  </div>
-</div>
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Price &amp; Calories: 2026</h2>
-    <div style="max-width:700px;margin:0 auto;">
-      <div class="table-wrap"><table class="size-table"><thead><tr><th>Size / Option</th><th>Price</th><th>Calories</th><th>Total Fat</th></tr></thead><tbody><tr><td><strong>Cookie Dough Blizzard Cake (10-inch)</strong></td><td>$35.99+</td><td class="price-cell">~4,100 cal (whole)</td><td>Serves 12–16</td></tr><tr><td><strong>Oreo® Blizzard® Cake (10-inch)</strong></td><td>$38.74+</td><td class="price-cell">~4,200 cal (whole)</td><td>Serves 12–16</td></tr><tr><td><strong>Classic DQ Cake (10-inch)</strong></td><td>$32.99+</td><td class="price-cell">~4,000 cal (whole)</td><td>No mix-ins</td></tr></tbody></table></div>
-    </div>
-    <p style="text-align:center;margin-top:10px;font-size:.82rem;color:var(--color-text-muted);">Prices are 2026 national averages. Local DQ prices may vary.</p>
-  </div>
-</section>
-<section class="section">
-  <div class="container article-body" style="max-width:920px;">
-    <h2>Cookie Dough Blizzard Cake: The Second Most Popular DQ Blizzard Cake</h2>
-  <p>Standing proud right behind the classic <a href="/items/oreo-blizzard-cake">Oreo® Blizzard® Cake</a>, the Cookie Dough edition reigns as Dairy Queen's second most sought-after party dessert. It infuses real, food-safe chocolate chip cookie dough morsels into thick ribbons of vanilla and chocolate soft serve, anchored by DQ's famous chocolate cookie crunch center. Every slice delivers that nostalgic chewy dough texture in a grand party format. Explore our entire bakery lineup on <a href="/">The Queen Dairy Menu</a>.</p>
-
-  <h2>Cookie Dough Blizzard Cake vs. Oreo Blizzard Cake</h2>
-  <div class="table-wrap"><table class="size-table"><thead><tr><th>Cake</th><th>Price</th><th>Serves</th><th>Key Difference</th></tr></thead><tbody><tr><td>Cookie Dough Blizzard Cake</td><td class="price-cell">$35.99+</td><td>12–16 people</td><td>Cookie dough pieces throughout — $2.75 less than Oreo Cake</td></tr><tr><td>Oreo® Blizzard® Cake</td><td class="price-cell">$38.74+</td><td>12–16 people</td><td>Oreo crumbles throughout: most popular</td></tr><tr><td>Classic DQ Cake (10-inch)</td><td class="price-cell">$32.99+</td><td>12–16 people</td><td>No Blizzard mix-ins: lowest price</td></tr></tbody></table></div>
-
-  <h2>How to Order the Cookie Dough Blizzard Cake</h2>
-  <ul>
-    <li><strong>Call or visit your local DQ at least 48 hours before your event</strong></li>
-    <li><strong>Specify:</strong> Cookie Dough Blizzard® Cake, 10-inch round</li>
-    <li><strong>Add your personalized message:</strong> included at no extra charge</li>
-    <li><strong>Transport:</strong> Keep frozen: use an insulated cooler bag for transport to your event</li>
-  </ul>
-
-  <h2>Related DQ Cake Pages</h2>
-  <ul>
-    <li><a href="/items/oreo-blizzard-cake">Oreo® Blizzard® Cake — $38.74+ (most popular)</a></li>
-    <li><a href="/items/dq-cake-round-8inch">Classic DQ Cake 8-inch — $22.99+ (smaller group)</a></li>
-    <li><a href="/items/dq-sheet-cake">DQ Sheet Cake — $44.99+ (24–32 people)</a></li>
-    <li><a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard (individual): from $3.49</a></li>
-    <li><a href="/categories/dq-cakes">All DQ Cake Options</a></li>
-  </ul>
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list"><div class="faq-item">
-      <button class="faq-q" aria-expanded="false">How much is the Cookie Dough Blizzard Cake?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">A standard 10-inch round Cookie Dough Blizzard Cake starts around $35.99, though exact pricing can vary slightly by franchise location.</div></div>
-    </div><div class="faq-item">
-      <button class="faq-q" aria-expanded="false">How is the Cookie Dough Blizzard Cake different from the classic DQ Cake?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">While a traditional DQ cake contains only soft serve and a fudge crunch center, the Blizzard Cake incorporates real chewy chocolate chip cookie dough pieces throughout the ice cream layers.</div></div>
-    </div><div class="faq-item">
-      <button class="faq-q" aria-expanded="false">How many people does the Cookie Dough Blizzard Cake serve?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">The 10-inch round easily serves 12 to 16 guests. For larger gatherings, consider ordering a full Sheet Cake ($44.99+) to serve up to 32 people.</div></div>
-    </div></div>
-    <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For every DQ price, flavor, and category, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
-    </p>
-  </div>
-</section>
-<section class="section section-alt"><div class="container article-body" style="max-width:920px;">
-<h2>Cookie Dough Blizzard Cake: Serving and Storage Tips</h2>
-<ul>
-<li><strong>Remove from freezer 5–10 minutes before cutting:</strong> DQ Cakes slice cleanest at a slight thaw. Straight-from-freezer hard cuts can crack the layers unevenly.</li>
-<li><strong>Use a warm knife:</strong> Run a sharp knife under warm water and dry it before each cut for clean, professional-looking slices.</li>
-<li><strong>Store leftovers tightly wrapped:</strong> If you have leftover cake, cover the exposed cut edges with plastic wrap before returning to the freezer. The cookie dough pieces harden more than soft serve if left exposed.</li>
-<li><strong>Pair with the individual Blizzard:</strong> For guests who want more, the <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> (from $3.49) alongside a slice creates the ultimate cookie dough DQ experience.</li>
-</ul>
-<h2>Related DQ Cake Pages</h2>
-<ul>
-<li><a href="/items/oreo-blizzard-cake">Oreo® Blizzard® Cake — $38.74+ (most popular)</a></li>
-<li><a href="/items/dq-cake-round-8inch">Classic DQ Cake 8-inch — $22.99+</a></li>
-<li><a href="/items/dq-sheet-cake">DQ Sheet Cake — $44.99+ (24–32 people)</a></li>
-<li><a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard (individual): from $3.49</a></li>
-<li><a href="/categories/dq-cakes">All DQ Cake Options</a></li>
-</ul>
-</div></section>
-
-</Layout>
+  <p>For every size and price, see the <a href="/categories/dq-cakes">DQ cake prices page</a>, and for cutting and storage tips, our <a href="/blog/dq-cakes-complete-guide">DQ cake serving guide</a>.</p>
+</ItemPage>

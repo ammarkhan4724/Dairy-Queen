@@ -1,123 +1,48 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-const itemSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much is the DQ Banana Split?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "$5.69 with 560 calories. Comes in one standard size."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What toppings are on the Banana Split?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pineapple topping, strawberry topping, and hot fudge: one on each of the three scoops. Finished with whipped topping and a cherry."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the DQ Banana Split shareable?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The three-scoop format makes it naturally shareable between two people."
-          }
-        }
-      ]
-    }
-  ]
-};
+import ItemPage from '../../layouts/ItemPage.astro';
+
+const faqs = [
+  { q: 'How much is a Banana Split at Dairy Queen?', a: 'A DQ Banana Split typically costs about $5.69 and has about 560 calories. It comes in one size. Prices vary by location.' },
+  { q: 'What is on a Dairy Queen Banana Split?', a: 'A sliced banana, three scoops of vanilla soft serve, strawberry, pineapple and chocolate toppings, whipped topping and a cherry.' },
+  { q: 'Is the DQ Banana Split big enough to share?', a: 'Yes. With three scoops it shares well between two people.' },
+  { q: 'Is there a Banana Split Blizzard?', a: 'Dairy Queen has offered a Banana Split Blizzard at times, but the classic dish version is the one on the regular menu.' },
+];
 ---
-<Layout title="Dairy Queen Banana Split — Price, Calories 2026" description="DQ Banana Split price: $5.69, 560 calories. Three soft serve scoops on a split banana with pineapple, strawberry, and hot fudge. Classic DQ dessert full review.">
-<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+<ItemPage
+  title="Dairy Queen Banana Split: Price & Calories (2026)"
+  description="The Dairy Queen Banana Split costs about $5.69 and has about 560 calories. What is on it, whether to share it, and how it compares to other DQ treats."
+  name="Banana Split"
+  category={{ name: 'Classic Treats', href: '/categories/classic-treats' }}
+  image="/Images/banana-split.webp"
+  imageAlt="Dairy Queen Banana Split with three toppings and whipped cream"
+  badges={['Classic treat', 'Good for sharing']}
+  quick="A Banana Split at Dairy Queen costs about $5.69 and has about 560 calories. It has a sliced banana, three scoops of vanilla soft serve with strawberry, pineapple and chocolate toppings, plus whipped topping and a cherry. Prices vary by location."
+  from="$5.69"
+  intro="The Banana Split is one of DQ’s oldest treats and still one of the best for sharing. Each scoop gets a different topping, so you get three desserts in one dish."
+  spec={[
+    ['Price', '$5.69'],
+    ['Calories', '560'],
+    ['What’s in it', 'Banana, 3 scoops of soft serve, strawberry, pineapple and chocolate toppings'],
+    ['Size', 'One size'],
+  ]}
+  faqs={faqs}
+>
+  <h2>Banana Split vs. other DQ treats</h2>
+  <div class="table-wrap"><table class="size-table">
+    <thead><tr><th>Treat</th><th>Typical price</th><th>Calories</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Banana Split</strong></td><td class="price-cell">$5.69</td><td>560</td></tr>
+      <tr><td><a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a></td><td class="price-cell">$4.99</td><td>710</td></tr>
+      <tr><td><a href="/items/brownie-oreo-cupfection">Brownie &amp; Oreo Cupfection</a></td><td class="price-cell">$6.29</td><td>820</td></tr>
+      <tr><td><a href="/items/hot-fudge-sundae">Hot Fudge Sundae (regular)</a></td><td class="price-cell">$3.79</td><td>300</td></tr>
+    </tbody>
+  </table></div>
 
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Classic Treats", "href": "/categories/classic-treats"}, {"name": "Banana Split"}]} />
-
-<div class="container"><div class="item-hero">
-  <div class="item-media">
-      <img src="/Images/banana-split.webp" alt="Banana Split — Dairy Queen" loading="eager" width="600" height="450"></div>
-  <div>
-    <div class="badge-row"><span class="badge red">DQ Classic</span><span class="badge">Three Toppings</span><span class="badge blue">Shareable for Two</span></div>
-    <h1>Banana Split</h1>
-      <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> The Banana Split at Dairy Queen costs about $5.69 and has about 560 calories. Prices vary by location.</p>
-    <div class="item-price-lg">$5.69</div>
-    <p>Our Banana Split delivers the ultimate classic ice cream parlor experience. You get a fresh banana split right down the middle, nestled alongside three massive scoops of our signature DQ soft serve. We then generously cover it with sweet pineapple, vibrant strawberry, and rich hot fudge toppings, finishing the classic with whipped topping and a cherry for $5.69.</p>
-
-    <table class="spec-table"><tbody><tr><td>Price</td><td>$5.69</td></tr><tr><td>Calories</td><td>560 cal</td></tr><tr><td>Total Fat</td><td>14g</td></tr><tr><td>Portions</td><td>3 soft serve scoops + banana + 3 toppings</td></tr><tr><td>One Size</td><td>Standard only</td></tr></tbody></table>
-    <div style="margin-top:22px;"><a href="/#full-menu" class="btn btn-primary">Full Menu →</a></div>
-  </div>
-</div></div>
-<section class="section section-alt"><div class="container">
-  <h2 class="section-title">Price &amp; Calories by Size</h2>
-  <div class="table-wrap" style="max-width:680px;margin:0 auto;">
-    <table class="size-table">
-      <thead><tr><th>Size / Option</th><th>Price</th><th>Calories</th><th>Total Fat</th></tr></thead>
-      <tbody><tr><td><strong>Banana Split</strong></td><td class="price-cell">$5.69</td><td>560 cal</td><td>14g</td></tr></tbody>
-    </table>
-  </div>
-</div></section>
-<section class="section"><div class="container article-body">
-<h2>The DQ Banana Split: A Showpiece Dessert</h2>
-  <p>There’s nothing quite like the DQ Banana Split. Sticking to the timeless American ice cream tradition, we slice a fresh banana lengthwise and cradle three thick scoops of DQ's soft serve. Every scoop gets its own distinct personality: one is draped in tropical pineapple topping, the next in fresh strawberry, and the last is drenched in rich hot fudge. The whole creation is crowned with light whipped topping and a maraschino cherry. Explore our other classic treats on <a href="/">The Queen Dairy Menu</a>.</p>
-  <h2>What's on the Banana Split: Topping Breakdown</h2>
+  <h2>Tips</h2>
   <ul>
-    <li><strong>Scoop 1 + Pineapple topping:</strong> Sweet, tropical, bright</li>
-    <li><strong>Scoop 2 + Strawberry topping:</strong> Fresh strawberry, lighter sweetness</li>
-    <li><strong>Scoop 3 + Hot fudge:</strong> Rich, warm chocolate, the anchor of the dessert</li>
-    <li><strong>Whipped topping:</strong> Light, airy finish across all three scoops</li>
-    <li><strong>Maraschino cherry:</strong> The classic garnish on top</li>
+    <li>Share it. Three scoops is a lot for one person after a meal.</li>
+    <li>Not a pineapple fan? Ask to swap it for another topping, such as more hot fudge. Some stores charge a little extra.</li>
+    <li>Eat it soon. The banana and fruit toppings make it melt faster than a Blizzard.</li>
   </ul>
-  <h2>Banana Split vs. Peanut Buster Parfait</h2>
-  <ul>
-    <li>The Banana Split at $5.69 is more volume and visual impact: comfortably shareable between two people, lower calories at 560 vs. 710.</li>
-    <li>The Peanut Buster Parfait at $4.99 is more intense per spoonful: deeper flavor layering, higher calorie density, better for one person who wants something more rich.</li>
-  </ul>
-  <h2>Why the Banana Split Is Shareable</h2>
-  <p>Designed with three separate soft serve mounds, the Banana Split is practically begging to be shared. Because each scoop features a completely different topping, two people can easily claim their favorite flavor and split the third straight down the middle. It stands out as one of the few DQ desserts that you can effortlessly share on a date or with a friend, without making a mess or fighting over portions.</p>
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">How much is the DQ Banana Split?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">The Banana Split costs $5.69 and contains 560 calories. It is only available in one generous standard size.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">What toppings are on the Banana Split?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">It features three distinct toppings: sweet pineapple, fresh strawberry, and warm hot fudge—each draped over its own scoop of soft serve. The entire treat is finished off with whipped topping and a cherry.</div></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Is the DQ Banana Split shareable?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">Absolutely! Thanks to its three separate scoops of soft serve, it is incredibly easy to split this dessert between two people.</div></div></div></div>
-</div></section>
-
-<section class="section section-alt">
-  <div class="container article-body" style="max-width:920px;">
-    <h2>Banana Split: The Shareable DQ Classic</h2>
-    <p>Priced at $5.69, the DQ Banana Split easily takes the crown as the most visually spectacular dessert available on <a href="/">The Queen Dairy Menu</a>. If you are debating what to order, here is how this shareable favorite stacks up against DQ’s other premium creations:</p>
-    <div class="table-wrap"><table class="size-table">
-      <thead><tr><th>Treat</th><th>Price</th><th>Calories</th><th>Shareable?</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Banana Split</strong></td><td class="price-cell">$5.69</td><td>560</td><td>Yes — 3 separate scoops naturally divide</td></tr>
-        <tr><td><strong><a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a></strong></td><td class="price-cell">$4.99</td><td>710</td><td>Best for one: layered parfait cup</td></tr>
-        <tr><td><strong>Brownie &amp; Oreo Cupfection</strong></td><td class="price-cell">$6.29</td><td>820</td><td>Best for one: cup format</td></tr>
-        <tr><td><strong>Mini Blizzard + Mini Blizzard</strong></td><td class="price-cell">$6.98+</td><td>~600+</td><td>Two individual Blizzards</td></tr>
-      </tbody>
-    </table></div>
-    <h2>Banana Split Topping Breakdown</h2>
-    <ul>
-      <li><strong>Scoop 1 + Pineapple topping:</strong> Tropical, bright, refreshing</li>
-      <li><strong>Scoop 2 + Strawberry topping:</strong> Fruity, natural sweetness</li>
-      <li><strong>Scoop 3 + Hot fudge:</strong> Rich, warm chocolate: the anchor</li>
-      <li><strong>Whipped topping + Maraschino cherry:</strong> The classic garnish across all three scoops</li>
-    </ul>
-    <h2>Related Classic Treats</h2>
-    <ul>
-      <li><a href="/items/peanut-buster-parfait">Peanut Buster Parfait — $4.99</a></li>
-      <li><a href="/items/hot-fudge-sundae">Hot Fudge Sundae — $3.79</a></li>
-      <li><a href="/items/strawberry-sundae">Strawberry Sundae — $3.79</a></li>
-      <li><a href="/categories/classic-treats">All DQ Classic Treats</a></li>
-    </ul>
-  </div>
-</section>
-
-</Layout>
+  <p>See every cone, sundae and classic treat on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
+</ItemPage>

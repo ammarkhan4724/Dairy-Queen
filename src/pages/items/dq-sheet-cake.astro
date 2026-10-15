@@ -1,117 +1,44 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-const itemSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much is the DQ Sheet Cake?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "$44.99+ and serves 24–32 people. Price may vary by location."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How far in advance do I need to order a DQ Sheet Cake?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "At least 48 hours in advance. For large events or peak seasons like summer, more notice is recommended."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the DQ Sheet Cake come in Blizzard flavors?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Sheet Cake is available in the classic DQ soft serve flavor. Blizzard Cake formats (Oreo, Cookie Dough, etc.) are typically available in 10-inch round only. Confirm with your local DQ."
-          }
-        }
-      ]
-    }
-  ]
-};
+import ItemPage from '../../layouts/ItemPage.astro';
+import { CAKE_SIZES } from '../../data/cakes';
+
+const faqs = [
+  { q: 'How much is a Dairy Queen sheet cake?', a: 'A DQ sheet cake typically costs about $44.99. Prices vary by location and by design.' },
+  { q: 'How many people does a DQ sheet cake feed?', a: 'About 24 to 32 people, depending on slice size.' },
+  { q: 'How far ahead should I order a DQ sheet cake?', a: 'Plan on at least 48 hours. Sheet cakes are less likely to be waiting in the freezer case than round cakes.' },
+  { q: 'Is a sheet cake cheaper per person than a round DQ cake?', a: 'Yes. At about $44.99 for 24 to 32 servings, it works out to under $2 per slice, the lowest of any DQ cake.' },
+];
 ---
-<Layout title="Dairy Queen Sheet Cake — Price, Size & Ordering Guide 2026" description="DQ Sheet Cake price: $44.99+. Serves 24–32 people. DQ soft serve, fudge, crunch center in a rectangular format. Custom message available.">
-<script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
+<ItemPage
+  title="Dairy Queen Sheet Cake: Price & Servings (2026)"
+  description="A Dairy Queen sheet cake costs about $44.99 and serves 24–32, the lowest price per slice of any DQ cake. Ordering, lead time and custom designs."
+  name="Dairy Queen Sheet Cake"
+  category={{ name: 'DQ Cakes', href: '/categories/dq-cakes' }}
+  image="/Images/dq-sheet-cake.webp"
+  imageAlt="Dairy Queen rectangular ice cream sheet cake"
+  badges={['Serves 24–32', 'Best value per slice']}
+  quick="A Dairy Queen sheet cake costs about $44.99 and serves 24 to 32 people, which works out to under $2 a slice. Order at least 48 hours ahead. Prices vary by location."
+  from="From $44.99"
+  intro="The sheet cake is DQ’s big-party option for classrooms, offices, sports teams and graduations. It has the same chocolate and vanilla soft serve and fudge crunch center as the round cakes, in a large rectangle."
+  spec={[
+    ['Price', '$44.99+'],
+    ['Serves', '24–32 people'],
+    ['Shape', 'Rectangular, about 11 × 14 inches'],
+    ['Custom options', 'Message, colors and themed designs'],
+    ['Lead time', 'At least 48 hours'],
+  ]}
+  allergens="Milk, Wheat, Soy"
+  table={{ title: 'Compare DQ cake sizes and prices', ...CAKE_SIZES }}
+  faqs={faqs}
+>
+  <h2>When a sheet cake makes sense</h2>
+  <p>Choose a sheet cake when you have more than about 16 people. Two <a href="/items/dq-cake-round-10inch">10-inch cakes</a> would cost more and serve about the same number. For smaller groups, a round cake is easier to carry and store.</p>
 
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Cakes", "href": "/categories/dq-cakes"}, {"name": "DQ Sheet Cake"}]} />
-
-<div class="container">
-  <div class="item-hero">
-    <div class="item-media">
-      <img src="/Images/dq-sheet-cake.webp" alt="DQ Sheet Cake — Dairy Queen 2026 menu item" width="600" height="450" loading="eager">
-    </div>
-    <div>
-      <div class="badge-row"><span class="badge red">Largest DQ Cake</span><span class="badge">Serves 24–32</span><span class="badge blue">Order 48 Hrs Ahead</span></div>
-      <h1>DQ Sheet Cake</h1>
-      <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> A Dairy Queen sheet cake costs about $44.99 and serves 24 to 32 people, which makes it the cheapest DQ cake per slice. Plan on 48 hours’ notice for a custom design. Prices vary by location.</p>
-      <div class="item-price-lg">$44.99+</div>
-      <p>The top catering solution for big crowds: a spacious 11x14 inch rectangular canvas layering rich vanilla and chocolate soft serve over Dairy Queen's classic fudge and cookie crunch core, finished with smooth whipped icing. Precision-portioned to cater 24 to 32 guests, starting at $44.99.</p>
-
-      <table class="spec-table"><tbody><tr><td>Starting Price</td><td>$44.99+</td></tr><tr><td>Serves</td><td>24–32 people</td></tr><tr><td>Format</td><td>Rectangular sheet cake</td></tr><tr><td>Layers</td><td>Soft serve + fudge + crunch center + whipped topping</td></tr><tr><td>Lead Time</td><td>48 hours minimum</td></tr><tr><td>Customization</td><td>Personalized message standard</td></tr></tbody></table>
-    </div>
-  </div>
-</div>
-
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Price &amp; Calories by Size: 2026</h2>
-    <div style="max-width:700px;margin:0 auto;">
-      <div class="table-wrap"><table class="size-table"><thead><tr><th>Size / Option</th><th>Price</th><th>Calories</th><th>Total Fat</th></tr></thead><tbody><tr><td><strong>DQ Sheet Cake</strong></td><td>$44.99+</td><td class="price-cell">~9,600 cal (whole)</td><td>Serves 24–32</td></tr><tr><td><strong>DQ Cake 10-inch Round</strong></td><td>$32.99+</td><td class="price-cell">~4,200 cal (whole)</td><td>Serves 12–16</td></tr><tr><td><strong>Oreo® Blizzard® Cake 10-inch</strong></td><td>$38.74+</td><td class="price-cell">~4,200 cal (whole)</td><td>Serves 12–16</td></tr></tbody></table></div>
-    </div>
-    <p style="text-align:center;margin-top:10px;font-size:.82rem;color:var(--color-text-muted);">Prices are 2026 national averages.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container article-body" style="max-width:920px;">
-    <h2>Large-Scale Event Catering: Why the Sheet Cake Reigns Supreme</h2>
-  <p>When hosting sports banquets, office milestones, school graduations, or wedding rehearsals, managing individual dessert orders quickly becomes chaotic and expensive. The DQ Sheet Cake solves catering logistics in one sweep: yielding 24 to 32 cleanly sliced uniform squares at approximately $1.40 to $1.85 per guest. It gives every attendee the complete textural wonder of real soft serve and chocolate crunch center without blowing past party budgets. Explore all custom celebration options across <a href="/">The Queen Dairy Menu</a> or our complete <a href="/categories/dq-cakes">DQ Cakes directory</a>.</p>
-  <h2>DQ Cake Size Comparison</h2>
-  <div class="table-wrap"><table class="size-table">
-    <thead><tr><th>DQ Cake</th><th>Price</th><th>Serves</th><th>Format</th></tr></thead>
-    <tbody>
-      <tr><td><strong>8-inch Round</strong></td><td class="price-cell">$22.99+</td><td>8–10</td><td>Round</td></tr>
-      <tr><td><strong>10-inch Round</strong></td><td class="price-cell">$32.99+</td><td>12–16</td><td>Round</td></tr>
-      <tr><td><strong>Oreo® Blizzard® Cake</strong></td><td class="price-cell">$38.74+</td><td>12–16</td><td>Round, Oreo throughout</td></tr>
-      <tr><td><strong>Sheet Cake</strong></td><td class="price-cell">$44.99+</td><td>24–32</td><td>Rectangular</td></tr>
-    </tbody>
-  </table></div>
-  <h2>Expert Ordering &amp; Venue Transport Recommendations</h2>
+  <h2>Ordering tips</h2>
   <ul>
-    <li><strong>Order Window:</strong> Submit custom decorator requests at least 48 to 72 hours ahead—large sheet cakes require extended blast-chilling cycles to maintain crisp rectangular lines.</li>
-    <li><strong>Custom Inscriptions &amp; Themes:</strong> Extended cake surface area allows for longer custom messages, sports logos, or festive color trims at no additional fee.</li>
-    <li><strong>Vehicle Trunk Logistics:</strong> Transport the cake completely flat on a non-slip rubber mat or large level board in an air-conditioned vehicle; do not tilt on angled car seats.</li>
-    <li><strong>Slicing Technique:</strong> For neat presentation squares, dip a long chef's knife into warm water and wipe dry between cuts; this glides smoothly through the hardened fudge crunch layer without tearing the whipped border.</li>
+    <li>Order at least two days ahead, especially around graduations and holidays.</li>
+    <li>Bring a cooler or drive straight to the party. A sheet cake softens fast in a warm car.</li>
+    <li>Make sure your freezer has room before you pick it up.</li>
   </ul>
-  <h2>Related Items</h2>
-  <ul>
-    <li><a href="/items/dq-cake-round-8inch">Classic DQ Cake 8-inch — $22.99+</a></li>
-    <li><a href="/items/oreo-blizzard-cake">Oreo® Blizzard® Cake — $38.74+</a></li>
-    <li><a href="/categories/dq-cakes">All DQ Cake Options</a></li>
-  </ul>
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list"><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How much is the DQ Sheet Cake?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">$44.99+ and serves 24–32 people. Price may vary by location.</div></div>
-      </div><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How far in advance do I need to order a DQ Sheet Cake?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">At least 48 hours in advance. For large events or peak seasons like summer, more notice is recommended.</div></div>
-      </div><div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Does the DQ Sheet Cake come in Blizzard flavors?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">The Sheet Cake is available in the classic DQ soft serve flavor. Blizzard Cake formats (Oreo, Cookie Dough, etc.) are typically available in 10-inch round only. Confirm with your local DQ.</div></div>
-      </div></div>
-    <p style="margin-top:32px;padding-top:18px;border-top:1px solid var(--color-border);">
-      For the complete 2026 DQ food and treats menu, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.
-      See all Blizzard flavors on the <a href="/categories/blizzard-treats">Blizzard Treats</a> page.
-    </p>
-  </div>
-</section>
-
-</Layout>
+  <p>For cutting and storage, see our <a href="/blog/dq-cakes-complete-guide">DQ cake serving guide</a>. All sizes are on the <a href="/categories/dq-cakes">DQ cake prices page</a>.</p>
+</ItemPage>

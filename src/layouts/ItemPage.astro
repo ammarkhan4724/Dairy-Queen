@@ -1,0 +1,83 @@
+---
+// Shared wrapper for /items/* pages: hero, quick answer, spec table, price table
+// and a FAQ list whose visible text and FAQPage schema come from the same props.
+import Layout from './Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+interface Faq { q: string; a: string }
+interface Props {
+  title: string;
+  description: string;
+  name: string;                       // H1
+  category: { name: string; href: string };
+  image: string;
+  imageAlt: string;
+  badges?: string[];
+  quick: string;                      // quick answer, plain text
+  from: string;                       // e.g. "From $22.99"
+  intro: string;                      // short paragraph under the price
+  spec: [string, string][];
+  allergens?: string;
+  table?: { head: string[]; rows: string[][]; title: string };
+  faqs: Faq[];
+}
+const { title, description, name, category, image, imageAlt, badges = [], quick, from, intro, spec, allergens, table, faqs } = Astro.props;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout title={title} description={description} ogImage={image}>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Menu', href: '/categories' }, category, { name }]} />
+
+<div class="container">
+  <div class="item-hero">
+    <div class="item-media">
+      <img src={image} alt={imageAlt} width="600" height="450" loading="eager" fetchpriority="high" />
+    </div>
+    <div>
+      {badges.length > 0 && <div class="badge-row">{badges.map((b) => <span class="badge">{b}</span>)}</div>}
+      <h1>{name}</h1>
+      <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> {quick}</p>
+      <div class="item-price-lg">{from}</div>
+      <p>{intro}</p>
+      <table class="spec-table"><tbody>
+        {spec.map(([k, v]) => <tr><td>{k}</td><td>{v}</td></tr>)}
+        {allergens && <tr><td>Allergens</td><td>{allergens} <span style="display:block;font-size:.8rem;color:#64748B;">Shared equipment; check <a href="/blog/dq-gluten-free-allergen-guide">our allergen guide</a> and DQ’s official list.</span></td></tr>}
+      </tbody></table>
+    </div>
+  </div>
+</div>
+
+{table && (
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">{table.title}</h2>
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="table-wrap"><table class="size-table">
+          <thead><tr>{table.head.map((h) => <th>{h}</th>)}</tr></thead>
+          <tbody>{table.rows.map((r) => <tr>{r.map((c, i) => i === 0 ? <td><strong set:html={c} /></td> : <td set:html={c} />)}</tr>)}</tbody>
+        </table></div>
+      </div>
+    </div>
+  </section>
+)}
+
+<section class="section">
+  <div class="container article-body" style="max-width:920px;">
+    <slot />
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+</Layout>
