@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Classic Hot Dog",
-      "image": "https://www.thequeendairymenu.us/Images/hot-dog.webp",
-      "description": "An all-beef hot dog on a steamed bun. At $3.99 and 330 calories, the simplest and most affordable hot entrée on the DQ menu. Eligible for the 2-for-$5 Mix &amp; Match.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "154"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/hot-dog",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "330 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -82,7 +40,7 @@ const itemSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li aria-current="page">Classic Hot Dog</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Burgers & Sandwiches", "href": "/categories/burgers-sandwiches"}, {"name": "Classic Hot Dog"}]} />
 
 <div class="container">
   <div class="item-hero">

@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Grilled Chicken Sandwich",
-      "image": "https://www.thequeendairymenu.us/Images/grilled-chicken-sandwich.webp",
-      "description": "Flame-grilled chicken breast with crisp lettuce, fresh tomato, and honey mustard on a toasted bun. At 390 calories, the Grilled Chicken Sandwich is the lowest-calorie full sandwich on the DQ menu.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "224"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "7.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/grilled-chicken-sandwich",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "390 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Grilled Chicken Sandwich — Price, Calories &..." description="DQ Grilled Chicken Sandwich price: $7.99, 390 calories. Flame-grilled chicken breast with lettuce, tomato and honey mustard. Lightest DQ sandwich. Full review.">
+<Layout title="Dairy Queen Grilled Chicken Sandwich: Price & Calories" description="DQ Grilled Chicken Sandwich price: $7.99, 390 calories. Flame-grilled chicken breast with lettuce, tomato and honey mustard. Lightest DQ sandwich. Full review.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li aria-current="page">Grilled Chicken Sandwich</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Burgers & Sandwiches", "href": "/categories/burgers-sandwiches"}, {"name": "Grilled Chicken Sandwich"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

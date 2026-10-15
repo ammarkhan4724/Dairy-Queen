@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Strawberry Sundae",
-      "image": "https://www.thequeendairymenu.us/Images/strawberry-sundae.webp",
-      "description": "Fresh strawberry topping poured generously over DQ's creamy vanilla soft serve. At 280 calories, the Strawberry Sundae is the lightest of DQ's three sundae options — and still a genuinely satisfying dessert.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "156"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.79",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/strawberry-sundae",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "280 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Strawberry Sundae — Price, Calories & Review..." description="DQ Strawberry Sundae price: $3.79, 280 calories. Fresh strawberry topping over DQ soft serve. Lightest DQ sundae. Full review and comparison with hot fudge...">
+<Layout title="Dairy Queen Strawberry Sundae: Price & Calories (2026)" description="DQ Strawberry Sundae price: $3.79, 280 calories. Fresh strawberry topping over DQ soft serve. Lightest DQ sundae.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li aria-current="page">Strawberry Sundae</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Classic Treats", "href": "/categories/classic-treats"}, {"name": "Strawberry Sundae"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

@@ -1,8 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Dairy Queen Nutrition & Macro Guide (2026): High-Protein Swaps & Low-Calorie Protocols" 
+  title="Dairy Queen Calories & Nutrition Guide (2026)" 
   description="Master your macros at Dairy Queen with independent nutritional audits. Discover 35g+ protein meals under 400 calories, glycemic-smart treats, and keto hacks."
   ogImage="/Images/dilly-bar.webp"
   article={true}
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "Dairy Queen Nutrition & Macro Guide (2026): High-Protein Swaps & Low-Calorie Protocols",
       "description": "An exhaustive nutritional analysis of Dairy Queen's 2026 menu, evaluating protein-to-calorie ratios, low-glycemic dessert alternatives, and sodium mitigation strategies.",
       "image": "https://www.thequeendairymenu.us/Images/dilly-bar.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-04-20T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dairy-queen-calories-nutrition-guide"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Nutrition & Macro Guide (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/dairy-queen-calories-nutrition-guide"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Nutrition &amp; Macro Guide (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Nutrition & Macro Guide (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Nutritional Laboratory Audit · 2026 Dietary Intelligence</span>
       <h1>DAIRY QUEEN NUTRITION &amp; MACRO GUIDE: HEALTHY SWAPS &amp; PROTEIN AUDIT</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Independently Audited for 2026 · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Independently Audited for 2026 · Updated September 2026</p>
     </div>
   </div>
 </section>

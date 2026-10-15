@@ -20,3 +20,13 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## SEO rules for thequeendairymenu.us
+
+Unofficial Dairy Queen menu and price guide. NOT affiliated with Dairy Queen and does not sell food. Production URL: https://www.thequeendairymenu.us (www, https).
+
+- Canonical URLs never end with a trailing slash (except `/`). `astro.config.mjs` uses `trailingSlash: 'never'` + `build.format: 'file'`; `public/.htaccess` 301s slash, `.html` and `index.html` variants to the clean URL in one hop.
+- Never add Product, Offer, AggregateRating, Review or Merchant schema. Use FAQPage, BlogPosting (blog), Organization/WebSite (homepage only, in `Layout.astro`). BreadcrumbList comes from `src/components/Breadcrumbs.astro`; do not hand-write it.
+- Prices are "typical, vary by location" with a last-checked date: update `LAST_CHECKED` in `src/data/site.ts` after re-checking prices.
+- Do not use Dairy Queen logos or copy text from dairyqueen.com.
+- After adding or renaming pages: `python generate_related.py`, `python generate_sitemap.py`, `npm run build`, then `python seo_check.py` (must report 0 problems).

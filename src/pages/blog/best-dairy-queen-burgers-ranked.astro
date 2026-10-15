@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Best Dairy Queen Burgers Ranked (2026): The Stackburger Sear & Heat Audit" 
-  description="An independent sensory audit of Dairy Queen's Signature Stackburgers. Graded across flat-top sear crust, cheese melting dynamics, FlameThrower heat index, and 2026 value."
+  title="Best Dairy Queen Burgers Ranked (2026)" 
+  description="The best Dairy Queen burgers ranked: Stackburgers, FlameThrower and classic cheeseburgers compared by taste, size, price and calories."
   ogImage="/Images/flamethrower-stackburger.webp"
   article={true}
 >
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "Best Dairy Queen Burgers Ranked (2026): The Stackburger Sear & Heat Audit",
       "description": "An exhaustive culinary and heat-index evaluation of Dairy Queen's 2026 Signature Stackburger lineup, examining flat-top Maillard crusts, condiment emulsification, and patty-to-bun ratios.",
       "image": "https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-06-01T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/best-dairy-queen-burgers-ranked"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Stackburger Audit (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/best-dairy-queen-burgers-ranked"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Stackburger Audit (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Stackburger Audit (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Flat-Top Culinary Audit · 2026 Flavor &amp; Sear Evaluation</span>
       <h1>BEST DAIRY QUEEN BURGERS RANKED: THE 2026 STACKBURGER AUDIT</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Tested Across Grill &amp; Chill Locations · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Tested Across Grill &amp; Chill Locations · Updated September 2026</p>
     </div>
   </div>
 </section>

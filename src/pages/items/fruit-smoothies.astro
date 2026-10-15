@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Premium Fruit Smoothies",
-      "image": "https://www.thequeendairymenu.us/Images/fruit-smoothies.webp",
-      "description": "Real fruit blended into thick, smooth drinks — no artificial colors or flavors. Available in Strawberry Banana, Mango Pineapple, and Triple Berry at $3.99 Small.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "151"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/fruit-smoothies",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~220 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -82,7 +40,7 @@ const itemSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/drinks">Drinks</a></li><li aria-current="page">Fruit Smoothies</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Drinks", "href": "/categories/drinks"}, {"name": "Fruit Smoothies"}]} />
 
 <div class="container">
   <div class="item-hero">

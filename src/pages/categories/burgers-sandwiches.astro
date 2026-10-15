@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -31,17 +32,11 @@ const faqSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Burgers & Sandwiches Menu With Prices 2026 —..." description="Complete DQ burgers and sandwiches menu with 2026 prices. FlameThrower Stackburger $10.87, Original Cheeseburger $6.39, chicken sandwiches, hot dogs and...">
+<Layout title="Dairy Queen Burgers & Sandwiches Menu With Prices 2026" description="Complete DQ burgers and sandwiches menu with 2026 prices. FlameThrower Stackburger $10.87, Original Cheeseburger $6.39, chicken sandwiches, hot dogs.">
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container"><ol>
-<li><a href="/">Home</a></li>
-<li><a href="/#full-menu">Menu</a></li>
-<li aria-current="page">DQ Burgers &amp; Sandwiches 2026</li>
-</ol></div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Burgers & Sandwiches 2026"}]} />
 
 <section class="hero">
 <div class="container">

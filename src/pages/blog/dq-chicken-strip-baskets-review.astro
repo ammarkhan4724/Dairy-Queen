@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="The DQ Chicken Strip Basket Field Audit (2026): 4-Pc vs. 6-Pc Math & Gravy Physics" 
-  description="An independent culinary and price audit of Dairy Queen's chicken strip baskets. Whole-muscle tenderloin quality, peppered cream gravy viscosity, and cost-per-ounce math."
+  title="DQ Chicken Strip Basket Review: 4-Piece vs 6-Piece" 
+  description="DQ Chicken Strip Basket review: 4-piece vs 6-piece price, calories and what comes in each basket, plus sauces and value tips."
   ogImage="/Images/chicken-strip-basket-4pc.webp"
   article={true}
 >
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "The DQ Chicken Strip Basket Field Audit (2026): 4-Pc vs. 6-Pc Math & Gravy Physics",
       "description": "An exhaustive sensory and economic evaluation of Dairy Queen's chicken strip basket program, examining whole-muscle grain anatomy, peppered roux viscosity, and cost per ounce.",
       "image": "https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-05-18T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-chicken-strip-baskets-review"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Chicken Strip Audit (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/dq-chicken-strip-baskets-review"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Chicken Strip Audit (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Chicken Strip Audit (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Savory Culinary Audit · 2026 Laboratory Field Test</span>
       <h1>THE DQ CHICKEN STRIP BASKET AUDIT: 4-PC VS 6-PC &amp; GRAVY PHYSICS</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Tested Across Grill &amp; Chill Locations · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Tested Across Grill &amp; Chill Locations · Updated September 2026</p>
     </div>
   </div>
 </section>

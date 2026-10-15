@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Royal New York Cheesecake Blizzard Treat",
-      "image": "https://www.thequeendairymenu.us/Images/royal-new-york-cheesecake-blizzard.webp",
-      "description": "Cheesecake pieces and graham cracker crumble blended into DQ's soft serve, with a warm strawberry-filled center that bursts mid-cup. One of the lighter Royal Blizzards at 460 cal (Small) — creamy, fruity, and more elegant than candy-bar options.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "170"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/royal-new-york-cheesecake-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "460 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Royal New York Cheesecake Blizzard — Price, C..." description="DQ Royal New York Cheesecake Blizzard price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 460 cal (Small). Full nutrition guide.">
+<Layout title="DQ Royal New York Cheesecake Blizzard: Price & Servings" description="DQ Royal New York Cheesecake Blizzard price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 460 cal (Small). Full nutrition guide.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li aria-current="page">Royal New York Cheesecake Blizzard Treat</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Royal New York Cheesecake Blizzard Treat"}]} />
 
 <div class="container">
   <div class="item-hero">

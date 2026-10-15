@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Frosted Sugar Cookie Blizzard",
-      "image": "https://www.thequeendairymenu.us/Images/frosted-sugar-cookie-blizzard.webp",
-      "description": "Sugar cookie pieces and pink frosting blended into DQ soft serve. Sweet, nostalgic, and festive — the Blizzard that tastes like holiday baking season. Available November through January.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "178"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/frosted-sugar-cookie-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~510 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Frosted Sugar Cookie Blizzard — Price, Calori..." description="DQ Frosted Sugar Cookie Blizzard: sugar cookie pieces and pink frosting blended into DQ soft serve. Mini from $3.99. Winter/holiday seasonal — full 2026 guide.">
+<Layout title="Dairy Queen Frosted Sugar Cookie Blizzard: Price & Calories" description="DQ Frosted Sugar Cookie Blizzard: sugar cookie pieces and pink frosting blended into DQ soft serve. Mini from $3.99. Winter/holiday seasonal — full 2026 guide.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li aria-current="page">Frosted Sugar Cookie Blizzard</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Frosted Sugar Cookie Blizzard"}]} />
 
 <div class="container">
   <div class="item-hero">

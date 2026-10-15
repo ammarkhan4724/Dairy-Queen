@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Banana Split",
-      "image": "https://www.thequeendairymenu.us/Images/banana-split.webp",
-      "description": "A fresh split banana topped with three scoops of DQ soft serve, pineapple, strawberry, and hot fudge, finished with whipped topping and a cherry. $5.69.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "126"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "5.69",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/banana-split",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "560 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -82,10 +40,7 @@ const itemSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
-<li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
-<li><a href="/categories/classic-treats">Classic Treats</a></li>
-<li aria-current="page">Banana Split</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Classic Treats", "href": "/categories/classic-treats"}, {"name": "Banana Split"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

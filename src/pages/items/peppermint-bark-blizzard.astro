@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Peppermint Bark Blizzard Treat",
-      "image": "https://www.thequeendairymenu.us/Images/peppermint-bark-blizzard.webp",
-      "description": "Peppermint bark pieces — dark chocolate and white chocolate with crushed peppermint — blended into DQ soft serve. DQ's signature winter holiday Blizzard, typically available November through January. From $3.99.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "204"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/peppermint-bark-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "500 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Peppermint Bark Blizzard® Treat — Price, Calo..." description="DQ Peppermint Bark Blizzard® Treat price: Mini $3.99, Small $4.79. 500 cal (Small). Holiday / Winter Seasonal. Full review, nutrition and ordering guide.">
+<Layout title="Dairy Queen Peppermint Bark Blizzard: Price & Calories" description="DQ Peppermint Bark Blizzard® Treat price: Mini $3.99, Small $4.79. 500 cal (Small). Holiday / Winter Seasonal. Full review, nutrition and ordering guide.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Peppermint Bark Blizzard® Treat</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Peppermint Bark Blizzard® Treat"}]} />
 
 <div class="container">
   <div class="item-hero">

@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Side Salad",
-      "image": "https://www.thequeendairymenu.us/Images/side-salad.webp",
-      "description": "Fresh mixed greens, cherry tomatoes, and croutons served with your choice of dressing. At 90 calories, the lightest item on the DQ menu — the right side when you want something fresh.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "197"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.29",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/side-salad",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "90 cal (without dressing)"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Side Salad — Price, Calories 2026" description="DQ Side Salad price: $3.29, 90 calories. Mixed greens, tomatoes, and croutons with dressing. The lightest item on the DQ menu — available at Grill & Chill...">
+<Layout title="Dairy Queen Side Salad — Price, Calories 2026" description="DQ Side Salad price: $3.29, 90 calories. Mixed greens, tomatoes, and croutons with dressing.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li aria-current="page">Side Salad</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Snacks & Sides", "href": "/categories/snacks-sides"}, {"name": "Side Salad"}]} />
 
 <div class="container">
   <div class="item-hero">

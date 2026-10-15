@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Dairy Queen Rewards App Hacks (2026): Point Arbitrage, BOGO Stacking & Free Food" 
-  description="Maximize your DQ Rewards in 2026. Explore point valuation tables, the 150-point Dilly Bar arbitrage, coupon stacking protocols, and holding freezer pickup tricks."
+  title="Dairy Queen App Rewards: How to Save in 2026" 
+  description="How the DQ app rewards program works in 2026: earning points, the best rewards to redeem, app-only deals and tips to save more."
   ogImage="/Images/7-meal-deal.webp"
   article={true}
 >
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "Dairy Queen Rewards App Hacks (2026): Point Arbitrage, BOGO Stacking & Free Food",
       "description": "A quantitative loyalty program breakdown analyzing DQ Rewards point valuations, cent-per-point ROI formulas, coupon stacking rules, and mobile operational workflows.",
       "image": "https://www.thequeendairymenu.us/Images/7-meal-deal.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-07-08T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dairy-queen-app-rewards-hacks"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Rewards App Arbitrage (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/dairy-queen-app-rewards-hacks"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Rewards App Arbitrage (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Rewards App Arbitrage (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Consumer Finance &amp; Loyalty Engineering · 2026 Audit</span>
       <h1>DAIRY QUEEN REWARDS APP HACKS: POINT ARBITRAGE &amp; SAVINGS PLAYBOOK</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Loyalty Economics &amp; Receipt Testing · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Loyalty Economics &amp; Receipt Testing · Updated September 2026</p>
     </div>
   </div>
 </section>

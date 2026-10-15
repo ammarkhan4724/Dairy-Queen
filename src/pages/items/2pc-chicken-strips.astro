@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "2-Piece Chicken Strips",
-      "image": "https://www.thequeendairymenu.us/Images/2pc-chicken-strips.webp",
-      "description": "Two crispy, all-white-meat chicken strips served on their own — the snack-size chicken option on the DQ menu. At about $3.49 it is the cheapest way to get DQ's chicken strips, and it is one of the most popular picks in the 2-for-$5 Mix &amp; Match.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "234"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.49",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/2pc-chicken-strips",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~280 cal (strips only)"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="DQ 2-Piece Chicken Strips — Price, Calories & 2-for-$5 (2..." description="DQ 2-Piece Chicken Strips price: $3.49, about 280 calories. Two crispy all-white-meat strips — the snack-size chicken option and a 2-for-$5 Mix & Match...">
+<Layout title="DQ 2-Piece Chicken Strips: Price & Calories (2026)" description="DQ 2-Piece Chicken Strips price: $3.49, about 280 calories. Two crispy all-white-meat strips — the snack-size chicken option and a 2-for-$5 Mix.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/chicken-strip-baskets">Chicken Strip Baskets</a></li><li aria-current="page">2-Piece Chicken Strips</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Chicken Strip Baskets", "href": "/categories/chicken-strip-baskets"}, {"name": "2-Piece Chicken Strips"}]} />
 
 <div class="container">
   <div class="item-hero">

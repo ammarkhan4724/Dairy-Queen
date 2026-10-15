@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Country Breakfast Platter",
-      "image": "https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp",
-      "description": "Scrambled eggs, breakfast sausage, crispy hash browns, and a warm biscuit smothered in country gravy. The most complete breakfast on the DQ menu at $6.99. Select locations only.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "183"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "6.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/country-breakfast-platter",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "860 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Country Breakfast Platter — Price, Calories 2026" description="DQ Country Breakfast Platter price: $6.99, 860 calories. Scrambled eggs, sausage, hash browns, biscuit and gravy. The complete DQ breakfast — select...">
+<Layout title="Dairy Queen Country Breakfast Platter — Price, Calories 2026" description="DQ Country Breakfast Platter price: $6.99, 860 calories. Scrambled eggs, sausage, hash browns, biscuit and gravy.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/breakfast">Breakfast</a></li><li><span aria-current="page">Country Breakfast Platter</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Breakfast", "href": "/categories/breakfast"}, {"name": "Country Breakfast Platter"}]} />
 
 <div class="container">
   <div class="item-hero">

@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Chocolate Dipped Cone",
-      "image": "https://www.thequeendairymenu.us/Images/chocolate-dipped-cone.webp",
-      "description": "DQ vanilla soft serve dipped into warm chocolate that hardens into a crispy shell the moment it contacts the cold soft serve. Shatters on the first bite. Simple perfection at $3.19.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "193"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.19",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/chocolate-dipped-cone",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "Regular 330 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Chocolate Dipped Cone — Price, Calories 2026" description="DQ Chocolate Dipped Cone price: $3.19, 330 calories. DQ soft serve dipped in a crispy chocolate shell that hardens on contact. Classic DQ upgrade from the...">
+<Layout title="Dairy Queen Chocolate Dipped Cone — Price, Calories 2026" description="DQ Chocolate Dipped Cone price: $3.19, 330 calories. DQ soft serve dipped in a crispy chocolate shell that hardens on contact.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li aria-current="page">Chocolate Dipped Cone</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Classic Treats", "href": "/categories/classic-treats"}, {"name": "Chocolate Dipped Cone"}]} />
 
 <div class="container">
   <div class="item-hero">

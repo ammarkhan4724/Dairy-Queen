@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Buttermilk Pancake Platter",
-      "image": "https://www.thequeendairymenu.us/Images/buttermilk-pancake-platter.webp",
-      "description": "A stack of fluffy buttermilk pancakes served with butter, syrup, and sausage. Part of the DQ breakfast menu offered at select locations — a straightforward, sweet-leaning breakfast platter at $5.49.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "122"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "5.49",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/buttermilk-pancake-platter",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "680 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="DQ Buttermilk Pancake Platter — Price, Calories (2026)" description="DQ Buttermilk Pancake Platter price: $5.49, 680 calories. Fluffy buttermilk pancakes with butter, syrup, and sausage. Available at select DQ breakfast...">
+<Layout title="DQ Buttermilk Pancake Platter — Price, Calories (2026)" description="DQ Buttermilk Pancake Platter price: $5.49, 680 calories. Fluffy buttermilk pancakes with butter, syrup, and sausage.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/breakfast">Breakfast</a></li><li aria-current="page">Buttermilk Pancake Platter</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Breakfast", "href": "/categories/breakfast"}, {"name": "Buttermilk Pancake Platter"}]} />
 
 <div class="container">
   <div class="item-hero">

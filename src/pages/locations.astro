@@ -1,13 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
-<Layout title="Find a Dairy Queen Near Me — 2026 Store Locator & DQ Treat Guide | The Queen Dairy Menu" description="Find Dairy Queen locations near you. Guide to Dairy Queen Treat (locations & menu) vs. DQ Grill & Chill, drive-thru hours, store locator links, and state distributions.">
+<Layout title="Dairy Queen Near Me: How to Find a DQ Location" description="How to find a Dairy Queen near you, what DQ Grill & Chill and Treat-only stores serve, and typical opening hours.">
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container">
-<ol><li><a href="/">Home</a></li><li aria-current="page">Find a DQ Location Near You</li></ol>
-</div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Find a DQ Location Near You"}]} />
 
   <section class="section">
     <div class="container article-body" style="max-width:900px;">

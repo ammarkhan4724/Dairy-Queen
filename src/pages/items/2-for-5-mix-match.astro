@@ -1,47 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "DQ 2-for-$5 Mix &amp; Match Deal",
-      "image": "https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp",
-      "description": "Choose any two eligible DQ items for $5.00 total. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks with Queso, Regular Fries, Small Sundae, or Soft Drink. Mix and match freely.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "238"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.8",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "5.00",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/2-for-5-mix-match",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -74,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen 2-for-$5 Mix & Match — What's Included 2026" description="DQ 2-for-$5 Mix & Match lets you pick any two eligible items for $5.00. Original Cheeseburger, 2-Piece Chicken Strips, Chili Dog, Pretzel Sticks, Fries,...">
+<Layout title="Dairy Queen 2-for-$5 Mix & Match — What's Included 2026" description="DQ 2-for-$5 Mix & Match lets you pick any two eligible items for $5.00.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><span aria-current="page">2-for-$5 Mix &amp; Match</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "2-for-$5 Mix & Match"}]} />
 
 <div class="container">
   <div class="item-hero">

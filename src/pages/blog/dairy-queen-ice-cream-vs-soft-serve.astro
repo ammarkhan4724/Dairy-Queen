@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Why Dairy Queen Can't Legally Call Its Soft Serve 'Ice Cream' (2026): The FDA 5% Butterfat Chemistry" 
-  description="Explore the dairy chemistry and federal regulations behind Dairy Queen soft serve. Why FDA Title 21 forbids the 'ice cream' label, 18°F thermal curves, and overrun physics."
+  title="Is Dairy Queen Soft Serve Real Ice Cream? Explained" 
+  description="Why Dairy Queen calls it soft serve, not ice cream: the FDA 10% butterfat rule, what DQ soft serve is made of and how it compares."
   ogImage="/Images/vanilla-soft-serve-cone.webp"
   article={true}
 >
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "Why Dairy Queen Can't Legally Call Its Soft Serve 'Ice Cream' (2026): The FDA 5% Butterfat Chemistry",
       "description": "An exhaustive food chemistry and federal regulatory review examining Dairy Queen's 5% milkfat formula, 21 CFR 135.110 compliance, and 18°F dispensing thermodynamics.",
       "image": "https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-06-15T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dairy-queen-ice-cream-vs-soft-serve"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Soft Serve vs Ice Cream Chemistry",
-          "item": "https://www.thequeendairymenu.us/blog/dairy-queen-ice-cream-vs-soft-serve"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Soft Serve vs Ice Cream Chemistry</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Soft Serve vs Ice Cream Chemistry"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Food Science &amp; Federal Regulations · Behind the Curl</span>
       <h1>WHY DAIRY QUEEN CAN'T LEGALLY CALL ITS SOFT SERVE "ICE CREAM"</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Dairy Chemistry &amp; FDA Analysis · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Dairy Chemistry &amp; FDA Analysis · Updated September 2026</p>
     </div>
   </div>
 </section>

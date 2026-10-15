@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
-<Layout title="Terms of Use — The Queen Dairy Menu | thequeendairymenu.us" description="Terms of Use for thequeendairymenu.us. This site is an independent DQ menu reference. Not affiliated with Dairy Queen®. Read our full terms before using this website.">
+<Layout title="Terms of Use — The Queen Dairy Menu | thequeendairymenu.us" description="Terms of use for The Queen Dairy Menu, an independent and unofficial Dairy Queen menu and price guide.">
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li aria-current="page">Terms of Use</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Terms of Use"}]} />
 
 <section class="hero">
 <div class="container">

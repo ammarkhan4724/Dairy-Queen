@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Choco Brownie Extreme Blizzard Treat",
-      "image": "https://www.thequeendairymenu.us/Images/choco-brownie-blizzard.webp",
-      "description": "Baked brownie pieces and rich chocolate fudge sauce blended into DQ soft serve. The darkest, most chocolate-forward Blizzard on the year-round menu. From $3.99 Mini.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "171"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/choco-brownie-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "510 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Choco Brownie Extreme Blizzard® Treat — Price..." description="DQ Choco Brownie Extreme Blizzard® Treat price 2026: Mini $3.99, Small $4.79, Medium $5.79, Large $6.49. 510 cal (Small). Full nutrition guide and ordering...">
+<Layout title="Dairy Queen Choco Brownie Extreme Blizzard: Price & Calories" description="DQ Choco Brownie Extreme Blizzard® Treat price 2026: Mini $3.99, Small $4.79, Medium $5.79, Large $6.49. 510 cal (Small).">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Choco Brownie Extreme Blizzard® Treat</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Choco Brownie Extreme Blizzard® Treat"}]} />
 
 <div class="container">
   <div class="item-hero">

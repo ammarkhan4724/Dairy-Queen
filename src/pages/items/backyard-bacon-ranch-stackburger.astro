@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Backyard Bacon Ranch Stackburger",
-      "image": "https://www.thequeendairymenu.us/Images/backyard-bacon-ranch-stackburger.webp",
-      "description": "Crispy bacon, cheddar cheese, ranch sauce, lettuce, and tomato on a 100% real beef patty. The most popular Stackburger after the FlameThrower — bold flavors without the heat. $9.99.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "133"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "9.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/backyard-bacon-ranch-stackburger",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "730 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Backyard Bacon Ranch Stackburger — Price, Cal..." description="DQ Backyard Bacon Ranch Stackburger price: $9.99, 730 calories. Bacon, cheddar, ranch, lettuce, tomato on 100% beef. Full review and comparison guide.">
+<Layout title="Dairy Queen Backyard Bacon Ranch Stackburger Price" description="DQ Backyard Bacon Ranch Stackburger price: $9.99, 730 calories. Bacon, cheddar, ranch, lettuce, tomato on 100% beef. Full review and comparison guide.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li><li><span aria-current="page">Backyard Bacon Ranch Stackburger</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Burgers & Sandwiches", "href": "/categories/burgers-sandwiches"}, {"name": "Backyard Bacon Ranch Stackburger"}]} />
 
 <div class="container">
   <div class="item-hero">

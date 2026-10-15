@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Mint Oreo Blizzard",
-      "image": "https://www.thequeendairymenu.us/Images/mint-oreo-blizzard.webp",
-      "description": "Oreo cookie pieces and cool mint flavoring blended into DQ vanilla soft serve. The mint-chocolate-cookie Blizzard — same Oreo crunch as the classic, plus a refreshing mint layer.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "131"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.49",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/mint-oreo-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~440 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Mint Oreo Blizzard — Price, Calories 2026" description="DQ Mint Oreo Blizzard: Oreo pieces and cool mint flavoring blended into DQ soft serve. Mini from $3.49. Seasonal availability. Full 2026 price and calorie...">
+<Layout title="Dairy Queen Mint Oreo Blizzard — Price, Calories 2026" description="DQ Mint Oreo Blizzard: Oreo pieces and cool mint flavoring blended into DQ soft serve. Mini from $3.49. Seasonal availability.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li aria-current="page">Mint Oreo Blizzard</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Mint Oreo Blizzard"}]} />
 
 <div class="container">
   <div class="item-hero">

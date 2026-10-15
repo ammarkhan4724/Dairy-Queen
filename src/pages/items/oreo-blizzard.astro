@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Oreo Cookie Blizzard Treat",
-      "image": "https://www.thequeendairymenu.us/Images/oreo-blizzard.webp",
-      "description": "DQ's signature vanilla soft serve hand-blended completely through with real Oreo cookie pieces. Smooth, creamy, with chocolate-and-cream crunch in every spoonful from first to last. Thick enough to hold upside down — guaranteed or it's free.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "216"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.49",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/oreo-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "420 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -82,14 +40,7 @@ const itemSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container"><ol>
-<li><a href="/">Home</a></li>
-<li><a href="/#full-menu">Menu</a></li>
-<li><a href="/categories/blizzard-treats">Blizzard Treats</a></li>
-<li aria-current="page">Oreo® Blizzard</li>
-</ol></div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Oreo® Blizzard"}]} />
 
 <div class="container">
   <div class="item-hero">

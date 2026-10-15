@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Confetti Cake Blizzard Treat",
-      "image": "https://www.thequeendairymenu.us/Images/confetti-cake-blizzard.webp",
-      "description": "Colorful birthday cake pieces and rainbow sprinkles blended into DQ vanilla soft serve. The most fun, festive Blizzard of Summer 2026. From $4.49.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "160"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "4.49",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/confetti-cake-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "490 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Confetti Cake Blizzard® Treat — Price, Calori..." description="DQ Confetti Cake Blizzard® Treat price 2026: Mini $4.49, Small $5.29, Medium $6.29, Large $6.99. 490 cal (Small). Full nutrition guide and ordering tips.">
+<Layout title="Dairy Queen Confetti Cake Blizzard: Price & Servings (2026)" description="DQ Confetti Cake Blizzard® Treat price 2026: Mini $4.49, Small $5.29, Medium $6.29, Large $6.99. 490 cal (Small). Full nutrition guide and ordering tips.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Confetti Cake Blizzard® Treat</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Confetti Cake Blizzard® Treat"}]} />
 
 <div class="container">
   <div class="item-hero">

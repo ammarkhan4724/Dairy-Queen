@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -23,17 +24,11 @@ const faqSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Breakfast Menu & Prices 2026 — Platters, Burr..." description="Complete DQ breakfast menu with 2026 prices. Country Breakfast Platter $6.99, Biscuit & Gravy $3.99, Breakfast Burritos, Pancake Platter, Hash Browns and more.">
+<Layout title="Dairy Queen Breakfast Menu & Prices 2026" description="Complete DQ breakfast menu with 2026 prices. Country Breakfast Platter $6.99, Biscuit & Gravy $3.99, Breakfast Burritos, Pancake Platter, Hash Browns and more.">
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container"><ol>
-<li><a href="/">Home</a></li>
-<li><a href="/#full-menu">Menu</a></li>
-<li aria-current="page">Dairy Queen Breakfast Menu 2026</li>
-</ol></div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Dairy Queen Breakfast Menu 2026"}]} />
 
 <section class="hero">
 <div class="container">

@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "4-Piece Chicken Strip Basket",
-      "image": "https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp",
-      "description": "Four crispy hand-battered white-meat chicken strips served with seasoned fries, Texas toast, and your choice of dipping sauce. The complete DQ meal — $9.99.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "237"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "9.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/chicken-strip-basket-4pc",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~1,000 cal (with fries and toast)"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,14 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen 4-Piece Chicken Strip Basket — Price, Calorie..." description="DQ 4-Piece Chicken Strip Basket price: $9.99, ~1,000 calories. Includes fries, Texas toast & dipping sauce. 100% white meat. Full nutrition and ordering guide.">
+<Layout title="Dairy Queen 4-Piece Chicken Strip Basket: Price & Calories" description="DQ 4-Piece Chicken Strip Basket price: $9.99, ~1,000 calories. Includes fries, Texas toast & dipping sauce. 100% white meat. Full nutrition and ordering guide.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
-<li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
-<li><a href="/categories/chicken-strip-baskets">Chicken Strip Baskets</a></li>
-<li aria-current="page">4-Piece Chicken Strip Basket</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Chicken Strip Baskets", "href": "/categories/chicken-strip-baskets"}, {"name": "4-Piece Chicken Strip Basket"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

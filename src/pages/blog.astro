@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Dairy Queen Menu Blog (2026) — Blizzard Rankings, Secret Menu & Value Hacks | The Queen Dairy Menu" 
+  title="Dairy Queen Guides & Blog: Rankings, Deals, Secret Menu" 
   description="Expert Dairy Queen menu guides, 2026 Blizzard rankings, secret menu hacks, breakfast hours, low-calorie options, and $7 Meal Deal price audits."
 >
 
@@ -20,23 +21,6 @@ import Layout from '../layouts/Layout.astro';
         "@id": "https://www.thequeendairymenu.us/#website",
         "url": "https://www.thequeendairymenu.us/",
         "name": "The Queen Dairy Menu"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.thequeendairymenu.us/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://www.thequeendairymenu.us/blog"
-          }
-        ]
       }
     },
     {
@@ -220,14 +204,7 @@ import Layout from '../layouts/Layout.astro';
 })} />
 
 <!-- Breadcrumb Navigation -->
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li aria-current="page">Blog</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog"}]} />
 
 <!-- Hero Section with Rich Semantic Keyword Integration -->
 <section class="hero">

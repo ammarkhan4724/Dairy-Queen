@@ -1,47 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Kids Cheeseburger Meal",
-      "image": "https://www.thequeendairymenu.us/Images/kids-cheeseburger-meal.webp",
-      "description": "A complete meal for younger guests — a cheeseburger, choice of Fries or Applesauce, choice of Milk or Soft Drink, and a Vanilla Soft Serve Cone for dessert. All for $4.99.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "133"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "4.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/kids-cheeseburger-meal",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -74,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Kids Cheeseburger Meal — Price, What's Includ..." description="DQ Kids Cheeseburger Meal price: $4.99. Cheeseburger + Fries or Applesauce + Milk or Drink + Vanilla Soft Serve Cone. Complete DQ kids meal guide.">
+<Layout title="Dairy Queen Kids Cheeseburger Meal: Price & Calories (2026)" description="DQ Kids Cheeseburger Meal price: $4.99. Cheeseburger + Fries or Applesauce + Milk or Drink + Vanilla Soft Serve Cone. Complete DQ kids meal guide.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/kids-meals">Kids Meals</a></li><li aria-current="page">Kids Cheeseburger Meal</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Kids Meals", "href": "/categories/kids-meals"}, {"name": "Kids Cheeseburger Meal"}]} />
 
 
 <div class="container">

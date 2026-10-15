@@ -1,17 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
-<Layout title="Dairy Queen Menu Categories 2026 — Complete Directory" description="Explore all 9 Dairy Queen menu categories for 2026 on The Queen Dairy Menu: Blizzard Treats, Burgers & Sandwiches, Chicken Strip Baskets, Classic Treats,...">
+<Layout title="Dairy Queen Menu Categories 2026 — Complete Directory" description="Explore all 9 Dairy Queen menu categories for 2026 on The Queen Dairy Menu: Blizzard Treats, Burgers & Sandwiches, Chicken Strip Baskets, Classic.">
 
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/#full-menu">Menu</a></li>
-      <li aria-current="page">Menu Categories</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu Categories"}]} />
 
 <section class="hero">
   <div class="container">

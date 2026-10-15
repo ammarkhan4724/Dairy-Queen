@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -23,17 +24,11 @@ const faqSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Classic Treats Menu & Prices 2026 — Cones, Su..." description="Complete DQ Classic Treats menu with 2026 prices. Vanilla cone $2.39, Peanut Buster Parfait $4.99, Banana Split $5.69, Dilly Bars, Cupfections and sundaes...">
+<Layout title="Dairy Queen Classic Treats Menu & Prices 2026" description="Complete DQ Classic Treats menu with 2026 prices. Vanilla cone $2.39, Peanut Buster Parfait $4.99, Banana Split $5.69, Dilly Bars, Cupfections and.">
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container"><ol>
-<li><a href="/">Home</a></li>
-<li><a href="/#full-menu">Menu</a></li>
-<li aria-current="page">DQ Classic Treats 2026</li>
-</ol></div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Classic Treats 2026"}]} />
 
 <section class="hero">
 <div class="container">

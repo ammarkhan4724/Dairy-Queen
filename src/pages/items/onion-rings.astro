@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Onion Rings",
-      "image": "https://www.thequeendairymenu.us/Images/onion-rings.webp",
-      "description": "Thick-cut onion rings in a golden batter, crispy on the outside and tender-sweet on the inside. Available at DQ Grill &amp; Chill locations as a snack side or meal accompaniment.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "171"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.29",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/onion-rings",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~400 cal (regular)"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Onion Rings — Price, Calories & Review 2026" description="DQ Onion Rings price from $3.29. Thick-cut golden-battered onion rings, 400+ calories. Full review, size guide and comparison with DQ Regular Fries and...">
+<Layout title="Dairy Queen Onion Rings — Price, Calories & Review 2026" description="DQ Onion Rings price from $3.29. Thick-cut golden-battered onion rings, 400+ calories.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/snacks-sides">Snacks &amp; Sides</a></li><li aria-current="page">Onion Rings</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Snacks & Sides", "href": "/categories/snacks-sides"}, {"name": "Onion Rings"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

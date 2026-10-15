@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Honey BBQ Chicken Strip Basket",
-      "image": "https://www.thequeendairymenu.us/Images/honey-bbq-chicken-strip-basket.webp",
-      "description": "Four crispy white-meat chicken strips tossed in sweet honey BBQ sauce before serving — full flavor coverage in every bite. Served with fries, Texas toast, and a dipping sauce. $10.49.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "179"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "10.49",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/honey-bbq-chicken-strip-basket",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "~1,100 cal with fries and Texas toast"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Honey BBQ Chicken Strip Basket — Price, Calor..." description="DQ Honey BBQ Chicken Strip Basket price: $10.49, ~1,100 calories. 4 white-meat strips tossed in honey BBQ sauce, fries and Texas toast. Full review.">
+<Layout title="Dairy Queen Honey BBQ Chicken Strip Basket: Price & Calories" description="DQ Honey BBQ Chicken Strip Basket price: $10.49, ~1,100 calories. 4 white-meat strips tossed in honey BBQ sauce, fries and Texas toast. Full review.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/chicken-strip-baskets">Chicken Strip Baskets</a></li><li><span aria-current="page">Honey BBQ Basket</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Chicken Strip Baskets", "href": "/categories/chicken-strip-baskets"}, {"name": "Honey BBQ Basket"}]} />
 
 <div class="container">
   <div class="item-hero">

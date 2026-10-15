@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Royal Oreo Blizzard Treat",
-      "image": "https://www.thequeendairymenu.us/Images/royal-oreo-blizzard.webp",
-      "description": "The Royal Oreo® Blizzard upgrades DQ's #1 best-seller with a warm hot fudge-filled center. You get all the Oreo cookie crunch of the original — then hit a pocket of warm fudge in the middle that transforms the experience. Approximately $1 more than the standard Oreo Blizzard per size.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "232"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "3.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/royal-oreo-blizzard",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "490 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Royal Oreo® Blizzard® Treat — Price, Calories..." description="DQ Royal Oreo® Blizzard® Treat price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 490 cal (Small). Full nutrition guide and ordering tips.">
+<Layout title="Dairy Queen Royal Oreo Blizzard: Price & Calories (2026)" description="DQ Royal Oreo® Blizzard® Treat price 2026: Mini $3.99, Small $4.99, Medium $5.99, Large $6.49. 490 cal (Small). Full nutrition guide and ordering tips.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/blizzard-treats">Blizzard Treats</a></li><li><span aria-current="page">Royal Oreo® Blizzard® Treat</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Treats", "href": "/categories/blizzard-treats"}, {"name": "Royal Oreo® Blizzard® Treat"}]} />
 
 <div class="container">
   <div class="item-hero">

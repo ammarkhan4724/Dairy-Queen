@@ -1,0 +1,32 @@
+---
+import { canonical } from '../data/site';
+
+interface Crumb { name: string; href?: string }
+interface Props { items: Crumb[] }
+
+const { items } = Astro.props;
+const current = Astro.url.pathname;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.name,
+    item: canonical(c.href ?? current),
+  })),
+};
+---
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <div class="container">
+    <ol>
+      {items.map((c, i) =>
+        i === items.length - 1
+          ? <li aria-current="page">{c.name}</li>
+          : <li><a href={c.href}>{c.name}</a></li>
+      )}
+    </ol>
+  </div>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

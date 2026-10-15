@@ -1,47 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "DQ Cake — 8-Inch Round",
-      "image": "https://www.thequeendairymenu.us/Images/dq-cake-round-8inch.webp",
-      "description": "Layers of DQ soft serve, hot fudge, a signature crunchy center, and whipped topping. Available in Classic or Blizzard flavors. Add a personalized message.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "227"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "22.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/dq-cake-round-8inch",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -74,14 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen DQ Cake 8-Inch Round — Price & Ordering Guide..." description="DQ Cake 8-inch round price: $22.99+. Layers of DQ soft serve, hot fudge, crunch center, and whipped topping. Custom message available. Order 48 hours in...">
+<Layout title="Dairy Queen DQ Cake 8-Inch Round: Price & Servings (2026)" description="DQ Cake 8-inch round price: $22.99+. Layers of DQ soft serve, hot fudge, crunch center, and whipped topping. Custom message available.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
-<li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
-<li><a href="/categories/dq-cakes">DQ Cakes</a></li>
-<li aria-current="page">DQ Cake — 8-Inch Round</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Cakes", "href": "/categories/dq-cakes"}, {"name": "DQ Cake — 8-Inch Round"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

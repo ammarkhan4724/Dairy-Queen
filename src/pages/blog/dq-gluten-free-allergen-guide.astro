@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Dairy Queen Celiac & Allergen Guide (2026): Cross-Contact Protocols & Safe Swaps" 
-  description="Master dining safely at Dairy Queen with 2026 allergen protocols. Explore spindle sanitization scripts, gluten-free treat matrices, vegan Dilly Bar audits, and fryer cross-contact facts."
+  title="Dairy Queen Gluten-Free & Allergen Guide (2026)" 
+  description="Dairy Queen gluten-free and allergen guide: which menu items avoid wheat, milk, nuts or soy, and how to lower cross-contact risk."
   ogImage="/Images/non-dairy-dilly-bar.webp"
   article={true}
 >
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "Dairy Queen Celiac & Allergen Guide (2026): Cross-Contact Protocols & Safe Swaps",
       "description": "An exhaustive clinical and kitchen safety analysis of Dairy Queen's 2026 allergen landscape, documenting cross-contact pathways, spindle sanitization, and pre-packaged certified options.",
       "image": "https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-05-05T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-gluten-free-allergen-guide"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Allergen & Safety Guide (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/dq-gluten-free-allergen-guide"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Allergen &amp; Safety Guide (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Allergen & Safety Guide (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Food Safety &amp; Dietary Transparency · 2026 Field Protocol</span>
       <h1>DAIRY QUEEN CELIAC &amp; ALLERGEN GUIDE: CROSS-CONTACT PROTOCOLS (2026)</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Cross-Referenced with Master Manufacturer Sheets · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Cross-Referenced with Master Manufacturer Sheets · Updated September 2026</p>
     </div>
   </div>
 </section>

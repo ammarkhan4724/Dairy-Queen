@@ -1,0 +1,14 @@
+---
+import { AUTHOR, LAST_CHECKED } from '../data/site';
+---
+<aside class="container" aria-label="About the author" style="max-width:920px;">
+  <div style="margin:40px auto 0;padding:24px;background:#FFFFFF;border:1px solid #EADBCA;border-radius:16px;display:flex;gap:16px;align-items:flex-start;">
+    <img src="/Images/favicon.svg?v=2" alt="" width="56" height="56" style="width:56px;height:56px;border-radius:12px;flex-shrink:0;" loading="lazy" />
+    <div>
+      <p style="margin:0;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#64748B;">Written by</p>
+      <p style="margin:2px 0 8px;font-weight:700;font-size:1.05rem;color:#0B1E38;"><a href="/about" rel="author">{AUTHOR.name}</a></p>
+      <p style="margin:0;font-size:.92rem;line-height:1.6;color:#334155;">{AUTHOR.bio}</p>
+      <p style="margin:10px 0 0;font-size:.82rem;color:#64748B;">Facts and prices last checked {LAST_CHECKED}. Spotted something out of date? <a href="/contact">Tell us</a>.</p>
+    </div>
+  </div>
+</aside>

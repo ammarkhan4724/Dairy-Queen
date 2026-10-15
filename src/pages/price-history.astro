@@ -1,13 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
-<Layout title="Dairy Queen Price History 2022–2026 — How Much Have DQ Prices Risen? | The Queen Dairy Menu" description="Independently tracked Dairy Queen price history from 2022 to 2026. See how much Blizzards, Stackburgers, and Chicken Strip Baskets have increased year by year, with our methodology.">
+<Layout title="Dairy Queen Price History 2022–2026" description="Dairy Queen price history from 2022 to 2026: how Blizzard, burger, chicken strip, cake and value-deal prices have changed.">
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container">
-<ol><li><a href="/">Home</a></li><li aria-current="page">Price History 2022–2026</li></ol>
-</div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Price History 2022–2026"}]} />
 
 <section class="page-hero">
   <div class="container">

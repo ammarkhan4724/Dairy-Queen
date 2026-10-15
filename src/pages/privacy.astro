@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
-<Layout title="Privacy Policy — The Queen Dairy Menu | thequeendairymenu.us" description="Official Privacy Policy for The Queen Dairy Menu (thequeendairymenu.us). Learn how we handle cookies, analytics, advertising, Google AdX/AdSense, and your privacy rights under GDPR, CCPA/CPRA, and US state privacy laws.">
+<Layout title="Privacy Policy — The Queen Dairy Menu | thequeendairymenu.us" description="How The Queen Dairy Menu collects and uses data, including cookies, analytics and Google AdSense advertising, and your choices.">
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li aria-current="page">Privacy Policy</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Privacy Policy"}]} />
 
 <section class="hero">
   <div class="container">

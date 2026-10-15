@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -23,17 +24,11 @@ const faqSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Chicken Strip Basket Menu & Prices 2026 — 4-P..." description="DQ Chicken Strip Basket menu with 2026 prices. 4-Piece $9.99, 6-Piece $13.49. Honey BBQ, Parmesan Garlic, FlameThrower. 100% white meat with fries, Texas...">
+<Layout title="Dairy Queen Chicken Strip Basket Menu & Prices 2026" description="DQ Chicken Strip Basket menu with 2026 prices. 4-Piece $9.99, 6-Piece $13.49. Honey BBQ, Parmesan Garlic, FlameThrower.">
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-<div class="container"><ol>
-<li><a href="/">Home</a></li>
-<li><a href="/#full-menu">Menu</a></li>
-<li aria-current="page">DQ Chicken Strip Baskets 2026</li>
-</ol></div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Chicken Strip Baskets 2026"}]} />
 
 <section class="hero">
 <div class="container">

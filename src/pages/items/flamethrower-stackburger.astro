@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "FlameThrower Signature Stackburger",
-      "image": "https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp",
-      "description": "DQ's boldest Stackburger — Pepper Jack cheese, FlameThrower sauce, fresh jalapeños, crisp lettuce, tomato, and mayo on a toasted bun. 780 calories of building heat.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "233"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "10.87",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/flamethrower-stackburger",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "780 cal (single)"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,14 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen FlameThrower Stackburger — Price, Calories &..." description="DQ FlameThrower Signature Stackburger price: $10.87, 780 calories. Pepper Jack, FlameThrower sauce, jalapeños, lettuce, tomato & mayo. Full review and...">
+<Layout title="Dairy Queen FlameThrower Stackburger: Price & Calories" description="DQ FlameThrower Signature Stackburger price: $10.87, 780 calories. Pepper Jack, FlameThrower sauce, jalapeños, lettuce, tomato & mayo.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol>
-<li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li>
-<li><a href="/categories/burgers-sandwiches">Burgers &amp; Sandwiches</a></li>
-<li aria-current="page">FlameThrower® Signature Stackburger</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Burgers & Sandwiches", "href": "/categories/burgers-sandwiches"}, {"name": "FlameThrower® Signature Stackburger"}]} />
 
 <div class="container"><div class="item-hero">
   <div class="item-media">

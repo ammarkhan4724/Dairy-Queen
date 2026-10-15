@@ -1,0 +1,16 @@
+---
+import related from '../data/related.json';
+
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/+$/, '');
+const links: { title: string; href: string }[] = (related as Record<string, { title: string; href: string }[]>)[path] ?? [];
+---
+{links.length > 0 && (
+  <section class="container" aria-labelledby="related-heading" style="max-width:920px;">
+    <div style="margin:40px auto 0;padding:24px;background:#FFFFFF;border:1px solid #EADBCA;border-radius:16px;">
+      <h2 id="related-heading" style="font-family:'Playfair Display', serif;font-size:1.4rem;color:#0B1E38;margin:0 0 12px;">Related guides</h2>
+      <ul style="margin:0;padding-left:1.1rem;display:grid;gap:8px;">
+        {links.map((l) => <li><a href={l.href} style="color:#0E7490;font-weight:600;">{l.title}</a></li>)}
+      </ul>
+    </div>
+  </section>
+)}

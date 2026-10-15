@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Brownie &amp; Oreo Cupfection",
-      "image": "https://www.thequeendairymenu.us/Images/brownie-oreo-cupfection.webp",
-      "description": "DQ soft serve layered in a cup with brownie pieces, Oreo cookie crumble, and fudge. The Cupfection is DQ's take on a build-your-own sundae in cup form — richer and more filling than a standard sundae, and one of the most indulgent single-serve treats on the menu at 820 calories.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "128"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.6",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "6.29",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/brownie-oreo-cupfection",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "820 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="DQ Brownie & Oreo Cupfection — Price, Calories & Review (..." description="DQ Brownie & Oreo Cupfection price: $6.29, 820 calories. Warm brownie pieces and Oreo layered with DQ soft serve and fudge in a cup — the most indulgent cup...">
+<Layout title="DQ Brownie & Oreo Cupfection: Price & Calories (2026)" description="DQ Brownie & Oreo Cupfection price: $6.29, 820 calories. Warm brownie pieces and Oreo layered with DQ soft serve and fudge in a cup — the most indulgent.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/classic-treats">Classic Treats</a></li><li aria-current="page">Brownie &amp; Oreo Cupfection</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Classic Treats", "href": "/categories/classic-treats"}, {"name": "Brownie & Oreo Cupfection"}]} />
 
 <div class="container">
   <div class="item-hero">

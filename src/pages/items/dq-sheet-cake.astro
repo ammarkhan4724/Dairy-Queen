@@ -1,47 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "DQ Sheet Cake",
-      "image": "https://www.thequeendairymenu.us/Images/dq-sheet-cake.webp",
-      "description": "DQ soft serve, hot fudge, crunchy center, and whipped topping in a large rectangular sheet cake format. Customizable with a personalized message. The right choice for large groups and events.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "157"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.7",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "44.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/dq-sheet-cake",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -74,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="Dairy Queen Sheet Cake — Price, Size & Ordering Guide 2026" description="DQ Sheet Cake price: $44.99+. Serves 24–32 people. DQ soft serve, fudge, crunch center in a rectangular format. Custom message available. Order 48 hours in...">
+<Layout title="Dairy Queen Sheet Cake — Price, Size & Ordering Guide 2026" description="DQ Sheet Cake price: $44.99+. Serves 24–32 people. DQ soft serve, fudge, crunch center in a rectangular format. Custom message available.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/dq-cakes">DQ Cakes</a></li><li><span aria-current="page">DQ Sheet Cake</span></li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "DQ Cakes", "href": "/categories/dq-cakes"}, {"name": "DQ Sheet Cake"}]} />
 
 <div class="container">
   <div class="item-hero">

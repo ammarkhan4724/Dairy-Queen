@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Dairy Queen Meal Deals Guide (2026): The $7 Meal Deal & 2-for-$5 Receipt Forensics" 
-  description="An independent economic audit of Dairy Queen combo values in 2026. Line-item receipt math, calorie-per-dollar ratios, and the $1.25 Mini Blizzard upgrade protocol."
+  title="Dairy Queen $7 Meal Deal, 2 for $5 & 2 for $7 Guide" 
+  description="Dairy Queen $7 Meal Deal, 2 for $5 and 2 for $7 explained: what is included, typical prices, availability and the best picks."
   ogImage="/Images/blog-meal-deals.webp"
   article={true}
 >
@@ -13,14 +15,10 @@ import Layout from '../../layouts/Layout.astro';
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "Dairy Queen Meal Deals Guide (2026): The $7 Meal Deal & 2-for-$5 Receipt Forensics",
+      "headline": "Dairy Queen $7 Meal Deal, 2 for $5 & 2 for $7 Guide (2026)",
       "description": "A line-by-line financial and nutritional audit of Dairy Queen's 2026 value menus, breaking down exact savings, calorie-per-dollar efficiency, and POS upgrade hacks.",
       "image": "https://www.thequeendairymenu.us/Images/blog-meal-deals.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -28,31 +26,8 @@ import Layout from '../../layouts/Layout.astro';
         "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
       },
       "datePublished": "2026-03-05T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:35:00+00:00",
+      "dateModified": "2026-10-15T12:00:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-meal-deals-guide"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Meal Deals Audit (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/dq-meal-deals-guide"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Meal Deals Audit (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Meal Deals Audit (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Consumer Economics &amp; Pricing Audit · 2026 Intelligence</span>
-      <h1>DAIRY QUEEN MEAL DEALS (2026): RECEIPT FORENSICS &amp; VALUE ARBITRAGE</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Tested Across Grill &amp; Chill Locations · Updated September 2026</p>
+      <h1>Dairy Queen Meal Deals: $7 Meal, 2 for $5 &amp; 2 for $7 (2026)</h1>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Updated October 2026</p>
     </div>
   </div>
 </section>
@@ -113,7 +80,20 @@ import Layout from '../../layouts/Layout.astro';
     <div class="article-body">
       <p class="lead">In an era where fast food combo meals routinely eclipse the $12 mark, Dairy Queen stands out as an intriguing economic anomaly. Between the legendary 4-course $7 Meal Deal and the customizable 2-for-$5 Mix &amp; Match platform, the chain maintains price points that feel straight out of 2018. But are these deals genuine steals, or do hidden upcharges and diminished portion sizes erode your savings? <a href="/">The Queen Dairy Menu Research Desk</a> conducted a line-item receipt audit across regional franchise locations to reveal the true mathematical efficiency of DQ’s value menu.</p>
 
-      <h2>Receipt Forensics: Auditing the $7 Meal Deal</h2>
+      <h2 id="quick-answer">DQ value deals at a glance</h2>
+      <div class="table-wrap">
+        <table class="size-table">
+          <thead><tr><th>Deal</th><th>What's included</th><th>Typical price</th><th>Availability</th></tr></thead>
+          <tbody>
+            <tr><td><strong><a href="#seven-dollar-meal">$7 Meal Deal</a></strong></td><td>Entrée (3-piece chicken strips or cheeseburger), regular fries, drink and a small sundae</td><td>$7.00</td><td>Participating DQ Grill &amp; Chill locations, lunch through close</td></tr>
+            <tr><td><strong><a href="#two-for-five">2 for $5 Mix &amp; Match</a></strong></td><td>Any two eligible items, such as 2-piece chicken strips, a cheeseburger, a chili cheese dog, pretzel sticks with queso or a small sundae</td><td>$5.00 for two</td><td>Participating locations; item list varies</td></tr>
+            <tr><td><strong><a href="#two-for-seven">2 for $7</a></strong></td><td>A higher-priced version of Mix &amp; Match with larger items, offered in some markets instead of or alongside 2 for $5</td><td>$7.00 for two</td><td>Regional; not offered everywhere</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.88rem;color:var(--color-text-muted);">Typical price; varies by location. Last checked October 2026. Deals are set by each franchise, so check the menu board or the DQ app before you order.</p>
+
+      <h2 id="seven-dollar-meal">The $7 Meal Deal: what you get and what it saves</h2>
       <p>The <a href="/items/7-meal-deal">Dairy Queen $7 Meal Deal</a> is a multi-tier bundle consisting of an entrée, side of regular fries, a 21-ounce fountain beverage, and a small sundae. To assess real savings, we audited the individual à la carte retail prices of each component across 15 standard US franchise markets:</p>
 
       <div class="table-wrap">
@@ -179,7 +159,7 @@ import Layout from '../../layouts/Layout.astro';
         <li><strong>Avoid the Original Cheeseburger inside the $7 Deal:</strong> The <a href="/items/original-cheeseburger">Original Cheeseburger</a> retails à la carte for roughly $3.29. Ordering it inside the $7 bundle reduces your total net discount from $5.86 down to $4.16. If you crave a burger, save the meal deal for tenders and buy the burger via the 2-for-$5 menu instead.</li>
       </ul>
 
-      <h2>The 2-for-$5 Mix &amp; Match Arbitrage Matrix</h2>
+      <h2 id="two-for-five">The 2 for $5 Mix &amp; Match menu</h2>
       <p>For mid-afternoon diners or couples grabbing a quick savory bite, the <a href="/items/2-for-5-mix-match">2-for-$5 Mix &amp; Match</a> board allows you to select any two qualified items for $2.50 apiece. However, the retail value of these options varies drastically:</p>
 
       <div class="table-wrap">
@@ -233,7 +213,16 @@ import Layout from '../../layouts/Layout.astro';
         </table>
       </div>
 
-      <h2>3 Secret Ordering Hacks to Supercharge Your Meal Deal</h2>
+      <h2 id="two-for-seven">The DQ 2 for $7 deal</h2>
+      <p>Some Dairy Queen markets run a <strong>2 for $7</strong> menu, either in place of 2 for $5 or next to it. It works the same way: pick any two eligible items for one price. The items are usually bigger than on the 2 for $5 board, so the per-item value can be similar or better. Because this deal is regional, the eligible items and the price differ between stores.</p>
+      <ul>
+        <li><strong>How to check:</strong> open the DQ app, choose your store, and look under Deals or Value; or ask at the counter.</li>
+        <li><strong>How to choose:</strong> compare each item's regular price at your store with $3.50 (half of $7). Items that normally cost more than that are where you save.</li>
+        <li><strong>Which is better, 2 for $5 or 2 for $7?</strong> If your store has both, 2 for $5 is cheaper for snacks and light meals; 2 for $7 is better when you want two full-size items.</li>
+      </ul>
+      <p>For more ways to save, see our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app rewards guide</a> and the full <a href="/combos">combos and deals page</a>.</p>
+
+      <h2>3 Ordering Tips to Get More From Your Meal Deal</h2>
       
       <h3>1. The "Mini Blizzard" Upgrade Protocol (The Best $1.25 You'll Spend)</h3>
       <p>Many diners believe they are locked into the basic soft-serve sundae included with the $7 deal. In reality, DQ’s point-of-sale software includes a standardized substitution modifier. Ask the crew member: <em>"Could I please upgrade the sundae to a Mini Oreo Blizzard?"</em> At 90% of locations, this rings up as an add-on between $1.00 and $1.50. You walk away with a full chicken tender dinner, hot fries, an ice-cold drink, and a world-class <a href="/items/oreo-blizzard">Oreo Blizzard</a> for around $8.25 plus tax.</p>

@@ -1,51 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 const itemSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Product",
-      "name": "Ultimate Hash Browns Platter",
-      "image": "https://www.thequeendairymenu.us/Images/ultimate-hash-browns-platter.webp",
-      "description": "Crispy hash browns loaded with sausage, scrambled eggs, cheese, and country gravy — the most indulgent item on the DQ breakfast menu. A hearty savory platter at $5.99, served at select breakfast locations.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Dairy Queen"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "131"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "The Queen Dairy Menu"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "5.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.thequeendairymenu.us/items/ultimate-hash-browns-platter",
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      },
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "790 cal"
-      }
-    },
     {
       "@type": "FAQPage",
       "mainEntity": [
@@ -78,11 +36,11 @@ const itemSchema = {
   ]
 };
 ---
-<Layout title="DQ Ultimate Hash Browns Platter — Price, Calories (2026)" description="DQ Ultimate Hash Browns Platter price: $5.99, 790 calories. Crispy hash browns loaded with sausage, eggs, cheese, and gravy. A savory DQ breakfast at select...">
+<Layout title="DQ Ultimate Hash Browns Platter — Price, Calories (2026)" description="DQ Ultimate Hash Browns Platter price: $5.99, 790 calories. Crispy hash browns loaded with sausage, eggs, cheese, and gravy.">
 <script type="application/ld+json" set:html={JSON.stringify(itemSchema)} />
 
 
-<nav aria-label="Breadcrumb" class="breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/#full-menu">Menu</a></li><li><a href="/categories/breakfast">Breakfast</a></li><li aria-current="page">Ultimate Hash Browns Platter</li></ol></div></nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Breakfast", "href": "/categories/breakfast"}, {"name": "Ultimate Hash Browns Platter"}]} />
 
 <div class="container">
   <div class="item-hero">

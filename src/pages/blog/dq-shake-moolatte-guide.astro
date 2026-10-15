@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { AUTHOR } from '../../data/site';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 ---
 <Layout 
-  title="Dairy Queen Shakes & MooLatté Guide (2026): Malted Science & Caffeine Matrix" 
-  description="An independent sensory and chemical breakdown of DQ's beverage line. Milkshake vs malted barley powder chemistry, MooLatté coffee caffeine yields, and size math."
+  title="Dairy Queen Shakes & MooLatté Guide (2026)" 
+  description="Dairy Queen shakes, malts and MooLatté guide: flavors, sizes, typical 2026 prices, calories and caffeine content."
   ogImage="/Images/moolatte.webp"
   article={true}
 >
@@ -16,11 +18,7 @@ import Layout from '../../layouts/Layout.astro';
       "headline": "Dairy Queen Shakes & MooLatté Guide (2026): Malted Science & Caffeine Matrix",
       "description": "An exhaustive beverage analysis examining Dairy Queen's milkshakes, old-fashioned malts, MooLatté frozen coffee caffeine concentrations, and Misty Slush hydration profiles.",
       "image": "https://www.thequeendairymenu.us/Images/moolatte.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu Food Research Desk",
-        "url": "https://www.thequeendairymenu.us/about"
-      },
+      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
       "publisher": {
         "@type": "Organization",
         "name": "The Queen Dairy Menu",
@@ -30,29 +28,6 @@ import Layout from '../../layouts/Layout.astro';
       "datePublished": "2026-07-22T08:00:00+00:00",
       "dateModified": "2026-09-29T18:35:00+00:00",
       "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-shake-moolatte-guide"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.thequeendairymenu.us/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.thequeendairymenu.us/blog"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "DQ Beverage & Coffee Audit (2026)",
-          "item": "https://www.thequeendairymenu.us/blog/dq-shake-moolatte-guide"
-        }
-      ]
     },
     {
       "@type": "FAQPage",
@@ -86,22 +61,14 @@ import Layout from '../../layouts/Layout.astro';
   ]
 })} />
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li aria-current="page">DQ Beverage &amp; Coffee Audit (2026)</li>
-    </ol>
-  </div>
-</nav>
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Beverage & Coffee Audit (2026)"}]} />
 
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <span class="hero-eyebrow">Beverage &amp; Caffeine Laboratory Audit · 2026 Analysis</span>
       <h1>DAIRY QUEEN SHAKES &amp; MOOLATTÉ GUIDE: CAFFEINE &amp; MALT CHEMISTRY</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Food Research Desk · Tested Across Beverage Stations · Updated September 2026</p>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Tested Across Beverage Stations · Updated September 2026</p>
     </div>
   </div>
 </section>
