@@ -1,224 +1,80 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { AUTHOR } from '../../data/site';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// Calories match each item's page on this site.
+const treats = [
+  { name: 'Small vanilla cone', href: '/items/vanilla-soft-serve-cone', cal: '170' },
+  { name: 'DQ Sandwich', href: '/items/dq-sandwich', cal: '190' },
+  { name: 'Dilly Bar', href: '/items/dilly-bar', cal: '210' },
+  { name: 'Non-Dairy Dilly Bar', href: '/items/non-dairy-dilly-bar', cal: '220' },
+  { name: 'Small hot fudge sundae', href: '/items/hot-fudge-sundae', cal: '~250' },
+  { name: 'Strawberry sundae', href: '/items/strawberry-sundae', cal: '280' },
+  { name: 'Mini Oreo Blizzard', href: '/items/oreo-blizzard', cal: '~300' },
+];
+const meals = [
+  { name: 'Side salad (no dressing)', href: '/items/side-salad', cal: '90' },
+  { name: 'Small fries', href: '/items/regular-fries', cal: '260' },
+  { name: 'Grilled chicken sandwich', href: '/items/grilled-chicken-sandwich', cal: '390' },
+  { name: 'Original Cheeseburger', href: '/items/original-cheeseburger', cal: '400' },
+  { name: 'Cheese curds', href: '/items/cheese-curds', cal: '470' },
+  { name: 'FlameThrower Stackburger', href: '/items/flamethrower-stackburger', cal: '780' },
+  { name: '4-piece Chicken Strip Basket', href: '/items/chicken-strip-basket-4pc', cal: '~1,000' },
+];
+
+const faqs = [
+  { q: 'What is the lowest-calorie item at Dairy Queen?', a: 'A side salad without dressing (about 90 calories) is the lightest food item. For dessert, a small vanilla cone (about 170 calories) or a DQ Sandwich (about 190 calories) are the lightest treats.' },
+  { q: 'What is the healthiest thing to eat at Dairy Queen?', a: 'The grilled chicken sandwich (about 390 calories) with a side salad is one of the most balanced meals. For dessert, choose a small cone or a Mini Blizzard instead of a larger size.' },
+  { q: 'How many calories are in a Blizzard?', a: 'Most Blizzards have about 300–400 calories as a Mini, 420–600 as a Small, 600–850 as a Medium and 900–1,200 as a Large, depending on the flavor.' },
+  { q: 'Where can I find official Dairy Queen nutrition information?', a: 'Dairy Queen publishes nutrition and allergen details on its website and in the DQ app. Our figures are estimates to help you compare; check DQ’s information if you need exact numbers.' },
+];
 ---
-<Layout 
-  title="Dairy Queen Calories & Nutrition Guide (2026)" 
-  description="Master your macros at Dairy Queen with independent nutritional audits. Discover 35g+ protein meals under 400 calories, glycemic-smart treats, and keto hacks."
-  ogImage="/Images/dilly-bar.webp"
-  article={true}
+<BlogPost
+  title="Dairy Queen Calories & Nutrition Guide (2026)"
+  description="Dairy Queen calories at a glance: the lightest treats and meals, Blizzard calories by size, and simple swaps to eat lighter at DQ."
+  h1="Dairy Queen Calories and Nutrition: Lighter Choices at DQ"
+  crumb="DQ Calories Guide"
+  eyebrow="Calories and nutrition"
+  image="/Images/dilly-bar.webp"
+  imageAlt="Dairy Queen Dilly Bar on a stick"
+  datePublished="2026-04-20"
+  faqs={faqs}
 >
+  <p class="lead"><strong>The lightest treats at Dairy Queen are a small vanilla cone (about 170 calories), a DQ Sandwich (about 190) and a Dilly Bar (about 210).</strong> For a meal, a grilled chicken sandwich (about 390 calories) or an Original Cheeseburger (about 400) are the lighter choices. The biggest calorie jump at DQ comes from size: a Large Blizzard can have three times the calories of a Mini.</p>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "Dairy Queen Nutrition & Macro Guide (2026): High-Protein Swaps & Low-Calorie Protocols",
-      "description": "An exhaustive nutritional analysis of Dairy Queen's 2026 menu, evaluating protein-to-calorie ratios, low-glycemic dessert alternatives, and sodium mitigation strategies.",
-      "image": "https://www.thequeendairymenu.us/Images/dilly-bar.webp",
-      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu",
-        "url": "https://www.thequeendairymenu.us/",
-        "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
-      },
-      "datePublished": "2026-04-20T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:35:00+00:00",
-      "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dairy-queen-calories-nutrition-guide"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the single highest-protein meal you can order at Dairy Queen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Rotisserie-Style Grilled Chicken Sandwich ordered without mayonnaise delivers 36 grams of high-quality complete protein for only 320 total calories, achieving a remarkable 45% protein-to-calorie efficiency ratio."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you eat low-carb or keto at Dairy Queen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. You can request any Single, Double, or Triple Stackburger 'in a lettuce wrap' or served in a salad bowl with no bun and no ketchup. A Double Stackburger with cheddar and bacon delivers under 3g net carbs and 35g of protein."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which frozen dessert item has the lowest sugar impact at Dairy Queen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The No-Sugar-Added Dilly Bar or standard Classic Dilly Bar (210 calories, 16g sugar) and the Kids' Vanilla Cone (170 calories, 19g sugar) provide the lowest glycemic load across the entire frozen menu."
-          }
-        }
-      ]
-    }
-  ]
-})} />
+  <p>This guide is for comparing options. It is not medical advice, and figures are estimates that can vary by location and recipe. Check Dairy Queen’s own nutrition information if you need exact numbers.</p>
 
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Nutrition & Macro Guide (2026)"}]} />
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Nutritional Laboratory Audit · 2026 Dietary Intelligence</span>
-      <h1>DAIRY QUEEN NUTRITION &amp; MACRO GUIDE: HEALTHY SWAPS &amp; PROTEIN AUDIT</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Independently Audited for 2026 · Updated September 2026</p>
-    </div>
+  <h2 id="treats">Lowest-calorie DQ treats</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Treat</th><th>Calories</th></tr></thead>
+      <tbody>{treats.map((t) => <tr><td><a href={t.href}>{t.name}</a></td><td>{t.cal}</td></tr>)}</tbody>
+    </table>
   </div>
-</section>
+  <p>Treats on a stick or in a wrapper, like the Dilly Bar and DQ Sandwich, are easy to keep in check because the portion is fixed.</p>
 
-<article>
-  <div class="container article-body" style="max-width:880px;margin:0 auto;">
-    <img src="/Images/dilly-bar.webp" alt="Dairy Queen Classic Chocolate Coated Dilly Bar on stick — a 210-calorie portion-controlled frozen treat" width="880" height="480" loading="eager" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow: 0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;">
-    
-    <div class="article-body">
-      <p class="lead">Fast-food dessert chains are routinely portrayed as dietary danger zones. When a Large Brownie Blizzard exceeds 1,300 calories and a Triple FlameThrower Stackburger tops 1,150 calories with a day's worth of sodium, critics assume healthy eating at Dairy Queen is an oxymoron. In reality, with a firm grasp of macronutrient ratios, portion geometry, and kitchen modifiers, DQ can comfortably fit into strict athletic diets, bodybuilding cutting phases, and diabetic glycemic plans. Here is our <strong>2026 Nutritional Laboratory Field Guide</strong> to hacking the DQ menu for maximum protein and minimum caloric drag.</p>
+  <h2 id="blizzards">Blizzard calories by size</h2>
+  <p>Size matters more than flavor. A Mini <a href="/items/oreo-blizzard">Oreo Blizzard</a> is about 300 calories, a Small 420, a Medium 590 and a Large 920. Richer flavors like <a href="/items/reeses-blizzard">Reese’s</a> and <a href="/items/cookie-dough-blizzard">Cookie Dough</a> run higher. If you want a Blizzard but are watching calories, order a Mini. Full numbers for every flavor are on the <a href="/categories/blizzard-treats">Blizzard menu</a>.</p>
 
-      <h2>The Protein-to-Calorie (P:C) Efficiency Hierarchy</h2>
-      <p>When tracking macros, what matters most is protein density: how many grams of lean amino acids you receive per 100 calories of food consumed. Our research desk audited the entire hot-food lineup to construct the 2026 Protein Efficiency Index:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Hot Food Entrée</th>
-              <th>Total Calories</th>
-              <th>Protein (g)</th>
-              <th>Fat / Carbs (g)</th>
-              <th>P:C Efficiency Ratio</th>
-              <th>Dietary Assessment</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="/items/grilled-chicken-sandwich"><strong>Grilled Chicken (No Mayo)</strong></a></td>
-              <td>320 cal</td>
-              <td><strong>36g</strong></td>
-              <td>5g Fat / 33g Carbs</td>
-              <td><strong class="text-emerald-600">11.25g / 100 cal</strong></td>
-              <td>🥇 Uncontested Gold Standard</td>
-            </tr>
-            <tr>
-              <td><strong>Rotisserie Chicken (No Bun / Wrap)</strong></td>
-              <td>210 cal</td>
-              <td><strong>33g</strong></td>
-              <td>4g Fat / 2g Carbs</td>
-              <td><strong class="text-emerald-600">15.71g / 100 cal</strong></td>
-              <td>⚡ Pure Keto Muscle Fuel</td>
-            </tr>
-            <tr>
-              <td><a href="/items/original-cheeseburger"><strong>Original Single Cheeseburger</strong></a></td>
-              <td>390 cal</td>
-              <td>20g</td>
-              <td>18g Fat / 34g Carbs</td>
-              <td><strong class="text-cyan-700">5.13g / 100 cal</strong></td>
-              <td>👍 Balanced Classic Cheat</td>
-            </tr>
-            <tr>
-              <td><strong>4-Piece Chicken Strips (Bare)</strong></td>
-              <td>460 cal</td>
-              <td>34g</td>
-              <td>20g Fat / 32g Carbs</td>
-              <td><strong class="text-cyan-700">7.39g / 100 cal</strong></td>
-              <td>Solid (Skip gravy for salsa)</td>
-            </tr>
-            <tr>
-              <td><a href="/items/flamethrower-stackburger"><strong>Double FlameThrower Burger</strong></a></td>
-              <td>920 cal</td>
-              <td>42g</td>
-              <td>61g Fat / 41g Carbs</td>
-              <td><strong class="text-rose-700">4.56g / 100 cal</strong></td>
-              <td>Heavy Lipid Trap (High sodium)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>The Low-Sugar Dessert Protocol: Satisfying Cravings Under 250 Calories</h2>
-      <p>Denying yourself a treat at Dairy Queen is completely unnecessary. The key is recognizing the stark glycemic divide between pre-portioned novelty bars and soft-serve spindle blends:</p>
-
-      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:18px;padding:24px;margin:24px 0;">
-        <h3 style="margin-top:0;color:#0B1E38;font-size:1.2rem;">The 4 Best Portion-Controlled Desserts</h3>
-        <ul style="margin:12px 0 0 0;padding-left:0;list-style:none;">
-          <li style="padding:10px 0;border-bottom:1px solid #EBE1D2;">
-            <strong>1. The Classic Dilly® Bar (210 Calories | 16g Sugar):</strong> 
-            A pre-molded disk of vanilla soft serve dipped in crisp confectionery coating. Because it is frozen on a wooden stick, portion creep is impossible.
-          </li>
-          <li style="padding:10px 0;border-bottom:1px solid #EBE1D2;">
-            <strong>2. Kids' Vanilla Soft Serve Cone (170 Calories | 4.5g Fat | 19g Sugar):</strong> 
-            Provides the full parlor sensory experience of cold, velvety soft serve with zero guilt.
-          </li>
-          <li style="padding:10px 0;border-bottom:1px solid #EBE1D2;">
-            <strong>3. Non-Dairy Gluten-Free Dilly Bar (240 Calories | 15g Sugar):</strong> 
-            Crafted with coconut cream base and vegan chocolate shell, ideal for lactose-sensitive diners.
-          </li>
-          <li style="padding:10px 0;">
-            <strong>4. Small Strawberry Sundae (230 Calories | 6g Fat):</strong> 
-            Selecting strawberry topping instead of heavy cocoa fudge cuts saturated fat by nearly 65%.
-          </li>
-        </ul>
-      </div>
-
-      <h2>Blizzard Caloric Spectrum: How to Order Without Blowing Your Macro Budget</h2>
-      <p>If your heart is set on a blended Blizzard, apply these laboratory guidelines:</p>
-      <ul>
-        <li><strong>Strict Mini-Only Rule:</strong> A Mini Blizzard contains 6 fluid ounces. Choosing an <a href="/items/oreo-blizzard">Oreo Mini</a> (380 cal) instead of a Large (1,050 cal) saves an astonishing <strong>670 calories</strong>—the equivalent of an entire second meal.</li>
-        <li><strong>Favor Fruit &amp; Aerated Candy Over Cookie Dough:</strong> Flavors like Strawberry Cheesequake (~330 cal in Mini) or Butterfinger (~350 cal) carry significantly lower fat content than dense oil-shortened doughs like Choco Brownie Extreme (~400 cal) or Reese's Peanut Butter Cup (~380 cal).</li>
-      </ul>
-
-      <h2>Keto &amp; Low-Carb Drive-Thru Playbook</h2>
-      <p>Eating ketogenic or low-carb at a DQ Grill &amp; Chill is surprisingly straightforward when you use the following ordering vernacular:</p>
-      <div style="background:#F0FDF4;border-left:4px solid #16A34A;padding:18px 22px;border-radius:0 14px 14px 0;margin:20px 0;">
-        <p style="margin:0;font-weight:700;color:#14532D;font-size:1.05rem;">The "No-Bun Salad Bowl" Order:</p>
-        <p style="margin:6px 0 0 0;font-style:italic;color:#166534;">"Could I please get a Double Bacon Stackburger, but served protein-style in a bowl with no bun, no ketchup, extra pickles, and a side of yellow mustard?"</p>
-        <p style="margin:8px 0 0 0;color:#14532D;font-size:0.9rem;"><strong>Macro Yield:</strong> ~540 Calories · 38g Protein · 42g Healthy Lipids · <strong>under 3g Net Carbs</strong>.</p>
-      </div>
-
-      <h2>Sodium &amp; Side-Item Traps to Avoid</h2>
-      <p>While calories are manageable, fast food sodium is a silent issue. Keep these two hazards in mind:</p>
-      <ul>
-        <li><strong>The Cheese Curd Pitfall:</strong> While <a href="/items/cheese-curds">Wisconsin Cheese Curds</a> seem like a quick snack, a regular serving packs over 520 calories, 34g of fat, and a staggering 1,120mg of sodium.</li>
-        <li><strong>Gravy vs. Picante Salsa:</strong> Swapping the 4 oz Country Gravy cup (130 cal, 560mg sodium) for two packets of mild picante salsa (20 cal, 180mg sodium) dramatically cleanses your macro profile.</li>
-      </ul>
-
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What is the single highest-protein meal you can order at Dairy Queen?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The Rotisserie-Style Grilled Chicken Sandwich ordered without mayonnaise delivers 36 grams of high-quality complete protein for only 320 total calories, achieving a remarkable 45% protein-to-calorie efficiency ratio.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Can you eat low-carb or keto at Dairy Queen?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Yes. You can request any Single, Double, or Triple Stackburger 'in a lettuce wrap' or served in a salad bowl with no bun and no ketchup. A Double Stackburger with cheddar and bacon delivers under 3g net carbs and 35g of protein.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Which frozen dessert item has the lowest sugar impact at Dairy Queen?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The No-Sugar-Added Dilly Bar or standard Classic Dilly Bar (210 calories, 16g sugar) and the Kids' Vanilla Cone (170 calories, 19g sugar) provide the lowest glycemic load across the entire frozen menu.</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:40px;padding:24px;background:#FFFFFF;border-radius:16px;border:1px solid #EADBCA;text-align:center;">
-        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">Explore Verified 2026 Menus</h3>
-        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">View complete nutritional values, calorie breakdowns, and prices for all 79 items.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="/categories/classic-treats" class="btn btn-primary">Classic Treats Directory →</a>
-          <a href="/blog/best-blizzard-flavors-ranked" class="btn btn-accent">Blizzard Flavor Guide →</a>
-        </div>
-      </div>
-    </div>
+  <h2 id="meals">Calories in DQ food</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Item</th><th>Calories</th></tr></thead>
+      <tbody>{meals.map((m) => <tr><td><a href={m.href}>{m.name}</a></td><td>{m.cal}</td></tr>)}</tbody>
+    </table>
   </div>
-</article>
 
-</Layout>
+  <h2 id="swaps">Easy swaps to eat lighter</h2>
+  <ul>
+    <li><strong>Mini instead of Small</strong> on any Blizzard saves roughly 100–250 calories.</li>
+    <li><strong>Side salad instead of fries</strong> saves about 170 calories (before dressing).</li>
+    <li><strong>Single instead of double</strong> on a burger. The single FlameThrower is about 780 calories; the double is over 1,000.</li>
+    <li><strong>Grilled instead of crispy</strong> chicken sandwich.</li>
+    <li><strong>Strawberry or a cone instead of a shake.</strong> A small <a href="/items/chocolate-shake">chocolate shake</a> is about 710 calories.</li>
+  </ul>
+
+  <h2 id="drinks">Drinks</h2>
+  <p>A small <a href="/items/misty-slush">Misty Slush</a> is about 150 calories and has no fat. Shakes and <a href="/items/moolatte">MooLattés</a> are much heavier, from about 490 calories for a small. See the <a href="/categories/drinks">drinks menu</a> for every size.</p>
+
+  <h2 id="allergies">Food allergies</h2>
+  <p>If you are avoiding gluten, nuts or dairy, read our <a href="/blog/dq-gluten-free-allergen-guide">Dairy Queen allergen guide</a> before you order.</p>
+</BlogPost>

@@ -1,275 +1,100 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { AUTHOR } from '../../data/site';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+import { LAST_CHECKED } from '../../data/site';
+
+// Prices and calories come from each flavor's item page so the site stays consistent.
+const ranking = [
+  { name: 'Oreo Cookie', href: '/items/oreo-blizzard', small: '$4.49', cal: '420', why: 'The cookie pieces stay crunchy all the way down, and it never gets too sweet. It is the one we would order if we could only pick one.' },
+  { name: 'Chocolate Chip Cookie Dough', href: '/items/cookie-dough-blizzard', small: '$4.49', cal: '590', why: 'Soft dough bites plus fudge. Rich, filling, and the closest thing to a sure bet after Oreo.' },
+  { name: 'Turtle Pecan Cluster', href: '/items/turtle-pecan-blizzard', small: '$4.79', cal: '570', why: 'Salty pecans, caramel and chocolate. The best pick if you like sweet-and-salty.' },
+  { name: 'Reese’s Peanut Butter Cup', href: '/items/reeses-blizzard', small: '$4.49', cal: '600', why: 'Big peanut butter flavor in every bite. Very rich, so a Small is plenty.' },
+  { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', small: '$4.79', cal: '510', why: 'Brownie pieces, fudge and chocolate chunks. For people who want the most chocolate possible.' },
+  { name: 'Heath', href: '/items/heath-blizzard', small: '$4.49', cal: '480', why: 'Buttery toffee bits that stay crisp. Underrated and a little less sweet than the candy-bar flavors.' },
+  { name: 'Butterfinger', href: '/items/butterfinger-blizzard', small: '$4.49', cal: '470', why: 'Flaky peanut butter crunch. Good, but the pieces get chewy if you take your time.' },
+  { name: 'Strawberry Cheesequake', href: '/items/strawberry-cheesequake-blizzard', small: '$4.79', cal: '520', why: 'Cheesecake bites and strawberry. Lighter tasting than the chocolate flavors.' },
+  { name: 'M&M’s Milk Chocolate', href: '/items/mm-blizzard', small: '$4.49', cal: '490', why: 'Fun and colorful, but the candy shells freeze hard. Better for kids than for chocolate fans.' },
+  { name: 'Cotton Candy (seasonal)', href: '/items/cotton-candy-blizzard', small: '$5.29', cal: '460', why: 'Bright and very sweet. Most adults will tap out halfway; kids love it.' },
+];
+
+const faqs = [
+  { q: 'What is the best Blizzard flavor at Dairy Queen?', a: 'The Oreo Cookie Blizzard is the most popular flavor and our top pick. Cookie Dough and Turtle Pecan Cluster are close behind. A Small Oreo Blizzard typically costs about $4.49 and has 420 calories.' },
+  { q: 'What is the most popular Blizzard flavor?', a: 'Oreo Cookie is Dairy Queen’s best-known and most-ordered Blizzard. It is on the menu year-round at every location.' },
+  { q: 'Which Blizzard has the fewest calories?', a: 'Among year-round flavors, a Mini Butterfinger (about 290 calories) or Mini Oreo (about 300 calories) are the lightest choices. Calories roughly double from Mini to Medium.' },
+  { q: 'How much does a Blizzard cost?', a: 'Most Blizzards cost about $3.49–$3.99 for a Mini, $4.49–$4.79 for a Small, $5.29–$5.79 for a Medium and $5.99–$6.49 for a Large. Seasonal and Royal flavors cost more. Prices vary by location.' },
+];
 ---
-<Layout 
-  title="Best Dairy Queen Blizzard Flavors, Ranked (2026)" 
-  description="Every Dairy Queen Blizzard flavor ranked by taste, mix-in ratio and value, with typical 2026 prices and calories by size."
-  ogImage="/Images/blog-blizzard-flavors.webp"
-  article={true}
+<BlogPost
+  title="Best Dairy Queen Blizzard Flavors, Ranked (2026)"
+  description="Our ranking of the best Dairy Queen Blizzard flavors, from Oreo to Turtle Pecan, with typical prices, calories and which size to order."
+  h1="Best Dairy Queen Blizzard Flavors, Ranked"
+  crumb="Best Blizzard Flavors"
+  eyebrow="Blizzard rankings"
+  image="/Images/blog-blizzard-flavors.webp"
+  imageAlt="Oreo Blizzard from Dairy Queen in a cup with a red spoon"
+  datePublished="2026-01-15"
+  faqs={faqs}
 >
+      <p class="lead"><strong>The best Blizzard at Dairy Queen is the Oreo Cookie Blizzard</strong>, followed by Chocolate Chip Cookie Dough and Turtle Pecan Cluster. A Small Oreo Blizzard usually costs around $4.49 and has 420 calories. Below is our full ranking of the year-round and seasonal flavors, with what each one tastes like and what you will pay.</p>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "Best Dairy Queen Blizzard Flavors Ranked (2026): The Laboratory Taste Test & Mix-In Audit",
-      "description": "An exhaustive sensory and textural evaluation of Dairy Queen's 2026 Blizzard lineup, measuring mix-in dispersion ratios, sub-zero chew plasticity, and sweetness fatigue thresholds.",
-      "image": "https://www.thequeendairymenu.us/Images/blog-blizzard-flavors.webp",
-      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu",
-        "url": "https://www.thequeendairymenu.us/",
-        "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
-      },
-      "datePublished": "2026-01-15T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:35:00+00:00",
-      "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/best-blizzard-flavors-ranked"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Which Dairy Queen Blizzard flavor holds the highest mix-in density score?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Choco Brownie Extreme and Oreo Cookie Blizzards score highest in mix-in density, averaging over 38 grams of solid baked confection per 100 grams of soft serve base."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why do candy-based Blizzards like M&M's feel hard when chewed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "At Dairy Queen's standard holding temperature of 18°F (-8°C), sugar shell confections freeze solid. When chewed, the sugar shells fragment into brittle crystals that feel waxy compared to room-temperature candy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the most nutritionally balanced Blizzard option on the 2026 menu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Strawberry Cheesequake and Butterfinger in Mini size (under 360 calories and under 42 grams of sugar) provide the best balance of sensory satisfaction without severe glycemic spikes."
-          }
-        }
-      ]
-    }
-  ]
-})} />
+      <p>This is an opinion piece. We ranked flavors on three simple things: whether the mix-ins stay good from the first spoonful to the last, whether the flavor gets tiring before you finish, and value for the price. Your favorite might be different, and that is fine.</p>
 
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "Blizzard Flavor Audit (2026)"}]} />
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Sensory Laboratory Evaluation · 2026 Tasting Matrix</span>
-      <h1>BEST DAIRY QUEEN BLIZZARD FLAVORS RANKED (2026 AUDIT)</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Tested Across 22 National Varieties · Updated September 2026</p>
-    </div>
-  </div>
-</section>
-
-<article>
-  <div class="container article-body" style="max-width:880px;margin:0 auto;">
-    <img src="/Images/blog-blizzard-flavors.webp" alt="Dairy Queen Oreo Cookie Blizzard Treat in signature blue cup with red spoon and whipped cream topping — 2026 Sensory Rankings" width="880" height="480" loading="eager" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow: 0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;">
-    
-    <div class="article-body">
-      <p class="lead">Staring at the illuminated Blizzard board at a Dairy Queen drive-thru is one of fast food’s great sensory traps. With 20+ varieties rotating through seasonal rosters, core-filled Royal centers, and candy tie-ins, visual marketing often overrides culinary reality. A treat that sounds magnificent on paper can turn into a tooth-shattering frozen boulder or a cloying bowl of melted syrup at the bottom of the cup. To separate true frozen dessert engineering from marketing hype, <a href="/">The Queen Dairy Menu Research Desk</a> conducted a structured sensory audit of the entire 2026 Blizzard catalog.</p>
-
-      <h2>Our 4-Pillar Sensory Evaluation Methodology</h2>
-      <p>Every candidate Blizzard was purchased unannounced at standard retail temperatures (18°F to 20°F at the dispensing nozzle) and evaluated across four quantitative metrics:</p>
-      
-      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:18px;padding:24px;margin:24px 0;">
-        <h3 style="margin-top:0;color:#0B1E38;font-size:1.2rem;">The Tasting Lab Evaluation Rubric</h3>
-        <ul style="margin:12px 0 0 0;padding-left:0;list-style:none;">
-          <li style="padding:8px 0;border-bottom:1px solid #EBE1D2;"><strong>1. Dispersion Homogeneity:</strong> Does the high-speed spindle distribute mix-ins uniformly to the very bottom of the cup, or are you left eating bare vanilla soft serve on your final six spoonfuls?</li>
-          <li style="padding:8px 0;border-bottom:1px solid #EBE1D2;"><strong>2. Sub-Zero Chew Resilience:</strong> When subjected to freezing temperatures, do baked items and candies maintain enjoyable elasticity, or do they freeze into enamel-cracking ice rocks?</li>
-          <li style="padding:8px 0;border-bottom:1px solid #EBE1D2;"><strong>3. Glycemic Fatigue Index:</strong> How many spoonfuls before palate exhaustion sets in? Heavy syrups often overload sensory receptors, making medium and large sizes difficult to finish.</li>
-          <li style="padding:8px 0;"><strong>4. Thermal Structural Integrity:</strong> Does the aeration and mix-in ratio hold the mandatory "Upside-Down Test" without bleeding liquid dairy down the side of the cup?</li>
-        </ul>
-      </div>
-
-      <h2>The Definitive 2026 Blizzard Tier Hierarchy</h2>
-      <p>Here is our lab's verified classification across all current standard and seasonal offerings:</p>
-
+      <h2 id="ranking">Our Blizzard ranking at a glance</h2>
       <div class="table-wrap">
         <table class="size-table">
-          <thead>
-            <tr>
-              <th>Tier</th>
-              <th>Sensory Grade</th>
-              <th>Qualifying Flavors</th>
-              <th>Core Flavor Profile</th>
-            </tr>
-          </thead>
+          <thead><tr><th>#</th><th>Flavor</th><th>Small price</th><th>Small calories</th><th>Why it ranks here</th></tr></thead>
           <tbody>
-            <tr>
-              <td><strong class="text-[#0E7490]">S-Tier (Flawless)</strong></td>
-              <td>9.5 – 10.0</td>
-              <td><a href="/items/oreo-blizzard">Oreo® Cookie</a>, <a href="/items/cookie-dough-blizzard">Chocolate Chip Cookie Dough</a>, <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a></td>
-              <td>Perfect textural chew, sublime dispersion, zero sugar fatigue.</td>
-            </tr>
-            <tr>
-              <td><strong class="text-emerald-600">A-Tier (Superior)</strong></td>
-              <td>8.5 – 9.4</td>
-              <td><a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster</a>, <a href="/items/reeses-blizzard">Reese’s® Peanut Butter Cup</a>, <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a></td>
-              <td>Rich, deep flavor notes; outstanding decadent indulgence.</td>
-            </tr>
-            <tr>
-              <td><strong class="text-amber-600">B-Tier (Good)</strong></td>
-              <td>7.0 – 8.4</td>
-              <td><a href="/items/butterfinger-blizzard">Butterfinger®</a>, <a href="/items/strawberry-cheesequake-blizzard">Strawberry Cheesequake</a>, <a href="/items/cotton-candy-blizzard">Cotton Candy</a></td>
-              <td>Enjoyable specialty flavor; prone to rapid softening or sticky chewing.</td>
-            </tr>
-            <tr>
-              <td><strong class="text-slate-500">C-Tier (Flawed)</strong></td>
-              <td>Below 7.0</td>
-              <td><a href="/items/mm-blizzard">M&amp;M’s® Milk Chocolate</a>, <a href="/items/banana-split">Banana Split Blizzard</a></td>
-              <td>Uneven texture, frozen candy hardness, or excess watery runoff.</td>
-            </tr>
+            {ranking.map((r, i) => (
+              <tr>
+                <td><strong>{i + 1}</strong></td>
+                <td><strong><a href={r.href}>{r.name}</a></strong></td>
+                <td class="price-cell">{r.small}</td>
+                <td>{r.cal}</td>
+                <td>{r.why}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
+      <p style="font-size:.88rem;color:var(--color-text-muted);">Typical price; varies by location. Last checked {LAST_CHECKED}.</p>
 
-      <h2>Detailed Lab Reviews: S-Tier Benchmarks</h2>
+      <h2 id="top-three">Why Oreo, Cookie Dough and Turtle Pecan win</h2>
+      <h3>1. Oreo Cookie Blizzard</h3>
+      <p>The <a href="/items/oreo-blizzard">Oreo Blizzard</a> has been on the menu since 1985 for a reason. The cookie pieces soften a little but keep their crunch, and the chocolate cookie balances the sweet vanilla soft serve. It works in any size: about 300 calories as a Mini, 420 as a Small. If you want a twist, the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> adds a fudge-filled center for about 50 cents more.</p>
 
-      <h3>1. Oreo® Cookie Blizzard Treat — Score: 9.8 / 10 (The Undisputed Apex)</h3>
-      <p>There is a scientific reason why the <a href="/items/oreo-blizzard">Oreo® Blizzard</a> remains Dairy Queen’s global revenue leader. The cocoa wafer elements possess a microscopic capillary structure that absorbs ambient dairy moisture without dissolving into paste. The high-speed spindle breaks the cookies into a dual-phase mixture: micro-cocoa dust that infuses the vanilla soft serve base with an earthy chocolate tint, and macro-shards that deliver a crisp, resonant crunch in every bite. At an average retail price of $3.49 for a Mini and $5.99 for a Medium, it represents the gold standard of quick-service dessert engineering.</p>
+      <h3>2. Chocolate Chip Cookie Dough Blizzard</h3>
+      <p>The <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> is soft and chewy where Oreo is crunchy. The dough bites stay soft even when frozen, and the fudge makes it feel like a full dessert. It is heavier, at 590 calories for a Small, so the Mini is a good call after a meal.</p>
+
+      <h3>3. Turtle Pecan Cluster Blizzard</h3>
+      <p>Pecans, caramel and chocolate give the <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster</a> a salty edge that most Blizzards do not have. The nuts do not freeze rock hard the way candy does. If you find most Blizzards too sweet, start here.</p>
+
+      <h2 id="chocolate-peanut-butter">Best picks for chocolate and peanut butter fans</h2>
+      <p>For pure chocolate, get the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a>: brownie pieces, fudge and chocolate chunks. For peanut butter, the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is the obvious choice, and the <a href="/items/royal-reeses-blizzard">Royal Reese’s</a> adds a peanut butter center. Both are rich. A Medium Reese’s is around 830 calories, so many people share one or stick with a Small.</p>
+
+      <h2 id="lower-ranked">Flavors that fall short (and who should still order them)</h2>
       <ul>
-        <li><strong>Dispersion Score:</strong> 10/10 — Uniform wafer distribution from top rim to bottom base.</li>
-        <li><strong>Texture Dynamic:</strong> Brittle cookie crunch married to silky 5% butterfat dairy.</li>
-        <li><strong>Research Desk Hack:</strong> Order with a chocolate soft serve base for an intense dark cocoa profile.</li>
+        <li><a href="/items/mm-blizzard">M&amp;M’s</a>: the candy shells freeze hard, so the chocolate inside does not melt into the soft serve. Kids usually do not mind.</li>
+        <li><a href="/items/cotton-candy-blizzard">Cotton Candy</a>: very sweet and very bright. A seasonal treat for kids more than a regular order.</li>
+        <li>Fruit-heavy Blizzards: fruit adds water, so these melt faster. Eat them right away.</li>
       </ul>
 
-      <h3>2. Chocolate Chip Cookie Dough — Score: 9.6 / 10</h3>
-      <p>Most commercial ice cream brands fail at cookie dough because real butter crystallizes at low temperatures, making the dough nuggets unpleasantly stiff. Dairy Queen's proprietary <a href="/items/cookie-dough-blizzard">Cookie Dough nuggets</a> use an eggless, vegetable-shortened brown sugar emulsification that stays wonderfully pliable at 18°F. Paired with rich hot fudge ribbons that marble through the cup, every bite delivers a buttery, caramelized chew that balances the cool dairy finish.</p>
+      <h2 id="seasonal">Seasonal and limited-time Blizzards</h2>
+      <p>Dairy Queen rotates a Blizzard of the Month and seasonal flavors such as <a href="/items/pumpkin-pie-blizzard">Pumpkin Pie</a> in the fall and <a href="/items/peppermint-bark-blizzard">Peppermint Bark</a> in winter. Seasonal Blizzards usually cost about a dollar more than core flavors. See every current flavor and price on our <a href="/categories/blizzard-treats">Blizzard menu</a>.</p>
 
-      <h3>3. Royal New York Cheesecake — Score: 9.5 / 10</h3>
-      <p>The "Royal" line features a hollowed core injected with liquid preserves. In the <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a>, real baked cheesecake cubes and buttery graham cracker crust are blended into the soft serve, flanking a central reservoir of tart strawberry coulis. The acidity of the fruit core acts as a palate cleanser, cutting right through the heavy lipids of the cheesecake and dairy cream.</p>
-
-      <h2>A-Tier Deep Dive: Richness &amp; Complexity</h2>
-
-      <h3>4. Turtle Pecan Cluster — Score: 9.2 / 10 (The Connoisseur’s Pick)</h3>
-      <p>The <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster</a> is the most culinary-advanced treat on the menu board. By pairing whole, oil-roasted and salted Georgia pecans with buttery caramel and dark chocolate dip shards, the recipe triggers both sweet and savory neuro-receptors. The roasted nut oils resist freezing completely, ensuring a tender, buttery tooth-feel that outclasses brittle candy bars.</p>
-
-      <h3>5. Reese’s® Peanut Butter Cup — Score: 8.9 / 10</h3>
-      <p>For peanut butter purists, the <a href="/items/reeses-blizzard">Reese’s® Blizzard</a> is pure joy. Because milk chocolate and peanut butter paste have low freezing points, the chopped cups blend seamlessly into the dairy matrix. However, take note of the Glycemic Fatigue Index: due to intense density, a Medium size packs over 800 calories and 85 grams of sugar, making it an ambitious solo endeavor.</p>
-
-      <h3>6. Choco Brownie Extreme — Score: 8.8 / 10</h3>
-      <p>A triple-threat chocolate formulation: dense cocoa fudge, chewy fudge brownie nuggets, and hardened chocolate shell pieces. The <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> has the highest mix-in mass-to-volume ratio of any item tested. It is so decadent that our panel recommends sharing a Medium between two people.</p>
-
-      <h2>Why Certain Fan Favorites Slipped to B &amp; C Tier</h2>
-      <p>Not every classic candy translates well to sub-zero temperatures. Here is why some beloved treats struggled in our testing:</p>
-      <ul>
-        <li><strong>M&amp;M’s® Milk Chocolate (Grade: C+):</strong> The candy shells freeze into rock-hard pellets. Biting into them creates a waxy, cold sensation where the chocolate inside doesn't melt on the tongue until long after the soft serve has already washed down your throat.</li>
-        <li><strong>Banana Split Blizzard (Grade: C):</strong> Sliced bananas, pineapple chunks, and strawberries contain high water percentages. As the spindle blends them, cellular walls rupture, releasing water that quickly thins the soft serve and causes premature melting and soupiness.</li>
-        <li><strong>Cotton Candy (Grade: B-):</strong> While the vibrant pastel color and crunchy cotton candy sprinkles delight younger diners, the artificial flavoring possesses an exceptionally high sugar fatigue score, overwhelming the palate after just 4–5 spoonfuls.</li>
-      </ul>
-
-      <h2>2026 Blizzard Performance &amp; Value Matrix</h2>
-      <p>Compare the nutritional footprint, mix-in density, and 2026 retail pricing across top performers in <a href="/categories/blizzard-treats">The Queen Dairy Blizzard Catalog</a>:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Blizzard Selection</th>
-              <th>Mix-In Density</th>
-              <th>Sub-Zero Chew</th>
-              <th>Mini Cal / Sugar</th>
-              <th>Medium Price (2026)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Oreo® Cookie</strong></td>
-              <td>High (38g/100g)</td>
-              <td>Crisp Wafer Snap</td>
-              <td>380 cal / 48g</td>
-              <td class="price-cell">$5.99</td>
-            </tr>
-            <tr>
-              <td><strong>Cookie Dough</strong></td>
-              <td>Very High (42g/100g)</td>
-              <td>Soft Pliable Dough</td>
-              <td>420 cal / 52g</td>
-              <td class="price-cell">$5.99</td>
-            </tr>
-            <tr>
-              <td><strong>Royal NY Cheesecake</strong></td>
-              <td>Ultra (Core Injected)</td>
-              <td>Creamy Cheesecake + Crunch</td>
-              <td>440 cal / 55g</td>
-              <td class="price-cell">$6.49</td>
-            </tr>
-            <tr>
-              <td><strong>Turtle Pecan Cluster</strong></td>
-              <td>Moderate (30g/100g)</td>
-              <td>Tender Roasted Nut</td>
-              <td>390 cal / 42g</td>
-              <td class="price-cell">$5.99</td>
-            </tr>
-            <tr>
-              <td><strong>Reese’s® PB Cup</strong></td>
-              <td>High (36g/100g)</td>
-              <td>Melt-in-Mouth Flakes</td>
-              <td>360 cal / 41g</td>
-              <td class="price-cell">$5.99</td>
-            </tr>
-            <tr>
-              <td><strong>Choco Brownie Extreme</strong></td>
-              <td>Ultra (45g/100g)</td>
-              <td>Dense Chewy Brownie</td>
-              <td>400 cal / 46g</td>
-              <td class="price-cell">$5.99</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>3 Ordering Rules for Peak Blizzard Enjoyment</h2>
+      <h2 id="tips">Tips for ordering a better Blizzard</h2>
       <ol>
-        <li><strong>Request "Double Blended" or "Lightly Blended":</strong> If you love fine dispersion where every bite tastes like the mix-in, ask for <em>double blended</em>. If you prefer large, recognizable candy bar nuggets, ask for <em>lightly blended</em>.</li>
-        <li><strong>The Mini Size Offers Peak Sensory Return:</strong> Sensory research demonstrates that palate fatigue begins after 6 to 8 ounces of high-sugar frozen dairy. The 6 oz Mini delivers 100% of the flavor euphoria without the lethargic sugar crash.</li>
-        <li><strong>Enforce the Upside-Down Flip:</strong> The flip isn't just drive-thru theater; it proves your treat has sufficient aeration and thick overrun rather than melted slop. If an employee hands it to you upright without the flip at a participating store, politely ask for your next-visit voucher.</li>
+        <li><strong>Go Mini to try a new flavor.</strong> It costs about a dollar less than a Small and tells you whether you like it.</li>
+        <li><strong>Ask for extra mix-ins.</strong> Most stores will add more for a small charge.</li>
+        <li><strong>Mix your own.</strong> You can ask for two mix-ins in one Blizzard. Oreo plus cookie dough is a favorite. Our <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> has more combinations.</li>
+        <li><strong>Use the DQ app.</strong> App deals often include Blizzard offers. See our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app rewards guide</a>.</li>
       </ol>
-
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Which Dairy Queen Blizzard flavor holds the highest mix-in density score?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The Choco Brownie Extreme and Oreo Cookie Blizzards score highest in mix-in density, averaging over 38 grams of solid baked confection per 100 grams of soft serve base.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Why do candy-based Blizzards like M&amp;M's feel hard when chewed?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">At Dairy Queen's standard holding temperature of 18°F (-8°C), sugar shell confections freeze solid. When chewed, the sugar shells fragment into brittle crystals that feel waxy compared to room-temperature candy.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What is the most nutritionally balanced Blizzard option on the 2026 menu?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The Strawberry Cheesequake and Butterfinger in Mini size (under 360 calories and under 42 grams of sugar) provide the best balance of sensory satisfaction without severe glycemic spikes.</div>
-          </div>
-        </div>
-      </div>
-
+  <Fragment slot="after">
       <div style="margin-top:40px;padding:24px;background:#FFFFFF;border-radius:16px;border:1px solid #EADBCA;text-align:center;">
-        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">Ready to Explore More Dairy Queen Favorites?</h3>
-        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">View complete 2026 nutrition, allergen breakdowns, and prices across the entire menu.</p>
+        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">See every Blizzard flavor and price</h3>
+        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">Sizes, calories and typical prices for the full Blizzard menu.</p>
         <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="/categories/blizzard-treats" class="btn btn-primary">Browse All Blizzard Flavors →</a>
-          <a href="/blog/dairy-queen-secret-menu" class="btn btn-accent">Secret Menu Hacks Guide →</a>
+          <a href="/categories/blizzard-treats" class="btn btn-primary">Blizzard menu and prices →</a>
+          <a href="/categories/dq-cakes" class="btn btn-accent">Blizzard cakes →</a>
         </div>
       </div>
-    </div>
-  </div>
-</article>
-
-</Layout>
+  </Fragment>
+</BlogPost>

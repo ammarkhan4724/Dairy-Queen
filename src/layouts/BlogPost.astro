@@ -1,0 +1,91 @@
+---
+// Shared wrapper for /blog/* posts: hero, BlogPosting + FAQPage schema and the
+// visible FAQ list all come from the same props, so they can never drift apart.
+import Layout from './Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { AUTHOR, LAST_CHECKED, SITE_URL, canonical } from '../data/site';
+
+interface Faq { q: string; a: string }
+interface Props {
+  title: string;        // <title>, ≤ 60 chars
+  description: string;  // meta description, ≤ 155 chars
+  h1: string;
+  crumb: string;        // short breadcrumb label
+  eyebrow?: string;
+  image: string;        // /Images/...
+  imageAlt: string;
+  datePublished: string;
+  dateModified?: string;
+  faqs?: Faq[];
+}
+
+const {
+  title, description, h1, crumb, eyebrow, image, imageAlt,
+  datePublished, dateModified = '2026-10-15', faqs = [],
+} = Astro.props;
+
+const url = canonical(Astro.url.pathname);
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: h1,
+      description,
+      image: `${SITE_URL}${image}`,
+      author: { '@type': 'Organization', name: AUTHOR.name, url: AUTHOR.url },
+      publisher: { '@type': 'Organization', name: 'The Queen Dairy Menu', url: `${SITE_URL}/`, logo: `${SITE_URL}/logo.svg` },
+      datePublished,
+      dateModified,
+      mainEntityOfPage: url,
+    },
+    ...(faqs.length ? [{
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    }] : []),
+  ],
+};
+const modified = new Date(dateModified).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+---
+<Layout title={title} description={description} ogImage={image} article={true}>
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: crumb }]} />
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      {eyebrow && <span class="hero-eyebrow">{eyebrow}</span>}
+      <h1>{h1}</h1>
+      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By <a href="/about" style="color:inherit;text-decoration:underline;">{AUTHOR.name}</a> · Updated <time datetime={dateModified}>{modified}</time></p>
+    </div>
+  </div>
+</section>
+
+<article>
+  <div class="container article-body" style="max-width:880px;margin:0 auto;">
+    <img src={image} alt={imageAlt} width="880" height="480" loading="eager" fetchpriority="high" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow:0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;" />
+
+    <div class="article-body">
+      <slot />
+
+      {faqs.length > 0 && (
+        <>
+          <h2 id="faq">Frequently asked questions</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      <slot name="after" />
+      <p style="margin-top:28px;font-size:.86rem;color:var(--color-text-muted);">Prices are typical U.S. prices and vary by location. Last checked {LAST_CHECKED}.</p>
+    </div>
+  </div>
+</article>
+</Layout>

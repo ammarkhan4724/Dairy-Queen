@@ -1,265 +1,78 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { AUTHOR } from '../../data/site';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const blizzards = [
+  { name: 'Oreo, Cookie Dough, Choco Brownie Extreme, Brownie Batter', wheat: 'Yes', nuts: 'Check', note: 'Cookie, dough and brownie pieces contain wheat' },
+  { name: 'Reese’s, Butterfinger', wheat: 'Check', nuts: 'Peanuts', note: 'Avoid with a peanut allergy' },
+  { name: 'Turtle Pecan Cluster', wheat: 'Check', nuts: 'Tree nuts (pecans)', note: 'Avoid with a tree nut allergy' },
+  { name: 'M&M’s, Heath, Snickers', wheat: 'Check', nuts: 'Check (Snickers has peanuts)', note: 'Candy ingredients vary; read the label information' },
+];
+
+const faqs = [
+  { q: 'Does Dairy Queen have gluten-free options?', a: 'Some DQ items are made without gluten ingredients, such as plain soft serve in a cup, some sundaes and Misty Slush. Dairy Queen does not certify its restaurant-made food as gluten-free because of shared equipment, so people with celiac disease should check DQ’s allergen guide and talk to the store first.' },
+  { q: 'Is the Non-Dairy Dilly Bar dairy-free?', a: 'The Non-Dairy Dilly Bar is made without milk and is DQ’s main dairy-free treat. It is made in a facility that also handles milk, so check the package and DQ’s allergen information if your allergy is severe.' },
+  { q: 'Are Dairy Queen fries gluten-free?', a: 'Potatoes do not contain gluten, but at many DQ locations fries share fryer oil with breaded items like chicken strips. That means fries are not safe for people with celiac disease unless the store confirms a separate fryer.' },
+  { q: 'Where is Dairy Queen’s official allergen information?', a: 'Dairy Queen publishes an allergen and ingredient guide on its website and in the DQ app. Use it as your main source, because recipes change.' },
+];
 ---
-<Layout 
-  title="Dairy Queen Gluten-Free & Allergen Guide (2026)" 
-  description="Dairy Queen gluten-free and allergen guide: which menu items avoid wheat, milk, nuts or soy, and how to lower cross-contact risk."
-  ogImage="/Images/non-dairy-dilly-bar.webp"
-  article={true}
+<BlogPost
+  title="Dairy Queen Gluten-Free & Allergen Guide (2026)"
+  description="What to order at Dairy Queen with a gluten, dairy, peanut or tree nut allergy, which Blizzards to avoid, and how to lower cross-contact risk."
+  h1="Dairy Queen Gluten-Free and Allergen Guide"
+  crumb="DQ Allergen Guide"
+  eyebrow="Allergies and dietary needs"
+  image="/Images/non-dairy-dilly-bar.webp"
+  imageAlt="Dairy Queen Non-Dairy Dilly Bar"
+  datePublished="2026-05-05"
+  faqs={faqs}
 >
-
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "Dairy Queen Celiac & Allergen Guide (2026): Cross-Contact Protocols & Safe Swaps",
-      "description": "An exhaustive clinical and kitchen safety analysis of Dairy Queen's 2026 allergen landscape, documenting cross-contact pathways, spindle sanitization, and pre-packaged certified options.",
-      "image": "https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp",
-      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu",
-        "url": "https://www.thequeendairymenu.us/",
-        "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
-      },
-      "datePublished": "2026-05-05T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:35:00+00:00",
-      "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-gluten-free-allergen-guide"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Are Dairy Queen French fries considered safe for celiac diners?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. While the raw potatoes do not contain gluten, approximately 95% of Dairy Queen locations submerge French fries in shared fryer oil alongside wheat-breaded chicken tenders, cheese curds, and onion rings, causing severe gluten cross-contact."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the single safest dessert choice at Dairy Queen for extreme allergies?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The factory-sealed Non-Dairy Dilly Bar (vegan, dairy-free, certified gluten-free) or standard Classic Dilly Bar. Because they are molded and packaged in certified off-site production facilities, they carry virtually zero risk of kitchen-level cross-contamination."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can diners ensure their Blizzard mixer is sanitized before preparation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Inform the cashier immediately of a medical allergy. Request that the crew member replace the spindle collar with a clean, sanitized blade from the back and wash their hands before scooping mix-ins."
-          }
-        }
-      ]
-    }
-  ]
-})} />
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Allergen & Safety Guide (2026)"}]} />
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Food Safety &amp; Dietary Transparency · 2026 Field Protocol</span>
-      <h1>DAIRY QUEEN CELIAC &amp; ALLERGEN GUIDE: CROSS-CONTACT PROTOCOLS (2026)</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Cross-Referenced with Master Manufacturer Sheets · Updated September 2026</p>
-    </div>
+  <div role="note" style="background:#FEF2F2;border:1px solid #FECACA;border-radius:12px;padding:14px 18px;margin-bottom:20px;color:#7F1D1D;font-size:.95rem;">
+    <strong>Important:</strong> This is general information from an independent site, not medical advice. Dairy Queen restaurants use shared equipment, and recipes change. If you have a serious allergy or celiac disease, check Dairy Queen’s official allergen guide and speak with the store before ordering.
   </div>
-</section>
 
-<article>
-  <div class="container article-body" style="max-width:880px;margin:0 auto;">
-    <img src="/Images/non-dairy-dilly-bar.webp" alt="Dairy Queen Non-Dairy Dilly Bar certified gluten-free and vegan made with coconut cream base and crunchy chocolate shell" width="880" height="480" loading="eager" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow: 0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;">
-    
-    <div class="article-body">
-      <p class="lead">Navigating a fast-food parlor when living with celiac disease, severe peanut anaphylaxis, or lactose intolerance can be an intimidating prospect. Behind the service counter at Dairy Queen, dozens of high-risk ingredients move at lightning speed: pulverized Oreo dust airborne near the spindle, malted milk powder canisters, warm peanut butter ladles, and shared hot fryers. However, contrary to common belief, Dairy Queen is far from off-limits. With strict protocol adherence and an understanding of kitchen line mechanics, sensitive diners can indulge with confidence. Below is our <strong>2026 Clinical &amp; Kitchen Cross-Contact Field Guide</strong>.</p>
+  <p class="lead"><strong>Dairy Queen can work for some food allergies, but nothing made in the restaurant is guaranteed allergen-free.</strong> Blizzards are blended on shared mixers, fries often share oil with breaded chicken, and cone dip can pick up crumbs. Pre-packaged treats and simple orders, like soft serve in a cup, carry less risk than Blizzards or fried food.</p>
 
-      <h2>Anatomy of Cross-Contact: The 3 Kitchen Vectors</h2>
-      <p>Before reviewing menu items, diners with medical sensitivities must understand how allergens migrate across prep stations:</p>
+  <h2 id="cross-contact">Where cross-contact happens at DQ</h2>
+  <ul>
+    <li><strong>Blizzard mixers.</strong> The same spindle blends Oreo, Reese’s and pecan Blizzards. You can ask staff to clean it first, but residue is still possible.</li>
+    <li><strong>Fryers.</strong> At many stores, fries, cheese curds and breaded chicken share oil.</li>
+    <li><strong>Cone dip.</strong> Dipped cones go into a shared dip, which can collect cone crumbs.</li>
+    <li><strong>Toppings.</strong> Sundae toppings and Blizzard mix-ins are scooped from open containers near each other.</li>
+  </ul>
 
-      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:18px;padding:24px;margin:24px 0;">
-        <h3 style="margin-top:0;color:#0B1E38;font-size:1.2rem;">The 3 High-Risk Contamination Points</h3>
-        <ul style="margin:12px 0 0 0;padding-left:0;list-style:none;">
-          <li style="padding:10px 0;border-bottom:1px solid #EBE1D2;">
-            <strong>1. The High-Speed Spindle Splash-Collar:</strong> 
-            When blending a Blizzard, the spinning blade operates at several thousand RPMs. Micro-shards of gluten-containing cookies and peanuts coat the protective rubber collar. If the machine is simply wiped with a moist cloth between treats, residual gluten transfers directly into your cup.
-          </li>
-          <li style="padding:10px 0;border-bottom:1px solid #EBE1D2;">
-            <strong>2. Shared Commercial Fryer Oil:</strong> 
-            While raw cut potatoes are naturally gluten-free, 95% of Dairy Queen locations share fry vats between French fries, breaded chicken tenders, Wisconsin cheese curds, and onion rings. The heated frying oil acts as a gluten suspension fluid, making fries unsafe for celiac diners.
-          </li>
-          <li style="padding:10px 0;">
-            <strong>3. Hardened Cone Dip Wells:</strong> 
-            When soft serve cones are inverted into warm chocolate or butterscotch dip vats, tiny crumbs of sugar cone often break off and remain submerged in the warm liquid.
-          </li>
-        </ul>
-      </div>
+  <h2 id="lower-risk">Lower-risk choices</h2>
+  <ul>
+    <li><strong>Wrapped novelties</strong> such as the <a href="/items/dilly-bar">Dilly Bar</a> and <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> are not handled at the Blizzard station. Some stores make Dilly Bars on site, so ask, and check DQ’s guide for allergens.</li>
+    <li><strong>Soft serve in a cup</strong> avoids the cone and the Blizzard mixer.</li>
+    <li><strong><a href="/items/misty-slush">Misty Slush</a></strong> is made without dairy in most flavors.</li>
+    <li><strong>Simple sundaes</strong> like a <a href="/items/strawberry-sundae">strawberry sundae</a> skip the mixer, but toppings are scooped near others.</li>
+  </ul>
 
-      <h2>The "Safe Harbor" Treats: Zero Kitchen Cross-Contact Risk</h2>
-      <p>If you or your child suffers from airborne, contact, or celiac-level sensitivities, your safest harbor is Dairy Queen’s factory-packaged novelty catalog. These items are molded, dipped, wrapped, and hermetically sealed at certified food manufacturing facilities before ever arriving at the franchise:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Packaged Novelty</th>
-              <th>Dietary Profile</th>
-              <th>Certified Status</th>
-              <th>Risk Level</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="/items/non-dairy-dilly-bar"><strong>Non-Dairy Dilly® Bar</strong></a></td>
-              <td>Coconut base + Vegan chocolate coating</td>
-              <td>Certified Gluten-Free &amp; 100% Plant-Based</td>
-              <td><strong class="text-emerald-600">Virtually 0% Risk</strong></td>
-            </tr>
-            <tr>
-              <td><a href="/items/dilly-bar"><strong>Classic Chocolate Dilly® Bar</strong></a></td>
-              <td>Real dairy soft serve + cocoa dip</td>
-              <td>Gluten-Free Ingredients</td>
-              <td><strong class="text-emerald-600">Virtually 0% Risk</strong></td>
-            </tr>
-            <tr>
-              <td><a href="/items/buster-bar"><strong>Buster Bar® Treat</strong></a></td>
-              <td>Vanilla dairy + peanuts + fudge center</td>
-              <td>Gluten-Free (Contains peanuts/dairy)</td>
-              <td><strong class="text-emerald-600">Safe for Gluten-Free</strong></td>
-            </tr>
-            <tr>
-              <td><a href="/items/misty-slush"><strong>Misty® Slush (All Flavors)</strong></a></td>
-              <td>Crushed ice + fruit flavoring</td>
-              <td>Dairy-Free, Gluten-Free, Vegan</td>
-              <td><strong class="text-emerald-600">Zero Allergen Contact</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>Blizzard Allergen Safety Matrix (2026 Formulations)</h2>
-      <p>If you want a freshly swirled soft serve treat, verify the ingredient status against our lab matrix below:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Blizzard Selection</th>
-              <th>Wheat / Gluten</th>
-              <th>Dairy Presence</th>
-              <th>Peanut / Tree Nut</th>
-              <th>Kitchen Protocol Required</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="/items/butterfinger-blizzard"><strong>Butterfinger® Blizzard</strong></a></td>
-              <td><strong class="text-emerald-600">None Listed</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td>Contains Peanuts</td>
-              <td>Request clean spindle blade</td>
-            </tr>
-            <tr>
-              <td><a href="/items/reeses-blizzard"><strong>Reese's® PB Cup</strong></a></td>
-              <td><strong class="text-emerald-600">None Listed</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td>Contains Peanuts</td>
-              <td>Request clean spindle blade</td>
-            </tr>
-            <tr>
-              <td><a href="/items/turtle-pecan-blizzard"><strong>Turtle Pecan Cluster</strong></a></td>
-              <td><strong class="text-emerald-600">None Listed</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td>Contains Tree Nuts (Pecans)</td>
-              <td>Request clean spindle blade</td>
-            </tr>
-            <tr>
-              <td><strong>Cotton Candy Blizzard</strong></td>
-              <td><strong class="text-emerald-600">None Listed</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td><strong class="text-emerald-600">Nut-Free</strong></td>
-              <td>Request clean spindle blade</td>
-            </tr>
-            <tr>
-              <td><a href="/items/oreo-blizzard"><strong>Oreo® Cookie</strong></a></td>
-              <td><strong class="text-rose-700">HIGH GLUTEN</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td>Soy Lecithin</td>
-              <td>Unsafe for Celiac</td>
-            </tr>
-            <tr>
-              <td><a href="/items/cookie-dough-blizzard"><strong>Cookie Dough Blizzard</strong></a></td>
-              <td><strong class="text-rose-700">HIGH GLUTEN</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td>Soy Lecithin</td>
-              <td>Unsafe for Celiac</td>
-            </tr>
-            <tr>
-              <td><a href="/items/choco-brownie-blizzard"><strong>Choco Brownie Extreme</strong></a></td>
-              <td><strong class="text-rose-700">HIGH GLUTEN</strong></td>
-              <td>Yes (Soft Serve)</td>
-              <td>Soy Lecithin</td>
-              <td>Unsafe for Celiac</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>The Celiac Drive-Thru Ordering Script</h2>
-      <p>When ordering a naturally gluten-free Blizzard (such as Butterfinger or Reese's) with medical celiac requirements, use this precise script to trigger proper kitchen procedures:</p>
-      
-      <div style="background:#F0FDF4;border-left:4px solid #16A34A;padding:18px 22px;border-radius:0 14px 14px 0;margin:20px 0;">
-        <p style="margin:0;font-weight:700;color:#14532D;font-size:1.05rem;">The Spindle Sanitization Script:</p>
-        <p style="margin:6px 0 0 0;font-style:italic;color:#166534;">"Hi, I have a medical allergy to gluten. Could you please wash your hands, change gloves, and use a fresh sanitized spindle collar and blade before blending my Butterfinger Blizzard?"</p>
-        <p style="margin:8px 0 0 0;color:#14532D;font-size:0.9rem;">Crew members are trained to execute this sanitization protocol upon request at all corporate-compliant franchises.</p>
-      </div>
-
-      <h2>Hot Food Allergen Guide: Burgers &amp; Savory Bites</h2>
-      <p>Dining on savory foods from <a href="/categories/burgers-sandwiches">The Queen Dairy Burger Lineup</a> requires specific adjustments:</p>
-      <ul>
-        <li><strong>100% Pure Beef Patties:</strong> DQ beef patties contain no wheat binders or gluten fillers. Always request your burger <em>"protein-style in a lettuce wrap or plastic bowl"</em> to avoid the bun.</li>
-        <li><strong>Avoid Texas Toast &amp; Breaded Strips:</strong> The garlic Texas toast and crispy chicken tenderloins contain heavy wheat flour coatings.</li>
-        <li><strong>Condiment Safety:</strong> Standard ketchup, yellow mustard, and FlameThrower sauce do not contain gluten ingredients. Barbecue sauces should be verified individually as recipes can rotate seasonally.</li>
-      </ul>
-
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Are Dairy Queen French fries considered safe for celiac diners?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">No. While the raw potatoes do not contain gluten, approximately 95% of Dairy Queen locations submerge French fries in shared fryer oil alongside wheat-breaded chicken tenders, cheese curds, and onion rings, causing severe gluten cross-contact.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What is the single safest dessert choice at Dairy Queen for extreme allergies?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The factory-sealed Non-Dairy Dilly Bar (vegan, dairy-free, certified gluten-free) or standard Classic Dilly Bar. Because they are molded and packaged in certified off-site production facilities, they carry virtually zero risk of kitchen-level cross-contamination.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">How can diners ensure their Blizzard mixer is sanitized before preparation?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Inform the cashier immediately of a medical allergy. Request that the crew member replace the spindle collar with a clean, sanitized blade from the back and wash their hands before scooping mix-ins.</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:40px;padding:24px;background:#FFFFFF;border-radius:16px;border:1px solid #EADBCA;text-align:center;">
-        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">Explore Verified 2026 Menus</h3>
-        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">View complete allergen tags, calories, and serving sizes for all 79 menu items.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="/categories/classic-treats" class="btn btn-primary">Classic Soft Serve Treats →</a>
-          <a href="/blog/dairy-queen-calories-nutrition-guide" class="btn btn-accent">Nutrition &amp; Macro Guide →</a>
-        </div>
-      </div>
-    </div>
+  <h2 id="blizzards">Blizzard allergens at a glance</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Blizzard flavors</th><th>Wheat / gluten</th><th>Peanuts / tree nuts</th><th>Notes</th></tr></thead>
+      <tbody>{blizzards.map((b) => <tr><td>{b.name}</td><td>{b.wheat}</td><td>{b.nuts}</td><td>{b.note}</td></tr>)}</tbody>
+    </table>
   </div>
-</article>
+  <p style="font-size:.88rem;color:var(--color-text-muted);">All Blizzards contain milk. "Check" means confirm with DQ’s allergen guide; ingredients can change.</p>
 
-</Layout>
+  <h2 id="gluten">Gluten-free at Dairy Queen</h2>
+  <p>Plain soft serve does not have gluten ingredients, but cones, cookie and brownie mix-ins, Texas toast, buns and breaded chicken all do. Because of shared fryers and mixers, DQ is not a safe choice for celiac disease without talking to the store. If you are avoiding gluten for a milder reason, a sundae or soft serve cup is the simplest order.</p>
+
+  <h2 id="dairy-free">Dairy-free at Dairy Queen</h2>
+  <p>Almost every DQ treat contains milk. The main dairy-free options are the <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> and most <a href="/items/misty-slush">Misty Slush</a> flavors. On the food side, check the bun, cheese and sauces on any burger.</p>
+
+  <h2 id="nuts">Peanut and tree nut allergies</h2>
+  <p>Peanut and pecan Blizzards, the <a href="/items/buster-bar">Buster Bar</a> and the <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> contain nuts. Because the Blizzard mixer is shared, people with severe nut allergies should skip Blizzards.</p>
+
+  <h2 id="how-to-ask">How to order with an allergy</h2>
+  <ol>
+    <li>Tell the cashier about the allergy before you order, not after.</li>
+    <li>Ask them to change gloves and clean the mixer or scoop.</li>
+    <li>Order during a quiet time, when staff can take extra care.</li>
+    <li>If anything seems unsure, skip it. A wrapped novelty or Misty Slush is usually the lowest-risk choice.</li>
+  </ol>
+
+  <p>For calories and lighter options, see our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a>.</p>
+</BlogPost>

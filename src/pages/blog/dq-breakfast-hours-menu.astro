@@ -1,257 +1,61 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { AUTHOR } from '../../data/site';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// Figures match the item pages on this site.
+const menu = [
+  { name: 'Breakfast Burrito', href: '/items/breakfast-burrito', price: '$3.49', cal: '380' },
+  { name: 'Biscuit & Gravy', href: '/items/biscuit-gravy', price: '$3.99', cal: '400' },
+  { name: 'Buttermilk Pancake Platter', href: '/items/buttermilk-pancake-platter', price: '$5.49', cal: '680' },
+  { name: 'Ultimate Hash Browns Platter', href: '/items/ultimate-hash-browns-platter', price: '$5.99', cal: '790' },
+  { name: 'Country Breakfast Platter', href: '/items/country-breakfast-platter', price: '$6.99', cal: '860' },
+];
+
+const faqs = [
+  { q: 'Does Dairy Queen serve breakfast?', a: 'Some do. Breakfast is served at select DQ Grill & Chill restaurants, mostly in the South and Midwest. Most DQ locations, and all Treat-only stores, do not serve breakfast.' },
+  { q: 'What time does Dairy Queen stop serving breakfast?', a: 'At locations that serve it, breakfast usually ends around 10:30 or 11 AM. Each franchise sets its own hours, so check your store on the DQ app or call ahead.' },
+  { q: 'What is on the Dairy Queen breakfast menu?', a: 'Common items include breakfast burritos, biscuits and gravy, pancake platters, hash brown platters and country breakfast platters with eggs, meat and a biscuit. The menu varies by location.' },
+  { q: 'How do I find a Dairy Queen that serves breakfast?', a: 'Open the DQ app or the store locator, choose a nearby DQ Grill & Chill and look at its menu and hours. If breakfast items are listed, that store serves breakfast.' },
+];
 ---
-<Layout 
-  title="Dairy Queen Breakfast Hours & Menu (2026 Guide)" 
-  description="Verified 2026 Dairy Queen breakfast hours, griddle operating windows, scratch biscuit secrets, sausage gravy recipes, and franchise availability maps."
-  ogImage="/Images/country-breakfast-platter.webp"
-  article={true}
+<BlogPost
+  title="Dairy Queen Breakfast Hours & Menu (2026 Guide)"
+  description="Does Dairy Queen serve breakfast? Which DQ locations do, typical breakfast hours, and the breakfast menu with prices and calories."
+  h1="Dairy Queen Breakfast Hours and Menu"
+  crumb="DQ Breakfast Hours"
+  eyebrow="Breakfast at DQ"
+  image="/Images/country-breakfast-platter.webp"
+  imageAlt="Dairy Queen Country Breakfast Platter with eggs, sausage, biscuit and gravy"
+  datePublished="2026-04-12"
+  faqs={faqs}
 >
+  <p class="lead"><strong>Some Dairy Queen restaurants serve breakfast, usually from opening until about 10:30 or 11 AM.</strong> Breakfast is only available at select DQ Grill &amp; Chill locations, mostly in the South and Midwest. Treat-only stores never serve it. If your DQ does, expect burritos, biscuits and gravy, pancakes and big country platters.</p>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "Dairy Queen Breakfast Hours & Kitchen Operations (2026): The Southern Griddle Field Guide",
-      "description": "An exhaustive operational breakdown of Dairy Queen's breakfast service, examining regional franchise griddle programs, scratch biscuit production, and early morning menu pricing.",
-      "image": "https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp",
-      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu",
-        "url": "https://www.thequeendairymenu.us/",
-        "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
-      },
-      "datePublished": "2026-04-12T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:35:00+00:00",
-      "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-breakfast-hours-menu"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Why don't all Dairy Queen locations serve breakfast?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Breakfast operations require dedicated flat-top griddles, biscuit warmers, and early morning crew shifts. Only full-service Grill & Chill franchises—concentrated heavily in Texas, the Midwest, and southern states—support the breakfast platform, whereas standalone Treat shops open later for lunch."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What exact minute does Dairy Queen cut off breakfast service?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Participating stores shut down breakfast griddles promptly at 10:30 AM Monday through Friday, and at 11:00 AM on Saturdays and Sundays, transitioning flat-tops to burger production."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you order soft serve cones and Blizzards during morning breakfast hours?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Dairy Queen's continuous soft serve freezers operate continuously from opening. You can purchase any cone, sundae, or Blizzard alongside breakfast biscuits or platters starting at 6:00 AM."
-          }
-        }
-      ]
-    }
-  ]
-})} />
+  <h2 id="hours">Dairy Queen breakfast hours</h2>
+  <p>There are no set national breakfast hours. Each franchise decides when to open and when to switch to lunch. At stores that serve breakfast, these are typical:</p>
+  <ul>
+    <li><strong>Weekdays:</strong> from opening (often 6 or 7 AM) until around 10:30 AM.</li>
+    <li><strong>Weekends:</strong> often a little later, until around 11 AM.</li>
+  </ul>
+  <p>Check the DQ app or call your store before you go. Our <a href="/locations">DQ location guide</a> explains how to find a nearby store and its hours.</p>
 
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Breakfast Operations (2026)"}]} />
+  <h2 id="which-stores">Which Dairy Queens serve breakfast?</h2>
+  <p>Only full-size <strong>DQ Grill &amp; Chill</strong> restaurants have the kitchen for breakfast, and only some of them choose to offer it. It is most common in Texas and other Southern and Midwestern states. <strong>DQ Treat</strong> stores, including mall kiosks, sell only frozen treats and open later.</p>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Kitchen Operations &amp; Morning Schedule · 2026 Field Report</span>
-      <h1>DAIRY QUEEN BREAKFAST HOURS &amp; THE SOUTHERN GRIDDLE GUIDE (2026)</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Tested Across Grill &amp; Chill Locations · Updated September 2026</p>
-    </div>
+  <h2 id="menu">Dairy Queen breakfast menu and prices</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Item</th><th>Typical price</th><th>Calories</th></tr></thead>
+      <tbody>{menu.map((m) => <tr><td><strong><a href={m.href}>{m.name}</a></strong></td><td class="price-cell">{m.price}</td><td>{m.cal}</td></tr>)}</tbody>
+    </table>
   </div>
-</section>
 
-<article>
-  <div class="container article-body" style="max-width:880px;margin:0 auto;">
-    <img src="/Images/country-breakfast-platter.webp" alt="Dairy Queen Country Breakfast Platter with scrambled eggs, hash browns, sausage patties, and warm buttermilk biscuit with country gravy" width="880" height="480" loading="eager" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow: 0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;">
-    
-    <div class="article-body">
-      <p class="lead">Mention Dairy Queen to most casual diners and thoughts turn immediately to inverted Blizzard cups, hot fudge sundaes, or double Stackburgers. Yet across a massive swath of North America—especially throughout Texas, the Midwest, and the rural South—Dairy Queen operates one of the most beloved, scratch-quality morning griddle programs in fast food. Before the first burger patty hits the charbroiler, early morning cooks are pulling trays of golden buttermilk biscuits from the convection ovens and ladling steaming peppery sausage gravy. Here is our <strong>2026 Kitchen Operations &amp; Breakfast Field Guide</strong> to navigating DQ’s morning menu.</p>
+  <h2 id="what-to-order">What to order</h2>
+  <ul>
+    <li><strong>Quick and cheap:</strong> the <a href="/items/breakfast-burrito">breakfast burrito</a>.</li>
+    <li><strong>Classic Southern breakfast:</strong> <a href="/items/biscuit-gravy">biscuits and gravy</a>, made with the same peppery country gravy DQ serves with chicken strips.</li>
+    <li><strong>Hungry:</strong> the <a href="/items/country-breakfast-platter">Country Breakfast Platter</a> with eggs, meat, a biscuit and hash browns.</li>
+    <li><strong>Sweet:</strong> the <a href="/items/buttermilk-pancake-platter">pancake platter</a>.</li>
+  </ul>
 
-      <h2>The Geographic Reality: Grill &amp; Chill vs. Treat Storefronts</h2>
-      <p>The single greatest frustration among morning diners is driving to a local DQ only to find dark windows. Understanding why requires a brief look at the franchise system:</p>
-      
-      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:18px;padding:24px;margin:24px 0;">
-        <h3 style="margin-top:0;color:#0B1E38;font-size:1.2rem;">The 2 Store Formats Explained</h3>
-        <ul style="margin:12px 0 0 0;padding-left:0;list-style:none;">
-          <li style="padding:8px 0;border-bottom:1px solid #EBE1D2;"><strong>1. DQ "Grill &amp; Chill" Outposts (Breakfast Hubs):</strong> Full-scale standalone restaurants equipped with flat-top griddles, commercial biscuit ovens, and deep fryers. These locations primarily open at 6:00 AM or 7:00 AM to execute full breakfast service.</li>
-          <li style="padding:8px 0;"><strong>2. DQ "Treat" &amp; Mall Locations (No Breakfast):</strong> Compact units designed solely for soft serve, sundaes, and shakes. These stores typically do not open until 10:30 AM or 11:00 AM and have zero breakfast kitchen hardware.</li>
-        </ul>
-      </div>
-
-      <h2>2026 National Breakfast Operating Schedule</h2>
-      <p>Franchisees retain discretion over operating hours, but the vast majority of morning-equipped locations adhere to this strict kitchen schedule:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Day of Week</th>
-              <th>Griddle Fired Up</th>
-              <th>Last Breakfast Order</th>
-              <th>Full Lunch Cut-Over</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Monday – Friday</strong></td>
-              <td>6:00 AM – 7:00 AM</td>
-              <td>10:29 AM</td>
-              <td>10:30 AM Sharp</td>
-            </tr>
-            <tr>
-              <td><strong>Saturday</strong></td>
-              <td>6:30 AM – 7:00 AM</td>
-              <td>10:59 AM</td>
-              <td>11:00 AM Sharp</td>
-            </tr>
-            <tr>
-              <td><strong>Sunday</strong></td>
-              <td>7:00 AM</td>
-              <td>10:59 AM</td>
-              <td>11:00 AM Sharp</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>Full 2026 Breakfast Catalog: Prices &amp; Caloric Ratios</h2>
-      <p>Explore the full verified pricing and macro profile across <a href="/categories/breakfast">The Queen Dairy Breakfast Menu</a>:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Morning Menu Item</th>
-              <th>Calorie Profile</th>
-              <th>À La Carte Price</th>
-              <th>Full Combo (w/ Hash Browns &amp; Coffee)</th>
-              <th>Primary Protein</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="/items/country-breakfast-platter"><strong>Country Breakfast Platter</strong></a></td>
-              <td>790 cal</td>
-              <td>$7.99</td>
-              <td>$9.89</td>
-              <td>Eggs + Sausage/Bacon + Biscuit</td>
-            </tr>
-            <tr>
-              <td><a href="/items/biscuit-gravy"><strong>Biscuits &amp; Sausage Gravy (2 Cakes)</strong></a></td>
-              <td>680 cal</td>
-              <td>$4.49</td>
-              <td>$6.89</td>
-              <td>Country Pork Sausage bits</td>
-            </tr>
-            <tr>
-              <td><a href="/items/ultimate-hash-browns-platter"><strong>Ultimate Hash Browns Platter</strong></a></td>
-              <td>620 cal</td>
-              <td>$6.99</td>
-              <td>$8.79</td>
-              <td>Scrambled Eggs + Cheddar + Sausage</td>
-            </tr>
-            <tr>
-              <td><a href="/items/buttermilk-pancake-platter"><strong>Buttermilk Pancake Platter (3 Stack)</strong></a></td>
-              <td>580 cal</td>
-              <td>$6.49</td>
-              <td>$8.29</td>
-              <td>Eggs &amp; Choice of Breakfast Meat</td>
-            </tr>
-            <tr>
-              <td><a href="/items/breakfast-burrito"><strong>DQ Picante Breakfast Burrito</strong></a></td>
-              <td>480 cal</td>
-              <td>$3.89</td>
-              <td>$6.29</td>
-              <td>Folded Eggs, Bacon/Sausage &amp; Cheese</td>
-            </tr>
-            <tr>
-              <td><strong>Bacon, Egg &amp; Cheddar Biscuit</strong></td>
-              <td>450 cal</td>
-              <td>$4.29</td>
-              <td>$6.59</td>
-              <td>Thick Applewood Smoked Bacon</td>
-            </tr>
-            <tr>
-              <td><strong>Sausage, Egg &amp; Cheese Biscuit</strong></td>
-              <td>530 cal</td>
-              <td>$4.19</td>
-              <td>$6.49</td>
-              <td>Seasoned Pork Sausage Patty</td>
-            </tr>
-            <tr>
-              <td><strong>Golden Hash Brown Patty</strong></td>
-              <td>160 cal</td>
-              <td>$1.89</td>
-              <td>Included</td>
-              <td>Crispy Shredded Russet Potato</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>Culinary Spotlight: Why DQ Breakfast Outclasses Fast Food Competitors</h2>
-
-      <h3>1. The Southern Buttermilk Biscuit &amp; Cream Gravy Secret</h3>
-      <p>While many fast-food chains reconstitute pre-made powdered gravy with hot tap water, Dairy Queen's country gravy utilizes a roux base infused with cracked black pepper and real crumbled pork breakfast sausage. Poured generously over two freshly split, flaky buttermilk biscuits in the <a href="/items/biscuit-gravy">Biscuits &amp; Sausage Gravy bowl</a> ($4.49), it delivers rich diner-caliber comfort at half the cost of a sit-down restaurant.</p>
-
-      <h3>2. The Ultimate Hash Browns Platter: Engineered for Commuters</h3>
-      <p>Fast food breakfast sandwiches often slip apart on the highway. Dairy Queen's answer is the <a href="/items/ultimate-hash-browns-platter">Ultimate Hash Browns Platter</a>: a dense thermal bowl featuring a crispy fried potato base, folded scrambled eggs, aged cheddar cheese sauce, and crumbled sausage. The heat from the potatoes gently binds the ingredients into an insulated, fork-friendly meal that stays piping hot for over 25 minutes.</p>
-
-      <h3>3. The Soft-Serve Paradox: Yes, Blizzards Are Available at 7:00 AM!</h3>
-      <p>One of Dairy Queen’s best-kept operational secrets is that the soft serve machines do not adhere to breakfast hours. The continuous-flow commercial freezers maintain an optimal 18°F internal state around the clock. If you want to order a Mini <a href="/blog/best-blizzard-flavors-ranked">Oreo Blizzard</a> or a chocolate soft serve cone alongside your 7:15 AM sausage biscuit, the kitchen will make it without hesitation.</p>
-
-      <h2>Morning Beverage Selection: MooLattés &amp; Drip Brews</h2>
-      <p>Dairy Queen provides an unexpected morning caffeine advantage over standard fast-food coffee stations:</p>
-      <ul>
-        <li><strong>Standard Arabica Drip ($1.99–$2.49):</strong> A medium-bodied roast brewed fresh throughout the morning shift.</li>
-        <li><strong>Caramel &amp; Mocha MooLattés ($4.69–$5.99):</strong> Made with genuine brewed coffee concentrate, whole dairy soft serve, and crushed ice, topped with whipped cream. Check our comprehensive <a href="/blog/dq-shake-moolatte-guide">MooLatté &amp; Shake Guide</a> for full caffeine estimates.</li>
-      </ul>
-
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Why don't all Dairy Queen locations serve breakfast?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Breakfast operations require dedicated flat-top griddles, biscuit warmers, and early morning crew shifts. Only full-service Grill &amp; Chill franchises—concentrated heavily in Texas, the Midwest, and southern states—support the breakfast platform, whereas standalone Treat shops open later for lunch.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What exact minute does Dairy Queen cut off breakfast service?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Participating stores shut down breakfast griddles promptly at 10:30 AM Monday through Friday, and at 11:00 AM on Saturdays and Sundays, transitioning flat-tops to burger production.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Can you order soft serve cones and Blizzards during morning breakfast hours?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Yes. Dairy Queen's continuous soft serve freezers operate continuously from opening. You can purchase any cone, sundae, or Blizzard alongside breakfast biscuits or platters starting at 6:00 AM.</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:40px;padding:24px;background:#FFFFFF;border-radius:16px;border:1px solid #EADBCA;text-align:center;">
-        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">Planning Afternoon Dining?</h3>
-        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">Check out our $7 Meal Deal breakdown and full chicken basket reviews.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="/categories/breakfast" class="btn btn-primary">Full Breakfast Menu Directory →</a>
-          <a href="/blog/dq-meal-deals-guide" class="btn btn-accent">$7 Meal Deal Audit →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-
-</Layout>
+  <p>See the full <a href="/categories/breakfast">Dairy Queen breakfast menu</a>, or check the <a href="/blog/dq-meal-deals-guide">DQ meal deals</a> once lunch starts.</p>
+</BlogPost>

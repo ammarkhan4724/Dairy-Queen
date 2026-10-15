@@ -1,208 +1,58 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { AUTHOR } from '../../data/site';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const faqs = [
+  { q: 'What is the crunchy layer in a Dairy Queen cake?', a: 'The middle of a classic DQ cake is a layer of chocolate cookie crunch mixed with fudge. It sits between a layer of chocolate soft serve and a layer of vanilla soft serve.' },
+  { q: 'How long should a DQ cake sit out before cutting?', a: 'About 10 to 15 minutes at room temperature. Less if your kitchen is warm. Cutting straight from the freezer can crack the cake.' },
+  { q: 'How do you store leftover Dairy Queen cake?', a: 'Put it back in the freezer as soon as you finish serving, covered with plastic wrap or in its box. It keeps well for about a week before the texture starts to change.' },
+  { q: 'Which DQ cake flavor is best?', a: 'The Oreo Blizzard Cake is the most popular choice. The classic chocolate-and-vanilla cake is the safest pick for mixed crowds and kids, and it costs a few dollars less.' },
+];
 ---
-<Layout 
-  title="DQ Cake Flavors & Serving Guide: Slicing and Storage" 
-  description="DQ cake flavors, how many each size serves, and how to slice, store and serve a Dairy Queen ice cream cake for a party."
-  ogImage="/Images/blog-dq-cakes.webp"
-  article={true}
+<BlogPost
+  title="DQ Cake Flavors & Serving Guide: Slicing and Storage"
+  description="How to choose a Dairy Queen cake flavor, how many slices you will get, and how to cut, serve and store an ice cream cake without a mess."
+  h1="Dairy Queen Cake Guide: Flavors, Cutting and Storage Tips"
+  crumb="DQ Cake Serving Guide"
+  eyebrow="Ice cream cake tips"
+  image="/Images/blog-dq-cakes.webp"
+  imageAlt="Slice of Dairy Queen ice cream cake showing the fudge and cookie crunch layer"
+  datePublished="2026-02-10"
+  faqs={faqs}
 >
+  <p class="lead"><strong>Looking for DQ cake prices and sizes?</strong> They are on our <a href="/categories/dq-cakes">Dairy Queen cake prices and sizes</a> page, with a table for every size. This guide covers what happens after you choose a size: picking a flavor, what is inside the cake, and how to cut, serve and store it so it does not turn into a puddle.</p>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "The Ultimate Dairy Queen Cake Blueprint (2026): Sizing, Secrets & Slicing Protocol",
-      "description": "An independent culinary and economic breakdown of Dairy Queen ice cream cakes, detailing structural layer anatomy, guest yield formulas, and custom Blizzard substitutions.",
-      "image": "https://www.thequeendairymenu.us/Images/blog-dq-cakes.webp",
-      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu",
-        "url": "https://www.thequeendairymenu.us/",
-        "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
-      },
-      "datePublished": "2026-02-10T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:30:00+00:00",
-      "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dq-cakes-complete-guide"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What ingredients create the crunch layer inside Dairy Queen cakes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The legendary crunch center is formed by blending coarse, baked chocolate cookie crumbles directly into a thick reservoir of cold chocolate fudge. This preserves structural crispness even when frozen solid at sub-zero temperatures."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much lead time is necessary for customized photo or Blizzard cakes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "While standard celebration cakes can be grabbed from display cases in under 5 minutes with free personalized lettering, custom Blizzard blend cakes or edible sugar photo sheets require a minimum 24-to-48-hour advance order."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the recommended slicing technique to avoid shattering the frozen soft serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Allow the bakery box to rest on your countertop for exactly 15 minutes before serving. Immerse a chef's knife in boiling water for 30 seconds, wipe it dry, and make single downward glide cuts without sawing back and forth."
-          }
-        }
-      ]
-    }
-  ]
-})} />
+  <h2 id="whats-inside">What is inside a Dairy Queen cake?</h2>
+  <p>A classic DQ cake has three parts:</p>
+  <ol>
+    <li><strong>Chocolate soft serve</strong> on the bottom.</li>
+    <li><strong>The crunch layer</strong> in the middle: chocolate cookie pieces mixed with fudge. This is the part everyone fights over.</li>
+    <li><strong>Vanilla soft serve</strong> on top, covered with whipped icing and decorations.</li>
+  </ol>
+  <p>There is no sponge cake, so it is all frozen. That is why it needs a few minutes on the counter before you cut it.</p>
 
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Cake Blueprint (2026)"}]} />
+  <h2 id="flavors">Classic cake or Blizzard cake?</h2>
+  <p>A <strong>classic DQ cake</strong> is chocolate and vanilla with the crunch center. It is the safest pick for kids and mixed groups, and it costs a few dollars less.</p>
+  <p>A <strong>Blizzard cake</strong> blends a Blizzard flavor into the soft serve. The <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake</a> is the most popular, followed by <a href="/items/cookie-dough-blizzard-cake">Cookie Dough</a>. Choose a Blizzard cake if the group already has a favorite Blizzard. Not sure which one? See our <a href="/blog/best-blizzard-flavors-ranked">Blizzard flavor rankings</a>.</p>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Bakery &amp; Celebration Intelligence · 2026 Field Report</span>
-      <h1>THE DAIRY QUEEN CAKE BLUEPRINT: SIZES, FLAVORS &amp; SLICING SECRETS</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Independently Tested &amp; Updated September 2026</p>
-    </div>
-  </div>
-</section>
+  <h2 id="how-many-slices">How many slices will you get?</h2>
+  <ul>
+    <li><a href="/items/dq-cake-round-8inch">8-inch round</a>: about 8 to 10 slices.</li>
+    <li><a href="/items/dq-cake-round-10inch">10-inch round</a>: about 12 to 16 slices.</li>
+    <li><a href="/items/dq-sheet-cake">Sheet cake</a>: about 24 to 32 slices.</li>
+  </ul>
+  <p>Kids’ parties go further with thinner slices. If adults are the main crowd, plan on the lower number.</p>
 
-<article>
-  <div class="container article-body" style="max-width:880px;margin:0 auto;">
-    <img src="/Images/blog-dq-cakes.webp" alt="Dairy Queen 10-inch round celebration Oreo Blizzard ice cream cake sliced open revealing fudge crunch layer — DQ Cake Ordering Guide" width="880" height="480" loading="eager" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow: 0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;">
-    
-    <div class="article-body">
-      <p class="lead">Walk into any birthday party or anniversary gathering where a white octagonal box is set on the table, and the reaction is immediate: everyone wants a slice with extra center crunch. Yet for all its popularity, ordering a cake from Dairy Queen is fraught with rookie errors. Customers routinely misjudge portion counts, shatter frozen tiers with cold knives, or fail to realize they can customize the top crown with any Blizzard flavor on the board. Below is our culinary research desk’s definitive <strong>2026 Dairy Queen Cake Blueprint</strong>, featuring exact volume metrics, temperature handling protocols, and dollar-per-serving calculations.</p>
+  <h2 id="cutting">How to cut a DQ cake cleanly</h2>
+  <ol>
+    <li><strong>Let it sit 10 to 15 minutes</strong> on the counter. Cut it straight from the freezer and the crunch layer can shatter.</li>
+    <li><strong>Warm the knife</strong> in a tall glass of hot water for about 20 seconds.</li>
+    <li><strong>Wipe it dry</strong> before each cut so water does not freeze on the icing.</li>
+    <li><strong>Press straight down</strong> in one motion instead of sawing. Rewarm the knife between slices.</li>
+  </ol>
 
-      <h2>The Structural Anatomy of a Dairy Queen Cake</h2>
-      <p>Supermarket ice cream cakes often cheat by sandwiching airy sponge cake or artificial frostings between frozen layers. Dairy Queen cakes, by contrast, are 100% frozen dairy dessert engineered in three distinct strata:</p>
-      
-      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:18px;padding:24px;margin:24px 0;">
-        <h3 style="margin-top:0;color:#0B1E38;font-size:1.2rem;">The 3-Strata Layer Profile</h3>
-        <ul style="margin:12px 0 0 0;padding-left:0;list-style:none;">
-          <li style="padding:8px 0;border-bottom:1px solid #EBE1D2;"><strong>Tier 1 — The Dense Base:</strong> A foundational bed of rich chocolate soft serve, providing a firm, cold thermal anchor that resists room-temperature melting.</li>
-          <li style="padding:8px 0;border-bottom:1px solid #EBE1D2;"><strong>Tier 2 — The Sacred Fudge Crunch Core:</strong> Crushed cocoa cookies bathed in dense, unsweetened cold chocolate fudge. Because this layer contains minimal water content, it remains intensely crunchy even when stored at -10°F.</li>
-          <li style="padding:8px 0;"><strong>Tier 3 — The Vanilla Cap &amp; Meringue Border:</strong> Silky vanilla soft serve enclosed by decorative whipped frosting swirls and high-viscosity piping gels.</li>
-        </ul>
-      </div>
+  <h2 id="storing">Storing leftovers</h2>
+  <p>Put the cake back in the freezer as soon as everyone is served. Cover the cut side with plastic wrap or keep it in the box. It stays good for about a week; after that the icing can get icy.</p>
 
-      <h2>Standard Traditional vs. Blizzard® Cake: Which Delivers Better Value?</h2>
-      <p>When approaching the bakery cooler, you will encounter two primary styles:</p>
-      <ul>
-        <li><strong>Traditional Classic DQ Cake:</strong> Pure vanilla atop pure chocolate with the crunch core. It is timeless, reliable, and costs roughly $3.00 to $5.00 less per unit. Best suited for large family gatherings where kids and grandparents want straightforward chocolate-vanilla balance.</li>
-        <li><strong>Blizzard® Custom Cake:</strong> Replaces the top vanilla tier with your chosen blended treat—most commonly <a href="/items/oreo-blizzard">Oreo® Cookie</a>, <a href="/items/cookie-dough-blizzard">Chocolate Chip Cookie Dough</a>, or <a href="/items/reeses-blizzard">Reese’s Peanut Butter Cup</a>. While it carries a modest upcharge, the flavor density per cubic inch is dramatically superior because real candy chunks run throughout the upper dome.</li>
-      </ul>
-
-      <h2>2026 Cake Dimensions, Servings &amp; Cost Efficiency Matrix</h2>
-      <p>Do not guess your party sizing. We compiled the verified dimensions, realistic serving yields (based on 5.5 oz caterer portions), and national 2026 price averages across <a href="/categories/dq-cakes">The Queen Dairy Cake Catalog</a>:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Format</th>
-              <th>Dimensions</th>
-              <th>Real-World Servings</th>
-              <th>Standard Retail</th>
-              <th>Blizzard Edition</th>
-              <th>Cost Per Guest</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Mini Round</strong></td>
-              <td>6-Inch Diameter</td>
-              <td>2 to 4 guests</td>
-              <td>$16.99</td>
-              <td>$19.99</td>
-              <td>$4.25 – $5.00</td>
-            </tr>
-            <tr>
-              <td><a href="/items/dq-cake-round-8inch"><strong>8-Inch Round</strong></a></td>
-              <td>8-Inch Diameter</td>
-              <td>8 to 11 guests</td>
-              <td>$27.99</td>
-              <td>$31.99</td>
-              <td>$2.80 – $3.50</td>
-            </tr>
-            <tr>
-              <td><a href="/items/dq-cake-round-10inch"><strong>10-Inch Round</strong></a></td>
-              <td>10-Inch Diameter</td>
-              <td>12 to 17 guests</td>
-              <td>$34.99</td>
-              <td>$39.99</td>
-              <td><strong>$2.33 – $2.91 (Best Value!)</strong></td>
-            </tr>
-            <tr>
-              <td><a href="/items/dq-sheet-cake"><strong>11x14 Sheet Cake</strong></a></td>
-              <td>11" × 14" Rectangular</td>
-              <td>20 to 25 guests</td>
-              <td>$44.99</td>
-              <td>$49.99</td>
-              <td>$2.00 – $2.25</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div style="background:#F0FDF4;border-left:4px solid #16A34A;padding:16px 20px;border-radius:0 12px 12px 0;margin:24px 0;font-size:0.92rem;color:#14532D;">
-        <strong>The Efficiency Winner:</strong> The <strong>10-inch round format</strong> represents the undisputed sweet spot in DQ's cake portfolio. For just $7.00 more than the 8-inch, you unlock over 55% more surface area and feed up to 17 guests at less than $2.50 per person.
-      </div>
-
-      <h2>The 15-Minute Slicing Protocol: Avoid the Shatter Disaster</h2>
-      <p>Commercial Dairy Queen holding freezers run between -10°F and -15°F to keep soft serve rigid during transport. Slicing the cake the moment you carry it inside will cause the hard outer shell to fracture into jagged clumps, pulverizing the crunch layer into dust. Follow this 4-step slicing ritual:</p>
-      <ol>
-        <li><strong>Countertop Acclimation:</strong> Open the cardboard tabs and let the cake rest undisturbed on your kitchen counter for exactly <strong>15 minutes</strong>. (If ambient room temperature exceeds 75°F, reduce this to 10 minutes).</li>
-        <li><strong>Thermal Knife Bath:</strong> Fill a tall container with steaming hot water. Dip a long chef's knife into the bath for 20 seconds.</li>
-        <li><strong>The Dry Wipe:</strong> Wipe the knife clean on a cloth towel before each cut. Water droplets create unappealing frost patches on the whipped icing.</li>
-        <li><strong>The Single Downward Glide:</strong> Press firmly downward in one smooth pass. Never saw back and forth. Rinse and reheat the blade between each subsequent slice.</li>
-      </ol>
-
-      <h2>Custom Ordering Timeline: Grab-and-Go vs. Special Commissions</h2>
-      <p>Depending on how specific your celebration needs are, consider these scheduling rules:</p>
-      <ul>
-        <li><strong>Same-Day Urgent Needs:</strong> Every franchise maintains a glass display case stocked with 8-inch and 10-inch round designs. The crew can pipe a custom name, age, or greeting in your choice of colored gel in under 5 minutes at zero extra charge.</li>
-        <li><strong>Custom Blizzard &amp; Photo Cakes:</strong> Want a <a href="/items/cookie-dough-blizzard-cake">Cookie Dough Blizzard Cake</a> topped with an edible photo icing portrait? You must contact your local store or use the online portal at least <strong>24 to 48 hours in advance</strong> so decorators have time to freeze the custom blend solid before decorating.</li>
-      </ul>
-
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What ingredients create the crunch layer inside Dairy Queen cakes?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The legendary crunch center is formed by blending coarse, baked chocolate cookie crumbles directly into a thick reservoir of cold chocolate fudge. This preserves structural crispness even when frozen solid at sub-zero temperatures.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">How much lead time is necessary for customized photo or Blizzard cakes?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">While standard celebration cakes can be grabbed from display cases in under 5 minutes with free personalized lettering, custom Blizzard blend cakes or edible sugar photo sheets require a minimum 24-to-48-hour advance order.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What is the recommended slicing technique to avoid shattering the frozen soft serve?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Allow the bakery box to rest on your countertop for exactly 15 minutes before serving. Immerse a chef's knife in boiling water for 30 seconds, wipe it dry, and make single downward glide cuts without sawing back and forth.</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:40px;padding:24px;background:#FFFFFF;border-radius:16px;border:1px solid #EADBCA;text-align:center;">
-        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">Planning a Celebration?</h3>
-        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">Explore detailed photo galleries and nutritional metrics for all Dairy Queen cakes.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="/categories/dq-cakes" class="btn btn-primary">Browse All Cake Sizes →</a>
-          <a href="/blog/best-blizzard-flavors-ranked" class="btn btn-accent">Explore Blizzard Flavor Ideas →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-
-</Layout>
+  <h2 id="ordering">Ordering tips</h2>
+  <p>Ready-made cakes are usually in the freezer case for same-day pickup, and staff can add a short message. Custom designs, photo cakes and Blizzard flavors that are not in the case need about 24 to 48 hours. The full ordering steps are on our <a href="/categories/dq-cakes#how-to-order">DQ cake ordering guide</a>.</p>
+</BlogPost>

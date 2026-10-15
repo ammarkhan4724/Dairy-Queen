@@ -39,7 +39,7 @@ BLOG_TITLES = {
     '/blog/dairy-queen-app-rewards-hacks': 'DQ app rewards guide',
     '/blog/dairy-queen-calories-nutrition-guide': 'Dairy Queen calories & nutrition guide',
     '/blog/dairy-queen-ice-cream-vs-soft-serve': 'Is DQ soft serve ice cream?',
-    '/blog/dairy-queen-price-inflation-report': 'Dairy Queen price changes 2022-2026',
+    '/blog/dairy-queen-price-inflation-report': 'Why Dairy Queen prices went up',
     '/blog/dairy-queen-secret-menu': 'Dairy Queen secret menu',
     '/blog/dq-breakfast-hours-menu': 'DQ breakfast hours & menu',
     '/blog/dq-cakes-complete-guide': 'DQ cake flavors & serving guide',

@@ -1,160 +1,144 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { LAST_CHECKED } from '../../data/site';
+
+// Prices (Mini/Small/Medium/Large) and Small calories match each item page.
+type Row = { name: string; href: string; p: [string, string, string, string]; cal: string; note?: string };
+const core: Row[] = [
+  { name: 'Oreo Cookie', href: '/items/oreo-blizzard', p: ['$3.49', '$4.49', '$5.49', '$5.99'], cal: '420', note: 'Most popular' },
+  { name: 'Chocolate Chip Cookie Dough', href: '/items/cookie-dough-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '590' },
+  { name: 'Reese’s Peanut Butter Cup', href: '/items/reeses-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '600' },
+  { name: 'M&M’s Milk Chocolate', href: '/items/mm-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '490' },
+  { name: 'Butterfinger', href: '/items/butterfinger-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '470' },
+  { name: 'Heath', href: '/items/heath-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '480' },
+  { name: 'Snickers', href: '/items/snickers-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '500' },
+  { name: 'Mint Oreo', href: '/items/mint-oreo-blizzard', p: ['$3.49', '$4.49', '$5.49', '$5.99'], cal: '~440' },
+  { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '510' },
+  { name: 'Brownie Batter', href: '/items/brownie-batter-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '530' },
+  { name: 'Turtle Pecan Cluster', href: '/items/turtle-pecan-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '570' },
+  { name: 'Strawberry Cheesequake', href: '/items/strawberry-cheesequake-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~520' },
+];
+const royal: Row[] = [
+  { name: 'Royal Oreo', href: '/items/royal-oreo-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '490', note: 'Fudge center' },
+  { name: 'Royal Reese’s', href: '/items/royal-reeses-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '620', note: 'Peanut butter center' },
+  { name: 'Royal New York Cheesecake', href: '/items/royal-new-york-cheesecake-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '460', note: 'Strawberry center' },
+  { name: 'Royal Rocky Road Trip', href: '/items/royal-rocky-road-trip-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '530', note: 'Fudge center' },
+];
+const seasonal: Row[] = [
+  { name: 'Pumpkin Pie', href: '/items/pumpkin-pie-blizzard', p: ['$4.49', '$5.29', '$6.09', '$6.79'], cal: '490', note: 'Fall' },
+  { name: 'Peppermint Bark', href: '/items/peppermint-bark-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '500', note: 'Winter' },
+  { name: 'Peppermint Hot Cocoa', href: '/items/peppermint-hot-cocoa-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~480', note: 'Winter' },
+  { name: 'Frosted Sugar Cookie', href: '/items/frosted-sugar-cookie-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~510', note: 'Holiday' },
+  { name: 'Banana Cream Pie', href: '/items/banana-cream-pie-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~540', note: 'Limited time' },
+  { name: 'S’mores', href: '/items/smores-blizzard', p: ['$4.49', '$5.29', '$6.29', '$6.99'], cal: '500', note: 'Summer' },
+  { name: 'Cotton Candy', href: '/items/cotton-candy-blizzard', p: ['$4.49', '$5.29', '$6.29', '$6.99'], cal: '460', note: 'Summer' },
+  { name: 'Mixing Bowl Mashup', href: '/items/mixing-bowl-mashup-blizzard', p: ['$4.49', '$5.29', '$6.29', '$6.99'], cal: '520', note: 'Summer' },
+  { name: 'Swicy Pineapple with Tajín', href: '/items/swicy-pineapple-tajin-blizzard', p: ['$4.49', '$5.29', '$6.29', '$6.99'], cal: '430', note: 'Summer' },
+  { name: 'Dipped Strawberry Cheesecake', href: '/items/dipped-strawberry-cheesecake-blizzard', p: ['$4.49', '$5.29', '$6.29', '$6.99'], cal: '~540', note: 'Summer' },
+  { name: 'Confetti Cake', href: '/items/confetti-cake-blizzard', p: ['$4.49', '$5.29', '$6.29', '$6.99'], cal: '~490', note: 'Summer' },
+];
+const groups = [
+  { id: 'year-round', title: 'Year-round Blizzard flavors and prices', rows: core },
+  { id: 'royal', title: 'Royal Blizzards (filled center)', rows: royal },
+  { id: 'seasonal', title: 'Seasonal and limited-time Blizzards', rows: seasonal },
+];
+
+const faqs = [
+  { q: 'How much is a Blizzard at Dairy Queen?', a: 'A Blizzard typically costs $3.49–$3.99 for a Mini, $4.49–$4.79 for a Small, $5.29–$5.79 for a Medium and $5.99–$6.49 for a Large. Royal and seasonal flavors cost more. Prices vary by location.' },
+  { q: 'What Blizzard sizes does Dairy Queen have?', a: 'Blizzards come in Mini, Small, Medium and Large. The Mini is a good size for a snack or to try a new flavor; the Large is best for sharing.' },
+  { q: 'What is the most popular Blizzard flavor?', a: 'The Oreo Cookie Blizzard is Dairy Queen’s best-known flavor and is available year-round at every location. Cookie Dough and Reese’s are also among the most ordered.' },
+  { q: 'What is a Royal Blizzard?', a: 'A Royal Blizzard has a filled center, such as hot fudge or peanut butter, in addition to the usual mix-ins. It costs about 50 cents to a dollar more than the regular version.' },
+  { q: 'Can you mix two Blizzard flavors?', a: 'Yes. Most stores will blend two mix-ins into one Blizzard, such as Oreo and cookie dough, for a small extra charge.' },
+];
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much is a Dairy Queen Blizzard in 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mini $3.49–$3.99 | Small $4.49–$4.79 | Medium $5.29–$5.79 | Large $5.99–$6.49. Royal Blizzards cost approximately $1 more per size. Prices are national averages and may vary by franchise location."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the most popular DQ Blizzard?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Oreo® Cookie Blizzard is DQ's #1 best-selling Blizzard year-round, followed by Chocolate Chip Cookie Dough and Reese's® Peanut Butter Cup. All three are available in all four sizes at every DQ location."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you customize a DQ Blizzard?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can request extra mix-ins (typically $0.50 each), lighter blending, an extra swirl of sauce, or combine two different flavors. Ask your DQ crew what customizations are possible at your location."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the seasonal Blizzard flavors for 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Summer 2026 seasonal Blizzards include Dipped Strawberry Cheesecake, S'mores, Confetti Cake, Cotton Candy, Mixing Bowl Mashup, and Swicy Pineapple with Tajín®. Fall 2026 will bring Pumpkin Pie and additional seasonal flavors."
-      }
-    }
-  ]
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 ---
-<Layout title="Dairy Queen Blizzard Menu With Prices 2026" description="Complete Dairy Queen Blizzard menu with 2026 prices and calories. Every flavor from Oreo to Cookie Dough, Mini to Large, Royal Blizzards, and.">
+<Layout
+  title="Dairy Queen Blizzard Menu With Prices (2026)"
+  description="Every Dairy Queen Blizzard flavor with typical 2026 prices for Mini, Small, Medium and Large, plus calories, Royal Blizzards and seasonal flavors."
+  ogImage="/Images/blizzard-category.webp"
+>
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Dairy Queen Blizzard Menu 2026"}]} />
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Menu"}]} />
 
 <section class="hero">
 <div class="container">
 <div class="hero-content">
-<span class="hero-eyebrow">Served Upside Down Since 1985 · All 20+ Flavors</span>
-<h1>Dairy Queen Blizzard Menu 2026</h1>
+<span class="hero-eyebrow">Every flavor · Every size · Prices checked {LAST_CHECKED}</span>
+<h1>Dairy Queen Blizzard Menu With Prices</h1>
 </div>
 </div>
 </section>
-
 
 <section class="section">
-  <div class="container article-body" style="max-width:920px;">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>A Dairy Queen Blizzard costs about $3.49 for a Mini, $4.49 for a Small, $5.49 for a Medium and $5.99–$6.49 for a Large.</strong> Premium flavors like Choco Brownie Extreme and Turtle Pecan cost about 30 to 50 cents more per size, and Royal and seasonal Blizzards cost a bit more again. Below is every Blizzard flavor we track, with prices by size and calories.</p>
+    <p>A Blizzard is DQ soft serve blended with mix-ins such as cookies, candy or brownie pieces until it is thick enough to hold upside down. It has been on the menu since 1985. Not sure which to pick? See our <a href="/blog/best-blizzard-flavors-ranked">ranking of the best Blizzard flavors</a>.</p>
 
-    <h2>Dairy Queen Blizzard Treat — Complete 2026 Guide</h2>
-    <p>The <strong>Dairy Queen Blizzard Treat</strong> is the most iconic fast-food dessert in America. First introduced in 1985, the Blizzard is made by hand-blending DQ's signature soft serve with your choice of mix-ins — real cookie pieces, candy bars, brownies, or fruit — until the dessert is thick enough to hold upside down. If the crew forgets to flip it before handing it over, it's free. That's not a marketing slogan. That's a genuine guarantee built into every DQ transaction.</p>
+    {groups.map((g) => (
+      <>
+        <h2 id={g.id}>{g.title}</h2>
+        <div class="table-wrap">
+          <table class="size-table">
+            <thead><tr><th>Flavor</th><th>Mini</th><th>Small</th><th>Medium</th><th>Large</th><th>Calories (Small)</th></tr></thead>
+            <tbody>
+              {g.rows.map((r) => (
+                <tr>
+                  <td><strong><a href={r.href}>{r.name} Blizzard</a></strong>{r.note && <span style="display:block;font-size:.8rem;color:var(--color-text-muted);">{r.note}</span>}</td>
+                  {r.p.map((x) => <td class="price-cell">{x}</td>)}
+                  <td>{r.cal}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    ))}
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Typical price; varies by location. Last checked {LAST_CHECKED}. "—" means we have not confirmed that size’s price. Seasonal flavors rotate, so not every one is on the menu at the same time.</p>
 
-    <p>For a full overview of all DQ categories from burgers to classic treats, visit <a href="/">The Queen Dairy Menu</a>. This page covers Blizzard Treats specifically — every flavor, every size, every price, and everything you need to order the right one.</p>
-
-    <h2>Blizzard Treat Prices by Size — 2026</h2>
-    <p>All core Blizzard flavors are available in four sizes. The Mini is the smallest option, added in recent years for guests who want a quick taste without committing to a full cup. The Large is approximately 21 oz and is best for sharing or the truly devoted.</p>
-
-    <div class="table-wrap">
-      <table class="size-table">
-        <thead>
-          <tr><th>Blizzard Flavor</th><th>Mini</th><th>Small</th><th>Medium</th><th>Large</th><th>Cal (Sm)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong><a href="/items/oreo-blizzard">Oreo® Cookie Blizzard</a></strong> ⭐ #1</td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.49</td><td class="price-cell">$5.99</td><td>420</td></tr>
-          <tr><td><strong><a href="/items/cookie-dough-blizzard">Choc. Chip Cookie Dough</a></strong></td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.49</td><td class="price-cell">$6.49</td><td>590</td></tr>
-          <tr><td><strong><a href="/items/reeses-blizzard">Reese's® PB Cup Blizzard</a></strong></td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.49</td><td class="price-cell">$6.49</td><td>600</td></tr>
-          <tr><td><strong><a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster Blizzard</a></strong></td><td class="price-cell">$3.99</td><td class="price-cell">$4.79</td><td class="price-cell">$5.79</td><td class="price-cell">$6.49</td><td>570</td></tr>
-          <tr><td><strong><a href="/items/brownie-batter-blizzard">Brownie Batter Blizzard</a></strong></td><td class="price-cell">$3.99</td><td class="price-cell">$4.79</td><td class="price-cell">$5.79</td><td class="price-cell">$6.49</td><td>530</td></tr>
-          <tr><td><strong><a href="/items/mm-blizzard">M&amp;M's® Blizzard</a></strong></td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.29</td><td class="price-cell">$5.99</td><td>490</td></tr>
-          <tr><td><strong><a href="/items/butterfinger-blizzard">Butterfinger® Blizzard</a></strong></td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.29</td><td class="price-cell">$5.99</td><td>470</td></tr>
-          <tr><td><strong><a href="/items/snickers-blizzard">Snickers® Blizzard</a></strong></td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.49</td><td class="price-cell">$6.49</td><td>500</td></tr>
-          <tr><td><strong><a href="/items/choco-brownie-blizzard">Choco Brownie Extreme Blizzard</a></strong></td><td class="price-cell">$3.99</td><td class="price-cell">$4.79</td><td class="price-cell">$5.79</td><td class="price-cell">$6.49</td><td>510</td></tr>
-          <tr><td><strong><a href="/items/heath-blizzard">Heath® Bar Blizzard</a></strong></td><td class="price-cell">$3.49</td><td class="price-cell">$4.49</td><td class="price-cell">$5.29</td><td class="price-cell">$5.99</td><td>480</td></tr>
-          <tr><td><strong><a href="/items/royal-oreo-blizzard">Royal Oreo® Blizzard</a></strong> 👑</td><td class="price-cell">$3.99</td><td class="price-cell">$4.99</td><td class="price-cell">$5.99</td><td class="price-cell">$6.49</td><td>490</td></tr>
-          <tr><td><strong><a href="/items/royal-reeses-blizzard">Royal Reese's® Blizzard</a></strong> 👑</td><td class="price-cell">$3.99</td><td class="price-cell">$4.99</td><td class="price-cell">$5.99</td><td class="price-cell">$6.49</td><td>620</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p><em>Prices are national 2026 averages. Your local DQ may vary slightly. Royal Blizzards (👑) include a warm filled center.</em></p>
-
-    <h2>The Four Blizzard Groups Explained</h2>
-    <p>DQ's Blizzard lineup divides naturally into four categories. Understanding which group a flavor belongs to helps you choose confidently:</p>
+    <h2 id="sizes">Blizzard sizes: which one to order</h2>
     <ul>
-      <li><strong>Classic Candy-Bar Blizzards</strong> — Oreo, M&amp;M's, Butterfinger, Snickers, Heath. These rely on familiar candy flavors blended into soft serve. Oreo leads the pack.</li>
-      <li><strong>Baked-Good Blizzards</strong> — Cookie Dough, Brownie Batter, Choco Brownie Extreme. Richer, denser, more calorie-dense. Best for chocolate and baked-flavor fans.</li>
-      <li><strong>Royal Blizzards</strong> — Standard flavors with a warm filled center (fudge, peanut butter, strawberry). Cost about $1 more per size. The Royal Oreo is the most popular upgrade on the entire menu.</li>
-      <li><strong>Seasonal Specials</strong> — Rotate throughout the year. Pumpkin Pie in fall, Peppermint Hot Cocoa in winter, summer specials like Dipped Strawberry Cheesecake and S'mores.</li>
+      <li><strong>Mini:</strong> about 300–400 calories. Good after a meal or to try a new flavor.</li>
+      <li><strong>Small:</strong> the everyday size for one person.</li>
+      <li><strong>Medium:</strong> a big dessert for one, or a share for two.</li>
+      <li><strong>Large:</strong> around 900–1,200 calories. Best for sharing.</li>
+    </ul>
+    <p>Calories for every size are on each flavor’s page, and our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> compares lighter options.</p>
+
+    <h2 id="royal-explained">What makes a Royal Blizzard different?</h2>
+    <p>Royal Blizzards add a filled center, like hot fudge in the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> or peanut butter in the <a href="/items/royal-reeses-blizzard">Royal Reese’s</a>. You get the regular mix-ins plus a gooey middle for roughly 50 cents to a dollar more.</p>
+
+    <h2 id="seasonal-explained">Blizzard of the Month and seasonal flavors</h2>
+    <p>Dairy Queen rotates limited-time Blizzards through the year: fruity and summery flavors in summer, <a href="/items/pumpkin-pie-blizzard">Pumpkin Pie</a> in fall, and peppermint flavors around the holidays. Many stores also feature a Blizzard of the Month. Check the DQ app for what your store has right now.</p>
+
+    <h2 id="ordering-tips">Tips for ordering a Blizzard</h2>
+    <ul>
+      <li><strong>Ask for extra mix-ins</strong> if you like more crunch. There is usually a small charge.</li>
+      <li><strong>Combine two flavors.</strong> Oreo plus cookie dough is a favorite. Our <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> lists more combos.</li>
+      <li><strong>Use the DQ app.</strong> Blizzard deals show up often. See the <a href="/blog/dairy-queen-app-rewards-hacks">DQ app rewards guide</a>.</li>
+      <li><strong>Want a whole Blizzard cake?</strong> See <a href="/categories/dq-cakes">DQ Blizzard cake prices and sizes</a>.</li>
     </ul>
 
-    <h2>Summer 2026 Seasonal Blizzard Treats</h2>
-    <p>Dairy Queen changes its seasonal Blizzard lineup multiple times per year. The following flavors are available for summer 2026 — order them while they last:</p>
-    <ul>
-      <li><strong><a href="/items/dipped-strawberry-cheesecake-blizzard">Dipped Strawberry Cheesecake Blizzard</a></strong> — Strawberry cheesecake pieces and fudge swirl. From $4.49, ~540 cal (Small).</li>
-      <li><strong><a href="/items/smores-blizzard">S'mores Blizzard</a></strong> — Graham cracker pieces, marshmallow topping, and fudge. A fan favorite returning by popular demand. From $4.49, ~500 cal.</li>
-      <li><strong><a href="/items/confetti-cake-blizzard">Confetti Cake Blizzard</a></strong> — Colorful sprinkles and cake pieces in vanilla soft serve. From $4.49, ~490 cal.</li>
-      <li><strong><a href="/items/cotton-candy-blizzard">Cotton Candy Blizzard</a></strong> — Sweet cotton candy flavor swirled through creamy soft serve. From $4.49, ~460 cal.</li>
-      <li><strong><a href="/items/mixing-bowl-mashup-blizzard">Mixing Bowl Mashup Blizzard</a></strong> — Multiple fan-favorite mix-ins combined. From $4.49, ~520 cal.</li>
-      <li><strong><a href="/items/swicy-pineapple-tajin-blizzard">Swicy Pineapple with Tajín® Blizzard</a></strong> — Sweet pineapple meets Tajín chili-lime seasoning. Bold, refreshing, unusual. From $4.49, ~430 cal.</li>
-    </ul>
+    <h2 id="compare">Blizzard vs. McFlurry vs. Frosty</h2>
+    <p>A Blizzard is soft serve with mix-ins blended through the whole cup. A McDonald’s McFlurry is similar, but it is usually thinner and comes in fewer sizes. A Wendy’s Frosty is a thick frozen dessert without mix-ins. If you want lots of add-ins and a choice of four sizes, the Blizzard is the one to get.</p>
 
-    <h2>Royal Blizzard® Treats — Premium Tier</h2>
-    <p>Royal Blizzards feature a warm filled center — fudge, caramel, peanut butter, or strawberry — that creates a burst of concentrated flavor when you hit the middle of the cup. They cost approximately $1 more than their standard counterparts per size. The lineup includes:</p>
-    <ul>
-      <li><strong><a href="/items/royal-oreo-blizzard">Royal Oreo® Blizzard</a></strong> — Oreo pieces in soft serve with a hot fudge-filled center. The #1 Royal Blizzard. From $3.99.</li>
-      <li><strong><a href="/items/royal-reeses-blizzard">Royal Reese's® Blizzard</a></strong> — Reese's PB cup pieces with a peanut butter-filled center. From $3.99.</li>
-      <li><strong><a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake Blizzard</a></strong> — Graham cracker pieces and cheesecake with a strawberry-filled center. From $3.99.</li>
-      <li><strong><a href="/items/royal-rocky-road-trip-blizzard">Royal Rocky Road Trip Blizzard</a></strong> — Brownie pieces, almonds, marshmallow with a fudge-filled center. From $3.99.</li>
-    </ul>
-
-    <h2>How to Order the Best Blizzard</h2>
-    <p>A few ordering tips from regulars that make a real difference:</p>
-    <ul>
-      <li><strong>Try the Mini before committing</strong> — If you've never had a flavor before, the Mini ($3.49–$3.99) is a low-risk way to test it. If you love it, you'll know to order a Medium next time.</li>
-      <li><strong>Request extra mix-ins</strong> — Most locations charge about $0.50 for additional mix-ins. If you want more Oreo crunch or more cookie dough chunks per spoonful, ask.</li>
-      <li><strong>Combine two flavors</strong> — DQ will blend two flavors together. The most popular combo is Oreo + Cookie Dough. Reese's + Brownie Batter is another fan favorite.</li>
-      <li><strong>Upgrade to Royal</strong> — The Royal upgrade adds a warm filled center for about $1 more. The Royal Oreo with hot fudge center is the most-ordered upgrade on the entire Blizzard menu.</li>
-      <li><strong>The upside-down flip</strong> — If the crew doesn't flip your Blizzard upside down before handing it over, it's free. The flip is also a quality check — a Blizzard thick enough to hold inverted is blended correctly.</li>
-    </ul>
-
-    <h2>Blizzard vs. McFlurry vs. Frosty — What's the Difference?</h2>
-    <p>The DQ Blizzard is frequently compared to McDonald's McFlurry and Wendy's Frosty. Here's the key distinction: the Blizzard is hand-blended to order, with mix-ins distributed throughout the entire cup. The McFlurry uses a machine that stirs mix-ins only at the surface. The Frosty is a standalone frozen beverage with no mix-ins. The Blizzard wins on texture depth and mix-in distribution.</p>
-
-    <h2>Frequently Asked Questions — DQ Blizzard</h2>
+    <h2 id="faq">Frequently asked questions</h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How much is a Dairy Queen Blizzard in 2026?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Mini $3.49–$3.99 | Small $4.49–$4.79 | Medium $5.29–$5.79 | Large $5.99–$6.49. Royal Blizzards cost approximately $1 more per size. Prices are national averages and may vary by franchise location.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What is the most popular DQ Blizzard?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">The Oreo® Cookie Blizzard is DQ's #1 best-selling Blizzard year-round, followed by Chocolate Chip Cookie Dough and Reese's® Peanut Butter Cup. All three are available in all four sizes at every DQ location.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Can you customize a DQ Blizzard?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. You can request extra mix-ins (typically $0.50 each), lighter blending, an extra swirl of sauce, or combine two different flavors. Ask your DQ crew what customizations are possible at your location.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What are the seasonal Blizzard flavors for 2026?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Summer 2026 seasonal Blizzards include Dipped Strawberry Cheesecake, S'mores, Confetti Cake, Cotton Candy, Mixing Bowl Mashup, and Swicy Pineapple with Tajín®. Fall 2026 will bring Pumpkin Pie and additional seasonal flavors.</div></div>
-      </div>
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
     </div>
 
-    <p style="margin-top:32px;">For the complete DQ menu including burgers, chicken baskets, breakfast, DQ Cakes, and all classic treats, visit <a href="/"><strong>The Queen Dairy Menu</strong></a>.</p>
+    <p style="margin-top:32px;">More from the menu: <a href="/categories/classic-treats">cones and sundaes</a> · <a href="/categories/drinks">shakes and drinks</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
   </div>
 </section>
-
 
 </Layout>

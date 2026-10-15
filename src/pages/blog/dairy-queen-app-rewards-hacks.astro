@@ -1,188 +1,50 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { AUTHOR } from '../../data/site';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+const faqs = [
+  { q: 'How do Dairy Queen app rewards work?', a: 'You earn points every time you scan the DQ app or order through it, about 10 points per dollar spent. Points can be swapped for free menu items in the Rewards section of the app. The reward list and point costs can change, so check the app before you order.' },
+  { q: 'Does Dairy Queen give a birthday reward?', a: 'Yes. If you add your birthday to your DQ Rewards profile, the app usually sends a birthday treat offer around your birthday. Add the date when you sign up, because it often cannot be changed later.' },
+  { q: 'Can you use a DQ app deal and a reward in the same order?', a: 'Often yes. Deals (coupons in the Deals tab) and Rewards (items you pay for with points) are separate, and many stores accept both in one order. It depends on the store, so ask if you are not sure.' },
+  { q: 'Is it better to redeem DQ points for small items or save them?', a: 'Lower-point rewards like a cone or small treat usually give you more value per point than saving up for a big reward. Compare the item’s menu price with the points it costs before you redeem.' },
+];
 ---
-<Layout 
-  title="Dairy Queen App Rewards: How to Save in 2026" 
-  description="How the DQ app rewards program works in 2026: earning points, the best rewards to redeem, app-only deals and tips to save more."
-  ogImage="/Images/7-meal-deal.webp"
-  article={true}
+<BlogPost
+  title="Dairy Queen App Rewards: How to Save in 2026"
+  description="How the DQ app rewards program works: earning points, the best rewards to redeem, birthday treats, app-only deals and easy ways to save."
+  h1="Dairy Queen App Rewards: How It Works and How to Save"
+  crumb="DQ App Rewards"
+  eyebrow="Saving money at DQ"
+  image="/Images/7-meal-deal.webp"
+  imageAlt="Dairy Queen meal with burger, fries and drink"
+  datePublished="2026-07-08"
+  faqs={faqs}
 >
+  <p class="lead"><strong>The DQ app gives you about 10 points for every dollar you spend</strong>, and you can trade those points for free food in the Rewards tab. The app also has a separate Deals tab with coupons such as discounted Blizzards or meal deals, and most members get a birthday treat. Here is how to get the most out of it.</p>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "Dairy Queen Rewards App Hacks (2026): Point Arbitrage, BOGO Stacking & Free Food",
-      "description": "A quantitative loyalty program breakdown analyzing DQ Rewards point valuations, cent-per-point ROI formulas, coupon stacking rules, and mobile operational workflows.",
-      "image": "https://www.thequeendairymenu.us/Images/7-meal-deal.webp",
-      "author": { "@type": "Organization", "name": AUTHOR.name, "url": AUTHOR.url },
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Queen Dairy Menu",
-        "url": "https://www.thequeendairymenu.us/",
-        "logo": "https://www.thequeendairymenu.us/Images/favicon.svg"
-      },
-      "datePublished": "2026-07-08T08:00:00+00:00",
-      "dateModified": "2026-09-29T18:35:00+00:00",
-      "mainEntityOfPage": "https://www.thequeendairymenu.us/blog/dairy-queen-app-rewards-hacks"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the single highest-value point redemption in the Dairy Queen app?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The 150-point tier for a Dilly Bar or Small Soft Serve Cone yields an outstanding 1.79 cents per point ($2.69 retail value). Saving up for the 1,000-point ($5 off) voucher is the worst financial choice, cutting your point return down to just 0.50 cents per point."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you stack DQ mobile deal coupons with point redemptions in one order?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Point redemptions convert into account reward vouchers, while 'Deals' function as transactional coupons. You can apply an earned free cone reward and an in-app '$1 off a Blizzard' coupon in the same checkout cart."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What should you do if you forget to scan your DQ app at the drive-thru window?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Keep your printed paper receipt. Open the DQ mobile app, navigate to 'More' > 'Submit a Receipt,' and scan the barcode or enter the 16-digit transaction key within 14 days to recover all missed points."
-          }
-        }
-      ]
-    }
-  ]
-})} />
+  <h2 id="how-it-works">How DQ Rewards works</h2>
+  <ol>
+    <li><strong>Download the DQ app</strong> and create a free account. Add your birthday when you sign up.</li>
+    <li><strong>Scan the app</strong> at the counter or drive-thru, or order ahead in the app, to earn points.</li>
+    <li><strong>Redeem points</strong> in the Rewards tab for free items. You will see how many points each reward costs.</li>
+    <li><strong>Check the Deals tab</strong> for coupons. These do not use points.</li>
+  </ol>
+  <p>Not every Dairy Queen takes part, and some Treat-only stores have fewer options. The app shows whether your store participates when you pick it.</p>
 
-<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blog", "href": "/blog"}, {"name": "DQ Rewards App Arbitrage (2026)"}]} />
+  <h2 id="best-rewards">Which rewards are worth it</h2>
+  <p>The simplest way to judge a reward is to divide the item’s normal price by the points it costs. Small treats such as a <a href="/items/vanilla-soft-serve-cone">cone</a> or <a href="/items/dilly-bar">Dilly Bar</a> usually give the best value per point, so redeeming often tends to beat saving up for one big reward. If you really want a <a href="/items/oreo-blizzard">Blizzard</a>, though, that is a fine use of points too. It is your money.</p>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Consumer Finance &amp; Loyalty Engineering · 2026 Audit</span>
-      <h1>DAIRY QUEEN REWARDS APP HACKS: POINT ARBITRAGE &amp; SAVINGS PLAYBOOK</h1>
-      <p style="margin-top:10px;opacity:.85;font-size:.95rem;">By The Queen Dairy Menu Editorial Team · Loyalty Economics &amp; Receipt Testing · Updated September 2026</p>
-    </div>
-  </div>
-</section>
+  <h2 id="tips">Ways to save more with the app</h2>
+  <ul>
+    <li><strong>Use a deal and a reward together.</strong> Deals and rewards are separate, and many stores let you use both in one order.</li>
+    <li><strong>Order ahead when it is busy.</strong> Summer evenings can mean long drive-thru lines. Ordering in the app lets you skip the wait at the board.</li>
+    <li><strong>Watch for Free Cone Day.</strong> Dairy Queen has held a Free Cone Day around the first day of spring in past years. The app and DQ’s social channels announce it.</li>
+    <li><strong>Turn on notifications.</strong> Many limited-time coupons only show up for a few days.</li>
+    <li><strong>Pair the app with value deals.</strong> The <a href="/items/7-meal-deal">$7 Meal Deal</a> and <a href="/items/2-for-5-mix-match">2 for $5 menu</a> are already discounted. Our <a href="/blog/dq-meal-deals-guide">DQ meal deals guide</a> explains each one.</li>
+  </ul>
 
-<article>
-  <div class="container article-body" style="max-width:880px;margin:0 auto;">
-    <img src="/Images/7-meal-deal.webp" alt="Dairy Queen mobile app ordering and combo meal deal spread with soft serve sundae, fries, chicken strips, and drink" width="880" height="480" loading="eager" style="width:100%;height:auto;border-radius:24px;margin:32px 0;box-shadow: 0 8px 30px rgba(11,30,56,0.1);border:1px solid #EDE4D6;">
-    
-    <div class="article-body">
-      <p class="lead">With quick-service prices facing sustained inflationary pressure across the United States, pulling into a Dairy Queen drive-thru and paying full retail price without tapping the mobile app is leaving serious money on the table. The official <strong>DQ® Rewards platform</strong> operates with a fixed accrual rate of 10 points per dollar spent. However, behind this simple user interface lies a massive disparity in reward valuations. Cashing in points for the wrong item cuts your effective rebate by more than 70%. <a href="/">The Queen Dairy Menu Research Desk</a> audited the entire 2026 rewards ledger to calculate the exact cent-per-point efficiency of every tier.</p>
+  <h2 id="birthday">Getting your DQ birthday reward</h2>
+  <p>Add your birthday to your profile when you first sign up. Around your birthday, the app usually unlocks a free or discounted treat that is valid for a limited time. If you plan a party, our <a href="/categories/dq-cakes">DQ cake price guide</a> covers sizes and how to order.</p>
 
-      <h2>The Cent-Per-Point (CPP) Mathematical Valuation Ledger</h2>
-      <p>In consumer finance, loyalty point programs are evaluated using <strong>Cent-Per-Point (CPP)</strong> metrics. Dividing the real-world retail value of a reward item by the required points reveals which redemptions maximize your purchasing power:</p>
-
-      <div class="table-wrap">
-        <table class="size-table">
-          <thead>
-            <tr>
-              <th>Point Cost</th>
-              <th>Eligible Menu Reward</th>
-              <th>Median 2026 Retail</th>
-              <th>Effective Value Per Point (CPP)</th>
-              <th>Arbitrage Verdict</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>150 Points</strong></td>
-              <td><a href="/items/dilly-bar"><strong>Classic Dilly® Bar</strong></a> or <a href="/items/vanilla-soft-serve-cone">Small Cone</a></td>
-              <td>$2.69</td>
-              <td><strong class="text-emerald-600">1.79¢ per point</strong></td>
-              <td>🏆 <strong>The Golden Arbitrage</strong> (3.5x better than $5 off)</td>
-            </tr>
-            <tr>
-              <td><strong>250 Points</strong></td>
-              <td>Small Sundae or Regular French Fries</td>
-              <td>$3.19</td>
-              <td><strong class="text-cyan-700">1.28¢ per point</strong></td>
-              <td>Solid Secondary Pick</td>
-            </tr>
-            <tr>
-              <td><strong>500 Points</strong></td>
-              <td>Mini <a href="/items/oreo-blizzard">Oreo Blizzard</a> or Cheeseburger</td>
-              <td>$3.89</td>
-              <td><strong class="text-amber-700">0.78¢ per point</strong></td>
-              <td>Acceptable if craving a Blizzard</td>
-            </tr>
-            <tr>
-              <td><strong>1,000 Points</strong></td>
-              <td>$5.00 Off Order Credit</td>
-              <td>$5.00</td>
-              <td><strong class="text-rose-700">0.50¢ per point</strong></td>
-              <td>⚠️ <strong>The Value Trap</strong> (Severe point devaluation)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div style="background:#FAF7F2;border:1px solid #EDE4D6;border-radius:18px;padding:24px;margin:24px 0;">
-        <h3 style="margin-top:0;color:#0B1E38;font-size:1.2rem;">The Takeaway Rule: Burn at 150 Points!</h3>
-        <p style="margin:8px 0 0 0;line-height:1.7;">Never hoard points until reaching 1,000. Redeeming 1,000 points for a $5 discount nets you exactly $5.00. But redeeming those same 1,000 points across six 150-point Dilly Bars nets you <strong>$16.14 worth of premium frozen novelties</strong>—more than triple the cash value.</p>
-      </div>
-
-      <h2>4 Master Hacks to Supercharge Your DQ Savings</h2>
-
-      <h3>1. The Digital Coupon &amp; Point Stacking Method</h3>
-      <p>The Dairy Queen app categorizes rewards and coupons into two distinct software layers:</p>
-      <ul>
-        <li><strong>Layer 1 (The Deals Tab):</strong> Weekly promotional coupons pushed by corporate or local franchise cooperatives (e.g., "$1.00 Off Any Size Blizzard" or "Free Fries with Double Stackburger").</li>
-        <li><strong>Layer 2 (The Rewards Vault):</strong> Items unlocked with your accumulated 10-points-per-dollar balance.</li>
-      </ul>
-      <p>Because they occupy different lines on the POS software, you can apply an active in-app Deal discount while simultaneously redeeming an earned reward item in the same order, maximizing your savings per transaction.</p>
-
-      <h3>2. The Flash-Holding Freezer Pickup Advantage</h3>
-      <p>During warm summer evenings, drive-thru wait times at busy DQ Grill &amp; Chill locations routinely exceed 15 to 20 minutes. Diners often worry that mobile orders will melt before they arrive. In reality, DQ kitchens are equipped with dedicated <strong>holding freezers</strong> behind the counter. When you place an app order for in-store pickup, crew members prepare your Blizzard or sundae and immediately store it in the sub-zero holding unit until you arrive. You bypass a 15-car line, walk to the counter, and receive treats at perfect peak consistency.</p>
-
-      <h3>3. The 14-Day Receipt Recovery Hack</h3>
-      <p>If you order in person and realize at the window that you forgot your phone or the app crashed, never panic. Retain your paper receipt. Dairy Queen prints a 16-digit transaction string and barcode at the bottom of every register slip. Once you get home, open the app, tap <em>"More" > "Redeem Receipt,"</em> and capture the barcode. You have a full <strong>14-day window</strong> to claim all 10 points per dollar spent.</p>
-
-      <h3>4. The Birthday Reward &amp; Free Cone Day Calendar</h3>
-      <p>Make sure you enter your real birthday when registering your profile. Dairy Queen triggers an automated birthday reward—typically a BOGO Blizzard coupon or $2 to $3 credit—valid for two weeks. Furthermore, mark your calendar for the first day of spring in March: Dairy Queen hosts national <strong>Free Cone Day</strong>, providing a free small vanilla cone to every visiting customer, with bonus app point drops frequently awarded to registered users.</p>
-
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What is the single highest-value point redemption in the Dairy Queen app?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">The 150-point tier for a Dilly Bar or Small Soft Serve Cone yields an outstanding 1.79 cents per point ($2.69 retail value). Saving up for the 1,000-point ($5 off) voucher is the worst financial choice, cutting your point return down to just 0.50 cents per point.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Can you stack DQ mobile deal coupons with point redemptions in one order?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Yes. Point redemptions convert into account reward vouchers, while 'Deals' function as transactional coupons. You can apply an earned free cone reward and an in-app '$1 off a Blizzard' coupon in the same checkout cart.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What should you do if you forget to scan your DQ app at the drive-thru window?<span class="faq-icon">+</span></button>
-          <div class="faq-a">
-            <div class="faq-a-inner">Keep your printed paper receipt. Open the DQ mobile app, navigate to 'More' > 'Submit a Receipt,' and scan the barcode or enter the 16-digit transaction key within 14 days to recover all missed points.</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:40px;padding:24px;background:#FFFFFF;border-radius:16px;border:1px solid #EADBCA;text-align:center;">
-        <h3 style="font-family:'Playfair Display', serif;font-size:1.8rem;color:#0B1E38;margin-bottom:8px;">Maximize Your Dairy Queen Savings</h3>
-        <p style="color:#64748B;font-size:0.95rem;margin-bottom:16px;">Check out our full math breakdown of the $7 Meal Deal and the 2022–2026 inflation audit.</p>
-        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-          <a href="/blog/dq-meal-deals-guide" class="btn btn-primary">Read the $7 Meal Deal Guide →</a>
-          <a href="/price-history" class="btn btn-accent">View Price Inflation Tracker →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-
-</Layout>
+  <h2 id="limits">Things to know</h2>
+  <p>Point costs, rewards and deals change from time to time and can differ by store. Rewards usually cannot be combined with some other promotions, and points can expire if your account is inactive. The terms in the app are the final word.</p>
+</BlogPost>
