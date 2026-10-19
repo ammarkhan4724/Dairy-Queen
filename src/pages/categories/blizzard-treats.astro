@@ -77,7 +77,7 @@ const faqSchema = {
 
 <section class="section">
   <div class="container article-body" style="max-width:960px;">
-    <p class="lead"><strong>A Dairy Queen Blizzard costs about $3.49 for a Mini, $4.49 for a Small, $5.49 for a Medium and $5.99–$6.49 for a Large.</strong> Premium flavors like Choco Brownie Extreme and Turtle Pecan cost about 30 to 50 cents more per size, and Royal and seasonal Blizzards cost a bit more again. Below is every Blizzard flavor we track, with prices by size and calories.</p>
+    <p class="lead"><strong>A classic Dairy Queen Blizzard costs about $3.49 for a Mini, $4.49 for a Small, $5.29–$5.49 for a Medium and $5.99–$6.49 for a Large.</strong> Premium flavors like Choco Brownie Extreme and Turtle Pecan cost about 30 to 50 cents more per size, and Royal and seasonal Blizzards cost a bit more again. Below is every Blizzard flavor we track, with prices by size and calories.</p>
     <p>A Blizzard is DQ soft serve blended with mix-ins such as cookies, candy or brownie pieces until it is thick enough to hold upside down. It has been on the menu since 1985. Not sure which to pick? See our <a href="/blog/best-blizzard-flavors-ranked">ranking of the best Blizzard flavors</a>.</p>
 
     {groups.map((g) => (
@@ -131,7 +131,7 @@ const faqSchema = {
     <div class="faq-list">
       {faqs.map((f) => (
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon" aria-hidden="true"></span></button>
           <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
         </div>
       ))}

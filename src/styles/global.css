@@ -551,6 +551,10 @@ body {
     @apply w-8 h-8 rounded-full bg-[#FAF7F2] border border-[#EDE4D6] text-slate-500 font-extrabold text-sm flex items-center justify-center flex-shrink-0 transition-all duration-300;
   }
 
+  .faq-icon::before {
+    content: '+';
+  }
+
   .faq-item:hover .faq-icon {
     @apply bg-red-50 text-[#E4002B] border-red-200;
   }

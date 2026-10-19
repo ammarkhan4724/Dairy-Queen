@@ -75,7 +75,7 @@ const modified = new Date(dateModified).toLocaleDateString('en-US', { month: 'lo
           <div class="faq-list">
             {faqs.map((f) => (
               <div class="faq-item">
-                <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+                <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon" aria-hidden="true"></span></button>
                 <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
               </div>
             ))}

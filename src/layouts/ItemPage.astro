@@ -3,6 +3,7 @@
 // and a FAQ list whose visible text and FAQPage schema come from the same props.
 import Layout from './Layout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { DEPTH } from '../data/item-depth';
 
 interface Faq { q: string; a: string }
 interface Props {
@@ -21,7 +22,12 @@ interface Props {
   table?: { head: string[]; rows: string[][]; title: string };
   faqs: Faq[];
 }
-const { title, description, name, category, image, imageAlt, badges = [], quick, from, intro, spec, allergens, table, faqs } = Astro.props;
+const { title, description, name, category, image, imageAlt, badges = [], quick, from, intro, spec, allergens, table, faqs: baseFaqs } = Astro.props;
+const slug = Astro.url.pathname.replace(/(\.html)?\/?$/, '').split('/').pop() ?? '';
+const depth = DEPTH[slug];
+const faqs = [...baseFaqs, ...(depth?.faqs ?? [])];
+// H1 carries the brand; breadcrumb keeps the short item name.
+const heading = /^(DQ|Dairy Queen)\b/i.test(name) ? name : `Dairy Queen ${name}`;
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -40,7 +46,7 @@ const schema = {
     </div>
     <div>
       {badges.length > 0 && <div class="badge-row">{badges.map((b) => <span class="badge">{b}</span>)}</div>}
-      <h1>{name}</h1>
+      <h1>{heading}</h1>
       <p class="quick-answer" style="margin:10px 0 14px;padding:12px 14px;background:#F0F9FF;border-left:4px solid #0E7490;border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.55;color:#0B1E38;"><strong>Quick answer:</strong> {quick}</p>
       <div class="item-price-lg">{from}</div>
       <p>{intro}</p>
@@ -69,11 +75,17 @@ const schema = {
 <section class="section">
   <div class="container article-body" style="max-width:920px;">
     <slot />
+    {depth?.sections.map((sec) => (
+      <>
+        <h2>{sec.h}</h2>
+        <Fragment set:html={sec.html} />
+      </>
+    ))}
     <h2 id="faq">Frequently asked questions</h2>
     <div class="faq-list">
       {faqs.map((f) => (
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon" aria-hidden="true"></span></button>
           <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
         </div>
       ))}
