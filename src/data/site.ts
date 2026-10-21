@@ -8,12 +8,12 @@ export const LAST_CHECKED = 'October 2026';
 export const DISCLAIMER =
   'Unofficial guide. Not affiliated with or endorsed by International Dairy Queen, Inc. Prices vary by location.';
 
-// Blog author shown in the author box and in Article schema.
-// TODO: replace with the real editor's name and bio for stronger E-E-A-T.
+// Blog author shown in the author box and in BlogPosting schema (matches the editor on /about).
 export const AUTHOR = {
-  name: 'The Queen Dairy Menu Editorial Team',
+  name: 'Ammar',
+  role: 'Editor, The Queen Dairy Menu',
   url: `${SITE_URL}/about`,
-  bio: 'We are an independent team of fast-food fans who track Dairy Queen menu prices, calories and deals across U.S. locations. We compare in-store menu boards, the DQ app and nutrition information, and update our guides when prices or items change. We are not employed by or affiliated with Dairy Queen.',
+  bio: 'Ammar is the editor of The Queen Dairy Menu, a fast-food fan and deal hunter who tracks Dairy Queen prices, calories and deals across U.S. locations. He compares in-store menu boards, the DQ app and published nutrition information, and updates these guides when prices or items change. This site is not employed by or affiliated with Dairy Queen.',
 };
 
 /** Turn a site path into its canonical absolute URL (no trailing slash, no .html). */
