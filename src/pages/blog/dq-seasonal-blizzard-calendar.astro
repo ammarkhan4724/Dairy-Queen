@@ -1,0 +1,135 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// Seasons, prices and calories match each Blizzard item page and /categories/blizzard-treats.
+type Row = { name: string; season: string; small: string; cal: string };
+const rows: Row[] = [
+  { name: 'Oreo Cookie', season: 'Year-round', small: '$4.49', cal: '420' },
+  { name: 'Chocolate Chip Cookie Dough', season: 'Year-round', small: '$4.49', cal: '590' },
+  { name: 'Reese’s Peanut Butter Cup', season: 'Year-round', small: '$4.49', cal: '600' },
+  { name: 'M&M’s Milk Chocolate', season: 'Year-round', small: '$4.49', cal: '490' },
+  { name: 'Butterfinger', season: 'Year-round', small: '$4.49', cal: '470' },
+  { name: 'Heath', season: 'Year-round', small: '$4.49', cal: '480' },
+  { name: 'Snickers', season: 'Year-round', small: '$4.49', cal: '500' },
+  { name: 'Choco Brownie Extreme', season: 'Year-round', small: '$4.79', cal: '510' },
+  { name: 'Brownie Batter', season: 'Year-round', small: '$4.79', cal: '530' },
+  { name: 'Turtle Pecan Cluster', season: 'Year-round', small: '$4.79', cal: '570' },
+  { name: 'Royal Oreo', season: 'Year-round (Royal)', small: '$4.99', cal: '490' },
+  { name: 'Royal Reese’s', season: 'Year-round (Royal)', small: '$4.99', cal: '620' },
+  { name: 'Royal New York Cheesecake', season: 'Year-round (Royal)', small: '$4.99', cal: '460' },
+  { name: 'Royal Rocky Road Trip', season: 'Year-round (Royal)', small: '$4.99', cal: '530' },
+  { name: 'Mint Oreo', season: 'Varies by store', small: '$4.49', cal: '440' },
+  { name: 'Strawberry Cheesequake', season: 'Varies by store', small: '$4.79', cal: '520' },
+  { name: 'S’mores', season: 'Summer seasonal', small: '$5.29', cal: '500' },
+  { name: 'Cotton Candy', season: 'Summer seasonal', small: '$5.29', cal: '460' },
+  { name: 'Mixing Bowl Mashup', season: 'Summer seasonal', small: '$5.29', cal: '520' },
+  { name: 'Swicy Pineapple with Tajín', season: 'Summer seasonal', small: '$5.29', cal: '430' },
+  { name: 'Dipped Strawberry Cheesecake', season: 'Summer seasonal', small: '$5.29', cal: '540' },
+  { name: 'Confetti Cake', season: 'Summer seasonal', small: '$5.29', cal: '490' },
+  { name: 'Pumpkin Pie', season: 'Fall seasonal', small: '$5.29', cal: '490' },
+  { name: 'Peppermint Bark', season: 'Winter seasonal', small: '$4.79', cal: '500' },
+  { name: 'Peppermint Hot Cocoa', season: 'Winter seasonal', small: '$4.79', cal: '480' },
+  { name: 'Frosted Sugar Cookie', season: 'Holiday seasonal', small: '$4.79', cal: '510' },
+  { name: 'Banana Cream Pie', season: 'Limited time', small: '$4.79', cal: '540' },
+];
+
+const faqs = [
+  { q: 'When does the Pumpkin Pie Blizzard come back?', a: 'The Pumpkin Pie Blizzard is a fall seasonal flavor, usually around September through November. Each store sets its own dates, so check the DQ app to see if your store has it.' },
+  { q: 'What is the Dairy Queen Blizzard of the Month?', a: 'Many DQ stores feature a Blizzard of the Month, a rotating flavor that is promoted for a limited time. The flavor changes and can differ by store, so the DQ app is the best place to see the current one.' },
+  { q: 'Is the Peppermint Blizzard available all year at Dairy Queen?', a: 'No. The Peppermint Bark and Peppermint Hot Cocoa Blizzards are winter seasonal flavors. If you want mint the rest of the year, some stores carry the Mint Oreo Blizzard all year, but availability varies by store.' },
+  { q: 'What Blizzards are on the DQ summer menu?', a: 'The summer seasonal Blizzards we track are S’mores, Cotton Candy, Mixing Bowl Mashup, Swicy Pineapple with Tajín, Dipped Strawberry Cheesecake and Confetti Cake. A Small typically costs about $5.29. Not every flavor runs at every store at the same time.' },
+  { q: 'Do seasonal Blizzards cost more than regular ones?', a: 'Usually. A Small summer flavor or Pumpkin Pie is about $5.29, which is 80 cents more than a Small Oreo at about $4.49. The winter peppermint flavors are about $4.79 for a Small, 30 cents more. Prices vary by location.' },
+  { q: 'Can I order a seasonal Blizzard when it is out of season?', a: 'Not the official version, but many stores can build something close from ingredients they stock. For example, ask for a Vanilla Blizzard with graham pieces, marshmallow topping and chocolate to copy the S’mores Blizzard.' },
+];
+---
+<BlogPost
+  title="DQ Seasonal Blizzard Calendar: Summer, Fall & Winter"
+  description="Which Dairy Queen Blizzards are year-round and which are seasonal: summer, fall and winter flavors with typical Small prices and calories."
+  h1="Dairy Queen Seasonal Blizzard Calendar: What Is Year-Round and What Rotates"
+  crumb="Seasonal Blizzards"
+  eyebrow="Blizzards by season"
+  image="/Images/pumpkin-pie-blizzard.webp"
+  imageAlt="Dairy Queen Pumpkin Pie Blizzard with whipped topping"
+  datePublished="2026-10-21"
+  dateModified="2026-10-21"
+  faqs={faqs}
+>
+  <p class="lead"><strong>Dairy Queen keeps 14 Blizzard flavors on the menu all year (Oreo, Cookie Dough, Reese’s and the Royal Blizzards among them) and rotates the rest by season: fruity and campfire flavors in summer, Pumpkin Pie in fall, and peppermint and sugar cookie flavors around the winter holidays.</strong> Seasonal Blizzards usually cost a little more, and each store picks its own start and end dates. Below is every flavor we track, sorted by when you can expect it, with typical Small prices and calories.</p>
+
+  <h2 id="calendar-table">Every Blizzard by season: price and calories</h2>
+  <p>This table lists each Blizzard we track with its availability as shown on its page here, plus the typical price and calories for a Small. Prices are typical and vary by location.</p>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Flavor</th><th>Season / availability</th><th>Small price</th><th>Small calories</th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr><td><strong>{r.name}</strong></td><td>{r.season}</td><td class="price-cell">{r.small}</td><td>{r.cal}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>Mini, Medium and Large prices for every flavor are on our <a href="/categories/blizzard-treats">Dairy Queen Blizzard menu</a>. Seasonal flavors rotate, so you will never see all of them on the board at once.</p>
+
+  <h2 id="year-round">The year-round core lineup</h2>
+  <p><strong>Ten classic flavors and four Royal Blizzards are on the menu all year</strong>, so you can count on them in any month. These are the safe picks when the seasonal flavor of the moment is not for you.</p>
+  <ul>
+    <li><strong>Classic, about $4.49 for a Small:</strong> <a href="/items/oreo-blizzard">Oreo Cookie</a> (420 calories), Chocolate Chip Cookie Dough, Reese’s, M&amp;M’s, Butterfinger, Heath and Snickers.</li>
+    <li><strong>Premium, about $4.79 for a Small:</strong> Choco Brownie Extreme, Brownie Batter and Turtle Pecan Cluster.</li>
+    <li><strong>Royal, about $4.99 for a Small:</strong> Royal Oreo, Royal Reese’s, <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a> and <a href="/items/royal-rocky-road-trip-blizzard">Royal Rocky Road Trip</a>. Each has a filled center, such as hot fudge or peanut butter.</li>
+  </ul>
+  <p>Two more sit in between. The <a href="/items/mint-oreo-blizzard">Mint Oreo Blizzard</a> and the Strawberry Cheesequake are on the menu all year at some stores and only part of the year at others. If one of them is your regular order, check the app before you drive over.</p>
+  <p>Wondering which of the core flavors is best? Our <a href="/blog/best-blizzard-flavors-ranked">Blizzard flavors ranked</a> post puts Oreo first, followed by Cookie Dough and Turtle Pecan Cluster.</p>
+
+  <h2 id="summer">Summer Blizzards</h2>
+  <p><strong>Summer has the most seasonal Blizzards: six flavors, all about $5.29 for a Small.</strong> That is 80 cents more than a Small Oreo, and a summer Mini (about $4.49) costs a full dollar more than an Oreo Mini (about $3.49). Here is what to expect:</p>
+  <ul>
+    <li><a href="/items/smores-blizzard">S’mores</a> (500 calories): graham pieces, marshmallow and chocolate. One of the most-requested summer flavors.</li>
+    <li><a href="/items/cotton-candy-blizzard">Cotton Candy</a> (460 calories): very sweet and very bright, a kid favorite.</li>
+    <li><a href="/items/confetti-cake-blizzard">Confetti Cake</a> (490 calories): cake pieces and rainbow sprinkles, the other kid favorite.</li>
+    <li><a href="/items/mixing-bowl-mashup-blizzard">Mixing Bowl Mashup</a> (520 calories): cookie dough, chocolate cookie pieces, peanut butter cups and fudge in one cup.</li>
+    <li><a href="/items/swicy-pineapple-tajin-blizzard">Swicy Pineapple with Tajín</a> (430 calories): pineapple with a mild chili-lime kick. It is the lightest summer flavor.</li>
+    <li><a href="/items/dipped-strawberry-cheesecake-blizzard">Dipped Strawberry Cheesecake</a> (540 calories): strawberry cheesecake pieces with chocolate.</li>
+  </ul>
+  <p>Not every store runs every summer flavor at the same time, so the DQ summer Blizzard menu in your town may only show a few of these. If you are counting calories, Swicy Pineapple and Cotton Candy are the lighter picks. For the most mix-ins per cup, Mixing Bowl Mashup packs four of them.</p>
+
+  <h2 id="fall">Fall Blizzards</h2>
+  <p><strong>Fall belongs to the <a href="/items/pumpkin-pie-blizzard">Pumpkin Pie Blizzard</a>, which usually runs around September through November.</strong> It is DQ’s best-known fall flavor: pumpkin pie pieces and pie crust blended into vanilla soft serve, with whipped topping on top.</p>
+  <ul>
+    <li><strong>Price:</strong> about $4.49 Mini, $5.29 Small, $6.09 Medium and $6.79 Large.</li>
+    <li><strong>Calories:</strong> about 490 for a Small and about 1,030 for a Large.</li>
+  </ul>
+  <p>If you are asking when the Pumpkin Pie Blizzard comes back, the short answer is each fall, but stores set their own dates. Some start earlier and some keep it later, and once the holiday season starts, Peppermint Bark usually takes its place. Open the DQ app, pick your store and look at the Blizzard list to confirm before you go.</p>
+
+  <h2 id="winter">Winter and holiday Blizzards</h2>
+  <p><strong>Winter brings three flavors, each about $4.79 for a Small:</strong> two peppermint Blizzards and a sugar cookie one. They cost 30 cents more than a Small Oreo, so they are the cheapest of the seasonal flavors.</p>
+  <ul>
+    <li><a href="/items/peppermint-bark-blizzard">Peppermint Bark</a> (500 calories): chocolate and peppermint candy pieces. This is the one most people mean when they search for the peppermint Blizzard at Dairy Queen.</li>
+    <li><a href="/items/peppermint-hot-cocoa-blizzard">Peppermint Hot Cocoa</a> (480 calories): cocoa fudge pieces with peppermint candy. It is cold like any Blizzard; the name describes the flavor.</li>
+    <li><a href="/items/frosted-sugar-cookie-blizzard">Frosted Sugar Cookie</a> (510 calories): sugar cookie pieces, icing and sprinkles. Look for it around the winter holidays.</li>
+  </ul>
+  <p>Pick Peppermint Bark for more candy and Peppermint Hot Cocoa for more chocolate. Both cost the same at every size. If you are sharing a Large, Peppermint Bark is the lighter of the two (about 950 calories vs. about 990).</p>
+
+  <h2 id="limited-time">Limited-time flavors and the Blizzard of the Month</h2>
+  <p><strong>Some Blizzards are not tied to a season at all.</strong> The <a href="/items/banana-cream-pie-blizzard">Banana Cream Pie Blizzard</a> (about $4.79 and 540 calories for a Small) is a limited-time flavor that comes and goes, and it is rarely on the menu at the same time as Pumpkin Pie.</p>
+  <p>Many stores also promote a Blizzard of the Month. We do not publish a fixed Blizzard of the Month schedule, because the featured flavor changes and can differ from store to store. The quickest way to see your store’s current pick is the DQ app. Our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app rewards guide</a> explains how to find those deals.</p>
+
+  <h2 id="swaps">Year-round swaps when your flavor is gone</h2>
+  <p><strong>When a seasonal flavor leaves, a year-round Blizzard can usually get you close.</strong> These are the nearest matches on the regular menu:</p>
+  <ul>
+    <li><strong>S’mores:</strong> Royal Rocky Road Trip has marshmallow and chocolate, about $4.99 and 530 calories for a Small.</li>
+    <li><strong>Dipped Strawberry Cheesecake:</strong> Royal New York Cheesecake, about $4.99 and 460 calories for a Small.</li>
+    <li><strong>Peppermint Hot Cocoa:</strong> Choco Brownie Extreme for pure chocolate, same price at about $4.79 for a Small.</li>
+    <li><strong>Peppermint Bark:</strong> Mint Oreo, where your store carries it, about $4.49 and 440 calories for a Small.</li>
+  </ul>
+
+  <h2 id="tips">Tips for catching seasonal Blizzards</h2>
+  <p><strong>The best tip is simple: check the DQ app for your exact store before you go.</strong> It shows what is on that store’s menu right now, which is more reliable than any calendar. A few more tips:</p>
+  <ol>
+    <li><strong>Try a Mini first.</strong> A new seasonal flavor is a gamble, and a Mini costs less while you decide.</li>
+    <li><strong>Ask for a retired flavor by its parts.</strong> Staff cannot ring up a flavor that is off the menu, but they can often blend its ingredients into a Vanilla Blizzard. For S’mores, ask for a Small Vanilla Blizzard with graham pieces, marshmallow topping and chocolate pieces. Our <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> has more builds and explains how to order them politely.</li>
+    <li><strong>Plan cakes around the season.</strong> Blizzard cake flavors vary by store and season, and many stores sell heart-shaped cakes around Valentine’s Day plus Christmas and Halloween designs. Popular holiday designs sell out, so call ahead or check the app about a week before. Prices and sizes are on our <a href="/categories/dq-cakes">DQ cake menu</a>.</li>
+    <li><strong>Go when it is quiet.</strong> Custom builds are easier mid-afternoon than during the lunch or dinner rush.</li>
+  </ol>
+
+  <p>Prices on this site are typical and vary by location. Seasonal dates are set by each store, so treat this calendar as a guide to what usually rotates in each season, not a promise of exact start and end dates.</p>
+</BlogPost>

@@ -28,7 +28,7 @@ CATEGORY_GUIDE = {
     '/categories/classic-treats': '/blog/dairy-queen-ice-cream-vs-soft-serve',
     '/categories/dq-cakes': '/blog/dq-cakes-complete-guide',
     '/categories/drinks': '/blog/dq-shake-moolatte-guide',
-    '/categories/kids-meals': '/blog/dq-meal-deals-guide',
+    '/categories/kids-meals': '/blog/dairy-queen-kids-menu-guide',
     '/categories/snacks-sides': '/blog/dairy-queen-calories-nutrition-guide',
     '/combos': '/blog/dq-meal-deals-guide',
 }
@@ -47,22 +47,28 @@ BLOG_TITLES = {
     '/blog/dq-gluten-free-allergen-guide': 'DQ gluten-free & allergen guide',
     '/blog/dq-meal-deals-guide': 'DQ $7 Meal Deal & 2 for $5 guide',
     '/blog/dq-shake-moolatte-guide': 'DQ shakes & MooLatté guide',
+    '/blog/cheapest-dairy-queen-menu': 'Cheapest things to order at DQ',
+    '/blog/dq-seasonal-blizzard-calendar': 'DQ seasonal Blizzard calendar',
+    '/blog/dairy-queen-kids-menu-guide': 'Dairy Queen kids menu guide',
 }
 
 BLOG_RELATED = {
-    '/blog/best-blizzard-flavors-ranked': ['/categories/blizzard-treats', '/items/oreo-blizzard', '/items/choco-brownie-blizzard', '/categories/dq-cakes', '/blog/dairy-queen-secret-menu'],
+    '/blog/best-blizzard-flavors-ranked': ['/categories/blizzard-treats', '/items/oreo-blizzard', '/blog/dq-seasonal-blizzard-calendar', '/categories/dq-cakes', '/blog/dairy-queen-secret-menu'],
     '/blog/best-dairy-queen-burgers-ranked': ['/categories/burgers-sandwiches', '/items/flamethrower-stackburger', '/blog/dq-meal-deals-guide', '/combos', '/blog/dairy-queen-calories-nutrition-guide'],
     '/blog/dairy-queen-app-rewards-hacks': ['/blog/dq-meal-deals-guide', '/combos', '/items/7-meal-deal', '/blog/dairy-queen-price-inflation-report', '/categories/blizzard-treats'],
     '/blog/dairy-queen-calories-nutrition-guide': ['/blog/dq-gluten-free-allergen-guide', '/categories/burgers-sandwiches', '/categories/blizzard-treats', '/items/side-salad', '/blog/dairy-queen-ice-cream-vs-soft-serve'],
     '/blog/dairy-queen-ice-cream-vs-soft-serve': ['/categories/classic-treats', '/items/vanilla-soft-serve-cone', '/blog/best-blizzard-flavors-ranked', '/blog/dairy-queen-calories-nutrition-guide'],
-    '/blog/dairy-queen-price-inflation-report': ['/price-history', '/blog/dq-meal-deals-guide', '/combos', '/blog/dairy-queen-app-rewards-hacks', '/categories/dq-cakes'],
+    '/blog/dairy-queen-price-inflation-report': ['/price-history', '/blog/dq-meal-deals-guide', '/blog/cheapest-dairy-queen-menu', '/blog/dairy-queen-app-rewards-hacks', '/categories/dq-cakes'],
     '/blog/dairy-queen-secret-menu': ['/blog/best-blizzard-flavors-ranked', '/categories/blizzard-treats', '/categories/drinks', '/blog/dq-shake-moolatte-guide'],
     '/blog/dq-breakfast-hours-menu': ['/categories/breakfast', '/items/breakfast-burrito', '/items/country-breakfast-platter', '/blog/dq-meal-deals-guide'],
     '/blog/dq-cakes-complete-guide': ['/categories/dq-cakes', '/items/oreo-blizzard-cake', '/items/dq-cake-round-8inch', '/items/dq-sheet-cake', '/blog/best-blizzard-flavors-ranked'],
     '/blog/dq-chicken-strip-baskets-review': ['/categories/chicken-strip-baskets', '/items/chicken-strip-basket-4pc', '/items/chicken-strip-basket-6pc', '/blog/dq-meal-deals-guide'],
     '/blog/dq-gluten-free-allergen-guide': ['/blog/dairy-queen-calories-nutrition-guide', '/items/non-dairy-dilly-bar', '/categories/classic-treats', '/items/side-salad'],
-    '/blog/dq-meal-deals-guide': ['/combos', '/items/7-meal-deal', '/items/2-for-5-mix-match', '/blog/dairy-queen-app-rewards-hacks', '/categories/kids-meals'],
+    '/blog/dq-meal-deals-guide': ['/combos', '/items/7-meal-deal', '/items/2-for-5-mix-match', '/blog/cheapest-dairy-queen-menu', '/blog/dairy-queen-kids-menu-guide'],
     '/blog/dq-shake-moolatte-guide': ['/categories/drinks', '/items/moolatte', '/items/chocolate-shake', '/blog/dairy-queen-calories-nutrition-guide'],
+    '/blog/cheapest-dairy-queen-menu': ['/blog/dq-meal-deals-guide', '/combos', '/items/2-for-5-mix-match', '/blog/dairy-queen-app-rewards-hacks', '/blog/dairy-queen-kids-menu-guide'],
+    '/blog/dq-seasonal-blizzard-calendar': ['/categories/blizzard-treats', '/blog/best-blizzard-flavors-ranked', '/items/pumpkin-pie-blizzard', '/blog/dairy-queen-secret-menu'],
+    '/blog/dairy-queen-kids-menu-guide': ['/categories/kids-meals', '/items/kids-cheeseburger-meal', '/blog/dq-gluten-free-allergen-guide', '/blog/cheapest-dairy-queen-menu'],
 }
 
 

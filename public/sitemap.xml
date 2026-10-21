@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.thequeendairymenu.us/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -76,6 +76,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/blog/cheapest-dairy-queen-menu</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-app-rewards-hacks</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
@@ -88,6 +93,11 @@
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-ice-cream-vs-soft-serve</loc>
     <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-kids-menu-guide</loc>
+    <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -123,6 +133,11 @@
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-meal-deals-guide</loc>
     <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dq-seasonal-blizzard-calendar</loc>
+    <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

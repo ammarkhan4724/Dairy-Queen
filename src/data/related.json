@@ -1747,8 +1747,8 @@
    "href": "/items/oreo-blizzard"
   },
   {
-   "title": "Choco Brownie Blizzard",
-   "href": "/items/choco-brownie-blizzard"
+   "title": "DQ seasonal Blizzard calendar",
+   "href": "/blog/dq-seasonal-blizzard-calendar"
   },
   {
    "title": "DQ cake sizes, servings & prices",
@@ -1853,8 +1853,8 @@
    "href": "/blog/dq-meal-deals-guide"
   },
   {
-   "title": "DQ meal deals & combos",
-   "href": "/combos"
+   "title": "Cheapest things to order at DQ",
+   "href": "/blog/cheapest-dairy-queen-menu"
   },
   {
    "title": "DQ app rewards guide",
@@ -1973,12 +1973,12 @@
    "href": "/items/2-for-5-mix-match"
   },
   {
-   "title": "DQ app rewards guide",
-   "href": "/blog/dairy-queen-app-rewards-hacks"
+   "title": "Cheapest things to order at DQ",
+   "href": "/blog/cheapest-dairy-queen-menu"
   },
   {
-   "title": "Kids meals menu & prices",
-   "href": "/categories/kids-meals"
+   "title": "Dairy Queen kids menu guide",
+   "href": "/blog/dairy-queen-kids-menu-guide"
   }
  ],
  "/blog/dq-shake-moolatte-guide": [
@@ -1997,6 +1997,64 @@
   {
    "title": "Dairy Queen calories & nutrition guide",
    "href": "/blog/dairy-queen-calories-nutrition-guide"
+  }
+ ],
+ "/blog/cheapest-dairy-queen-menu": [
+  {
+   "title": "DQ $7 Meal Deal & 2 for $5 guide",
+   "href": "/blog/dq-meal-deals-guide"
+  },
+  {
+   "title": "DQ meal deals & combos",
+   "href": "/combos"
+  },
+  {
+   "title": "2 For 5 Mix Match",
+   "href": "/items/2-for-5-mix-match"
+  },
+  {
+   "title": "DQ app rewards guide",
+   "href": "/blog/dairy-queen-app-rewards-hacks"
+  },
+  {
+   "title": "Dairy Queen kids menu guide",
+   "href": "/blog/dairy-queen-kids-menu-guide"
+  }
+ ],
+ "/blog/dq-seasonal-blizzard-calendar": [
+  {
+   "title": "Blizzard Treats menu & prices",
+   "href": "/categories/blizzard-treats"
+  },
+  {
+   "title": "Best Blizzard flavors, ranked",
+   "href": "/blog/best-blizzard-flavors-ranked"
+  },
+  {
+   "title": "Pumpkin Pie Blizzard",
+   "href": "/items/pumpkin-pie-blizzard"
+  },
+  {
+   "title": "Dairy Queen secret menu",
+   "href": "/blog/dairy-queen-secret-menu"
+  }
+ ],
+ "/blog/dairy-queen-kids-menu-guide": [
+  {
+   "title": "Kids meals menu & prices",
+   "href": "/categories/kids-meals"
+  },
+  {
+   "title": "Kids Cheeseburger Meal",
+   "href": "/items/kids-cheeseburger-meal"
+  },
+  {
+   "title": "DQ gluten-free & allergen guide",
+   "href": "/blog/dq-gluten-free-allergen-guide"
+  },
+  {
+   "title": "Cheapest things to order at DQ",
+   "href": "/blog/cheapest-dairy-queen-menu"
   }
  ]
 }
