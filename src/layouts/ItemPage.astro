@@ -4,6 +4,7 @@
 import Layout from './Layout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { DEPTH } from '../data/item-depth';
+import { NUTRITION, NUTRITION_AS_OF, NUTRITION_SOURCE } from '../data/nutrition';
 
 interface Faq { q: string; a: string }
 interface Props {
@@ -26,6 +27,7 @@ const { title, description, name, category, image, imageAlt, badges = [], quick,
 const slug = Astro.url.pathname.replace(/(\.html)?\/?$/, '').split('/').pop() ?? '';
 const depth = DEPTH[slug];
 const faqs = [...baseFaqs, ...(depth?.faqs ?? [])];
+const nutrition = NUTRITION[slug];
 // H1 carries the brand; breadcrumb keeps the short item name.
 const heading = /^(DQ|Dairy Queen)\b/i.test(name) ? name : `Dairy Queen ${name}`;
 const schema = {
@@ -67,6 +69,21 @@ const schema = {
           <thead><tr>{table.head.map((h) => <th>{h}</th>)}</tr></thead>
           <tbody>{table.rows.map((r) => <tr>{r.map((c, i) => i === 0 ? <td><strong set:html={c} /></td> : <td set:html={c} />)}</tr>)}</tbody>
         </table></div>
+      </div>
+    </div>
+  </section>
+)}
+
+{nutrition && (
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" id="nutrition">{name} nutrition facts</h2>
+      <div style="max-width:860px;margin:0 auto;">
+        <div class="table-wrap"><table class="size-table">
+          <thead><tr><th>Size</th><th>Calories</th><th>Fat (g)</th><th>Sat. fat (g)</th><th>Sodium (mg)</th><th>Carbs (g)</th><th>Sugars (g)</th><th>Protein (g)</th></tr></thead>
+          <tbody>{nutrition.map((r) => <tr><td><strong>{r.label}</strong></td><td>{r.cal.toLocaleString('en-US')}</td><td>{r.fat}</td><td>{r.satFat}</td><td>{r.sodium.toLocaleString('en-US')}</td><td>{r.carbs}</td><td>{r.sugars}</td><td>{r.protein}</td></tr>)}</tbody>
+        </table></div>
+        <p style="font-size:.85rem;color:#64748B;margin-top:10px;">Source: <a href={NUTRITION_SOURCE} rel="nofollow noopener" target="_blank">Dairy Queen U.S. nutrition information</a>, current as of {NUTRITION_AS_OF} per DQ. Recipes and portions can vary by store.</p>
       </div>
     </div>
   </section>

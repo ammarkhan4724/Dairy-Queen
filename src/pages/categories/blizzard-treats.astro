@@ -6,27 +6,27 @@ import { LAST_CHECKED } from '../../data/site';
 // Prices (Mini/Small/Medium/Large) and Small calories match each item page.
 type Row = { name: string; href: string; p: [string, string, string, string]; cal: string; note?: string };
 const core: Row[] = [
-  { name: 'Oreo Cookie', href: '/items/oreo-blizzard', p: ['$3.49', '$4.49', '$5.49', '$5.99'], cal: '420', note: 'Most popular' },
-  { name: 'Chocolate Chip Cookie Dough', href: '/items/cookie-dough-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '590' },
-  { name: 'Reese’s Peanut Butter Cup', href: '/items/reeses-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '600' },
-  { name: 'M&M’s Milk Chocolate', href: '/items/mm-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '490' },
-  { name: 'Butterfinger', href: '/items/butterfinger-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '470' },
-  { name: 'Heath', href: '/items/heath-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '480' },
-  { name: 'Snickers', href: '/items/snickers-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '500' },
-  { name: 'Mint Oreo', href: '/items/mint-oreo-blizzard', p: ['$3.49', '$4.49', '$5.49', '$5.99'], cal: '~440' },
-  { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '510' },
+  { name: 'Oreo Cookie', href: '/items/oreo-blizzard', p: ['$3.49', '$4.49', '$5.49', '$5.99'], cal: '600', note: 'Most popular' },
+  { name: 'Chocolate Chip Cookie Dough', href: '/items/cookie-dough-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '710' },
+  { name: 'Reese’s Peanut Butter Cup', href: '/items/reeses-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '610' },
+  { name: 'M&M’s Milk Chocolate', href: '/items/mm-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '660' },
+  { name: 'Butterfinger', href: '/items/butterfinger-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '590' },
+  { name: 'Heath', href: '/items/heath-blizzard', p: ['$3.49', '$4.49', '$5.29', '$5.99'], cal: '640' },
+  { name: 'Snickers', href: '/items/snickers-blizzard', p: ['$3.49', '$4.49', '$5.49', '$6.49'], cal: '610' },
+  { name: 'Mint Oreo', href: '/items/mint-oreo-blizzard', p: ['$3.49', '$4.49', '$5.49', '$5.99'], cal: '640' },
+  { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '740' },
   { name: 'Brownie Batter', href: '/items/brownie-batter-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '530' },
-  { name: 'Turtle Pecan Cluster', href: '/items/turtle-pecan-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '570' },
+  { name: 'Turtle Pecan Cluster', href: '/items/turtle-pecan-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '680' },
   { name: 'Strawberry Cheesequake', href: '/items/strawberry-cheesequake-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~520' },
 ];
 const royal: Row[] = [
   { name: 'Royal Oreo', href: '/items/royal-oreo-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '490', note: 'Fudge center' },
   { name: 'Royal Reese’s', href: '/items/royal-reeses-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '620', note: 'Peanut butter center' },
-  { name: 'Royal New York Cheesecake', href: '/items/royal-new-york-cheesecake-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '460', note: 'Strawberry center' },
+  { name: 'Royal New York Cheesecake', href: '/items/royal-new-york-cheesecake-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '750', note: 'Strawberry center' },
   { name: 'Royal Rocky Road Trip', href: '/items/royal-rocky-road-trip-blizzard', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: '530', note: 'Fudge center' },
 ];
 const seasonal: Row[] = [
-  { name: 'Pumpkin Pie', href: '/items/pumpkin-pie-blizzard', p: ['$4.49', '$5.29', '$6.09', '$6.79'], cal: '490', note: 'Fall' },
+  { name: 'Pumpkin Pie', href: '/items/pumpkin-pie-blizzard', p: ['$4.49', '$5.29', '$6.09', '$6.79'], cal: '560', note: 'Fall' },
   { name: 'Peppermint Bark', href: '/items/peppermint-bark-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '500', note: 'Winter' },
   { name: 'Peppermint Hot Cocoa', href: '/items/peppermint-hot-cocoa-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~480', note: 'Winter' },
   { name: 'Frosted Sugar Cookie', href: '/items/frosted-sugar-cookie-blizzard', p: ['$3.99', '$4.79', '$5.79', '$6.49'], cal: '~510', note: 'Holiday' },
@@ -103,10 +103,10 @@ const faqSchema = {
 
     <h2 id="sizes">Blizzard sizes: which one to order</h2>
     <ul>
-      <li><strong>Mini:</strong> about 300–400 calories. Good after a meal or to try a new flavor.</li>
+      <li><strong>Mini:</strong> about 330–450 calories. Good after a meal or to try a new flavor.</li>
       <li><strong>Small:</strong> the everyday size for one person.</li>
       <li><strong>Medium:</strong> a big dessert for one, or a share for two.</li>
-      <li><strong>Large:</strong> around 900–1,200 calories. Best for sharing.</li>
+      <li><strong>Large:</strong> around 950–1,400 calories. Best for sharing.</li>
     </ul>
     <p>Calories for every size are on each flavor’s page, and our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> compares lighter options.</p>
 

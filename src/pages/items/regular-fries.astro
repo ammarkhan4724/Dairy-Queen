@@ -3,24 +3,24 @@
 import ItemPage from '../../layouts/ItemPage.astro';
 
 const faqs = [
-  { q: "How much are fries at Dairy Queen?", a: "About $2.49 for a small, $2.99 for a medium and $3.49 for a large. Prices vary by location." },
+  { q: "How much are fries at Dairy Queen?", a: "About $2.49 for a regular and $3.49 for a large. Prices vary by location." },
   { q: "Are Dairy Queen fries gluten-free?", a: "Potatoes do not contain gluten, but fries often share fryer oil with breaded foods, so they are not safe for celiac disease unless your store confirms a separate fryer." },
 ];
 ---
 <ItemPage
   title="Dairy Queen Fries: Price, Sizes & Calories (2026)"
-  description="Dairy Queen fries cost about $2.49 small, $2.99 medium and $3.49 large. Calories by size and which meals include them."
+  description="Dairy Queen fries cost about $2.49 regular and $3.49 large. Calories by size and which meals include them."
   name="French Fries"
   category={{ name: "Snacks & Sides", href: "/categories/snacks-sides" }}
   image="/Images/regular-fries.webp"
   imageAlt="Dairy Queen french fries"
   badges={["In most DQ meals"]}
-  quick="Fries at Dairy Queen cost about $2.49 for a small, $2.99 for a medium and $3.49 for a large. A small has about 260 calories. Fries come with chicken strip baskets and the $7 Meal Deal. Prices vary by location."
+  quick="Fries at Dairy Queen cost about $2.49 for a regular and $3.49 for a large. A regular has about 280 calories. Fries come with chicken strip baskets and the $7 Meal Deal. Prices vary by location."
   from="From $2.49"
-  intro="Classic salted french fries. They come with chicken strip baskets and the $7 Meal Deal, and you can buy them on their own in three sizes."
-  spec={[["Sizes", "Small · Medium · Large"], ["Calories (small)", "260"], ["Included with", "Chicken strip baskets, $7 Meal Deal"]]}
-  table={{"title": "fries price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Small", "$2.49", "260"], ["Medium", "$2.99", "370"], ["Large", "$3.49", "480"]]}}
+  intro="Classic salted french fries. They come with chicken strip baskets and the $7 Meal Deal, and you can buy them on their own in two sizes."
+  spec={[["Sizes", "Regular · Large"], ["Calories (regular)", "280"], ["Included with", "Chicken strip baskets, $7 Meal Deal"]]}
+  table={{"title": "fries price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Regular", "$2.49", "280"], ["Large", "$3.49", "450"]]}}
   faqs={faqs}
 >
-<h2>DQ sides compared</h2><div class="table-wrap"><table class="size-table"><thead><tr><th>Side</th><th>Typical price</th><th>Calories</th></tr></thead><tbody><tr><td><a href="/items/side-salad">Side salad (no dressing)</a></td><td>$3.29</td><td>90</td></tr><tr><td><strong><a href="/items/regular-fries">Small fries</a></strong></td><td>$2.49</td><td>260</td></tr><tr><td><a href="/items/onion-rings">Onion rings</a></td><td>$3.29</td><td>~400</td></tr><tr><td><a href="/items/pretzel-sticks-queso">Pretzel sticks with queso</a></td><td>$3.99</td><td>440</td></tr><tr><td><a href="/items/cheese-curds">Cheese curds</a></td><td>$3.99</td><td>470</td></tr></tbody></table></div><p>Fries are a weak pick on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a> because they are already cheap. Choose chicken strips or pretzel sticks instead.</p><p>See every side on the <a href="/categories/snacks-sides">DQ snacks and sides menu</a>.</p>
+<h2>DQ sides compared</h2><div class="table-wrap"><table class="size-table"><thead><tr><th>Side</th><th>Typical price</th><th>Calories</th></tr></thead><tbody><tr><td><a href="/items/side-salad">Side salad (no dressing)</a></td><td>$3.29</td><td>20</td></tr><tr><td><strong><a href="/items/regular-fries">Regular fries</a></strong></td><td>$2.49</td><td>280</td></tr><tr><td><a href="/items/onion-rings">Onion rings (regular)</a></td><td>$3.29</td><td>290</td></tr><tr><td><a href="/items/pretzel-sticks-queso">Pretzel sticks with queso</a></td><td>$3.99</td><td>340</td></tr><tr><td><a href="/items/cheese-curds">Cheese curds</a></td><td>$3.99</td><td>500</td></tr></tbody></table></div><p>Fries are a weak pick on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a> because they are already cheap. Choose chicken strips or pretzel sticks instead.</p><p>See every side on the <a href="/categories/snacks-sides">DQ snacks and sides menu</a>.</p>
 </ItemPage>

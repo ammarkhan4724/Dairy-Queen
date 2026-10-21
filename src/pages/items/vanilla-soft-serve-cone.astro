@@ -3,26 +3,26 @@
 import ItemPage from '../../layouts/ItemPage.astro';
 
 const faqs = [
-  { q: "How much is a vanilla cone at Dairy Queen?", a: "About $1.79 for a small, $2.39 for a regular and $2.99 for a large. Prices vary by location." },
-  { q: "How many calories are in a Dairy Queen vanilla cone?", a: "About 170 calories for a small, 230 for a regular and 340 for a large." },
+  { q: "How much is a vanilla cone at Dairy Queen?", a: "About $1.79 for a kids’ cone, $2.39 for a small and $2.99 for a medium. Prices vary by location." },
+  { q: "How many calories are in a Dairy Queen vanilla cone?", a: "About 160 calories for a kids’ cone, 220 for a small and 320 for a medium." },
   { q: "What is DQ soft serve made of?", a: "Milk, milkfat, sugar, corn syrup, whey and stabilizers that keep it smooth. It has about 5% butterfat, which is why it is called soft serve and not ice cream." },
 ];
 ---
 <ItemPage
   title="Dairy Queen Vanilla Cone: Price, Sizes & Calories"
-  description="A Dairy Queen vanilla cone costs about $1.79 small, $2.39 regular and $2.99 large. Calories by size, the curl on top and dipped cone options."
+  description="A Dairy Queen vanilla cone costs about $1.79 kids’, $2.39 small and $2.99 medium. Calories by size, the curl on top and dipped cone options."
   name="Vanilla Soft Serve Cone"
   category={{ name: "Classic Treats", href: "/categories/classic-treats" }}
   image="/Images/vanilla-soft-serve-cone.webp"
   imageAlt="Dairy Queen vanilla soft serve cone with the curl on top"
   badges={["Every DQ", "Since 1940"]}
-  quick="A Dairy Queen vanilla cone costs about $1.79 for a small, $2.39 for a regular and $2.99 for a large. A regular cone has about 230 calories. Cones are sold at every DQ, including Treat-only stores. Prices vary by location."
+  quick="A Dairy Queen vanilla cone costs about $1.79 for a kids’ cone, $2.39 for a small and $2.99 for a medium. A small cone has about 220 calories. Cones are sold at every DQ, including Treat-only stores. Prices vary by location."
   from="From $1.79"
   intro="The original DQ treat: vanilla soft serve on a cake cone with the curl on top. It is the cheapest way to get a taste of Dairy Queen and is sold at every location."
-  spec={[["Sizes", "Small · Regular · Large"], ["Calories (regular)", "230"], ["Cone", "Cake cone"]]}
+  spec={[["Sizes", "Kids’ · Small · Medium"], ["Calories (small)", "220"], ["Cone", "Cake cone"]]}
   allergens="Milk, Wheat, Soy"
-  table={{"title": "vanilla cone price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Small", "$1.79", "170"], ["Regular", "$2.39", "230"], ["Large", "$2.99", "340"]]}}
+  table={{"title": "vanilla cone price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Kids’", "$1.79", "160"], ["Small", "$2.39", "220"], ["Medium", "$2.99", "320"]]}}
   faqs={faqs}
 >
-<h2>Plain, dipped or in a cup?</h2><ul><li>A <a href="/items/chocolate-dipped-cone">chocolate dipped cone</a> adds a crunchy chocolate shell for about 80 cents more.</li><li>Ask for it in a cup if you want to skip the cone.</li><li>A small cone (about 170 calories) is one of the lightest treats at DQ.</li></ul><h2>Is it real ice cream?</h2><p>Not by the legal definition, because it has less than 10% milkfat. We explain why in <a href="/blog/dairy-queen-ice-cream-vs-soft-serve">Is DQ soft serve ice cream?</a></p><p>See every cone, sundae and novelty on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
+<h2>Plain, dipped or in a cup?</h2><ul><li>A <a href="/items/chocolate-dipped-cone">chocolate dipped cone</a> adds a crunchy chocolate shell for about 80 cents more.</li><li>Ask for it in a cup if you want to skip the cone.</li><li>A kids’ cone (about 160 calories) is one of the lightest treats at DQ.</li></ul><h2>Is it real ice cream?</h2><p>Not by the legal definition, because it has less than 10% milkfat. We explain why in <a href="/blog/dairy-queen-ice-cream-vs-soft-serve">Is DQ soft serve ice cream?</a></p><p>See every cone, sundae and novelty on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
 </ItemPage>

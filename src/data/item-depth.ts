@@ -10,17 +10,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Oreo Blizzard vs. Royal Oreo Blizzard: which one to order',
-        html: `<p>The regular Oreo Blizzard is the better everyday pick, and the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> is the one to order when you want a sundae-style treat. A Small Oreo costs about $4.49 and has about 420 calories. The Small Royal Oreo costs about $4.99 and has about 490 calories, because it adds a hot fudge-filled center.</p>
+        html: `<p>The regular Oreo Blizzard is the better everyday pick, and the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> is the one to order when you want a sundae-style treat. A Small Oreo costs about $4.49 and has 600 calories. The Small Royal Oreo costs about $4.99 and adds a hot fudge-filled center.</p>
 <p>In practice, the fudge center changes how you eat it. The regular Oreo Blizzard tastes the same from top to bottom. The Royal version has a plain top half, then a warm pocket of fudge in the middle. If you like the fudge mixed through, stir it early.</p>`,
       },
       {
         h: 'Which size of Oreo Blizzard makes sense',
-        html: `<p>For one person after a meal, the Mini (about $3.49 and ~300 calories) is usually enough. The Small (about $4.49, 420 calories) is the size most people order as a stand-alone treat.</p>
-<p>The jump from Small to Medium is $1.00 for about 170 more calories, and the Large adds another 330 calories for 50 cents more. That makes the Large the best price per spoonful, but at about 920 calories it is really a size for sharing between two people.</p>`,
+        html: `<p>For one person after a meal, the Mini (about $3.49 and 330 calories) is usually enough. The Small (about $4.49, 600 calories) is the size most people order as a stand-alone treat.</p>
+<p>The jump from Small to Medium is $1.00 for about 220 more calories, and the Large adds another 230 calories for 50 cents more. That makes the Large the best price per spoonful, but at 1,050 calories it is really a size for sharing between two people.</p>`,
       },
       {
         h: 'Oreo Blizzard vs. Cookie Dough Blizzard',
-        html: `<p>The Oreo Blizzard is the lighter and crunchier of DQ’s two most-ordered flavors. A Small <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> costs the same $4.49 but has about 590 calories, roughly 170 more than the Oreo.</p>
+        html: `<p>The Oreo Blizzard is the lighter and crunchier of DQ’s two most-ordered flavors. A Small <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> costs the same $4.49 but has 710 calories, roughly 110 more than the Oreo.</p>
 <p>Texture is the real difference. Oreo pieces stay crisp, while cookie dough pieces are soft and chewy. If you cannot decide, many stores will blend half of each; see our <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> for how to ask.</p>`,
       },
     ],
@@ -34,13 +34,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Cookie Dough Blizzard vs. Oreo Blizzard',
-        html: `<p>The Cookie Dough Blizzard is the richer of the two classics, and the <a href="/items/oreo-blizzard">Oreo Blizzard</a> is the lighter one. Both cost about $4.49 for a Small, but the Cookie Dough Small has about 590 calories compared with about 420 for Oreo.</p>
+        html: `<p>The Cookie Dough Blizzard is the richer of the two classics, and the <a href="/items/oreo-blizzard">Oreo Blizzard</a> is the lighter one. Both cost about $4.49 for a Small, but the Cookie Dough Small has 710 calories compared with 600 for Oreo.</p>
 <p>The cookie dough pieces are soft and chewy and they stay that way in the cold, so every spoonful feels heavier. Oreo gives you crunch instead. If you want both, ask for a half-and-half blend.</p>`,
       },
       {
         h: 'Who the Cookie Dough Blizzard is for',
-        html: `<p>The Cookie Dough Blizzard suits people who like chewy mix-ins more than crunchy ones. It is also a good choice when sharing, because a Medium (about $5.49 and 800 calories) splits well between two.</p>
-<p>If you are watching calories, the Mini at about 410 calories gives you the same flavor in a smaller cup. The Large is about 1,180 calories, one of the highest on the year-round menu.</p>`,
+        html: `<p>The Cookie Dough Blizzard suits people who like chewy mix-ins more than crunchy ones. It is also a good choice when sharing, because a Medium (about $5.49 and 1,030 calories) splits well between two.</p>
+<p>If you are watching calories, the Mini at about 410 calories gives you the same flavor in a smaller cup. The Large is 1,370 calories, one of the highest on the year-round menu.</p>`,
       },
     ],
     faqs: [
@@ -52,13 +52,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Reese’s Blizzard vs. Royal Reese’s Blizzard',
-        html: `<p>The regular Reese’s Blizzard is the better value, and the <a href="/items/royal-reeses-blizzard">Royal Reese’s</a> is for people who want even more peanut butter. A Small Reese’s costs about $4.49 with about 600 calories. A Small Royal Reese’s costs about $4.99 with about 620 calories.</p>
-<p>The 20-calorie gap is small because the Royal center is a pocket of peanut butter filling, not extra candy. For 50 cents more you get a softer, gooier middle. If you mostly like the crunch of the cups, the regular version already delivers that.</p>`,
+        html: `<p>The regular Reese’s Blizzard is the better value, and the <a href="/items/royal-reeses-blizzard">Royal Reese’s</a> is for people who want even more peanut butter. A Small Reese’s costs about $4.49 with 610 calories. A Small Royal Reese’s costs about $4.99.</p>
+<p>The Royal center is a pocket of peanut butter filling, not extra candy. For 50 cents more you get a softer, gooier middle. If you mostly like the crunch of the cups, the regular version already delivers that.</p>`,
       },
       {
         h: 'How heavy is a Reese’s Blizzard?',
-        html: `<p>The Reese’s Blizzard is one of the heaviest year-round flavors, so size matters more than usual. A Mini is about 360 calories, a Small about 600, a Medium about 830 and a Large about 1,210.</p>
-<p>For a lighter peanut butter treat, the <a href="/items/butterfinger-blizzard">Butterfinger Blizzard</a> is about 470 calories for a Small at the same $4.49. A <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> gives you peanuts and fudge instead of peanut butter, at about 710 calories for $4.99.</p>`,
+        html: `<p>The Reese’s Blizzard sits near the lighter end of the year-round flavors, but size still makes a big difference. A Mini is 360 calories, a Small 610, a Medium 820 and a Large 1,080.</p>
+<p>For a lighter peanut butter treat, the <a href="/items/butterfinger-blizzard">Butterfinger Blizzard</a> is 590 calories for a Small at the same $4.49. A <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> gives you peanuts and fudge instead of peanut butter, at about 710 calories for $4.99.</p>`,
       },
     ],
     faqs: [
@@ -70,12 +70,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Is the Royal Oreo worth 50 cents more?',
-        html: `<p>The Royal Oreo Blizzard is worth the extra 50 cents if you like hot fudge, and not if you mainly order Blizzards for the cookie crunch. A Small Royal Oreo is about $4.99 and 490 calories, compared with $4.49 and 420 calories for the regular <a href="/items/oreo-blizzard">Oreo Blizzard</a>.</p>
+        html: `<p>The Royal Oreo Blizzard is worth the extra 50 cents if you like hot fudge, and not if you mainly order Blizzards for the cookie crunch. A Small Royal Oreo is about $4.99, compared with about $4.49 for the regular <a href="/items/oreo-blizzard">Oreo Blizzard</a>.</p>
 <p>The fudge center makes the Royal Oreo taste closer to a hot fudge sundae with cookies in it. That is also why some people find it too sweet in a Large, which is about 1,050 calories.</p>`,
       },
       {
         h: 'Royal Oreo vs. Choco Brownie Extreme',
-        html: `<p>For the most chocolate, the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> wins, while the Royal Oreo keeps more contrast between vanilla and chocolate. The Choco Brownie Extreme Small costs about $4.79 with 510 calories, 20 cents less than the Royal Oreo.</p>
+        html: `<p>For the most chocolate, the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> wins, while the Royal Oreo keeps more contrast between vanilla and chocolate. The Choco Brownie Extreme Small costs about $4.79 with 740 calories, 20 cents less than the Royal Oreo.</p>
 <p>Pick the Royal Oreo for crunch and a fudge center, or Choco Brownie Extreme for chewy brownie and a darker cocoa taste.</p>`,
       },
     ],
@@ -85,12 +85,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Is the M&M’s Blizzard good for kids?',
-        html: `<p>The M&M’s Blizzard is one of the easiest Blizzards for kids, because it is colorful, mild and costs about $3.49 for a Mini with about 310 calories. The candy shells stay crunchy, so it tastes more like vanilla with crunch than a heavy chocolate treat.</p>
-<p>For a parent and child sharing, a Small (about $4.49 and 490 calories) is usually enough. If a child has a peanut allergy, check DQ’s allergen list first, because M&M’s may share equipment with peanut candies.</p>`,
+        html: `<p>The M&M’s Blizzard is one of the easiest Blizzards for kids, because it is colorful, mild and costs about $3.49 for a Mini with 370 calories. The candy shells stay crunchy, so it tastes more like vanilla with crunch than a heavy chocolate treat.</p>
+<p>For a parent and child sharing, a Small (about $4.49 and 660 calories) is usually enough. If a child has a peanut allergy, check DQ’s allergen list first, because M&M’s may share equipment with peanut candies.</p>`,
       },
       {
         h: 'M&M’s Blizzard vs. Oreo Blizzard',
-        html: `<p>The <a href="/items/oreo-blizzard">Oreo Blizzard</a> is lighter and the M&M’s Blizzard is a bit cheaper at the bigger sizes. Both Smalls cost about $4.49, with about 420 calories for Oreo and 490 for M&M’s.</p>
+        html: `<p>The <a href="/items/oreo-blizzard">Oreo Blizzard</a> is lighter and the M&M’s Blizzard is a bit cheaper at the bigger sizes. Both Smalls cost about $4.49, with 600 calories for Oreo and 660 for M&M’s.</p>
 <p>At Medium, the M&M’s costs about $5.29 compared with $5.49 for Oreo, which is why it is a good pick when you are buying several Mediums for a group.</p>`,
       },
     ],
@@ -100,12 +100,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Butterfinger vs. Reese’s: which peanut butter Blizzard to get',
-        html: `<p>The Butterfinger Blizzard is the lighter, flakier peanut butter option, and the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is the richer, creamier one. Both cost about $4.49 for a Small, but Butterfinger has about 470 calories and Reese’s about 600.</p>
+        html: `<p>The Butterfinger Blizzard is the lighter, flakier peanut butter option, and the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is the richer, creamier one. Both cost about $4.49 for a Small, but Butterfinger has 590 calories and Reese’s 610.</p>
 <p>Butterfinger pieces are crisp and layered, so they soften faster in the soft serve. Eat it within a few minutes for the best crunch. Reese’s cups hold their shape longer and taste more like a candy bar.</p>`,
       },
       {
         h: 'Butterfinger Blizzard by size',
-        html: `<p>The Butterfinger Blizzard is one of the lighter year-round flavors at every size. A Mini is about 290 calories, a Medium about 650 and a Large about 990.</p>
+        html: `<p>The Butterfinger Blizzard is one of the lighter year-round flavors at every size. A Mini is 350 calories, a Medium 800 and a Large 1,060.</p>
 <p>The Medium costs about $5.29, 20 cents less than flavors like Oreo or Reese’s, so it is a quiet value pick for anyone who likes peanut butter.</p>`,
       },
     ],
@@ -115,13 +115,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Snickers Blizzard vs. Turtle Pecan Cluster',
-        html: `<p>The Snickers Blizzard is the cheaper caramel-and-nut option, and the <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster</a> is the less sweet one. A Small Snickers costs about $4.49 with 500 calories. A Small Turtle Pecan Cluster costs about $4.79 with 570 calories.</p>
+        html: `<p>The Snickers Blizzard is the cheaper caramel-and-nut option, and the <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster</a> is the less sweet one. A Small Snickers costs about $4.49 with 610 calories. A Small Turtle Pecan Cluster costs about $4.79 with 680 calories.</p>
 <p>Snickers brings chewy nougat and peanuts, while Turtle Pecan uses pecans, so it is not a swap for someone with a tree nut allergy. Both contain nuts.</p>`,
       },
       {
         h: 'When a Snickers Blizzard makes sense',
-        html: `<p>The Snickers Blizzard has the most texture of the candy-bar flavors, so it suits people who get bored halfway through a smoother Blizzard. A Mini (about 320 calories) works as a dessert after a meal.</p>
-<p>The Large is about $6.49 and 1,050 calories, the same price as the Large Reese’s. If you are sharing, a Medium at about $5.49 and 700 calories is the better buy.</p>`,
+        html: `<p>The Snickers Blizzard has the most texture of the candy-bar flavors, so it suits people who get bored halfway through a smoother Blizzard. A Mini (350 calories) works as a dessert after a meal.</p>
+<p>The Large is about $6.49 and 1,060 calories, the same price as the Large Reese’s. If you are sharing, a Medium at about $5.49 and 800 calories is the better buy.</p>`,
       },
     ],
   },
@@ -130,12 +130,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Turtle Pecan Cluster vs. Heath Blizzard',
-        html: `<p>The Turtle Pecan Cluster Blizzard is for people who want nuts and less sweetness, and the <a href="/items/heath-blizzard">Heath Blizzard</a> is the cheaper toffee-crunch pick. A Small Turtle Pecan costs about $4.79 with 570 calories, while a Small Heath costs about $4.49 with 480 calories.</p>
+        html: `<p>The Turtle Pecan Cluster Blizzard is for people who want nuts and less sweetness, and the <a href="/items/heath-blizzard">Heath Blizzard</a> is the cheaper toffee-crunch pick. A Small Turtle Pecan costs about $4.79 with 680 calories, while a Small Heath costs about $4.49 with 640 calories.</p>
 <p>Pecans stay crunchy instead of freezing hard like candy, and the salt balances the caramel and fudge. Heath toffee is sweeter and snaps more.</p>`,
       },
       {
         h: 'Who should skip the Turtle Pecan Cluster Blizzard',
-        html: `<p>Anyone with a tree nut allergy should skip the Turtle Pecan Cluster Blizzard, because it contains pecans. For a nut-free caramel treat, the <a href="/items/caramel-sundae">caramel sundae</a> is about $3.79 and 310 calories.</p>
+        html: `<p>Anyone with a tree nut allergy should skip the Turtle Pecan Cluster Blizzard, because it contains pecans. For a nut-free caramel treat, a medium <a href="/items/caramel-sundae">caramel sundae</a> is about $3.79 and 430 calories.</p>
 <p>It is also one of the pricier year-round flavors at the Mini size, about $3.99 compared with $3.49 for the classic candy flavors.</p>`,
       },
     ],
@@ -146,11 +146,11 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Who the Choco Brownie Extreme Blizzard is for',
         html: `<p>The Choco Brownie Extreme Blizzard is for serious chocolate fans who find most Blizzards too sweet. It has brownie pieces, chocolate chunks and cocoa fudge, so it tastes darker than flavors built around candy.</p>
-<p>A Mini is about $3.99 and 330 calories, which is the best way to try it. The Large is about $6.49 and 1,060 calories, so it is better shared.</p>`,
+<p>A Mini is about $3.99 and 420 calories, which is the best way to try it. The Large is about $6.49 and 1,330 calories, so it is better shared.</p>`,
       },
       {
         h: 'Choco Brownie Extreme vs. Royal Oreo',
-        html: `<p>The Choco Brownie Extreme gives you more chocolate, and the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> gives you crunch plus a fudge center. The Choco Brownie Extreme Small costs about $4.79 with 510 calories. The Royal Oreo Small costs about $4.99 with 490 calories.</p>
+        html: `<p>The Choco Brownie Extreme gives you more chocolate, and the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> gives you crunch plus a fudge center. The Choco Brownie Extreme Small costs about $4.79 with 740 calories. The Royal Oreo Small costs about $4.99 with 490 calories.</p>
 <p>If you want brownie but sweeter and softer, the <a href="/items/brownie-batter-blizzard">Brownie Batter Blizzard</a> costs the same $4.79 for a Small.</p>`,
       },
     ],
@@ -160,7 +160,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Brownie Batter vs. Choco Brownie Extreme',
-        html: `<p>The Brownie Batter Blizzard is the sweeter, softer brownie flavor, and the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> is the darker, chewier one. Both cost about $4.79 for a Small, with about 530 calories for Brownie Batter and 510 for Choco Brownie Extreme.</p>
+        html: `<p>The Brownie Batter Blizzard is the sweeter, softer brownie flavor, and the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> is the darker, chewier one. Both cost about $4.79 for a Small, with about 530 calories for Brownie Batter and 740 for Choco Brownie Extreme.</p>
 <p>Brownie Batter pieces taste like raw brownie mix, so the cup feels closer to licking the spoon. Choco Brownie Extreme uses baked brownie pieces and chocolate chunks.</p>`,
       },
       {
@@ -175,13 +175,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'How much does the $7 Meal Deal save?',
-        html: `<p>The $7 Meal Deal saves about $7.48 compared with buying the same items separately at typical prices. An <a href="/items/original-cheeseburger">Original Cheeseburger</a> is about $6.39, <a href="/items/regular-fries">small fries</a> about $2.49, a <a href="/items/soft-drinks">soft drink</a> from $2.11 and a small <a href="/items/hot-fudge-sundae">hot fudge sundae</a> about $3.49. That adds up to about $14.48.</p>
+        html: `<p>The $7 Meal Deal saves about $7.48 compared with buying the same items separately at typical prices. An <a href="/items/original-cheeseburger">Original Cheeseburger</a> is about $6.39, <a href="/items/regular-fries">regular fries</a> about $2.49, a <a href="/items/soft-drinks">soft drink</a> from $2.11 and a small <a href="/items/hot-fudge-sundae">hot fudge sundae</a> about $3.49. That adds up to about $14.48.</p>
 <p>Put another way, the cheeseburger on its own costs only about 61 cents less than the whole meal. If you were going to buy the burger anyway, the meal is almost always the better choice.</p>`,
       },
       {
         h: 'Cheeseburger or chicken strips in the $7 Meal Deal?',
-        html: `<p>Choose the chicken strips for more food and the cheeseburger for a lighter meal. The cheeseburger version is about 900 calories in total and the chicken version about 1,100.</p>
-<p>For comparison, a <a href="/items/chicken-strip-basket-4pc">4-piece Chicken Strip Basket</a> on its own costs about $9.99 and has about 1,000 calories, with no drink or dessert. The meal deal’s 3-piece chicken option is the cheaper way to get DQ chicken.</p>`,
+        html: `<p>Choose the chicken strips for more food and the cheeseburger for a lighter meal. The cheeseburger version is about 950 calories in total and the chicken version about 1,010.</p>
+<p>For comparison, a <a href="/items/chicken-strip-basket-4pc">4-piece Chicken Strip Basket</a> on its own costs about $9.99 and has 1,020 calories, with no drink or dessert. The meal deal’s 3-piece chicken option is the cheaper way to get DQ chicken.</p>`,
       },
     ],
     faqs: [
@@ -194,12 +194,12 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Which 2 for $5 combo saves the most?',
         html: `<p>The Original Cheeseburger plus the chili cheese dog saves the most, because together they cost about $11.38 at their regular prices. On the 2 for $5 menu you pay $5, a saving of about $6.38.</p>
-<p>The combo with the least saving is small fries plus 2-piece chicken strips, which are about $5.98 on their own. You still save, but less than a dollar.</p>`,
+<p>The combo with the least saving is regular fries plus 2-piece chicken strips, which are about $5.98 on their own. You still save, but less than a dollar.</p>`,
       },
       {
         h: '2 for $5 vs. the $7 Meal Deal',
         html: `<p>The 2 for $5 menu is better for a snack or a light meal, and the <a href="/items/7-meal-deal">$7 Meal Deal</a> is better for a full meal. For $2 more, the meal deal adds a drink and a sundae to a burger or chicken and fries.</p>
-<p>A good light pairing is <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> (about 280 calories) with <a href="/items/pretzel-sticks-queso">pretzel sticks with queso</a> (about 440 calories), for about 720 calories in total.</p>`,
+<p>A good light pairing is <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> (about 280 calories) with <a href="/items/pretzel-sticks-queso">pretzel sticks with queso</a> (340 calories), for about 620 calories in total.</p>`,
       },
     ],
   },
@@ -208,7 +208,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: '4-piece or 6-piece Chicken Strip Basket?',
-        html: `<p>The 4-piece basket is the right size for one adult, and the <a href="/items/chicken-strip-basket-6pc">6-piece basket</a> is for very big appetites or sharing with a child. The 4-piece costs about $9.99 for about 1,000 calories. The 6-piece costs about $13.49 for about 1,380 calories.</p>
+        html: `<p>The 4-piece basket is the right size for one adult, and the <a href="/items/chicken-strip-basket-6pc">6-piece basket</a> is for very big appetites or sharing with a child. The 4-piece costs about $9.99 for 1,020 calories. The 6-piece costs about $13.49 for 1,300 calories.</p>
 <p>The two extra strips cost about $3.50, which is roughly the price of a <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> order on its own. So adding a separate 2-piece order to a 4-piece basket costs about the same.</p>`,
       },
       {
@@ -223,7 +223,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Is the 6-piece basket a good deal?',
-        html: `<p>The 6-piece basket is a fair deal when you will eat all six strips, but not the best value at DQ. At about $13.49 it costs $3.50 more than the <a href="/items/chicken-strip-basket-4pc">4-piece basket</a> for two extra strips and about 380 more calories.</p>
+        html: `<p>The 6-piece basket is a fair deal when you will eat all six strips, but not the best value at DQ. At about $13.49 it costs $3.50 more than the <a href="/items/chicken-strip-basket-4pc">4-piece basket</a> for two extra strips and about 280 more calories.</p>
 <p>Two people can do better with a 4-piece basket plus a <a href="/items/7-meal-deal">$7 Meal Deal</a>. That gives you 7 strips in total, two orders of fries, a drink and a sundae for about $17.</p>`,
       },
     ],
@@ -233,13 +233,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'FlameThrower vs. Backyard Bacon Ranch Stackburger',
-        html: `<p>The FlameThrower is the spicy pick, and the <a href="/items/backyard-bacon-ranch-stackburger">Backyard Bacon Ranch</a> is the creamy, smoky one. The FlameThrower single costs about $10.87 with 780 calories. The Backyard Bacon Ranch costs about $9.99 with 730 calories.</p>
+        html: `<p>The FlameThrower is the spicy pick, and the <a href="/items/backyard-bacon-ranch-stackburger">Backyard Bacon Ranch</a> is the creamy, smoky one. The FlameThrower Double costs about $10.87 with 720 calories. The Backyard Bacon Ranch costs about $9.99 with 820 calories.</p>
 <p>Both have bacon, but the FlameThrower uses jalapeño bacon, pepper jack and FlameThrower sauce. If you are not sure about the heat, ask for light sauce.</p>`,
       },
       {
         h: 'Is the FlameThrower worth $4.48 more than a cheeseburger?',
-        html: `<p>The FlameThrower Stackburger is worth it if you want a bigger, spicier burger, but the <a href="/items/original-cheeseburger">Original Cheeseburger</a> is far better value. The cheeseburger is about $6.39 and 400 calories, and it is part of the $7 Meal Deal.</p>
-<p>The FlameThrower single has about 42 g of protein, so it is closer to a full meal on its own. The double is over 1,000 calories.</p>`,
+        html: `<p>The FlameThrower Stackburger is worth it if you want a bigger, spicier burger, but the <a href="/items/original-cheeseburger">Original Cheeseburger</a> is far better value. The cheeseburger is about $6.39 and 370 calories, and it is part of the $7 Meal Deal.</p>
+<p>The FlameThrower Double has about 34 g of protein, so it is closer to a full meal on its own. The Triple is 910 calories.</p>`,
       },
     ],
   },
@@ -248,12 +248,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Original Cheeseburger vs. Double Cheeseburger',
-        html: `<p>The Original Cheeseburger is the lighter, cheaper choice, and the <a href="/items/double-cheeseburger">Double Cheeseburger</a> is for bigger appetites. The single costs about $6.39 with 400 calories. The double costs about $7.99 with 560 calories.</p>
+        html: `<p>The Original Cheeseburger is the lighter, cheaper choice, and the <a href="/items/double-cheeseburger">Double Cheeseburger</a> is for bigger appetites. The single costs about $6.39 with 370 calories. The double costs about $7.99 with 570 calories.</p>
 <p>The double costs $1.60 more for a second patty, which is more than the 61 cents it costs to turn the single into a $7 Meal Deal with fries, a drink and a sundae.</p>`,
       },
       {
         h: 'Who the Original Cheeseburger is for',
-        html: `<p>The Original Cheeseburger suits people who want a simple burger and the best value at DQ. It is the lightest burger on the menu, with about 910 mg of sodium in a single.</p>
+        html: `<p>The Original Cheeseburger suits people who want a simple burger and the best value at DQ. It is the lightest burger on the menu, with about 1,120 mg of sodium in a single.</p>
 <p>It is also the base for both value deals: it is in the $7 Meal Deal and on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a> at many stores.</p>`,
       },
     ],
@@ -263,12 +263,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Peanut Buster Parfait vs. Reese’s Blizzard',
-        html: `<p>The Peanut Buster Parfait is for people who like whole peanuts and fudge, and the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is for peanut butter fans. The parfait costs about $4.99 with 710 calories. A Small Reese’s Blizzard costs about $4.49 with 600 calories.</p>
+        html: `<p>The Peanut Buster Parfait is for people who like whole peanuts and fudge, and the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is for peanut butter fans. The parfait costs about $4.99 with 710 calories. A Small Reese’s Blizzard costs about $4.49 with 610 calories.</p>
 <p>The parfait is layered, not blended, so you get distinct bites of soft serve, hot fudge and salted peanuts all the way down.</p>`,
       },
       {
         h: 'Peanut Buster Parfait vs. Buster Bar',
-        html: `<p>The <a href="/items/buster-bar">Buster Bar</a> has the same soft serve, fudge and peanuts on a stick for about $2.49 and 440 calories. It is the cheaper, smaller way to get the same flavors.</p>
+        html: `<p>The <a href="/items/buster-bar">Buster Bar</a> has the same soft serve, fudge and peanuts on a stick for about $2.49 and about 475 calories. It is the cheaper, smaller way to get the same flavors.</p>
 <p>The parfait costs twice as much but comes in a cup, so it is easier to share.</p>`,
       },
     ],
@@ -278,12 +278,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Dilly Bar vs. Non-Dairy Dilly Bar',
-        html: `<p>The classic Dilly Bar is cheaper and creamier, and the <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> is the option for people avoiding dairy. The classic costs about $1.99 with 210 calories. The non-dairy version costs about $2.49 with 220 calories.</p>
+        html: `<p>The classic Dilly Bar is cheaper and creamier, and the <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> is the option for people avoiding dairy. The classic costs about $1.99 with about 220 calories. The non-dairy version costs about $2.49 with 220 calories.</p>
 <p>Both have a chocolate coating. The non-dairy version is not certified vegan, so check DQ’s allergen list if that matters to you.</p>`,
       },
       {
         h: 'Is a Dilly Bar the cheapest treat at DQ?',
-        html: `<p>The Dilly Bar is one of the cheapest treats at DQ, but the <a href="/items/dq-sandwich">DQ Sandwich</a> is cheaper at about $1.49 and 190 calories. A small <a href="/items/vanilla-soft-serve-cone">vanilla cone</a> costs about $1.79.</p>
+        html: `<p>The Dilly Bar is one of the cheapest treats at DQ, but the <a href="/items/dq-sandwich">DQ Sandwich</a> is cheaper at about $1.49 and about 180 calories. A kids’ <a href="/items/vanilla-soft-serve-cone">vanilla cone</a> costs about $1.79.</p>
 <p>The Dilly Bar is the best of the three for taking home, because many stores sell them in multi-packs.</p>`,
       },
     ],
@@ -293,13 +293,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Caramel sundae vs. hot fudge sundae',
-        html: `<p>The caramel sundae is sweeter and buttery, and the <a href="/items/hot-fudge-sundae">hot fudge sundae</a> is richer and more chocolatey. Both usually cost about $3.79 for a regular. The caramel has about 310 calories and the hot fudge about 300.</p>
+        html: `<p>The caramel sundae is sweeter and buttery, and the <a href="/items/hot-fudge-sundae">hot fudge sundae</a> is richer and more chocolatey. Both usually cost about $3.79 for a medium, and both have 430 calories.</p>
 <p>Because they cost the same, pick by taste. You can also ask for half caramel and half hot fudge, which many stores will do.</p>`,
       },
       {
         h: 'Caramel sundae vs. Turtle Pecan Cluster Blizzard',
-        html: `<p>If you love caramel and want more in the cup, the <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster Blizzard</a> blends caramel with pecans and fudge. A Small costs about $4.79 with 570 calories.</p>
-<p>The caramel sundae is the lighter and cheaper caramel treat, at about $3.79 and 310 calories, and it has no nuts unless you add them.</p>`,
+        html: `<p>If you love caramel and want more in the cup, the <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster Blizzard</a> blends caramel with pecans and fudge. A Small costs about $4.79 with 680 calories.</p>
+<p>The caramel sundae is the lighter and cheaper caramel treat, at about $3.79 and 430 calories for a medium, and it has no nuts unless you add them.</p>`,
       },
     ],
   },
@@ -307,13 +307,13 @@ export const DEPTH: Record<string, Depth> = {
   'hot-fudge-sundae': {
     sections: [
       {
-        h: 'Small or regular hot fudge sundae?',
-        html: `<p>The small hot fudge sundae is enough as a dessert after a meal, and the regular is the better stand-alone treat. The small costs about $3.49 with about 250 calories. The regular costs about $3.79 with 300 calories.</p>
+        h: 'Small or medium hot fudge sundae?',
+        html: `<p>The small hot fudge sundae is enough as a dessert after a meal, and the medium is the better stand-alone treat. The small costs about $3.49 with 300 calories. The medium costs about $3.79 with 430 calories.</p>
 <p>The small is the size included in the <a href="/items/7-meal-deal">$7 Meal Deal</a>, so if you are ordering a meal, you may already get one.</p>`,
       },
       {
         h: 'Hot fudge sundae vs. Peanut Buster Parfait',
-        html: `<p>The <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> is a bigger, layered version with salted peanuts, at about $4.99 and 710 calories. The hot fudge sundae is the lighter choice at about 300 calories for a regular.</p>
+        html: `<p>The <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> is a bigger, layered version with salted peanuts, at about $4.99 and 710 calories. The hot fudge sundae is the lighter choice at 430 calories for a medium.</p>
 <p>If you want fudge on the inside instead of on top, the <a href="/items/royal-oreo-blizzard">Royal Oreo Blizzard</a> has a hot fudge-filled center.</p>`,
       },
     ],
@@ -322,7 +322,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Banana Cream Pie Blizzard vs. Banana Split',
-        html: `<p>Pick the Banana Cream Pie Blizzard for a blended, pie-style dessert and the <a href="/items/banana-split">Banana Split</a> for real banana and three toppings. A Small Banana Cream Pie Blizzard costs about $4.79 with about 540 calories. A Banana Split costs about $5.69 with about 560 calories, so it is 90 cents more for only about 20 more calories.</p>
+        html: `<p>Pick the Banana Cream Pie Blizzard for a blended, pie-style dessert and the <a href="/items/banana-split">Banana Split</a> for real banana and three toppings. A Small Banana Cream Pie Blizzard costs about $4.79 with about 540 calories. A Banana Split costs about $5.69 with 520 calories, so it is 90 cents more but about 20 calories lighter.</p>
 <p>The bigger difference is availability. The Blizzard is a limited-time flavor, while the Banana Split is on the menu all year and splits easily between two people.</p>`,
       },
       {
@@ -365,7 +365,7 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Is the Cotton Candy Blizzard worth the seasonal price?',
         html: `<p>It is worth it if someone in your group really wants the flavor, but it costs more than a classic Blizzard. A Small is about $5.29, 80 cents more than a Small <a href="/items/mm-blizzard">M&amp;M’s Blizzard</a>, and a Mini is a full dollar more than a classic Mini.</p>
-<p>For a bright, sweet treat on a tighter budget, a small <a href="/items/misty-slush">Misty Slush</a> costs about $2.39 and has about 150 calories. Our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app guide</a> shows where Blizzard offers turn up.</p>`,
+<p>For a bright, sweet treat on a tighter budget, a small <a href="/items/misty-slush">Misty Slush</a> costs about $2.39 and has 200 calories. Our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app guide</a> shows where Blizzard offers turn up.</p>`,
       },
     ],
     faqs: [
@@ -382,7 +382,7 @@ export const DEPTH: Record<string, Depth> = {
       },
       {
         h: 'Dipped Strawberry Cheesecake vs. Royal New York Cheesecake',
-        html: `<p>When the summer flavor is gone, the <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a> is the closest year-round swap. Its Small costs about $4.99 with about 460 calories, which is 30 cents less and about 80 calories lighter than the Dipped Small.</p>
+        html: `<p>When the summer flavor is gone, the <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a> is the closest year-round swap. Its Small costs about $4.99 with 750 calories, which is 30 cents less but about 210 calories more than the Dipped Small.</p>
 <p>The Royal puts the strawberry in a filled center and adds graham crumbs, but it has no chocolate. If chocolate is the part you love, ask your store about adding a chocolate mix-in for a small charge.</p>`,
       },
     ],
@@ -400,7 +400,7 @@ export const DEPTH: Record<string, Depth> = {
       },
       {
         h: 'Frosted Sugar Cookie vs. Cookie Dough Blizzard',
-        html: `<p>The Frosted Sugar Cookie is the lighter cookie Blizzard, and the <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> is the cheaper one you can get all year. A Small Cookie Dough costs about $4.49 with about 590 calories, so the Frosted Sugar Cookie Small is 30 cents more but about 80 calories lighter.</p>
+        html: `<p>The Frosted Sugar Cookie is the lighter cookie Blizzard, and the <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> is the cheaper one you can get all year. A Small Cookie Dough costs about $4.49 with 710 calories, so the Frosted Sugar Cookie Small is 30 cents more but about 200 calories lighter.</p>
 <p>Taste is the real split. Sugar cookie with icing and sprinkles is sweet and buttery, while cookie dough is chewy with chocolate chips.</p>`,
       },
     ],
@@ -414,12 +414,12 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Heath Blizzard vs. Butterfinger Blizzard: which to order',
         html: `<p>Order the Heath for buttery toffee and the <a href="/items/butterfinger-blizzard">Butterfinger</a> for flaky peanut butter crunch. They cost the same at every size, from about $3.49 for a Mini to about $5.99 for a Large.</p>
-<p>Calories are close too. A Small Heath has about 480 calories and a Small Butterfinger about 470, and at the Large it is about 1,010 vs. 990. Heath toffee contains almonds, so for anyone avoiding tree nuts the choice is made for you.</p>`,
+<p>Heath runs a little heavier. A Small Heath has 640 calories and a Small Butterfinger 590, and at the Large it is 1,190 vs. 1,060. Heath toffee contains almonds, so for anyone avoiding tree nuts the choice is made for you.</p>`,
       },
       {
         h: 'Is the Medium Heath Blizzard worth it?',
-        html: `<p>Yes, the Medium is one of the better-value Mediums on the menu. At about $5.29 it costs 20 cents less than a Medium Oreo or Reese’s, and it is 80 cents more than the Small for about 190 more calories (670 vs. 480).</p>
-<p>The Large adds only 70 cents more, at about $5.99, but jumps to about 1,010 calories. That is a sharing size. If you want Heath in a fancier cup, the Heath Caramel Brownie Cupfection on the <a href="/categories/classic-treats">classic treats menu</a> is about $6.29 and 780 calories.</p>`,
+        html: `<p>Yes, the Medium is one of the better-value Mediums on the menu. At about $5.29 it costs 20 cents less than a Medium Oreo or Reese’s, and it is 80 cents more than the Small for about 240 more calories (880 vs. 640).</p>
+<p>The Large adds only 70 cents more, at about $5.99, but jumps to 1,190 calories. That is a sharing size. If you want Heath in a fancier cup, the Heath Caramel Brownie Cupfection on the <a href="/categories/classic-treats">classic treats menu</a> is about $6.29 and 780 calories.</p>`,
       },
     ],
     faqs: [
@@ -432,12 +432,12 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Mint Oreo Blizzard vs. Oreo Blizzard',
         html: `<p>The Mint Oreo costs exactly the same as the regular <a href="/items/oreo-blizzard">Oreo Blizzard</a> at every size, so the choice comes down to whether you want mint. Both are about $3.49 for a Mini, $4.49 for a Small, $5.49 for a Medium and $5.99 for a Large.</p>
-<p>The mint adds very little: about 440 calories for a Small vs. 420 for the regular Oreo, and about 950 vs. 920 for a Large. The big difference is that every DQ has the Oreo, while the Mint Oreo depends on the store.</p>`,
+<p>The mint adds a little: 640 calories for a Small vs. 600 for the regular Oreo, and 1,140 vs. 1,050 for a Large. The big difference is that every DQ has the Oreo, while the Mint Oreo depends on the store.</p>`,
       },
       {
         h: 'Which size of Mint Oreo Blizzard is the best value',
-        html: `<p>The Large is the best value per dollar, because it costs only 50 cents more than the Medium. You go from about $5.49 and 610 calories to about $5.99 and 950 calories.</p>
-<p>That makes the Large a good pick for two people sharing. For one person, the Small at about $4.49 and 440 calories is plenty. In winter, the <a href="/items/peppermint-bark-blizzard">Peppermint Bark Blizzard</a> is the other mint option, at about $4.79 and 500 calories for a Small.</p>`,
+        html: `<p>The Large is the best value per dollar, because it costs only 50 cents more than the Medium. You go from about $5.49 and 880 calories to about $5.99 and 1,140 calories.</p>
+<p>That makes the Large a good pick for two people sharing. For one person, the Small at about $4.49 and 640 calories is plenty. In winter, the <a href="/items/peppermint-bark-blizzard">Peppermint Bark Blizzard</a> is the other mint option, at about $4.79 and 500 calories for a Small.</p>`,
       },
     ],
     faqs: [
@@ -449,7 +449,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Mixing Bowl Mashup vs. a Cookie Dough or Reese’s Blizzard',
-        html: `<p>The Mixing Bowl Mashup costs more but is actually lighter than either of the flavors it borrows from. A Small Mashup is about $5.29 with about 520 calories. A Small <a href="/items/cookie-dough-blizzard">Cookie Dough</a> or <a href="/items/reeses-blizzard">Reese’s</a> is about $4.49, but with about 590 and 600 calories.</p>
+        html: `<p>The Mixing Bowl Mashup costs more but is actually lighter than either of the flavors it borrows from. A Small Mashup is about $5.29 with about 520 calories. A Small <a href="/items/cookie-dough-blizzard">Cookie Dough</a> or <a href="/items/reeses-blizzard">Reese’s</a> is about $4.49, but with 710 and 610 calories.</p>
 <p>So you pay 80 cents more for variety: cookie dough, chocolate cookie pieces, peanut butter cups and fudge in one cup. If you only love one of those, the single-flavor Blizzard is the better buy.</p>`,
       },
       {
@@ -486,7 +486,7 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Peppermint Hot Cocoa vs. Choco Brownie Extreme Blizzard',
         html: `<p>The Peppermint Hot Cocoa is the lighter chocolate Blizzard with a mint finish, and the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> is the year-round pick for pure chocolate. They cost the same at every size, about $4.79 for a Small.</p>
-<p>A Small Peppermint Hot Cocoa has about 480 calories vs. about 510 for Choco Brownie Extreme, and a Large is about 990 vs. 1,060. When the winter flavor leaves the menu, Choco Brownie Extreme is the closest chocolate swap.</p>`,
+<p>A Small Peppermint Hot Cocoa has about 480 calories vs. 740 for Choco Brownie Extreme, and a Large is about 990 vs. 1,330. When the winter flavor leaves the menu, Choco Brownie Extreme is the closest chocolate swap.</p>`,
       },
       {
         h: 'Which size of Peppermint Hot Cocoa Blizzard to order',
@@ -504,11 +504,11 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Is the Pumpkin Pie Blizzard worth the seasonal price?',
         html: `<p>It costs about 60 to 80 cents more than an <a href="/items/oreo-blizzard">Oreo Blizzard</a>, depending on size. A Small is about $5.29 vs. $4.49, and a Large is about $6.79 vs. $5.99. The Medium is the smallest gap, about $6.09 vs. $5.49.</p>
-<p>The Medium is also 20 cents cheaper than the Medium of summer seasonal flavors like S’mores (about $6.29). For one person, the Small at about 490 calories is the sensible order; the step to Medium adds 80 cents and about 200 calories.</p>`,
+<p>The Medium is also 20 cents cheaper than the Medium of summer seasonal flavors like S’mores (about $6.29). For one person, the Small at 560 calories is the sensible order; the step to Medium adds 80 cents and about 160 calories.</p>`,
       },
       {
         h: 'Pumpkin Pie vs. Banana Cream Pie Blizzard',
-        html: `<p>The Pumpkin Pie Blizzard is the lighter pie flavor, and the <a href="/items/banana-cream-pie-blizzard">Banana Cream Pie Blizzard</a> is the cheaper one. A Small Pumpkin Pie costs about $5.29 with about 490 calories. A Small Banana Cream Pie costs about $4.79 with about 540 calories.</p>
+        html: `<p>The <a href="/items/banana-cream-pie-blizzard">Banana Cream Pie Blizzard</a> is the cheaper and slightly lighter pie flavor, and the Pumpkin Pie Blizzard is the spiced one. A Small Pumpkin Pie costs about $5.29 with 560 calories. A Small Banana Cream Pie costs about $4.79 with about 540 calories.</p>
 <p>Pumpkin Pie brings spice and pie crust, while Banana Cream Pie uses graham crumbs and a sweeter, pudding-like taste. They are rarely on the menu at the same time, since Pumpkin Pie is a fall flavor and Banana Cream Pie runs for a limited time.</p>`,
       },
     ],
@@ -521,13 +521,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Royal New York Cheesecake vs. Strawberry Cheesequake Blizzard',
-        html: `<p>The Royal New York Cheesecake is the lighter cheesecake Blizzard and is on the menu all year, while the <a href="/items/strawberry-cheesequake-blizzard">Strawberry Cheesequake</a> depends on the store. A Small Royal is about $4.99 with about 460 calories. A Small Cheesequake is about $4.79 with about 520.</p>
-<p>The two cost the same at the Mini (about $3.99) and Large (about $6.49). At the Large, the Royal is about 970 calories vs. about 1,060, so it is the lighter one to share.</p>`,
+        html: `<p>The Royal New York Cheesecake is the heavier cheesecake Blizzard but is on the menu all year, while the <a href="/items/strawberry-cheesequake-blizzard">Strawberry Cheesequake</a> depends on the store. A Small Royal is about $4.99 with 750 calories. A Small Cheesequake is about $4.79 with about 520.</p>
+<p>The two cost the same at the Mini (about $3.99) and Large (about $6.49). At the Large, the Royal is 1,320 calories vs. about 1,060, so the Cheesequake is the lighter one to share.</p>`,
       },
       {
-        h: 'Which Royal Blizzard has the fewest calories?',
-        html: `<p>The Royal New York Cheesecake is the lightest Royal Blizzard, at about 460 calories for a Small. The <a href="/items/royal-oreo-blizzard">Royal Oreo</a> has about 490, the Royal Rocky Road Trip about 530 and the Royal Reese’s about 620.</p>
-<p>All four Royals cost the same, about $4.99 for a Small, so the cheesecake gets you a filled center with the least calories for the same money. See the <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> for other lighter treats.</p>`,
+        h: 'How heavy is the Royal New York Cheesecake Blizzard?',
+        html: `<p>The Royal New York Cheesecake is one of the heavier Blizzards on the menu, at 750 calories for a Small and 1,040 for a Medium. If you want the flavor with fewer calories, the Mini is 450.</p>
+<p>All four Royals, including the <a href="/items/royal-oreo-blizzard">Royal Oreo</a>, cost the same, about $4.99 for a Small, so pick the filled center you like best. See the <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> for other lighter treats.</p>`,
       },
     ],
     faqs: [
@@ -540,7 +540,7 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Royal Reese’s vs. Reese’s Blizzard: price by size',
         html: `<p>The Royal Reese’s costs about 50 cents more than the regular <a href="/items/reeses-blizzard">Reese’s Blizzard</a> at the Mini, Small and Medium, but the Large is the same price, about $6.49. That makes the Large Royal the obvious pick if you are ordering that size anyway.</p>
-<p>The Large Royal has about 1,280 calories vs. about 1,210 for the regular Large, so you get the peanut butter center for about 70 extra calories and no extra money. At the Small, it is about $4.99 and 620 calories vs. $4.49 and 600.</p>`,
+<p>At the Large you get the peanut butter center for no extra money. At the Small, it is about $4.99 vs. $4.49.</p>`,
       },
       {
         h: 'Royal Reese’s Blizzard vs. Peanut Buster Parfait',
@@ -549,7 +549,7 @@ export const DEPTH: Record<string, Depth> = {
       },
     ],
     faqs: [
-      { q: 'What is the highest-calorie Blizzard at DQ?', a: 'Of the flavors we track, the Royal Reese’s Blizzard is the heaviest at the Small, Medium and Large sizes, topping out at about 1,280 calories for a Large. At the Mini, the Cookie Dough Blizzard is slightly heavier (about 410 vs. 400).' },
+      { q: 'What is the highest-calorie Blizzard at DQ?', a: 'Of the flavors we track, the Royal New York Cheesecake Blizzard is the heaviest at the Mini, Small and Medium sizes (450, 750 and 1,040 calories). At the Large, the Cookie Dough and Turtle Pecan Cluster Blizzards tie at 1,370. The Royal Reese’s tops out at about 1,280 for a Large.' },
     ],
   },
 
@@ -557,13 +557,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Royal Rocky Road Trip vs. Royal Oreo Blizzard',
-        html: `<p>Both Royals have a hot fudge center and cost the same, so pick the Rocky Road Trip for more mix-ins and the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> for crunch without nuts. A Small Rocky Road Trip has about 530 calories vs. about 490 for the Royal Oreo, both at about $4.99.</p>
-<p>At the Large (about $6.49), the order flips: the Rocky Road Trip is about 1,010 calories and the Royal Oreo about 1,050. The Rocky Road Trip contains almonds, so the Royal Oreo is the safer choice for a tree nut allergy.</p>`,
+        html: `<p>Both Royals have a hot fudge center and cost the same, so pick the Rocky Road Trip for more mix-ins and the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> for crunch without nuts. Both cost about $4.99 for a Small and about $6.49 for a Large.</p>
+<p>The Rocky Road Trip contains almonds, so the Royal Oreo is the safer choice for a tree nut allergy.</p>`,
       },
       {
         h: 'Royal Rocky Road Trip vs. Choco Brownie Extreme',
         html: `<p>The Rocky Road Trip adds marshmallow, almonds and a fudge center to brownie, while the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a> sticks to chocolate. They cost the same at the Mini (about $3.99) and Large (about $6.49); at the Small and Medium, the Royal is 20 cents more (about $4.99 vs. $4.79 for a Small).</p>
-<p>The Large Rocky Road Trip is the lighter of the two, about 1,010 calories vs. 1,060, which makes it the better Large to share if you like nuts. Choco Brownie Extreme has no nuts in its listed allergens, so it is the one to pick for a tree nut allergy.</p>`,
+<p>Pick the Rocky Road Trip if you like nuts. Choco Brownie Extreme has no nuts in its listed allergens, so it is the one to pick for a tree nut allergy.</p>`,
       },
     ],
     faqs: [
@@ -593,13 +593,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Strawberry Cheesequake Blizzard vs. Strawberry Sundae',
-        html: `<p>The <a href="/items/strawberry-sundae">strawberry sundae</a> is the cheaper, lighter strawberry treat, and the Cheesequake is the one with cheesecake and crust. A strawberry sundae costs about $3.79 with about 280 calories.</p>
+        html: `<p>The <a href="/items/strawberry-sundae">strawberry sundae</a> is the cheaper, lighter strawberry treat, and the Cheesequake is the one with cheesecake and crust. A medium strawberry sundae costs about $3.79 with 340 calories.</p>
 <p>A Mini Strawberry Cheesequake costs about $3.99 with about 350 calories, only 20 cents more. If you want cheesecake bites, the Mini Blizzard is worth the small step up. If you just want strawberry and soft serve, the sundae does the job. Note that the Cheesequake lists eggs and wheat among its allergens, and the sundae lists only milk.</p>`,
       },
       {
         h: 'Strawberry Cheesequake vs. Dipped Strawberry Cheesecake',
         html: `<p>The Strawberry Cheesequake is 50 cents cheaper at every size than the summer <a href="/items/dipped-strawberry-cheesecake-blizzard">Dipped Strawberry Cheesecake</a>, which adds chocolate. A Small Cheesequake is about $4.79 and 520 calories vs. about $5.29 and 540.</p>
-<p>If your store does not carry the Cheesequake, the year-round <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a> is about $4.99 and 460 calories for a Small.</p>`,
+<p>If your store does not carry the Cheesequake, the year-round <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a> is about $4.99 and 750 calories for a Small.</p>`,
       },
     ],
     faqs: [
@@ -611,8 +611,8 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Is the Swicy Pineapple Blizzard the lightest Blizzard?',
-        html: `<p>At the Mini and Large sizes, yes. The Swicy Pineapple with Tajín Mini has about 270 calories and the Large about 900, the lowest of any flavor we track. At the Small, the classic <a href="/items/oreo-blizzard">Oreo Blizzard</a> is slightly lighter, about 420 calories vs. 430.</p>
-<p>The Oreo is also cheaper, about $4.49 for a Small vs. $5.29, and it is on the menu all year. Swicy Pineapple is a summer flavor, so when it is around, a Mini is the lightest Blizzard you can order. Our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> compares other lighter treats.</p>`,
+        html: `<p>At the Mini, Small and Large sizes, yes. The Swicy Pineapple with Tajín Mini has about 270 calories, the Small about 430 and the Large about 900, the lowest of any flavor we track. A Small classic <a href="/items/oreo-blizzard">Oreo Blizzard</a> has 600 calories.</p>
+<p>The Oreo is cheaper, though, about $4.49 for a Small vs. $5.29, and it is on the menu all year. Swicy Pineapple is a summer flavor, so when it is around, a Mini is the lightest Blizzard you can order. Our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> compares other lighter treats.</p>`,
       },
       {
         h: 'Swicy Pineapple vs. Cotton Candy Blizzard',
@@ -628,22 +628,22 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: '2-piece chicken strips vs. the Kids Chicken Strips Meal',
-        html: `<p>If you want a side, a drink and dessert, the <a href="/items/kids-chicken-strips-meal">Kids Chicken Strips Meal</a> is the better buy. It costs about $4.99, only $1.50 more than the 2-piece strips at about $3.49, and adds fries or applesauce, a drink and a small vanilla cone.</p>
-<p>The 2-piece order is the better choice when you only want the chicken. It is about 280 calories, compared with about 750 for the kids meal with fries and the cone. DQ does not set an age limit on kids meals, so adults with a small appetite can order either one.</p>`,
+        html: `<p>If you want a side, a drink and dessert, the <a href="/items/kids-chicken-strips-meal">Kids Chicken Strips Meal</a> is the better buy. It costs about $4.99, only $1.50 more than the 2-piece strips at about $3.49, and adds fries or applesauce, a drink and a kids’ vanilla cone.</p>
+<p>The 2-piece order is the better choice when you only want the chicken. It is 280 calories, compared with about 610 for the kids meal with fries and the cone. DQ does not set an age limit on kids meals, so adults with a small appetite can order either one.</p>`,
       },
       {
         h: 'Can you build a cheaper basket from 2-piece strips?',
-        html: `<p>Yes, but you save very little. Two 2-piece orders cost about $6.98 and a small fries about $2.49, for about $9.47 in total. The <a href="/items/chicken-strip-basket-4pc">4-piece Chicken Strip Basket</a> costs about $9.99 and also includes Texas toast.</p>
+        html: `<p>Yes, but you save very little. Two 2-piece orders cost about $6.98 and a regular fries about $2.49, for about $9.47 in total. The <a href="/items/chicken-strip-basket-4pc">4-piece Chicken Strip Basket</a> costs about $9.99 and also includes Texas toast.</p>
 <p>That is a saving of about 52 cents, and you get two dipping sauces instead of one. On the 2 for $5 menu the math improves, because two eligible items cost $5 instead of $6.98. Check whether your store lets you choose the strips twice before you count on it.</p>`,
       },
       {
         h: '2-piece strips or the $7 Meal Deal?',
-        html: `<p>For a full meal, the <a href="/items/7-meal-deal">$7 Meal Deal</a> wins. For about $3.51 more than the 2-piece strips, it gives you 3 strips, fries, a soft drink and a small sundae, at about 1,100 calories for the whole meal.</p>
+        html: `<p>For a full meal, the <a href="/items/7-meal-deal">$7 Meal Deal</a> wins. For about $3.51 more than the 2-piece strips, it gives you 3 strips, fries, a soft drink and a small sundae, at about 1,010 calories for the whole meal.</p>
 <p>The 2-piece strips make more sense as a snack between meals or as an add-on when someone at the table wants a little chicken next to a burger.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories are in DQ 2-piece chicken strips with fries?', a: 'About 540 calories with a small fries: about 280 for the strips and about 260 for the fries. The dipping sauce adds more.' },
+      { q: 'How many calories are in DQ 2-piece chicken strips with fries?', a: 'About 560 calories with a regular fries: 280 for the strips and 280 for the fries. The dipping sauce adds more.' },
     ],
   },
 
@@ -651,17 +651,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Backyard Bacon Ranch vs. Mushroom Swiss Stackburger',
-        html: `<p>Pick the Backyard Bacon Ranch for bacon and a smoky, tangy sauce, and the <a href="/items/mushroom-swiss-stackburger">Mushroom Swiss</a> for an earthier, savory burger. The Backyard Bacon Ranch costs about $9.99 with 730 calories and 38 g of protein. The Mushroom Swiss costs about $9.49 with 680 calories and 36 g of protein.</p>
-<p>So the Bacon Ranch costs 50 cents more for about 50 more calories and 2 g more protein. Neither one is spicy, which makes both good picks for people who skip the FlameThrower.</p>`,
+        html: `<p>Pick the Backyard Bacon Ranch for bacon and a smoky, tangy sauce, and the <a href="/items/mushroom-swiss-stackburger">Mushroom Swiss</a> for an earthier, savory burger. The Backyard Bacon Ranch costs about $9.99 with 820 calories and 38 g of protein. The Mushroom Swiss costs about $9.49 with 680 calories and 36 g of protein.</p>
+<p>So the Bacon Ranch costs 50 cents more for about 140 more calories and 2 g more protein. Neither one is spicy, which makes both good picks for people who skip the FlameThrower.</p>`,
       },
       {
         h: 'Is the Backyard Bacon Ranch worth $2 more than a Double Cheeseburger?',
-        html: `<p>It is worth it if you want bacon and sauce, but the <a href="/items/double-cheeseburger">Double Cheeseburger</a> is the better value. The double costs about $7.99 with 560 calories and 34 g of protein, so the Backyard Bacon Ranch adds $2.00, about 170 calories and about 4 g of protein.</p>
-<p>The bigger difference is in a full meal. Adding a small fries (about $2.49) and a medium soft drink (about $2.11) brings the Backyard Bacon Ranch to about $14.59. Our <a href="/blog/dq-meal-deals-guide">DQ meal deals guide</a> covers cheaper ways to eat.</p>`,
+        html: `<p>It is worth it if you want bacon and sauce, but the <a href="/items/double-cheeseburger">Double Cheeseburger</a> is the better value. The double costs about $7.99 with 570 calories and 29 g of protein, so the Backyard Bacon Ranch adds $2.00, about 250 calories and about 9 g of protein.</p>
+<p>The bigger difference is in a full meal. Adding a regular fries (about $2.49) and a medium soft drink (about $2.11) brings the Backyard Bacon Ranch to about $14.59. Our <a href="/blog/dq-meal-deals-guide">DQ meal deals guide</a> covers cheaper ways to eat.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories is the Backyard Bacon Ranch Stackburger with fries?', a: 'About 990 calories with a small fries: about 730 for the burger and about 260 for the fries, before a drink.' },
+      { q: 'How many calories is the Backyard Bacon Ranch Stackburger with fries?', a: 'About 1,100 calories with a regular fries: 820 for the burger and 280 for the fries, before a drink.' },
       { q: 'Can you get the Backyard Bacon Ranch in the $7 Meal Deal?', a: 'No. The $7 Meal Deal comes with an Original Cheeseburger or 3-piece chicken strips. Stackburgers are ordered separately.' },
     ],
   },
@@ -671,17 +671,17 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Best 2 for $5 pairs with the chili cheese dog',
         html: `<p>The best pair is the chili cheese dog with the Original Cheeseburger, since together they cost about $11.38 on their own. If you want something lighter, pair it with <a href="/items/2pc-chicken-strips">2-piece chicken strips</a>: about $8.48 separately, so you save about $3.48 on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a>.</p>
-<p>Chili cheese dog plus pretzel sticks with queso is another good choice, about $8.98 on their own and about 860 calories together. Skip pairing it with fries, because a small fries is only about $2.49 anyway.</p>`,
+<p>Chili cheese dog plus pretzel sticks with queso is another good choice, about $8.98 on their own and about 760 calories together. Skip pairing it with fries, because a regular fries is only about $2.49 anyway.</p>`,
       },
       {
         h: 'What side to get with a chili cheese dog',
-        html: `<p>Small fries are the simplest side, bringing the meal to about 680 calories. <a href="/items/onion-rings">Onion rings</a> (about $3.29 and 400 calories for a regular) make it a heavier meal of about 820 calories.</p>
-<p>For a lighter plate, a side salad is about $3.29 and 90 calories before dressing, so the dog and salad together come to about 510 calories. The chili and cheese sauce are already rich, so a lighter side balances it well.</p>`,
+        html: `<p>Regular fries are the simplest side, bringing the meal to about 700 calories. <a href="/items/onion-rings">Onion rings</a> (about $3.29 and 290 calories for a regular) make it a slightly heavier meal of about 710 calories.</p>
+<p>For a lighter plate, a side salad is about $3.29 and 20 calories before dressing, so the dog and salad together come to about 440 calories. The chili and cheese sauce are already rich, so a lighter side balances it well.</p>`,
       },
     ],
     faqs: [
       { q: 'Is the DQ chili cheese dog gluten-free?', a: 'No. It comes on a wheat bun, and its allergens include milk, wheat and soy. See our DQ gluten-free and allergen guide before ordering.' },
-      { q: 'How much protein is in a DQ chili cheese dog?', a: 'About 18 g, compared with about 13 g in a plain hot dog.' },
+      { q: 'How much protein is in a DQ chili cheese dog?', a: 'About 18 g, compared with about 12 g in a plain hot dog.' },
     ],
   },
 
@@ -690,21 +690,21 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Crispy Chicken Sandwich vs. FlameThrower Chicken Sandwich',
         html: `<p>Stay with the Crispy Chicken Sandwich unless you want heat. It costs about $7.99 with 470 calories. The FlameThrower Chicken Sandwich, sold at some stores, costs about $9.29 with 530 calories and adds spicy FlameThrower sauce.</p>
-<p>That is $1.30 more for the sauce and about 60 extra calories. Another option is the Spicy Chicken Strip Sandwich at about $8.49 and 510 calories. All three are listed on the <a href="/categories/burgers-sandwiches">DQ burgers and sandwiches menu</a>.</p>`,
+<p>That is $1.30 more for the sauce and about 60 extra calories. Another option is the Spicy Chicken Strip Sandwich at about $8.49 and 530 calories. All three are listed on the <a href="/categories/burgers-sandwiches">DQ burgers and sandwiches menu</a>.</p>`,
       },
       {
         h: 'Crispy Chicken Sandwich or a chicken strip basket?',
-        html: `<p>If you also want fries, the <a href="/items/chicken-strip-basket-4pc">4-piece Chicken Strip Basket</a> is the better deal. The sandwich plus a small fries costs about $10.48 for about 730 calories. The basket costs about $9.99 and already includes fries, Texas toast and a dipping sauce, for about 1,000 calories.</p>
+        html: `<p>If you also want fries, the <a href="/items/chicken-strip-basket-4pc">4-piece Chicken Strip Basket</a> is the better deal. The sandwich plus a regular fries costs about $10.48 for about 750 calories. The basket costs about $9.99 and already includes fries, Texas toast and a dipping sauce, for 1,020 calories.</p>
 <p>The sandwich is the better pick when you want something lighter or easier to eat in the car. Our <a href="/blog/dq-chicken-strip-baskets-review">chicken strip basket review</a> covers the baskets in more detail.</p>`,
       },
       {
         h: 'Crispy Chicken Sandwich vs. Double Cheeseburger',
-        html: `<p>These two cost the same, about $7.99, and both have about 34 g of protein. The difference is calories: the Crispy Chicken Sandwich has about 470 and the <a href="/items/double-cheeseburger">Double Cheeseburger</a> about 560. If you are choosing on value alone, the chicken gives you the same protein for about 90 fewer calories.</p>
+        html: `<p>These two cost the same, about $7.99. The Crispy Chicken Sandwich has about 34 g of protein and 470 calories, and the <a href="/items/double-cheeseburger">Double Cheeseburger</a> about 29 g and 570. If you are choosing on value alone, the chicken gives you more protein for about 100 fewer calories.</p>
 <p>The double is the better pick when you want beef, and it is easy to customize with extra pickles or onion. The sandwich comes with lettuce, tomato and mayo, and asking for no mayo makes it lighter still.</p>`,
       },
     ],
     faqs: [
-      { q: 'Does Dairy Queen have a spicy chicken sandwich?', a: 'At some stores, yes. The FlameThrower Chicken Sandwich costs about $9.29 with 530 calories, and the Spicy Chicken Strip Sandwich about $8.49 with 510 calories.' },
+      { q: 'Does Dairy Queen have a spicy chicken sandwich?', a: 'At some stores, yes. The FlameThrower Chicken Sandwich costs about $9.29 with 530 calories, and the Spicy Chicken Strip Sandwich about $8.49 with 530 calories.' },
     ],
   },
 
@@ -712,17 +712,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Double Cheeseburger vs. Two Cheese Deluxe Stackburger',
-        html: `<p>The Double Cheeseburger is the smarter buy, and the <a href="/items/two-cheese-deluxe-stackburger">Two Cheese Deluxe</a> is the one to get if you want the bigger Stackburger build. Both have two beef patties. The double costs about $7.99 with 560 calories, and the Two Cheese Deluxe about $8.29 with 630 calories.</p>
-<p>For 30 cents more, the Stackburger gives you about 70 more calories. The toppings are close (cheese, pickles, onion, ketchup and mustard on both), so most people will not notice a big difference in taste.</p>`,
+        html: `<p>The Double Cheeseburger is the smarter buy, and the <a href="/items/two-cheese-deluxe-stackburger">Two Cheese Deluxe</a> is the one to get if you want the bigger Stackburger build. Both have two beef patties. The double costs about $7.99 with 570 calories, and the Two Cheese Deluxe about $8.29 with 620 calories.</p>
+<p>For 30 cents more, the Stackburger gives you about 50 more calories. The toppings are close (cheese, pickles, onion, ketchup and mustard on both), so most people will not notice a big difference in taste.</p>`,
       },
       {
         h: 'Double Cheeseburger or the $7 Meal Deal?',
-        html: `<p>The <a href="/items/7-meal-deal">$7 Meal Deal</a> is cheaper and gives you more food, but the double gives you more beef. The meal deal costs $7 for an Original Cheeseburger, fries, a soft drink and a small sundae, about 900 calories in total. The Double Cheeseburger alone is about $7.99.</p>
-<p>Turning the double into a meal yourself, with a small fries (about $2.49) and a medium soft drink (about $2.11), costs about $12.59. That is $5.59 more than the meal deal and has no dessert. Check the <a href="/blog/dairy-queen-app-rewards-hacks">DQ app</a> for burger offers before paying full price.</p>`,
+        html: `<p>The <a href="/items/7-meal-deal">$7 Meal Deal</a> is cheaper and gives you more food, but the double gives you more beef. The meal deal costs $7 for an Original Cheeseburger, fries, a soft drink and a small sundae, about 950 calories in total. The Double Cheeseburger alone is about $7.99.</p>
+<p>Turning the double into a meal yourself, with a regular fries (about $2.49) and a medium soft drink (about $2.11), costs about $12.59. That is $5.59 more than the meal deal and has no dessert. Check the <a href="/blog/dairy-queen-app-rewards-hacks">DQ app</a> for burger offers before paying full price.</p>`,
       },
     ],
     faqs: [
-      { q: 'Which DQ burger has the most protein for the money?', a: 'The Double Cheeseburger is one of the best, with about 34 g of protein for about $7.99. The FlameThrower single has more (about 42 g) but costs about $10.87.' },
+      { q: 'Which DQ burger has the most protein for the money?', a: 'The Double Cheeseburger is one of the best, with about 29 g of protein for about $7.99. The Backyard Bacon Ranch gives a little more per dollar (about 38 g for about $9.99), while the FlameThrower Double has about 34 g but costs about $10.87.' },
     ],
   },
 
@@ -730,18 +730,18 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Grilled Chicken Sandwich vs. Double Cheeseburger at the same price',
-        html: `<p>The Grilled Chicken Sandwich is the better pick if you want protein without the calories. It costs about $7.99, the same as the <a href="/items/double-cheeseburger">Double Cheeseburger</a>, and has about 36 g of protein compared with 34 g in the double.</p>
-<p>The chicken sandwich has about 390 calories, while the double has about 560. That means you get 2 g more protein for about 170 fewer calories. The double is the choice when you simply want a burger.</p>`,
+        html: `<p>The Grilled Chicken Sandwich is the better pick if you want protein without the calories. It costs about $7.99, the same as the <a href="/items/double-cheeseburger">Double Cheeseburger</a>, and has about 36 g of protein compared with 29 g in the double.</p>
+<p>The chicken sandwich has about 390 calories, while the double has 570. That means you get 7 g more protein for about 180 fewer calories. The double is the choice when you simply want a burger.</p>`,
       },
       {
         h: 'Grilled Chicken Sandwich vs. Original Cheeseburger',
-        html: `<p>The two are almost the same in calories, about 390 for the grilled chicken and 400 for the <a href="/items/original-cheeseburger">Original Cheeseburger</a>. The cheeseburger is cheaper at about $6.39, $1.60 less than the sandwich.</p>
-<p>The cheeseburger is also part of the $7 Meal Deal, which adds fries, a drink and a small sundae. If you are counting calories, though, that meal comes to about 900, so the grilled sandwich ordered on its own is still the lighter choice.</p>`,
+        html: `<p>The two are almost the same in calories, about 390 for the grilled chicken and 370 for the <a href="/items/original-cheeseburger">Original Cheeseburger</a>. The cheeseburger is cheaper at about $6.39, $1.60 less than the sandwich.</p>
+<p>The cheeseburger is also part of the $7 Meal Deal, which adds fries, a drink and a small sundae. If you are counting calories, though, that meal comes to about 950, so the grilled sandwich ordered on its own is still the lighter choice.</p>`,
       },
     ],
     faqs: [
       { q: 'Is the DQ Grilled Chicken Sandwich gluten-free?', a: 'No. It comes on a toasted wheat bun, and its listed allergens are milk, wheat, soy and eggs. Our DQ gluten-free and allergen guide lists safer options.' },
-      { q: 'How many calories is the Grilled Chicken Sandwich with fries?', a: 'About 650 calories with a small fries: about 390 for the sandwich and about 260 for the fries.' },
+      { q: 'How many calories is the Grilled Chicken Sandwich with fries?', a: 'About 670 calories with a regular fries: about 390 for the sandwich and 280 for the fries.' },
     ],
   },
 
@@ -749,8 +749,8 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Honey BBQ vs. Parmesan Garlic vs. FlameThrower basket',
-        html: `<p>All three sauced 4-piece baskets cost about $10.49, so pick by taste. Honey BBQ is the sweet, non-spicy one at about 1,100 calories. Parmesan Garlic is the savory one at about 1,080 calories, and the FlameThrower basket is the spicy one at about 940 calories.</p>
-<p>For kids or anyone who avoids heat, Honey BBQ is the safe choice. If you want the lightest sauced basket, the FlameThrower is about 160 calories below the Honey BBQ. All of them are on the <a href="/categories/chicken-strip-baskets">DQ chicken strip menu</a>.</p>`,
+        html: `<p>All three sauced 4-piece baskets cost about $10.49, so pick by taste. Honey BBQ is the sweet, non-spicy one at 1,140 calories. Parmesan Garlic is the savory one at 1,220 calories, and the FlameThrower basket is the spicy one at 1,020 calories.</p>
+<p>For kids or anyone who avoids heat, Honey BBQ is the safe choice. If you want the lightest sauced basket, the FlameThrower is about 120 calories below the Honey BBQ. All of them are on the <a href="/categories/chicken-strip-baskets">DQ chicken strip menu</a>.</p>`,
       },
       {
         h: 'Honey BBQ basket vs. the $7 Meal Deal',
@@ -759,7 +759,7 @@ export const DEPTH: Record<string, Depth> = {
       },
     ],
     faqs: [
-      { q: 'How many calories does the honey BBQ sauce add to a DQ basket?', a: 'About 100. The Honey BBQ 4-piece basket is about 1,100 calories, compared with about 1,000 for the plain 4-piece basket.' },
+      { q: 'How many calories does the honey BBQ sauce add to a DQ basket?', a: 'About 120. The Honey BBQ 4-piece basket is 1,140 calories, compared with 1,020 for the plain 4-piece basket.' },
     ],
   },
 
@@ -767,17 +767,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Hot dog or the Kids Hot Dog Meal?',
-        html: `<p>For one dollar more, the <a href="/items/kids-hot-dog-meal">Kids Hot Dog Meal</a> is the better deal. The hot dog alone costs about $3.99, and the kids meal costs about $4.99 with a side, a drink and a small vanilla cone.</p>
-<p>A small fries on its own is about $2.49, so the kids meal side is already worth more than the price difference. The whole kids meal is about 650 calories with fries and the cone. DQ does not set an age limit, so adults can order it too.</p>`,
+        html: `<p>For one dollar more, the <a href="/items/kids-hot-dog-meal">Kids Hot Dog Meal</a> is the better deal. The hot dog alone costs about $3.99, and the kids meal costs about $4.99 with a side, a drink and a kids’ vanilla cone.</p>
+<p>A regular fries on its own is about $2.49, so the kids meal side is already worth more than the price difference. The whole kids meal is about 660 calories with fries and the cone. DQ does not set an age limit, so adults can order it too.</p>`,
       },
       {
         h: 'Hot dog with fries vs. the $7 Meal Deal',
-        html: `<p>The <a href="/items/7-meal-deal">$7 Meal Deal</a> is the better meal for an adult. A hot dog plus a small fries costs about $6.48 for about 590 calories. For about 52 cents more, the meal deal gives you an Original Cheeseburger, fries, a soft drink and a small sundae.</p>
+        html: `<p>The <a href="/items/7-meal-deal">$7 Meal Deal</a> is the better meal for an adult. A hot dog plus a regular fries costs about $6.48 for about 610 calories. For about 52 cents more, the meal deal gives you an Original Cheeseburger, fries, a soft drink and a small sundae.</p>
 <p>The hot dog on its own is still a good cheap snack, and it is one of the lightest hot items at about 330 calories. Among entrées, only the 2-piece chicken strips, at about $3.49, cost less.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories are in a DQ hot dog with fries?', a: 'About 590 calories with a small fries: about 330 for the hot dog and about 260 for the fries.' },
+      { q: 'How many calories are in a DQ hot dog with fries?', a: 'About 610 calories with a regular fries: 330 for the hot dog and 280 for the fries.' },
     ],
   },
 
@@ -785,7 +785,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Mushroom Swiss vs. Two Cheese Deluxe Stackburger',
-        html: `<p>The Mushroom Swiss is the one for people who want a more grown-up, savory burger, and the <a href="/items/two-cheese-deluxe-stackburger">Two Cheese Deluxe</a> is the cheaper classic. The Mushroom Swiss costs about $9.49 with 680 calories. The Two Cheese Deluxe costs about $8.29 with 630 calories.</p>
+        html: `<p>The Mushroom Swiss is the one for people who want a more grown-up, savory burger, and the <a href="/items/two-cheese-deluxe-stackburger">Two Cheese Deluxe</a> is the cheaper classic. The Mushroom Swiss costs about $9.49 with 680 calories. The Two Cheese Deluxe costs about $8.29 with 620 calories.</p>
 <p>You pay $1.20 more for mushrooms, Swiss cheese and mushroom sauce instead of pickles, onion, ketchup and mustard. If someone in your group is a picky eater, the Two Cheese Deluxe is the safer order.</p>`,
       },
       {
@@ -795,8 +795,8 @@ export const DEPTH: Record<string, Depth> = {
       },
       {
         h: 'What side to get with the Mushroom Swiss',
-        html: `<p>A side salad is the best match if you want to keep the meal under 800 calories: about $3.29 and 90 calories before dressing, for about 770 calories in total. <a href="/items/onion-rings">Onion rings</a> (about $3.29 and 400 calories) bring it to about 1,080 calories and suit the steakhouse style.</p>
-<p>Small fries sit in the middle, at about $2.49 and 260 calories, for about 940 calories with the burger. Cheese curds (about $3.99 and 470 calories) are the heaviest choice and are better shared.</p>`,
+        html: `<p>A side salad is the best match if you want to keep the meal under 800 calories: about $3.29 and 20 calories before dressing, for about 700 calories in total. <a href="/items/onion-rings">Onion rings</a> (about $3.29 and 290 calories) bring it to about 970 calories and suit the steakhouse style.</p>
+<p>Regular fries sit in the middle, at about $2.49 and 280 calories, for about 960 calories with the burger. Cheese curds (about $3.99 and 500 calories) are the heaviest choice and are better shared.</p>`,
       },
     ],
     faqs: [
@@ -808,17 +808,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Two Cheese Deluxe vs. FlameThrower Stackburger',
-        html: `<p>The Two Cheese Deluxe is the budget Stackburger, and the <a href="/items/flamethrower-stackburger">FlameThrower</a> is the spicy, loaded one. The Two Cheese Deluxe costs about $8.29 with 630 calories. The FlameThrower single costs about $10.87 with 780 calories.</p>
-<p>That is a $2.58 gap and about 150 calories. The Two Cheese Deluxe has no heat at all, so it is the better pick for kids, picky eaters or anyone who just wants a classic double cheeseburger in Stackburger size.</p>`,
+        html: `<p>The Two Cheese Deluxe is the budget Stackburger, and the <a href="/items/flamethrower-stackburger">FlameThrower</a> is the spicy, loaded one. The Two Cheese Deluxe costs about $8.29 with 620 calories. The FlameThrower Double costs about $10.87 with 720 calories.</p>
+<p>That is a $2.58 gap and about 100 calories. The Two Cheese Deluxe has no heat at all, so it is the better pick for kids, picky eaters or anyone who just wants a classic double cheeseburger in Stackburger size.</p>`,
       },
       {
         h: 'How much does a Two Cheese Deluxe meal cost?',
-        html: `<p>Adding a small fries (about $2.49) and a medium soft drink (about $2.11) brings the Two Cheese Deluxe to about $12.89. With the fries it is about 890 calories before the drink.</p>
+        html: `<p>Adding a regular fries (about $2.49) and a medium soft drink (about $2.11) brings the Two Cheese Deluxe to about $12.89. With the fries it is about 900 calories before the drink.</p>
 <p>That is $5.89 more than the <a href="/items/7-meal-deal">$7 Meal Deal</a>, which comes with a single Original Cheeseburger and a small sundae. If you want two patties in a meal, our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> can help you pick a lighter side.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories are in the Two Cheese Deluxe with fries?', a: 'About 890 calories with a small fries: about 630 for the burger and about 260 for the fries.' },
+      { q: 'How many calories are in the Two Cheese Deluxe with fries?', a: 'About 900 calories with a regular fries: 620 for the burger and 280 for the fries.' },
     ],
   },
 
@@ -826,17 +826,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Kids Cheeseburger Meal vs. Kids Hot Dog Meal',
-        html: `<p>Both cost about $4.99, so choose by what your child will eat. The cheeseburger meal is about 700 calories with fries and the cone, and the <a href="/items/kids-hot-dog-meal">Kids Hot Dog Meal</a> is about 650.</p>
+        html: `<p>Both cost about $4.99, so choose by what your child will eat. The cheeseburger meal is about 600 calories with fries and the cone, and the <a href="/items/kids-hot-dog-meal">Kids Hot Dog Meal</a> is about 660.</p>
 <p>The cheeseburger has cheese, so milk is in the entrée as well as the cone. With the hot dog meal, milk is listed only for the cone. That makes the hot dog the easier swap for kids who are sensitive to dairy, as long as you skip the cone.</p>`,
       },
       {
         h: 'Kids Cheeseburger Meal or the $7 Meal Deal for an adult?',
-        html: `<p>For a light eater the kids meal is enough, but the <a href="/items/7-meal-deal">$7 Meal Deal</a> is the better adult meal. For about $2.01 more, it gives you a full-size Original Cheeseburger (about 400 calories), fries, a soft drink and a small sundae, about 900 calories in total.</p>
-<p>The kids meal comes to about 700 calories with fries and a cone. With applesauce (about 50 calories) instead of fries (about 260), it drops to about 490.</p>`,
+        html: `<p>For a light eater the kids meal is enough, but the <a href="/items/7-meal-deal">$7 Meal Deal</a> is the better adult meal. For about $2.01 more, it gives you a full-size Original Cheeseburger (370 calories), fries, a soft drink and a small sundae, about 950 calories in total.</p>
+<p>The kids meal comes to about 600 calories with fries and a cone. With applesauce (about 45 calories) instead of kids’ fries (170), it drops to about 475.</p>`,
       },
     ],
     faqs: [
-      { q: 'Is the kids meal cheeseburger the same as the Original Cheeseburger?', a: 'No. The kids meal has a smaller, kid-size cheeseburger. The full-size Original Cheeseburger costs about $6.39 on its own and has about 400 calories.' },
+      { q: 'Is the kids meal cheeseburger the same as the Original Cheeseburger?', a: 'No. The kids meal has a smaller, kid-size cheeseburger. The full-size Original Cheeseburger costs about $6.39 on its own and has 370 calories.' },
     ],
   },
 
@@ -844,17 +844,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Kids Chicken Strips Meal vs. 2-piece chicken strips',
-        html: `<p>The kids meal is the better buy for a child who wants a full meal. It costs about $4.99, just $1.50 more than <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> on their own (about $3.49), and adds fries or applesauce, a drink and a small vanilla cone.</p>
-<p>The 2-piece order is about 280 calories, while the kids meal is about 750 with fries and the cone. If your child only wants a snack, or you are adding chicken to someone else’s meal, the plain strips are enough.</p>`,
+        html: `<p>The kids meal is the better buy for a child who wants a full meal. It costs about $4.99, just $1.50 more than <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> on their own (about $3.49), and adds fries or applesauce, a drink and a kids’ vanilla cone.</p>
+<p>The 2-piece order is 280 calories, while the kids meal is about 610 with fries and the cone. If your child only wants a snack, or you are adding chicken to someone else’s meal, the plain strips are enough.</p>`,
       },
       {
         h: 'Kids strips meal or the $7 Meal Deal with chicken?',
-        html: `<p>For an older child or a hungry adult, the <a href="/items/7-meal-deal">$7 Meal Deal</a> is worth the extra $2.01. It has 3 chicken strips instead of 2, adult-size fries, a soft drink and a small sundae, at about 1,100 calories.</p>
+        html: `<p>For an older child or a hungry adult, the <a href="/items/7-meal-deal">$7 Meal Deal</a> is worth the extra $2.01. It has 3 chicken strips instead of 2, adult-size fries, a soft drink and a small sundae, at about 1,010 calories.</p>
 <p>For most younger kids, two strips with a side and a cone is plenty. The <a href="/blog/dq-chicken-strip-baskets-review">chicken strip basket review</a> covers the bigger 4-piece and 6-piece baskets.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories are in the kids chicken strip meal with applesauce?', a: 'About 540 with the cone. Applesauce is about 50 calories compared with about 260 for fries, which takes about 210 calories off the 750 total.' },
+      { q: 'How many calories are in the kids chicken strip meal with applesauce?', a: 'About 485 with the cone. Applesauce is about 45 calories compared with 170 for kids’ fries, which takes about 125 calories off the 610 total.' },
     ],
   },
 
@@ -862,8 +862,8 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Kids Hot Dog Meal vs. buying a hot dog on its own',
-        html: `<p>The kids meal is the better deal by a wide margin. A plain <a href="/items/hot-dog">hot dog</a> costs about $3.99, and the Kids Hot Dog Meal costs about $4.99, so the side, the drink and the small vanilla cone cost only about $1 more together.</p>
-<p>A small fries on its own is about $2.49 and a small cone about $1.79, so you would pay far more buying them separately. Adults can order the kids meal too, which makes it one of the cheapest full meals at DQ.</p>`,
+        html: `<p>The kids meal is the better deal by a wide margin. A plain <a href="/items/hot-dog">hot dog</a> costs about $3.99, and the Kids Hot Dog Meal costs about $4.99, so the side, the drink and the kids’ vanilla cone cost only about $1 more together.</p>
+<p>A regular fries on its own is about $2.49 and a kids’ cone about $1.79, so you would pay far more buying them separately. Adults can order the kids meal too, which makes it one of the cheapest full meals at DQ.</p>`,
       },
       {
         h: 'Is the Kids Hot Dog Meal good for kids with allergies?',
@@ -872,7 +872,7 @@ export const DEPTH: Record<string, Depth> = {
       },
     ],
     faqs: [
-      { q: 'How many calories are in the Kids Hot Dog Meal with applesauce?', a: 'About 440 with the cone. Choosing applesauce (about 50 calories) instead of fries (about 260) takes about 210 calories off the 650 total.' },
+      { q: 'How many calories are in the Kids Hot Dog Meal with applesauce?', a: 'About 535 with the cone. Choosing applesauce (about 45 calories) instead of kids’ fries (170) takes about 125 calories off the 660 total.' },
     ],
   },
   'biscuit-gravy': {
@@ -969,12 +969,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Cheese curds vs. onion rings: which side to order',
-        html: `<p>Order cheese curds when you want the side DQ is known for, and <a href="/items/onion-rings">onion rings</a> when you want more food for the money. Cheese curds cost about $3.99 with about 470 calories. A regular order of onion rings costs about $3.29 with about 400 calories, and a large is the same $3.99 as the curds with about 530 calories.</p>
+        html: `<p>Order cheese curds when you want the side DQ is known for, and <a href="/items/onion-rings">onion rings</a> when you want more food for the money. Cheese curds cost about $3.99 with 500 calories. A regular order of onion rings costs about $3.29 with 290 calories, and a large is the same $3.99 as the curds with 450 calories.</p>
 <p>The two eat very differently. Curds are rich, salty bites of melted cheese that are best in the first few minutes. Onion rings are lighter in the middle and go better alongside a burger, while curds work well as a snack by themselves.</p>`,
       },
       {
         h: 'Are DQ cheese curds good for sharing?',
-        html: `<p>Yes. One order of cheese curds is a good shared snack for two or three people. Split two ways it is about $2.00 and 235 calories each; split three ways it is about $1.33 and 157 calories each.</p>
+        html: `<p>Yes. One order of cheese curds is a good shared snack for two or three people. Split two ways it is about $2.00 and 250 calories each; split three ways it is about $1.33 and 167 calories each.</p>
 <p>Order them first and eat them at the table, because they lose their stretch quickly. They are battered with wheat and fried, so they are not a choice for anyone avoiding gluten. Our <a href="/blog/dq-gluten-free-allergen-guide">DQ gluten-free and allergen guide</a> lists safer options.</p>`,
       },
     ],
@@ -987,13 +987,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Regular or large onion rings: which size is better value?',
-        html: `<p>The large is the better value. A regular order costs about $3.29 with about 400 calories, and a large costs about $3.99 with about 530 calories, so the extra 70 cents buys about 130 more calories of rings.</p>
-<p>Per dollar, that is about 122 calories for the regular and about 133 for the large. For one person with a burger, the regular is usually plenty. For two people sharing a side, one large costs less than two regulars (about $6.58) and is still a good amount. Pair them with something from our <a href="/blog/best-dairy-queen-burgers-ranked">DQ burger rankings</a>.</p>`,
+        html: `<p>The large is the better value. A regular order costs about $3.29 with 290 calories, and a large costs about $3.99 with 450 calories, so the extra 70 cents buys about 160 more calories of rings.</p>
+<p>Per dollar, that is about 88 calories for the regular and about 113 for the large. For one person with a burger, the regular is usually plenty. For two people sharing a side, one large costs less than two regulars (about $6.58) and is still a good amount. Pair them with something from our <a href="/blog/best-dairy-queen-burgers-ranked">DQ burger rankings</a>.</p>`,
       },
       {
         h: 'Onion rings vs. fries at DQ',
-        html: `<p>Fries are the cheaper side and onion rings are the bigger treat. Small <a href="/items/regular-fries">fries</a> cost about $2.49 with about 260 calories, while a regular order of onion rings is about $3.29 with about 400 calories.</p>
-<p>The closest match is a medium fries at about $2.99 and 370 calories. For 30 cents more, the regular onion rings give you about 30 more calories and a crunchier, slightly sweet bite. Fries hold up better on a long drive home, and onion rings are best eaten right away.</p>`,
+        html: `<p>Fries are the cheaper side and onion rings are the pricier one. Regular <a href="/items/regular-fries">fries</a> cost about $2.49 with 280 calories, while a regular order of onion rings is about $3.29 with 290 calories.</p>
+<p>For 80 cents more, the regular onion rings give you only about 10 more calories, but a crunchier, slightly sweet bite. Fries hold up better on a long drive home, and onion rings are best eaten right away.</p>`,
       },
     ],
     faqs: [
@@ -1006,11 +1006,11 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'How much you save on pretzel sticks with the 2 for $5 menu',
         html: `<p>At stores where pretzel sticks are on the 2 for $5 menu, you save about $2.48 to $3.98, depending on the second item. Pretzel sticks cost about $3.99 on their own. Add <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> (about $3.49) and the separate total is about $7.48, so the $5 deal saves about $2.48.</p>
-<p>Pair them with a <a href="/items/chili-cheese-dog">Chili Cheese Dog</a> (about $4.99) instead, and the separate total is about $8.98, a saving of about $3.98. That pair is about 860 calories in all. The eligible list varies by store, so check the menu board first.</p>`,
+<p>Pair them with a <a href="/items/chili-cheese-dog">Chili Cheese Dog</a> (about $4.99) instead, and the separate total is about $8.98, a saving of about $3.98. That pair is about 760 calories in all. The eligible list varies by store, so check the menu board first.</p>`,
       },
       {
         h: 'Pretzel sticks with queso vs. onion rings',
-        html: `<p>Pretzel sticks cost a little more but come with their own dip, so they are the easier snack to share. They cost about $3.99 with about 440 calories including the queso. A regular order of <a href="/items/onion-rings">onion rings</a> costs about $3.29 with about 400 calories.</p>
+        html: `<p>Pretzel sticks cost a little more but come with their own dip, so they are the easier snack to share. They cost about $3.99 with 340 calories including the queso. A regular order of <a href="/items/onion-rings">onion rings</a> costs about $3.29 with 290 calories.</p>
 <p>The textures are opposites. Pretzel sticks are soft and chewy, while onion rings are crispy and battered. Onion rings suit a burger meal, while pretzel sticks with queso work better as a snack to pass around between meals.</p>`,
       },
     ],
@@ -1023,17 +1023,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Which size of DQ fries is the best value?',
-        html: `<p>The large is the best value per dollar. Each size step costs about 50 cents and adds about 110 calories: a small is about $2.49 and 260 calories, a medium about $2.99 and 370, and a large about $3.49 and 480.</p>
-<p>That works out to roughly 104 calories per dollar for a small, 124 for a medium and 138 for a large. If two people are sharing, one large (about $3.49) is a better buy than two smalls (about $4.98 for 520 calories). For one person, a small is usually enough next to a burger.</p>`,
+        html: `<p>The large is the best value per dollar. A regular is about $2.49 and 280 calories, and a large is about $3.49 and 450, so the extra dollar adds about 170 calories.</p>
+<p>That works out to roughly 112 calories per dollar for a regular and 129 for a large. If two people are sharing, one large (about $3.49) is a better buy than two regulars (about $4.98 for 560 calories). For one person, a regular is usually enough next to a burger.</p>`,
       },
       {
         h: 'Is it cheaper to get DQ fries in a meal deal?',
-        html: `<p>Yes. If you want a burger, fries and a drink, the <a href="/items/7-meal-deal">$7 Meal Deal</a> is much cheaper than buying them separately. An Original Cheeseburger (about $6.39) plus small fries (about $2.49) and a soft drink (from about $2.11) comes to about $10.99.</p>
+        html: `<p>Yes. If you want a burger, fries and a drink, the <a href="/items/7-meal-deal">$7 Meal Deal</a> is much cheaper than buying them separately. An Original Cheeseburger (about $6.39) plus regular fries (about $2.49) and a soft drink (from about $2.11) comes to about $10.99.</p>
 <p>The $7 Meal Deal covers a cheeseburger or 3-piece chicken strips, fries and a drink, and adds a small sundae, for about $7. That is about $3.99 less before you even count the sundae. See every bundle on our <a href="/combos">DQ deals and combos page</a>.</p>`,
       },
     ],
     faqs: [
-      { q: 'What is the cheapest side at Dairy Queen?', a: 'A small order of fries, at about $2.49. Onion rings and the side salad start at about $3.29. Prices vary by location.' },
+      { q: 'What is the cheapest side at Dairy Queen?', a: 'A regular order of fries, at about $2.49. Onion rings and the side salad start at about $3.29. Prices vary by location.' },
     ],
   },
 
@@ -1041,12 +1041,12 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Light DQ meals built around the side salad',
-        html: `<p>The side salad makes the lightest full meals at DQ when you pair it with grilled chicken or a small order of strips. A <a href="/items/grilled-chicken-sandwich">Grilled Chicken Sandwich</a> (about $7.99, 390 calories) with a side salad comes to about $11.28 and 480 calories before dressing.</p>
-<p>For less money, <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> (about $3.49, about 280 calories for the strips) with a side salad is about $6.78 and roughly 370 calories plus sauce and dressing. For comparison, the $7 Meal Deal with a cheeseburger is about 900 calories.</p>`,
+        html: `<p>The side salad makes the lightest full meals at DQ when you pair it with grilled chicken or a small order of strips. A <a href="/items/grilled-chicken-sandwich">Grilled Chicken Sandwich</a> (about $7.99, 390 calories) with a side salad comes to about $11.28 and 410 calories before dressing.</p>
+<p>For less money, <a href="/items/2pc-chicken-strips">2-piece chicken strips</a> (about $3.49, about 280 calories for the strips) with a side salad is about $6.78 and roughly 300 calories plus sauce and dressing. For comparison, the $7 Meal Deal with a cheeseburger is about 950 calories.</p>`,
       },
       {
         h: 'Is the DQ side salad worth $3.29?',
-        html: `<p>It is worth it if you want something light, not if you want the most food for your money. At about $3.29, it costs the same as a regular order of onion rings (about 400 calories) and about 80 cents more than small fries (about 260 calories), but it has only about 90 calories before dressing.</p>
+        html: `<p>It is worth it if you want something light, not if you want the most food for your money. At about $3.29, it costs the same as a regular order of onion rings (290 calories) and about 80 cents more than regular fries (280 calories), but it has only about 20 calories before dressing.</p>
 <p>So you are paying for a lighter side, not a bigger one. It is a good choice next to a heavy entrée like a burger, and a weak one if you are hungry and on a budget. The croutons contain wheat, so see our <a href="/blog/dq-gluten-free-allergen-guide">DQ allergen guide</a> if you avoid gluten.</p>`,
       },
     ],
@@ -1133,7 +1133,7 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Oreo Blizzard Cake vs. buying Oreo Blizzards for everyone',
         html: `<p>The cake is the cheaper way to give a group Oreo Blizzard flavor. Twelve Mini <a href="/items/oreo-blizzard">Oreo Blizzards</a> at about $3.49 each come to about $41.88. The Oreo Blizzard Cake costs about $38.74 and serves 12 to 16.</p>
-<p>A Mini Oreo Blizzard is about 300 calories, so it is a fair-sized serving, but the cake still wins on price as soon as you have about a dozen people. Blizzards are the better choice for a small group of four to six, or when guests want different flavors.</p>`,
+<p>A Mini Oreo Blizzard is 330 calories, so it is a fair-sized serving, but the cake still wins on price as soon as you have about a dozen people. Blizzards are the better choice for a small group of four to six, or when guests want different flavors.</p>`,
       },
       {
         h: 'How much is the Oreo Blizzard Cake per slice?',
@@ -1149,18 +1149,18 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Banana Split vs. Peanut Buster Parfait: which to order',
-        html: `<p>Order the Banana Split if you want fruit and variety, and the <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> if you want peanuts and fudge. The Banana Split costs about $5.69 with about 560 calories. The parfait costs about $4.99 with about 710 calories.</p>
-<p>So the Banana Split costs 70 cents more but has about 150 fewer calories. Most of its bulk comes from the banana and the fruit toppings, so it eats lighter than the parfait, which is layered with salted peanuts and hot fudge all the way down. If anyone at the table has a peanut allergy, the Banana Split is the safer of the two to share.</p>`,
+        html: `<p>Order the Banana Split if you want fruit and variety, and the <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> if you want peanuts and fudge. The Banana Split costs about $5.69 with 520 calories. The parfait costs about $4.99 with 710 calories.</p>
+<p>So the Banana Split costs 70 cents more but has about 190 fewer calories. Most of its bulk comes from the banana and the fruit toppings, so it eats lighter than the parfait, which is layered with salted peanuts and hot fudge all the way down. If anyone at the table has a peanut allergy, the Banana Split is the safer of the two to share.</p>`,
       },
       {
         h: 'Is a Banana Split cheaper than two sundaes?',
-        html: `<p>Yes. Sharing one Banana Split costs less than buying two regular sundaes. Two regular sundaes, such as two <a href="/items/strawberry-sundae">strawberry sundaes</a>, cost about $7.58 together. One Banana Split costs about $5.69, so two people save about $1.89.</p>
-<p>Split down the middle, each person gets about 280 calories for about $2.85. That is the same calories as one regular strawberry sundae, but you also get pineapple, chocolate and banana. It only works if you are happy eating from the same dish, so ask for two spoons.</p>`,
+        html: `<p>Yes. Sharing one Banana Split costs less than buying two medium sundaes. Two medium sundaes, such as two <a href="/items/strawberry-sundae">strawberry sundaes</a>, cost about $7.58 together. One Banana Split costs about $5.69, so two people save about $1.89.</p>
+<p>Split down the middle, each person gets about 260 calories for about $2.85. That is about 80 fewer calories than one medium strawberry sundae, and you also get pineapple, chocolate and banana. It only works if you are happy eating from the same dish, so ask for two spoons.</p>`,
       },
     ],
     faqs: [
       { q: 'Can you get a Banana Split at a Treat-only Dairy Queen?', a: 'Usually, yes. Classic treats like the Banana Split, cones and sundaes are sold at Treat-only stores as well as DQ Grill & Chill restaurants. Check the DQ app if you want to be sure.' },
-      { q: 'How many calories are in half a Banana Split?', a: 'About 280 calories, if you split the roughly 560-calorie Banana Split evenly between two people.' },
+      { q: 'How many calories are in half a Banana Split?', a: 'About 260 calories, if you split the 520-calorie Banana Split evenly between two people.' },
     ],
   },
 
@@ -1168,17 +1168,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Brownie & Oreo Cupfection vs. Heath Caramel Brownie Cupfection',
-        html: `<p>Pick the Brownie & Oreo Cupfection for cookie crunch and the Heath Caramel Brownie Cupfection for toffee and caramel. Both cost about $6.29. The Brownie & Oreo version has about 820 calories and the Heath Caramel Brownie version about 780, so they are close.</p>
+        html: `<p>Pick the Brownie & Oreo Cupfection for cookie crunch and the Heath Caramel Brownie Cupfection for toffee and caramel. Both cost about $6.29. The Brownie & Oreo version has 720 calories and the Heath Caramel Brownie version about 780, so they are close.</p>
 <p>The Heath version leans on toffee and caramel, while the Brownie & Oreo cup is mostly chocolate and cookie, with fudge. Both are listed on our <a href="/categories/classic-treats">classic treats menu</a>, but not every store carries both at the same time.</p>`,
       },
       {
         h: 'Is the Cupfection worth it compared with a Small Blizzard?',
-        html: `<p>The Cupfection is worth it when you are sharing, and a Small Blizzard is the better buy for one person. A Small <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme Blizzard</a> costs about $4.79 with 510 calories, which is $1.50 less than the Cupfection. A Small <a href="/items/oreo-blizzard">Oreo Blizzard</a> is about $4.49 and 420 calories.</p>
-<p>Shared between two people, the Cupfection works out to about $3.15 and 410 calories each. That is less than a Small Oreo Blizzard per person, with brownie and fudge on top.</p>`,
+        html: `<p>The Cupfection is worth it when you are sharing, and a Small Blizzard is the better buy for one person. A Small <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme Blizzard</a> costs about $4.79 with 740 calories, which is $1.50 less than the Cupfection. A Small <a href="/items/oreo-blizzard">Oreo Blizzard</a> is about $4.49 and 600 calories.</p>
+<p>Shared between two people, the Cupfection works out to about $3.15 and 360 calories each. That is less than a Small Oreo Blizzard per person, with brownie and fudge on top.</p>`,
       },
     ],
     faqs: [
-      { q: 'What is the highest-calorie classic treat at Dairy Queen?', a: 'The Brownie & Oreo Cupfection, at about 820 calories. The Heath Caramel Brownie Cupfection is next at about 780, followed by the Peanut Buster Parfait at about 710.' },
+      { q: 'What is the highest-calorie classic treat at Dairy Queen?', a: 'The Heath Caramel Brownie Cupfection, at about 780 calories. The Brownie & Oreo Cupfection is next at 720, followed closely by the Peanut Buster Parfait at 710.' },
     ],
   },
 
@@ -1186,41 +1186,41 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Buster Bar vs. Dilly Bar: which to grab',
-        html: `<p>Grab the Buster Bar when you want something filling, and the <a href="/items/dilly-bar">Dilly Bar</a> when you want a small, cheap treat. The Buster Bar costs about $2.49 with 440 calories. The Dilly Bar costs about $1.99 with 210 calories.</p>
+        html: `<p>Grab the Buster Bar when you want something filling, and the <a href="/items/dilly-bar">Dilly Bar</a> when you want a small, cheap treat. The Buster Bar costs about $2.49 with about 475 calories. The Dilly Bar costs about $1.99 with about 220 calories.</p>
 <p>For 50 cents more, the Buster Bar adds a layer of fudge and peanuts under the chocolate shell, so it eats more like a dessert than a snack. The Dilly Bar is the better pick for young kids or after a big meal. Anyone avoiding peanuts should stick with the Dilly Bar.</p>`,
       },
       {
         h: 'Which DQ novelty gives the most for your money?',
-        html: `<p>The Buster Bar gives the most for your money of the four DQ novelties, at about 177 calories per dollar. Here is how they compare at typical prices:</p>
-<ul><li>Buster Bar: about $2.49 for 440 calories (about 177 per dollar)</li><li><a href="/items/dq-sandwich">DQ Sandwich</a>: about $1.49 for 190 calories (about 128 per dollar)</li><li>Dilly Bar: about $1.99 for 210 calories (about 106 per dollar)</li><li>Non-Dairy Dilly Bar: about $2.49 for 220 calories (about 88 per dollar)</li></ul>
+        html: `<p>The Buster Bar gives the most for your money of the four DQ novelties, at about 191 calories per dollar. Here is how they compare at typical prices:</p>
+<ul><li>Buster Bar: about $2.49 for about 475 calories (about 191 per dollar)</li><li><a href="/items/dq-sandwich">DQ Sandwich</a>: about $1.49 for about 180 calories (about 121 per dollar)</li><li>Dilly Bar: about $1.99 for about 220 calories (about 111 per dollar)</li><li>Non-Dairy Dilly Bar: about $2.49 for 220 calories (about 88 per dollar)</li></ul>
 <p>The Buster Bar and the Non-Dairy Dilly Bar cost the same, but the Buster Bar has twice the calories. For more side-by-side numbers, see our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a>.</p>`,
       },
     ],
     faqs: [
-      { q: 'Does a Buster Bar have more calories than a Blizzard?', a: 'It has a little more than a Small Oreo Blizzard (about 440 vs. about 420 calories) but fewer than heavier Small Blizzards like Reese’s, at about 600.' },
+      { q: 'Does a Buster Bar have more calories than a Blizzard?', a: 'Usually not. At about 475 calories it is well under a Small Oreo Blizzard (600), though a few summer Smalls, like the Swicy Pineapple with Tajín at about 430, are lighter.' },
     ],
   },
 
   'chocolate-dipped-cone': {
     sections: [
       {
-        h: 'Regular or large dipped cone?',
-        html: `<p>The regular dipped cone is enough for most people, and the large is a fair deal if you want more soft serve. The regular costs about $3.19 with 330 calories. The large costs about $3.79 with about 440 calories, so you pay 60 cents more for about 110 more calories.</p>
-<p>The chocolate dip itself costs the same at both sizes. A plain regular cone is about $2.39 and a plain large about $2.99, so dipping adds about 80 cents and roughly 100 calories either way. The bigger cone just has more soft serve under the shell, which also makes it harder to eat before it drips.</p>`,
+        h: 'Small or medium dipped cone?',
+        html: `<p>The small dipped cone is enough for most people, and the medium is a fair deal if you want more soft serve. The small costs about $3.19 with 320 calories. The medium costs about $3.79 with 460 calories, so you pay 60 cents more for about 140 more calories.</p>
+<p>The chocolate dip itself costs the same at both sizes. A plain small cone is about $2.39 and a plain medium about $2.99, so dipping adds about 80 cents either way, plus about 100 calories at the small and 140 at the medium. The bigger cone just has more soft serve under the shell, which also makes it harder to eat before it drips.</p>`,
       },
       {
         h: 'Chocolate Dipped Cone vs. Crunchin’ Cookie Dipped Cone',
-        html: `<p>The Chocolate Dipped Cone is the year-round classic, and the Crunchin’ Cookie Dipped Cone is a seasonal option with a cookie-crunch coating. The cookie version costs about $3.49 with 350 calories, 30 cents and about 20 calories more than a regular chocolate dip.</p>
+        html: `<p>The Chocolate Dipped Cone is the year-round classic, and the Crunchin’ Cookie Dipped Cone is a seasonal option with a cookie-crunch coating. The cookie version costs about $3.49 with 350 calories, 30 cents and about 30 calories more than a small chocolate dip.</p>
 <p>The chocolate shell is smooth and snaps cleanly, while the cookie coating has crunchy bits mixed in. Check the <a href="/categories/classic-treats">classic treats menu</a> and your store’s board, because the cookie dip comes and goes.</p>`,
       },
       {
         h: 'Dipped cone vs. Dilly Bar',
-        html: `<p>A <a href="/items/dilly-bar">Dilly Bar</a> is the cheaper way to get soft serve in a chocolate shell, and the dipped cone gives you more of it. The Dilly Bar costs about $1.99 with 210 calories, about $1.20 less and 120 fewer calories than a regular dipped cone.</p>
+        html: `<p>A <a href="/items/dilly-bar">Dilly Bar</a> is the cheaper way to get soft serve in a chocolate shell, and the dipped cone gives you more of it. The Dilly Bar costs about $1.99 with about 220 calories, about $1.20 less and 100 fewer calories than a small dipped cone.</p>
 <p>The Dilly Bar is wrapped and on a stick, so it travels better. The dipped cone is made fresh and has the cone, so eat it at the store.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories does the chocolate dip add to a DQ cone?', a: 'About 100 calories. A regular vanilla cone has about 230 calories and a regular dipped cone about 330; a large goes from about 340 to about 440.' },
+      { q: 'How many calories does the chocolate dip add to a DQ cone?', a: 'About 100 to 140 calories. A small vanilla cone has 220 calories and a small dipped cone 320; a medium goes from 320 to 460.' },
       { q: 'Does every Dairy Queen sell dipped cones?', a: 'Dipped cones are a classic treat, so they are sold at Treat-only stores as well as Grill & Chill restaurants. Seasonal dip flavors vary by store.' },
     ],
   },
@@ -1228,13 +1228,13 @@ export const DEPTH: Record<string, Depth> = {
   'dq-sandwich': {
     sections: [
       {
-        h: 'DQ Sandwich vs. small vanilla cone',
-        html: `<p>The DQ Sandwich is the cheaper pick, and the small <a href="/items/vanilla-soft-serve-cone">vanilla cone</a> is the lighter one. The Sandwich costs about $1.49 with 190 calories. A small cone costs about $1.79 with 170 calories.</p>
+        h: 'DQ Sandwich vs. kids’ vanilla cone',
+        html: `<p>The DQ Sandwich is the cheaper pick, and the kids’ <a href="/items/vanilla-soft-serve-cone">vanilla cone</a> is the lighter one. The Sandwich costs about $1.49 with about 180 calories. A kids’ cone costs about $1.79 with 160 calories.</p>
 <p>So you save 30 cents with the Sandwich and get about 20 more calories, mostly from the chocolate wafers. The cone is made fresh with the curl on top, while the Sandwich is wrapped, so it is easier for kids in the car and does not drip. If you want to bring treats home for later, the Sandwich is the one that keeps in the freezer.</p>`,
       },
       {
         h: 'Cheapest way to buy DQ treats for a group of kids',
-        html: `<p>DQ Sandwiches are the cheapest way to treat a group. Four Sandwiches cost about $5.96 at typical prices, compared with about $7.16 for four small vanilla cones and about $7.96 for four <a href="/items/dilly-bar">Dilly Bars</a>.</p>
+        html: `<p>DQ Sandwiches are the cheapest way to treat a group. Four Sandwiches cost about $5.96 at typical prices, compared with about $7.16 for four kids’ vanilla cones and about $7.96 for four <a href="/items/dilly-bar">Dilly Bars</a>.</p>
 <p>That saves about $1.20 over cones and $2.00 over Dilly Bars, and nobody has to finish a melting cone at the table. For more ways to save, see our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app and rewards tips</a>.</p>`,
       },
     ],
@@ -1247,7 +1247,7 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Non-Dairy Dilly Bar vs. Misty Slush: which dairy-free treat to get',
-        html: `<p>Get the Non-Dairy Dilly Bar if you want something that tastes like ice cream, and a <a href="/items/misty-slush">Misty Slush</a> if you want a cold drink. The Non-Dairy Dilly Bar costs about $2.49 with 220 calories. A small Misty Slush costs about $2.39 with about 150 calories and no fat.</p>
+        html: `<p>Get the Non-Dairy Dilly Bar if you want something that tastes like ice cream, and a <a href="/items/misty-slush">Misty Slush</a> if you want a cold drink. The Non-Dairy Dilly Bar costs about $2.49 with 220 calories. A small Misty Slush costs about $2.39 with 200 calories and no fat.</p>
 <p>Most Misty Slush flavors are made without dairy, but a Misty Freeze is blended with soft serve, so do not let anyone order the upgraded version by mistake. Our <a href="/blog/dq-gluten-free-allergen-guide">DQ allergen guide</a> has the full list of options.</p>`,
       },
       {
@@ -1265,13 +1265,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Strawberry sundae vs. Strawberry Cheesequake Blizzard',
-        html: `<p>The strawberry sundae is the lighter, cheaper strawberry treat, and the <a href="/items/strawberry-cheesequake-blizzard">Strawberry Cheesequake Blizzard</a> is the one to get when you want more in the cup. The sundae costs about $3.79 with 280 calories. A Small Cheesequake Blizzard costs about $4.79 with about 520 calories.</p>
-<p>So the Blizzard costs $1.00 more and has about 240 more calories, because it blends in cheesecake pieces and pie crust. The sundae keeps the strawberry on top, so the first bites are mostly fruit. Availability of the Cheesequake varies by store, while the sundae is on the menu everywhere.</p>`,
+        html: `<p>The strawberry sundae is the lighter, cheaper strawberry treat, and the <a href="/items/strawberry-cheesequake-blizzard">Strawberry Cheesequake Blizzard</a> is the one to get when you want more in the cup. A medium sundae costs about $3.79 with 340 calories. A Small Cheesequake Blizzard costs about $4.79 with about 520 calories.</p>
+<p>So the Blizzard costs $1.00 more and has about 180 more calories, because it blends in cheesecake pieces and pie crust. The sundae keeps the strawberry on top, so the first bites are mostly fruit. Availability of the Cheesequake varies by store, while the sundae is on the menu everywhere.</p>`,
       },
       {
         h: 'Strawberry sundae or Banana Split?',
-        html: `<p>Order the strawberry sundae for one person and the <a href="/items/banana-split">Banana Split</a> for two. The Banana Split costs about $5.69 with about 560 calories, exactly twice the calories of a strawberry sundae for $1.90 more.</p>
-<p>The Banana Split already has a scoop with strawberry topping, plus pineapple, chocolate and a banana. If you were going to buy two strawberry sundaes (about $7.58), sharing a Banana Split saves about $1.89.</p>`,
+        html: `<p>Order the strawberry sundae for one person and the <a href="/items/banana-split">Banana Split</a> for two. The Banana Split costs about $5.69 with 520 calories, about 180 more than a medium strawberry sundae for $1.90 more.</p>
+<p>The Banana Split already has a scoop with strawberry topping, plus pineapple, chocolate and a banana. If you were going to buy two medium strawberry sundaes (about $7.58), sharing a Banana Split saves about $1.89.</p>`,
       },
     ],
     faqs: [
@@ -1284,14 +1284,14 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Which size vanilla cone is the best value?',
-        html: `<p>The large vanilla cone is the best value, and the small is the best size for a light treat. Each step up costs about 60 cents. Going from small to regular adds about 60 calories, but going from regular to large adds about 110.</p>
-<ul><li>Small: about $1.79 for 170 calories (about 95 per dollar)</li><li>Regular: about $2.39 for 230 calories (about 96 per dollar)</li><li>Large: about $2.99 for 340 calories (about 114 per dollar)</li></ul>
-<p>So the small and regular give about the same soft serve per dollar, and the large gives about 20% more.</p>`,
+        html: `<p>The medium vanilla cone is the best value, and the kids’ size is the best size for a light treat. Each step up costs about 60 cents. Going from kids’ to small adds about 60 calories, but going from small to medium adds about 100.</p>
+<ul><li>Kids’: about $1.79 for 160 calories (about 89 per dollar)</li><li>Small: about $2.39 for 220 calories (about 92 per dollar)</li><li>Medium: about $2.99 for 320 calories (about 107 per dollar)</li></ul>
+<p>So the kids’ and small sizes give about the same soft serve per dollar, and the medium gives about 15% to 20% more.</p>`,
       },
       {
-        h: 'Small vanilla cone vs. DQ Sandwich',
-        html: `<p>The small vanilla cone is the lighter choice, and the <a href="/items/dq-sandwich">DQ Sandwich</a> is the cheaper one. The cone costs about $1.79 with 170 calories. The Sandwich costs about $1.49 with 190 calories.</p>
-<p>Pick the cone when you are eating at the store and want soft serve fresh from the machine. Pick the Sandwich for the car, because it is wrapped and does not drip. Kids meals also come with a small vanilla cone, so check the <a href="/categories/kids-meals">kids meals menu</a> before buying one separately.</p>`,
+        h: 'Kids’ vanilla cone vs. DQ Sandwich',
+        html: `<p>The kids’ vanilla cone is the lighter choice, and the <a href="/items/dq-sandwich">DQ Sandwich</a> is the cheaper one. The cone costs about $1.79 with 160 calories. The Sandwich costs about $1.49 with about 180 calories.</p>
+<p>Pick the cone when you are eating at the store and want soft serve fresh from the machine. Pick the Sandwich for the car, because it is wrapped and does not drip. Kids meals also come with a kids’ vanilla cone, so check the <a href="/categories/kids-meals">kids meals menu</a> before buying one separately.</p>`,
       },
     ],
     faqs: [
@@ -1303,17 +1303,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Which chocolate shake size is the best value?',
-        html: `<p>The large chocolate shake is the best value per dollar, but the small is already a full dessert for one. A small costs about $3.49 with about 710 calories. The medium costs 80 cents more and adds about 240 calories. The large costs another 70 cents and adds about 320 more.</p>
-<p>That works out to about 203 calories per dollar for a small and about 254 for a large. At about 1,270 calories, though, the large is really a size for two straws. If you want a lighter chocolate drink, the small is the one to get.</p>`,
+        html: `<p>The large chocolate shake is the best value per dollar, but the small is already a full dessert for one. A small costs about $3.49 with 530 calories. The medium costs 80 cents more and adds about 180 calories. The large costs another 70 cents and adds about 210 more.</p>
+<p>That works out to about 152 calories per dollar for a small and about 184 for a large. At 920 calories, though, the large is really a size for two straws. If you want a lighter chocolate drink, the small is the one to get.</p>`,
       },
       {
         h: 'Chocolate shake vs. Small Blizzard',
-        html: `<p>A small shake is cheaper than a Small Blizzard but heavier. The small chocolate shake costs about $3.49 with about 710 calories, while a Small <a href="/items/oreo-blizzard">Oreo Blizzard</a> costs about $4.49 with about 420.</p>
-<p>So you save $1.00 with the shake but get about 290 more calories, because it is blended with milk and syrup. The shake is easier to drink in the car, and the Blizzard is better if you want mix-ins.</p>`,
+        html: `<p>A small shake is cheaper and a little lighter than a Small Blizzard. The small chocolate shake costs about $3.49 with 530 calories, while a Small <a href="/items/oreo-blizzard">Oreo Blizzard</a> costs about $4.49 with 600.</p>
+<p>So you save $1.00 with the shake and get about 70 fewer calories. The shake is easier to drink in the car, and the Blizzard is better if you want mix-ins.</p>`,
       },
       {
         h: 'Chocolate shake vs. MooLatté',
-        html: `<p>The chocolate shake is the cheaper and richer drink, and the <a href="/items/moolatte">MooLatté</a> is the one with caffeine. A small MooLatté costs about $4.29 with about 490 calories, 80 cents more than a small shake but about 220 fewer calories. If you like both, a mocha MooLatté is the closest thing to a chocolate shake with coffee in it.</p>`,
+        html: `<p>The chocolate shake is the cheaper and richer drink, and the <a href="/items/moolatte">MooLatté</a> is the one with caffeine. A small MooLatté costs about $4.29 with 450 to 500 calories depending on flavor, 80 cents more than a small shake but about 30 to 80 fewer calories. If you like both, a mocha MooLatté is the closest thing to a chocolate shake with coffee in it.</p>`,
       },
     ],
     faqs: [
@@ -1326,21 +1326,21 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'DQ fruit smoothie vs. Orange Julius',
-        html: `<p>The fruit smoothie is easier to find, and the <a href="/items/orange-julius">Orange Julius</a> is slightly lighter. At the sizes both stores list, they cost the same: about $3.99 for a small and $4.49 for a medium. A small smoothie has about 220 calories and a small Orange Julius about 210. At medium it is about 300 against about 280.</p>
+        html: `<p>The fruit smoothie is easier to find, and the <a href="/items/orange-julius">Orange Julius</a> is lighter. At the sizes both stores list, they cost the same: about $3.99 for a small and $4.49 for a medium. A small strawberry banana smoothie has 260 calories and a small Orange Julius 200. At medium it is 350 against 260.</p>
 <p>Smoothies are mostly sold at DQ Grill & Chill locations, while Orange Julius is only at some DQ and combined DQ/Orange Julius stores. If your store has both, pick the Julius for a frothy orange taste and the smoothie for berry or mango flavors.</p>`,
       },
       {
         h: 'Which smoothie size is the best deal?',
-        html: `<p>The large smoothie is the best deal. Each size step costs about 50 cents, but the calories grow faster: a small is about 220, a medium about 300 and a large about 390.</p>
-<p>That means the large costs about 25% more than a small ($4.99 vs. $3.99) for roughly 77% more drink by calories. A large smoothie still has about 320 fewer calories than a small <a href="/items/chocolate-shake">chocolate shake</a>, so it is a fair choice when you want something big and cold without the weight of a shake.</p>`,
+        html: `<p>The large smoothie is the best deal. Each size step costs about 50 cents, but the calories grow faster: a small strawberry banana is 260, a medium 350 and a large 440.</p>
+<p>That means the large costs about 25% more than a small ($4.99 vs. $3.99) for roughly 69% more drink by calories. A large smoothie still has about 90 fewer calories than a small <a href="/items/chocolate-shake">chocolate shake</a>, so it is a fair choice when you want something big and cold without the weight of a shake.</p>`,
       },
       {
         h: 'Smoothie vs. Misty Slush',
-        html: `<p>A <a href="/items/misty-slush">Misty Slush</a> is the cheaper, icier option. A small costs about $2.39 with about 150 calories, $1.60 less than a small smoothie. The smoothie is thicker and fruitier, while the slush tastes like flavored ice.</p>`,
+        html: `<p>A <a href="/items/misty-slush">Misty Slush</a> is the cheaper, icier option. A small costs about $2.39 with 200 calories, $1.60 less than a small smoothie. The smoothie is thicker and fruitier, while the slush tastes like flavored ice.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many calories are in a large DQ smoothie?', a: 'About 390 calories. That is still about 320 fewer than a small DQ chocolate shake, which has about 710.' },
+      { q: 'How many calories are in a large DQ smoothie?', a: 'About 440 calories for a large strawberry banana. That is still about 90 fewer than a small DQ chocolate shake, which has 530.' },
     ],
   },
 
@@ -1349,12 +1349,12 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'Misty Slush vs. a fountain soft drink',
         html: `<p>The Misty Slush is the better pick on a hot day, and a <a href="/items/soft-drinks">fountain soft drink</a> is the cheaper one. Soft drinks start at about $2.11, and a small Misty Slush costs about $2.39, so the slush is only about 28 cents more.</p>
-<p>A small slush has about 150 calories. Diet sodas have zero, but a large regular soda can be over 300. The slush is also slower to drink, so it lasts through a meal. If you are ordering a <a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a>, the icy slush helps cool the heat.</p>`,
+<p>A small slush has 200 calories. Diet sodas have zero, but a large regular soda can be over 300. The slush is also slower to drink, so it lasts through a meal. If you are ordering a <a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a>, the icy slush helps cool the heat.</p>`,
       },
       {
         h: 'Which Misty Slush size should you get?',
-        html: `<p>The large Misty Slush is the best value, and the small is enough for most kids. A small is about $2.39 and 150 calories, a medium about $2.89 and 200, and a large about $3.29 and 260.</p>
-<p>The step from small to medium costs 50 cents, but medium to large costs only 40 cents. So for 90 cents more than a small, the large gives you about 110 more calories of slush. Even a large has fewer calories than a regular dipped cone (about 330).</p>`,
+        html: `<p>The large Misty Slush is the best value, and the small is enough for most kids. A small is about $2.39 and 200 calories, a medium about $2.89 and 260, and a large about $3.29 and 340.</p>
+<p>The step from small to medium costs 50 cents, but medium to large costs only 40 cents. So for 90 cents more than a small, the large gives you about 140 more calories of slush. Even a large has fewer calories than a medium dipped cone (460).</p>`,
       },
     ],
     faqs: [
@@ -1366,17 +1366,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'MooLatté vs. chocolate shake: which to pick',
-        html: `<p>Pick the MooLatté for coffee and fewer calories, and the <a href="/items/chocolate-shake">chocolate shake</a> for a cheaper, heavier dessert. A small MooLatté costs about $4.29 with about 490 calories, while a small shake costs about $3.49 with about 710.</p>
-<p>The gap grows with size. A medium MooLatté is about $4.99 and 660 calories, and a medium shake about $4.29 and 950. At those two sizes the MooLatté costs 70 to 80 cents more but has about 220 to 290 fewer calories. The mocha flavor is the closest to a chocolate shake.</p>`,
+        html: `<p>Pick the MooLatté for coffee and fewer calories, and the <a href="/items/chocolate-shake">chocolate shake</a> for a cheaper, heavier dessert. A small MooLatté costs about $4.29 with 450 to 500 calories depending on flavor, while a small shake costs about $3.49 with 530.</p>
+<p>The gap grows with size. A medium MooLatté is about $4.99 and 560 to 620 calories, and a medium shake about $4.29 and 710. At those two sizes the MooLatté costs 70 to 80 cents more but has about 30 to 150 fewer calories. The mocha flavor is the closest to a chocolate shake.</p>`,
       },
       {
         h: 'Which MooLatté size is the best value?',
-        html: `<p>The large MooLatté is the best value, and the small is the right size if you just want a coffee treat. Small to medium costs about 70 cents and adds about 170 calories. Medium to large costs only 50 cents and adds about 210.</p>
-<p>In total, the large costs $1.20 more than the small for about 380 more calories. At about 870 calories it is closer to a meal than a drink, so it is a good one to share. Skipping the whipped cream trims a little from any size.</p>`,
+        html: `<p>The large MooLatté is the best value, and the small is the right size if you just want a coffee treat. Small to medium costs about 70 cents and adds about 110 to 130 calories. Medium to large costs only 50 cents and adds about 140 to 160.</p>
+<p>In total, the large costs $1.20 more than the small for about 250 to 290 more calories. At 700 to 780 calories it is closer to a meal than a drink, so it is a good one to share. Skipping the whipped cream trims a little from any size.</p>`,
       },
     ],
     faqs: [
-      { q: 'Does a MooLatté have more calories than a shake?', a: 'No. A small mocha MooLatté has about 490 calories, while a small DQ chocolate shake has about 710.' },
+      { q: 'Does a MooLatté have more calories than a shake?', a: 'No. A small mocha MooLatté has 500 calories, while a small DQ chocolate shake has 530.' },
     ],
   },
 
@@ -1384,13 +1384,13 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'Small or medium Orange Julius?',
-        html: `<p>The small Orange Julius is enough for most people, and the medium is the better value if you are thirsty. A small costs about $3.99 with about 210 calories. A medium costs about $4.49 with about 280.</p>
-<p>So you pay 50 cents more for about a third more drink by calories. Both sizes are light compared with other DQ drinks. Even the medium has fewer than half the calories of a small <a href="/items/chocolate-shake">chocolate shake</a> (about 710), which makes the Julius one of the easier sweet drinks to fit into a meal.</p>`,
+        html: `<p>The small Orange Julius is enough for most people, and the medium is the better value if you are thirsty. A small costs about $3.99 with 200 calories. A medium costs about $4.49 with 260.</p>
+<p>So you pay 50 cents more for about 30% more drink by calories. Both sizes are light compared with other DQ drinks. Even the medium has fewer than half the calories of a small <a href="/items/chocolate-shake">chocolate shake</a> (530), which makes the Julius one of the easier sweet drinks to fit into a meal.</p>`,
       },
       {
         h: 'What to order if your DQ has no Orange Julius',
-        html: `<p>Order a <a href="/items/fruit-smoothies">fruit smoothie</a> if your DQ does not sell Orange Julius. It costs the same at small and medium (about $3.99 and $4.49) and has about 10 to 20 more calories per size. The strawberry banana flavor is offered as both a smoothie and a Julius.</p>
-<p>If you want something cheaper, a small <a href="/items/misty-slush">Misty Slush</a> costs about $2.39 with about 150 calories. It is icier and less creamy, but it is sold at many more stores.</p>`,
+        html: `<p>Order a <a href="/items/fruit-smoothies">fruit smoothie</a> if your DQ does not sell Orange Julius. It costs the same at small and medium (about $3.99 and $4.49) and the strawberry banana smoothie has about 60 to 90 more calories per size. The strawberry banana flavor is offered as both a smoothie and a Julius.</p>
+<p>If you want something cheaper, a small <a href="/items/misty-slush">Misty Slush</a> costs about $2.39 with 200 calories. It is icier and less creamy, but it is sold at many more stores.</p>`,
       },
     ],
     faqs: [

@@ -3,25 +3,25 @@
 import ItemPage from '../../layouts/ItemPage.astro';
 
 const faqs = [
-  { q: "How much is a hot fudge sundae at Dairy Queen?", a: "About $3.49 for a small and $3.79 for a regular. Prices vary by location." },
+  { q: "How much is a hot fudge sundae at Dairy Queen?", a: "About $3.49 for a small and $3.79 for a medium. Prices vary by location." },
   { q: "Does the $7 Meal Deal come with a hot fudge sundae?", a: "Yes. The $7 Meal Deal includes a small sundae, and hot fudge is one of the choices." },
 ];
 ---
 <ItemPage
   title="DQ Hot Fudge Sundae: Price & Calories (2026)"
-  description="A Dairy Queen hot fudge sundae costs about $3.49 small and $3.79 regular. Calories, what comes on it and how it compares to other DQ sundaes."
+  description="A Dairy Queen hot fudge sundae costs about $3.49 small and $3.79 medium. Calories, what comes on it and how it compares to other DQ sundaes."
   name="Hot Fudge Sundae"
   category={{ name: "Classic Treats", href: "/categories/classic-treats" }}
   image="/Images/hot-fudge-sundae.webp"
   imageAlt="Dairy Queen hot fudge sundae"
   badges={["Classic treat", "In the $7 Meal Deal"]}
-  quick="A Dairy Queen hot fudge sundae costs about $3.49 for a small and $3.79 for a regular. A regular has about 300 calories, and a small sundae comes with the $7 Meal Deal. Prices vary by location."
+  quick="A Dairy Queen hot fudge sundae costs about $3.49 for a small and $3.79 for a medium. A medium has about 430 calories, and a small sundae comes with the $7 Meal Deal. Prices vary by location."
   from="From $3.49"
   intro="Vanilla soft serve with warm hot fudge poured over the top. Simple, and one of the most ordered treats at DQ."
-  spec={[["Sizes", "Small · Regular"], ["Calories (regular)", "300"], ["Also in", "$7 Meal Deal (small)"]]}
+  spec={[["Sizes", "Small · Medium"], ["Calories (medium)", "430"], ["Also in", "$7 Meal Deal (small)"]]}
   allergens="Milk, Soy"
-  table={{"title": "hot fudge sundae price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Small", "$3.49", "~250"], ["Regular", "$3.79", "300"]]}}
+  table={{"title": "hot fudge sundae price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Small", "$3.49", "300"], ["Medium", "$3.79", "430"]]}}
   faqs={faqs}
 >
-<h2>DQ sundaes compared</h2><div class="table-wrap"><table class="size-table"><thead><tr><th>Sundae</th><th>Typical price</th><th>Calories</th></tr></thead><tbody><tr><td><a href="/items/strawberry-sundae">Strawberry</a></td><td>$3.79</td><td>280</td></tr><tr><td><strong><a href="/items/hot-fudge-sundae">Hot fudge</a></strong></td><td>$3.79</td><td>300</td></tr><tr><td><a href="/items/caramel-sundae">Caramel</a></td><td>$3.79</td><td>310</td></tr></tbody></table></div><h2>Tips</h2><ul><li>Add nuts or extra fudge for a small charge.</li><li>Want more toppings? The <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> layers fudge and peanuts all the way down.</li></ul><p>See every cone, sundae and novelty on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
+<h2>DQ sundaes compared</h2><div class="table-wrap"><table class="size-table"><thead><tr><th>Sundae</th><th>Typical price</th><th>Calories</th></tr></thead><tbody><tr><td><a href="/items/strawberry-sundae">Strawberry (medium)</a></td><td>$3.79</td><td>340</td></tr><tr><td><strong><a href="/items/hot-fudge-sundae">Hot fudge (medium)</a></strong></td><td>$3.79</td><td>430</td></tr><tr><td><a href="/items/caramel-sundae">Caramel (medium)</a></td><td>$3.79</td><td>430</td></tr></tbody></table></div><h2>Tips</h2><ul><li>Add nuts or extra fudge for a small charge.</li><li>Want more toppings? The <a href="/items/peanut-buster-parfait">Peanut Buster Parfait</a> layers fudge and peanuts all the way down.</li></ul><p>See every cone, sundae and novelty on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
 </ItemPage>

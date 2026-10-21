@@ -3,26 +3,26 @@
 import ItemPage from '../../layouts/ItemPage.astro';
 
 const faqs = [
-  { q: "How much is a dipped cone at Dairy Queen?", a: "About $3.19 for a regular and $3.79 for a large. Prices vary by location." },
+  { q: "How much is a dipped cone at Dairy Queen?", a: "About $3.19 for a small and $3.79 for a medium. Prices vary by location." },
   { q: "How does the chocolate on a DQ dipped cone get hard?", a: "The warm chocolate coating sets almost instantly when it touches the cold soft serve." },
-  { q: "Is a dipped cone worth the extra cost?", a: "If you like chocolate, yes. It costs about 80 cents more than a plain regular cone and adds a crunchy shell." },
+  { q: "Is a dipped cone worth the extra cost?", a: "If you like chocolate, yes. It costs about 80 cents more than a plain small cone and adds a crunchy shell." },
 ];
 ---
 <ItemPage
   title="DQ Chocolate Dipped Cone: Price & Calories (2026)"
-  description="A Dairy Queen chocolate dipped cone costs about $3.19 regular and $3.79 large. Calories, how the shell works and how it compares to a plain cone."
+  description="A Dairy Queen chocolate dipped cone costs about $3.19 small and $3.79 medium. Calories, how the shell works and how it compares to a plain cone."
   name="Chocolate Dipped Cone"
   category={{ name: "Classic Treats", href: "/categories/classic-treats" }}
   image="/Images/chocolate-dipped-cone.webp"
   imageAlt="Dairy Queen chocolate dipped cone with a hard chocolate shell"
   badges={["Classic treat"]}
-  quick="A Dairy Queen chocolate dipped cone costs about $3.19 for a regular and $3.79 for a large. A regular has about 330 calories. Prices vary by location."
+  quick="A Dairy Queen chocolate dipped cone costs about $3.19 for a small and $3.79 for a medium. A small has about 320 calories. Prices vary by location."
   from="From $3.19"
   intro="A vanilla soft serve cone dipped upside down in warm chocolate, which hardens into a crunchy shell within seconds."
-  spec={[["Sizes", "Regular · Large"], ["Calories (regular)", "330"], ["Coating", "Chocolate shell that hardens on the cone"]]}
+  spec={[["Sizes", "Small · Medium"], ["Calories (small)", "320"], ["Coating", "Chocolate shell that hardens on the cone"]]}
   allergens="Milk, Wheat, Soy"
-  table={{"title": "chocolate dipped cone price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Regular", "$3.19", "330"], ["Large", "$3.79", "~440"]]}}
+  table={{"title": "chocolate dipped cone price and calories by size", "head": ["Size", "Price", "Calories"], "rows": [["Small", "$3.19", "320"], ["Medium", "$3.79", "460"]]}}
   faqs={faqs}
 >
-<h2>Dipped cone vs. plain cone</h2><div class="table-wrap"><table class="size-table"><thead><tr><th>Cone</th><th>Typical price</th><th>Calories</th></tr></thead><tbody><tr><td><strong>Chocolate dipped (regular)</strong></td><td>$3.19</td><td>330</td></tr><tr><td><a href="/items/vanilla-soft-serve-cone">Vanilla cone (regular)</a></td><td>$2.39</td><td>230</td></tr></tbody></table></div><h2>Tips</h2><ul><li>Eat it from the top down; the shell cracks and falls if you bite the side first.</li><li>Some stores offer other dip flavors seasonally. Ask what is available.</li></ul><p>See every cone, sundae and novelty on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
+<h2>Dipped cone vs. plain cone</h2><div class="table-wrap"><table class="size-table"><thead><tr><th>Cone</th><th>Typical price</th><th>Calories</th></tr></thead><tbody><tr><td><strong>Chocolate dipped (small)</strong></td><td>$3.19</td><td>320</td></tr><tr><td><a href="/items/vanilla-soft-serve-cone">Vanilla cone (small)</a></td><td>$2.39</td><td>220</td></tr></tbody></table></div><h2>Tips</h2><ul><li>Eat it from the top down; the shell cracks and falls if you bite the side first.</li><li>Some stores offer other dip flavors seasonally. Ask what is available.</li></ul><p>See every cone, sundae and novelty on the <a href="/categories/classic-treats">classic treats menu</a>.</p>
 </ItemPage>

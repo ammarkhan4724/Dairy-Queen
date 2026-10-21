@@ -4,21 +4,21 @@ import BlogPost from '../../layouts/BlogPost.astro';
 // Seasons, prices and calories match each Blizzard item page and /categories/blizzard-treats.
 type Row = { name: string; season: string; small: string; cal: string };
 const rows: Row[] = [
-  { name: 'Oreo Cookie', season: 'Year-round', small: '$4.49', cal: '420' },
-  { name: 'Chocolate Chip Cookie Dough', season: 'Year-round', small: '$4.49', cal: '590' },
-  { name: 'Reese’s Peanut Butter Cup', season: 'Year-round', small: '$4.49', cal: '600' },
-  { name: 'M&M’s Milk Chocolate', season: 'Year-round', small: '$4.49', cal: '490' },
-  { name: 'Butterfinger', season: 'Year-round', small: '$4.49', cal: '470' },
-  { name: 'Heath', season: 'Year-round', small: '$4.49', cal: '480' },
-  { name: 'Snickers', season: 'Year-round', small: '$4.49', cal: '500' },
-  { name: 'Choco Brownie Extreme', season: 'Year-round', small: '$4.79', cal: '510' },
+  { name: 'Oreo Cookie', season: 'Year-round', small: '$4.49', cal: '600' },
+  { name: 'Chocolate Chip Cookie Dough', season: 'Year-round', small: '$4.49', cal: '710' },
+  { name: 'Reese’s Peanut Butter Cup', season: 'Year-round', small: '$4.49', cal: '610' },
+  { name: 'M&M’s Milk Chocolate', season: 'Year-round', small: '$4.49', cal: '660' },
+  { name: 'Butterfinger', season: 'Year-round', small: '$4.49', cal: '590' },
+  { name: 'Heath', season: 'Year-round', small: '$4.49', cal: '640' },
+  { name: 'Snickers', season: 'Year-round', small: '$4.49', cal: '610' },
+  { name: 'Choco Brownie Extreme', season: 'Year-round', small: '$4.79', cal: '740' },
   { name: 'Brownie Batter', season: 'Year-round', small: '$4.79', cal: '530' },
-  { name: 'Turtle Pecan Cluster', season: 'Year-round', small: '$4.79', cal: '570' },
+  { name: 'Turtle Pecan Cluster', season: 'Year-round', small: '$4.79', cal: '680' },
   { name: 'Royal Oreo', season: 'Year-round (Royal)', small: '$4.99', cal: '490' },
   { name: 'Royal Reese’s', season: 'Year-round (Royal)', small: '$4.99', cal: '620' },
-  { name: 'Royal New York Cheesecake', season: 'Year-round (Royal)', small: '$4.99', cal: '460' },
+  { name: 'Royal New York Cheesecake', season: 'Year-round (Royal)', small: '$4.99', cal: '750' },
   { name: 'Royal Rocky Road Trip', season: 'Year-round (Royal)', small: '$4.99', cal: '530' },
-  { name: 'Mint Oreo', season: 'Varies by store', small: '$4.49', cal: '440' },
+  { name: 'Mint Oreo', season: 'Varies by store', small: '$4.49', cal: '640' },
   { name: 'Strawberry Cheesequake', season: 'Varies by store', small: '$4.79', cal: '520' },
   { name: 'S’mores', season: 'Summer seasonal', small: '$5.29', cal: '500' },
   { name: 'Cotton Candy', season: 'Summer seasonal', small: '$5.29', cal: '460' },
@@ -26,7 +26,7 @@ const rows: Row[] = [
   { name: 'Swicy Pineapple with Tajín', season: 'Summer seasonal', small: '$5.29', cal: '430' },
   { name: 'Dipped Strawberry Cheesecake', season: 'Summer seasonal', small: '$5.29', cal: '540' },
   { name: 'Confetti Cake', season: 'Summer seasonal', small: '$5.29', cal: '490' },
-  { name: 'Pumpkin Pie', season: 'Fall seasonal', small: '$5.29', cal: '490' },
+  { name: 'Pumpkin Pie', season: 'Fall seasonal', small: '$5.29', cal: '560' },
   { name: 'Peppermint Bark', season: 'Winter seasonal', small: '$4.79', cal: '500' },
   { name: 'Peppermint Hot Cocoa', season: 'Winter seasonal', small: '$4.79', cal: '480' },
   { name: 'Frosted Sugar Cookie', season: 'Holiday seasonal', small: '$4.79', cal: '510' },
@@ -73,7 +73,7 @@ const faqs = [
   <h2 id="year-round">The year-round core lineup</h2>
   <p><strong>Ten classic flavors and four Royal Blizzards are on the menu all year</strong>, so you can count on them in any month. These are the safe picks when the seasonal flavor of the moment is not for you.</p>
   <ul>
-    <li><strong>Classic, about $4.49 for a Small:</strong> <a href="/items/oreo-blizzard">Oreo Cookie</a> (420 calories), Chocolate Chip Cookie Dough, Reese’s, M&amp;M’s, Butterfinger, Heath and Snickers.</li>
+    <li><strong>Classic, about $4.49 for a Small:</strong> <a href="/items/oreo-blizzard">Oreo Cookie</a> (600 calories), Chocolate Chip Cookie Dough, Reese’s, M&amp;M’s, Butterfinger, Heath and Snickers.</li>
     <li><strong>Premium, about $4.79 for a Small:</strong> Choco Brownie Extreme, Brownie Batter and Turtle Pecan Cluster.</li>
     <li><strong>Royal, about $4.99 for a Small:</strong> Royal Oreo, Royal Reese’s, <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a> and <a href="/items/royal-rocky-road-trip-blizzard">Royal Rocky Road Trip</a>. Each has a filled center, such as hot fudge or peanut butter.</li>
   </ul>
@@ -96,7 +96,7 @@ const faqs = [
   <p><strong>Fall belongs to the <a href="/items/pumpkin-pie-blizzard">Pumpkin Pie Blizzard</a>, which usually runs around September through November.</strong> It is DQ’s best-known fall flavor: pumpkin pie pieces and pie crust blended into vanilla soft serve, with whipped topping on top.</p>
   <ul>
     <li><strong>Price:</strong> about $4.49 Mini, $5.29 Small, $6.09 Medium and $6.79 Large.</li>
-    <li><strong>Calories:</strong> about 490 for a Small and about 1,030 for a Large.</li>
+    <li><strong>Calories:</strong> about 560 for a Small and about 940 for a Large.</li>
   </ul>
   <p>If you are asking when the Pumpkin Pie Blizzard comes back, the short answer is each fall, but stores set their own dates. Some start earlier and some keep it later, and once the holiday season starts, Peppermint Bark usually takes its place. Open the DQ app, pick your store and look at the Blizzard list to confirm before you go.</p>
 
@@ -117,9 +117,9 @@ const faqs = [
   <p><strong>When a seasonal flavor leaves, a year-round Blizzard can usually get you close.</strong> These are the nearest matches on the regular menu:</p>
   <ul>
     <li><strong>S’mores:</strong> Royal Rocky Road Trip has marshmallow and chocolate, about $4.99 and 530 calories for a Small.</li>
-    <li><strong>Dipped Strawberry Cheesecake:</strong> Royal New York Cheesecake, about $4.99 and 460 calories for a Small.</li>
+    <li><strong>Dipped Strawberry Cheesecake:</strong> Royal New York Cheesecake, about $4.99 and 750 calories for a Small.</li>
     <li><strong>Peppermint Hot Cocoa:</strong> Choco Brownie Extreme for pure chocolate, same price at about $4.79 for a Small.</li>
-    <li><strong>Peppermint Bark:</strong> Mint Oreo, where your store carries it, about $4.49 and 440 calories for a Small.</li>
+    <li><strong>Peppermint Bark:</strong> Mint Oreo, where your store carries it, about $4.49 and 640 calories for a Small.</li>
   </ul>
 
   <h2 id="tips">Tips for catching seasonal Blizzards</h2>

@@ -13,18 +13,18 @@ def ul(items):
 
 
 BURGERS = ['Burger', 'Typical price', 'Calories'], [
-    ['<a href="/items/original-cheeseburger">Original Cheeseburger</a>', '$6.39', '400'],
-    ['<a href="/items/double-cheeseburger">Double Cheeseburger</a>', '$7.99', '560'],
-    ['<a href="/items/two-cheese-deluxe-stackburger">Two Cheese Deluxe Stackburger</a>', '$8.29', '630'],
+    ['<a href="/items/original-cheeseburger">Original Cheeseburger</a>', '$6.39', '370'],
+    ['<a href="/items/double-cheeseburger">Double Cheeseburger</a>', '$7.99', '570'],
+    ['<a href="/items/two-cheese-deluxe-stackburger">Two Cheese Deluxe Stackburger</a>', '$8.29', '620'],
     ['<a href="/items/mushroom-swiss-stackburger">Mushroom Swiss Stackburger</a>', '$9.49', '680'],
-    ['<a href="/items/backyard-bacon-ranch-stackburger">Backyard Bacon Ranch Stackburger</a>', '$9.99', '730'],
-    ['<a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a>', '$10.87', '780'],
+    ['<a href="/items/backyard-bacon-ranch-stackburger">Backyard Bacon Ranch Stackburger</a>', '$9.99', '820'],
+    ['<a href="/items/flamethrower-stackburger">FlameThrower Stackburger</a>', '$10.87', '720'],
 ]
 CHICKEN = ['Option', 'Typical price', 'Calories'], [
-    ['<a href="/items/2pc-chicken-strips">2-piece strips (no sides)</a>', '$3.49', '~280'],
-    ['<a href="/items/chicken-strip-basket-4pc">4-piece basket</a>', '$9.99', '~1,000'],
-    ['<a href="/items/honey-bbq-chicken-strip-basket">Honey BBQ 4-piece basket</a>', '$10.49', '~1,100'],
-    ['<a href="/items/chicken-strip-basket-6pc">6-piece basket</a>', '$13.49', '~1,380'],
+    ['<a href="/items/2pc-chicken-strips">2-piece strips (no sides)</a>', '$3.49', '280'],
+    ['<a href="/items/chicken-strip-basket-4pc">4-piece basket</a>', '$9.99', '1,020'],
+    ['<a href="/items/honey-bbq-chicken-strip-basket">Honey BBQ 4-piece basket</a>', '$10.49', '1,140'],
+    ['<a href="/items/chicken-strip-basket-6pc">6-piece basket</a>', '$13.49', '1,300'],
 ]
 BREAKFAST = ['Item', 'Typical price', 'Calories'], [
     ['<a href="/items/breakfast-burrito">Breakfast Burrito</a>', '$3.49', '380'],
@@ -34,9 +34,9 @@ BREAKFAST = ['Item', 'Typical price', 'Calories'], [
     ['<a href="/items/country-breakfast-platter">Country Breakfast Platter</a>', '$6.99', '860'],
 ]
 KIDS = ['Kids meal', 'Typical price', 'Calories (with fries and cone)'], [
-    ['<a href="/items/kids-cheeseburger-meal">Cheeseburger</a>', '$4.99', '~700'],
-    ['<a href="/items/kids-chicken-strips-meal">2-piece chicken strips</a>', '$4.99', '~750'],
-    ['<a href="/items/kids-hot-dog-meal">Hot dog</a>', '$4.99', '~650'],
+    ['<a href="/items/kids-cheeseburger-meal">Cheeseburger</a>', '$4.99', '~600'],
+    ['<a href="/items/kids-chicken-strips-meal">2-piece chicken strips</a>', '$4.99', '610'],
+    ['<a href="/items/kids-hot-dog-meal">Hot dog</a>', '$4.99', '660'],
 ]
 GC = 'Burgers and hot food are sold at DQ Grill &amp; Chill restaurants, not Treat-only stores.'
 BURGERL = '<p>See every burger and sandwich on the <a href="/categories/burgers-sandwiches">DQ burgers menu</a>, or read our <a href="/blog/best-dairy-queen-burgers-ranked">ranking of the best DQ burgers</a>.</p>'
@@ -47,25 +47,25 @@ KIDSL = '<p>See all options on the <a href="/categories/kids-meals">DQ kids meal
 ITEMS = [
     dict(slug='flamethrower-stackburger', cat='burgers', name='FlameThrower Stackburger', short='FlameThrower Stackburger',
          title='DQ FlameThrower Stackburger: Price & Calories',
-         desc='The Dairy Queen FlameThrower Stackburger costs about $10.87 single and $13.49 double. How spicy it is, what is on it and calories.',
+         desc='The Dairy Queen FlameThrower Stackburger costs about $10.87 double and $13.49 triple. How spicy it is, what is on it and calories.',
          image='/Images/flamethrower-stackburger.webp', alt='Dairy Queen FlameThrower Stackburger with pepper jack and jalapeño bacon', badges=['Spicy', 'Our top-ranked DQ burger'],
-         sizes=[('Single', '$10.87', '780'), ('Double', '~$13.49', '1,020')],
-         quick='The FlameThrower Stackburger at Dairy Queen costs about $10.87 for a single and about $13.49 for a double. The single has about 780 calories. It is medium-spicy, with FlameThrower sauce, jalapeño bacon and pepper jack. Prices vary by location.',
-         price_q='How much is a FlameThrower burger at Dairy Queen?', price_a='About $10.87 for a single and about $13.49 for a double. Prices vary by location.',
+         sizes=[('Double', '$10.87', '720'), ('Triple', '~$13.49', '910')],
+         quick='The FlameThrower Stackburger at Dairy Queen costs about $10.87 for a double and about $13.49 for a triple. The double has about 720 calories. It is medium-spicy, with FlameThrower sauce, jalapeño bacon and pepper jack. Prices vary by location.',
+         price_q='How much is a FlameThrower burger at Dairy Queen?', price_a='About $10.87 for a double and about $13.49 for a triple. Prices vary by location.',
          intro='DQ’s spicy Stackburger: seasoned beef, pepper jack cheese, jalapeño bacon and FlameThrower sauce, with lettuce and tomato. The heat builds in layers rather than all at once.',
-         spec=[['Sizes', 'Single · Double'], ['Calories (single)', '780'], ['Protein (single)', '42 g'], ['Heat', 'Medium']], allergens='Milk, Wheat, Soy, Eggs',
+         spec=[['Sizes', 'Double · Triple'], ['Calories (double)', '720'], ['Protein (double)', '34 g'], ['Heat', 'Medium']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('How spicy is the FlameThrower burger?', 'Most people find it a medium heat: warm and peppery rather than painful.'),
                ('What is FlameThrower sauce?', 'A spicy, creamy sauce made with peppers and spices. You can ask for it on the side with chicken strips.')],
          body='<h2>How it compares to other DQ burgers</h2>' + table(*BURGERS, bold=5) +
-         '<h2>Ordering tips</h2>' + ul(['The single is enough for most people; the double is over 1,000 calories.', 'Want less heat? Ask for light sauce.',
+         '<h2>Ordering tips</h2>' + ul(['The double is enough for most people; the triple is over 900 calories.', 'Want less heat? Ask for light sauce.',
                                        'Add <a href="/items/onion-rings">onion rings</a> or <a href="/items/cheese-curds">cheese curds</a> as your side.', GC]) + BURGERL),
 
-    dict(slug='backyard-bacon-ranch-stackburger', cat='burgers', name='Backyard Bacon Ranch Stackburger', short='Backyard Bacon Ranch Stackburger', price='$9.99', cal='730',
+    dict(slug='backyard-bacon-ranch-stackburger', cat='burgers', name='Backyard Bacon Ranch Stackburger', short='Backyard Bacon Ranch Stackburger', price='$9.99', cal='820',
          title='DQ Backyard Bacon Ranch Stackburger: Price & Calories',
-         desc='The Dairy Queen Backyard Bacon Ranch Stackburger costs about $9.99 and has 730 calories. What is on it and how it compares to the FlameThrower.',
+         desc='The Dairy Queen Backyard Bacon Ranch Stackburger costs about $9.99 and has 820 calories. What is on it and how it compares to the FlameThrower.',
          image='/Images/backyard-bacon-ranch-stackburger.webp', alt='Dairy Queen Backyard Bacon Ranch Stackburger', badges=['No spice', 'Best non-spicy Stackburger'],
          intro='Seasoned beef with bacon, cheese, ranch, BBQ sauce and crispy onions. It has big flavor without any heat, which makes it the best Stackburger if you do not want spice.',
-         spec=[['Price', '$9.99'], ['Calories', '730'], ['Protein', '38 g'], ['Heat', 'None']], allergens='Milk, Wheat, Soy, Eggs',
+         spec=[['Price', '$9.99'], ['Calories', '820'], ['Protein', '38 g'], ['Heat', 'None']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('Is the Backyard Bacon Ranch burger spicy?', 'No. It is smoky and savory with ranch and BBQ sauce, but not spicy.')],
          body='<h2>How it compares to other DQ burgers</h2>' + table(*BURGERS, bold=4) +
          '<h2>Ordering tips</h2>' + ul(['It is messy; grab extra napkins.', 'Pair it with <a href="/items/onion-rings">onion rings</a> for even more crunch.', GC]) + BURGERL),
@@ -81,12 +81,12 @@ ITEMS = [
          '<p>If you like mushroom burgers, you will like this one. If you are on the fence, the <a href="/items/backyard-bacon-ranch-stackburger">Backyard Bacon Ranch</a> is the safer non-spicy pick.</p>' +
          '<h2>Good to know</h2>' + ul(['It is a little cheaper than the Bacon Ranch and FlameThrower.', GC]) + BURGERL),
 
-    dict(slug='two-cheese-deluxe-stackburger', cat='burgers', name='Two Cheese Deluxe Stackburger', short='Two Cheese Deluxe Stackburger', price='$8.29', cal='630',
+    dict(slug='two-cheese-deluxe-stackburger', cat='burgers', name='Two Cheese Deluxe Stackburger', short='Two Cheese Deluxe Stackburger', price='$8.29', cal='620',
          title='DQ Two Cheese Deluxe Stackburger: Price & Calories',
-         desc='The Dairy Queen Two Cheese Deluxe Stackburger costs about $8.29 and has 630 calories. The lowest-priced Stackburger; what is on it.',
+         desc='The Dairy Queen Two Cheese Deluxe Stackburger costs about $8.29 and has 620 calories. The lowest-priced Stackburger; what is on it.',
          image='/Images/two-cheese-deluxe-stackburger.webp', alt='Dairy Queen Two Cheese Deluxe Stackburger', badges=['Lowest-priced Stackburger'],
          intro='Two seasoned beef patties with two slices of melted cheese, pickles, onion, ketchup and mustard. It is the classic double cheeseburger of the Stackburger line and the cheapest one.',
-         spec=[['Price', '$8.29'], ['Calories', '630'], ['Patties', '2'], ['Toppings', 'Cheese, pickles, onion, ketchup, mustard']], allergens='Milk, Wheat, Soy',
+         spec=[['Price', '$8.29'], ['Calories', '620'], ['Patties', '2'], ['Toppings', 'Cheese, pickles, onion, ketchup, mustard']], allergens='Milk, Wheat, Soy',
          faqs=[('Is the Two Cheese Deluxe the cheapest Stackburger?', 'Yes, at about $8.29 it costs less than the other Stackburgers.')],
          body='<h2>How it compares to other DQ burgers</h2>' + table(*BURGERS, bold=2) +
          '<p>The <a href="/items/double-cheeseburger">Double Cheeseburger</a> is similar and about 30 cents cheaper; the Two Cheese Deluxe is the bigger, Stackburger-style version.</p>' +
@@ -96,22 +96,22 @@ ITEMS = [
          title='DQ Original Cheeseburger: Price & Calories (2026)',
          desc='The Dairy Queen Original Cheeseburger costs about $6.39 single and $7.99 double. Calories, what is on it and how to get it in the $7 Meal Deal.',
          image='/Images/original-cheeseburger.webp', alt='Dairy Queen Original Cheeseburger', badges=['In the $7 Meal Deal'],
-         sizes=[('Single', '$6.39', '400'), ('Double', '$7.99', '560')],
-         quick='The Original Cheeseburger at Dairy Queen costs about $6.39 for a single and $7.99 for a double. The single has about 400 calories. It is also one of the entrée choices in the $7 Meal Deal. Prices vary by location.',
+         sizes=[('Single', '$6.39', '370'), ('Double', '$7.99', '570')],
+         quick='The Original Cheeseburger at Dairy Queen costs about $6.39 for a single and $7.99 for a double. The single has about 370 calories. It is also one of the entrée choices in the $7 Meal Deal. Prices vary by location.',
          price_q='How much is a cheeseburger at Dairy Queen?', price_a='About $6.39 for a single and $7.99 for a double. Prices vary by location.',
          intro='DQ’s classic cheeseburger: a seasoned beef patty with American cheese, pickles, onion, ketchup and mustard on a toasted bun. It is the lightest burger on the menu.',
-         spec=[['Sizes', 'Single · Double'], ['Calories (single)', '400'], ['Sodium (single)', '910 mg']], allergens='Milk, Wheat, Soy',
+         spec=[['Sizes', 'Single · Double'], ['Calories (single)', '370'], ['Sodium (single)', '1,120 mg']], allergens='Milk, Wheat, Soy',
          faqs=[('Is the cheeseburger part of the $7 Meal Deal?', 'Yes. The $7 Meal Deal includes an Original Cheeseburger or 3-piece chicken strips, plus fries, a drink and a small sundae.')],
          body='<h2>Best way to order it</h2><p>On its own the single costs about $6.39, so the <a href="/items/7-meal-deal">$7 Meal Deal</a> is usually the better buy: you add fries, a drink and a sundae for about 60 cents more. It is also on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a> at many stores.</p>' +
          '<h2>How it compares to other DQ burgers</h2>' + table(*BURGERS, bold=0) + BURGERL),
 
-    dict(slug='double-cheeseburger', cat='burgers', name='Double Cheeseburger', short='Double Cheeseburger', price='$7.99', cal='560',
+    dict(slug='double-cheeseburger', cat='burgers', name='Double Cheeseburger', short='Double Cheeseburger', price='$7.99', cal='570',
          title='DQ Double Cheeseburger: Price & Calories (2026)',
-         desc='The Dairy Queen Double Cheeseburger costs about $7.99 and has 560 calories. What is on it and why it is the best-value burger at DQ.',
+         desc='The Dairy Queen Double Cheeseburger costs about $7.99 and has 570 calories. What is on it and why it is the best-value burger at DQ.',
          image='/Images/double-cheeseburger.webp', alt='Dairy Queen Double Cheeseburger', badges=['Best value burger'],
          intro='Two seasoned beef patties with American cheese, pickles, onion, ketchup and mustard on a toasted bun. For about $1.60 more than the single, you get twice the beef.',
-         spec=[['Price', '$7.99'], ['Calories', '560'], ['Protein', '34 g'], ['Patties', '2']], allergens='Milk, Wheat, Soy',
-         faqs=[('How much more is a double than a single cheeseburger at DQ?', 'About $1.60 more, for a second patty and about 160 more calories.')],
+         spec=[['Price', '$7.99'], ['Calories', '570'], ['Protein', '29 g'], ['Patties', '2']], allergens='Milk, Wheat, Soy',
+         faqs=[('How much more is a double than a single cheeseburger at DQ?', 'About $1.60 more, for a second patty and about 200 more calories.')],
          body='<h2>How it compares to other DQ burgers</h2>' + table(*BURGERS, bold=1) +
          '<h2>Good to know</h2>' + ul(['It is our best-value pick in the <a href="/blog/best-dairy-queen-burgers-ranked">DQ burger rankings</a>.', 'Add bacon if your store offers it for a small charge.', GC]) + BURGERL),
 
@@ -133,8 +133,8 @@ ITEMS = [
          intro='A grilled chicken breast with lettuce, tomato and sauce on a toasted bun. At about 390 calories and 36 grams of protein, it is one of the lightest meals at Dairy Queen.',
          spec=[['Price', '$7.99'], ['Calories', '390'], ['Protein', '36 g'], ['Total fat', '9 g']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('What is the healthiest sandwich at Dairy Queen?', 'The Grilled Chicken Sandwich is one of the lightest options, at about 390 calories and 9 g of fat.')],
-         body='<h2>Make it a lighter meal</h2>' + ul(['Swap fries for a <a href="/items/side-salad">side salad</a> to save about 170 calories.', 'Ask for sauce on the side.',
-                                                    'For dessert, a small cone is about 170 calories. See our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a>.']) +
+         body='<h2>Make it a lighter meal</h2>' + ul(['Swap fries for a <a href="/items/side-salad">side salad</a> to save about 260 calories.', 'Ask for sauce on the side.',
+                                                    'For dessert, a kids’ cone is about 160 calories. See our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a>.']) +
          '<h2>Grilled vs. crispy</h2>' + table(['Sandwich', 'Typical price', 'Calories'], [
              ['Grilled Chicken Sandwich', '$7.99', '390'], ['<a href="/items/crispy-chicken-sandwich">Crispy Chicken Sandwich</a>', '$7.99', '470']]) + BURGERL),
 
@@ -143,10 +143,10 @@ ITEMS = [
          desc='A Dairy Queen hot dog costs about $3.99 and has 330 calories. Toppings, the chili cheese dog option and the 2 for $5 menu.',
          image='/Images/hot-dog.webp', alt='Dairy Queen hot dog in a steamed bun', badges=['Budget pick'],
          intro='An all-beef hot dog in a steamed bun, with ketchup, mustard and onion on request. It is one of the cheapest hot food items at DQ.',
-         spec=[['Price', '$3.99'], ['Calories', '330'], ['Protein', '13 g'], ['Bun', 'Steamed']], allergens='Wheat, Soy',
+         spec=[['Price', '$3.99'], ['Calories', '330'], ['Protein', '12 g'], ['Bun', 'Steamed']], allergens='Wheat, Soy',
          faqs=[('Is the DQ hot dog on the 2 for $5 menu?', 'At many stores, yes. Check your store’s board or the DQ app.')],
          body='<h2>Hot dog vs. chili cheese dog</h2>' + table(['Item', 'Typical price', 'Calories'], [
-             ['Hot dog', '$3.99', '330'], ['<a href="/items/chili-cheese-dog">Chili cheese dog</a>', '$4.99', '420'], ['<a href="/items/original-cheeseburger">Original Cheeseburger</a>', '$6.39', '400']]) +
+             ['Hot dog', '$3.99', '330'], ['<a href="/items/chili-cheese-dog">Chili cheese dog</a>', '$4.99', '420'], ['<a href="/items/original-cheeseburger">Original Cheeseburger</a>', '$6.39', '370']]) +
          '<p>For kids, the <a href="/items/kids-hot-dog-meal">Kids Hot Dog Meal</a> adds a side, drink and cone for about $4.99. ' + GC + '</p>' + BURGERL),
 
     dict(slug='chili-cheese-dog', cat='burgers', name='Chili Cheese Dog', short='Chili Cheese Dog', price='$4.99', cal='420',
@@ -160,36 +160,36 @@ ITEMS = [
              ['Chili cheese dog', '$4.99', '420'], ['<a href="/items/hot-dog">Hot dog</a>', '$3.99', '330']]) +
          '<p>On the <a href="/items/2-for-5-mix-match">2 for $5 menu</a>, the chili cheese dog is a good value pick alongside <a href="/items/2pc-chicken-strips">2-piece chicken strips</a>. ' + GC + '</p>' + BURGERL),
 
-    dict(slug='chicken-strip-basket-4pc', cat='chicken', name='4-Piece Chicken Strip Basket', short='4-piece Chicken Strip Basket', price='$9.99', cal='1,000',
+    dict(slug='chicken-strip-basket-4pc', cat='chicken', name='4-Piece Chicken Strip Basket', short='4-piece Chicken Strip Basket', price='$9.99', cal='1,020',
          title='DQ 4-Piece Chicken Strip Basket: Price & Calories',
-         desc='The Dairy Queen 4-piece Chicken Strip Basket costs about $9.99 and has about 1,000 calories with fries, Texas toast and a sauce.',
+         desc='The Dairy Queen 4-piece Chicken Strip Basket costs about $9.99 and has about 1,020 calories with fries, Texas toast and a sauce.',
          image='/Images/chicken-strip-basket-4pc.webp', alt='Dairy Queen 4-piece Chicken Strip Basket with fries, Texas toast and gravy', badges=['Most popular basket'],
-         quick='The 4-piece Chicken Strip Basket at Dairy Queen costs about $9.99 and has about 1,000 calories. It comes with fries, Texas toast and a dipping sauce, usually country gravy. Prices vary by location.',
+         quick='The 4-piece Chicken Strip Basket at Dairy Queen costs about $9.99 and has about 1,020 calories. It comes with fries, Texas toast and a dipping sauce, usually country gravy. Prices vary by location.',
          intro='Four breaded strips of whole chicken breast with fries, a slice of Texas toast and a dipping sauce. Most people choose the warm, peppery country gravy.',
-         spec=[['Price', '$9.99'], ['Includes', '4 strips, fries, Texas toast, 1 sauce'], ['Calories', '~1,000'], ['Sauces', 'Country gravy, ranch, honey mustard, BBQ, sweet & sour']], allergens='Milk, Wheat, Soy, Eggs',
+         spec=[['Price', '$9.99'], ['Includes', '4 strips, fries, Texas toast, 1 sauce'], ['Calories', '1,020'], ['Sauces', 'Country gravy, ranch, honey mustard, BBQ, sweet & sour']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('What sauces come with a DQ chicken strip basket?', 'Usually country gravy, ranch, honey mustard, BBQ or sweet and sour. One comes with the basket; extras cost a little more.')],
          body='<h2>DQ chicken options compared</h2>' + table(*CHICKEN, bold=1) +
          '<h2>Ordering tips</h2>' + ul(['Get the gravy. It is what makes the DQ basket different.', 'Swap fries for onion rings or cheese curds if your store allows it.',
                                        'Want it cheaper? The <a href="/items/7-meal-deal">$7 Meal Deal</a> includes 3 strips, fries, a drink and a sundae.']) + CHICKENL),
 
-    dict(slug='chicken-strip-basket-6pc', cat='chicken', name='6-Piece Chicken Strip Basket', short='6-piece Chicken Strip Basket', price='$13.49', cal='1,380',
+    dict(slug='chicken-strip-basket-6pc', cat='chicken', name='6-Piece Chicken Strip Basket', short='6-piece Chicken Strip Basket', price='$13.49', cal='1,300',
          title='DQ 6-Piece Chicken Strip Basket: Price & Calories',
-         desc='The Dairy Queen 6-piece Chicken Strip Basket costs about $13.49 and has about 1,380 calories. Is it worth it over the 4-piece?',
+         desc='The Dairy Queen 6-piece Chicken Strip Basket costs about $13.49 and has about 1,300 calories. Is it worth it over the 4-piece?',
          image='/Images/chicken-strip-basket-6pc.webp', alt='Dairy Queen 6-piece Chicken Strip Basket', badges=['For big appetites'],
-         quick='The 6-piece Chicken Strip Basket at Dairy Queen costs about $13.49 and has about 1,380 calories with fries, Texas toast and a dipping sauce. Prices vary by location.',
+         quick='The 6-piece Chicken Strip Basket at Dairy Queen costs about $13.49 and has about 1,300 calories with fries, Texas toast and a dipping sauce. Prices vary by location.',
          intro='Six strips of breaded chicken breast with fries, Texas toast and a dipping sauce. It is the basket to get if you are very hungry or sharing.',
-         spec=[['Price', '$13.49'], ['Includes', '6 strips, fries, Texas toast, 1 sauce'], ['Calories', '~1,380']], allergens='Milk, Wheat, Soy, Eggs',
+         spec=[['Price', '$13.49'], ['Includes', '6 strips, fries, Texas toast, 1 sauce'], ['Calories', '1,300']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('Is the 6-piece basket worth it over the 4-piece?', 'If you are sharing or very hungry, yes. You get two more strips for about $3.50 more. For one normal meal, the 4-piece is enough.')],
          body='<h2>DQ chicken options compared</h2>' + table(*CHICKEN, bold=3) +
          '<h2>Good to know</h2>' + ul(['Sharing with a child? Ask for an extra sauce cup; there may be a small charge.', 'Leftover strips reheat best in an air fryer or oven.']) + CHICKENL),
 
-    dict(slug='honey-bbq-chicken-strip-basket', cat='chicken', name='Honey BBQ Chicken Strip Basket', short='Honey BBQ Chicken Strip Basket', price='$10.49', cal='1,100',
+    dict(slug='honey-bbq-chicken-strip-basket', cat='chicken', name='Honey BBQ Chicken Strip Basket', short='Honey BBQ Chicken Strip Basket', price='$10.49', cal='1,140',
          title='DQ Honey BBQ Chicken Strip Basket: Price & Calories',
-         desc='The Dairy Queen Honey BBQ Chicken Strip Basket costs about $10.49 and has about 1,100 calories. Sweet, saucy strips with fries and toast.',
+         desc='The Dairy Queen Honey BBQ Chicken Strip Basket costs about $10.49 and has about 1,140 calories. Sweet, saucy strips with fries and toast.',
          image='/Images/honey-bbq-chicken-strip-basket.webp', alt='Dairy Queen Honey BBQ Chicken Strip Basket', badges=['Sauced strips', 'Not spicy'],
-         quick='The Honey BBQ Chicken Strip Basket at Dairy Queen costs about $10.49 and has about 1,100 calories. It has four strips tossed in sweet honey BBQ sauce, with fries, Texas toast and a dipping sauce. Prices vary by location.',
+         quick='The Honey BBQ Chicken Strip Basket at Dairy Queen costs about $10.49 and has about 1,140 calories. It has four strips tossed in sweet honey BBQ sauce, with fries, Texas toast and a dipping sauce. Prices vary by location.',
          intro='Four chicken strips tossed in a sweet, smoky honey BBQ sauce, served with fries, Texas toast and a dipping sauce. It is messier than the plain basket and popular with kids.',
-         spec=[['Price', '$10.49'], ['Includes', '4 sauced strips, fries, Texas toast, 1 sauce'], ['Calories', '~1,100'], ['Heat', 'None']], allergens='Milk, Wheat, Soy, Eggs',
+         spec=[['Price', '$10.49'], ['Includes', '4 sauced strips, fries, Texas toast, 1 sauce'], ['Calories', '1,140'], ['Heat', 'None']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('Is the Honey BBQ basket spicy?', 'No. The sauce is sweet and smoky.')],
          body='<h2>DQ chicken options compared</h2>' + table(*CHICKEN, bold=2) +
          '<p>Sauced strips lose their crunch faster, so eat them first. Prefer to dip? Get the plain <a href="/items/chicken-strip-basket-4pc">4-piece basket</a> with BBQ sauce on the side for 50 cents less.</p>' + CHICKENL),
@@ -200,7 +200,7 @@ ITEMS = [
          image='/Images/2pc-chicken-strips.webp', alt='Dairy Queen 2-piece chicken strips with dipping sauce', badges=['2 for $5 pick'],
          quick='2-piece chicken strips at Dairy Queen cost about $3.49 and have about 280 calories, with one dipping sauce. At many stores they are on the 2 for $5 menu. Prices vary by location.',
          intro='Two breaded chicken strips with a dipping sauce, without the fries and toast. It is the cheapest way to get DQ’s chicken strips.',
-         spec=[['Price', '$3.49'], ['Calories', '~280 (strips only)'], ['Includes', '2 strips, 1 sauce']], allergens='Milk, Wheat, Soy, Eggs',
+         spec=[['Price', '$3.49'], ['Calories', '280 (strips only)'], ['Includes', '2 strips, 1 sauce']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('Are DQ 2-piece chicken strips on the 2 for $5 menu?', 'At many participating stores, yes. They are one of the best-value picks on that menu.')],
          body='<h2>DQ chicken options compared</h2>' + table(*CHICKEN, bold=0) +
          '<p>Pair them with <a href="/items/pretzel-sticks-queso">pretzel sticks with queso</a> on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a> for a cheap snack meal.</p>' + CHICKENL),
@@ -260,10 +260,10 @@ ITEMS = [
          title='DQ Kids Cheeseburger Meal: Price & What’s Included',
          desc='The Dairy Queen Kids Cheeseburger Meal costs about $4.99 with a cheeseburger, side, drink and a vanilla cone. Calories and choices.',
          image='/Images/kids-cheeseburger-meal.webp', alt='Dairy Queen kids cheeseburger meal with fries and a cone', badges=['Cone included'],
-         quick='The Kids Cheeseburger Meal at Dairy Queen costs about $4.99 and includes a kid-size cheeseburger, fries or applesauce, a drink and a small vanilla cone. With fries and the cone it is about 700 calories. Prices vary by location.',
-         intro='A kid-size cheeseburger with a choice of fries or applesauce, milk or a soft drink, and a small vanilla cone for dessert.',
-         spec=[['Price', '$4.99'], ['Side', 'Fries or applesauce'], ['Drink', 'Milk or soft drink'], ['Dessert', 'Small vanilla cone']], allergens='Milk, Wheat, Soy',
-         faqs=[('Does a DQ kids meal come with ice cream?', 'Yes. Every DQ kids meal includes a small vanilla cone.'),
+         quick='The Kids Cheeseburger Meal at Dairy Queen costs about $4.99 and includes a kid-size cheeseburger, fries or applesauce, a drink and a kids’ vanilla cone. With fries and the cone it is about 600 calories. Prices vary by location.',
+         intro='A kid-size cheeseburger with a choice of fries or applesauce, milk or a soft drink, and a kids’ vanilla cone for dessert.',
+         spec=[['Price', '$4.99'], ['Side', 'Fries or applesauce'], ['Drink', 'Milk or soft drink'], ['Dessert', 'Kids’ vanilla cone']], allergens='Milk, Wheat, Soy',
+         faqs=[('Does a DQ kids meal come with ice cream?', 'Yes. Every DQ kids meal includes a kids’ vanilla cone.'),
                ('How can I make a DQ kids meal lighter?', 'Choose applesauce instead of fries and milk instead of soda.')],
          body='<h2>DQ kids meals compared</h2>' + table(*KIDS, bold=0) + KIDSL),
 
@@ -271,28 +271,28 @@ ITEMS = [
          title='DQ Kids Chicken Strips Meal: Price & What’s Included',
          desc='The Dairy Queen Kids Chicken Strips Meal costs about $4.99 with 2 chicken strips, a side, drink and a vanilla cone.',
          image='/Images/kids-chicken-strips-meal.webp', alt='Dairy Queen kids chicken strips meal', badges=['Cone included'],
-         quick='The Kids Chicken Strips Meal at Dairy Queen costs about $4.99 and includes 2 chicken strips with a dipping sauce, fries or applesauce, a drink and a small vanilla cone. Prices vary by location.',
-         intro='Two breaded chicken strips with a dipping sauce, a side, a drink and a small vanilla cone. It is the most filling of the three kids meals.',
-         spec=[['Price', '$4.99'], ['Entrée', '2 chicken strips + sauce'], ['Side', 'Fries or applesauce'], ['Dessert', 'Small vanilla cone']], allergens='Milk, Wheat, Soy, Eggs',
+         quick='The Kids Chicken Strips Meal at Dairy Queen costs about $4.99 and includes 2 chicken strips with a dipping sauce, fries or applesauce, a drink and a kids’ vanilla cone. Prices vary by location.',
+         intro='Two breaded chicken strips with a dipping sauce, a side, a drink and a kids’ vanilla cone. It is the most filling of the three kids meals.',
+         spec=[['Price', '$4.99'], ['Entrée', '2 chicken strips + sauce'], ['Side', 'Fries or applesauce'], ['Dessert', 'Kids’ vanilla cone']], allergens='Milk, Wheat, Soy, Eggs',
          faqs=[('Does the kids chicken strip meal come with a sauce?', 'Yes, one dipping sauce, such as ranch, honey mustard, BBQ or gravy.'),
                ('How can I make a DQ kids meal lighter?', 'Choose applesauce instead of fries and milk instead of soda.')],
          body='<h2>DQ kids meals compared</h2>' + table(*KIDS, bold=1) + KIDSL),
 
     dict(slug='kids-hot-dog-meal', cat='kids', name='Kids Hot Dog Meal', short='Kids Hot Dog Meal', price='$4.99',
          title='DQ Kids Hot Dog Meal: Price & What’s Included',
-         desc='The Dairy Queen Kids Hot Dog Meal costs about $4.99 with a hot dog, side, drink and a vanilla cone. The lightest DQ kids meal.',
+         desc='The Dairy Queen Kids Hot Dog Meal costs about $4.99 with a hot dog, side, drink and a vanilla cone. Calories and choices.',
          image='/Images/kids-hot-dog-meal.webp', alt='Dairy Queen kids hot dog meal', badges=['Cone included'],
-         quick='The Kids Hot Dog Meal at Dairy Queen costs about $4.99 and includes a hot dog, fries or applesauce, a drink and a small vanilla cone. It is the lightest of the three kids meals, at about 650 calories with fries and the cone. Prices vary by location.',
-         intro='An all-beef hot dog in a steamed bun with a side, a drink and a small vanilla cone.',
-         spec=[['Price', '$4.99'], ['Entrée', 'Hot dog'], ['Side', 'Fries or applesauce'], ['Dessert', 'Small vanilla cone']], allergens='Wheat, Soy, Milk (cone)',
-         faqs=[('Which DQ kids meal has the fewest calories?', 'The hot dog meal, at about 650 calories with fries and the cone. Choosing applesauce and milk lowers it further.')],
+         quick='The Kids Hot Dog Meal at Dairy Queen costs about $4.99 and includes a hot dog, fries or applesauce, a drink and a kids’ vanilla cone. With fries and the cone it is about 660 calories. Prices vary by location.',
+         intro='An all-beef hot dog in a steamed bun with a side, a drink and a kids’ vanilla cone.',
+         spec=[['Price', '$4.99'], ['Entrée', 'Hot dog'], ['Side', 'Fries or applesauce'], ['Dessert', 'Kids’ vanilla cone']], allergens='Wheat, Soy, Milk (cone)',
+         faqs=[('Which DQ kids meal has the fewest calories?', 'The cheeseburger meal, at about 600 calories with fries and the cone, just under the chicken strips meal at about 610. The hot dog meal is about 660. Choosing applesauce and milk lowers any of them.')],
          body='<h2>DQ kids meals compared</h2>' + table(*KIDS, bold=2) + KIDSL),
 
     dict(slug='7-meal-deal', cat='deals', name='$7 Meal Deal', short='$7 Meal Deal', price='$7.00',
          title='Dairy Queen $7 Meal Deal: What’s Included (2026)',
          desc='The Dairy Queen $7 Meal Deal includes a cheeseburger or 3-piece chicken strips, fries, a drink and a small sundae. Calories and tips.',
          image='/Images/7-meal-deal.webp', alt='Dairy Queen $7 Meal Deal with chicken strips, fries, drink and sundae', badges=['Best value meal'],
-         quick='The Dairy Queen $7 Meal Deal includes an Original Cheeseburger or 3-piece chicken strips, regular fries, a soft drink and a small sundae for $7. The cheeseburger meal is about 900 calories and the chicken meal about 1,100. It is offered all day at participating DQ Grill & Chill locations. Prices vary by location.',
+         quick='The Dairy Queen $7 Meal Deal includes an Original Cheeseburger or 3-piece chicken strips, regular fries, a soft drink and a small sundae for $7. The cheeseburger meal is about 950 calories and the chicken meal about 1,010. It is offered all day at participating DQ Grill & Chill locations. Prices vary by location.',
          price_q='How much is the Dairy Queen meal deal?', price_a='$7 at participating locations, though some stores charge a little more.',
          intro='One of the best-value meals in fast food: an entrée, fries, a drink and a dessert for $7.',
          spec=[['Price', '$7.00'], ['Entrée', 'Original Cheeseburger or 3-piece chicken strips'], ['Includes', 'Regular fries, soft drink, small sundae'], ['When', 'All day at participating Grill & Chill stores']],
@@ -315,16 +315,16 @@ ITEMS = [
          faqs=[('What is on the DQ 2 for $5 menu?', 'Common items include 2-piece chicken strips, a cheeseburger, a chili cheese dog, pretzel sticks with queso, fries and a small sundae.'),
                ('Does Dairy Queen have a 2 for $7?', 'Some markets do, with larger items. Check the DQ app for your store.')],
          body='<h2>Common 2 for $5 items</h2>' + table(['Item', 'Price on its own', 'Calories'], [
-             ['<a href="/items/2pc-chicken-strips">2-piece chicken strips</a>', '$3.49', '~280'], ['<a href="/items/pretzel-sticks-queso">Pretzel sticks with queso</a>', '$3.99', '440'],
-             ['<a href="/items/chili-cheese-dog">Chili cheese dog</a>', '$4.99', '420'], ['<a href="/items/original-cheeseburger">Original Cheeseburger</a>', '$6.39', '400'],
-             ['<a href="/items/regular-fries">Small fries</a>', '$2.49', '260']], bold=-1) +
+             ['<a href="/items/2pc-chicken-strips">2-piece chicken strips</a>', '$3.49', '280'], ['<a href="/items/pretzel-sticks-queso">Pretzel sticks with queso</a>', '$3.99', '340'],
+             ['<a href="/items/chili-cheese-dog">Chili cheese dog</a>', '$4.99', '420'], ['<a href="/items/original-cheeseburger">Original Cheeseburger</a>', '$6.39', '370'],
+             ['<a href="/items/regular-fries">Regular fries</a>', '$2.49', '280']], bold=-1) +
          '<h2>Best picks</h2>' + ul(['Choose the items that cost the most on their own, such as the cheeseburger or chili cheese dog.', 'Skip fries; they are already cheap.',
                                     'A good pair: chicken strips plus pretzel sticks with queso.']) +
          '<p>Full details on every value deal are in our <a href="/blog/dq-meal-deals-guide">DQ meal deals guide</a>.</p>'),
 ]
 
 EXTRA = {
-    '2pc-chicken-strips': '<p>Kids who are too old for a kids meal but not hungry enough for a basket often do well with 2-piece strips and a small fries.</p>',
+    '2pc-chicken-strips': '<p>Kids who are too old for a kids meal but not hungry enough for a basket often do well with 2-piece strips and a regular fries.</p>',
     'biscuit-gravy': '<p>It is one of the cheapest ways to get a hot breakfast at DQ, and it pairs well with a coffee or a small <a href="/items/breakfast-burrito">breakfast burrito</a> if you are hungrier.</p>',
     'breakfast-burrito': '<h2>Good to know</h2>' + ul(['Ask for picante sauce or salsa on the side if your store has it.', 'It is easy to eat in the car, which makes it the go-to for a quick morning stop.', 'Some stores also sell a chicken and gravy burrito for a little more.']),
     'buttermilk-pancake-platter': '<h2>Good to know</h2>' + ul(['Ask for the syrup on the side so the pancakes stay fluffy if you are taking it to go.', 'It is the only sweet breakfast platter on the DQ menu.', 'Want something savory instead? Try the <a href="/items/country-breakfast-platter">Country Breakfast Platter</a>.']),

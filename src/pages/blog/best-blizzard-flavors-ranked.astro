@@ -4,22 +4,22 @@ import { LAST_CHECKED } from '../../data/site';
 
 // Prices and calories come from each flavor's item page so the site stays consistent.
 const ranking = [
-  { name: 'Oreo Cookie', href: '/items/oreo-blizzard', small: '$4.49', cal: '420', why: 'The cookie pieces stay crunchy all the way down, and it never gets too sweet. It is the one we would order if we could only pick one.' },
-  { name: 'Chocolate Chip Cookie Dough', href: '/items/cookie-dough-blizzard', small: '$4.49', cal: '590', why: 'Soft dough bites plus fudge. Rich, filling, and the closest thing to a sure bet after Oreo.' },
-  { name: 'Turtle Pecan Cluster', href: '/items/turtle-pecan-blizzard', small: '$4.79', cal: '570', why: 'Salty pecans, caramel and chocolate. The best pick if you like sweet-and-salty.' },
-  { name: 'Reese’s Peanut Butter Cup', href: '/items/reeses-blizzard', small: '$4.49', cal: '600', why: 'Big peanut butter flavor in every bite. Very rich, so a Small is plenty.' },
-  { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', small: '$4.79', cal: '510', why: 'Brownie pieces, fudge and chocolate chunks. For people who want the most chocolate possible.' },
-  { name: 'Heath', href: '/items/heath-blizzard', small: '$4.49', cal: '480', why: 'Buttery toffee bits that stay crisp. Underrated and a little less sweet than the candy-bar flavors.' },
-  { name: 'Butterfinger', href: '/items/butterfinger-blizzard', small: '$4.49', cal: '470', why: 'Flaky peanut butter crunch. Good, but the pieces get chewy if you take your time.' },
+  { name: 'Oreo Cookie', href: '/items/oreo-blizzard', small: '$4.49', cal: '600', why: 'The cookie pieces stay crunchy all the way down, and it never gets too sweet. It is the one we would order if we could only pick one.' },
+  { name: 'Chocolate Chip Cookie Dough', href: '/items/cookie-dough-blizzard', small: '$4.49', cal: '710', why: 'Soft dough bites plus fudge. Rich, filling, and the closest thing to a sure bet after Oreo.' },
+  { name: 'Turtle Pecan Cluster', href: '/items/turtle-pecan-blizzard', small: '$4.79', cal: '680', why: 'Salty pecans, caramel and chocolate. The best pick if you like sweet-and-salty.' },
+  { name: 'Reese’s Peanut Butter Cup', href: '/items/reeses-blizzard', small: '$4.49', cal: '610', why: 'Big peanut butter flavor in every bite. Very rich, so a Small is plenty.' },
+  { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', small: '$4.79', cal: '740', why: 'Brownie pieces, fudge and chocolate chunks. For people who want the most chocolate possible.' },
+  { name: 'Heath', href: '/items/heath-blizzard', small: '$4.49', cal: '640', why: 'Buttery toffee bits that stay crisp. Underrated and a little less sweet than the candy-bar flavors.' },
+  { name: 'Butterfinger', href: '/items/butterfinger-blizzard', small: '$4.49', cal: '590', why: 'Flaky peanut butter crunch. Good, but the pieces get chewy if you take your time.' },
   { name: 'Strawberry Cheesequake', href: '/items/strawberry-cheesequake-blizzard', small: '$4.79', cal: '520', why: 'Cheesecake bites and strawberry. Lighter tasting than the chocolate flavors.' },
-  { name: 'M&M’s Milk Chocolate', href: '/items/mm-blizzard', small: '$4.49', cal: '490', why: 'Fun and colorful, but the candy shells freeze hard. Better for kids than for chocolate fans.' },
+  { name: 'M&M’s Milk Chocolate', href: '/items/mm-blizzard', small: '$4.49', cal: '660', why: 'Fun and colorful, but the candy shells freeze hard. Better for kids than for chocolate fans.' },
   { name: 'Cotton Candy (seasonal)', href: '/items/cotton-candy-blizzard', small: '$5.29', cal: '460', why: 'Bright and very sweet. Most adults will tap out halfway; kids love it.' },
 ];
 
 const faqs = [
-  { q: 'What is the best Blizzard flavor at Dairy Queen?', a: 'The Oreo Cookie Blizzard is the most popular flavor and our top pick. Cookie Dough and Turtle Pecan Cluster are close behind. A Small Oreo Blizzard typically costs about $4.49 and has 420 calories.' },
+  { q: 'What is the best Blizzard flavor at Dairy Queen?', a: 'The Oreo Cookie Blizzard is the most popular flavor and our top pick. Cookie Dough and Turtle Pecan Cluster are close behind. A Small Oreo Blizzard typically costs about $4.49 and has 600 calories.' },
   { q: 'What is the most popular Blizzard flavor?', a: 'Oreo Cookie is Dairy Queen’s best-known and most-ordered Blizzard. It is on the menu year-round at every location.' },
-  { q: 'Which Blizzard has the fewest calories?', a: 'Among year-round flavors, a Mini Butterfinger (about 290 calories) or Mini Oreo (about 300 calories) are the lightest choices. Calories roughly double from Mini to Medium.' },
+  { q: 'Which Blizzard has the fewest calories?', a: 'Among year-round flavors, a Mini Oreo (about 330 calories) or Mini Butterfinger (about 350 calories) are the lightest choices. Calories more than double from Mini to Medium.' },
   { q: 'How much does a Blizzard cost?', a: 'Most Blizzards cost about $3.49–$3.99 for a Mini, $4.49–$4.79 for a Small, $5.29–$5.79 for a Medium and $5.99–$6.49 for a Large. Seasonal and Royal flavors cost more. Prices vary by location.' },
 ];
 ---
@@ -34,7 +34,7 @@ const faqs = [
   datePublished="2026-01-15"
   faqs={faqs}
 >
-      <p class="lead"><strong>The best Blizzard at Dairy Queen is the Oreo Cookie Blizzard</strong>, followed by Chocolate Chip Cookie Dough and Turtle Pecan Cluster. A Small Oreo Blizzard usually costs around $4.49 and has 420 calories. Below is our full ranking of the year-round and seasonal flavors, with what each one tastes like and what you will pay.</p>
+      <p class="lead"><strong>The best Blizzard at Dairy Queen is the Oreo Cookie Blizzard</strong>, followed by Chocolate Chip Cookie Dough and Turtle Pecan Cluster. A Small Oreo Blizzard usually costs around $4.49 and has 600 calories. Below is our full ranking of the year-round and seasonal flavors, with what each one tastes like and what you will pay.</p>
 
       <p>This is an opinion piece. We ranked flavors on three simple things: whether the mix-ins stay good from the first spoonful to the last, whether the flavor gets tiring before you finish, and value for the price. Your favorite might be different, and that is fine.</p>
 
@@ -59,16 +59,16 @@ const faqs = [
 
       <h2 id="top-three">Why Oreo, Cookie Dough and Turtle Pecan win</h2>
       <h3>1. Oreo Cookie Blizzard</h3>
-      <p>The <a href="/items/oreo-blizzard">Oreo Blizzard</a> has been on the menu since 1985 for a reason. The cookie pieces soften a little but keep their crunch, and the chocolate cookie balances the sweet vanilla soft serve. It works in any size: about 300 calories as a Mini, 420 as a Small. If you want a twist, the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> adds a fudge-filled center for about 50 cents more.</p>
+      <p>The <a href="/items/oreo-blizzard">Oreo Blizzard</a> has been on the menu since 1985 for a reason. The cookie pieces soften a little but keep their crunch, and the chocolate cookie balances the sweet vanilla soft serve. It works in any size: about 330 calories as a Mini, 600 as a Small. If you want a twist, the <a href="/items/royal-oreo-blizzard">Royal Oreo</a> adds a fudge-filled center for about 50 cents more.</p>
 
       <h3>2. Chocolate Chip Cookie Dough Blizzard</h3>
-      <p>The <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> is soft and chewy where Oreo is crunchy. The dough bites stay soft even when frozen, and the fudge makes it feel like a full dessert. It is heavier, at 590 calories for a Small, so the Mini is a good call after a meal.</p>
+      <p>The <a href="/items/cookie-dough-blizzard">Cookie Dough Blizzard</a> is soft and chewy where Oreo is crunchy. The dough bites stay soft even when frozen, and the fudge makes it feel like a full dessert. It is heavier, at 710 calories for a Small, so the Mini is a good call after a meal.</p>
 
       <h3>3. Turtle Pecan Cluster Blizzard</h3>
       <p>Pecans, caramel and chocolate give the <a href="/items/turtle-pecan-blizzard">Turtle Pecan Cluster</a> a salty edge that most Blizzards do not have. The nuts do not freeze rock hard the way candy does. If you find most Blizzards too sweet, start here.</p>
 
       <h2 id="chocolate-peanut-butter">Best picks for chocolate and peanut butter fans</h2>
-      <p>For pure chocolate, get the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a>: brownie pieces, fudge and chocolate chunks. For peanut butter, the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is the obvious choice, and the <a href="/items/royal-reeses-blizzard">Royal Reese’s</a> adds a peanut butter center. Both are rich. A Medium Reese’s is around 830 calories, so many people share one or stick with a Small.</p>
+      <p>For pure chocolate, get the <a href="/items/choco-brownie-blizzard">Choco Brownie Extreme</a>: brownie pieces, fudge and chocolate chunks. For peanut butter, the <a href="/items/reeses-blizzard">Reese’s Blizzard</a> is the obvious choice, and the <a href="/items/royal-reeses-blizzard">Royal Reese’s</a> adds a peanut butter center. Both are rich. A Medium Reese’s is around 820 calories, so many people share one or stick with a Small.</p>
 
       <h2 id="lower-ranked">Flavors that fall short (and who should still order them)</h2>
       <ul>

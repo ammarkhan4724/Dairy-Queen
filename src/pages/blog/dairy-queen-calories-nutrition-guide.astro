@@ -3,29 +3,29 @@ import BlogPost from '../../layouts/BlogPost.astro';
 
 // Calories match each item's page on this site.
 const treats = [
-  { name: 'Small vanilla cone', href: '/items/vanilla-soft-serve-cone', cal: '170' },
-  { name: 'DQ Sandwich', href: '/items/dq-sandwich', cal: '190' },
-  { name: 'Dilly Bar', href: '/items/dilly-bar', cal: '210' },
+  { name: 'Kids’ vanilla cone', href: '/items/vanilla-soft-serve-cone', cal: '160' },
+  { name: 'DQ Sandwich', href: '/items/dq-sandwich', cal: '~180' },
+  { name: 'Dilly Bar', href: '/items/dilly-bar', cal: '~220' },
   { name: 'Non-Dairy Dilly Bar', href: '/items/non-dairy-dilly-bar', cal: '220' },
-  { name: 'Small hot fudge sundae', href: '/items/hot-fudge-sundae', cal: '~250' },
-  { name: 'Strawberry sundae', href: '/items/strawberry-sundae', cal: '280' },
-  { name: 'Mini Oreo Blizzard', href: '/items/oreo-blizzard', cal: '~300' },
+  { name: 'Small strawberry sundae', href: '/items/strawberry-sundae', cal: '240' },
+  { name: 'Small hot fudge sundae', href: '/items/hot-fudge-sundae', cal: '300' },
+  { name: 'Mini Oreo Blizzard', href: '/items/oreo-blizzard', cal: '330' },
 ];
 const meals = [
-  { name: 'Side salad (no dressing)', href: '/items/side-salad', cal: '90' },
-  { name: 'Small fries', href: '/items/regular-fries', cal: '260' },
+  { name: 'Side salad (no dressing)', href: '/items/side-salad', cal: '20' },
+  { name: 'Regular fries', href: '/items/regular-fries', cal: '280' },
+  { name: 'Original Cheeseburger', href: '/items/original-cheeseburger', cal: '370' },
   { name: 'Grilled chicken sandwich', href: '/items/grilled-chicken-sandwich', cal: '390' },
-  { name: 'Original Cheeseburger', href: '/items/original-cheeseburger', cal: '400' },
-  { name: 'Cheese curds', href: '/items/cheese-curds', cal: '470' },
-  { name: 'FlameThrower Stackburger', href: '/items/flamethrower-stackburger', cal: '780' },
-  { name: '4-piece Chicken Strip Basket', href: '/items/chicken-strip-basket-4pc', cal: '~1,000' },
+  { name: 'Cheese curds (regular)', href: '/items/cheese-curds', cal: '500' },
+  { name: 'Double FlameThrower Stackburger', href: '/items/flamethrower-stackburger', cal: '720' },
+  { name: '4-piece Chicken Strip Basket', href: '/items/chicken-strip-basket-4pc', cal: '1,020' },
 ];
 
 const faqs = [
-  { q: 'What is the lowest-calorie item at Dairy Queen?', a: 'A side salad without dressing (about 90 calories) is the lightest food item. For dessert, a small vanilla cone (about 170 calories) or a DQ Sandwich (about 190 calories) are the lightest treats.' },
-  { q: 'What is the healthiest thing to eat at Dairy Queen?', a: 'The grilled chicken sandwich (about 390 calories) with a side salad is one of the most balanced meals. For dessert, choose a small cone or a Mini Blizzard instead of a larger size.' },
-  { q: 'How many calories are in a Blizzard?', a: 'Most Blizzards have about 300–400 calories as a Mini, 420–600 as a Small, 600–850 as a Medium and 900–1,200 as a Large, depending on the flavor.' },
-  { q: 'Where can I find official Dairy Queen nutrition information?', a: 'Dairy Queen publishes nutrition and allergen details on its website and in the DQ app. Our figures are estimates to help you compare; check DQ’s information if you need exact numbers.' },
+  { q: 'What is the lowest-calorie item at Dairy Queen?', a: 'A side salad without dressing (about 20 calories) is the lightest food item. For dessert, a Kids’ vanilla cone (about 160 calories) or a DQ Sandwich (about 180 calories) are the lightest treats.' },
+  { q: 'What is the healthiest thing to eat at Dairy Queen?', a: 'The grilled chicken sandwich (about 390 calories) with a side salad is one of the most balanced meals. For dessert, choose a Kids’ cone or a Mini Blizzard instead of a larger size.' },
+  { q: 'How many calories are in a Blizzard?', a: 'Most Blizzards have about 330–450 calories as a Mini, 560–750 as a Small, 720–1,040 as a Medium and 940–1,370 as a Large, depending on the flavor.' },
+  { q: 'Where can I find official Dairy Queen nutrition information?', a: 'Dairy Queen publishes nutrition and allergen details on its website and in the DQ app. Our calorie and nutrition figures come from DQ’s official U.S. nutrition information (current as of August 26, 2024), while our prices are typical estimates that vary by location.' },
 ];
 ---
 <BlogPost
@@ -39,9 +39,9 @@ const faqs = [
   datePublished="2026-04-20"
   faqs={faqs}
 >
-  <p class="lead"><strong>The lightest treats at Dairy Queen are a small vanilla cone (about 170 calories), a DQ Sandwich (about 190) and a Dilly Bar (about 210).</strong> For a meal, a grilled chicken sandwich (about 390 calories) or an Original Cheeseburger (about 400) are the lighter choices. The biggest calorie jump at DQ comes from size: a Large Blizzard can have three times the calories of a Mini.</p>
+  <p class="lead"><strong>The lightest treats at Dairy Queen are a Kids’ vanilla cone (about 160 calories), a DQ Sandwich (about 180) and a Dilly Bar (about 220).</strong> For a meal, an Original Cheeseburger (about 370 calories) or a grilled chicken sandwich (about 390) are the lighter choices. The biggest calorie jump at DQ comes from size: a Large Blizzard can have three times the calories of a Mini.</p>
 
-  <p>This guide is for comparing options. It is not medical advice, and figures are estimates that can vary by location and recipe. Check Dairy Queen’s own nutrition information if you need exact numbers.</p>
+  <p>This guide is for comparing options. It is not medical advice. Calorie and nutrition figures come from Dairy Queen’s official U.S. nutrition information (current as of August 26, 2024); prices are typical estimates that vary by location.</p>
 
   <h2 id="treats">Lowest-calorie DQ treats</h2>
   <div class="table-wrap">
@@ -53,7 +53,7 @@ const faqs = [
   <p>Treats on a stick or in a wrapper, like the Dilly Bar and DQ Sandwich, are easy to keep in check because the portion is fixed.</p>
 
   <h2 id="blizzards">Blizzard calories by size</h2>
-  <p>Size matters more than flavor. A Mini <a href="/items/oreo-blizzard">Oreo Blizzard</a> is about 300 calories, a Small 420, a Medium 590 and a Large 920. Richer flavors like <a href="/items/reeses-blizzard">Reese’s</a> and <a href="/items/cookie-dough-blizzard">Cookie Dough</a> run higher. If you want a Blizzard but are watching calories, order a Mini. Full numbers for every flavor are on the <a href="/categories/blizzard-treats">Blizzard menu</a>.</p>
+  <p>Size matters more than flavor. A Mini <a href="/items/oreo-blizzard">Oreo Blizzard</a> is about 330 calories, a Small 600, a Medium 820 and a Large 1,050. Richer flavors like <a href="/items/reeses-blizzard">Reese’s</a> and <a href="/items/cookie-dough-blizzard">Cookie Dough</a> run higher. If you want a Blizzard but are watching calories, order a Mini. Full numbers for every flavor are on the <a href="/categories/blizzard-treats">Blizzard menu</a>.</p>
 
   <h2 id="meals">Calories in DQ food</h2>
   <div class="table-wrap">
@@ -65,15 +65,15 @@ const faqs = [
 
   <h2 id="swaps">Easy swaps to eat lighter</h2>
   <ul>
-    <li><strong>Mini instead of Small</strong> on any Blizzard saves roughly 100–250 calories.</li>
-    <li><strong>Side salad instead of fries</strong> saves about 170 calories (before dressing).</li>
-    <li><strong>Single instead of double</strong> on a burger. The single FlameThrower is about 780 calories; the double is over 1,000.</li>
+    <li><strong>Mini instead of Small</strong> on any Blizzard saves roughly 200–320 calories.</li>
+    <li><strong>Side salad instead of fries</strong> saves about 260 calories (before dressing).</li>
+    <li><strong>Double instead of triple</strong> on a burger. The Double FlameThrower is about 720 calories; the Triple is about 910.</li>
     <li><strong>Grilled instead of crispy</strong> chicken sandwich.</li>
-    <li><strong>Strawberry or a cone instead of a shake.</strong> A small <a href="/items/chocolate-shake">chocolate shake</a> is about 710 calories.</li>
+    <li><strong>Strawberry or a cone instead of a shake.</strong> A small <a href="/items/chocolate-shake">chocolate shake</a> is about 530 calories.</li>
   </ul>
 
   <h2 id="drinks">Drinks</h2>
-  <p>A small <a href="/items/misty-slush">Misty Slush</a> is about 150 calories and has no fat. Shakes and <a href="/items/moolatte">MooLattés</a> are much heavier, from about 490 calories for a small. See the <a href="/categories/drinks">drinks menu</a> for every size.</p>
+  <p>A small <a href="/items/misty-slush">Misty Slush</a> is about 200 calories and has no fat. Shakes and <a href="/items/moolatte">MooLattés</a> are much heavier, from about 450 calories for a small. See the <a href="/categories/drinks">drinks menu</a> for every size.</p>
 
   <h2 id="allergies">Food allergies</h2>
   <p>If you are avoiding gluten, nuts or dairy, read our <a href="/blog/dq-gluten-free-allergen-guide">Dairy Queen allergen guide</a> before you order.</p>
