@@ -5,7 +5,7 @@ import '@fontsource-variable/inter';
 import PriceNote from '../components/PriceNote.astro';
 import Related from '../components/Related.astro';
 import AuthorBox from '../components/AuthorBox.astro';
-import { SITE_URL, canonical, DISCLAIMER } from '../data/site';
+import { SITE_URL, canonical, DISCLAIMER, SOCIAL_LINKS } from '../data/site';
 
 interface Props {
   title: string;
@@ -84,7 +84,8 @@ const showRelated = isItem || isBlogPost;
           "width": 260,
           "height": 56
         },
-        "description": "Independent, unofficial guide to Dairy Queen menu prices, calories and deals. Not affiliated with International Dairy Queen, Inc."
+        "description": "Independent, unofficial guide to Dairy Queen menu prices, calories and deals. Not affiliated with International Dairy Queen, Inc.",
+        "sameAs": SOCIAL_LINKS.map((l) => l.url)
       },
       {
         "@type": "WebSite",
@@ -263,6 +264,9 @@ const showRelated = isItem || isBlogPost;
             <li><a href="/blog" class="hover:text-amber-400 transition-colors">DQ Guides & Rankings</a></li>
             <li><a href="/price-history" class="hover:text-amber-400 transition-colors">Price Tracker</a></li>
             <li><a href="/contact" class="hover:text-amber-400 transition-colors">Contact Us</a></li>
+            {SOCIAL_LINKS.map((l) => (
+              <li><a href={l.url} target="_blank" rel="noopener me" class="hover:text-amber-400 transition-colors">Follow us on {l.name}</a></li>
+            ))}
           </ul>
         </div>
       </div>

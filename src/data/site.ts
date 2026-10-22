@@ -2,6 +2,11 @@
 export const SITE_URL = 'https://www.thequeendairymenu.us';
 export const SITE_NAME = 'The Queen Dairy Menu';
 
+// Official off-site profiles (footer links + Organization sameAs).
+export const SOCIAL_LINKS = [
+  { name: 'Linktree', url: 'https://linktr.ee/TheQueenDairyMenu' },
+];
+
 // Update this whenever prices are re-checked (shown on every menu page).
 export const LAST_CHECKED = 'October 2026';
 
