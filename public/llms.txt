@@ -12,8 +12,11 @@ This site is not affiliated with, endorsed by, or sponsored by Dairy Queen®, In
 - [Blizzard Treats](https://www.thequeendairymenu.us/categories/blizzard-treats)
 - [Burgers & Sandwiches](https://www.thequeendairymenu.us/categories/burgers-sandwiches)
 - [Combos & Deals](https://www.thequeendairymenu.us/combos)
+- [Blizzard of the Month & Seasonal Menu](https://www.thequeendairymenu.us/blizzard-of-the-month)
+- [Dipping Sauces & Calories](https://www.thequeendairymenu.us/dipping-sauces)
+- [Texas Dairy Queen Menu](https://www.thequeendairymenu.us/texas-dq-menu)
 - [About Us & Editorial Policy](https://www.thequeendairymenu.us/about)
 - [Disclaimer](https://www.thequeendairymenu.us/disclaimer)
 
 ## Site Data
-- [Sitemap](https://www.thequeendairymenu.us/sitemap-index.xml)
+- [Sitemap](https://www.thequeendairymenu.us/sitemap.xml)

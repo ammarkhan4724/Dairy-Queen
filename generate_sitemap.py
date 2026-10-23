@@ -35,7 +35,7 @@ for root, _, files in os.walk(SRC_DIR):
             prio = '1.0'
         elif route in ('/categories', '/items', '/blog') or route.startswith('/categories/'):
             prio = '0.8'
-        elif route.startswith(('/items/', '/blog/')) or route in ('/combos', '/price-history'):
+        elif route.startswith(('/items/', '/blog/')) or route in ('/combos', '/price-history', '/blizzard-of-the-month', '/dipping-sauces', '/texas-dq-menu'):
             prio = '0.7'
         else:
             prio = '0.3'

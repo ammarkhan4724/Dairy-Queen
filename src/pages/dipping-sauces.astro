@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { LAST_CHECKED } from '../data/site';
+
+// Per dipping cup. Calories, fat and sodium from published DQ nutrition listings (see Sources).
+const dips = [
+  { name: 'Country Gravy', cal: '70', fat: '4.5', sodium: '360', taste: 'Creamy white gravy, peppery and savory', best: 'The classic pick for chicken strips and Texas toast' },
+  { name: 'BBQ', cal: '90', fat: '0', sodium: '430', taste: 'Smoky-sweet with a tangy finish', best: 'Plain strips, cheese curds' },
+  { name: 'Wild Buffalo', cal: '90–110', fat: '12', sodium: '840', taste: 'Spicy, vinegary buffalo heat', best: 'Strips if you want heat without a sauced basket' },
+  { name: 'Zesty Queso', cal: '110', fat: '10', sodium: '570', taste: 'Warm, cheesy, a little spicy', best: 'Fries and pretzel sticks' },
+  { name: 'Ranch (Hidden Valley)', cal: '220', fat: '22', sodium: '370', taste: 'Cool, herby and tangy', best: 'Onion rings, cheese curds, spicy strips' },
+  { name: 'Honey Mustard', cal: '240', fat: '20', sodium: '450', taste: 'Sweet honey balanced with mustard tang', best: 'Chicken strips, the Grilled Chicken Sandwich' },
+];
+
+const tossed = [
+  { name: 'Honey BBQ', href: '/items/honey-bbq-chicken-strip-basket', what: 'Sweet, smoky glaze tossed on the strips' },
+  { name: 'Parmesan Garlic', what: 'Buttery garlic sauce with Parmesan' },
+  { name: 'FlameThrower', href: '/items/flamethrower-stackburger', what: 'Spicy, creamy sauce also used on the FlameThrower Stackburger' },
+];
+
+const faqs = [
+  { q: 'What dipping sauces does Dairy Queen have?', a: 'Most Dairy Queens offer six dipping sauces: Country Gravy, BBQ, Wild Buffalo, Zesty Queso, Ranch and Honey Mustard. Sauced chicken strip baskets add Honey BBQ, Parmesan Garlic and FlameThrower glazes, and limited-time sauces like Ghost Pepper Sauce appear seasonally.' },
+  { q: 'What is the best sauce for DQ chicken strips?', a: 'Country Gravy is the traditional pairing and the most popular. Ranch is the usual second choice, and Wild Buffalo is the pick if you want heat.' },
+  { q: 'Which DQ dipping sauce has the fewest calories?', a: 'Country Gravy, at about 70 calories per cup. BBQ is about 90 with no fat. Honey Mustard and Ranch are the highest, at about 240 and 220 calories.' },
+  { q: 'How many dipping sauces come with a Chicken Strip Basket?', a: 'One. Every Chicken Strip Basket includes a choice of dipping sauce, and sauced baskets still come with one on the side. Extra cups usually cost a small charge, set by each store.' },
+  { q: 'Can I buy extra DQ dipping sauce?', a: 'Yes. Most locations will add an extra dipping cup to any order, usually for a small charge set by the store.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="Dairy Queen Dipping Sauces: Full List & Calories (2026)"
+  description="Every Dairy Queen dipping sauce with calories, fat and sodium: Country Gravy, Ranch, Honey Mustard, BBQ, Wild Buffalo and Zesty Queso, plus sauced baskets."
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Chicken Strip Baskets", "href": "/categories/chicken-strip-baskets"}, {"name": "Dipping Sauces"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">6 dips · 3 sauced baskets · Calories per cup</span>
+<h1>Dairy Queen Dipping Sauces</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>Dairy Queen has six standard dipping sauces: Country Gravy, BBQ, Wild Buffalo, Zesty Queso, Ranch and Honey Mustard.</strong> Country Gravy is the most popular and the lightest at about 70 calories a cup; Honey Mustard is the heaviest at about 240. Every <a href="/categories/chicken-strip-baskets">Chicken Strip Basket</a> comes with one.</p>
+    <p>Below is every sauce with calories, fat and sodium per cup, what it tastes like and what to dip in it. Sauce choices can vary slightly by store, and Texas locations add a few of their own.</p>
+
+    <h2 id="list">Every DQ dipping sauce, with calories</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Sauce</th><th>Calories</th><th>Fat (g)</th><th>Sodium (mg)</th><th>Tastes like</th><th>Best with</th></tr></thead>
+        <tbody>
+          {dips.map((d) => (
+            <tr><td><strong>{d.name}</strong></td><td>{d.cal}</td><td>{d.fat}</td><td>{d.sodium}</td><td>{d.taste}</td><td>{d.best}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Per dipping cup, sorted by calories. Published listings disagree on Wild Buffalo (90 or 110 calories); fat and sodium shown are for the 110-calorie listing. Last checked {LAST_CHECKED}.</p>
+
+    <h2 id="lightest">Lightest and heaviest choices</h2>
+    <p>The creamy-looking gravy is actually the lightest sauce on the list. Switching from Honey Mustard to Country Gravy saves about 170 calories on a <a href="/items/chicken-strip-basket-4pc">4-piece basket</a>. BBQ is the only fat-free option. If you’re watching sodium, Wild Buffalo is the one to skip, at about 840 mg per cup.</p>
+    <p>For full meal numbers, see our <a href="/blog/dairy-queen-calories-nutrition-guide">Dairy Queen calories and nutrition guide</a>. For allergens in sauces, see the <a href="/blog/dq-gluten-free-allergen-guide">DQ gluten-free and allergen guide</a>.</p>
+
+    <h2 id="sauced-baskets">Sauced baskets: Honey BBQ, Parmesan Garlic and FlameThrower</h2>
+    <p>Sauced Chicken Strip Baskets have the sauce tossed directly onto the strips instead of served on the side. They cost about $10.49 for 4 pieces, roughly 50 cents more than the plain basket, and still include a dipping cup.</p>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Sauced basket</th><th>What it is</th></tr></thead>
+        <tbody>
+          {tossed.map((t) => <tr><td><strong>{t.href ? <a href={t.href}>{t.name}</a> : t.name}</strong></td><td>{t.what}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="limited">Limited-time and regional sauces</h2>
+    <ul>
+      <li><strong>Ghost Pepper Sauce:</strong> a smoky, spicy sauce on DQ’s fall 2026 Halloween menu, recommended with the 4-Piece Chicken Strip Basket. See the <a href="/blizzard-of-the-month">fall 2026 seasonal menu</a>.</li>
+      <li><strong>DQ Texas Sauce:</strong> sold only at Texas Dairy Queens since 2024, made for steak fingers and chicken strips. See the <a href="/texas-dq-menu">Texas DQ menu</a>.</li>
+      <li><strong>Cream gravy in Texas:</strong> Texas stores serve their cream gravy with the Steak Finger Country Basket.</li>
+    </ul>
+
+    <h2 id="pairings">What to dip in each sauce</h2>
+    <ul>
+      <li><strong><a href="/items/chicken-strip-basket-4pc">Chicken strips</a>:</strong> Country Gravy first, Ranch second, Wild Buffalo for heat.</li>
+      <li><strong><a href="/items/regular-fries">Fries</a>:</strong> Zesty Queso turns them into cheese fries.</li>
+      <li><strong><a href="/items/onion-rings">Onion rings</a> and <a href="/items/cheese-curds">cheese curds</a>:</strong> Ranch or BBQ.</li>
+      <li><strong><a href="/items/pretzel-sticks-queso">Pretzel sticks</a>:</strong> they already come with queso, so add Honey Mustard for a second dip.</li>
+      <li><strong>Texas toast:</strong> drag it through the leftover gravy.</li>
+    </ul>
+
+    <h2 id="ordering">Ordering tips</h2>
+    <ul>
+      <li><strong>Ask for two sauces</strong> if you can’t decide. Most stores will add a second cup for a small charge.</li>
+      <li><strong>Pick a dip for the deal basket too.</strong> If you order the chicken strip option in the <a href="/items/7-meal-deal">$7 Meal Deal</a>, ask which sauces your store includes.</li>
+      <li><strong>Looking for combos?</strong> The <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> has more off-menu ideas.</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;">Nutrition per cup: <a href="https://www.calorieking.com/us/en/foods/f/calories-in-sauces-country-gravy-dipping-sauce/UfGGFOH9SuKZ1oJ3LXt6gA" rel="nofollow noopener" target="_blank">CalorieKing (Country Gravy)</a>, <a href="https://www.calorieking.com/us/en/foods/f/calories-in-sauces-house-made-hidden-ranch-sauce-dipping-cup/Nz1zKAs-Taev-HO20FY_UA" rel="nofollow noopener" target="_blank">CalorieKing (Ranch)</a>, <a href="https://fastfoodnutrition.org/dairy-queen/honey-mustard-dipping-sauce" rel="nofollow noopener" target="_blank">FastFoodNutrition (Honey Mustard)</a>, <a href="https://fastfoodnutrition.org/dairy-queen/bbq-dipping-sauce" rel="nofollow noopener" target="_blank">FastFoodNutrition (BBQ)</a>, <a href="https://www.eatthismuch.com/calories/wild-buffalo-dipping-sauce-446934" rel="nofollow noopener" target="_blank">Eat This Much (Wild Buffalo)</a> and <a href="https://www.eatthismuch.com/calories/zesty-queso-dipping-sauce-2652816" rel="nofollow noopener" target="_blank">Eat This Much (Zesty Queso)</a>. Sauce list: <a href="https://wewantthesauce.com/what-sauces-does-dairy-queen-have/" rel="nofollow noopener" target="_blank">We Want The Sauce</a>. Check Dairy Queen’s official nutrition information for the latest figures.</p>
+
+    <p style="margin-top:32px;">More from the menu: <a href="/categories/chicken-strip-baskets">chicken strip baskets</a> · <a href="/categories/snacks-sides">snacks and sides</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>
