@@ -47,21 +47,36 @@ BLOG_TITLES = {
     '/blog/dq-gluten-free-allergen-guide': 'DQ gluten-free & allergen guide',
     '/blog/dq-meal-deals-guide': 'DQ $7 Meal Deal & 2 for $5 guide',
     '/blog/dq-shake-moolatte-guide': 'DQ shakes & MooLatté guide',
+    '/blog/blizzard-vs-mcflurry-vs-frosty': 'Blizzard vs. McFlurry vs. Frosty',
+    '/blog/discontinued-dairy-queen-items': 'Discontinued Dairy Queen items',
+}
+
+PAGE_TITLES = {
+    '/price-history': 'DQ price history tracker',
+    '/blizzard-of-the-month': 'Blizzard of the Month & fall menu',
+    '/dipping-sauces': 'DQ dipping sauces & calories',
+    '/texas-dq-menu': 'Texas Dairy Queen menu',
+    '/cheapest-dairy-queen-menu': 'Cheapest Dairy Queen menu items',
+    '/healthy-dairy-queen-menu': 'Healthiest Dairy Queen picks',
+    '/blizzard-sizes': 'Blizzard sizes, ounces & prices',
+    '/categories/royal-blizzards': 'Royal Blizzard flavors & prices',
 }
 
 BLOG_RELATED = {
-    '/blog/best-blizzard-flavors-ranked': ['/categories/blizzard-treats', '/items/oreo-blizzard', '/items/choco-brownie-blizzard', '/categories/dq-cakes', '/blog/dairy-queen-secret-menu'],
-    '/blog/best-dairy-queen-burgers-ranked': ['/categories/burgers-sandwiches', '/items/flamethrower-stackburger', '/blog/dq-meal-deals-guide', '/combos', '/blog/dairy-queen-calories-nutrition-guide'],
+    '/blog/best-blizzard-flavors-ranked': ['/categories/blizzard-treats', '/blizzard-of-the-month', '/items/oreo-blizzard', '/items/choco-brownie-blizzard', '/blog/dairy-queen-secret-menu'],
+    '/blog/best-dairy-queen-burgers-ranked': ['/categories/burgers-sandwiches', '/items/flamethrower-stackburger', '/texas-dq-menu', '/blog/dq-meal-deals-guide', '/combos'],
     '/blog/dairy-queen-app-rewards-hacks': ['/blog/dq-meal-deals-guide', '/combos', '/items/7-meal-deal', '/blog/dairy-queen-price-inflation-report', '/categories/blizzard-treats'],
-    '/blog/dairy-queen-calories-nutrition-guide': ['/blog/dq-gluten-free-allergen-guide', '/categories/burgers-sandwiches', '/categories/blizzard-treats', '/items/side-salad', '/blog/dairy-queen-ice-cream-vs-soft-serve'],
-    '/blog/dairy-queen-ice-cream-vs-soft-serve': ['/categories/classic-treats', '/items/vanilla-soft-serve-cone', '/blog/best-blizzard-flavors-ranked', '/blog/dairy-queen-calories-nutrition-guide'],
+    '/blog/dairy-queen-calories-nutrition-guide': ['/healthy-dairy-queen-menu', '/blog/dq-gluten-free-allergen-guide', '/categories/burgers-sandwiches', '/categories/blizzard-treats', '/items/side-salad'],
+    '/blog/dairy-queen-ice-cream-vs-soft-serve': ['/categories/classic-treats', '/items/vanilla-soft-serve-cone', '/blog/blizzard-vs-mcflurry-vs-frosty', '/blog/best-blizzard-flavors-ranked', '/blog/dairy-queen-calories-nutrition-guide'],
     '/blog/dairy-queen-price-inflation-report': ['/price-history', '/blog/dq-meal-deals-guide', '/combos', '/blog/dairy-queen-app-rewards-hacks', '/categories/dq-cakes'],
-    '/blog/dairy-queen-secret-menu': ['/blog/best-blizzard-flavors-ranked', '/categories/blizzard-treats', '/categories/drinks', '/blog/dq-shake-moolatte-guide'],
+    '/blog/dairy-queen-secret-menu': ['/blog/best-blizzard-flavors-ranked', '/blog/discontinued-dairy-queen-items', '/categories/blizzard-treats', '/categories/drinks', '/blog/dq-shake-moolatte-guide'],
     '/blog/dq-breakfast-hours-menu': ['/categories/breakfast', '/items/breakfast-burrito', '/items/country-breakfast-platter', '/blog/dq-meal-deals-guide'],
     '/blog/dq-cakes-complete-guide': ['/categories/dq-cakes', '/items/oreo-blizzard-cake', '/items/dq-cake-round-8inch', '/items/dq-sheet-cake', '/blog/best-blizzard-flavors-ranked'],
-    '/blog/dq-chicken-strip-baskets-review': ['/categories/chicken-strip-baskets', '/items/chicken-strip-basket-4pc', '/items/chicken-strip-basket-6pc', '/blog/dq-meal-deals-guide'],
+    '/blog/dq-chicken-strip-baskets-review': ['/categories/chicken-strip-baskets', '/dipping-sauces', '/items/chicken-strip-basket-4pc', '/items/chicken-strip-basket-6pc', '/blog/dq-meal-deals-guide'],
     '/blog/dq-gluten-free-allergen-guide': ['/blog/dairy-queen-calories-nutrition-guide', '/items/non-dairy-dilly-bar', '/categories/classic-treats', '/items/side-salad'],
-    '/blog/dq-meal-deals-guide': ['/combos', '/items/7-meal-deal', '/items/2-for-5-mix-match', '/blog/dairy-queen-app-rewards-hacks', '/categories/kids-meals'],
+    '/blog/dq-meal-deals-guide': ['/combos', '/cheapest-dairy-queen-menu', '/items/7-meal-deal', '/items/2-for-5-mix-match', '/blog/dairy-queen-app-rewards-hacks'],
+    '/blog/blizzard-vs-mcflurry-vs-frosty': ['/categories/blizzard-treats', '/blizzard-sizes', '/items/oreo-blizzard', '/blog/best-blizzard-flavors-ranked', '/blog/dairy-queen-ice-cream-vs-soft-serve'],
+    '/blog/discontinued-dairy-queen-items': ['/blizzard-of-the-month', '/blog/dairy-queen-secret-menu', '/categories/classic-treats', '/items/dilly-bar', '/items/misty-slush'],
     '/blog/dq-shake-moolatte-guide': ['/categories/drinks', '/items/moolatte', '/items/chocolate-shake', '/blog/dairy-queen-calories-nutrition-guide'],
 }
 
@@ -92,7 +107,7 @@ for f in sorted(glob.glob(os.path.join(PAGES, 'items', '*.astro'))):
 def title(r):
     if r in items:
         return items[r][0]
-    return CATEGORY_NAMES.get(r) or BLOG_TITLES.get(r) or {'/price-history': 'DQ price history tracker'}.get(r, r)
+    return CATEGORY_NAMES.get(r) or BLOG_TITLES.get(r) or PAGE_TITLES.get(r, r)
 
 
 def link(r):

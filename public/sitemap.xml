@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.thequeendairymenu.us/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/categories/blizzard-treats</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/categories/chicken-strip-baskets</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/categories/royal-blizzards</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/categories/snacks-sides</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
@@ -66,13 +71,28 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/blizzard-of-the-month</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blizzard-sizes</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/blog/best-blizzard-flavors-ranked</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/best-dairy-queen-burgers-ranked</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/blizzard-vs-mcflurry-vs-frosty</loc>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -98,6 +118,11 @@
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-secret-menu</loc>
     <lastmod>2026-10-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/discontinued-dairy-queen-items</loc>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -131,28 +156,43 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/cheapest-dairy-queen-menu</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/combos</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/dipping-sauces</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/healthy-dairy-queen-menu</loc>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/2-for-5-mix-match</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/2pc-chicken-strips</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/7-meal-deal</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/backyard-bacon-ranch-stackburger</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -272,7 +312,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dilly-bar</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -282,7 +322,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/double-cheeseburger</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -307,7 +347,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/flamethrower-stackburger</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -322,7 +362,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/grilled-chicken-sandwich</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -332,32 +372,32 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/honey-bbq-chicken-strip-basket</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/hot-dog</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/hot-fudge-sundae</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/kids-cheeseburger-meal</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/kids-chicken-strips-meal</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/kids-hot-dog-meal</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -367,7 +407,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/misty-slush</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -387,22 +427,22 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/mushroom-swiss-stackburger</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/non-dairy-dilly-bar</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/onion-rings</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/orange-julius</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -417,12 +457,12 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/original-cheeseburger</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/peanut-buster-parfait</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -432,7 +472,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/peppermint-hot-cocoa-blizzard</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -477,7 +517,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/side-salad</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -533,6 +573,11 @@
   <url>
     <loc>https://www.thequeendairymenu.us/price-history</loc>
     <lastmod>2026-10-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/texas-dq-menu</loc>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

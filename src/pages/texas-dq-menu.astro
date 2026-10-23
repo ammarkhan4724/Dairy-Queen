@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { LAST_CHECKED } from '../data/site';
+
+const texasOnly = [
+  { name: 'Hungr-Buster', type: 'Burger', what: 'The original Texas DQ burger, first sold in 1974. Some Texas stores have offered it with guacamole.' },
+  { name: 'Belt-Buster', type: 'Burger', what: 'Another member of the Texas "Buster" burger family.' },
+  { name: 'Triple-Buster', type: 'Burger', what: 'A third member of the Buster burger family.' },
+  { name: 'The Dude', type: 'Sandwich', what: 'A chicken-fried steak sandwich, battered like the steak fingers.' },
+  { name: 'Steak Finger Country Basket', type: 'Basket', what: 'Four battered, fried steak fingers with fries, Texas toast and cream gravy. A pepper jack-infused version has also been sold.' },
+  { name: 'T-Brand Tacos', type: 'Tacos', what: 'Tacos sold under the Texas DQ “T-Brand” name.' },
+  { name: 'Jalitos', type: 'Side', what: 'Fried jalapeño strips.' },
+  { name: 'DQ Texas Sauce', type: 'Dipping sauce', what: 'A sauce made for steak fingers and chicken strips, added in 2024.' },
+];
+
+const compare = [
+  { want: 'A big burger', texas: 'Hungr-Buster, Belt-Buster or Triple-Buster', national: '<a href="/categories/burgers-sandwiches">Signature Stackburgers</a> such as the <a href="/items/flamethrower-stackburger">FlameThrower</a>' },
+  { want: 'A fried basket with gravy', texas: 'Steak Finger Country Basket', national: '<a href="/items/chicken-strip-basket-4pc">4-Piece Chicken Strip Basket</a> with <a href="/dipping-sauces">country gravy</a>' },
+  { want: 'A sandwich', texas: 'The Dude (chicken-fried steak)', national: '<a href="/items/crispy-chicken-sandwich">Crispy Chicken Sandwich</a>' },
+  { want: 'A spicy side', texas: 'Jalitos', national: '<a href="/items/cheese-curds">Cheese Curds</a> or <a href="/items/onion-rings">Onion Rings</a>' },
+  { want: 'Dessert', texas: 'Same Blizzards, cones, sundaes and cakes', national: '<a href="/categories/blizzard-treats">Blizzard menu</a> and <a href="/categories/classic-treats">classic treats</a>' },
+];
+
+const timeline = [
+  ['1947', 'Rolly Klose opens the first Texas Dairy Queen in Austin.'],
+  ['1950s', 'Texas franchisees start selling burgers and other hot food, partly to compete with Whataburger.'],
+  ['1973', 'Texas has more Dairy Queens than any other state.'],
+  ['1974', 'The Hungr-Buster arrives.'],
+  ['1976', 'The Country Basket is trademarked.'],
+  ['1980', 'Texas reaches 1,008 DQ locations. Klose sells the Texas territory rights back to Dairy Queen.'],
+  ['1991–1992', 'Texas operators sue Dairy Queen over control of menus and advertising, and the two sides settle in 1992.'],
+  ['2002', 'The Texas DQ jingle hits the airwaves. Lubbock-born singer Josh Abbott updates it in 2022.'],
+  ['Today', 'Fewer than 600 Texas locations, still run with their own menu and advertising.'],
+];
+
+const faqs = [
+  { q: 'Why is the Dairy Queen menu different in Texas?', a: 'Texas franchisees formed the Texas Dairy Queen Operators’ Council to share a menu and pool their advertising money. Because the original Texas franchise holder kept special rights until 1980, Texas stores built their own hot-food menu, and they still run it today.' },
+  { q: 'What food can you only get at a Texas Dairy Queen?', a: 'The Hungr-Buster, Belt-Buster and Triple-Buster burgers, The Dude chicken-fried steak sandwich, the Steak Finger Country Basket, T-Brand Tacos, Jalitos and DQ Texas Sauce are Texas-only items.' },
+  { q: 'What comes in a Steak Finger Country Basket?', a: 'Four battered and fried steak fingers, French fries, Texas toast and cream gravy for dipping.' },
+  { q: 'Do Texas Dairy Queens sell Blizzards?', a: 'Yes. Texas stores sell the same Blizzards, cones, shakes, sundaes and DQ cakes as the rest of the country. Only the hot-food menu is different.' },
+  { q: 'How many Dairy Queens are in Texas?', a: 'Fewer than 600 today, down from a peak of 1,008 in 1980.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="Texas Dairy Queen Menu: Hungr-Buster & Steak Fingers"
+  description="The Texas-only Dairy Queen menu: Hungr-Buster, Belt-Buster, The Dude, Steak Finger Country Basket and more, plus why Texas DQs serve different food."
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Texas DQ Menu"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">Texas-only items · History · How it compares</span>
+<h1>Texas Dairy Queen Menu</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>Texas Dairy Queens sell a hot-food menu you can’t get anywhere else: the Hungr-Buster, Belt-Buster and Triple-Buster burgers, The Dude chicken-fried steak sandwich and the Steak Finger Country Basket with cream gravy.</strong> The treats are the same as everywhere else. The difference comes from Texas franchise owners, who have run their own menu and advertising for decades.</p>
+    <p>If you’re outside Texas and order a Dude, expect a blank stare. Below is every Texas-only item we track, how each one compares with the national <a href="/">Dairy Queen menu</a>, and how Texas ended up with its own.</p>
+
+    <h2 id="texas-only">Texas-only Dairy Queen menu items</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Item</th><th>Type</th><th>What it is</th></tr></thead>
+        <tbody>
+          {texasOnly.map((r) => (
+            <tr><td><strong>{r.name}</strong></td><td>{r.type}</td><td>{r.what}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Texas prices are set by each owner and we haven’t confirmed them across enough stores to list them yet. Items can vary by store. Last checked {LAST_CHECKED}.</p>
+
+    <h2 id="steak-fingers">The Steak Finger Country Basket</h2>
+    <p>The Country Basket is the dish most Texans think of first. It comes with four strips of breaded, fried beef steak, a side of fries, a slice of buttery Texas toast and a cup of cream gravy. The steak fingers use the same batter as The Dude sandwich. If you know the national <a href="/categories/chicken-strip-baskets">Chicken Strip Basket</a>, it is the same format with beef instead of chicken, and Texas DQs sell both.</p>
+    <p>White cream gravy is the classic dip. Texas stores also offer DQ Texas Sauce, created in 2024 for steak fingers and chicken strips, and most also carry the standard <a href="/dipping-sauces">DQ dipping sauces</a>.</p>
+
+    <h2 id="buster-burgers">The Buster burgers</h2>
+    <p>The Hungr-Buster has been on Texas menus since 1974 and started a whole family of “Buster” burgers, including the Belt-Buster and the Triple-Buster. They are Texas’s answer to the Stackburgers sold everywhere else. If you’re comparing, our <a href="/blog/best-dairy-queen-burgers-ranked">ranking of Dairy Queen burgers</a> covers the national lineup.</p>
+
+    <h2 id="compare">Texas menu vs. the national menu</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>If you want</th><th>Order in Texas</th><th>Closest item elsewhere</th></tr></thead>
+        <tbody>
+          {compare.map((r) => (
+            <tr><td>{r.want}</td><td><strong>{r.texas}</strong></td><td set:html={r.national} /></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="why">Why Texas Dairy Queens are different</h2>
+    <p>Texas DQ owners formed the Texas Dairy Queen Operators’ Council (TDQOC) so their stores would share one menu and pool money for Texas-only ads. They could do this because Rolly Klose, who opened the first Texas store in 1947, held the rights to the whole Texas territory. Dairy Queen headquarters had little say until he sold those rights back in 1980.</p>
+    <p>After that, headquarters pushed Texas stores to switch to the national menu and ads. The owners resisted, sued in 1991 and settled in 1992. Today Texas operators still set their own menu and advertising and coexist with headquarters. The red DQ sign became so common in small towns that it earned the nickname “the Texas stop sign.”</p>
+
+    <h2 id="timeline">Texas Dairy Queen timeline</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Year</th><th>What happened</th></tr></thead>
+        <tbody>
+          {timeline.map(([y, e]) => <tr><td><strong>{y}</strong></td><td>{e}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="tips">Tips for ordering at a Texas DQ</h2>
+    <ul>
+      <li><strong>First visit:</strong> get the Steak Finger Country Basket with cream gravy. It’s the one dish you can’t get anywhere else.</li>
+      <li><strong>Hungry:</strong> the Belt-Buster or Triple-Buster, with Jalitos on the side if you like heat.</li>
+      <li><strong>Dessert:</strong> the Blizzard lineup is the same, so check the <a href="/blizzard-of-the-month">Blizzard of the Month</a> before you go.</li>
+      <li><strong>Find a store:</strong> use our <a href="/locations">Dairy Queen locations guide</a> or the DQ app.</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;"><a href="https://www.texasmonthly.com/food/how-dairy-queen-became-a-texas-thing/" rel="nofollow noopener" target="_blank">Texas Monthly: How Dairy Queen became a Texas thing</a>, <a href="https://texasstandard.org/stories/dairy-queen-different-texas-fast-food/" rel="nofollow noopener" target="_blank">Texas Standard</a>, <a href="https://www.keranews.org/arts-culture/2023-02-13/dude-dairy-queen-is-just-different-in-texas" rel="nofollow noopener" target="_blank">KERA News</a> and <a href="https://www.tastingtable.com/2213420/dairy-queen-texas-popular-steak-finger-basket/" rel="nofollow noopener" target="_blank">Tasting Table</a>. This is an independent guide, not affiliated with Dairy Queen or the Texas Dairy Queen Operators’ Council.</p>
+
+    <p style="margin-top:32px;">More from the menu: <a href="/categories/burgers-sandwiches">burgers and sandwiches</a> · <a href="/categories/chicken-strip-baskets">chicken strip baskets</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>

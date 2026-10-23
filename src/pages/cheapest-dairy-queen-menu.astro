@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PickCards from '../components/PickCards.astro';
+import { LAST_CHECKED } from '../data/site';
+
+// Typical prices and calories match each item page. Sorted cheapest first at build time.
+type Row = { name: string; href: string; price: number; cal: number; note?: string };
+const items: Row[] = [
+  { name: 'DQ Sandwich', href: '/items/dq-sandwich', price: 1.49, cal: 190 },
+  { name: 'Vanilla Cone (Small)', href: '/items/vanilla-soft-serve-cone', price: 1.79, cal: 170 },
+  { name: 'Dilly Bar', href: '/items/dilly-bar', price: 1.99, cal: 210 },
+  { name: 'Soft Drink (Small)', href: '/items/soft-drinks', price: 2.11, cal: 0, note: '0–310 cal' },
+  { name: 'Misty Slush (Small)', href: '/items/misty-slush', price: 2.39, cal: 150 },
+  { name: 'Vanilla Cone (Regular)', href: '/items/vanilla-soft-serve-cone', price: 2.39, cal: 230 },
+  { name: 'Non-Dairy Dilly Bar', href: '/items/non-dairy-dilly-bar', price: 2.49, cal: 220 },
+  { name: 'Buster Bar', href: '/items/buster-bar', price: 2.49, cal: 440 },
+  { name: 'Fries (Small)', href: '/items/regular-fries', price: 2.49, cal: 260 },
+  { name: 'Chocolate Dipped Cone (Regular)', href: '/items/chocolate-dipped-cone', price: 3.19, cal: 330 },
+  { name: 'Onion Rings (Regular)', href: '/items/onion-rings', price: 3.29, cal: 400 },
+  { name: 'Side Salad', href: '/items/side-salad', price: 3.29, cal: 90, note: 'without dressing' },
+  { name: 'Breakfast Burrito', href: '/items/breakfast-burrito', price: 3.49, cal: 380 },
+  { name: 'Hot Fudge Sundae (Small)', href: '/items/hot-fudge-sundae', price: 3.49, cal: 250 },
+  { name: 'Oreo Blizzard (Mini)', href: '/items/oreo-blizzard', price: 3.49, cal: 300 },
+  { name: '2-Piece Chicken Strips', href: '/items/2pc-chicken-strips', price: 3.49, cal: 280 },
+  { name: 'Chocolate Shake (Small)', href: '/items/chocolate-shake', price: 3.49, cal: 710 },
+  { name: 'Strawberry Sundae', href: '/items/strawberry-sundae', price: 3.79, cal: 280 },
+  { name: 'Hot Dog', href: '/items/hot-dog', price: 3.99, cal: 330 },
+  { name: 'Cheese Curds', href: '/items/cheese-curds', price: 3.99, cal: 470 },
+  { name: 'Biscuit & Gravy', href: '/items/biscuit-gravy', price: 3.99, cal: 400 },
+  { name: 'Orange Julius (Small)', href: '/items/orange-julius', price: 3.99, cal: 210 },
+  { name: 'Peanut Buster Parfait', href: '/items/peanut-buster-parfait', price: 4.99, cal: 710 },
+  { name: 'Chili Cheese Dog', href: '/items/chili-cheese-dog', price: 4.99, cal: 420 },
+  { name: 'Kids Meal (any)', href: '/categories/kids-meals', price: 4.99, cal: 0, note: 'entrée, side, drink, treat' },
+];
+const sorted = [...items].sort((a, b) => a.price - b.price || a.name.localeCompare(b.name));
+const money = (n: number) => `$${n.toFixed(2)}`;
+
+// Most calories per dollar: the "most food for the money" ranking.
+const filling = items.filter((r) => r.cal > 0).map((r) => ({ ...r, perDollar: Math.round(r.cal / r.price) }))
+  .sort((a, b) => b.perDollar - a.perDollar).slice(0, 6);
+
+const picks = [
+  { href: '/items/dq-sandwich', img: '/Images/dq-sandwich.webp', name: 'DQ Sandwich', price: '$1.49', note: 'Cheapest item on the menu' },
+  { href: '/items/dilly-bar', img: '/Images/dilly-bar.webp', name: 'Dilly Bar', price: '$1.99', note: 'Cheapest chocolate treat' },
+  { href: '/items/2-for-5-mix-match', img: '/Images/2-for-5-mix-match.webp', name: '2 for $5 Mix & Match', price: '$5.00', note: 'Best cheap lunch' },
+  { href: '/items/7-meal-deal', img: '/Images/7-meal-deal.webp', name: '$7 Meal Deal', price: '$7.00', note: 'Cheapest full meal' },
+];
+
+const faqs = [
+  { q: 'What is the cheapest thing at Dairy Queen?', a: 'The DQ Sandwich is the cheapest item at about $1.49, followed by a small vanilla cone at about $1.79 and a Dilly Bar at about $1.99. Prices vary by location.' },
+  { q: 'What can I get at Dairy Queen for $5?', a: 'For $5 you can get two items from the 2 for $5 Mix & Match menu, a kids meal, a Peanut Buster Parfait, a Chili Cheese Dog, or a Mini Blizzard plus a small cone. Almost every treat except a Medium or Large Blizzard costs under $5.' },
+  { q: 'What is the cheapest meal at Dairy Queen?', a: 'The $7 Meal Deal is the cheapest full meal for an adult: a cheeseburger or 3-piece chicken strips, fries, a drink and a small sundae. Kids meals cost about $4.99.' },
+  { q: 'Are Dairy Queen prices the same at every location?', a: 'No. Each Dairy Queen franchise sets its own prices, so the same item can cost more in a big city or at an airport. Use these prices as a guide and check the DQ app for your store.' },
+  { q: 'What is the cheapest Blizzard?', a: 'A Mini Blizzard in a year-round flavor like Oreo, M&M’s or Butterfinger costs about $3.49. Royal and seasonal Minis cost $3.99 to $4.49.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="Cheapest Dairy Queen Menu Items Under $5 (2026)"
+  description="Every Dairy Queen item under $5, sorted cheapest first, plus the best value meals and which items give you the most food for your money."
+  ogImage="/Images/blog-meal-deals.webp"
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Deals & Combos", "href": "/combos"}, {"name": "Cheapest Menu Items"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">25 items under $5 · Prices checked {LAST_CHECKED}</span>
+<h1>Cheapest Dairy Queen Menu Items</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>The cheapest thing at Dairy Queen is the DQ Sandwich at about $1.49, and the cheapest full meal is the $7 Meal Deal.</strong> More than 20 items cost under $5, including cones, Dilly Bars, small fries, a Mini Blizzard and a hot dog. Below is every one, sorted by price, plus which cheap items fill you up the most.</p>
+
+    <PickCards picks={picks} />
+
+    <h2 id="under-5">Every Dairy Queen item under $5</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Item</th><th>Typical price</th><th>Calories</th></tr></thead>
+        <tbody>
+          {sorted.map((r) => (
+            <tr><td><strong><a href={r.href}>{r.name}</a></strong></td><td class="price-cell">{money(r.price)}</td><td>{r.note ?? r.cal}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Typical U.S. prices; each franchise sets its own. Last checked {LAST_CHECKED}.</p>
+
+    <h2 id="most-food">Most food for your money</h2>
+    <p>If you want to feel full on a budget, calories per dollar is a useful measure. Here are the cheap items that give you the most food for each dollar spent.</p>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Item</th><th>Price</th><th>Calories</th><th>Calories per $1</th></tr></thead>
+        <tbody>
+          {filling.map((r) => (
+            <tr><td><strong><a href={r.href}>{r.name}</a></strong></td><td class="price-cell">{money(r.price)}</td><td>{r.cal}</td><td>{r.perDollar}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>The small Chocolate Shake is the surprise winner, because a shake is mostly soft serve and milk. Among savory items, Onion Rings and Cheese Curds give the most calories per dollar, and the Breakfast Burrito is the best cheap savory pick in the morning.</p>
+
+    <h2 id="cheap-meals">Cheapest meals at Dairy Queen</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Meal</th><th>Typical price</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td><strong><a href="/categories/kids-meals">Kids Meal</a></strong></td><td class="price-cell">$4.99</td><td>Small entrée, side, drink and a treat</td></tr>
+          <tr><td><strong><a href="/items/2-for-5-mix-match">2 for $5 Mix &amp; Match</a></strong></td><td class="price-cell">$5.00</td><td>Any two eligible items, such as a cheeseburger and fries</td></tr>
+          <tr><td><strong><a href="/items/7-meal-deal">$7 Meal Deal</a></strong></td><td class="price-cell">$7.00</td><td>Cheeseburger or 3-piece strips, fries, drink and a small sundae</td></tr>
+          <tr><td><strong>Hot Dog + Small Fries</strong></td><td class="price-cell">$6.48</td><td>Ordered separately, no drink</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ordering separately almost never beats a deal. A cheeseburger, small fries, a small drink and a small sundae bought one by one cost about $14.50, so the <a href="/items/7-meal-deal">$7 Meal Deal</a> saves you about half. See all deals on our <a href="/combos">Dairy Queen deals and combos</a> page.</p>
+
+    <h2 id="cheap-treats">Cheapest treats</h2>
+    <ul>
+      <li><strong>Under $2:</strong> the <a href="/items/dq-sandwich">DQ Sandwich</a> ($1.49), a small <a href="/items/vanilla-soft-serve-cone">vanilla cone</a> ($1.79) and a <a href="/items/dilly-bar">Dilly Bar</a> ($1.99).</li>
+      <li><strong>Under $3:</strong> a <a href="/items/buster-bar">Buster Bar</a> or <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> ($2.49) and a regular cone ($2.39).</li>
+      <li><strong>Under $4:</strong> a Mini <a href="/items/oreo-blizzard">Oreo Blizzard</a> ($3.49), a <a href="/items/chocolate-dipped-cone">dipped cone</a> ($3.19) or a small <a href="/items/hot-fudge-sundae">Hot Fudge Sundae</a> ($3.49).</li>
+    </ul>
+
+    <h2 id="tips">How to pay even less</h2>
+    <ul>
+      <li><strong>Use the DQ app.</strong> App deals regularly beat menu prices, especially on Blizzards. See our <a href="/blog/dairy-queen-app-rewards-hacks">DQ app rewards guide</a>.</li>
+      <li><strong>Choose a Mini Blizzard.</strong> It is half the price of a Large and enough for most people after a meal. See <a href="/blizzard-sizes">Blizzard sizes and prices</a>.</li>
+      <li><strong>Skip the drink.</strong> A small soft drink adds over $2 to an order.</li>
+      <li><strong>Watch for price differences.</strong> Prices vary a lot between stores; our <a href="/blog/dairy-queen-price-inflation-report">DQ price report</a> explains why.</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <p style="margin-top:32px;">More from the menu: <a href="/combos">deals and combos</a> · <a href="/healthy-dairy-queen-menu">lowest-calorie picks</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>

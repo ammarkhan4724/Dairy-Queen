@@ -10,6 +10,9 @@ from datetime import date
 SRC_DIR = os.path.join('src', 'pages')
 DOMAIN = 'https://www.thequeendairymenu.us'
 EXCLUDE = {'/404'}  # noindex / non-canonical pages
+# Top-level menu guides that rank like item and blog pages.
+GUIDE_PAGES = {'/combos', '/price-history', '/blizzard-of-the-month', '/dipping-sauces', '/texas-dq-menu',
+               '/cheapest-dairy-queen-menu', '/healthy-dairy-queen-menu', '/blizzard-sizes'}
 
 
 def lastmod(path):
@@ -35,7 +38,7 @@ for root, _, files in os.walk(SRC_DIR):
             prio = '1.0'
         elif route in ('/categories', '/items', '/blog') or route.startswith('/categories/'):
             prio = '0.8'
-        elif route.startswith(('/items/', '/blog/')) or route in ('/combos', '/price-history'):
+        elif route.startswith(('/items/', '/blog/')) or route in GUIDE_PAGES:
             prio = '0.7'
         else:
             prio = '0.3'

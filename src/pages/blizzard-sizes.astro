@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PickCards from '../components/PickCards.astro';
+import { LAST_CHECKED } from '../data/site';
+
+// Ounces per Mashed (see Sources). Oreo prices and calories match /items/oreo-blizzard.
+const sizes = [
+  { size: 'Mini', oz: 6, price: 3.49, cal: '~300', who: 'A dessert after a meal, or trying a new flavor' },
+  { size: 'Small', oz: 12, price: 4.49, cal: '420', who: 'The everyday size for one person' },
+  { size: 'Medium', oz: 16, price: 5.49, cal: '590', who: 'A big dessert for one, or two people sharing' },
+  { size: 'Large', oz: 20, price: 5.99, cal: '920', who: 'Sharing, or the best value per ounce' },
+];
+const perOz = (s: { price: number; oz: number }) => `$${(s.price / s.oz).toFixed(2)}`;
+
+// Typical price range per size for each price tier, from /categories/blizzard-treats.
+const tiers = [
+  { tier: 'Year-round classics', ex: 'Oreo, M&M’s, Butterfinger, Heath', href: '/categories/blizzard-treats#year-round', p: ['$3.49', '$4.49', '$5.29–$5.49', '$5.99–$6.49'] },
+  { tier: 'Premium mix-ins', ex: 'Choco Brownie Extreme, Turtle Pecan', href: '/categories/blizzard-treats#year-round', p: ['$3.99', '$4.79', '$5.79', '$6.49'] },
+  { tier: 'Royal (filled center)', ex: 'Royal Oreo, Royal Reese’s', href: '/categories/royal-blizzards', p: ['$3.99', '$4.99', '$5.99', '$6.49'] },
+  { tier: 'Seasonal', ex: 'Pumpkin Pie, S’mores, Cotton Candy', href: '/blizzard-of-the-month', p: ['$3.99–$4.49', '$4.79–$5.29', '$5.79–$6.29', '$6.49–$6.99'] },
+];
+
+const picks = [
+  { href: '/items/oreo-blizzard', img: '/Images/oreo-blizzard.webp', name: 'Oreo Blizzard', price: 'Mini $3.49', note: 'Most popular flavor' },
+  { href: '/categories/royal-blizzards', img: '/Images/royal-oreo-blizzard.webp', name: 'Royal Blizzards', price: 'Small $4.99', note: 'Filled center' },
+  { href: '/items/pumpkin-pie-blizzard', img: '/Images/pumpkin-pie-blizzard.webp', name: 'Pumpkin Pie Blizzard', price: 'Small $5.29', note: 'Fall seasonal' },
+];
+
+const faqs = [
+  { q: 'What sizes does a DQ Blizzard come in?', a: 'Four: Mini (about 6 oz), Small (12 oz), Medium (16 oz) and Large (20 oz). Every flavor, including Royal and seasonal Blizzards, comes in all four.' },
+  { q: 'How many ounces is a medium Blizzard?', a: 'A Medium Blizzard is about 16 ounces. A Small is about 12 ounces and a Large about 20 ounces.' },
+  { q: 'Which Blizzard size is the best value?', a: 'The Large. An Oreo Blizzard costs about 30 cents per ounce in a Large, compared with about 58 cents per ounce for a Mini. The Medium and Small are close behind the Large.' },
+  { q: 'How many calories are in a Mini Blizzard?', a: 'Most Mini Blizzards have about 270 to 360 calories. A Mini Oreo Blizzard has about 300 calories, roughly a third of a Large.' },
+  { q: 'Is a Mini Blizzard a kids size?', a: 'The Mini is the smallest Blizzard on the regular menu and a good size for kids. It is about half the size of a Small.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="DQ Blizzard Sizes: Ounces, Prices & Calories (2026)"
+  description="How big is each Dairy Queen Blizzard? Mini, Small, Medium and Large in ounces, with typical 2026 prices, calories and price per ounce."
+  ogImage="/Images/blizzard-category.webp"
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blizzard Menu", "href": "/categories/blizzard-treats"}, {"name": "Blizzard Sizes"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">Mini · Small · Medium · Large · Prices checked {LAST_CHECKED}</span>
+<h1>Dairy Queen Blizzard Sizes</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>Dairy Queen Blizzards come in four sizes: Mini (about 6 oz), Small (12 oz), Medium (16 oz) and Large (20 oz).</strong> An Oreo Blizzard costs about $3.49 for a Mini and $5.99 for a Large, so the Large is the best value per ounce. Below are the sizes with prices, calories and which one to order.</p>
+
+    <PickCards picks={picks} />
+
+    <h2 id="chart">Blizzard size chart</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Size</th><th>Ounces</th><th>Price (Oreo)</th><th>Price per oz</th><th>Calories (Oreo)</th><th>Best for</th></tr></thead>
+        <tbody>
+          {sizes.map((s) => (
+            <tr><td><strong>{s.size}</strong></td><td>{s.oz} oz</td><td class="price-cell">${s.price.toFixed(2)}</td><td>{perOz(s)}</td><td>{s.cal}</td><td>{s.who}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Ounces are approximate; Blizzards are served by cup size, not weighed. Prices are typical U.S. prices for the <a href="/items/oreo-blizzard">Oreo Blizzard</a> and vary by location. Last checked {LAST_CHECKED}.</p>
+
+    <h2 id="value">Which size is the best value?</h2>
+    <p>The Large costs about 30 cents per ounce, roughly half the per-ounce price of a Mini (about 58 cents). Going from a Small to a Medium adds 4 ounces for about $1, and from a Medium to a Large adds another 4 ounces for about 50 cents. If you are sharing, one Large is cheaper than two Minis and holds more.</p>
+    <p>The Mini wins on calories instead. At about 300 calories for an Oreo, it has roughly a third of the calories of a Large (about 920). See more lighter options on our <a href="/healthy-dairy-queen-menu">healthiest Dairy Queen menu</a> page.</p>
+
+    <h2 id="tiers">Blizzard prices by size and flavor tier</h2>
+    <p>The size sets most of the price, but the flavor tier adds 30 cents to a dollar. Here is the typical range for each tier.</p>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Tier</th><th>Mini</th><th>Small</th><th>Medium</th><th>Large</th></tr></thead>
+        <tbody>
+          {tiers.map((t) => (
+            <tr><td><strong><a href={t.href}>{t.tier}</a></strong><span style="display:block;font-size:.8rem;color:var(--color-text-muted);">{t.ex}</span></td>{t.p.map((x) => <td class="price-cell">{x}</td>)}</tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>Every flavor’s exact prices are on the <a href="/categories/blizzard-treats">Blizzard menu</a> page.</p>
+
+    <h2 id="compare">How Blizzard sizes compare with a McFlurry and Frosty</h2>
+    <p>A McDonald’s McFlurry comes in fewer sizes than a Blizzard: the regular McFlurry is about the size of a Small Blizzard (12 oz), and some stores add a snack size. Wendy’s Frosty comes in Junior, Small, Medium and Large but has no mix-ins. We compare price, calories and taste in <a href="/blog/blizzard-vs-mcflurry-vs-frosty">Blizzard vs. McFlurry vs. Frosty</a>.</p>
+
+    <h2 id="tips">Tips for choosing a size</h2>
+    <ul>
+      <li><strong>Trying a new or seasonal flavor?</strong> Get a Mini. If you love it, the next one can be bigger.</li>
+      <li><strong>Sharing with one person?</strong> A Medium is enough for two after a meal.</li>
+      <li><strong>Feeding a group?</strong> A 10-inch <a href="/categories/dq-cakes">Oreo Blizzard cake</a> (from about $38.74) serves 12 to 16, which is easier than ordering six Large Blizzards.</li>
+      <li><strong>Want more crunch?</strong> Ask for extra mix-ins on any size for a small charge.</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;">Cup sizes in ounces: <a href="https://www.mashed.com/1400483/dq-blizzard-vs-mcdonalds-mcflurry/" rel="nofollow noopener" target="_blank">Mashed, “DQ Blizzard vs. McDonald’s McFlurry”</a>. Prices and calories are our typical U.S. estimates and vary by location.</p>
+
+    <p style="margin-top:32px;">More from the menu: <a href="/categories/blizzard-treats">every Blizzard flavor</a> · <a href="/categories/royal-blizzards">Royal Blizzards</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>

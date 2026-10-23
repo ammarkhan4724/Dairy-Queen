@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+// Update on the 1st of each month: CURRENT, the fall menu table and the 2026 calendar.
+const UPDATED = 'October 23, 2026';
+const CURRENT = {
+  month: 'October 2026',
+  name: 'Enchanted Oreo Blizzard',
+  what: 'Oreo cookie pieces and sweet ube (purple yam) flavor blended with vanilla soft serve, finished with a purple shimmer swirl.',
+  dates: 'September 28 to about November 1, 2026',
+};
+
+// Seasonal-tier prices from /categories/blizzard-treats (Mini, Small, Medium, Large).
+const SEASONAL_PRICE = '$4.49 Mini, $5.29 Small, $6.29 Medium and $6.99 Large';
+
+const fallMenu = [
+  { name: 'Enchanted Oreo Blizzard', type: 'Blizzard (October Blizzard of the Month)', what: 'Oreo pieces, ube flavor, purple shimmer swirl', status: 'New, Sept 28 to about Nov 1' },
+  { name: 'Brown Sugar Cookie Dough Blizzard', type: 'Blizzard (September Blizzard of the Month)', what: 'Brown sugar cookie dough pieces and brown sugar topping', status: 'New for fall 2026' },
+  { name: 'Caramel Apple Cheesecake Blizzard', type: 'Blizzard (August Blizzard of the Month)', what: 'Cheesecake pieces and caramel apple topping', status: 'New, from Aug 31' },
+  { name: 'Pumpkin Pie Blizzard', href: '/items/pumpkin-pie-blizzard', type: 'Blizzard', what: 'Real pumpkin pie pieces, whipped topping and nutmeg', status: 'Returning fall favorite' },
+  { name: 'Toasted Marshmallow Mocha DQ Coffee Cooler', type: 'Drink', what: 'Cold brew, toasted marshmallow syrup, soft serve, cocoa fudge', status: 'New for fall 2026' },
+  { name: 'Bubble Brew DQ Sparkler', type: 'Drink (Halloween)', what: 'Blood orange and lemonade flavors, sparkling water, cold foam', status: 'Halloween menu' },
+  { name: 'Ghost Pepper Sauce', href: '/dipping-sauces', type: 'Dipping sauce (Halloween)', what: 'Smoky, spicy sauce for chicken strips', status: 'Halloween menu' },
+];
+
+// Blizzard of the Month history. * = returning flavor.
+const calendar2026 = [
+  ['October', 'Enchanted Oreo', ''],
+  ['September', 'Brown Sugar Cookie Dough', ''],
+  ['August', 'Caramel Apple Cheesecake', ''],
+  ['July', 'Biscoff Cookie, Mexican-Style Hot Chocolate Made with Abuelita, and Strawberry Mango Mochi', ''],
+  ['June', 'Nestlé Drumstick with Peanuts', 'Returning'],
+  ['May', 'Choco Frosted Donut', ''],
+  ['April', 'Strawberry Angel Food Cake', ''],
+  ['March', 'Mint Oreo', 'Returning', '/items/mint-oreo-blizzard'],
+  ['February', 'Red Velvet Cake', 'Returning'],
+  ['January', 'Oreo Snowdrift', ''],
+];
+const calendar2025 = [
+  ['December', 'Frosted Sugar Cookie', 'Returning', '/items/frosted-sugar-cookie-blizzard'],
+  ['November', 'Peppermint Bark', '', '/items/peppermint-bark-blizzard'],
+  ['October', 'Oreo Reese’s', ''],
+  ['September', 'Pumpkin Pie', 'Returning', '/items/pumpkin-pie-blizzard'],
+  ['August', 'Reese’s Caramel Craze', ''],
+  ['July', 'Superman Cake Batter Cookie Dough', ''],
+  ['June', 'Dipped Strawberry Cheesecake', '', '/items/dipped-strawberry-cheesecake-blizzard'],
+  ['May', 'Mixing Bowl Mashup', '', '/items/mixing-bowl-mashup-blizzard'],
+  ['April', 'Confetti Cake', 'Returning', '/items/confetti-cake-blizzard'],
+  ['March', 'Mint Oreo', 'Returning', '/items/mint-oreo-blizzard'],
+  ['February', 'Red Velvet Cake', 'Returning'],
+  ['January', 'Reese’s Pieces Cookie Dough', 'Returning'],
+];
+
+const faqs = [
+  { q: 'What is the Dairy Queen Blizzard of the Month right now?', a: `The ${CURRENT.month} Blizzard of the Month is the ${CURRENT.name}: ${CURRENT.what} It runs from ${CURRENT.dates} at participating locations.` },
+  { q: 'How much is the Blizzard of the Month?', a: `Featured and seasonal Blizzards usually cost a little more than year-round flavors, typically about ${SEASONAL_PRICE}. Each franchise sets its own prices.` },
+  { q: 'When does the Blizzard of the Month change?', a: 'A new featured flavor usually arrives near the start of each month, though some launch in the last days of the month before. Dates are set by Dairy Queen and stores can run out early.' },
+  { q: 'Is the Pumpkin Pie Blizzard back for 2026?', a: 'Yes. The Pumpkin Pie Blizzard returned for fall 2026 alongside two new flavors, Caramel Apple Cheesecake and Brown Sugar Cookie Dough.' },
+  { q: 'Can I get an old Blizzard of the Month flavor?', a: 'Usually not once it has rotated off, because stores stop stocking the special mix-ins. You can often get close by combining year-round mix-ins; see our DQ secret menu guide for ideas.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="DQ Blizzard of the Month: October 2026 & Fall Menu"
+  description="The current Dairy Queen Blizzard of the Month (October 2026: Enchanted Oreo), the full fall 2026 seasonal menu, prices, and every past Blizzard of the Month."
+  ogImage="/Images/blizzard-category.webp"
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Blizzard Menu", "href": "/categories/blizzard-treats"}, {"name": "Blizzard of the Month"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">Updated {UPDATED} · Fall 2026 menu</span>
+<h1>Dairy Queen Blizzard of the Month</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>The {CURRENT.month} Blizzard of the Month is the {CURRENT.name}.</strong> What’s in it: {CURRENT.what} It is part of Dairy Queen’s first Halloween menu and runs from {CURRENT.dates}.</p>
+    <p>We update this page at the start of every month with the new featured flavor, the rest of the seasonal menu and what it typically costs. For year-round flavors and prices by size, see the full <a href="/categories/blizzard-treats">Dairy Queen Blizzard menu</a>.</p>
+
+    <h2 id="current">This month’s Blizzard: {CURRENT.name}</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <tbody>
+          <tr><th scope="row">Month</th><td>{CURRENT.month}</td></tr>
+          <tr><th scope="row">What’s in it</th><td>{CURRENT.what}</td></tr>
+          <tr><th scope="row">Available</th><td>{CURRENT.dates}, at participating locations</td></tr>
+          <tr><th scope="row">Typical price</th><td>{SEASONAL_PRICE}</td></tr>
+          <tr><th scope="row">Also on the Halloween menu</th><td>Bubble Brew DQ Sparkler and Ghost Pepper Sauce for chicken strips</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ube is a purple yam used widely in Filipino desserts. It tastes nutty and vanilla-like rather than earthy, which makes it a natural match for Oreo pieces. If you liked the <a href="/items/oreo-blizzard">classic Oreo Blizzard</a>, this is the same cookie crunch with a sweeter, more floral base.</p>
+
+    <h2 id="fall-menu">Dairy Queen fall 2026 seasonal menu</h2>
+    <p>The fall menu launched in late August and has grown each month. Seasonal items are sold while supplies last, so a store may run out of one before the official end date.</p>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Item</th><th>Type</th><th>What’s in it</th><th>Status</th></tr></thead>
+        <tbody>
+          {fallMenu.map((r) => (
+            <tr>
+              <td><strong>{r.href ? <a href={r.href}>{r.name}</a> : r.name}</strong></td>
+              <td>{r.type}</td>
+              <td>{r.what}</td>
+              <td>{r.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>Dairy Queen hasn’t published calorie counts for the new fall Blizzards on the menu boards we checked. As a guide, most Small seasonal Blizzards land between 430 and 540 calories; the <a href="/items/pumpkin-pie-blizzard">Pumpkin Pie Blizzard</a> is about 490.</p>
+
+    <h2 id="what-next">What’s the next Blizzard of the Month?</h2>
+    <p>Dairy Queen hasn’t announced the November 2026 flavor yet. In past years, November and December have been peppermint and holiday flavors: November 2025 was <a href="/items/peppermint-bark-blizzard">Peppermint Bark</a> and December 2025 was <a href="/items/frosted-sugar-cookie-blizzard">Frosted Sugar Cookie</a>. We’ll update this page as soon as the new flavor is confirmed.</p>
+
+    <h2 id="calendar-2026">2026 Blizzard of the Month calendar</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Month</th><th>Blizzard of the Month</th><th>Note</th></tr></thead>
+        <tbody>
+          {calendar2026.map(([m, f, note, href]) => (
+            <tr><td>{m}</td><td><strong>{href ? <a href={href}>{f}</a> : f}</strong></td><td>{note}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>July 2026 had three featured flavors at once instead of one.</p>
+
+    <h2 id="calendar-2025">2025 Blizzard of the Month calendar</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Month</th><th>Blizzard of the Month</th><th>Note</th></tr></thead>
+        <tbody>
+          {calendar2025.map(([m, f, note, href]) => (
+            <tr><td>{m}</td><td><strong>{href ? <a href={href}>{f}</a> : f}</strong></td><td>{note}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="how-it-works">How the Blizzard of the Month works</h2>
+    <ul>
+      <li><strong>One featured flavor a month.</strong> Dairy Queen picks a Blizzard to promote nationally each month. Some are brand new and some are fan favorites brought back, like Mint Oreo, which was the March flavor in both 2025 and 2026.</li>
+      <li><strong>Participating locations only.</strong> Most U.S. stores carry it, but franchisees can opt out or sell out early.</li>
+      <li><strong>Same four sizes.</strong> Mini, Small, Medium and Large, at seasonal pricing that is usually 50 cents to a dollar above the Oreo Blizzard.</li>
+      <li><strong>App deals are common.</strong> In August 2026, DQ Rewards members could buy one Blizzard and get a second for 99 cents. Check the <a href="/blog/dairy-queen-app-rewards-hacks">DQ app rewards guide</a> for current offers.</li>
+    </ul>
+
+    <h2 id="tips">Tips for ordering a seasonal Blizzard</h2>
+    <ul>
+      <li><strong>Try a Mini first</strong> if the flavor is new to you. It costs about $2.50 less than a Large.</li>
+      <li><strong>Ask for extra mix-ins.</strong> Most stores charge under a dollar (one reviewer paid 95 cents for extra brown sugar cookie dough).</li>
+      <li><strong>Feeding a group?</strong> See <a href="/categories/dq-cakes">DQ cake sizes and prices</a>, including Blizzard cakes.</li>
+      <li><strong>Missed a flavor?</strong> Our <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> shows how to recreate retired flavors with year-round mix-ins, and our <a href="/blog/best-blizzard-flavors-ranked">Blizzard flavor ranking</a> lists the best permanent options.</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;">Flavor details and dates: <a href="https://sporked.com/article/dairy-queen-is-dropping-its-first-ever-halloween-menu-with-a-new-blizzard/" rel="nofollow noopener" target="_blank">Sporked (Sept 23, 2026)</a>, <a href="https://parade.com/food/dairy-queen-fall-2026-menu-2-new-blizzard-flavors-returning-favorite" rel="nofollow noopener" target="_blank">Parade (Aug 3, 2026)</a> and <a href="https://www.tasteofhome.com/article/dairy-queen-fall-menu-2026/" rel="nofollow noopener" target="_blank">Taste of Home (Sept 2, 2026)</a>. Monthly history: <a href="https://www.theimpulsivebuy.com/wordpress/dairy-queen-blizzard-of-the-month-list/" rel="nofollow noopener" target="_blank">The Impulsive Buy</a>. Prices are our typical U.S. estimates and vary by location.</p>
+
+    <p style="margin-top:32px;">More from the menu: <a href="/categories/blizzard-treats">every Blizzard flavor and price</a> · <a href="/categories/dq-cakes">DQ cakes</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>
