@@ -1,0 +1,101 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// Blizzard figures match /items/oreo-blizzard. McFlurry and Frosty figures are cited under Sources.
+const compare = [
+  ['Chain', 'Dairy Queen', 'McDonald’s', 'Wendy’s'],
+  ['On the menu since', '1985', 'Mid-1990s', '1969 (Wendy’s first year)'],
+  ['What it is', 'Soft serve blended with mix-ins', 'Soft serve stirred with mix-ins', 'Thick frozen dairy dessert, no mix-ins'],
+  ['Sizes', 'Mini, Small, Medium, Large', 'Snack, Regular', 'Junior, Small, Medium, Large'],
+  ['Flavors', 'About 20 year-round, plus a new one most months', 'Mostly Oreo and M&M’s, plus limited-time flavors', 'Chocolate and vanilla, plus limited-time flavors'],
+  ['Typical price, most popular size', '$4.49 (Small Oreo, 12 oz)', '$4.79 (Regular Oreo)', '$2.29 (Small)'],
+  ['Calories, same size', '420', '510', '310 (chocolate)'],
+  ['Cheapest size', '$3.49 (Mini)', '$3.79 (Snack)', '$1.49 (Junior)'],
+];
+
+const faqs = [
+  { q: 'What is the difference between a Blizzard and a McFlurry?', a: 'Both are soft serve mixed with candy or cookie pieces. A Blizzard comes in four sizes and about 20 year-round flavors, while a McFlurry comes in one or two sizes with mostly Oreo or M&M’s. The Blizzard came first, in 1985.' },
+  { q: 'Which came first, the Blizzard or the McFlurry?', a: 'The Blizzard. Dairy Queen launched it in 1985, about ten years before McDonald’s introduced the McFlurry in the mid-1990s.' },
+  { q: 'Is a Frosty the same as a Blizzard?', a: 'No. A Wendy’s Frosty is a thick, spoonable frozen dessert in chocolate or vanilla with nothing mixed in. A Blizzard is soft serve blended with mix-ins like Oreo or Reese’s.' },
+  { q: 'Which has more calories, a Blizzard or a McFlurry?', a: 'Size for size they are close. A Small Oreo Blizzard has about 420 calories and a regular Oreo McFlurry about 510. A Small chocolate Frosty is the lightest at about 310.' },
+  { q: 'Is a Blizzard ice cream?', a: 'Not by the FDA definition. DQ soft serve has about 5% milkfat, and ice cream needs at least 10%. The same is true of McDonald’s soft serve.' },
+];
+---
+<BlogPost
+  title="Blizzard vs. McFlurry vs. Frosty: Which Is Best?"
+  description="DQ Blizzard vs. McDonald’s McFlurry vs. Wendy’s Frosty: sizes, prices, calories, flavors and history compared side by side, plus which to order."
+  h1="Blizzard vs. McFlurry vs. Frosty: Which Frozen Treat Wins?"
+  crumb="Blizzard vs. McFlurry vs. Frosty"
+  eyebrow="Head-to-head comparison"
+  image="/Images/oreo-blizzard.webp"
+  imageAlt="Dairy Queen Oreo Blizzard, compared with the McFlurry and Frosty"
+  datePublished="2026-10-23"
+  dateModified="2026-10-23"
+  faqs={faqs}
+>
+  <p class="lead"><strong>Get a Blizzard if you want the most flavors and sizes, a McFlurry if you want lots of cookie pieces in one size, and a Frosty if you want the cheapest, lightest treat.</strong> A Small Oreo Blizzard costs about $4.49 and has 420 calories, a regular Oreo McFlurry about $4.79 and 510 calories, and a Small Frosty about $2.29 and 310 calories.</p>
+
+  <h2 id="at-a-glance">At a glance</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr>{compare[0].map((h, i) => <th>{i === 0 ? '' : h}</th>)}</tr></thead>
+      <tbody>
+        {compare.slice(1).map((row) => (
+          <tr>{row.map((c, i) => i === 0 ? <td><strong>{c}</strong></td> : <td>{c}</td>)}</tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.88rem;color:var(--color-text-muted);">Typical U.S. prices; every chain lets stores set their own. Blizzard prices are ours; McFlurry and Frosty figures are from the sources below.</p>
+
+  <h2 id="blizzard-vs-mcflurry">Blizzard vs. McFlurry</h2>
+  <p>These two are the closest match. Both start with soft serve that has about 5% milkfat and mix in cookie or candy pieces. The differences are choice and size.</p>
+  <ul>
+    <li><strong>Flavors:</strong> the Blizzard wins easily. Dairy Queen keeps around 20 flavors on the menu and adds a <a href="/blizzard-of-the-month">Blizzard of the Month</a>. The McFlurry is mostly Oreo or M&amp;M’s.</li>
+    <li><strong>Sizes:</strong> four Blizzard sizes from a 6 oz Mini to a 20 oz Large, against one or two McFlurry sizes. See <a href="/blizzard-sizes">Blizzard sizes</a>.</li>
+    <li><strong>Mix-ins:</strong> in a side-by-side taste test by Mashed, the McFlurry had about twice as many Oreo crumbs as a same-size Blizzard, but the reviewer found the Blizzard’s soft serve creamier.</li>
+    <li><strong>Price:</strong> close. A Small Blizzard is about $4.49 and a regular McFlurry about $4.79 in our comparison, though prices vary a lot by store.</li>
+    <li><strong>The upside-down trick:</strong> the Blizzard is famous for being handed over upside down to show how thick it is. Mashed found the McFlurry stayed in the cup too.</li>
+  </ul>
+
+  <h2 id="blizzard-vs-frosty">Blizzard vs. Frosty</h2>
+  <p>A Frosty is a different kind of dessert. Its texture sits somewhere between a shake and soft serve, and it comes only in chocolate or vanilla with nothing mixed in. That makes it much cheaper and lighter: a Junior Frosty is about $1.49 and 190 calories, while the cheapest Blizzard, a Mini, is about $3.49 and 300 calories.</p>
+  <p>If you want something closer to a Frosty at Dairy Queen, a small <a href="/items/vanilla-soft-serve-cone">vanilla cone</a> ($1.79, 170 calories) or a <a href="/items/chocolate-shake">chocolate shake</a> is the nearest match.</p>
+
+  <h2 id="calories">Calories compared</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Treat</th><th>Size</th><th>Calories</th></tr></thead>
+      <tbody>
+        <tr><td><a href="/items/oreo-blizzard">Oreo Blizzard</a></td><td>Mini</td><td>~300</td></tr>
+        <tr><td><a href="/items/oreo-blizzard">Oreo Blizzard</a></td><td>Small</td><td>420</td></tr>
+        <tr><td>Oreo McFlurry</td><td>Snack</td><td>340</td></tr>
+        <tr><td>Oreo McFlurry</td><td>Regular</td><td>510</td></tr>
+        <tr><td>Chocolate Frosty</td><td>Junior</td><td>190</td></tr>
+        <tr><td>Chocolate Frosty</td><td>Small</td><td>310</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Size for size, the Frosty is the lightest. The Blizzard and McFlurry are close, and both climb fast with bigger sizes and candy mix-ins like Reese’s. Our <a href="/healthy-dairy-queen-menu">healthiest Dairy Queen picks</a> list the lightest DQ treats.</p>
+
+  <h2 id="verdict">Which should you order?</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>If you want</th><th>Order</th></tr></thead>
+      <tbody>
+        <tr><td>The most flavor choices</td><td><a href="/categories/blizzard-treats">Blizzard</a></td></tr>
+        <tr><td>A size for sharing</td><td>Large Blizzard (20 oz)</td></tr>
+        <tr><td>A filled center or seasonal flavor</td><td><a href="/categories/royal-blizzards">Royal Blizzard</a> or the <a href="/blizzard-of-the-month">Blizzard of the Month</a></td></tr>
+        <tr><td>Lots of Oreo pieces in a standard size</td><td>Oreo McFlurry</td></tr>
+        <tr><td>The cheapest frozen treat</td><td>Junior Frosty, or a <a href="/items/dq-sandwich">DQ Sandwich</a> at Dairy Queen</td></tr>
+        <tr><td>The fewest calories</td><td>Junior Frosty, or a small <a href="/items/vanilla-soft-serve-cone">DQ cone</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Our pick is the Blizzard. You get more flavors and more sizes, and the Mini makes it easy to try something new without spending much. Not sure which flavor? Start with our <a href="/blog/best-blizzard-flavors-ranked">ranking of the best Blizzard flavors</a>.</p>
+
+  <Fragment slot="after">
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;"><a href="https://www.mashed.com/1400483/dq-blizzard-vs-mcdonalds-mcflurry/" rel="nofollow noopener" target="_blank">Mashed: DQ Blizzard vs. McDonald’s McFlurry</a> (history, sizes, milkfat, taste test); <a href="https://mcdonalds-menus.us/mcflurry/" rel="nofollow noopener" target="_blank">McFlurry prices and calories</a>; <a href="https://menuatwendys.com/wendys-frosty/" rel="nofollow noopener" target="_blank">Wendy’s Frosty prices and calories</a>. Read more about DQ soft serve in <a href="/blog/dairy-queen-ice-cream-vs-soft-serve">Is Dairy Queen soft serve real ice cream?</a></p>
+  </Fragment>
+</BlogPost>

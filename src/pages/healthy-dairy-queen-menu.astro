@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PickCards from '../components/PickCards.astro';
+import { LAST_CHECKED } from '../data/site';
+
+// Calories match each item page (approximate where marked ~ there).
+type Row = { name: string; href: string; cal: string; note?: string };
+const groups: { id: string; title: string; rows: Row[] }[] = [
+  { id: 'mains', title: 'Lowest-calorie burgers, sandwiches and chicken', rows: [
+    { name: '2-Piece Chicken Strips', href: '/items/2pc-chicken-strips', cal: '~280', note: 'Strips only, add a sauce' },
+    { name: 'Hot Dog', href: '/items/hot-dog', cal: '330' },
+    { name: 'Breakfast Burrito', href: '/items/breakfast-burrito', cal: '380', note: 'Breakfast hours' },
+    { name: 'Grilled Chicken Sandwich', href: '/items/grilled-chicken-sandwich', cal: '390', note: 'Lightest sandwich' },
+    { name: 'Original Cheeseburger (Single)', href: '/items/original-cheeseburger', cal: '400', note: 'Lightest burger' },
+    { name: 'Chili Cheese Dog', href: '/items/chili-cheese-dog', cal: '420' },
+  ] },
+  { id: 'sides', title: 'Lowest-calorie sides', rows: [
+    { name: 'Side Salad', href: '/items/side-salad', cal: '90', note: 'Without dressing' },
+    { name: 'Fries (Small)', href: '/items/regular-fries', cal: '260' },
+    { name: 'Onion Rings (Regular)', href: '/items/onion-rings', cal: '~400' },
+  ] },
+  { id: 'treats', title: 'Lowest-calorie treats', rows: [
+    { name: 'Vanilla Cone (Small)', href: '/items/vanilla-soft-serve-cone', cal: '170', note: 'Lightest treat' },
+    { name: 'DQ Sandwich', href: '/items/dq-sandwich', cal: '190' },
+    { name: 'Dilly Bar', href: '/items/dilly-bar', cal: '210' },
+    { name: 'Non-Dairy Dilly Bar', href: '/items/non-dairy-dilly-bar', cal: '220', note: 'Dairy-free' },
+    { name: 'Hot Fudge Sundae (Small)', href: '/items/hot-fudge-sundae', cal: '~250' },
+    { name: 'Swicy Pineapple with Tajín Blizzard (Mini)', href: '/items/swicy-pineapple-tajin-blizzard', cal: '~270', note: 'Lightest Blizzard, seasonal' },
+    { name: 'Strawberry Sundae', href: '/items/strawberry-sundae', cal: '280' },
+    { name: 'Butterfinger Blizzard (Mini)', href: '/items/butterfinger-blizzard', cal: '~290', note: 'Lightest year-round Blizzard' },
+  ] },
+  { id: 'drinks', title: 'Lowest-calorie drinks', rows: [
+    { name: 'Diet soft drink', href: '/items/soft-drinks', cal: '0' },
+    { name: 'Misty Slush (Small)', href: '/items/misty-slush', cal: '~150' },
+    { name: 'Orange Julius (Small)', href: '/items/orange-julius', cal: '~210' },
+    { name: 'Fruit Smoothie (Small)', href: '/items/fruit-smoothies', cal: '~220' },
+  ] },
+];
+
+const swaps = [
+  { from: 'Large Oreo Blizzard', fromCal: 920, to: 'Mini Oreo Blizzard', toCal: 300, href: '/items/oreo-blizzard' },
+  { from: '4-Piece Chicken Strip Basket', fromCal: 1000, to: 'Grilled Chicken Sandwich', toCal: 390, href: '/items/grilled-chicken-sandwich' },
+  { from: 'Small Chocolate Shake', fromCal: 710, to: 'Small Vanilla Cone', toCal: 170, href: '/items/vanilla-soft-serve-cone' },
+  { from: 'FlameThrower Stackburger', fromCal: 780, to: 'Original Cheeseburger', toCal: 400, href: '/items/original-cheeseburger' },
+  { from: 'Regular Onion Rings', fromCal: 400, to: 'Side Salad (no dressing)', toCal: 90, href: '/items/side-salad' },
+  { from: 'Honey Mustard dip', fromCal: 240, to: 'Country Gravy dip', toCal: 70, href: '/dipping-sauces' },
+];
+
+const meals = [
+  { name: 'Grilled Chicken Sandwich + Side Salad + diet drink', cal: 480 },
+  { name: 'Hot Dog + Small Vanilla Cone', cal: 500 },
+  { name: 'Breakfast Burrito + Small Vanilla Cone', cal: 550 },
+  { name: 'Original Cheeseburger + Small Vanilla Cone', cal: 570 },
+  { name: '2-Piece Chicken Strips + Small Fries + Country Gravy', cal: 610 },
+];
+
+const picks = [
+  { href: '/items/grilled-chicken-sandwich', img: '/Images/grilled-chicken-sandwich.webp', name: 'Grilled Chicken Sandwich', note: '390 calories' },
+  { href: '/items/side-salad', img: '/Images/side-salad.webp', name: 'Side Salad', note: '90 calories' },
+  { href: '/items/vanilla-soft-serve-cone', img: '/Images/vanilla-soft-serve-cone.webp', name: 'Small Vanilla Cone', note: '170 calories' },
+  { href: '/items/dilly-bar', img: '/Images/dilly-bar.webp', name: 'Dilly Bar', note: '210 calories' },
+];
+
+const faqs = [
+  { q: 'What is the healthiest thing to eat at Dairy Queen?', a: 'For a meal, the Grilled Chicken Sandwich (about 390 calories) with a Side Salad (90 calories without dressing) is the lightest full option. For a treat, a small vanilla cone has about 170 calories.' },
+  { q: 'What is the lowest-calorie Blizzard?', a: 'A Mini Blizzard is the lightest size, at roughly 270 to 360 calories depending on the flavor. Among year-round flavors, the Mini Butterfinger and Mini Oreo are among the lowest, at about 290 to 300 calories.' },
+  { q: 'What is the lowest-calorie ice cream at Dairy Queen?', a: 'A small vanilla soft serve cone, at about 170 calories. The DQ Sandwich (190) and Dilly Bar (210) are close behind.' },
+  { q: 'Does Dairy Queen have salads?', a: 'Most locations sell a Side Salad, which is about 90 calories before dressing. Light Italian dressings add only about 15 to 25 calories, while creamy dressings add much more.' },
+  { q: 'Is the Grilled Chicken Sandwich at DQ healthy?', a: 'It is the lowest-calorie sandwich on the menu at about 390 calories, about half as many as a FlameThrower Stackburger. Skipping mayo or sauce makes it lighter still.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="Healthiest Dairy Queen Menu: Lowest-Calorie Picks"
+  description="The lowest-calorie food, treats and drinks at Dairy Queen, easy swaps that save hundreds of calories, and full DQ meals under about 600 calories."
+  ogImage="/Images/grilled-chicken-sandwich.webp"
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Healthiest Menu Picks"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">Lowest calories · Smart swaps · Meals under 600</span>
+<h1>Healthiest Dairy Queen Menu Picks</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>The healthiest meal at Dairy Queen is the Grilled Chicken Sandwich (about 390 calories) with a Side Salad (90 calories), and the lightest treat is a small vanilla cone at about 170 calories.</strong> Below are the lowest-calorie picks in every part of the menu, simple swaps and complete meals that come in around 500 to 600 calories.</p>
+    <p>This page ranks by calories, the number most people check first. For allergens see our <a href="/blog/dq-gluten-free-allergen-guide">gluten-free and allergen guide</a>, and for a deeper look at nutrition see the <a href="/blog/dairy-queen-calories-nutrition-guide">Dairy Queen calories guide</a>.</p>
+
+    <PickCards picks={picks} />
+
+    {groups.map((g) => (
+      <>
+        <h2 id={g.id}>{g.title}</h2>
+        <div class="table-wrap">
+          <table class="size-table">
+            <thead><tr><th>Item</th><th>Calories</th><th>Note</th></tr></thead>
+            <tbody>
+              {g.rows.map((r) => (
+                <tr><td><strong><a href={r.href}>{r.name}</a></strong></td><td>{r.cal}</td><td>{r.note ?? ''}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    ))}
+
+    <h2 id="swaps">Easy swaps that save the most calories</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Instead of</th><th>Order</th><th>You save</th></tr></thead>
+        <tbody>
+          {swaps.map((s) => (
+            <tr><td>{s.from} ({s.fromCal})</td><td><strong><a href={s.href}>{s.to}</a></strong> ({s.toCal})</td><td><strong>{(s.fromCal - s.toCal).toLocaleString('en-US')} cal</strong></td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>The biggest win is Blizzard size. A Large Blizzard has about three times the calories of a Mini, so sizing down saves more than any food swap. See every size on our <a href="/blizzard-sizes">Blizzard sizes page</a>.</p>
+
+    <h2 id="meals">Dairy Queen meals around 500 to 600 calories</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Meal</th><th>Total calories</th></tr></thead>
+        <tbody>
+          {meals.map((m) => <tr><td>{m.name}</td><td><strong>~{m.cal}</strong></td></tr>)}
+        </tbody>
+      </table>
+    </div>
+    <p>Each total adds up the item calories on our menu pages. Dressing, extra sauce and a regular soft drink are not included, and a regular soda can add up to 310 calories.</p>
+
+    <h2 id="tips">Tips for eating lighter at DQ</h2>
+    <ul>
+      <li><strong>Pick grilled over crispy.</strong> The <a href="/items/grilled-chicken-sandwich">Grilled Chicken Sandwich</a> has about 80 fewer calories than the <a href="/items/crispy-chicken-sandwich">Crispy Chicken Sandwich</a>.</li>
+      <li><strong>Choose the lightest dip.</strong> Country Gravy is the lowest-calorie sauce at about 70 calories; see all <a href="/dipping-sauces">DQ dipping sauces</a>.</li>
+      <li><strong>Order a kids-size treat.</strong> A small cone or a Mini Blizzard satisfies a sweet tooth for a fraction of the calories.</li>
+      <li><strong>Skip the shake.</strong> Even a small shake has about 710 calories, more than most burgers.</li>
+      <li><strong>Need dairy-free?</strong> The <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> is 220 calories.</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <p style="font-size:.88rem;color:var(--color-text-muted);margin-top:24px;">Calories are estimates from published nutrition information and can vary by location and preparation. Last checked {LAST_CHECKED}. This guide is not medical advice.</p>
+    <p style="margin-top:16px;">More from the menu: <a href="/cheapest-dairy-queen-menu">cheapest menu items</a> · <a href="/categories/burgers-sandwiches">burgers and sandwiches</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>

@@ -1805,6 +1805,10 @@
  ],
  "/blog/dairy-queen-calories-nutrition-guide": [
   {
+   "title": "Healthiest Dairy Queen picks",
+   "href": "/healthy-dairy-queen-menu"
+  },
+  {
    "title": "DQ gluten-free & allergen guide",
    "href": "/blog/dq-gluten-free-allergen-guide"
   },
@@ -1819,10 +1823,6 @@
   {
    "title": "Side Salad",
    "href": "/items/side-salad"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
   }
  ],
  "/blog/dairy-queen-ice-cream-vs-soft-serve": [
@@ -1833,6 +1833,10 @@
   {
    "title": "Vanilla Soft Serve Cone",
    "href": "/items/vanilla-soft-serve-cone"
+  },
+  {
+   "title": "Blizzard vs. McFlurry vs. Frosty",
+   "href": "/blog/blizzard-vs-mcflurry-vs-frosty"
   },
   {
    "title": "Best Blizzard flavors, ranked",
@@ -1869,6 +1873,10 @@
   {
    "title": "Best Blizzard flavors, ranked",
    "href": "/blog/best-blizzard-flavors-ranked"
+  },
+  {
+   "title": "Discontinued Dairy Queen items",
+   "href": "/blog/discontinued-dairy-queen-items"
   },
   {
    "title": "Blizzard Treats menu & prices",
@@ -1969,6 +1977,10 @@
    "href": "/combos"
   },
   {
+   "title": "Cheapest Dairy Queen menu items",
+   "href": "/cheapest-dairy-queen-menu"
+  },
+  {
    "title": "7 Meal Deal",
    "href": "/items/7-meal-deal"
   },
@@ -1979,10 +1991,50 @@
   {
    "title": "DQ app rewards guide",
    "href": "/blog/dairy-queen-app-rewards-hacks"
+  }
+ ],
+ "/blog/blizzard-vs-mcflurry-vs-frosty": [
+  {
+   "title": "Blizzard Treats menu & prices",
+   "href": "/categories/blizzard-treats"
   },
   {
-   "title": "Kids meals menu & prices",
-   "href": "/categories/kids-meals"
+   "title": "Blizzard sizes, ounces & prices",
+   "href": "/blizzard-sizes"
+  },
+  {
+   "title": "Oreo Blizzard",
+   "href": "/items/oreo-blizzard"
+  },
+  {
+   "title": "Best Blizzard flavors, ranked",
+   "href": "/blog/best-blizzard-flavors-ranked"
+  },
+  {
+   "title": "Is DQ soft serve ice cream?",
+   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
+  }
+ ],
+ "/blog/discontinued-dairy-queen-items": [
+  {
+   "title": "Blizzard of the Month & fall menu",
+   "href": "/blizzard-of-the-month"
+  },
+  {
+   "title": "Dairy Queen secret menu",
+   "href": "/blog/dairy-queen-secret-menu"
+  },
+  {
+   "title": "Cones, sundaes & classic treats",
+   "href": "/categories/classic-treats"
+  },
+  {
+   "title": "Dilly Bar",
+   "href": "/items/dilly-bar"
+  },
+  {
+   "title": "Misty Slush",
+   "href": "/items/misty-slush"
   }
  ],
  "/blog/dq-shake-moolatte-guide": [

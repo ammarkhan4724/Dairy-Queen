@@ -7,7 +7,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/categories/royal-blizzards</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/categories/snacks-sides</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
@@ -71,6 +76,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/blizzard-sizes</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/blog/best-blizzard-flavors-ranked</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.7</priority>
@@ -78,6 +88,11 @@
   <url>
     <loc>https://www.thequeendairymenu.us/blog/best-dairy-queen-burgers-ranked</loc>
     <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/blizzard-vs-mcflurry-vs-frosty</loc>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -103,6 +118,11 @@
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-secret-menu</loc>
     <lastmod>2026-10-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/discontinued-dairy-queen-items</loc>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -136,12 +156,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.thequeendairymenu.us/cheapest-dairy-queen-menu</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.thequeendairymenu.us/combos</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/dipping-sauces</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/healthy-dairy-queen-menu</loc>
     <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
   </url>

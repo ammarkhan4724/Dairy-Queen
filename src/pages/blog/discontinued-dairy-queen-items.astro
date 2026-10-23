@@ -1,0 +1,96 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// Dates and details from The Daily Meal (2023) and Tasting Table (2025); see Sources.
+const gone = [
+  { name: 'DQ Jet', what: 'Rocket-shaped push-pop frozen treat', years: '1959 to the late 1970s' },
+  { name: 'Mr. Maltie', what: 'Pail-shaped chocolate malt ice cream pop', years: '1963 to at least 1976' },
+  { name: 'Monkey Tail', what: 'Frozen chocolate-dipped banana on a stick', years: 'Late 1960s into the 1980s' },
+  { name: 'Mr. Misty Kiss', what: 'Mr. Misty slush frozen in a tube', years: 'About 1968 to 1988' },
+  { name: 'Old-fashioned sodas', what: 'Soft serve, milk, flavoring and soda water with whipped cream', years: '1950s to the end of the 1990s' },
+  { name: 'DQ Chipper Sandwich', what: 'Soft serve between two cookies, edges rolled in chocolate chips', years: '1984 to about 2016' },
+  { name: 'DQ Breeze', what: 'A frozen yogurt version of the Blizzard', years: 'Early 1990s to the early 2000s' },
+  { name: 'Fudge Bar', what: 'Nonfat, sugar-free 50-calorie fudge bar', years: '1993 to 2022' },
+  { name: 'Mint Dilly Bar', what: 'Mint soft serve in dark chocolate', years: 'Dropped in 2022, back at some stores for a limited time' },
+  { name: 'DQ Bakes! line', what: 'Hot apple tart, funnel cake à la mode, snack melts and more', years: 'About 2015 to 2019' },
+  { name: 'Wet walnuts', what: 'Roasted walnuts in syrup, a sundae topping', years: 'Date unclear' },
+];
+
+const blizzards = [
+  'Girl Scouts Tagalongs (2009)',
+  'Lemon Meringue Pie',
+  'Sour Patch Kids',
+  'M&M’s Peanut Butter Monster Cookie',
+  'Oreo Brownie Earthquake (also a sundae)',
+];
+
+const faqs = [
+  { q: 'Why did Dairy Queen stop selling the Breeze?', a: 'The DQ Breeze was a frozen yogurt Blizzard. Reports say sales were so low that stores’ frozen yogurt spoiled before it could be used, so it was dropped by the early 2000s.' },
+  { q: 'Is the DQ Chipper Sandwich discontinued?', a: 'Yes. The Chipper, soft serve between two cookies, was sold from 1984 and pulled around 2016, when its trademark was also canceled. A few individual stores still make their own version.' },
+  { q: 'Can you still get a Monkey Tail at Dairy Queen?', a: 'It is no longer on the official menu, but some local Dairy Queens still make the chocolate-dipped frozen banana if you ask.' },
+  { q: 'What happened to the cherry dipped cone?', a: 'Dairy Queen replaced cherry dip with butterscotch at many stores and said cherry may return in the future. Earlier dip flavors like orange, lime, peanut butter, banana and root beer are also gone.' },
+  { q: 'Do discontinued Blizzard flavors ever come back?', a: 'Often. Dairy Queen regularly brings old flavors back as a Blizzard of the Month. Mint Oreo, Red Velvet Cake and Pumpkin Pie have all returned in recent years.' },
+];
+---
+<BlogPost
+  title="Discontinued Dairy Queen Items We Still Miss"
+  description="The Dairy Queen treats you can't buy anymore: Monkey Tails, the DQ Chipper, the Breeze, Mr. Misty Kiss and more, with when each was sold and why it left."
+  h1="Discontinued Dairy Queen Menu Items: What Happened to Them"
+  crumb="Discontinued DQ Items"
+  eyebrow="DQ history"
+  image="/Images/dilly-bar.webp"
+  imageAlt="Dairy Queen Dilly Bar, one of the classic DQ novelties"
+  datePublished="2026-10-23"
+  dateModified="2026-10-23"
+  faqs={faqs}
+>
+  <p class="lead"><strong>Dairy Queen has retired dozens of items over its history, from the 1950s Old-Fashioned Soda to the DQ Chipper Sandwich, which left around 2016.</strong> Some vanished because they didn’t sell, others because DQ simplified the menu. A few, like the Monkey Tail, live on at individual stores if you know to ask.</p>
+
+  <h2 id="list">Discontinued Dairy Queen items and when they were sold</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Item</th><th>What it was</th><th>Sold</th></tr></thead>
+      <tbody>
+        {gone.map((g) => <tr><td><strong>{g.name}</strong></td><td>{g.what}</td><td>{g.years}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="novelties">The novelties: DQ Jet, Mr. Maltie and Mr. Misty Kiss</h2>
+  <p>Before the Blizzard, Dairy Queen sold a run of playful frozen novelties. The DQ Jet was a rocket-shaped push-pop sold from 1959. Mr. Maltie was a chocolate malt pop shaped like a pail, introduced in 1963. The Mr. Misty Kiss was Mr. Misty slush frozen in a tube, sold from about 1968 to 1988. If you miss the Mr. Misty, today’s <a href="/items/misty-slush">Misty Slush</a> is the closest thing on the menu.</p>
+
+  <h2 id="chipper">The DQ Chipper Sandwich</h2>
+  <p>For more than 30 years, the Chipper was soft serve pressed between two cookies with the edges rolled in chocolate chips. It debuted in 1984 and was gone by about 2016, when its trademark was canceled. Today’s closest swap is the <a href="/items/dq-sandwich">DQ Sandwich</a>, which uses chocolate wafers instead of cookies.</p>
+
+  <h2 id="breeze">The DQ Breeze</h2>
+  <p>The Breeze was a frozen yogurt Blizzard, advertised from the early 1990s as a lighter option. It reportedly sold so poorly that stores’ yogurt spoiled before it could be used, and it was gone by the early 2000s. If you want a lighter treat now, see our <a href="/healthy-dairy-queen-menu">healthiest DQ picks</a>.</p>
+
+  <h2 id="dilly">Fudge Bars and Mint Dilly Bars</h2>
+  <p>The 50-calorie, sugar-free Fudge Bar ran from 1993 until 2022, when it was dropped along with the Mint Dilly Bar. The mint version has come back at some stores as a limited-time item, and the classic <a href="/items/dilly-bar">Dilly Bar</a> and <a href="/items/non-dairy-dilly-bar">Non-Dairy Dilly Bar</a> are still on the menu.</p>
+
+  <h2 id="bakes">DQ Bakes!</h2>
+  <p>Around 2015, Dairy Queen launched a bakery line called DQ Bakes!, with hot desserts like an apple tart and funnel cake à la mode, plus savory snack melts such as a buffalo chicken wrap. A Kansas City BBQ pulled pork sandwich joined in 2017. By about 2019 the line was gone.</p>
+
+  <h2 id="blizzards">Retired Blizzard flavors</h2>
+  <p>The Blizzard lineup changes every month, so many flavors have come and gone, including:</p>
+  <ul>
+    {blizzards.map((b) => <li>{b}</li>)}
+  </ul>
+  <p>Retired doesn’t always mean gone for good. Dairy Queen often brings favorites back as a <a href="/blizzard-of-the-month">Blizzard of the Month</a>. Mint Oreo returned in March 2025 and 2026, and <a href="/items/pumpkin-pie-blizzard">Pumpkin Pie</a> returned in both fall 2025 and fall 2026. You can also rebuild many old flavors with year-round mix-ins; our <a href="/blog/dairy-queen-secret-menu">DQ secret menu guide</a> shows how.</p>
+
+  <h2 id="dips-sundaes">Lost dipped cone and sundae flavors</h2>
+  <p>Dipped cones once came in orange, lime, lemon-lime, peanut butter, banana and root beer. Cherry was replaced by butterscotch at many stores, though Dairy Queen said it may return. Sundaes have lost toppings like hot peach, butter pecan and coconut, and the wet walnuts topping is also gone. Many of those flavors now show up as Blizzard mix-ins instead. Today’s options are on our <a href="/categories/classic-treats">cones and sundaes</a> page.</p>
+
+  <h2 id="still-available">Old favorites you can still order</h2>
+  <ul>
+    <li><strong>Monkey Tails:</strong> off the official menu, but some local stores still make them.</li>
+    <li><strong>DQ Chipper:</strong> a few individual stores still make their own.</li>
+    <li><strong>Old-style sundaes:</strong> some stores will make retro sundaes on request.</li>
+    <li><strong>Classic novelties:</strong> the <a href="/items/buster-bar">Buster Bar</a>, <a href="/items/dilly-bar">Dilly Bar</a> and <a href="/items/dq-sandwich">DQ Sandwich</a> are still on the menu nationwide.</li>
+  </ul>
+
+  <Fragment slot="after">
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;"><a href="https://www.thedailymeal.com/1317945/discontinued-dairy-queen-menu-items" rel="nofollow noopener" target="_blank">The Daily Meal: 14 Discontinued Dairy Queen Items</a> (June 2023) and <a href="https://www.tastingtable.com/1899304/discontinued-dairy-queen/" rel="nofollow noopener" target="_blank">Tasting Table: 13 Discontinued Dairy Queen Menu Items</a> (July 2025). Dates are approximate where sources differ.</p>
+  </Fragment>
+</BlogPost>

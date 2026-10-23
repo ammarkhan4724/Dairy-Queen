@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PickCards from '../../components/PickCards.astro';
+import { LAST_CHECKED } from '../../data/site';
+
+// Prices and calories match each item page and /categories/blizzard-treats.
+const royals = [
+  { name: 'Royal Oreo Blizzard', href: '/items/royal-oreo-blizzard', img: '/Images/royal-oreo-blizzard.webp', center: 'Fudge', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: ['~300', '490', '~680', '~1,050'], base: { name: 'Oreo', href: '/items/oreo-blizzard', small: '$4.49', cal: '420' } },
+  { name: 'Royal Reese’s Blizzard', href: '/items/royal-reeses-blizzard', img: '/Images/royal-reeses-blizzard.webp', center: 'Peanut butter', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: ['~400', '620', '~860', '~1,280'], base: { name: 'Reese’s', href: '/items/reeses-blizzard', small: '$4.49', cal: '600' } },
+  { name: 'Royal New York Cheesecake Blizzard', href: '/items/royal-new-york-cheesecake-blizzard', img: '/Images/royal-new-york-cheesecake-blizzard.webp', center: 'Strawberry', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: ['~320', '460', '~640', '~970'], base: { name: 'Strawberry Cheesequake', href: '/items/strawberry-cheesequake-blizzard', small: '$4.79', cal: '~520' } },
+  { name: 'Royal Rocky Road Trip Blizzard', href: '/items/royal-rocky-road-trip-blizzard', img: '/Images/royal-rocky-road-trip-blizzard.webp', center: 'Fudge', p: ['$3.99', '$4.99', '$5.99', '$6.49'], cal: ['~340', '530', '~740', '~1,010'], base: { name: 'Choco Brownie Extreme', href: '/items/choco-brownie-blizzard', small: '$4.79', cal: '510' } },
+];
+const picks = royals.map((r) => ({ href: r.href, img: r.img, name: r.name.replace(' Blizzard', ''), price: `Small ${r.p[1]}`, note: `${r.center} center` }));
+
+const faqs = [
+  { q: 'What is a Royal Blizzard?', a: 'A Royal Blizzard is a regular Blizzard, soft serve blended with mix-ins, plus a filled center of hot fudge, peanut butter or strawberry. It comes in the same four sizes as any Blizzard.' },
+  { q: 'How much more is a Royal Blizzard?', a: 'A Royal Blizzard typically costs about 50 cents more than the same size in a standard flavor: about $3.99 for a Mini, $4.99 for a Small, $5.99 for a Medium and $6.49 for a Large.' },
+  { q: 'What Royal Blizzard flavors are there?', a: 'The flavors we track are Royal Oreo (fudge center), Royal Reese’s (peanut butter center), Royal New York Cheesecake (strawberry center) and Royal Rocky Road Trip (fudge center). Not every store carries all four.' },
+  { q: 'When did Dairy Queen start making Royal Blizzards?', a: 'Dairy Queen introduced Royal Blizzard Treats in April 2016, around Queen Elizabeth II’s 90th birthday. The first lineup was a Royal Oreo with a fudge center, Royal New York Cheesecake with a strawberry center and Royal Rocky Road Brownie with a marshmallow center.' },
+  { q: 'Is a Royal Blizzard worth it?', a: 'If you like the gooey part of a sundae, yes. You pay about 50 cents extra for a center that keeps every bite from tasting the same. If you mainly want more mix-ins, ask for extra mix-ins on a regular Blizzard instead.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Layout
+  title="Royal Blizzard Flavors, Prices & Calories (2026)"
+  description="Every Dairy Queen Royal Blizzard with its filled center, typical 2026 prices by size and calories, plus how a Royal compares to a regular Blizzard."
+  ogImage="/Images/royal-oreo-blizzard.webp"
+>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<Breadcrumbs items={[{"name": "Home", "href": "/"}, {"name": "Menu", "href": "/categories"}, {"name": "Blizzard Menu", "href": "/categories/blizzard-treats"}, {"name": "Royal Blizzards"}]} />
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<span class="hero-eyebrow">Filled centers · 4 flavors · Prices checked {LAST_CHECKED}</span>
+<h1>Dairy Queen Royal Blizzard Menu</h1>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container article-body" style="max-width:960px;">
+    <p class="lead"><strong>A Royal Blizzard is a Dairy Queen Blizzard with a filled center, such as hot fudge or peanut butter, and it costs about 50 cents more than a regular Blizzard.</strong> A Small Royal is about $4.99. There are four Royal flavors on our menu: Royal Oreo, Royal Reese’s, Royal New York Cheesecake and Royal Rocky Road Trip.</p>
+
+    <PickCards picks={picks} />
+
+    <h2 id="prices">Royal Blizzard prices by size</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Flavor</th><th>Center</th><th>Mini</th><th>Small</th><th>Medium</th><th>Large</th></tr></thead>
+        <tbody>
+          {royals.map((r) => (
+            <tr><td><strong><a href={r.href}>{r.name}</a></strong></td><td>{r.center}</td>{r.p.map((x) => <td class="price-cell">{x}</td>)}</tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="calories">Royal Blizzard calories by size</h2>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Flavor</th><th>Mini</th><th>Small</th><th>Medium</th><th>Large</th></tr></thead>
+        <tbody>
+          {royals.map((r) => (
+            <tr><td><strong><a href={r.href}>{r.name}</a></strong></td>{r.cal.map((x) => <td>{x}</td>)}</tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Typical U.S. prices; each store sets its own. Calories marked ~ are estimates. Last checked {LAST_CHECKED}.</p>
+
+    <h2 id="vs-regular">Royal vs. regular Blizzard: what the extra 50 cents gets you</h2>
+    <p>Each Royal is built on a regular flavor. Here is the Small size of each Royal next to its closest standard Blizzard.</p>
+    <div class="table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Royal (Small)</th><th>Price</th><th>Calories</th><th>Closest regular (Small)</th><th>Price</th><th>Calories</th></tr></thead>
+        <tbody>
+          {royals.map((r) => (
+            <tr><td><strong><a href={r.href}>{r.name.replace(' Blizzard', '')}</a></strong></td><td class="price-cell">{r.p[1]}</td><td>{r.cal[1]}</td><td><a href={r.base.href}>{r.base.name}</a></td><td class="price-cell">{r.base.small}</td><td>{r.base.cal}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p>The center adds about 20 to 70 calories to a Small Oreo or Reese’s Blizzard. The Royal Oreo is the clearest upgrade: the same Oreo pieces, plus a ribbon of hot fudge in the middle, for 50 cents more than the <a href="/items/oreo-blizzard">Oreo Blizzard</a>.</p>
+
+    <h2 id="how-to-eat">Getting the most from the filled center</h2>
+    <p>The filling sits in the middle of the cup rather than being blended through, so the first bites can taste like a regular Blizzard. Dig down with your spoon, or stir a little, if you want the fudge, peanut butter or strawberry in every bite.</p>
+
+    <h2 id="history">Royal Blizzard history</h2>
+    <p>Dairy Queen launched Royal Blizzard Treats in April 2016, timed to Queen Elizabeth II’s 90th birthday. The first three were a Royal Oreo with a fudge center, Royal New York Cheesecake with a strawberry center and Royal Rocky Road Brownie with a marshmallow center. Dairy Queen’s marketing chief called it “innovation 30 years in the making,” a nod to the Blizzard’s 1985 debut.</p>
+
+    <h2 id="which">Which Royal Blizzard should you get?</h2>
+    <ul>
+      <li><strong>Chocolate fan:</strong> <a href="/items/royal-oreo-blizzard">Royal Oreo</a>, built on DQ’s best-known Blizzard flavor and the safest first try.</li>
+      <li><strong>Peanut butter fan:</strong> <a href="/items/royal-reeses-blizzard">Royal Reese’s</a>, the richest Royal at about 620 calories for a Small.</li>
+      <li><strong>Want something lighter:</strong> <a href="/items/royal-new-york-cheesecake-blizzard">Royal New York Cheesecake</a>, the lowest-calorie Royal at about 460 for a Small.</li>
+      <li><strong>Want everything:</strong> <a href="/items/royal-rocky-road-trip-blizzard">Royal Rocky Road Trip</a>, with brownie pieces, almonds, marshmallow and a fudge center.</li>
+    </ul>
+    <p>Not sure about a Royal at all? Compare every flavor in our <a href="/blog/best-blizzard-flavors-ranked">Blizzard ranking</a> or check this month’s <a href="/blizzard-of-the-month">Blizzard of the Month</a>.</p>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq-list">
+      {faqs.map((f) => (
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">{f.q}<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+        </div>
+      ))}
+    </div>
+
+    <h2 id="sources">Sources</h2>
+    <p style="font-size:.9rem;">Launch details: <a href="https://www.qsrweb.com/news/dq-celebrating-queen-elizabeths-birthday-with-a-treat-fit-for-royalty/" rel="nofollow noopener" target="_blank">QSR Web, April 21, 2016</a>. Prices and calories are our typical U.S. estimates and vary by location.</p>
+
+    <p style="margin-top:32px;">More from the menu: <a href="/categories/blizzard-treats">every Blizzard flavor</a> · <a href="/blizzard-sizes">Blizzard sizes</a> · <a href="/">full Dairy Queen menu with prices</a>.</p>
+  </div>
+</section>
+
+</Layout>
