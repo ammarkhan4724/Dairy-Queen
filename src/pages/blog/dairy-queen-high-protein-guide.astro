@@ -1,0 +1,99 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+import { NUTRITION, NUTRITION_AS_OF, NUTRITION_SOURCE } from '../../data/nutrition';
+
+// Protein and calories come from DQ's official nutrition rows; prices are the typical prices on each item page.
+const g = (slug: string, label: string) => NUTRITION[slug].find((r) => r.label === label)!;
+const items = [
+  { name: 'Cheese curds (regular)', href: '/items/cheese-curds', price: 3.99, row: g('cheese-curds', 'Regular') },
+  { name: 'Backyard Bacon Ranch Stackburger (double)', href: '/items/backyard-bacon-ranch-stackburger', price: 9.99, row: g('backyard-bacon-ranch-stackburger', 'Double') },
+  { name: '2-piece chicken strips', href: '/items/2pc-chicken-strips', price: 3.49, row: g('2pc-chicken-strips', '2-piece strips') },
+  { name: 'Double Cheeseburger', href: '/items/double-cheeseburger', price: 7.99, row: g('double-cheeseburger', 'Double') },
+  { name: 'Chili Cheese Dog', href: '/items/chili-cheese-dog', price: 4.99, row: g('chili-cheese-dog', 'Chili Cheese Dog') },
+  { name: '6-piece Chicken Strip Basket', href: '/items/chicken-strip-basket-6pc', price: 13.49, row: g('chicken-strip-basket-6pc', '6-piece basket') },
+  { name: '4-piece Chicken Strip Basket', href: '/items/chicken-strip-basket-4pc', price: 9.99, row: g('chicken-strip-basket-4pc', '4-piece basket') },
+  { name: 'Two Cheese Deluxe Stackburger (double)', href: '/items/two-cheese-deluxe-stackburger', price: 8.29, row: g('two-cheese-deluxe-stackburger', 'Double') },
+  { name: 'FlameThrower Stackburger (triple)', href: '/items/flamethrower-stackburger', price: 13.49, row: g('flamethrower-stackburger', 'Triple') },
+  { name: 'FlameThrower Stackburger (double)', href: '/items/flamethrower-stackburger', price: 10.87, row: g('flamethrower-stackburger', 'Double') },
+  { name: 'Hot dog', href: '/items/hot-dog', price: 3.99, row: g('hot-dog', 'Hot Dog') },
+  { name: 'Original Cheeseburger (single)', href: '/items/original-cheeseburger', price: 6.39, row: g('original-cheeseburger', 'Single') },
+].map((i) => ({ ...i, perDollar: i.row.protein / i.price, per100: (i.row.protein / i.row.cal) * 100 }));
+
+const byDollar = [...items].sort((a, b) => b.perDollar - a.perDollar);
+const byCalorie = [...items].sort((a, b) => b.per100 - a.per100).slice(0, 6);
+const most = [
+  { name: 'Backyard Bacon Ranch Stackburger (triple)', href: '/items/backyard-bacon-ranch-stackburger', row: g('backyard-bacon-ranch-stackburger', 'Triple') },
+  { name: 'Large cheese curds', href: '/items/cheese-curds', row: g('cheese-curds', 'Large') },
+  { name: '6-piece Honey BBQ Chicken Strip Basket', href: '/items/honey-bbq-chicken-strip-basket', row: g('honey-bbq-chicken-strip-basket', '6-piece basket') },
+  { name: '6-piece Chicken Strip Basket', href: '/items/chicken-strip-basket-6pc', row: g('chicken-strip-basket-6pc', '6-piece basket') },
+  { name: 'FlameThrower Stackburger (triple)', href: '/items/flamethrower-stackburger', row: g('flamethrower-stackburger', 'Triple') },
+  { name: 'Two Cheese Deluxe Stackburger (triple)', href: '/items/two-cheese-deluxe-stackburger', row: g('two-cheese-deluxe-stackburger', 'Triple') },
+  { name: 'Original Cheeseburger (triple)', href: '/items/original-cheeseburger', row: g('original-cheeseburger', 'Triple') },
+];
+
+const curds = g('cheese-curds', 'Regular');
+const strips = g('2pc-chicken-strips', '2-piece strips');
+
+const faqs = [
+  { q: 'What has the most protein at Dairy Queen?', a: 'The triple Backyard Bacon Ranch Stackburger, at 50 grams, followed by large cheese curds (49 grams) and the 6-piece Honey BBQ Chicken Strip Basket (49 grams), per Dairy Queen’s nutrition data.' },
+  { q: 'What is the cheapest way to get protein at DQ?', a: 'Regular cheese curds. At about $3.99 for 24 grams of protein, they give about 6 grams per dollar, far more than any burger or basket we track.' },
+  { q: 'What is the best high-protein, lower-calorie order at Dairy Queen?', a: 'A double Original Cheeseburger has 29 grams of protein for 570 calories, about 5.1 grams per 100 calories. Two-piece chicken strips (13 grams, 280 calories) are a smaller option.' },
+  { q: 'How much protein is in a Blizzard?', a: 'A small Blizzard has about 11 to 16 grams of protein, but 560 to 750 calories, so it is not an efficient protein source. A small Reese’s Blizzard has the most at 16 grams.' },
+];
+---
+<BlogPost
+  title="High-Protein Dairy Queen Orders: Most Protein Per Dollar"
+  description="The highest-protein things to order at Dairy Queen, ranked by protein per dollar and per calorie, using DQ’s official nutrition data and typical 2026 prices."
+  h1="High-Protein Dairy Queen: What to Order for the Most Protein"
+  crumb="High-Protein DQ"
+  eyebrow="Nutrition at DQ"
+  image="/Images/cheese-curds.webp"
+  imageAlt="Dairy Queen cheese curds in a basket"
+  datePublished="2026-10-24"
+  dateModified="2026-10-24"
+  faqs={faqs}
+>
+  <p class="lead"><strong>The best protein deal at Dairy Queen is a regular order of cheese curds: 24 grams for about $3.99.</strong> For the most protein in one item, the triple Backyard Bacon Ranch Stackburger has 50 grams. For the most protein per calorie, a double Original Cheeseburger wins.</p>
+
+  <p>Protein and calories come from <a href={NUTRITION_SOURCE} rel="nofollow noopener" target="_blank">Dairy Queen’s U.S. nutrition information</a> (current as of {NUTRITION_AS_OF}, per DQ). Prices are the typical U.S. prices on our item pages and vary by store, so your protein per dollar will too.</p>
+
+  <h2 id="per-dollar">Most protein per dollar</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Item</th><th>Typical price</th><th>Protein</th><th>Calories</th><th>Protein per $1</th></tr></thead>
+      <tbody>{byDollar.map((i) => <tr><td><strong><a href={i.href}>{i.name}</a></strong></td><td class="price-cell">${i.price.toFixed(2)}</td><td>{i.row.protein} g</td><td>{i.row.cal.toLocaleString('en-US')}</td><td>{i.perDollar.toFixed(1)} g</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>Cheese curds are in a league of their own at about 6 grams per dollar. After that, burgers, baskets and hot dogs land between about 2.7 and 3.8 grams per dollar. Chicken strip baskets look expensive, but the price includes fries and Texas toast.</p>
+
+  <h2 id="per-calorie">Most protein per calorie</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Item</th><th>Protein</th><th>Calories</th><th>Protein per 100 cal</th></tr></thead>
+      <tbody>{byCalorie.map((i) => <tr><td><strong><a href={i.href}>{i.name}</a></strong></td><td>{i.row.protein} g</td><td>{i.row.cal.toLocaleString('en-US')}</td><td>{i.per100.toFixed(1)} g</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>Doubles and triples do best here, because each extra patty adds more protein than calories. Fried sides and treats rank lowest.</p>
+
+  <h2 id="most">Most protein in one item</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Item</th><th>Protein</th><th>Calories</th></tr></thead>
+      <tbody>{most.map((i) => <tr><td><strong><a href={i.href}>{i.name}</a></strong></td><td>{i.row.protein} g</td><td>{i.row.cal.toLocaleString('en-US')}</td></tr>)}</tbody>
+    </table>
+  </div>
+
+  <h2 id="combos">Easy 30-gram-plus orders</h2>
+  <ul>
+    <li><strong>Cheese curds + 2-piece chicken strips:</strong> {curds.protein + strips.protein} grams of protein and {curds.cal + strips.cal} calories for about $7.48.</li>
+    <li><strong>Backyard Bacon Ranch Stackburger (double):</strong> 38 grams for about $9.99.</li>
+    <li><strong>6-piece Chicken Strip Basket:</strong> 48 grams, with fries and toast, for about $13.49.</li>
+    <li><strong>Two Chili Cheese Dogs:</strong> 36 grams and 850 calories for about $9.98.</li>
+  </ul>
+  <p>At stores that put 2-piece chicken strips on the <a href="/items/2-for-5-mix-match">2 for $5 menu</a>, two orders give you 26 grams of protein for $5, about 5.2 grams per dollar.</p>
+
+  <h2 id="treats">What about Blizzards and shakes?</h2>
+  <p>A small Blizzard has 11 to 16 grams of protein, and a small chocolate shake has 13 grams. That sounds like a lot, but each comes with 530 to 750 calories and 67 to 89 grams of sugar. Treat them as dessert, not a protein source. Our <a href="/blog/dairy-queen-sugar-guide">DQ sugar guide</a> ranks every Blizzard by sugar.</p>
+
+  <p>For the lowest-calorie meals, see our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a>. For the cheapest orders overall, see <a href="/blog/cheapest-dairy-queen-menu">the cheapest things to order at DQ</a>.</p>
+</BlogPost>

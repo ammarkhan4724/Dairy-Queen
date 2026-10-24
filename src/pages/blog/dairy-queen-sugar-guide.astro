@@ -1,0 +1,108 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+import { NUTRITION, NUTRITION_AS_OF, NUTRITION_SOURCE } from '../../data/nutrition';
+
+// Every sugar figure is read from DQ's official nutrition rows in src/data/nutrition.ts.
+const g = (slug: string, label: string) => NUTRITION[slug].find((r) => r.label === label)!;
+const tsp = (grams: number) => Math.round(grams / 4);
+
+const blizzards: [string, string][] = [
+  ['butterfinger-blizzard', 'Butterfinger'], ['turtle-pecan-blizzard', 'Turtle Pecan Cluster'], ['pumpkin-pie-blizzard', 'Pumpkin Pie'],
+  ['oreo-blizzard', 'Oreo'], ['reeses-blizzard', 'Reese’s'], ['cookie-dough-blizzard', 'Cookie Dough'], ['snickers-blizzard', 'Snickers'],
+  ['heath-blizzard', 'Heath'], ['mint-oreo-blizzard', 'Mint Oreo'], ['choco-brownie-blizzard', 'Choco Brownie Extreme'],
+  ['royal-new-york-cheesecake-blizzard', 'Royal New York Cheesecake'], ['mm-blizzard', 'M&M’s'],
+];
+const blizzardRows = blizzards
+  .map(([slug, name]) => ({ slug, name, mini: g(slug, 'Mini').sugars, small: g(slug, 'Small').sugars, large: g(slug, 'Large').sugars }))
+  .sort((a, b) => a.small - b.small || a.name.localeCompare(b.name));
+
+const lowSugar = [
+  { name: 'DQ Sandwich (per sandwich)', href: '/items/dq-sandwich', row: g('dq-sandwich', 'Per sandwich (6-pack ÷ 6)') },
+  { name: 'Kids’ vanilla cone', href: '/items/vanilla-soft-serve-cone', row: g('vanilla-soft-serve-cone', "Kids'") },
+  { name: 'Kids’ chocolate dipped cone', href: '/items/chocolate-dipped-cone', row: g('chocolate-dipped-cone', "Kids'") },
+  { name: 'Dilly Bar (per bar)', href: '/items/dilly-bar', row: g('dilly-bar', 'Per bar (6-pack ÷ 6)') },
+  { name: 'Small vanilla cone', href: '/items/vanilla-soft-serve-cone', row: g('vanilla-soft-serve-cone', 'Small') },
+  { name: 'Small strawberry sundae', href: '/items/strawberry-sundae', row: g('strawberry-sundae', 'Small') },
+  { name: 'Small hot fudge sundae', href: '/items/hot-fudge-sundae', row: g('hot-fudge-sundae', 'Small') },
+  { name: 'Buster Bar (per bar)', href: '/items/buster-bar', row: g('buster-bar', 'Per bar (6-pack ÷ 6)') },
+].sort((a, b) => a.row.sugars - b.row.sugars);
+
+const drinks = [
+  { name: 'Chocolate shake', href: '/items/chocolate-shake', s: g('chocolate-shake', 'Small').sugars, l: g('chocolate-shake', 'Large').sugars },
+  { name: 'MooLatté (caramel)', href: '/items/moolatte', s: g('moolatte', 'Caramel Small').sugars, l: g('moolatte', 'Caramel Large').sugars },
+  { name: 'Tripleberry smoothie', href: '/items/fruit-smoothies', s: g('fruit-smoothies', 'Tripleberry Small').sugars, l: g('fruit-smoothies', 'Tripleberry Large').sugars },
+  { name: 'Orange Julius', href: '/items/orange-julius', s: g('orange-julius', 'Small').sugars, l: g('orange-julius', 'Large').sugars },
+  { name: 'Misty Slush', href: '/items/misty-slush', s: g('misty-slush', 'Small').sugars, l: g('misty-slush', 'Large').sugars },
+];
+
+const faqs = [
+  { q: 'Which Blizzard has the least sugar?', a: 'Among the flavors Dairy Queen publishes data for, the Butterfinger, Turtle Pecan Cluster and Pumpkin Pie Blizzards tie for the least, at 68 grams in a Small. Any Mini has 39 to 53 grams.' },
+  { q: 'Which Blizzard has the most sugar?', a: 'The M&M’s Blizzard: 89 grams in a Small and 159 grams in a Large, the most of any item we track.' },
+  { q: 'How much sugar is in a small Oreo Blizzard?', a: 'About 70 grams, or roughly 18 teaspoons, according to Dairy Queen’s nutrition data. A Mini Oreo Blizzard has 39 grams.' },
+  { q: 'What is the lowest-sugar treat at Dairy Queen?', a: 'The DQ Sandwich, at about 17 grams per sandwich, followed by a Kids’ vanilla cone (18 grams) and a Kids’ chocolate dipped cone (20 grams).' },
+  { q: 'Does Dairy Queen have sugar-free options?', a: 'Dairy Queen’s U.S. nutrition list does not include a sugar-free soft serve or Blizzard. The lowest-sugar choices are kids’ cones, a DQ Sandwich, a Dilly Bar or a small sundae.' },
+];
+---
+<BlogPost
+  title="Dairy Queen Sugar Guide: Every Blizzard & Treat Ranked"
+  description="How much sugar is in a DQ Blizzard, shake or cone? Every Blizzard ranked by sugar, the lowest-sugar treats and drinks, from Dairy Queen’s own nutrition data."
+  h1="How Much Sugar Is in Dairy Queen Treats? Every Blizzard Ranked"
+  crumb="DQ Sugar Guide"
+  eyebrow="Nutrition at DQ"
+  image="/Images/mm-blizzard.webp"
+  imageAlt="Dairy Queen M&M’s Blizzard in a cup"
+  datePublished="2026-10-24"
+  dateModified="2026-10-24"
+  faqs={faqs}
+>
+  <p class="lead"><strong>A small Dairy Queen Blizzard has 68 to 89 grams of sugar, about 17 to 22 teaspoons.</strong> The M&M’s Blizzard has the most and the Butterfinger, Turtle Pecan and Pumpkin Pie have the least. If you want a treat with less sugar, a kids’ cone, Dilly Bar or small sundae has a quarter to half as much.</p>
+
+  <p>Every number here comes from <a href={NUTRITION_SOURCE} rel="nofollow noopener" target="_blank">Dairy Queen’s U.S. nutrition information</a> (current as of {NUTRITION_AS_OF}, per DQ). DQ lists total sugars, which includes the natural sugar in milk, so it is not the same as “added sugar” on a grocery label. Teaspoons are grams divided by 4, rounded.</p>
+
+  <h2 id="blizzards">Sugar in every Blizzard, lowest to highest</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Blizzard</th><th>Mini</th><th>Small</th><th>Large</th><th>Small in teaspoons</th></tr></thead>
+      <tbody>{blizzardRows.map((r) => <tr><td><strong><a href={`/items/${r.slug}`}>{r.name}</a></strong></td><td>{r.mini} g</td><td>{r.small} g</td><td>{r.large} g</td><td>~{tsp(r.small)} tsp</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>The spread between flavors is smaller than most people expect. Most of the sugar comes from the soft serve itself, so the size you pick matters far more than the flavor. Going from a Small to a Mini cuts sugar by about 40%, while switching from the M&M’s to the Oreo flavor saves 19 grams.</p>
+
+  <h2 id="size">Size matters more than flavor</h2>
+  <ul>
+    <li>A <strong>Mini</strong> Blizzard has 39 to 53 grams of sugar.</li>
+    <li>A <strong>Small</strong> has 68 to 89 grams.</li>
+    <li>A <strong>Large</strong> has 112 to 159 grams. A Large M&M’s Blizzard has about as much sugar as 4 cans of regular soda, at roughly 39 grams a can.</li>
+  </ul>
+  <p>If you love one flavor, order it as a Mini instead of switching to a flavor you like less. Sizes and prices are in our <a href="/categories/blizzard-treats">Blizzard menu</a>.</p>
+
+  <h2 id="low-sugar">Lowest-sugar treats at Dairy Queen</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Treat</th><th>Sugar</th><th>Calories</th></tr></thead>
+      <tbody>{lowSugar.map((t) => <tr><td><strong><a href={t.href}>{t.name}</a></strong></td><td>{t.row.sugars} g</td><td>{t.row.cal}</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>A kids’ cone is the easiest swap. It is real DQ soft serve with about a quarter of the sugar in a Small Blizzard. A Dilly Bar is close behind and costs about $1.99. The novelty bars are sold in 6-packs, so those rows are DQ’s 6-pack figures divided by six.</p>
+
+  <h2 id="drinks">Sugar in DQ drinks</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Drink</th><th>Small</th><th>Large</th></tr></thead>
+      <tbody>{drinks.map((d) => <tr><td><strong><a href={d.href}>{d.name}</a></strong></td><td>{d.s} g</td><td>{d.l} g</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>Fruit drinks are not low in sugar. A small Misty Slush has 50 grams, and a large Tripleberry smoothie has more than 100. The difference is that the slush has no fat and fewer calories. A large chocolate shake tops the list at 128 grams.</p>
+
+  <h2 id="cakes">Sugar in a slice of DQ cake</h2>
+  <p>DQ lists the whole classic 10-inch cake at {g('dq-cake-round-10inch', 'Whole cake, store made').sugars} grams of sugar. Cut into 14 slices, that is about {Math.round(g('dq-cake-round-10inch', 'Whole cake, store made').sugars / 14)} grams a slice, about the same as a Mini Blizzard. More on sizes and servings is in our <a href="/categories/dq-cakes">DQ cake prices guide</a>.</p>
+
+  <h2 id="tips">How to cut sugar at DQ</h2>
+  <ul>
+    <li><strong>Go one size down.</strong> A Mini instead of a Small saves 26 to 39 grams.</li>
+    <li><strong>Pick a cone over a Blizzard.</strong> A small vanilla cone has 26 grams.</li>
+    <li><strong>Skip the whipped cream</strong> on a MooLatté or sundae.</li>
+    <li><strong>Share a Large.</strong> Split between two, a Large Oreo is about 60 grams each.</li>
+  </ul>
+  <p>For calories, fat and allergens, see our <a href="/blog/dairy-queen-calories-nutrition-guide">DQ calories guide</a> and <a href="/blog/dq-gluten-free-allergen-guide">allergen guide</a>.</p>
+</BlogPost>

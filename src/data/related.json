@@ -1805,6 +1805,14 @@
  ],
  "/blog/dairy-queen-calories-nutrition-guide": [
   {
+   "title": "Sugar in every DQ Blizzard & treat",
+   "href": "/blog/dairy-queen-sugar-guide"
+  },
+  {
+   "title": "High-protein Dairy Queen orders",
+   "href": "/blog/dairy-queen-high-protein-guide"
+  },
+  {
    "title": "DQ gluten-free & allergen guide",
    "href": "/blog/dq-gluten-free-allergen-guide"
   },
@@ -1815,14 +1823,6 @@
   {
    "title": "Blizzard Treats menu & prices",
    "href": "/categories/blizzard-treats"
-  },
-  {
-   "title": "Side Salad",
-   "href": "/items/side-salad"
-  },
-  {
-   "title": "Is DQ soft serve ice cream?",
-   "href": "/blog/dairy-queen-ice-cream-vs-soft-serve"
   }
  ],
  "/blog/dairy-queen-ice-cream-vs-soft-serve": [
@@ -1907,6 +1907,10 @@
    "href": "/categories/dq-cakes"
   },
   {
+   "title": "Plan a Dairy Queen birthday party",
+   "href": "/blog/dairy-queen-birthday-party-guide"
+  },
+  {
    "title": "Oreo Blizzard Cake",
    "href": "/items/oreo-blizzard-cake"
   },
@@ -1917,10 +1921,6 @@
   {
    "title": "Dq Sheet Cake",
    "href": "/items/dq-sheet-cake"
-  },
-  {
-   "title": "Best Blizzard flavors, ranked",
-   "href": "/blog/best-blizzard-flavors-ranked"
   }
  ],
  "/blog/dq-chicken-strip-baskets-review": [
@@ -2055,6 +2055,76 @@
   {
    "title": "Cheapest things to order at DQ",
    "href": "/blog/cheapest-dairy-queen-menu"
+  },
+  {
+   "title": "Plan a Dairy Queen birthday party",
+   "href": "/blog/dairy-queen-birthday-party-guide"
+  }
+ ],
+ "/blog/dairy-queen-sugar-guide": [
+  {
+   "title": "Blizzard Treats menu & prices",
+   "href": "/categories/blizzard-treats"
+  },
+  {
+   "title": "Dairy Queen calories & nutrition guide",
+   "href": "/blog/dairy-queen-calories-nutrition-guide"
+  },
+  {
+   "title": "High-protein Dairy Queen orders",
+   "href": "/blog/dairy-queen-high-protein-guide"
+  },
+  {
+   "title": "Vanilla Soft Serve Cone",
+   "href": "/items/vanilla-soft-serve-cone"
+  },
+  {
+   "title": "Best Blizzard flavors, ranked",
+   "href": "/blog/best-blizzard-flavors-ranked"
+  }
+ ],
+ "/blog/dairy-queen-high-protein-guide": [
+  {
+   "title": "Cheese Curds",
+   "href": "/items/cheese-curds"
+  },
+  {
+   "title": "Burgers & sandwiches menu & prices",
+   "href": "/categories/burgers-sandwiches"
+  },
+  {
+   "title": "Best Dairy Queen burgers, ranked",
+   "href": "/blog/best-dairy-queen-burgers-ranked"
+  },
+  {
+   "title": "Sugar in every DQ Blizzard & treat",
+   "href": "/blog/dairy-queen-sugar-guide"
+  },
+  {
+   "title": "DQ Chicken Strip Basket review",
+   "href": "/blog/dq-chicken-strip-baskets-review"
+  }
+ ],
+ "/blog/dairy-queen-birthday-party-guide": [
+  {
+   "title": "DQ cake sizes, servings & prices",
+   "href": "/categories/dq-cakes"
+  },
+  {
+   "title": "Dq Sheet Cake",
+   "href": "/items/dq-sheet-cake"
+  },
+  {
+   "title": "DQ cake flavors & serving guide",
+   "href": "/blog/dq-cakes-complete-guide"
+  },
+  {
+   "title": "Kids meals menu & prices",
+   "href": "/categories/kids-meals"
+  },
+  {
+   "title": "DQ app rewards guide",
+   "href": "/blog/dairy-queen-app-rewards-hacks"
   }
  ]
 }
