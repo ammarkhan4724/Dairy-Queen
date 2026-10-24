@@ -6,6 +6,6 @@ export const CAKE_SIZES = {
     ['<a href="/items/dq-cake-round-10inch">10-inch round (classic)</a>', '12–16', 'from $32.99'],
     ['<a href="/items/cookie-dough-blizzard-cake">Cookie Dough Blizzard Cake (10-inch)</a>', '12–16', 'from $35.99'],
     ['<a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake (10-inch)</a>', '12–16', 'from $38.74'],
-    ['<a href="/items/dq-sheet-cake">Sheet cake</a>', '24–32', 'from $44.99'],
+    ['<a href="/items/dq-sheet-cake">Sheet cake</a>', '20–25', 'from $44.99'],
   ],
 };
