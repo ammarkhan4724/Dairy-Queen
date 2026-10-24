@@ -5,6 +5,7 @@ import Layout from './Layout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { DEPTH } from '../data/item-depth';
 import { NUTRITION, NUTRITION_AS_OF, NUTRITION_SOURCE } from '../data/nutrition';
+import { SITE_URL, canonical } from '../data/site';
 
 interface Faq { q: string; a: string }
 interface Props {
@@ -30,9 +31,21 @@ const faqs = [...baseFaqs, ...(depth?.faqs ?? [])];
 const nutrition = NUTRITION[slug];
 // H1 carries the brand; breadcrumb keeps the short item name.
 const heading = /^(DQ|Dairy Queen)\b/i.test(name) ? name : `Dairy Queen ${name}`;
+// Every /Images/*.webp is a 600x600 square; keep the hero's width/height and
+// the ImageObject in step with that so layout and schema match the file.
+const imageObject = {
+  '@type': 'ImageObject',
+  contentUrl: `${SITE_URL}${image}`,
+  width: 600,
+  height: 600,
+  caption: imageAlt,
+};
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  url: canonical(Astro.url.pathname),
+  name: title,
+  primaryImageOfPage: imageObject,
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 ---
@@ -43,9 +56,10 @@ const schema = {
 
 <div class="container">
   <div class="item-hero">
-    <div class="item-media">
-      <img src={image} alt={imageAlt} width="600" height="450" loading="eager" fetchpriority="high" />
-    </div>
+    <figure class="item-media">
+      <img src={image} alt={imageAlt} width="600" height="600" loading="eager" fetchpriority="high" />
+      <figcaption>{heading} · {from} · Illustrative photo; servings vary by store.</figcaption>
+    </figure>
     <div>
       {badges.length > 0 && <div class="badge-row">{badges.map((b) => <span class="badge">{b}</span>)}</div>}
       <h1>{heading}</h1>

@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.thequeendairymenu.us/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-6pc.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cheese-curds.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chocolate-shake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-cheeseburger-meal.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/7-meal-deal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/7-meal-deal.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/double-cheeseburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-sheet-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mixing-bowl-mashup-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/moolatte.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/pumpkin-pie-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-meals-category.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dilly-bar.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mm-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cheese-curds.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/categories</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-6pc.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cheese-curds.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chocolate-shake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-cheeseburger-meal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/categories/blizzard-treats</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/blizzard-category.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/categories/breakfast</loc>
@@ -44,6 +83,7 @@
     <loc>https://www.thequeendairymenu.us/categories/dq-cakes</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cakes-category.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/categories/drinks</loc>
@@ -62,88 +102,201 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/2pc-chicken-strips.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/7-meal-deal.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/backyard-bacon-ranch-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/banana-cream-pie-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/banana-split.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/biscuit-gravy.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/breakfast-burrito.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/brownie-batter-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/brownie-oreo-cupfection.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/buster-bar.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/butterfinger-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/buttermilk-pancake-platter.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/caramel-sundae.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cheese-curds.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-6pc.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chili-cheese-dog.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/choco-brownie-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chocolate-dipped-cone.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chocolate-shake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/confetti-cake-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cookie-dough-blizzard-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cookie-dough-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cotton-candy-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/crispy-chicken-sandwich.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dilly-bar.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dipped-strawberry-cheesecake-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/double-cheeseburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-cake-round-10inch.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-cake-round-8inch.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-sandwich.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-sheet-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/frosted-sugar-cookie-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/fruit-smoothies.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/grilled-chicken-sandwich.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/heath-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/honey-bbq-chicken-strip-basket.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/hot-dog.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/hot-fudge-sundae.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-cheeseburger-meal.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-chicken-strips-meal.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-hot-dog-meal.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mint-oreo-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/misty-slush.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mixing-bowl-mashup-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mm-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/moolatte.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mushroom-swiss-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/onion-rings.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/orange-julius.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/original-cheeseburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/peanut-buster-parfait.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/peppermint-bark-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/peppermint-hot-cocoa-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/pretzel-sticks-queso.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/pumpkin-pie-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/reeses-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/regular-fries.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-new-york-cheesecake-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-oreo-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-reeses-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-rocky-road-trip-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/side-salad.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/smores-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/snickers-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/soft-drinks.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/strawberry-cheesequake-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/strawberry-sundae.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/swicy-pineapple-tajin-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/turtle-pecan-blizzard.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/two-cheese-deluxe-stackburger.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/ultimate-hash-browns-platter.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/best-blizzard-flavors-ranked</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/best-dairy-queen-burgers-ranked</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/cheapest-dairy-queen-menu</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-app-rewards-hacks</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/7-meal-deal.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-birthday-party-guide</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-sheet-cake.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-calories-nutrition-guide</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dilly-bar.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-high-protein-guide</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cheese-curds.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-ice-cream-vs-soft-serve</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-kids-menu-guide</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-meals-category.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-price-inflation-report</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/double-cheeseburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-secret-menu</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mixing-bowl-mashup-blizzard.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-sugar-guide</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mm-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-breakfast-hours-menu</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-cakes-complete-guide</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-chicken-strip-baskets-review</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-gluten-free-allergen-guide</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-meal-deals-guide</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/7-meal-deal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-seasonal-blizzard-calendar</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/pumpkin-pie-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dq-shake-moolatte-guide</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/moolatte.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/combos</loc>
@@ -154,396 +307,475 @@
     <loc>https://www.thequeendairymenu.us/items/2-for-5-mix-match</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/2-for-5-mix-match.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/2pc-chicken-strips</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/2pc-chicken-strips.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/7-meal-deal</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/7-meal-deal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/backyard-bacon-ranch-stackburger</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/backyard-bacon-ranch-stackburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/banana-cream-pie-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/banana-cream-pie-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/banana-split</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/banana-split.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/biscuit-gravy</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/biscuit-gravy.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/breakfast-burrito</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/breakfast-burrito.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/brownie-batter-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/brownie-batter-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/brownie-oreo-cupfection</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/brownie-oreo-cupfection.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/buster-bar</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/buster-bar.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/butterfinger-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/butterfinger-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/buttermilk-pancake-platter</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/buttermilk-pancake-platter.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/caramel-sundae</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/caramel-sundae.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/cheese-curds</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cheese-curds.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/chicken-strip-basket-4pc</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-4pc.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/chicken-strip-basket-6pc</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chicken-strip-basket-6pc.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/chili-cheese-dog</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chili-cheese-dog.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/choco-brownie-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/choco-brownie-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/chocolate-dipped-cone</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chocolate-dipped-cone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/chocolate-shake</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/chocolate-shake.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/confetti-cake-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/confetti-cake-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/cookie-dough-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cookie-dough-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/cookie-dough-blizzard-cake</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cookie-dough-blizzard-cake.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/cotton-candy-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/cotton-candy-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/country-breakfast-platter</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/country-breakfast-platter.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/crispy-chicken-sandwich</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/crispy-chicken-sandwich.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dilly-bar</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dilly-bar.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dipped-strawberry-cheesecake-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dipped-strawberry-cheesecake-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/double-cheeseburger</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/double-cheeseburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dq-cake-round-10inch</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-cake-round-10inch.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dq-cake-round-8inch</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-cake-round-8inch.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dq-sandwich</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-sandwich.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/dq-sheet-cake</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/dq-sheet-cake.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/flamethrower-stackburger</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/flamethrower-stackburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/frosted-sugar-cookie-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/frosted-sugar-cookie-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/fruit-smoothies</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/fruit-smoothies.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/grilled-chicken-sandwich</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/grilled-chicken-sandwich.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/heath-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/heath-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/honey-bbq-chicken-strip-basket</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/honey-bbq-chicken-strip-basket.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/hot-dog</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/hot-dog.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/hot-fudge-sundae</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/hot-fudge-sundae.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/kids-cheeseburger-meal</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-cheeseburger-meal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/kids-chicken-strips-meal</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-chicken-strips-meal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/kids-hot-dog-meal</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/kids-hot-dog-meal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/mint-oreo-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mint-oreo-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/misty-slush</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/misty-slush.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/mixing-bowl-mashup-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mixing-bowl-mashup-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/mm-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mm-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/moolatte</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/moolatte.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/mushroom-swiss-stackburger</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/mushroom-swiss-stackburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/non-dairy-dilly-bar</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/non-dairy-dilly-bar.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/onion-rings</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/onion-rings.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/orange-julius</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/orange-julius.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/oreo-blizzard</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/oreo-blizzard-cake</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/oreo-blizzard-cake.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/original-cheeseburger</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/original-cheeseburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/peanut-buster-parfait</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/peanut-buster-parfait.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/peppermint-bark-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/peppermint-bark-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/peppermint-hot-cocoa-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/peppermint-hot-cocoa-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/pretzel-sticks-queso</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/pretzel-sticks-queso.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/pumpkin-pie-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/pumpkin-pie-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/reeses-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/reeses-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/regular-fries</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/regular-fries.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/royal-new-york-cheesecake-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-new-york-cheesecake-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/royal-oreo-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-oreo-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/royal-reeses-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-reeses-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/royal-rocky-road-trip-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/royal-rocky-road-trip-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/side-salad</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/side-salad.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/smores-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/smores-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/snickers-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/snickers-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/soft-drinks</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/soft-drinks.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/strawberry-cheesequake-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/strawberry-cheesequake-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/strawberry-sundae</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/strawberry-sundae.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/swicy-pineapple-tajin-blizzard</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/swicy-pineapple-tajin-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/turtle-pecan-blizzard</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/turtle-pecan-blizzard.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/two-cheese-deluxe-stackburger</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/two-cheese-deluxe-stackburger.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/ultimate-hash-browns-platter</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/ultimate-hash-browns-platter.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/items/vanilla-soft-serve-cone</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.7</priority>
+    <image:image><image:loc>https://www.thequeendairymenu.us/Images/vanilla-soft-serve-cone.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/price-history</loc>
@@ -579,20 +811,5 @@
     <loc>https://www.thequeendairymenu.us/terms</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-sugar-guide</loc>
-    <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-high-protein-guide</loc>
-    <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-birthday-party-guide</loc>
-    <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
   </url>
 </urlset>
