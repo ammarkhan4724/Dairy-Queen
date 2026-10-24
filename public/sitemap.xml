@@ -7,7 +7,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -87,7 +87,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-calories-nutrition-guide</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -97,7 +97,7 @@
   </url>
   <url>
     <loc>https://www.thequeendairymenu.us/blog/dairy-queen-kids-menu-guide</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -579,5 +579,20 @@
     <loc>https://www.thequeendairymenu.us/terms</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-sugar-guide</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-high-protein-guide</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thequeendairymenu.us/blog/dairy-queen-birthday-party-guide</loc>
+    <lastmod>2026-10-24</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

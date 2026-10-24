@@ -1,0 +1,77 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+
+// Prices are the typical U.S. prices on our item pages; servings match /categories/dq-cakes.
+const budgets = [
+  { kids: '10', cake: '8-inch round ($22.99, serves 8–10)', treatsOnly: '$40.89', withMeals: '$72.89' },
+  { kids: '15', cake: '10-inch round ($32.99, serves 12–16)', treatsOnly: '$59.84', withMeals: '$107.84' },
+  { kids: '20', cake: 'Sheet cake ($44.99, serves 20–25)', treatsOnly: '$80.79', withMeals: '$144.79' },
+  { kids: '30', cake: 'Sheet + 10-inch ($77.98, serves 32–41)', treatsOnly: '$131.68', withMeals: '$227.68' },
+];
+
+const faqs = [
+  { q: 'How much does a Dairy Queen birthday party cost?', a: 'For 10 kids, about $41 for an 8-inch cake plus a Kids’ cone each, or about $73 with a $4.99 kids meal each instead of cones. For 20 kids, plan on about $81 for a sheet cake and cones, or about $145 with kids meals. Prices vary by location.' },
+  { q: 'What size DQ cake do I need for a birthday party?', a: 'An 8-inch round for up to 10 guests, a 10-inch for 12 to 16, and a sheet cake for 20 to 25. For 30 or more, pair a sheet cake with a 10-inch round.' },
+  { q: 'Can you have a birthday party at Dairy Queen?', a: 'It depends on the store. Dairy Queen does not run a national party package, but some franchise locations will reserve tables or set up group orders. Call your local store and ask.' },
+  { q: 'How long can a DQ cake sit out at a party?', a: 'Keep it in the freezer until about 10 to 15 minutes before you cut it. It is an ice cream cake, so serve it soon after cutting and put leftovers back in the freezer right away.' },
+  { q: 'Does Dairy Queen give a free birthday treat?', a: 'If you add your birthday to your DQ Rewards profile in the app, DQ usually sends a birthday treat offer. Set it up a few weeks before the birthday.' },
+];
+---
+<BlogPost
+  title="Dairy Queen Birthday Party Guide: Cake, Treats & Budget"
+  description="Plan a Dairy Queen birthday party for 10, 15, 20 or 30 kids: which DQ cake to order, what it costs with cones or kids meals, timing and serving tips."
+  h1="How to Plan a Dairy Queen Birthday Party (and What It Costs)"
+  crumb="DQ Birthday Party Guide"
+  eyebrow="DQ cakes and parties"
+  image="/Images/dq-sheet-cake.webp"
+  imageAlt="Dairy Queen sheet cake decorated for a party"
+  datePublished="2026-10-24"
+  dateModified="2026-10-24"
+  faqs={faqs}
+>
+  <p class="lead"><strong>A Dairy Queen birthday party for 10 kids costs about $41 for an 8-inch DQ cake and a Kids’ cone each, or about $73 with a kids meal for every child.</strong> For 20 kids, a sheet cake and cones come to about $81. Below are the cake sizes, a budget for each party size, and a timeline so the cake is still frozen when you sing.</p>
+
+  <p>All prices are typical U.S. prices from our own checks. Each DQ franchise sets its own prices, so use these for planning and confirm with your store.</p>
+
+  <h2 id="cake-size">Step 1: Pick the cake size</h2>
+  <ul>
+    <li><strong>Up to 10 guests:</strong> an <a href="/items/dq-cake-round-8inch">8-inch round</a>, about $22.99.</li>
+    <li><strong>12–16 guests:</strong> a <a href="/items/dq-cake-round-10inch">10-inch round</a>, about $32.99.</li>
+    <li><strong>20–25 guests:</strong> a <a href="/items/dq-sheet-cake">sheet cake</a>, about $44.99. Dairy Queen lists it as serving 20 to 25.</li>
+    <li><strong>30–40 guests:</strong> a sheet cake plus a 10-inch round, about $77.98.</li>
+  </ul>
+  <p>Kids’ slices are usually smaller, so you can plan toward the top of each range. Count the adults too: they almost always want a slice. All sizes and flavors are in our <a href="/categories/dq-cakes">DQ cake prices guide</a>.</p>
+
+  <h2 id="flavor">Step 2: Classic or Blizzard cake?</h2>
+  <p>For a kids’ party, the classic chocolate-and-vanilla cake is the safe choice. It has no nuts or candy pieces and is the cheapest. A <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake</a> costs about $5.75 more in the 10-inch size and is the most popular upgrade. Skip the Reese’s cake if any guest has a peanut allergy, and check our <a href="/blog/dq-gluten-free-allergen-guide">DQ allergen guide</a> before you order.</p>
+
+  <h2 id="budget">Step 3: Budget by party size</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Kids</th><th>Cake</th><th>Cake + Kids’ cone each</th><th>Cake + kids meal each</th></tr></thead>
+      <tbody>{budgets.map((b) => <tr><td><strong>{b.kids}</strong></td><td>{b.cake}</td><td class="price-cell">{b.treatsOnly}</td><td class="price-cell">{b.withMeals}</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>The middle column adds a Kids’ vanilla cone (about $1.79) for every child. The last column adds a <a href="/categories/kids-meals">kids meal</a> (about $4.99) instead, which already includes a Kids’ cone, so you don’t need both. Taxes are not included.</p>
+  <p>Want something cheaper than cones? <a href="/items/dilly-bar">Dilly Bars</a> are about $1.99 each and travel better, since they are wrapped and on a stick.</p>
+
+  <h2 id="timeline">Step 4: Order on the right timeline</h2>
+  <ul>
+    <li><strong>1 week before:</strong> call your store if you need a sheet cake, two cakes, a photo cake or a specific Blizzard flavor, especially near holidays and graduation season.</li>
+    <li><strong>48 hours before:</strong> the latest point for most custom cakes and sheet cakes.</li>
+    <li><strong>Same day:</strong> a ready-made round cake from the freezer case. Staff can usually write a name and short message while you wait.</li>
+  </ul>
+  <p>You can order online or in the DQ app at participating stores. Add the birthday to your <a href="/blog/dairy-queen-app-rewards-hacks">DQ Rewards profile</a> too, since the app usually sends a birthday treat offer.</p>
+
+  <h2 id="serving">Step 5: Transport and serve it</h2>
+  <ul>
+    <li>Bring a cooler or an insulated bag for the drive, and go straight home or to the venue.</li>
+    <li>Keep the cake in the freezer until 10 to 15 minutes before cutting.</li>
+    <li>Cut with a long knife dipped in warm water, wiping it between slices.</li>
+    <li>Put leftovers back in the freezer right away, covered.</li>
+  </ul>
+  <p>A slice of a classic 10-inch cake cut 14 ways is about 400 calories. A sheet cake cut 22 ways is about 385. More on slicing and flavors is in our <a href="/blog/dq-cakes-complete-guide">DQ cakes guide</a>.</p>
+
+  <h2 id="at-dq">Having the party at Dairy Queen</h2>
+  <p>Dairy Queen does not offer a national party package, but many franchise stores are happy to help with a group order or set aside a few tables at a quiet time. Call ahead, give a head count, and ask whether they can have the cake and cones ready when you arrive. Weekday afternoons are usually the easiest time.</p>
+</BlogPost>
