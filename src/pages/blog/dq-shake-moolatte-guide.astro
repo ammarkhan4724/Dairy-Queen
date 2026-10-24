@@ -10,7 +10,20 @@ const drinks = [
   { name: 'Orange Julius', href: '/items/orange-julius', s: '$3.99 · 200 cal', m: '$4.49 · 260 cal', l: '—' },
 ];
 
+// Small sizes, same figures as the item pages.
+const compare = [
+  { name: 'Shake', href: '/items/chocolate-shake', what: 'Soft serve blended with milk and flavor syrup', texture: 'Drinkable through a straw', small: '$3.49 · 530 cal (chocolate)' },
+  { name: 'Malt', href: '/items/chocolate-shake', what: 'A shake with malted milk powder added', texture: 'Same as a shake, toasty and nutty taste', small: 'Same or slightly more than a shake' },
+  { name: 'Blizzard', href: '/items/oreo-blizzard', what: 'Soft serve blended with candy or cookie pieces, no milk', texture: 'Thick enough to eat with a spoon', small: '$4.49 · 600 cal (Oreo)' },
+  { name: 'MooLatté', href: '/items/moolatte', what: 'Coffee and soft serve blended, topped with whipped cream', texture: 'Thick frozen coffee', small: '$4.29 · 450–500 cal' },
+];
+
 const faqs = [
+  { q: 'Does Dairy Queen have malts?', a: 'Yes. Any Dairy Queen shake can be made as a malt. Just ask for a malt instead of a shake when you order; the staff add malted milk powder to the blend.' },
+  { q: 'Does Dairy Queen still have MooLattés?', a: 'Yes, the MooLatté is still on Dairy Queen’s U.S. menu in vanilla, caramel and mocha. Not every store makes it, especially smaller Treat-only locations, so check the DQ app for your store.' },
+  { q: 'Does Dairy Queen have coffee?', a: 'The MooLatté is DQ’s coffee drink and is sold all day. Many stores that serve breakfast also have regular hot coffee, but it depends on the location.' },
+  { q: 'Does Dairy Queen have smoothies and slushies?', a: 'Yes. DQ sells fruit smoothies (Strawberry Banana is the common one) and Misty Slush in several flavors. Some stores also sell Orange Julius drinks.' },
+  { q: 'Does Dairy Queen have Coke or Pepsi?', a: 'Dairy Queen serves Coca-Cola fountain drinks, including Coke, Diet Coke and Sprite at most stores.' },
   { q: 'What is the difference between a shake and a malt at Dairy Queen?', a: 'A malt is a shake with malted milk powder blended in. It tastes a little nutty and toasty, like a malted milk ball. Many stores charge the same or a little more for a malt.' },
   { q: 'Does a DQ MooLatté have caffeine?', a: 'Yes. A MooLatté is made with coffee, so it contains caffeine. The amount depends on size; check Dairy Queen’s nutrition information for exact figures.' },
   { q: 'Is the Misty Slush dairy-free?', a: 'Most Misty Slush flavors are made without dairy. A Misty Freeze, which blends in soft serve, does contain milk.' },
@@ -18,17 +31,18 @@ const faqs = [
 ];
 ---
 <BlogPost
-  title="Dairy Queen Shakes & MooLatté Guide (2026)"
-  description="Dairy Queen shakes, malts, MooLattés and Misty Slush: flavors, sizes, typical prices and calories, plus which drink to pick."
-  h1="Dairy Queen Shakes, Malts and MooLatté: Prices and Guide"
+  title="Does Dairy Queen Have Malts? Shakes & MooLatté (2026)"
+  description="Yes, any DQ shake can be made as a malt. Shake flavors, malt vs. shake vs. Blizzard, MooLatté flavors, and typical prices and calories by size."
+  h1="Does Dairy Queen Have Malts? Shakes, Malts and MooLatté Guide"
   crumb="DQ Shakes & MooLatté"
   eyebrow="Drinks at DQ"
   image="/Images/moolatte.webp"
   imageAlt="Dairy Queen MooLatté frozen coffee drink with whipped cream"
   datePublished="2026-07-22"
+  dateModified="2026-10-24"
   faqs={faqs}
 >
-  <p class="lead"><strong>A small Dairy Queen shake costs about $3.49, and a small MooLatté frozen coffee about $4.29.</strong> Shakes come in chocolate, vanilla, strawberry and more, and any shake can be made as a malt. For something lighter, a small Misty Slush is about 200 calories. Here is how the DQ drinks compare.</p>
+  <p class="lead"><strong>Yes, Dairy Queen has malts: any shake can be made as a malt. A small shake costs about $3.49, and a small MooLatté frozen coffee about $4.29.</strong> Shakes come in chocolate, vanilla, strawberry, peanut butter and caramel. For something lighter, a small Misty Slush is about 200 calories. Here is how the DQ drinks compare.</p>
 
   <h2 id="prices">DQ drink prices and calories</h2>
   <div class="table-wrap">
@@ -38,11 +52,33 @@ const faqs = [
     </table>
   </div>
 
-  <h2 id="shake-vs-malt">Shake or malt?</h2>
-  <p>A DQ shake is soft serve blended with milk and flavor syrup. A malt adds malted milk powder, which gives it a toasty, slightly nutty taste. If you like malted milk balls, order the malt. Malt powder contains wheat and barley, so skip it if you avoid gluten.</p>
+  <h2 id="shake-flavors">DQ shake flavors</h2>
+  <p>Most stores make shakes and malts in these flavors all year:</p>
+  <ul>
+    <li><strong>Chocolate:</strong> the most ordered. A small is about 530 calories (<a href="/items/chocolate-shake">full nutrition</a>).</li>
+    <li><strong>Vanilla:</strong> plain DQ soft serve and milk, the base for most custom shakes.</li>
+    <li><strong>Strawberry:</strong> made with strawberry topping.</li>
+    <li><strong>Peanut butter:</strong> contains peanuts.</li>
+    <li><strong>Caramel:</strong> made with caramel topping.</li>
+  </ul>
+  <p>Stores often add seasonal flavors, and many will blend in any sundae topping you ask for. Flavors vary by location.</p>
+
+  <h2 id="shake-vs-malt">Does DQ have malts? Shake vs. malt</h2>
+  <p>Yes. Dairy Queen still makes malts, and you can turn any shake flavor into one. A DQ shake is soft serve blended with milk and flavor syrup. A malt adds malted milk powder, which gives it a toasty, slightly nutty taste, a lot like a malted milk ball. Many stores charge the same for a malt, and some add a small upcharge.</p>
+  <p>Malt powder contains wheat and barley, so skip it if you avoid gluten. If you don’t see malts on the menu board, just ask for one.</p>
+
+  <h2 id="compare">Shake vs. malt vs. Blizzard vs. MooLatté</h2>
+  <div class="table-wrap">
+    <table class="size-table">
+      <thead><tr><th>Drink</th><th>What it is</th><th>Texture</th><th>Small</th></tr></thead>
+      <tbody>{compare.map((c) => <tr><td><strong><a href={c.href}>{c.name}</a></strong></td><td>{c.what}</td><td>{c.texture}</td><td>{c.small}</td></tr>)}</tbody>
+    </table>
+  </div>
+  <p>A small Blizzard costs about a dollar more than a small shake. A small chocolate shake has fewer calories than a small Oreo Blizzard (about 530 vs. 600).</p>
 
   <h2 id="moolatte">What is a MooLatté?</h2>
-  <p>The <a href="/items/moolatte">MooLatté</a> is DQ’s blended frozen coffee, made with coffee and soft serve and topped with whipped cream. Mocha and caramel are the common flavors. It is sweeter and thicker than a coffeehouse iced coffee and has caffeine, so it is more of a dessert than a morning coffee.</p>
+  <p>The <a href="/items/moolatte">MooLatté</a> is DQ’s blended frozen coffee, made with coffee and soft serve and topped with whipped cream. It comes in vanilla, caramel and mocha. It is sweeter and thicker than a coffeehouse iced coffee and has caffeine, so it is more of a dessert than a morning coffee.</p>
+  <p>A small is about 450 calories in vanilla, 490 in caramel and 500 in mocha, based on Dairy Queen’s nutrition data. Skipping the whipped cream saves some calories. The MooLatté is still on the U.S. menu in 2026, but smaller Treat-only stores don’t always make it.</p>
 
   <h2 id="lighter">Lighter drinks</h2>
   <p>The <a href="/items/misty-slush">Misty Slush</a> is one of the lightest frozen drinks and has no fat. <a href="/items/fruit-smoothies">Fruit smoothies</a> and the <a href="/items/orange-julius">Orange Julius</a> (at locations that sell it) are also much lighter than shakes. Blend a Misty with soft serve and you get a Misty Freeze, one of the items on our <a href="/blog/dairy-queen-secret-menu">DQ secret menu</a> list.</p>

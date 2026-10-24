@@ -5,14 +5,24 @@ import { LAST_CHECKED } from '../../data/site';
 
 // Every figure below is a typical U.S. price taken from our individual cake pages.
 // Re-check against local menu boards / the DQ app before changing LAST_CHECKED.
+// "slice" = typical price divided by the middle of the serving range (9, 14 or 28 slices).
 const cakes = [
-  { name: 'Classic DQ Cake, 8-inch round', href: '/items/dq-cake-round-8inch', size: '8-inch round', serves: '8–10', price: 'from $22.99', notes: 'Vanilla and chocolate soft serve, fudge and chocolate crunch center' },
-  { name: 'Classic DQ Cake, 10-inch round', href: '/items/dq-cake-round-10inch', size: '10-inch round', serves: '12–16', price: 'from $32.99', notes: 'Same layers as the 8-inch, sized for bigger parties' },
-  { name: 'Oreo® Blizzard® Cake', href: '/items/oreo-blizzard-cake', size: '10-inch round', serves: '12–16', price: 'from $38.74', notes: 'Oreo pieces blended through the soft serve layer; the most-ordered Blizzard cake' },
-  { name: 'Cookie Dough Blizzard® Cake', href: '/items/cookie-dough-blizzard-cake', size: '10-inch round', serves: '12–16', price: 'from $35.99', notes: 'Cookie dough pieces and fudge in the soft serve layer' },
-  { name: 'Other Blizzard® Cakes (Choco Brownie Extreme, Reese’s®)', href: null, size: '10-inch round', serves: '12–16', price: 'from $35.99', notes: 'Flavor line-up varies by store and season' },
-  { name: 'DQ Sheet Cake', href: '/items/dq-sheet-cake', size: 'Sheet (about 11 × 14 in.)', serves: '24–32', price: 'from $44.99', notes: 'Best value per slice for school, office and team parties' },
-  { name: 'Heart and seasonal cakes', href: null, size: 'Heart-shaped / themed', serves: 'varies', price: 'ask your store', notes: 'Valentine’s heart, Christmas, graduation and holiday designs; limited-time' },
+  { name: 'Classic DQ Cake, 8-inch round', href: '/items/dq-cake-round-8inch', size: '8-inch round', serves: '8–10', price: 'from $22.99', slice: '$2.55', notes: 'Vanilla and chocolate soft serve, fudge and chocolate crunch center' },
+  { name: 'Classic DQ Cake, 10-inch round', href: '/items/dq-cake-round-10inch', size: '10-inch round', serves: '12–16', price: 'from $32.99', slice: '$2.36', notes: 'Same layers as the 8-inch, sized for bigger parties' },
+  { name: 'Oreo® Blizzard® Cake', href: '/items/oreo-blizzard-cake', size: '10-inch round', serves: '12–16', price: 'from $38.74', slice: '$2.77', notes: 'Oreo pieces blended through the soft serve layer; the most-ordered Blizzard cake' },
+  { name: 'Cookie Dough Blizzard® Cake', href: '/items/cookie-dough-blizzard-cake', size: '10-inch round', serves: '12–16', price: 'from $35.99', slice: '$2.57', notes: 'Cookie dough pieces and fudge in the soft serve layer' },
+  { name: 'Other Blizzard® Cakes (Choco Brownie Extreme, Reese’s®)', href: null, size: '10-inch round', serves: '12–16', price: 'from $35.99', slice: '$2.57', notes: 'Flavor line-up varies by store and season' },
+  { name: 'DQ Sheet Cake', href: '/items/dq-sheet-cake', size: 'Sheet (about 11 × 14 in.)', serves: '24–32', price: 'from $44.99', slice: '$1.61', notes: 'Best value per slice for school, office and team parties' },
+  { name: 'Heart and seasonal cakes', href: null, size: 'Heart-shaped / themed', serves: 'varies', price: 'ask your store', slice: '—', notes: 'Valentine’s heart, Christmas, graduation and holiday designs; limited-time' },
+];
+
+// How many cakes for a party, using the serving ranges and prices above.
+const party = [
+  { guests: 'Up to 10', pick: '1 × 8-inch round', serves: '8–10', cost: '$22.99' },
+  { guests: '12–16', pick: '1 × 10-inch round', serves: '12–16', cost: '$32.99' },
+  { guests: '20–30', pick: '1 × sheet cake', serves: '24–32', cost: '$44.99' },
+  { guests: '35–45', pick: '1 × sheet cake + 1 × 10-inch round', serves: '36–48', cost: '$77.98' },
+  { guests: '50–60', pick: '2 × sheet cakes', serves: '48–64', cost: '$89.98' },
 ];
 
 const faqs = [
@@ -21,6 +31,11 @@ const faqs = [
   { q: 'How do I order a custom DQ cake?', a: 'You can order through the DQ app or the online cake ordering page for participating stores, by calling your local Dairy Queen, or at the counter. Choose the size and flavor, add your message or design, and pick a pickup time.' },
   { q: 'How far in advance should I order a Dairy Queen cake?', a: 'Plan on 24 to 48 hours for custom messages, Blizzard flavors or photo cakes. Many stores keep ready-made cakes in the freezer that you can buy the same day and have personalized with a short message while you wait.' },
   { q: 'What is the difference between a DQ cake and a Blizzard cake?', a: 'A classic DQ cake has layers of vanilla and chocolate soft serve with fudge and a chocolate crunch center. A Blizzard cake blends Blizzard mix-ins such as Oreo pieces or cookie dough into the soft serve, and usually costs a few dollars more.' },
+  { q: 'Can I order a Dairy Queen cake online?', a: 'At participating stores, yes. You can order through the DQ app or the online cake ordering page, choose the size, flavor and message, and pick a pickup time. If your store does not show up online, call it directly or order at the counter.' },
+  { q: 'Do all Dairy Queen locations sell cakes?', a: 'Most do, but not all. Dairy Queen lists its cakes as available at participating locations, and the Blizzard cake flavors in the freezer vary by store. Call ahead if you need a specific size or flavor on a specific day.' },
+  { q: 'Can Dairy Queen put a photo on a cake?', a: 'Some locations print edible photo toppers. It is up to each store, so call ahead and allow 24 to 48 hours. Every store can pipe a name and short message.' },
+  { q: 'How many calories are in a slice of DQ cake?', a: 'About 400 calories for a slice of a classic 10-inch cake cut into 14 pieces, about 420 for an 8-inch cut into 9, and about 300 for a sheet cake cut into 28. These are based on Dairy Queen’s published nutrition for each whole cake.' },
+  { q: 'How much are Dairy Queen cakes in Canada?', a: 'Canadian Dairy Queen stores set their own prices in Canadian dollars, so the U.S. prices on this page do not apply. Check the DQ Canada app or call your local store for current cake prices.' },
   { q: 'Does Dairy Queen sell heart-shaped cakes?', a: 'Yes, many locations sell heart cakes for Valentine’s Day, usually in late January and February. Availability and price vary by store, so call ahead or check the DQ app.' },
 ];
 
@@ -55,7 +70,7 @@ const faqSchema = {
 
     <h2 id="sizes-prices">DQ cake sizes, servings and prices</h2>
     <div class="table-wrap"><table class="size-table">
-      <thead><tr><th>Cake</th><th>Size</th><th>Serves</th><th>Typical price</th><th>Notes</th></tr></thead>
+      <thead><tr><th>Cake</th><th>Size</th><th>Serves</th><th>Typical price</th><th>Per slice</th><th>Notes</th></tr></thead>
       <tbody>
         {cakes.map((c) => (
           <tr>
@@ -63,15 +78,31 @@ const faqSchema = {
             <td>{c.size}</td>
             <td>{c.serves}</td>
             <td class="price-cell">{c.price}</td>
+            <td>{c.slice}</td>
             <td>{c.notes}</td>
           </tr>
         ))}
       </tbody>
     </table></div>
-    <p style="font-size:.88rem;color:var(--color-text-muted);">Typical price; varies by location. Last checked {LAST_CHECKED}. Servings assume standard party slices.</p>
+    <p style="font-size:.88rem;color:var(--color-text-muted);">Typical price; varies by location. Last checked {LAST_CHECKED}. Servings assume standard party slices. Per-slice cost uses the middle of each serving range.</p>
+    <p>The sheet cake is the cheapest per slice at about $1.61. A classic 10-inch works out a little cheaper per slice than an 8-inch ($2.36 vs. $2.55), and a Blizzard cake adds about 20 to 40 cents a slice.</p>
+
+    <h2 id="how-many">How many DQ cakes do I need?</h2>
+    <div class="table-wrap"><table class="size-table">
+      <thead><tr><th>Guests</th><th>What to order</th><th>Serves</th><th>Typical cost</th></tr></thead>
+      <tbody>
+        {party.map((r) => (
+          <tr><td><strong>{r.guests}</strong></td><td>{r.pick}</td><td>{r.serves}</td><td class="price-cell">{r.cost}</td></tr>
+        ))}
+      </tbody>
+    </table></div>
+    <p>For kids’ parties you can cut smaller slices and stretch each size toward the top of its range. If half your guests will want a Blizzard flavor, split the order into one classic and one <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake</a>.</p>
+
+    <h2 id="calories">DQ cake calories per slice</h2>
+    <p>Dairy Queen publishes nutrition for each whole classic cake: about 3,760 calories for the <a href="/items/dq-cake-round-8inch">8-inch</a>, 5,570 for the <a href="/items/dq-cake-round-10inch">10-inch</a> and 8,480 for the <a href="/items/dq-sheet-cake">sheet cake</a>. Cut to the middle of each serving range, that is about 420, 400 and 300 calories a slice. Full nutrition is on each cake’s page.</p>
 
     <h2 id="blizzard-cakes">Blizzard cakes</h2>
-    <p>A Blizzard cake swaps the plain soft serve layer for a Blizzard flavor, so the mix-ins run through the whole cake. The <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake</a> is the most popular choice, followed by <a href="/items/cookie-dough-blizzard-cake">Cookie Dough</a>, Choco Brownie Extreme and Reese’s Peanut Butter Cup. Expect to pay roughly $3 to $6 more than a classic 10-inch cake. If you want a flavor that is not in the freezer case, order a day or two ahead. Not sure which flavor to pick? See our <a href="/blog/best-blizzard-flavors-ranked">Blizzard flavor rankings</a>.</p>
+    <p>A Blizzard cake swaps the plain soft serve layer for a Blizzard flavor, so the mix-ins run through the whole cake. The <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cake</a> is the most popular choice, followed by <a href="/items/cookie-dough-blizzard-cake">Cookie Dough</a>, Choco Brownie Extreme and Reese’s Peanut Butter Cup. Expect to pay roughly $3 to $6 more than a classic 10-inch cake. Dairy Queen lists Blizzard cakes in 8-inch, 10-inch and sheet sizes at participating stores, but most freezer cases stock the 10-inch. If you want a flavor that is not in the freezer case, order a day or two ahead. Not sure which flavor to pick? See our <a href="/blog/best-blizzard-flavors-ranked">Blizzard flavor rankings</a>.</p>
 
     <h2 id="birthday-custom">Birthday and custom cakes</h2>
     <p>Any DQ cake can become a birthday cake. Most stores will pipe a name and short message for free, and many offer color choices for the border and decorations. Some locations also print edible photo toppers. For a party of 10, an <a href="/items/dq-cake-round-8inch">8-inch round</a> is usually enough; for 12 to 16 guests choose a <a href="/items/dq-cake-round-10inch">10-inch round</a>; for a classroom or office, a <a href="/items/dq-sheet-cake">sheet cake</a> gives the lowest cost per slice.</p>

@@ -62,7 +62,7 @@ YEAR = 'It is on the menu year-round.'
 
 ITEMS = [
     blz('oreo-blizzard', 'Oreo Blizzard', 'Oreo Cookie Blizzard',
-        'Oreo Blizzard prices: Mini $3.49, Small $4.49, Medium $5.49, Large $5.99. Calories by size, what is in it and how it compares to Royal Oreo.',
+        'A small Oreo Blizzard has 600 calories and costs about $4.49. Calories, sugar, fat and price for the Mini, Small, Medium and Large, from DQ nutrition data.',
         '/Images/oreo-blizzard.webp', 'Dairy Queen Oreo Cookie Blizzard in a cup', ['Year-round', 'Most popular Blizzard'], YEAR, 'Milk, Wheat, Soy',
         'Vanilla soft serve, Oreo cookie pieces',
         'DQ vanilla soft serve blended with crushed Oreo cookies until it is thick enough to hold upside down. It has been on the menu since the Blizzard launched in 1985 and is still the flavor most people order.',
@@ -72,9 +72,11 @@ ITEMS = [
         ['royal-oreo-blizzard', 'mint-oreo-blizzard', 'cookie-dough-blizzard'],
         'The Royal Oreo adds a hot fudge center for about 50 cents more. Mint Oreo is the same price with a cool mint flavor.',
         sz(('$3.49', '330'), ('$4.49', '600'), ('$5.49', '820'), ('$5.99', '1,050')),
-        [('Is the Oreo Blizzard available all year?', 'Yes. Oreo is a year-round Blizzard flavor.'),
+        [('How much sugar is in a small Oreo Blizzard?', 'About 70 grams, with 22 grams of fat and 13 grams of protein, according to Dairy Queen’s nutrition data. A Mini has 39 grams of sugar.'),
+         ('Which Oreo Blizzard size has the fewest calories?', 'The Mini, at about 330 calories. That is 270 fewer than a Small and about a third of a Large.'),
+         ('Is the Oreo Blizzard available all year?', 'Yes. Oreo is a year-round Blizzard flavor.'),
          ('What is the difference between an Oreo and a Royal Oreo Blizzard?', 'The Royal Oreo has a hot fudge-filled center and costs about 50 cents more per size.')],
-        title='DQ Oreo Blizzard: Price, Sizes & Calories (2026)'),
+        title='Oreo Blizzard Calories & Price by Size (2026)'),
 
     blz('reeses-blizzard', 'Reese’s Blizzard', 'Reese’s Peanut Butter Cup Blizzard',
         'Reese’s Blizzard prices: Mini $3.49, Small $4.49, Medium $5.49, Large $6.49. Calories by size and how it compares to the Royal Reese’s.',
