@@ -1079,16 +1079,16 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'How much does a 10-inch DQ cake cost per slice?',
         html: `<p>A classic 10-inch DQ cake works out to about $2.06 to $2.75 per slice. That is about $32.99 divided across 12 to 16 servings.</p>
-<p>That is a little cheaper per slice than the <a href="/items/dq-cake-round-8inch">8-inch cake</a> (about $2.30 to $2.87) and more than a sheet cake (about $1.41 to $1.87). Blizzard flavors in the 10-inch size cost more: about $2.25 to $3.00 per slice for Cookie Dough and about $2.42 to $3.23 for Oreo.</p>`,
+<p>That is a little cheaper per slice than the <a href="/items/dq-cake-round-8inch">8-inch cake</a> (about $2.30 to $2.87) and more than a sheet cake (about $1.80 to $2.25). Blizzard flavors in the 10-inch size cost more: about $2.25 to $3.00 per slice for Cookie Dough and about $2.42 to $3.23 for Oreo.</p>`,
       },
       {
         h: 'DQ cake for 20 people: 10-inch plus 8-inch, or a sheet cake?',
-        html: `<p>For about 20 people, a <a href="/items/dq-sheet-cake">sheet cake</a> is the cheaper choice. A 10-inch and an 8-inch together cost about $55.98 and serve about 20 to 26. One sheet cake costs about $44.99 and serves about 24 to 32, so it saves about $10.99 and leaves room for seconds.</p>
+        html: `<p>For about 20 people, a <a href="/items/dq-sheet-cake">sheet cake</a> is the cheaper choice. A 10-inch and an 8-inch together cost about $55.98 and serve about 20 to 26. One sheet cake costs about $44.99 and serves about 20 to 25, so it feeds about the same crowd for about $10.99 less.</p>
 <p>Two round cakes still make sense if you want two different flavors, or if you need cake today, since round cakes are more likely to be waiting in the freezer case. A sheet cake needs about 48 hours’ notice. More planning help is in our <a href="/blog/dq-cakes-complete-guide">DQ cake guide</a>.</p>`,
       },
     ],
     faqs: [
-      { q: 'Is a 10-inch DQ cake enough for 20 people?', a: 'Not at standard slice sizes, since it serves about 12 to 16. For 20 people, order a sheet cake (about 24 to 32 servings) or add an 8-inch cake.' },
+      { q: 'Is a 10-inch DQ cake enough for 20 people?', a: 'Not at standard slice sizes, since it serves about 12 to 16. For 20 people, order a sheet cake (about 20 to 25 servings) or add an 8-inch cake.' },
     ],
   },
 
@@ -1101,7 +1101,7 @@ export const DEPTH: Record<string, Depth> = {
       },
       {
         h: 'Two 8-inch DQ cakes or one sheet cake?',
-        html: `<p>One <a href="/items/dq-sheet-cake">sheet cake</a> is the better deal. Two 8-inch cakes cost about $45.98 and serve about 16 to 20 people. A sheet cake costs about $44.99 and serves about 24 to 32.</p>
+        html: `<p>One <a href="/items/dq-sheet-cake">sheet cake</a> is the better deal. Two 8-inch cakes cost about $45.98 and serve about 16 to 20 people. A sheet cake costs about $44.99 and serves about 20 to 25.</p>
 <p>Two 8-inch cakes are still useful in two cases: you need cake the same day (8-inch cakes are the ones most often in the freezer case, while sheet cakes need about 48 hours), or you want two different messages, such as for a shared birthday. For party math on every size, see the <a href="/categories/dq-cakes">DQ cake prices page</a>.</p>`,
       },
     ],
@@ -1114,17 +1114,17 @@ export const DEPTH: Record<string, Depth> = {
     sections: [
       {
         h: 'DQ sheet cake vs. two 8-inch cakes',
-        html: `<p>The sheet cake costs about a dollar less than two 8-inch cakes and feeds more people. A sheet cake is about $44.99 for 24 to 32 servings, while two <a href="/items/dq-cake-round-8inch">8-inch cakes</a> are about $45.98 for 16 to 20 servings.</p>
+        html: `<p>The sheet cake costs about a dollar less than two 8-inch cakes and feeds more people. A sheet cake is about $44.99 for 20 to 25 servings, while two <a href="/items/dq-cake-round-8inch">8-inch cakes</a> are about $45.98 for 16 to 20 servings.</p>
 <p>The trade-off is timing. Sheet cakes usually need about 48 hours’ notice, and 8-inch cakes are often ready in the freezer case. If the party is today, two rounds may be your only option. If you can plan two days ahead, the sheet cake is the clear pick.</p>`,
       },
       {
         h: 'DQ sheet cake vs. two Blizzard cakes',
-        html: `<p>The sheet cake is far cheaper than two Blizzard cakes for the same crowd. Two <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cakes</a> cost about $77.48 and two <a href="/items/cookie-dough-blizzard-cake">Cookie Dough Blizzard Cakes</a> about $71.98. Each pair serves about 24 to 32, the same as one sheet cake at about $44.99.</p>
+        html: `<p>The sheet cake is far cheaper than two Blizzard cakes for a similar crowd. Two <a href="/items/oreo-blizzard-cake">Oreo Blizzard Cakes</a> cost about $77.48 and two <a href="/items/cookie-dough-blizzard-cake">Cookie Dough Blizzard Cakes</a> about $71.98. Each pair serves about 24 to 32, a few more than one sheet cake (about 20 to 25) at about $44.99.</p>
 <p>That makes the sheet cake about $26.99 to $32.49 cheaper. A good middle option for a group of Blizzard fans is one sheet cake for the crowd plus a single Blizzard cake for the guest of honor’s table.</p>`,
       },
     ],
     faqs: [
-      { q: 'How many 10-inch DQ cakes equal one sheet cake?', a: 'About two. Two 10-inch cakes serve about 24 to 32 people, the same as one sheet cake, but cost about $65.98 compared with about $44.99 for the sheet cake.' },
+      { q: 'How many 10-inch DQ cakes equal one sheet cake?', a: 'A little under two. Two 10-inch cakes serve about 24 to 32 people, a few more than one sheet cake (about 20 to 25), but cost about $65.98 compared with about $44.99 for the sheet cake.' },
     ],
   },
 
@@ -1138,7 +1138,7 @@ export const DEPTH: Record<string, Depth> = {
       {
         h: 'How much is the Oreo Blizzard Cake per slice?',
         html: `<p>The Oreo Blizzard Cake works out to about $2.42 to $3.23 per slice, based on about $38.74 for 12 to 16 servings. That makes it the most expensive DQ cake per slice.</p>
-<p>The <a href="/items/dq-cake-round-10inch">classic 10-inch cake</a> is about $2.06 to $2.75 per slice, so the Oreo version adds roughly 36 to 48 cents a slice. The Cookie Dough Blizzard Cake sits between them at about $2.25 to $3.00. For a large party, a plain sheet cake (about $1.41 to $1.87 per slice) costs much less.</p>`,
+<p>The <a href="/items/dq-cake-round-10inch">classic 10-inch cake</a> is about $2.06 to $2.75 per slice, so the Oreo version adds roughly 36 to 48 cents a slice. The Cookie Dough Blizzard Cake sits between them at about $2.25 to $3.00. For a large party, a plain sheet cake (about $1.80 to $2.25 per slice) costs less.</p>`,
       },
     ],
     faqs: [
