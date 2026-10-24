@@ -795,7 +795,11 @@ body {
   }
 
   .item-hero>.item-media {
-    @apply lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-[#EADBCA] shadow-xs flex items-center justify-center overflow-hidden;
+    @apply lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-[#EADBCA] shadow-xs flex flex-col items-center justify-center overflow-hidden m-0;
+  }
+
+  .item-hero>.item-media figcaption {
+    @apply mt-3 text-center text-xs text-slate-500 leading-snug;
   }
 
   .item-hero>.item-media img {
